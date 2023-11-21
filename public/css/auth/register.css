@@ -1,12 +1,4 @@
 /* all */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 
 :root {
     --main-blue: #71b7e6;
@@ -31,11 +23,6 @@
     margin-bottom: 4vh;
 }
 /* container and .register-user */
-.container {
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 5px;
-}
 .container .reg-hdr{
     display: flex;
     gap: 2vh;

@@ -1,0 +1,109 @@
+
+.home-navbar {
+    overflow: hidden;
+    text-align: center;
+}
+.home-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-navbar a {
+    float: left;
+    display: block;
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.home-navbar a:hover {
+    color: #ffff;
+    text-decoration: none;
+    background-color: #002868;
+    transition: .3s ease-in;
+    border-radius: 20px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.main-title{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.grp-1{
+    line-height: 6vh;
+    text-align: center;
+}
+.welcome{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #002868;
+}
+.to-the{
+    color: #434343;
+    font-size: 2rem;
+    font-style: italic;
+}
+.conference{
+    color: #0046B9;
+    font-size: 3.7rem;
+    font-weight: 800;
+}
+.asia-pacific{
+    background-color: #E2B100;
+    color: #fff;
+    font-size: 2.5rem;
+    display: inline-block;
+    width: 60%;
+    border-radius: 100px;
+    margin-top: 3vh;
+}
+.philippines{
+    margin-top: 50px;
+    font-family: 'Allura', cursive;
+    font-size: 10rem;
+    color: #C11717;
+}

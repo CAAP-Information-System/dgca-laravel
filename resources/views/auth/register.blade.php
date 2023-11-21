@@ -6,9 +6,7 @@
     <div class="header-container">
         <header class="auth-hdr">Welcome and Mabuhay!</header>
     </div>
-    @if ($errors->has('rep_mobile'))
-    <div class="error-message">{{ $errors->first('rep_mobile') }}</div>
-    @endif
+
     <div class="form-main">
         <form class="register-user" action="{{ route('register') }}" method="POST">
             <header class="title">Registration</header>
@@ -77,46 +75,75 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const fileDropArea = document.getElementById("fileDropArea");
-    const fileList = document.getElementById("fileList");
+    document.addEventListener("DOMContentLoaded", () => {
+        const fileDropArea = document.getElementById("fileDropArea");
+        const fileList = document.getElementById("fileList");
 
-    fileDropArea.addEventListener("dragover", (e) => {
-        e.preventDefault();
-        fileDropArea.classList.add("active");
-    });
+        fileDropArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            fileDropArea.classList.add("active");
+        });
 
-    fileDropArea.addEventListener("dragleave", () => {
-        fileDropArea.classList.remove("active");
-    });
+        fileDropArea.addEventListener("dragleave", () => {
+            fileDropArea.classList.remove("active");
+        });
 
-    fileDropArea.addEventListener("drop", (e) => {
-        e.preventDefault();
-        fileDropArea.classList.remove("active");
-        handleFiles(e.dataTransfer.files);
-    });
+        fileDropArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            fileDropArea.classList.remove("active");
+            handleFiles(e.dataTransfer.files);
+        });
 
-    document.getElementById("fileInput").addEventListener("change", (e) => {
-        handleFiles(e.target.files);
-    });
+        document.getElementById("fileInput").addEventListener("change", (e) => {
+            handleFiles(e.target.files);
+        });
 
-    function handleFiles(files) {
-        for (const file of files) {
-            const listItem = document.createElement("li");
-            listItem.classList.add("file-item");
-            listItem.innerHTML = `
+        function handleFiles(files) {
+            for (const file of files) {
+                const listItem = document.createElement("li");
+                listItem.classList.add("file-item");
+                listItem.innerHTML = `
                 <span>${file.name}</span>
                 <button class="delete-btn">Delete</button>
             `;
-            fileList.appendChild(listItem);
+                fileList.appendChild(listItem);
 
-            const deleteButton = listItem.querySelector(".delete-btn");
-            deleteButton.addEventListener("click", () => {
-                listItem.remove();
-            });
+                const deleteButton = listItem.querySelector(".delete-btn");
+                deleteButton.addEventListener("click", () => {
+                    listItem.remove();
+                });
+            }
         }
-    }
-});
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const passwordInput = document.getElementById("password");
+    const passwordStrength = document.getElementById("password-strength");
 
+    passwordInput.addEventListener("input", () => {
+        validatePassword(passwordInput.value);
+    });
+
+    function validatePassword(password) {
+        // Define your password strength criteria
+        const lengthRegex = /.{8,}/;
+        const letterRegex = /[A-Za-z]/;
+        const numberRegex = /\d/;
+        const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+        // Check each criterion
+        const isLengthValid = lengthRegex.test(password);
+        const isLetterValid = letterRegex.test(password);
+        const isNumberValid = numberRegex.test(password);
+        const isSpecialCharValid = specialCharRegex.test(password);
+
+        // Update the UI based on the criteria
+        document.getElementById("length").classList.toggle("valid", isLengthValid);
+        document.getElementById("letter").classList.toggle("valid", isLetterValid);
+        document.getElementById("number").classList.toggle("valid", isNumberValid);
+        document.getElementById("specialChar").classList.toggle("valid", isSpecialCharValid);
+    }
+    });
 </script>
 @endsection
