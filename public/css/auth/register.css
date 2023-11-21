@@ -1,0 +1,241 @@
+/* all */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-blue: #71b7e6;
+    --main-purple: #9b59b6;
+    --main-grey: #ccc;
+    --sub-grey: #d9d9d9;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth-hdr{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffff;
+    font-weight: bold;
+    border-radius: 100px;
+    background-color: #07275A;
+    width: 70%;
+    margin-bottom: 4vh;
+}
+/* container and .register-user */
+.container {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .reg-hdr{
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+.container .reg-caap-logo{
+    height: auto;
+    width: 100px;;
+}
+.title {
+    color: #2D4E83;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    height: 3.5px;
+    width: 30px;
+    left: 0;
+    bottom: 0;
+}
+.container .form-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container .register-user {
+    width: 60%;
+    border-radius: 20px;
+    padding: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .register-user .user__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+}
+/* inside the .register-user user details */
+.register-user .user__details .input__box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.user__details .input__box .details {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.user__details .input__box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--main-grey);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user__details .input__email{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.user__details .input__email input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--main-grey);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user__details .input__box input:focus,
+.user__details .input__box input:valid {
+    border-color: #2f96d0;
+}
+
+.user__details .input__email input:focus,
+.user__details .input__email input:valid {
+    border-color: #2f96d0;
+}
+.password-requirements{
+    font-style: italic;
+    color: #666666;
+}
+.file-drop {
+    text-align: center;
+}
+
+.file-drop-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.file-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.file-item button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.register-user input[type="radio"] {
+    display: none;
+}
+
+/* submit button */
+.register-user .button {
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.register-user .button .register {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #2f96d0;
+    transition: all 0.3s ease;
+}
+
+.register-user .button .register:hover {
+    background: #07275A;
+    border-radius: 100px;
+    transition: .3s ease-in-out;
+}
+
+.already-registered{
+    text-align: center;
+}
+.alt-label{
+    font-weight: bold;
+    font-style: italic;
+
+}
+.alt-link{
+    padding: 5px;
+    transition: .1s ease-in;
+}
+.alt-link:hover{
+    cursor: pointer;
+    border-top: 1px solid #2f96d0;
+    border-bottom: 1px solid #2f96d0;
+    transition: .5s ease-in;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .register-user .user__details .input__box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .register-user .gender__details .category {
+        width: 100%;
+    }
+
+    .container .register-user .user__details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user__details::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
