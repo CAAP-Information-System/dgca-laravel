@@ -1,109 +1,364 @@
-
-.home-navbar {
-    overflow: hidden;
-    text-align: center;
-}
-.home-navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.home-navbar a {
-    float: left;
-    display: block;
-    color: #3b3b3b;
-    text-align: center;
-    font-size: 20px;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-.home-navbar a:hover {
-    color: #ffff;
-    text-decoration: none;
-    background-color: #002868;
-    transition: .3s ease-in;
-    border-radius: 20px;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+@import url("https://fonts.cdnfonts.com/css/quiapo-free");
 
 
-.dropdown-content {
-    display: none;
+.tamayo {
+    display: inline-block;
+}
+.tamayo-img {
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 450px;
+    height: auto;
+    top: 14%;
+    right: 68%;
     z-index: 1;
 }
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+.caap-img {
+    position: absolute;
+    width: 500px;
+    opacity: 0.3;
+    height: auto;
+    top: 18%;
+    right: 70%;
+    z-index: -2;
 }
-
-.dropdown:hover .dropdown-content {
-    display: block;
+.dg-details {
+    position: absolute;
+    width: 400px;
+    top: 70%;
+    right: 73%;
+    z-index: 5;
+    background-color: #002868;
+    color: #ffff;
+    padding: 15px;
 }
-.main-title{
-    margin-top: 5vh;
+.name {
+    font-size: 20px;
+    font-weight: 800;
+}
+.position {
+    font-style: italic;
+}
+.main-title {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
 }
-.grp-1{
-    line-height: 6vh;
-    text-align: center;
+.welcome-message {
+    padding: 3vh;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
-.welcome{
+.message-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-header {
     font-size: 4rem;
+    font-family: "Quiapo Free", sans-serif;
+    font-weight: 700;
+    color: #c11717;
+    text-shadow: #002868 -3px -3px, #e2b100 -6px -6px;
+    text-align: center; /* If you want the header text to be centered */
+}
+
+.message-content {
+    color: #3b3b3b;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: justify;
+}
+
+.plane {
+    display: inline;
+}
+.plane-img {
+    position: absolute;
+    width: 1100px;
+    height: auto;
+    top: 102%;
+    right: 20%;
+    z-index: -1;
+    opacity: .8;
+}
+.grp-1 {
+    margin-top: 10vh;
+    line-height: 5vh;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.welcome {
+    font-size: 3.5rem;
     font-weight: bold;
     color: #002868;
 }
-.to-the{
+
+.to-the {
     color: #434343;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: italic;
 }
-.conference{
-    color: #0046B9;
-    font-size: 3.7rem;
+.dg-span {
+    line-height: 6vh;
+}
+.conference {
+    color: #0046b9;
+    font-size: 3rem;
     font-weight: 800;
 }
-.asia-pacific{
-    background-color: #E2B100;
+
+.asia-pacific {
+    background-color: #e2b100;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: inline-block;
     width: 60%;
     border-radius: 100px;
-    margin-top: 3vh;
+    margin-top: 1vh;
+    font-style: italic;
 }
-.philippines{
-    margin-top: 50px;
-    font-family: 'Allura', cursive;
-    font-size: 10rem;
-    color: #C11717;
+
+.philippines {
+    margin-top: 30px;
+    font-family: "Quiapo Free", sans-serif;
+    font-size: 6rem;
+    color: #c11717;
+}
+
+
+/* CSS */
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin-top: 50px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 50%;
+  text-decoration: none;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  text-decoration: none;
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+.slider-frame {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Center the slider */
+    height: 400px; /* Set the desired height */
+}
+
+.slide-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Make sure the images fill the entire height of the slider */
+}
+
+.img-container {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.img-container img {
+    width: 100%; /* Make images fill the entire width of the container */
+    height: 100%; /* Make images fill the entire height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+.airport-hdr{
+    text-align: center;
+    font-size: 5rem;
+    color: #002868;
+    font-weight: 900;
+}
+.airport-span{
+    color: #ffd54f;
+    text-shadow: #3b3b3b 4px 4px;
+}
+.count-section {
+    margin-top: 5vh;
+    padding: 2vh;
+    width: 100%;
+}
+.countdown-sect {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.countdown-header {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #ffd54f;
+
+}
+
+.countdown ul li {
+    display: inline-block;
+    font-size: 1.5rem;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.countdown ul li span {
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+    color: #ffff;
+    background-color: #002868;
+    padding: 20px;
+    border-radius: 20px;
+}
+.hosted-by {
+    background: rgba(255, 255, 255, 0.09) url("/img/city.png") bottom / 50%
+        no-repeat fixed;
+}
+.hosted-header{
+    color: #0046b9;
+    font-size: 3rem;
+    text-align: center;
+}
+.hosts-grp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+.caap-host-img{
+    width: 300px;
+    height: auto;
+}
+.host-content{
+    display: block;
+    width: 60%;
+}
+.caap-logo-left{
+    width: 30%;
+}
+.host-content-header{
+    font-size: 2rem;
+    color: #3B3B3B;
+    font-style: italic;
+}
+.host-content-caap-name{
+    font-size: 2.5rem;
+    color: #002868;
+    font-weight: bold;
+}
+.city {
+    position: relative;
+}
+.city-img {
+    position: absolute;
+    width: 1100px;
+    height:auto;
+    top: 50%;
+    right: 20%;
+    z-index: -1;
+    opacity: .8;
+}
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+/* On smaller screens, decrease text size */
+@media screen and (max-width: 768px) {
+    .welcome {
+        font-size: 3rem;
+    }
+
+    .conference {
+        font-size: 2.5rem;
+    }
+
+    .asia-pacific {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .philippines {
+        font-size: 6rem;
+    }
+
+    .wonders-sect {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }

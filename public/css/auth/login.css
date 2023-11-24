@@ -1,6 +1,7 @@
 
-*{
+.container{
     color: #3b3b3b;
+
 }
 
 .header-container{
@@ -15,7 +16,7 @@
     font-weight: bold;
     border-radius: 100px;
     background-color: #07275A;
-    width: 60%;
+    width: 100%;
 }
 .main{
     display: flex;
@@ -36,7 +37,7 @@
 }
 /* expand the background but the fields remain the same width */
 .login-main{
-    width: 50%;
+    width: 60%;
     margin-top: 6vh;
     border-radius: 20px;
     padding: 5vh;
@@ -160,4 +161,17 @@
 .button-19:active {
   border-width: 4px 0 0;
   background: none;
+}
+
+/* Initial styles for fade-in sections */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Add fade-in effect when the section comes into view */
+.fade-in-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }

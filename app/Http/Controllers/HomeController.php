@@ -23,6 +23,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
     }
+
+    public function viewDiscussionPapers()
+    {
+        return view('main.conference.disc_paper');
+    }
+    public function viewGallery()
+    {
+        return view('main.conference.gallery');
+    }
+
+    public function viewWelcomeMessage()
+    {
+        return view('main.conference.welcome_message');
+    }
+    public function viewAgenda()
+    {
+        return view('main.conference.agenda');
+    }
+
+
+
+
 }

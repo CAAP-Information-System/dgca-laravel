@@ -1,0 +1,85 @@
+
+.agenda-header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #002868;
+    text-align: center;
+    text-shadow: #b4c4db 3px 3px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 0 300px;
+    max-width: 350px;
+    color: #3b3b3b;
+    background: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+
+
+
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.file-info {
+    margin-bottom: 10px;
+}
+
+.file-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.date {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.view-file {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #50A9FB;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffff;
+    transition: background-color 0.3s ease;
+}
+
+.view-file:hover {
+    background-color: #FFD54F;
+    color: #3D3834;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}

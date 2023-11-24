@@ -1,0 +1,88 @@
+body{
+    overflow: hidden;
+}
+.tamayo {
+    display: inline-block;
+}
+.tamayo-img {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    top: 20%;
+    right: 75%;
+    z-index: 1;
+}
+.caap-img {
+    position: absolute;
+    width: 500px;
+    opacity: 0.3;
+    height: auto;
+    top: 15%;
+    right: 85%;
+    z-index: -2;
+}
+.dg-details {
+    position: absolute;
+    width: 400px;
+    top: 110%;
+    right: 73%;
+    z-index: 5;
+    background-color: #002868;
+    box-shadow: #ffff -6px -6px;
+    color: #ffff;
+    padding: 15px;
+    border-radius: 0px 15px 15px 15px;
+    line-height: 25px;
+}
+.name {
+    font-size: 20px;
+    font-weight: 800;
+}
+.position {
+    font-style: italic;
+}
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3vh;
+    position: relative;
+}
+.welcome-message {
+    padding: 3vh;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.message-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-header {
+    font-size: 5rem;
+    font-family: "Quiapo Free", sans-serif;
+    font-weight: 700;
+    color: #c11717;
+    text-align: center; /* If you want the header text to be centered */
+}
+.caa-phil{
+    font-family: "Quiapo Free", sans-serif;
+    color: #ffff;
+    background-color: #002868;
+    padding: 15px;
+    letter-spacing: 5px;
+}
+.message-content {
+    color: #3b3b3b;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: justify;
+}

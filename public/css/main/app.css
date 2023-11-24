@@ -1,11 +1,25 @@
-.navbar{
+body {
+    background: rgba(255, 255, 255, 0.2) url("/img/map.png") bottom right / 30%
+        no-repeat fixed;
+}
+
+.map-img {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    z-index: -1;
+    opacity: 0.3;
+}
+.navbar {
     padding: 10px;
 }
-.nav-caap-logo{
+.nav-caap-logo {
     height: auto;
     width: 100px;
+    width: 120px;
+    padding-left: 25px;
 }
-.nav-bagong-pilipinas-logo{
+.nav-bagong-pilipinas-logo {
     height: auto;
     width: 120px;
     padding-left: 25px;

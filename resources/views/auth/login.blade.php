@@ -2,88 +2,84 @@
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/auth/login.css') }}">
+<div class="container">
+    <div class="header-container">
+        <header class="auth-hdr">Welcome and Mabuhay!</header>
+    </div>
+    <section class="main">
+        <div class="login-main">
 
-
-<section class="vh-100">
-    <div class="container">
-        <div class="header-container">
-            <header class="auth-hdr">Welcome and Mabuhay!</header>
-        </div>
-        <section class="main">
-            <div class="login-main">
-
-                <form class="login-form" method="POST" action="{{ route('login') }}">
-                    <header class="login-hdr">Sign In Now</header>
-                    @csrf
-                    <br>
-                    <div class="form-fields">
-                        <div class="user__details">
-                            <!-- Email input -->
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form1Example13">Email address:</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class='bx bx-envelope'></i></span>
-                                    </div>
-                                    <input id="email" type="email" placeholder="Enter Email Address" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            <form class="login-form" method="POST" action="{{ route('login') }}">
+                <header class="login-hdr">Sign In Now</header>
+                @csrf
+                <br>
+                <div class="form-fields">
+                    <div class="user__details">
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form1Example13">Email address:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class='bx bx-envelope'></i></span>
                                 </div>
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                <input id="email" type="email" placeholder="Enter Email Address" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             </div>
-
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form1Example23">Password:</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class='bx bx-key'></i></span>
-                                    </div>
-                                    <input id="password" type="password" placeholder="Enter Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                </div>
-
-                                <br>
-                                <div class="form-check">
-                                    <input type="checkbox" id="show-password" class="form-check-input">
-                                    <label for="show-password" class="form-check-label">Show Password</label>
-                                </div>
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                                <div id="caps-lock-warning" class="caps-warning" style="display: none;">
-                                    Your CAPS LOCK is on
-                                </div>
-                                <div style="margin-top: 30px;"></div>
-                                @if (Route::has('password.request'))
-                                <a class="forgot-pass-btn" href="{{ route('password.request') }}">
-                                    Forgot your password?
-                                </a>
-                                @endif
-                            </div>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
-                        <button type="submit" class="button-19" id="login-button">
-                            Sign In
-                        </button>
-                        <div class="row ">
-                            <div style="margin-top: 35px;"></div>
-                            <div>
-                                <p style="font-style: italic; padding-left: 10px; ">Don't have an account yet?</p>
-                                @if (Route::has('register'))
-                                <a class="alt-link" href="{{ route('register') }}">Register and Join</a>
-                                @endif
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form1Example23">Password:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class='bx bx-key'></i></span>
+                                </div>
+                                <input id="password" type="password" placeholder="Enter Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             </div>
+
+                            <br>
+                            <div class="form-check">
+                                <input type="checkbox" id="show-password" class="form-check-input">
+                                <label for="show-password" class="form-check-label">Show Password</label>
+                            </div>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                            <div id="caps-lock-warning" class="caps-warning" style="display: none;">
+                                Your CAPS LOCK is on
+                            </div>
+                            <div style="margin-top: 30px;"></div>
+                            @if (Route::has('password.request'))
+                            <a class="forgot-pass-btn" href="{{ route('password.request') }}">
+                                Forgot your password?
+                            </a>
+                            @endif
                         </div>
                     </div>
+                    <button type="submit" class="button-19" id="login-button">
+                        Sign In
+                    </button>
+                    <div class="row ">
+                        <div style="margin-top: 35px;"></div>
+                        <div>
+                            <p style="font-style: italic; padding-left: 10px; ">Don't have an account yet?</p>
+                            @if (Route::has('register'))
+                            <a class="alt-link" href="{{ route('register') }}">Register and Join</a>
+                            @endif
+                        </div>
+                    </div>
+                </div>
 
-                </form>
-            </div>
-        </section>
-    </div>
-</section>
+            </form>
+        </div>
+    </section>
+</div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Check for Caps Lock
