@@ -69,6 +69,7 @@
     font-size: 1rem;
     color: #ffff;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 .view-file:hover {

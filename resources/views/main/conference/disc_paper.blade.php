@@ -49,7 +49,7 @@
         </ul>
         <!-- Toggle Button 2 -->
         <button class="collapse-button" onclick="toggleList('list3')">
-            <i id="icon3" class='bx bxs-caret-down-circle'></i> Agenda 2
+            <i id="icon3" class='bx bxs-caret-down-circle'></i> Agenda 3
         </button>
         <!-- List 2 -->
         <ul class="list" id="list3">

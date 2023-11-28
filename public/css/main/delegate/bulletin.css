@@ -1,0 +1,37 @@
+.bulletin-header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #002868;
+    text-align: center;
+    text-shadow: #b4c4db 3px 3px;
+    margin-bottom: 20px;
+}
+.bulletin-content{
+    padding: 10px;
+    background-color: #ffff;
+
+
+}
+.bullet-hdr{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffff;
+    background-color: #002868;
+    width: 50%;
+    padding: 10px;
+}
+.bullet-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bullet-img{
+    width: 300px;
+    height: auto;
+}
+.bullet-desc{
+    width: 60%;
+    text-align: justify;
+    margin-left: 3vh;
+    font-size: 18px;
+}

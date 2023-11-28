@@ -37,12 +37,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    // public function showLoginForm()
-    // {
-    //     if (auth()->check()) {
-    //         return redirect('welcome');  // Redirect to the home page if authenticated
-    //     }
+    public function showLoginForm()
+    {
+        if (auth()->check()) {
+            return redirect('welcome');  // Redirect to the home page if authenticated
+        }
 
-    //     return view('auth.login');
-    // }
+        return view('auth.login');
+    }
 }

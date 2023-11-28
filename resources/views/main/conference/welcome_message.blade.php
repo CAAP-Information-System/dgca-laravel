@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Welcome Message-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/welcome_message.css') }}">
 <div class="container">

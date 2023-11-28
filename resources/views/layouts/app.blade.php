@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>59th DGCA Philippines</title>
+    <title>@yield('title', '59th DGCA Conference')</title>
     <link rel="icon" href="img/caap_logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/navbar.css') }}">
@@ -35,6 +35,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
     <script>
         $(function() {
@@ -161,10 +162,20 @@
                             <a class="sub" href="{{ route('message') }}">Message from CAA Philippines</a>
                             <a class="sub" href="{{ route('agenda') }}">Agenda</a>
                             <a class="sub" href="#">Programme</a>
-                            <a class="sub" href="{{ route('disc-paper') }}">Documents</a>
-                            <a class="sub" href="#">Participants</a>
+                            <div class="sub-dropdown">
+                                <a class="sub" href="">Documents</a>
+                                <div class="sub-dropdown-content">
+                                    <a class="sub" href="{{ route('disc-paper') }}">Discussion Papers</a>
+                                    <a class="sub" href="}">Information Papers</a>
+                                </div>
+                            </div>
+                            <a class="sub" href="{{ route('participants') }}">Participants</a>
                             <a class="sub" href="{{ route('the-gallery') }}">The Gallery</a>
                         </div>
+                    </li>
+
+                    <li class="navbar-dropdown">
+                        <a class="navbar-main" href="{{ route('meeting-room') }}">Meeting</a>
                     </li>
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="#">Events</a>
@@ -183,18 +194,13 @@
                         </div>
                     </li>
                     <li class="navbar-dropdown">
-                        <a class="navbar-main" href="#">Delegate's Corner</a>
+                        <a href="#">Delegate's Corner</a>
                         <div class="dropdown">
-                            <a class="sub" href="#">Conference Bulletin</a>
-                            <a class="sub" href="#">Transport Schedule</a>
-                            <a class="sub" href="#">Venue</a>
-                            <a class="sub" href="#">Other Notices</a>
-                        </div>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="">Registration</a>
-                        <div class="dropdown">
-                            <a class="sub" href="#">Registration Guide</a>
+                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
+                            <a href="#">Transport Schedule</a>
+                            <a href="#">Venue</a>
+                            <a href="#">Registration</a>
+                            <a href="#">Other Notices</a>
                         </div>
                     </li>
                     <li class="navbar-dropdown">

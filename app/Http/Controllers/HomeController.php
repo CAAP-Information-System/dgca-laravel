@@ -44,7 +44,25 @@ class HomeController extends Controller
         return view('main.conference.agenda');
     }
 
+    public function viewParticipants()
+    {
+        return view('main.conference.participants');
+    }
 
+    public function viewListParticipants()
+    {
+        return view('main.conference.participant_list.participant_list');
+    }
+
+    public function viewMeetingRoom()
+    {
+        return view('main.meeting_room');
+    }
+
+    public function viewDelegateCorner()
+    {
+        return view('main.delegates.delegate_corner');
+    }
 
 
 }

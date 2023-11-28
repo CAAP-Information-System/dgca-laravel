@@ -9,7 +9,7 @@
             <div class="card-header">File No. 1</div>
             <div class="card-body">
                 <div class="file-info">
-                    <p class="file-name">Programme File 1</p>
+                    <p class="file-name">Agenda File 1</p>
                 </div>
                 <div class="date">Date: 2023-11-23</div>
             </div>
@@ -19,7 +19,7 @@
             <div class="card-header">File No. 2</div>
             <div class="card-body">
                 <div class="file-info">
-                    <p class="file-name">Programme File 2</p>
+                    <p class="file-name">Agenda File 2</p>
                 </div>
                 <div class="date">Date: 2023-11-23</div>
             </div>
@@ -29,7 +29,7 @@
             <div class="card-header">File No. 3</div>
             <div class="card-body">
                 <div class="file-info">
-                    <p class="file-name">Programme File 3</p>
+                    <p class="file-name">Agenda File 3</p>
                 </div>
                 <div class="date">Date: 2023-11-23</div>
             </div>
