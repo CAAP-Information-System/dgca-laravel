@@ -33,7 +33,7 @@
     margin-right: 10px;
 }
 
-.day-selector a {
+.day-selector button {
     text-decoration: none;
     color: #3b3b3b;
     padding: 10px 20px;
@@ -46,17 +46,20 @@
     text-align: center;
 }
 
-.day-selector a:hover {
+.day-selector button:hover {
     background-color: #4285f4;
     color: #ffff;
 }
 
-.day-selector a.active {
+.day-selector button.active {
     background-color: #4285f4;
     color: #fff;
+    transform: translateY(-20px);
+    transition: all 0.3s;
+    font-weight: bold;
 }
 
-.day-selector a.active:hover {
+.day-selector button.active:hover {
     background-color: #2962c3;
 }
 .meeting-guidelines{
@@ -127,6 +130,14 @@
     position: relative;
     transition: all 0.3s linear 0s;
     min-width: 300px;
+    background-color: rgb(128, 171, 241);
+
+}
+.schedule-table table tbody td.pending {
+    position: relative;
+    transition: all 0.3s linear 0s;
+    min-width: 300px;
+    background-color: #FFB302;
 
 }
 .schedule-table table tbody td.active h4 {

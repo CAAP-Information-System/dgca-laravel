@@ -65,8 +65,18 @@
                     <div class="img-container">
                         <img src="{{ asset('img/airport/silay.jpg') }}" alt="CAAP Logo">
                     </div>
-
-
+                    <div class="img-container">
+                        <img src="{{ asset('img/airport/zamboanga.jpg') }}" alt="CAAP Logo">
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('img/airport/laguindingan.jpg') }}" alt="CAAP Logo">
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('img/airport/laoag.jpg') }}" alt="CAAP Logo">
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('img/airport/puerto.jpg') }}" alt="CAAP Logo">
+                    </div>
                 </div>
             </div>
             <header class="airport-hdr">Philippine <span class="airport-span">Airports</span> Nationwide</header>

@@ -28,8 +28,13 @@ class HomeController extends Controller
 
     public function viewDiscussionPapers()
     {
-        return view('main.conference.disc_paper');
+        return view('main.conference.documents.discussion_paper');
     }
+    public function viewInformationPapers()
+    {
+        return view('main.conference.documents.information_paper');
+    }
+
     public function viewGallery()
     {
         return view('main.conference.gallery');
@@ -61,7 +66,7 @@ class HomeController extends Controller
 
     public function viewDelegateCorner()
     {
-        return view('main.delegates.delegate_corner');
+        return view('main.delegates.conf_bulletin');
     }
 
 

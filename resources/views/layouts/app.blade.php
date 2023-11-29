@@ -74,10 +74,8 @@
         bottom: 0;
     }
 </style>
-<div class="loader">
-    <video autoplay loop class="caap-video">
-        <source src="{{ asset('mp4/loader-caap.mp4') }}" type="video/mp4">
-    </video>
+<div class="preloader-container" id="preloader">
+    <img src="{{ asset('gif/loader-caap.gif') }}" alt="CAAP Logo" class="">
 </div>
 
 <body>
@@ -166,7 +164,7 @@
                                 <a class="sub" href="">Documents</a>
                                 <div class="sub-dropdown-content">
                                     <a class="sub" href="{{ route('disc-paper') }}">Discussion Papers</a>
-                                    <a class="sub" href="}">Information Papers</a>
+                                    <a class="sub" href="{{ route('info-paper') }}">Information Papers</a>
                                 </div>
                             </div>
                             <a class="sub" href="{{ route('participants') }}">Participants</a>
@@ -175,7 +173,7 @@
                     </li>
 
                     <li class="navbar-dropdown">
-                        <a class="navbar-main" href="{{ route('meeting-room') }}">Meeting</a>
+                        <a class="navbar-main" href="{{ route('meeting-room') }}">Side Meeting</a>
                     </li>
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="#">Events</a>
@@ -194,7 +192,7 @@
                         </div>
                     </li>
                     <li class="navbar-dropdown">
-                        <a href="#">Delegate's Corner</a>
+                        <a class="navbar-main" href="#">Delegate's Corner</a>
                         <div class="dropdown">
                             <a href="{{ route('bulletin') }}">Conference Bulletin</a>
                             <a href="#">Transport Schedule</a>
@@ -215,6 +213,13 @@
         </main>
     </div>
 </body>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            document.getElementById("preloader").style.display = "none";
+            document.querySelector(".content").style.display = "block";
+        }, 3000);
+    });
+</script>
 
 </html>

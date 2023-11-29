@@ -30,7 +30,6 @@
 .navbar-links li.navbar-dropdown:hover .dropdown {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0px);
 }
 
 .navbar-links li.navbar-dropdown .dropdown {
@@ -39,7 +38,7 @@
     position: absolute;
     padding: 10px;
     top: 75%;
-    transform: translateY(50px);
+    transform: translateY(10px);
     left: 15%;
     width: 250px;
     background-color: #fff;
@@ -47,7 +46,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 111;
-    transition: 0.4s all;
+    transition: 0.4s;
     border-top-right-radius: 15px;
 }
 .navbar-links li.navbar-dropdown .dropdown a {

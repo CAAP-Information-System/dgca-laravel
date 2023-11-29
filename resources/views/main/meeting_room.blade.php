@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/meeting/meeting.css') }}">
 <div class="container">
-    <header class="meeting-header">Meeting Schedule</header>
+    <header class="meeting-header">Side Meeting Schedule</header>
 
     <section class="meeting-guidelines">
         <main class="guidelines">
@@ -19,9 +19,9 @@
     </section>
     <nav class="day-selector">
         <ul>
-            <li><a href="#" onclick="changeSchedule('day1')" id="day1">Day 1</a></li>
-            <li><a href="#" onclick="changeSchedule('day2')" id="day2">Day 2</a></li>
-            <li><a href="#" onclick="changeSchedule('day3')" id="day3">Day 3</a></li>
+            <li><button  onclick="changeSchedule('day1')" id="day1">Day 1</button></li>
+            <li><button  onclick="changeSchedule('day2')" id="day2">Day 2</button></li>
+            <li><button  onclick="changeSchedule('day3')" id="day3">Day 3</button></li>
         </ul>
     </nav>
     <div id="schedule-day1" class="schedule-container">
@@ -55,7 +55,8 @@
                                         <span>Reserved by: Singapore</span>
                                     </div>
                                 </td>
-                                <td class="active">
+                                <td class="pending">
+                                    <h4>Pending Decision</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -118,7 +119,7 @@
                                 <td class="active">
                                     <h4>United States of America - United Kingdoms</h4>
                                     <div class="hover">
-                                        <h4>United States of America - United Kingdoms</h4>
+                                        <h4>United States of America - United Kingdom</h4>
                                         <span>Reserved by: United States of America</span>
                                     </div>
                                 </td>
@@ -239,11 +240,12 @@
                         <tbody>
                             <tr>
                                 <td class="day">08:00-08:30</td>
-                                <td class="active">
+                                <td class="">
                                 </td>
-                                <td class="active">
+                                <td class="pending">
+                                    <h4>Pending Decision</h4>
                                 </td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                             </tr>
                             <tr>
@@ -433,50 +435,50 @@
                         <tbody>
                             <tr>
                                 <td class="day">08:00-08:30</td>
-                                <td class="active">
+                                <td class="">
                                 </td>
-                                <td class="active">
+                                <td class="">
                                 </td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                             </tr>
                             <tr>
                                 <td class="day">08:30-09:00</td>
                                 <td></td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="day">09:00-09:30</td>
-                                <td class="active">
+                                <td class="">
                                 </td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="day">09:30-10:00</td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                                 <td></td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                             </tr>
                             <tr>
                                 <td class="day">10:00-10:30</td>
                                 <td></td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="day">10:30-11:00</td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                                 <td></td>
-                                <td class="active">
+                                <td class="">
                                 </td>
                             </tr>
                             <tr>
@@ -575,7 +577,7 @@
 <script>
     function changeSchedule(selectedDay) {
         // Reset active class for all links
-        document.querySelectorAll('.day-selector a').forEach(function (link) {
+        document.querySelectorAll('.day-selector button').forEach(function(link) {
             link.classList.remove('active');
         });
 

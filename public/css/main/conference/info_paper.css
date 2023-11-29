@@ -1,0 +1,153 @@
+.discussion-header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #002868;
+    text-align: center;
+    text-shadow: #b4c4db 3px 3px;
+}
+.dl-grp {
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Align items horizontally */
+}
+.temp-svg {
+    width: 50px;
+    height: auto;
+}
+.dl-text {
+    margin-left: 20px;
+    padding: 15px;
+    background-color: #002868;
+    color: #ffff;
+    border-radius: 25px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.dl-text:hover {
+    text-decoration: none;
+    background-color: #ffff;
+    color: #002868;
+    padding: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.3s ease;
+    transform: translateY(-10px);
+    font-weight: bold;
+}
+/* Style for the search field container */
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 400px; /* Adjust the maximum width as needed */
+}
+
+/* Style for the search input */
+.search-input {
+    flex: 1; /* Allow the input to grow and take available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+    font-size: 16px;
+    outline: none;
+}
+
+/* Style for the search button */
+.search-button {
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border: 1px solid #3498db; /* Button border color */
+    border-radius: 0 5px 5px 0; /* Rounded right corners */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+/* Style for the search icon */
+.search-icon {
+    margin-right: 8px; /* Adjust spacing between icon and text */
+}
+
+/* Hover effect for the button */
+.search-button:hover {
+    background-color: #2980b9; /* Change background color on hover */
+}
+.list-container {
+    width: 100%;
+    padding: 3vh;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Initially hidden */
+    animation: fadeInOut 0.3s ease-in-out; /* High-quality fade animation */
+}
+.icon {
+    transition: transform 0.5s ease-in-out;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.list.expanded .rotated {
+    transform: rotate(0deg);
+}
+.list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item:hover {
+    background-color: #f0f0f0;
+}
+
+.collapse-button {
+    background-color: transparent;
+    color: #002868;
+    border: none;
+    text-align: left;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.collapse-button:hover {
+    background-color: #ccc;
+}
+
+/* Show the list when the expanded class is present */
+.list.expanded {
+    display: block;
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
