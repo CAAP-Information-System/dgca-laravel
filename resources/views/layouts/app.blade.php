@@ -38,11 +38,6 @@
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
     <script>
-        $(function() {
-            setTimeout(() => {
-                $(".loader").fadeOut(1000);
-            }, 2000)
-        })
     </script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -218,7 +213,7 @@
         setTimeout(function() {
             document.getElementById("preloader").style.display = "none";
             document.querySelector(".content").style.display = "block";
-        }, 3000);
+        }, 1000);
     });
 </script>
 

@@ -1,1 +1,1 @@
-# DGCA Official Website for the Upcoming Conferece
+# DGCA Official Website for the Upcoming Conference

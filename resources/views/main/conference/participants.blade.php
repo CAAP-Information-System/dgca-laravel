@@ -3,26 +3,31 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/participants.css') }}">
 <div class="container">
-<header class="participants-header">Our Participants</header>
-<p class="subheader">Select one of the flags to see your list of participants/delegates</p>
+    <header class="participants-header">Our Participants</header>
+    <p class="subheader">Select one of the flags to see your list of participants/delegates</p>
     <div class="flag-grid">
-        <a href="{{ route('list-of-participants') }}">
-            <img class="flag" src="{{ asset('img/flags/philippines.png') }}" alt="Flag 1">
-            <p class="flag-caption">Philippines</p>
-        </a>
-        <a href="">
-            <img class="flag" src="{{ asset('img/flags/australia.png') }}" alt="Flag 2">
-            <p class="flag-caption">Australia</p>
-        </a>
-        <a href="">
-            <img class="flag" src="{{ asset('img/flags/japan.png') }}" alt="Flag 3">
-            <p class="flag-caption">Japan</p>
-        </a>
-        <a href="">
-            <img class="flag" src="{{ asset('img/flags/indonesia.png') }}" alt="Flag 3">
-            <p class="flag-caption">Indonesia</p>
-        </a>
+        @php
+            // Define an array of flags with their captions
+            $flags = [
+                'Philippines' => 'philippines.png',
+                'Australia' => 'australia.png',
+                'Japan' => 'japan.png',
+                'Indonesia' => 'indonesia.png',
+                // Add more flags as needed
+            ];
+
+            // Sort the flags array based on the captions
+            uksort($flags, function ($a, $b) {
+                return strcasecmp($a, $b);
+            });
+        @endphp
+
+        @foreach($flags as $caption => $image)
+            <a href="{{ route('list-of-participants') }}">
+                <img class="flag" src="{{ asset('img/flags/' . $image) }}" alt="{{ $caption }}">
+                <p class="flag-caption">{{ $caption }}</p>
+            </a>
+        @endforeach
     </div>
 </div>
-
 @endsection

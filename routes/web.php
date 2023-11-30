@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Auth::routes();
 
 Route::get('/', function () {
@@ -38,3 +40,11 @@ Route::get('/schedule/day2', [ScheduleController::class, 'day2'])->name('schedul
 Route::get('/schedule/day3', [ScheduleController::class, 'day3'])->name('schedule-day3');
 
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/files', [FileController::class, 'inventory'])->name('viewFiles');
+    Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');
+    Route::get('/files/view/{id}', [FileController::class, 'view'])->name('file.view');
+    Route::delete('/delete/{id}', [FileController::class, 'delete'])->name('file.delete');
+});

@@ -33,6 +33,7 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+            'max_file_size' => 999999,
             'throw' => false,
         ],
 
