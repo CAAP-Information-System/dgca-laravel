@@ -30,9 +30,9 @@
     transform: scale(1.05);
 }
 
-.card-header {
-    background-color: #007bff;
-    color: #fff;
+.card-hdr {
+    color: #3b3b3b;
+    padding: 15px;
 
 
 
@@ -56,7 +56,8 @@
 
 .date {
     color: #555;
-    font-size: 0.9rem;
+    font-size: .9rem;
+    text-align: center;
 }
 
 .view-file {

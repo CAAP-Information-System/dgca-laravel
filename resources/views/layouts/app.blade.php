@@ -46,19 +46,6 @@
         font-family: 'Poppins', sans-serif;
     }
 
-    .loader {
-        /* remove display to return the loader */
-        display: none;
-        width: 100%;
-        height: 120%;
-        position: fixed;
-        padding-top: 25%;
-        background-color: #ffff;
-        padding-left: 20%;
-        margin: 0 auto;
-        z-index: 9999;
-    }
-
     .caap-video {
         width: 100%;
         height: auto;
@@ -67,6 +54,21 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+
+    #logout {
+        color: #E83E3E;
+    }
+
+    #login-register {
+        color: #002868;
+        font-size: 16px;
+        padding: 10px;
+    }
+    .nav-link:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: .1s ease-in-out;
+        border-radius: 15px;
     }
 </style>
 <div class="preloader-container" id="preloader">
@@ -104,34 +106,41 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
+                    <ul class="navbar-nav">
                         @guest
                         @if (Route::has('login'))
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">
-                                <span class="material-symbols-outlined">
-                                    logout
-                                </span>
-                                {{ __('Login') }}
+                            <a id="login-register" class="nav-link" href="{{ route('login') }}">
+                                <i class='bx bxs-log-in-circle'></i>
+                                Login/Register
                             </a>
                         </li>
                         @endif
 
-                        @if (Route::has('register'))
+                        <!-- @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
-                        @endif
+                        @endif -->
                         @else
+                        <li class="nav-item">
+                            <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
+                                <i class='bx bxs-home'></i>
+                                Home
+                            </a>
+                        </li>
+                        <div style="margin: 15px;"></div>
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
+                            <a id="navbarDropdown " class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class='bx bxs-user-circle'></i>
+                                {{ Auth::user()->first_name }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class='bx bx-log-out'></i>
+                                    Logout
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -151,8 +160,7 @@
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="#">Conference</a>
                         <div class="dropdown">
-                            <a class="sub" href="{{ route('welcome') }}">Home</a>
-                            <a class="sub" href="{{ route('message') }}">Message from CAA Philippines</a>
+                            <a class="sub" href="{{ route('welcome') }}">Welcome Message</a>
                             <a class="sub" href="{{ route('agenda') }}">Agenda</a>
                             <a class="sub" href="#">Programme</a>
                             <div class="sub-dropdown">
@@ -189,11 +197,11 @@
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="#">Delegate's Corner</a>
                         <div class="dropdown">
-                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
-                            <a href="#">Transport Schedule</a>
-                            <a href="#">Venue</a>
-                            <a href="#">Registration</a>
-                            <a href="#">Other Notices</a>
+                            <a class="sub" href="{{ route('bulletin') }}">Conference Bulletin</a>
+                            <a class="sub" href="#">Transport Schedule</a>
+                            <a class="sub" href="#">Venue</a>
+                            <a class="sub" href="#">Registration</a>
+                            <a class="sub" href="#">Other Notices</a>
                         </div>
                     </li>
                     <li class="navbar-dropdown">

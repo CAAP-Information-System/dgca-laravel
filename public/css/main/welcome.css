@@ -1,6 +1,12 @@
 @import url("https://fonts.cdnfonts.com/css/quiapo-free");
 
-
+.announcements{
+    background-color: #002868;
+    font-size: 1.5rem;
+    color: #ffff;
+    font-weight: bold;
+    padding: 7px;
+}
 .tamayo {
     display: inline-block;
 }
@@ -60,22 +66,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 12vh;
 }
 
 .message-header {
-    font-size: 4rem;
-    font-family: "Quiapo Free", sans-serif;
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
-    color: #c11717;
-    text-shadow: #002868 -3px -3px, #e2b100 -6px -6px;
+    color: #3B3B3B;
+    line-height: 6vh;
+    margin-bottom: 20px;
+
     text-align: center; /* If you want the header text to be centered */
 }
 
 .message-content {
     color: #3b3b3b;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
     margin: 0 auto; /* Center the content horizontally */
     text-align: justify;
+
 }
 
 .plane {
@@ -277,13 +287,15 @@
     padding: 20px;
     border-radius: 20px;
 }
-.hosted-by {
-    background: rgba(255, 255, 255, 0.09) url("/img/city2.png") bottom / 50%
-        no-repeat fixed;
+.dgca-footer {
+    /* background: rgba(255, 255, 255, 2) url("/img/city3.png") bottom
+        no-repeat fixed; */
+    background-color: #ffff;
+
 }
 .hosted-header{
     color: #0046b9;
-    font-size: 3rem;
+    font-size: 2.3rem;
     text-align: center;
 }
 .hosts-grp{
@@ -304,7 +316,7 @@
     width: 30%;
 }
 .host-content-header{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #3B3B3B;
     font-style: italic;
 }
@@ -312,6 +324,7 @@
     font-size: 2.5rem;
     color: #002868;
     font-weight: bold;
+    line-height: 4vh;
 }
 .city {
     position: relative;

@@ -3,6 +3,7 @@
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\SideMeetingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// ADMIN MIDDLEWARE
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
+    Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
 Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
@@ -34,10 +39,8 @@ Route::get('/the-gallery', [HomeController::class, 'viewGallery'])->name('the-ga
 Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('participants');
 Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
 
-Route::get('/meeting-room', [HomeController::class, 'viewMeetingRoom'])->name('meeting-room');
-Route::get('/schedule/day1', [ScheduleController::class, 'day1'])->name('schedule-day1');
-Route::get('/schedule/day2', [ScheduleController::class, 'day2'])->name('schedule-day2');
-Route::get('/schedule/day3', [ScheduleController::class, 'day3'])->name('schedule-day3');
+Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
+
 
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');
 

@@ -14,19 +14,22 @@
             <div class="user__details">
                 <div class="input__box">
                     <span class="details">First Name</span>
-                    <input type="text" placeholder="E.g: Juan" name="first_name" required>
+                    <input type="text" placeholder="E.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
                 </div>
+
                 <div class="input__box">
                     <span class="details">Last Name</span>
-                    <input type="text" placeholder="E.g: Dela Cruz" name="last_name" required>
+                    <input type="text" placeholder="E.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" required>
                 </div>
+
                 <div class="input__email">
                     <span class="details">Email Address</span>
-                    <input type="text" placeholder="E.g: yourname@example.com" name="email" required>
+                    <input type="text" placeholder="E.g: yourname@example.com" name="email" value="{{ old('email') }}" required>
                 </div>
+
                 <div class="input__email">
                     <span class="details">Organization</span>
-                    <input type="text" placeholder="E.g: ABC Organization" name="organization" required>
+                    <input type="text" placeholder="E.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
                 </div>
 
                 <div class="input__box">
@@ -118,32 +121,32 @@
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-    const passwordInput = document.getElementById("password");
-    const passwordStrength = document.getElementById("password-strength");
+        const passwordInput = document.getElementById("password");
+        const passwordStrength = document.getElementById("password-strength");
 
-    passwordInput.addEventListener("input", () => {
-        validatePassword(passwordInput.value);
-    });
+        passwordInput.addEventListener("input", () => {
+            validatePassword(passwordInput.value);
+        });
 
-    function validatePassword(password) {
-        // Define your password strength criteria
-        const lengthRegex = /.{8,}/;
-        const letterRegex = /[A-Za-z]/;
-        const numberRegex = /\d/;
-        const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+        function validatePassword(password) {
+            // Define your password strength criteria
+            const lengthRegex = /.{8,}/;
+            const letterRegex = /[A-Za-z]/;
+            const numberRegex = /\d/;
+            const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
 
-        // Check each criterion
-        const isLengthValid = lengthRegex.test(password);
-        const isLetterValid = letterRegex.test(password);
-        const isNumberValid = numberRegex.test(password);
-        const isSpecialCharValid = specialCharRegex.test(password);
+            // Check each criterion
+            const isLengthValid = lengthRegex.test(password);
+            const isLetterValid = letterRegex.test(password);
+            const isNumberValid = numberRegex.test(password);
+            const isSpecialCharValid = specialCharRegex.test(password);
 
-        // Update the UI based on the criteria
-        document.getElementById("length").classList.toggle("valid", isLengthValid);
-        document.getElementById("letter").classList.toggle("valid", isLetterValid);
-        document.getElementById("number").classList.toggle("valid", isNumberValid);
-        document.getElementById("specialChar").classList.toggle("valid", isSpecialCharValid);
-    }
+            // Update the UI based on the criteria
+            document.getElementById("length").classList.toggle("valid", isLengthValid);
+            document.getElementById("letter").classList.toggle("valid", isLetterValid);
+            document.getElementById("number").classList.toggle("valid", isNumberValid);
+            document.getElementById("specialChar").classList.toggle("valid", isSpecialCharValid);
+        }
     });
 </script>
 @endsection

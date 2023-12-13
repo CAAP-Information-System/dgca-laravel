@@ -3,7 +3,10 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/meeting/meeting.css') }}">
 <div class="container">
-    <header class="meeting-header">Side Meeting Schedule</header>
+
+</div>
+<div class="container">
+    <header class="meeting-header">Side Meeting</header>
 
     <section class="meeting-guidelines">
         <main class="guidelines">
@@ -19,9 +22,9 @@
     </section>
     <nav class="day-selector">
         <ul>
-            <li><button  onclick="changeSchedule('day1')" id="day1">Day 1</button></li>
-            <li><button  onclick="changeSchedule('day2')" id="day2">Day 2</button></li>
-            <li><button  onclick="changeSchedule('day3')" id="day3">Day 3</button></li>
+            <li><button onclick="changeSchedule('day1')" id="day1">Day 1</button></li>
+            <li><button onclick="changeSchedule('day2')" id="day2">Day 2</button></li>
+            <li><button onclick="changeSchedule('day3')" id="day3">Day 3</button></li>
         </ul>
     </nav>
     <div id="schedule-day1" class="schedule-container">
@@ -39,190 +42,59 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                            $time_slots = [
+                            "08:00-08:30", "08:30-09:00", "09:00-09:30", "09:30-10:00", "10:00-10:30",
+                            "10:30-11:00", "11:00-11:30", "11:30-12:00", "12:00-12:30", "12:30-13:00",
+                            "13:00-13:30", "13:30-14:00", "14:00-14:30", "14:30-15:00", "15:00-15:30",
+                            "15:30-16:00", "16:00-16:30", "16:30-17:00", "17:00-17:30", "17:30-18:00",
+                            ];
+                            @endphp
+                            @foreach($time_slots as $time_slot)
                             <tr>
-                                <td class="day">08:00-08:30</td>
-                                <td class="active">
-                                    <h4>Philippines - Australia</h4>
+                                <td class="day">{{ $time_slot }}</td>
+
+                                <!-- Meeting Room A -->
+                                <td class="{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
+                                    @if($meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
+                                    <h4>{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->first()->reservee }}</h4>
                                     <div class="hover">
-                                        <h4>Philippines - Australia</h4>
-                                        <span>Reserved by: Philippines</span>
+                                        <h4>{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->first()->reservee }}</h4>
+                                        <span>Reserved by: {{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
                                     </div>
+                                    @endif
                                 </td>
-                                <td class="active">
-                                    <h4>Singapore - Indonesia</h4>
+
+                                <!-- Meeting Room B -->
+                                <td class="{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
+                                    @if($meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
+                                    <h4>{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->first()->reservee }}</h4>
                                     <div class="hover">
-                                        <h4>Singapore - Indonesia</h4>
-                                        <span>Reserved by: Singapore</span>
+                                        <h4>{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->first()->reservee }}</h4>
+                                        <span>Reserved by: {{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
                                     </div>
+                                    @endif
                                 </td>
-                                <td class="pending">
-                                    <h4>Pending Decision</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="day">08:30-09:00</td>
-                                <td></td>
-                                <td class="active">
-                                    <h4>Bangladesh - India</h4>
+
+                                <!-- Meeting Room C -->
+                                <td class="{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
+                                    @if($meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
+                                    <h4>{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->first()->reservee }}</h4>
                                     <div class="hover">
-                                        <h4>Bangladesh - India</h4>
-                                        <span>Reserved by: India</span>
+                                        <h4>{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->first()->reservee }}</h4>
+                                        <span>Reserved by: {{ $meeting_rooms->where('time_drop', $time_slot)->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
                                     </div>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">09:00-09:30</td>
-                                <td class="active">
-                                    <h4>Japan - Korea</h4>
-                                    <div class="hover">
-                                        <h4>Japan - Korea</h4>
-                                        <span>Reserved by: Japan</span>
-                                    </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">09:30-10:00</td>
-                                <td class="active">
-                                    <h4>Thailand - United Kingdom</h4>
-                                    <div class="hover">
-                                        <h4>Thailand - United Kingdom</h4>
-                                        <span>Reserved by: United Kingdom</span>
-                                    </div>
-                                </td>
-                                <td></td>
-                                <td class="active">
-                                    <h4>United States of America - Saudi Arabia</h4>
-                                    <div class="hover">
-                                        <h4>United States of America - Saudi Arabia</h4>
-                                        <span class="span">Reserved by: Saudi Arabia</span>
-                                    </div>
+                                    @endif
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="day">10:00-10:30</td>
-                                <td></td>
-                                <td class="active">
-                                    <h4>Philippines - Japan</h4>
-                                    <div class="hover">
-                                        <h4>Philippines - Japan</h4>
-                                        <span>Reserved by: Philippines</span>
-                                    </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">10:30-11:00</td>
-                                <td class="active">
-                                    <h4>United States of America - United Kingdoms</h4>
-                                    <div class="hover">
-                                        <h4>United States of America - United Kingdom</h4>
-                                        <span>Reserved by: United States of America</span>
-                                    </div>
-                                </td>
-                                <td></td>
-                                <td class="active">
-                                    <h4>Singapore - Malaysia</h4>
-                                    <div class="hover">
-                                        <h4>Singapore - Malaysia</h4>
-                                        <span>Reserved by: Malaysia</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="day">11:00-11:30</td>
-                                <td></td>
-                                <td></td>
-                                <td class="">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="day">11:30-12:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">12:00-12:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">12:30-13:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">13:00-13:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">13:30-14:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">14:00-14:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">14:30-15:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">15:00-15:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">15:30-16:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">16:00-16:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">16:30-17:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">17:00-17:30</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="day">17:30-18:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
     <div id="schedule-day2" class="schedule-container" style="display: none;">
         <header class="day-header">Day 2, October 2024</header>
         <div class="row">

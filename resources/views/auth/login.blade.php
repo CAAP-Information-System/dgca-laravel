@@ -8,7 +8,6 @@
     </div>
     <section class="main">
         <div class="login-main">
-
             <form class="login-form" method="POST" action="{{ route('login') }}">
                 <header class="login-hdr">Sign In Now</header>
                 @csrf
@@ -22,7 +21,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class='bx bx-envelope'></i></span>
                                 </div>
-                                <input id="email" type="email" placeholder="Enter Email Address" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             </div>
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -38,7 +37,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class='bx bx-key'></i></span>
                                 </div>
-                                <input id="password" type="password" placeholder="Enter Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" placeholder="Enter Password" class="input-field" name="password" required autocomplete="current-password">
                             </div>
 
                             <br>

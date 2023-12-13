@@ -37,7 +37,7 @@
 }
 /* expand the background but the fields remain the same width */
 .login-main{
-    width: 60%;
+    width: 50%;
     margin-top: 6vh;
     border-radius: 20px;
     padding: 5vh;
@@ -49,7 +49,20 @@
     font-style: italic;
     font-size: 2.5rem;
 }
-
+.input-field{
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #969696;
+    border-radius: 10px;
+}
+.input-field:focus {
+    border-color: #1899D6 !important;
+}
+.form-label{
+    font-size: 16px;
+    color: #3b3b3b;
+    font-weight: bold;
+}
 
 .forgot-pass-btn{
     text-decoration: none;

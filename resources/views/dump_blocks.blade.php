@@ -1,114 +1,548 @@
-<style>
-    .wonders-sect {
-        margin-top: 8vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 3vh;
-    }
-
-    .circle-container {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        transition: border 0.2s ease, transform 0.5s ease;
-        /* Added transition properties for smooth animation */
-    }
-
-    .circle-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        /* Set the image to be in front */
-    }
-
-    .text-below {
-        text-align: center;
-        margin-top: 30%;
-        transform: translateY(100%);
-        /* Initially move the text below the circle */
-        opacity: 0;
-        font-weight: bold;
-        color: #ffff;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        line-height: 1vh;
-        display: absolute;
-    }
-
-    .place {
-        font-size: 30px;
-        line-height: 25px;
-    }
-
-    .loc {
-        font-weight: 200;
-    }
-
-    .circle-container:hover {
-        transform: scale(1.2);
-        padding: 10px;
-        border: 15px solid #e2b100;
-    }
-
-    .circle-container:hover .circle-image {
-        filter: blur(5px);
-        /* Apply blur effect on hover */
-    }
-
-    .circle-container:hover .text-below {
-        transform: translateY(0);
-        /* Move the text upward on hover */
-        opacity: 1;
-    }
-</style>
-
-<section class="wonders-sect">
-    <div class="circle-container">
-        <img class="circle-image" src="https://verafiles.org/wp-content/uploads/2014/04/Cagsawa-ruins-with-Mayon-Volcano-at-the-background.-From-flickr..jpg" alt="Circle Image">
-        <div class="text-below">
-            <p class="place">Mayon Volcano</p>
-            <p class="loc">Bicol</p>
+<div id="schedule-day1" class="schedule-container">
+        <header class="day-header">Day 1, October 2024</header>
+        <div class="row">
+            <div class="col-md">
+                <div class="schedule-table">
+                    <table class="table bg-white">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Meeting Room A</th>
+                                <th>Meeting Room B</th>
+                                <th class="last">Meeting Room C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day">08:00-08:30</td>
+                                <td class="active">
+                                    <h4>Philippines - Australia</h4>
+                                    <div class="hover">
+                                        <h4>Philippines - Australia</h4>
+                                        <span>Reserved by: Philippines</span>
+                                    </div>
+                                </td>
+                                <td class="active">
+                                    <h4>Singapore - Indonesia</h4>
+                                    <div class="hover">
+                                        <h4>Singapore - Indonesia</h4>
+                                        <span>Reserved by: Singapore</span>
+                                    </div>
+                                </td>
+                                <td class="pending">
+                                    <h4>Pending Decision</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">08:30-09:00</td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>Bangladesh - India</h4>
+                                    <div class="hover">
+                                        <h4>Bangladesh - India</h4>
+                                        <span>Reserved by: India</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">09:00-09:30</td>
+                                <td class="active">
+                                    <h4>Japan - Korea</h4>
+                                    <div class="hover">
+                                        <h4>Japan - Korea</h4>
+                                        <span>Reserved by: Japan</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">09:30-10:00</td>
+                                <td class="active">
+                                    <h4>Thailand - United Kingdom</h4>
+                                    <div class="hover">
+                                        <h4>Thailand - United Kingdom</h4>
+                                        <span>Reserved by: United Kingdom</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>United States of America - Saudi Arabia</h4>
+                                    <div class="hover">
+                                        <h4>United States of America - Saudi Arabia</h4>
+                                        <span class="span">Reserved by: Saudi Arabia</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">10:00-10:30</td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>Philippines - Japan</h4>
+                                    <div class="hover">
+                                        <h4>Philippines - Japan</h4>
+                                        <span>Reserved by: Philippines</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">10:30-11:00</td>
+                                <td class="active">
+                                    <h4>United States of America - United Kingdoms</h4>
+                                    <div class="hover">
+                                        <h4>United States of America - United Kingdom</h4>
+                                        <span>Reserved by: United States of America</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>Singapore - Malaysia</h4>
+                                    <div class="hover">
+                                        <h4>Singapore - Malaysia</h4>
+                                        <span>Reserved by: Malaysia</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">11:00-11:30</td>
+                                <td></td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">11:30-12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">12:00-12:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">12:30-13:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">13:00-13:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">13:30-14:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">14:00-14:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">14:30-15:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">15:00-15:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">15:30-16:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">16:00-16:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">16:30-17:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">17:00-17:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">17:30-18:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="circle-container">
-        <img class="circle-image" src="https://gttp.imgix.net/260574/x/0/chocolate-hills-in-bohol-how-to-go-best-time-to-go-activities-amp-tours-2.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Circle Image">
-        <div class="text-below">
-            <p class="place">Chocolate Hills</p>
-            <p class="loc">Bohol</p>
+    <div id="schedule-day2" class="schedule-container" style="display: none;">
+        <header class="day-header">Day 2, October 2024</header>
+        <div class="row">
+            <div class="col-md">
+                <div class="schedule-table">
+                    <table class="table bg-white">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Meeting Room A</th>
+                                <th>Meeting Room B</th>
+                                <th class="last">Meeting Room C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day">08:00-08:30</td>
+                                <td class="">
+                                </td>
+                                <td class="pending">
+                                    <h4>Pending Decision</h4>
+                                </td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">08:30-09:00</td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>United Kingdom - Philippines</h4>
+                                    <div class="hover">
+                                        <h4>United Kingdom - Philippines</h4>
+                                        <span>Reserved by: United Kingdom</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">09:00-09:30</td>
+                                <td class="active">
+                                    <h4>Papa New Guinea - Pakistan</h4>
+                                    <div class="hover">
+                                        <h4>Papa New Guinea - Pakistan</h4>
+                                        <span>Reserved by: Papa New Guinea</span>
+                                    </div>
+                                </td>
+                                <td class="active">
+                                    <h4>Thailand - Sri Lanka</h4>
+                                    <div class="hover">
+                                        <h4>Thailand - Sri Lanka</h4>
+                                        <span>Reserved by: Sri Lanka</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">09:30-10:00</td>
+                                <td class="active">
+                                    <h4>Korea - Singapore</h4>
+                                    <div class="hover">
+                                        <h4>Korea - Singapore</h4>
+                                        <span>Reserved by: Korea</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>United States of America - Saudi Arabia</h4>
+                                    <div class="hover">
+                                        <h4>United States of America - Saudi Arabia</h4>
+                                        <span class="span">Reserved by: Saudi Arabia</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">10:00-10:30</td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>Philippines - Japan</h4>
+                                    <div class="hover">
+                                        <h4>Philippines - Japan</h4>
+                                        <span>Reserved by: Philippines</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">10:30-11:00</td>
+                                <td class="active">
+                                    <h4>United States of America - United Kingdoms</h4>
+                                    <div class="hover">
+                                        <h4>United States of America - United Kingdoms</h4>
+                                        <span>Reserved by: United States of America</span>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td class="active">
+                                    <h4>Singapore - Malaysia</h4>
+                                    <div class="hover">
+                                        <h4>Singapore - Malaysia</h4>
+                                        <span>Reserved by: Malaysia</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">11:00-11:30</td>
+                                <td></td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">11:30-12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">12:00-12:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">12:30-13:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">13:00-13:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">13:30-14:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">14:00-14:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">14:30-15:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">15:00-15:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">15:30-16:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">16:00-16:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">16:30-17:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">17:00-17:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">17:30-18:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="circle-container">
-        <img class="circle-image" src="https://dbijapkm3o6fj.cloudfront.net/resources/19076,1004,1,6,4,0,600,450/-4601-/20190114220334/rizal-park.jpeg" alt="Circle Image">
-        <div class="text-below">
-            <p class="place">Luneta Park</p>
-            <p class="loc">Manila</p>
+    <div id="schedule-day3" class="schedule-container" style="display: none;">
+        <header class="day-header">Day 3, October 2024</header>
+        <div class="row">
+            <div class="col-md">
+                <div class="schedule-table">
+                    <table class="table bg-white">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Meeting Room A</th>
+                                <th>Meeting Room B</th>
+                                <th class="last">Meeting Room C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day">08:00-08:30</td>
+                                <td class="">
+                                </td>
+                                <td class="">
+                                </td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">08:30-09:00</td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">09:00-09:30</td>
+                                <td class="">
+                                </td>
+                                <td class="">
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">09:30-10:00</td>
+                                <td class="">
+                                </td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">10:00-10:30</td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">10:30-11:00</td>
+                                <td class="">
+                                </td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">11:00-11:30</td>
+                                <td></td>
+                                <td></td>
+                                <td class="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="day">11:30-12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">12:00-12:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">12:30-13:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">13:00-13:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">13:30-14:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">14:00-14:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">14:30-15:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">15:00-15:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">15:30-16:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">16:00-16:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">16:30-17:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">17:00-17:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">17:30-18:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="circle-container">
-        <img class="circle-image" src="https://lp-cms-production.imgix.net/2019-06/GettyImages-483535221_super.jpg" alt="Circle Image">
-        <div class="text-below">
-            <p class="place">Boracay</p>
-            <p class="loc">Aklan</p>
-        </div>
-    </div>
-    <div class="circle-container">
-        <img class="circle-image" src="https://www.tripsavvy.com/thmb/zVjvBeG_XRv3zwVeq3A_R_TtMfU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-515030857-599ff63e03f402001100ee1d-6218e3c18a3a4503a2a1fb183ce8ccfb.jpg" alt="Circle Image">
-        <div class="text-below">
-            <p class="place">Fort Santiago</p>
-            <p class="loc">Manila</p>
-        </div>
-    </div>
-    <div class="circle-container">
-        <img class="circle-image" src="https://cdn.tatlerasia.com/asiatatler/i/ph/2021/05/14120924-untitled_cover_1085x694.png" alt="Circle Image">
-        <div class="text-below">
-            <p class="place">Vigan</p>
-            <p class="loc">Ilocos Sur</p>
-        </div>
-    </div>
-</section>

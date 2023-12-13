@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ url('css/main/file_upload.css') }}">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -32,13 +33,14 @@
                                     <th>Upload Date</th>
                                     <th>Size</th>
                                     <th>Action</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($files as $file)
                                     <tr>
                                         <td>
-                                            <a href="{{ route('file.view', $file->id) }}" target="_blank">{{ $file->name }}</a>
+                                            <a class="file-name" href="{{ route('file.view', $file->id) }}"download>{{ $file->name }}</a>
                                         </td>
                                         <td>{{ $file->owner ?? 'Unknown' }}</td>
                                         <td>{{ $file->upload_date }}</td>

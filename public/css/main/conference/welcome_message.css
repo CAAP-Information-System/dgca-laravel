@@ -71,12 +71,12 @@ body{
     font-family: "Quiapo Free", sans-serif;
     font-weight: 700;
     color: #c11717;
+    letter-spacing: 5px;
     text-align: center; /* If you want the header text to be centered */
 }
 .caa-phil{
     font-family: "Quiapo Free", sans-serif;
-    color: #ffff;
-    background-color: #002868;
+    color: #002868;
     padding: 15px;
     letter-spacing: 5px;
 }

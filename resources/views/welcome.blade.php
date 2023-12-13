@@ -3,13 +3,22 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}">
 <div class="container">
-    <main class="content-main">
 
+</div>
+<main class="content-main">
+    <div class="container">
+
+        <section>
+            <marquee class="announcements" behavior="" direction="">
+                This is a marquee line for important announcements. For testing purposes.
+                Test
+            </marquee>
+        </section>
 
         <section class="main-title fade-in-section">
             <section class="welcome-message">
                 <main class="message-main">
-                    <header class="message-header">Welcome to the 59th DGCA Conference</header>
+                    <header class="message-header">Mabuhay! 59th DGCA Conference</header>
                     <div class="message-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         <br><br>
@@ -26,80 +35,82 @@
                 </div>
             </div>
         </section>
-        <section class="grp-1 fade-in-section">
-            <header class="welcome">Welcome</header>
-            <span class="to-the">to the</span>
-            <div class="dg-span">
-                <header class="conference">Conference of <span style="color: #16366A;">Director Generals</span></header>
-                <header class="conference">of Civil Aviation</header>
-            </div>
-            <div class="asia-pacific">Asia and Pacific Region</div>
-            <header class="philippines">Philippines 2024</header>
+    </div>
+    <section class="grp-1 fade-in-section">
+        <header class="welcome">Welcome</header>
+        <span class="to-the">to the</span>
+        <div class="dg-span">
+            <header class="conference">Conference of <span style="color: #16366A;">Director Generals</span></header>
+            <header class="conference">of Civil Aviation</header>
+        </div>
+        <div class="asia-pacific">Asia and Pacific Region</div>
+        <header class="philippines">Philippines 2024</header>
 
-            <a href="{{ route('login')}}" class="button-19">Let's Join Now!</a>
-            <!-- <div class="plane">
-                <img src="{{ asset('img/new-plane.png') }}" alt="CAAP Logo" class="plane-img">
-            </div> -->
-        </section>
-        <section class="airports fade-in-section">
-            <div class="slider-frame">
-                <div class="slide-images">
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/bohol.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/davao.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/iloilo.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/bicol.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/gensan.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/kalibo.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/silay.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/zamboanga.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/laguindingan.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/laoag.jpg') }}" alt="CAAP Logo">
-                    </div>
-                    <div class="img-container">
-                        <img src="{{ asset('img/airport/puerto.jpg') }}" alt="CAAP Logo">
-                    </div>
+        <a href="{{ route('login')}}" class="button-19">Let's Join Now!</a>
+        <!-- <div class="plane">
+        <img src="{{ asset('img/new-plane.png') }}" alt="CAAP Logo" class="plane-img">
+    </div> -->
+    </section>
+    <section class="airports fade-in-section">
+        <div class="slider-frame">
+            <div class="slide-images">
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/bohol.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/davao.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/iloilo.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/bicol.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/gensan.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/kalibo.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/silay.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/zamboanga.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/laguindingan.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/laoag.jpg') }}" alt="CAAP Logo">
+                </div>
+                <div class="img-container">
+                    <img src="{{ asset('img/airport/puerto.jpg') }}" alt="CAAP Logo">
                 </div>
             </div>
-            <header class="airport-hdr">Philippine <span class="airport-span">Airports</span> Nationwide</header>
-        </section>
-        <section class="count-section fade-in-section">
-            <div class="container">
-                <div class="countdown-sect">
-                    <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
-                    <div id="countdown" class="countdown">
-                        <ul>
-                            <li><span id="days"></span>days</li>
-                            <li><span id="hours"></span>Hours</li>
-                            <li><span id="minutes"></span>Minutes</li>
-                            <li><span id="seconds"></span>Seconds</li>
-                        </ul>
-                    </div>
+        </div>
+        <header class="airport-hdr">Philippine <span class="airport-span">Airports</span> Nationwide</header>
+    </section>
+    <section class="count-section fade-in-section">
+        <div class="container">
+            <div class="countdown-sect">
+                <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
+                <div id="countdown" class="countdown">
+                    <ul>
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-    </main>
-    <footer class="hosted-by">
+</main>
+<div class="container">
+    <footer class="dgca-footer">
         <main class="hosted-main">
             <header class="hosted-header">We open our runways to all!</header>
             <div class="hosts-grp">
@@ -108,7 +119,7 @@
                 </div>
 
                 <div class="host-content">
-                    <header class="host-content-header">Hosted by:</header>
+                    <header class="host-content-header">Hosted by :</header>
                     <div class="host-content-caap-name">
                         Civil Aviation Authority of the Philippines
                     </div>
@@ -116,8 +127,8 @@
             </div>
         </main>
         <!-- <div class="city">
-            <img src="{{ asset('img/city.png') }}" alt="CAAP Logo" class="city-img">
-        </div> -->
+    <img src="{{ asset('img/city.png') }}" alt="CAAP Logo" class="city-img">
+</div> -->
     </footer>
 </div>
 <script>
