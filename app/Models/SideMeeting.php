@@ -11,6 +11,7 @@ class SideMeeting extends Model
         'days_drop',
         'meeting_room_drop',
         'time_drop',
+        'country_drop',
         'reserved_by',
         'reservee',
     ];

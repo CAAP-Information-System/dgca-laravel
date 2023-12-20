@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScheduleController;
@@ -26,8 +27,11 @@ Route::get('/', function () {
 
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
     Route::get('/meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
+
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
@@ -51,3 +55,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/files/view/{id}', [FileController::class, 'view'])->name('file.view');
     Route::delete('/delete/{id}', [FileController::class, 'delete'])->name('file.delete');
 });
+
+Route::get('send', [HomeController::class, 'sendNotif']);

@@ -9,10 +9,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', '59th DGCA Conference')</title>
-    <link rel="icon" href="img/caap_logo.png" type="image/x-icon">
+    <link rel="icon" href="img/dgca-logo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/navbar.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
     <!-- Google Font Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- BoxIcon CSS -->
@@ -37,8 +37,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
-    <script>
-    </script>
+    <!-- ADMIN LTE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <style>
@@ -65,6 +67,7 @@
         font-size: 16px;
         padding: 10px;
     }
+
     .nav-link:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         transition: .1s ease-in-out;
@@ -153,8 +156,74 @@
                 </div>
             </div>
         </nav>
+        @if(auth()->check() && auth()->user()->access_role == "admin")
+        <aside class="main-sidebar">
+            <!-- Brand Logo -->
+            <header class="navbar-header">DGCA Admin</header>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <nav class="mt-3">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Dashboard -->
+                        <li class="nav-item">
+                            <a href="{{ route('dashboard') }}" class="sidebar-item">
+
+                                <i class='nav-icon bx bx-grid-alt bx-sm'></i>
+                                <div class="item-name">Dashboard</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="sidebar-item">
+                                <i class='nav-icon bx bx-file bx-sm'></i>
+                                <div class="item-name">Files Uploaded</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="sidebar-item">
+                                <i class='nav-icon bx bx-calendar-event bx-sm'></i>
+                                <div class="item-name">Reservation</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('account_list') }}" class="sidebar-item">
+                                <i class='nav-icon bx bx-user-circle bx-sm'></i>
+                                <div class="item-name">Account Lists</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="sidebar-item">
+                                <i class='nav-icon bx bx-user-check bx-sm'></i>
+                                <div class="item-name">Pending Accounts</div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            @auth
+                            <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class='nav-icon bx bxs-user-circle'></i> {{ Auth::user()->first_name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class='bx bx-log-out'></i> Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                            @endauth
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </aside>
+        @endif
 
         <main class="py-4">
+            @if(auth()->check() && auth()->user()->access_role != "admin")
             <nav class="welcome-navbar">
                 <ul class="navbar-links">
                     <li class="navbar-dropdown">
@@ -207,11 +276,9 @@
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">About Philippines</a>
                     </li>
-
-
-
                 </ul>
             </nav>
+            @endif
             @yield('content')
         </main>
     </div>

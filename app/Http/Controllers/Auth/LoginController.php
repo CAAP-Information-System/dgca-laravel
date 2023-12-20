@@ -45,7 +45,7 @@ class LoginController extends Controller
         // Will redirect to Dashboard if logged in as admin
         if(Auth::user()->access_role == 'admin')
         {
-            return redirect('welcome');
+            return redirect('admin/dashboard');
         }
     }
 

@@ -377,3 +377,154 @@
         align-items: center;
     }
 }
+
+
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .announcements {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    .tamayo-img {
+        display: none;
+    }
+
+    .caap-img {
+        width: 300px;
+        top: 15%;
+        right: 50%;
+    }
+
+    .dg-details {
+        display: none;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .position {
+        font-size: 16px;
+    }
+
+    .main-title {
+        padding: 2vh;
+    }
+
+    .welcome-message {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .message-main {
+        margin-left: 0;
+    }
+
+    .message-header {
+        font-size: 3.4rem;
+        line-height: 8vh;
+        margin-bottom: 10px;
+    }
+
+    .message-content {
+        font-size: 14px;
+    }
+
+    .plane-img {
+        width: 100%;
+        top: 100%;
+        right: 0;
+    }
+
+    .grp-1 {
+        margin-top: 5vh;
+        line-height: 3vh;
+        margin-bottom: 5vh;
+    }
+
+    .welcome {
+        font-size: 2.5rem;
+    }
+
+    .to-the {
+        font-size: 1.2rem;
+    }
+
+    .dg-span {
+        line-height: 4vh;
+    }
+
+    .conference {
+        font-size: 2rem;
+    }
+
+    .asia-pacific {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .philippines {
+        font-size: 4rem;
+    }
+
+    .button-19 {
+        font-size: 20px;
+        padding: 10px 13px;
+        width: 80%;
+    }
+
+    .slider-frame {
+        height: 300px;
+    }
+
+    .countdown-header {
+        font-size: 24px;
+    }
+
+    .countdown ul li {
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+
+    .countdown ul li span {
+        font-size: 1.5rem;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+
+    .hosted-header {
+        font-size: 1.8rem;
+    }
+
+    .hosts-grp {
+        flex-direction: column;
+    }
+
+    .caap-host-img {
+        width: 100%;
+    }
+
+    .host-content {
+        width: 100%;
+    }
+
+    .host-content-header {
+        font-size: 1rem;
+    }
+
+    .host-content-caap-name {
+        font-size: 2rem;
+        line-height: 3vh;
+    }
+
+    .city-img {
+        width: 100%;
+        top: 50%;
+        right: 0;
+    }
+
+    /* Additional responsive styles go here */
+}

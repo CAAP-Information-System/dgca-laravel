@@ -14,24 +14,34 @@
             <div class="user__details">
                 <div class="input__box">
                     <span class="details">First Name</span>
-                    <input type="text" placeholder="E.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
+                    <input type="text" placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
                 </div>
 
                 <div class="input__box">
                     <span class="details">Last Name</span>
-                    <input type="text" placeholder="E.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" required>
+                    <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" required>
                 </div>
 
                 <div class="input__email">
                     <span class="details">Email Address</span>
-                    <input type="text" placeholder="E.g: yourname@example.com" name="email" value="{{ old('email') }}" required>
+                    <input type="text" placeholder="e.g: yourname@example.com" name="email" value="{{ old('email') }}" required>
                 </div>
-
+                <div class="input__email">
+                    <span class="details">Designation/Position</span>
+                    <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
+                </div>
                 <div class="input__email">
                     <span class="details">Organization</span>
-                    <input type="text" placeholder="E.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
+                    <input type="text" placeholder="e.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
                 </div>
-
+                <div class="input__email">
+                    <span class="details">Gender</span>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="-- Select Option --" disabled>-- Select Option -- </option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
                 <div class="input__box">
                     <span class="details">Password</span>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter Password" autocomplete="new-password" required>

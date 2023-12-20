@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Models\SideMeeting;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class AdminController extends Controller
+{
+    public function dashboard()
+    {
+        $userCount = User::count();
+        $reservationCount = SideMeeting::count();
+
+        $pendingAccount = User::where('status', 'Pending')->count();
+
+        return view('admin.dashboard', [
+            'userCount' => $userCount,
+            'reservationCount' => $reservationCount,
+            'pendingAccount' => $pendingAccount,
+        ]);
+    }
+
+    public function account_list(){
+        $user= User::all();
+
+        return view('admin.account_list', [ 'users' => $user]);
+    }
+}

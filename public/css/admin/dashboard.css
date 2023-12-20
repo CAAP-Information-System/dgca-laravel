@@ -1,0 +1,108 @@
+.main-sidebar{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 25px;
+}
+.sidebar{
+    background-color: #ffff;
+    color: #fff;
+    position: fixed;
+    width: 250px;
+    overflow-x: hidden;
+
+
+}
+.sidebar .nav-item{
+    padding: 5px;
+}
+.sidebar .nav-item .sidebar-item{
+    color: #3b3b3b;
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    align-items: center;
+}
+.sidebar .nav-item  .sidebar-item:hover{
+    color: #ffff;
+    background-color: #50A9FB;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .2s;
+}
+.content-wrapper{
+    background-color: #ffff;
+}
+.navbar-header{
+    font-size: 25px;
+    color: #3b3b3b;
+    padding: 12px;
+}
+
+.stat-card{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 15px;
+    border-radius: 16px;
+    position: relative;
+    transition: .1s ease-in;
+    color: #3b3b3b;
+}
+#files:hover{
+    background-color:#74C9F8;
+    color: #ffff;
+}
+#meetings:hover{
+    background-color:#38b98a;
+    color: #ffff;
+}
+#delegates:hover{
+    background-color:#e7bc50;
+    color: #ffff;
+}
+#pending:hover{
+    background-color:#FD6F6F;
+    color: #ffff;
+}
+.icon-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: auto;
+    font-size: 3.6rem;
+}
+.inner{
+    padding-left: 25px;
+}
+
+.stat-header{
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.stat-value{
+    font-size: 2.5rem;
+}
+.item-name{
+    margin-left: 10px;
+}
+.sidebar-item.active {
+    background-color: #007bff; /* Change this to your desired active state background color */
+    color: #ffffff; /* Change this to your desired active state text color */
+}
+@media screen and (min-width: 769px) and (max-width: 900px) {
+    .stat-card{
+        padding: 5px;
+        border-radius: 16px;
+        position: relative;
+        transition: .1s ease-in;
+        color: #3b3b3b;
+        margin: 10px;
+    }
+    .stat-header{
+        padding-top: 10px;
+    }
+    .stat-values{
+        width: 20px;
+    }
+}
+

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Notifications\ApprovalNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class HomeController extends Controller
 {
@@ -65,5 +68,22 @@ class HomeController extends Controller
         return view('main.delegates.conf_bulletin');
     }
 
+    public function sendNotif()
+    {
+        $user=User::all();
+
+        $details = [
+            'greeting' => 'Hi Artisan',
+            'body' => 'This is our example notification tutorial',
+            'actiontext' => 'View Our Site',
+            'actionURL' => url('/'),
+            'lastline' => 'Thank you for using our application!',
+
+        ];
+
+        Notification::send($user, new ApprovalNotification($details));
+
+        dd('done');
+    }
 
 }
