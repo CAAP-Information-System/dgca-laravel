@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\File;
 use App\Models\SideMeeting;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -29,4 +31,14 @@ class AdminController extends Controller
 
         return view('admin.account_list', [ 'users' => $user]);
     }
+
+    public function file_uploads(){
+        $files = File::all();
+
+        return view('admin.file_upload', [
+            'files' => $files,
+        ]);
+    }
+
+
 }

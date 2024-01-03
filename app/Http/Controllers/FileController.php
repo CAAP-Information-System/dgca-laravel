@@ -50,7 +50,7 @@ class FileController extends Controller
                 $fileName = $file->getClientOriginalName();
 
                 // Save file to storage and database
-                $path = $file->storeAs('uploads', $fileName);
+                $path = $file->storeAs('public/conference', $fileName);
                 $size = $file->getSize();
 
                 $createdFile = File::create([
@@ -119,10 +119,16 @@ class FileController extends Controller
             //     abort(403, 'Unauthorized access to view this file.');
             // }
 
-            return response()->file(storage_path("app/uploads/{$file->name}"));
+            return response()->file(storage_path("public/conference/{$file->name}"));
         } catch (\Exception $e) {
             Log::error($e);
             return redirect()->back()->with('error', 'An error occurred while trying to view the file.');
         }
+    }
+    public function download(File $file)
+    {
+        $filePath = Storage::url('conference/' . $file->name);
+
+        return response()->download(public_path($filePath), $file->name);
     }
 }

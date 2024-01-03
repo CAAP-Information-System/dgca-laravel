@@ -58,7 +58,7 @@ class SideMeetingController extends Controller
             "Hong Kong",
             "Macao",
             "Cook Islands",
-            "Democratic People's Republic of Korea",
+            "Republic of Korea",
             "Fiji",
             "India",
             "Indonesia",

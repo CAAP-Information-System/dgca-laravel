@@ -18,5 +18,16 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
 ## Getting Started
 
 ### Prerequisites
+Before you begin, ensure you have met the following requirements:
 
+- **Node.js**: Make sure you have Node.js installed. You can download it from [https://nodejs.org/](https://nodejs.org/).
+
+- **npm (Node Package Manager)**: This project uses npm to manage dependencies. It usually comes with Node.js installation.
+
+- **Composer**: If your project is built with PHP, you might need Composer for managing PHP dependencies. You can download it from [https://getcomposer.org/](https://getcomposer.org/).
+
+- **Web Browser**: Ensure you have a modern web browser like Google Chrome, Firefox, or Safari for testing and running the application.
+
+### Installations
+- **laravel/ui**: 
 [Specify any software or dependencies that need to be installed before running the project]

@@ -31,12 +31,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
-
     <!-- ADMIN LTE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
@@ -127,6 +127,7 @@
                         </li>
                         @endif -->
                         @else
+                        @if(auth()->check() && auth()->user()->access_role != "admin")
                         <li class="nav-item">
                             <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
                                 <i class='bx bxs-home'></i>
@@ -151,6 +152,7 @@
                                 </form>
                             </div>
                         </li>
+                        @endif
                         @endguest
                     </ul>
                 </div>
@@ -174,7 +176,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="sidebar-item">
+                            <a href="{{ route('files') }}" class="sidebar-item">
                                 <i class='nav-icon bx bx-file bx-sm'></i>
                                 <div class="item-name">Files Uploaded</div>
                             </a>
@@ -197,23 +199,25 @@
                                 <div class="item-name">Pending Accounts</div>
                             </a>
                         </li>
-                        <li class="nav-item dropdown ">
-                            @auth
-                            <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class='nav-icon bx bxs-user-circle'></i> {{ Auth::user()->first_name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class='bx bx-log-out'></i> Logout
+                        <div class="account-name-sidebar">
+                            <li class="nav-item dropdown ">
+                                @auth
+                                <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <i class='nav-icon bx bxs-user-circle'></i> {{ Auth::user()->first_name }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                            @endauth
-                        </li>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class='bx bx-log-out'></i> Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                                @endauth
+                            </li>
+                        </div>
                     </ul>
                 </nav>
 
@@ -283,6 +287,9 @@
         </main>
     </div>
 </body>
+
+
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {

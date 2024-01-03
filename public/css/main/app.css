@@ -27,6 +27,7 @@ body {
     width: 120px;
     padding-left: 25px;
 }
+
 .preloader-container {
     /* change none to flex to return the preloader */
     display: none;
