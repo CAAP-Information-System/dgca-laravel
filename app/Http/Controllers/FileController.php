@@ -79,19 +79,23 @@ class FileController extends Controller
 
 
 
-    public function inventory()
+    public function registerDocument()
     {
         // Ensure the user is authenticated before accessing auth()->user()
         if (auth()->check()) {
             $owner = auth()->user()->name;
             $files = File::where('owner', $owner)->get();
-            return view('file_manager.file_upload', compact('files'));
+            return view('file_manager.register_files', compact('files'));
         } else {
             // Redirect or handle the case when the user is not authenticated
             return redirect()->route('login');
         }
     }
 
+    public function viewFiles(){
+        $allFiles = File::all();
+        return view('file_manager.view_files', ['files' => $allFiles]);
+    }
     public function delete($id)
     {
         $file = File::find($id);

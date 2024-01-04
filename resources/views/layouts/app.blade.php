@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
     <!-- Google Font Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- BoxIcon CSS -->
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -171,31 +171,31 @@
                         <li class="nav-item">
                             <a href="{{ route('dashboard') }}" class="sidebar-item">
 
-                                <i class='nav-icon bx bx-grid-alt bx-sm'></i>
+                            <i class="fa-solid fa-chart-column fa-lg"></i>
                                 <div class="item-name">Dashboard</div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('files') }}" class="sidebar-item">
-                                <i class='nav-icon bx bx-file bx-sm'></i>
+                            <i class="fa-regular fa-file-lines fa-lg"></i>
                                 <div class="item-name">Files Uploaded</div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="sidebar-item">
-                                <i class='nav-icon bx bx-calendar-event bx-sm'></i>
+                            <a href="{{ route('meeting-reservations') }}" class="sidebar-item">
+                                <i class="fa-regular fa-calendar-check fa-lg"></i>
                                 <div class="item-name">Reservation</div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('account_list') }}" class="sidebar-item">
-                                <i class='nav-icon bx bx-user-circle bx-sm'></i>
+                            <i class="fa-solid fa-users"></i>
                                 <div class="item-name">Account Lists</div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="sidebar-item">
-                                <i class='nav-icon bx bx-user-check bx-sm'></i>
+                                <i class="fa-solid fa-spinner fa-lg"></i>
                                 <div class="item-name">Pending Accounts</div>
                             </a>
                         </li>
@@ -203,7 +203,7 @@
                             <li class="nav-item dropdown ">
                                 @auth
                                 <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class='nav-icon bx bxs-user-circle'></i> {{ Auth::user()->first_name }}
+                                <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -16,6 +16,7 @@ class AdminController extends Controller
     {
         $userCount = User::count();
         $reservationCount = SideMeeting::count();
+        $filesCount = File::count();
 
         $pendingAccount = User::where('status', 'Pending')->count();
 
@@ -23,6 +24,7 @@ class AdminController extends Controller
             'userCount' => $userCount,
             'reservationCount' => $reservationCount,
             'pendingAccount' => $pendingAccount,
+            'filesCount' => $filesCount,
         ]);
     }
 
@@ -40,5 +42,8 @@ class AdminController extends Controller
         ]);
     }
 
-
+    public function reservation_view(){
+        $meetings = SideMeeting::all();
+        return view('admin.reservation_view', ['meetings' => $meetings]);
+    }
 }

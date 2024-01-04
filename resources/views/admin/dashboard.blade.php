@@ -32,8 +32,8 @@
                                 <div id="files" class="stat-card">
                                     <div class="inner">
                                         <div class="stat-values">
-                                            <p class="stat-header">Files Uploaded</p>
-                                            <p class="stat-value">0</p>
+                                            <p class="stat-header">Total Files Uploaded</p>
+                                            <p class="stat-value">{{ $filesCount }}</p>
                                         </div>
                                         <div class="icon-img">
                                             <i class='bx bxs-file'></i>

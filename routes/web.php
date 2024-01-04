@@ -28,6 +28,7 @@ Route::get('/', function () {
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
     Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
     Route::get('/meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
     Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
@@ -53,7 +54,8 @@ Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bu
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/files', [FileController::class, 'inventory'])->name('viewFiles');
+    Route::get('/create-file', [FileController::class, 'registerDocument'])->name('registerDocument');
+    Route::get('/view-files', [FileController::class, 'viewFiles'])->name('viewFiles');
     Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');
     Route::get('/files/view/{id}', [FileController::class, 'view'])->name('file.view');
     Route::delete('/delete/{id}', [FileController::class, 'delete'])->name('file.delete');

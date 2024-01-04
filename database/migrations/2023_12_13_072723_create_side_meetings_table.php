@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('meeting_room_drop')->nullable();
             $table->string('time_drop')->nullable();
             $table->string('reserved_by')->nullable();
-            $table->string('reservee')->nullable();
 
             $table->timestamps();
         });

@@ -21,10 +21,14 @@
                     <span class="details">Last Name</span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" required>
                 </div>
-
-                <div class="input__email">
+                <div class="input__box">
                     <span class="details">Email Address</span>
                     <input type="text" placeholder="e.g: yourname@example.com" name="email" value="{{ old('email') }}" required>
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Country</span>
+                    <input type="text" placeholder="e.g: Philippines" name="country" value="{{ old('country') }}" required>
                 </div>
                 <div class="input__email">
                     <span class="details">Designation/Position</span>
