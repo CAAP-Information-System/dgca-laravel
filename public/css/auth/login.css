@@ -89,7 +89,9 @@
     padding: 10px;
     width: 60%;
 }
-
+.form-check-input{
+    border: solid 1px #3b3b3b;
+}
 .row{
     text-align: center;
 }
@@ -187,4 +189,18 @@
 .fade-in-section.fade-in {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .auth-hdr{
+        font-size: 2rem;
+        padding: 7px;
+    }
+    .login-main{
+        width: 100%;
+    }
+    .input-field{
+        width: 87%;
+    }
+
 }

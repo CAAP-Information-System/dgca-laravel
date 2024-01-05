@@ -24,6 +24,7 @@
                                     <th scope="col">Full Name</th>
                                     <th scope="col">Designation / Position</th>
                                     <th scope="col">Country</th>
+                                    <th scope="col">Conference Role</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Access Role</th>
                                     <th scope="col">Action</th>
@@ -36,6 +37,7 @@
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->designation}}</td>
                                     <td>{{$user->country}}</td>
+                                    <td>{{$user->conference_role}}</td>
                                     <td>{{$user->status}}</td>
                                     <td>{{$user->access_role}}</td>
                                     <td>

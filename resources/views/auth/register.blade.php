@@ -77,13 +77,13 @@
 
             </div>
 
-            <div class="file-drop">
+            <!-- <div class="file-drop">
                 <div class="file-drop-area" id="fileDropArea">
                     <p>Drag and drop files here or click to select</p>
                     <input type="file" id="fileInput" multiple>
                 </div>
                 <ul id="fileList" class="file-list"></ul>
-            </div>
+            </div> -->
 
             <div class="button">
                 <button type="submit" class="register">Create an Account</button>

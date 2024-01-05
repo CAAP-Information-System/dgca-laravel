@@ -98,6 +98,8 @@
                 <a href="url_for_bagong_pilipinas_logo" target="_blank">
                     <img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo">
                 </a>
+
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -227,8 +229,12 @@
         @endif
 
         <main class="py-4">
+
             @if(auth()->check() && auth()->user()->access_role != "admin")
-            <nav class="welcome-navbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subnavbar" aria-controls="subnavbar" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="welcome-navbar" id="subnavbar">
                 <ul class="navbar-links">
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="#">Conference</a>

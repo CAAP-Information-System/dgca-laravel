@@ -7,6 +7,7 @@
     --sub-grey: #d9d9d9;
 }
 
+
 .header-container{
     display: flex;
     justify-content: center;
@@ -51,6 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #3B3B3B;
 
 }
 
@@ -115,10 +117,18 @@
 .user__details .input__email input:valid {
     border-color: #2f96d0;
 }
+.user__details .input__box .details, .user__details .input__email .details {
+    font-weight: bold;
+}
+
 .password-requirements{
     font-style: italic;
     color: #666666;
+    border: 2px dashed #868484;
+    padding: 15px;
+    width: 100%;
 }
+
 .file-drop {
     text-align: center;
 }
@@ -203,27 +213,36 @@
     text-decoration: none;
 }
 
-@media only screen and (max-width: 584px) {
-    .container {
-        max-width: 100%;
-    }
 
-    .register-user .user__details .input__box {
-        margin-bottom: 15px;
+
+@media screen and (max-width: 768px) {
+    .auth-hdr{
+        font-size: 2rem;
+        padding: 7px;
+    }
+    .container .register-user{
         width: 100%;
     }
-
-    .register-user .gender__details .category {
+    .register-user .user__details .input__box{
         width: 100%;
     }
-
-    .container .register-user .user__details {
-        max-height: 300px;
-        overflow-y: scroll;
+    .user__details{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .user__details .input__box input{
+        width: 100%;
+    }
+    .user__details .input__email input {
+        display: block;
+        margin-bottom: 10px; /* Add some space between the blocks */
+    }
+    .user__details .input__box .details, .user__details .input__email .details {
+        font-weight: bold;
     }
 
-    .user__details::-webkit-scrollbar {
-        width: 0;
+    .register-user .button .register{
+        width: 100%;
     }
 }
-
