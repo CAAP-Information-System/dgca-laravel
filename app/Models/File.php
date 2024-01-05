@@ -13,5 +13,6 @@ class File extends Model
         'owner',
         'upload_date',
         'size',
+        'file_category',
     ];
 }

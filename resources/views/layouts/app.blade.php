@@ -115,7 +115,7 @@
 
                         <li class="nav-item">
                             <a id="login-register" class="nav-link" href="{{ route('login') }}">
-                                <i class='bx bxs-log-in-circle'></i>
+                                <i class="fa-solid fa-right-to-bracket fa-lg"></i> &nbsp
                                 Login/Register
                             </a>
                         </li>
@@ -143,7 +143,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class='bx bx-log-out'></i>
+                                    <i class="fa-solid fa-right-from-bracket"></i>
                                     Logout
                                 </a>
 
@@ -171,13 +171,13 @@
                         <li class="nav-item">
                             <a href="{{ route('dashboard') }}" class="sidebar-item">
 
-                            <i class="fa-solid fa-chart-column fa-lg"></i>
+                                <i class="fa-solid fa-chart-column fa-lg"></i>
                                 <div class="item-name">Dashboard</div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('files') }}" class="sidebar-item">
-                            <i class="fa-regular fa-file-lines fa-lg"></i>
+                                <i class="fa-regular fa-file-lines fa-lg"></i>
                                 <div class="item-name">Files Uploaded</div>
                             </a>
                         </li>
@@ -189,7 +189,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('account_list') }}" class="sidebar-item">
-                            <i class="fa-solid fa-users"></i>
+                                <i class="fa-solid fa-users"></i>
                                 <div class="item-name">Account Lists</div>
                             </a>
                         </li>
@@ -203,12 +203,12 @@
                             <li class="nav-item dropdown ">
                                 @auth
                                 <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
+                                    <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        <i class='bx bx-log-out'></i> Logout
+                                        <i class="fa-solid fa-right-from-bracket"></i> Logout
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -236,13 +236,6 @@
                             <a class="sub" href="{{ route('welcome') }}">Welcome Message</a>
                             <a class="sub" href="{{ route('agenda') }}">Agenda</a>
                             <a class="sub" href="#">Programme</a>
-                            <div class="sub-dropdown">
-                                <a class="sub" href="">Documents</a>
-                                <div class="sub-dropdown-content">
-                                    <a class="sub" href="{{ route('disc-paper') }}">Discussion Papers</a>
-                                    <a class="sub" href="{{ route('info-paper') }}">Information Papers</a>
-                                </div>
-                            </div>
                             <a class="sub" href="{{ route('participants') }}">Participants</a>
                             <a class="sub" href="{{ route('the-gallery') }}">The Gallery</a>
                         </div>
@@ -250,6 +243,15 @@
 
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="{{ route('meeting-room') }}">Side Meeting</a>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a class="navbar-main" href="#">Documents</a>
+                        <div class="dropdown">
+                            <a class="sub" href="{{ route('disc-paper') }}">Discussion</a>
+                            <a class="sub" href="{{ route('info-paper') }}">Information</a>
+                            <a class="sub" href="#">Paper Submission Guide</a>
+
+                        </div>
                     </li>
                     <li class="navbar-dropdown">
                         <a class="navbar-main" href="#">Events</a>

@@ -2,6 +2,12 @@
 
 @section('content')
 
+<!--
+TO DO:
+1. Create graphs for meeting reservations
+2. Create graph for pending and verified user requests
+-->
+
 <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
 

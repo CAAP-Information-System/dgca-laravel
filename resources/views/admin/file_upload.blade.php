@@ -5,12 +5,13 @@
 <div class="container">
     <header class="page-header">Files Upload</header>
     <div class="main">
-        <a class="btn btn-warning" href="{{ route('registerDocument') }}"> Register Document </a>
+        <a class="button-24" href="{{ route('registerDocument') }}"> Register New Document </a>
         <table class="table ">
-            <thead class="thead-dark">
+            <thead>
                 <tr>
-                    <th>File Name</th>
+                    <th>Document Name</th>
                     <th>Uploaded by</th>
+                    <th>Category</th>
                     <th>Upload Date</th>
                     <th>Size</th>
                     <th>Actions</th>
@@ -19,8 +20,9 @@
             <tbody>
                 @foreach($files as $file)
                 <tr>
-                    <td style="font-weight: bold;">{{ $file->name }}</td>
+                    <td style="font-weight: bold; width: 45%;">{{ $file->name }}</td>
                     <td>{{ $file->owner }}</td>
+                    <td>{{ $file->file_category }}</td>
                     <td>{{ $file->upload_date }}</td>
                     <td>
                         @php

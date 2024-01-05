@@ -29,6 +29,20 @@ class FileController extends Controller
     }
 
 
+    public function registerDocument()
+    {
+        // Ensure the user is authenticated before accessing auth()->user()
+        if (auth()->check()) {
+            $owner = auth()->user()->name;
+            $files = File::where('owner', $owner)->get();
+            return view('file_manager.register_files', compact('files'));
+        } else {
+            // Redirect or handle the case when the user is not authenticated
+            return redirect()->route('login');
+        }
+    }
+
+
     public function upload(Request $request)
     {
         try {
@@ -40,6 +54,8 @@ class FileController extends Controller
 
                 $request->validate([
                     'file' => 'required|mimes:doc,pdf|max:10240',
+                    'file_category' => 'required|string',
+
                 ]);
 
                 if (!$request->hasFile('file')) {
@@ -52,12 +68,14 @@ class FileController extends Controller
                 // Save file to storage and database
                 $path = $file->storeAs('public/conference', $fileName);
                 $size = $file->getSize();
-
+                $fileCategories = $request->input('file_category');
                 $createdFile = File::create([
                     'name' => $fileName,
                     'owner' => $owner,
                     'upload_date' => now(),
                     'size' => $size,
+                    'file_category' => $fileCategories,
+
                 ]);
 
                 // Log the created file details for debugging
@@ -78,21 +96,8 @@ class FileController extends Controller
 
 
 
-
-    public function registerDocument()
+    public function viewFiles()
     {
-        // Ensure the user is authenticated before accessing auth()->user()
-        if (auth()->check()) {
-            $owner = auth()->user()->name;
-            $files = File::where('owner', $owner)->get();
-            return view('file_manager.register_files', compact('files'));
-        } else {
-            // Redirect or handle the case when the user is not authenticated
-            return redirect()->route('login');
-        }
-    }
-
-    public function viewFiles(){
         $allFiles = File::all();
         return view('file_manager.view_files', ['files' => $allFiles]);
     }
@@ -135,4 +140,20 @@ class FileController extends Controller
 
         return response()->download(public_path($filePath), $file->name);
     }
+
+    public function agendaFiles()
+    {
+        try {
+            // Retrieve files with file_category equal to "Agenda"
+            $agendaFiles = File::where('file_category', 'Agenda')->get();
+
+            // Pass the agendaFiles to the view
+            return view('main.conference.agenda', ['agendaFiles' => $agendaFiles]);
+        } catch (\Exception $e) {
+            // Log the exception for debugging
+            Log::error($e);
+            return redirect()->back()->with('error', 'An error occurred while fetching agenda files.');
+        }
+    }
+
 }

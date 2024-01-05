@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Inserted category column, should determine where the document should be inserted or placed
      */
     public function up(): void
     {
@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('owner')->nullable();
-            $table->dateTime('upload_date');
+            $table->date('upload_date');
             $table->integer('size');
+            $table->string('file_category');
             $table->timestamps();
         });
     }

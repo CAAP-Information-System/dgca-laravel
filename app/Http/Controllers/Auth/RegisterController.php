@@ -60,6 +60,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'designation' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
+            'conference_role' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
         ]);
     }
@@ -81,6 +82,7 @@ class RegisterController extends Controller
             'gender' => $data['gender'],
             'designation' => $data['designation'],
             'country' => $data['country'],
+            'conference_role' => $data['conference_role'],
         ]);
     }
 }

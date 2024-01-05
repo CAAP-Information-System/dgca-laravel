@@ -5,37 +5,18 @@
 <div class="container">
     <header class="agenda-header">Agenda</header>
     <div class="card-container">
+        @foreach($agendaFiles as $file)
         <div class="card">
-            <div class="card-hdr">File No. 1</div>
-            <p class="date">16-07-2023</p>
+            <div class="card-hdr">File No. {{ $file->id }}</div>
+            <p class="date">{{ $file->upload_date }}</p>
             <div class="card-body">
                 <div class="file-info">
-                    <p class="file-name">Provisional Agenda for 58th DGCA Conference - APAC</p>
-                </div>
-
-            </div>
-            <a href="#" class="view-file">View</a>
-        </div>
-        <div class="card">
-            <div class="card-hdr">File No. 2</div>
-            <p class="date">24-08-2023</p>
-            <div class="card-body">
-                <div class="file-info">
-                    <p class="file-name">Provisional Agenda for 58th DGCA Conference - APAC, Revision No. 1</p>
+                    <p class="file-name">{{ $file->name }}</p>
                 </div>
             </div>
-            <a href="#" class="view-file">View</a>
+            <a href="{{ asset('storage/conference/' . $file->name) }}" target="_blank" class="view-file">View</a>
         </div>
-        <div class="card">
-            <div class="card-hdr">File No. 3</div>
-            <p class="date">12-10-2023</p>
-            <div class="card-body">
-                <div class="file-info">
-                    <p class="file-name">Provisional Agenda for 58th DGCA Conference - APAC, Revision No. 2</p>
-                </div>
-            </div>
-            <a href="#" class="view-file">View</a>
-        </div>
+        @endforeach
     </div>
 </div>
 

@@ -99,6 +99,7 @@
 
 .rotated {
     transform: rotate(180deg);
+
 }
 
 .list.expanded .rotated {
@@ -129,7 +130,7 @@
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 30%;
+    width: 100%;
 }
 
 .collapse-button:hover {

@@ -33,12 +33,10 @@
 .card-hdr {
     color: #3b3b3b;
     padding: 15px;
-
-
-
     text-align: center;
     font-size: 1.5rem;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .card-body {
@@ -50,13 +48,15 @@
 }
 
 .file-name {
-    font-weight: bold;
+    font-weight: none;
     font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .date {
     color: #555;
-    font-size: .9rem;
+    font-size: 1rem;
     text-align: center;
 }
 

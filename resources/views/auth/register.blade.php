@@ -39,6 +39,17 @@
                     <input type="text" placeholder="e.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
                 </div>
                 <div class="input__email">
+                    <span class="details">Conference Role</span>
+                    <select class="form-control" id="conference_role" name="conference_role">
+                        <option value="">-- Select Option --</option>
+                        <option value="Head Delegate">Head Delegate</option>
+                        <option value="Delegate">Delegate</option>
+                        <option value="Observer">Observer</option>
+                        <option value="Panelist">Panelist</option>
+                        <option value="Sponsor/Exhibitor">Sponsor/Exhibitor</option>
+                    </select>
+                </div>
+                <div class="input__email">
                     <span class="details">Gender</span>
                     <select class="form-control" id="gender" name="gender">
                         <option value="-- Select Option --" disabled>-- Select Option -- </option>
