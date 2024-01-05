@@ -53,9 +53,11 @@ class FileController extends Controller
                 Log::info('FileManagerController@upload');
 
                 $request->validate([
-                    'file' => 'required|mimes:doc,pdf|max:10240',
+                    'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx|max:10240',
                     'file_category' => 'required|string',
-
+                ], [
+                    'file.required' => 'Please select a file to upload.',
+                    'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',
                 ]);
 
                 if (!$request->hasFile('file')) {
@@ -77,7 +79,9 @@ class FileController extends Controller
                     'file_category' => $fileCategories,
 
                 ]);
-
+                if (!$request->hasFile('file')) {
+                    return redirect()->back()->with('error', 'Please select a file to upload.');
+                }
                 // Log the created file details for debugging
                 Log::info('File created: ' . $createdFile);
 

@@ -130,14 +130,14 @@
                         @if(auth()->check() && auth()->user()->access_role != "admin")
                         <li class="nav-item">
                             <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
-                                <i class='bx bxs-home'></i>
+                                <i class="fa-solid fa-house"></i>&nbsp
                                 Home
                             </a>
                         </li>
                         <div style="margin: 15px;"></div>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown " class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class='bx bxs-user-circle'></i>
+                                <i class="fa-solid fa-circle-user"></i>&nbsp
                                 {{ Auth::user()->first_name }}
                             </a>
 

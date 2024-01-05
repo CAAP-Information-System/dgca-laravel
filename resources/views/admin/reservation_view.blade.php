@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/reservation_list.css') }}">
 
 <div class="container">
-    <header class="page-header">Reservation Meetings</header>
+    <header class="page-header">Reserved Meetings</header>
 
     <div class="wrapper">
         <table class="table table-hover">

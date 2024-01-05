@@ -64,33 +64,53 @@
                                 <!-- Meeting Room A -->
                                 <td class="{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
+                                    @if($day1Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day1Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
-
                                 <!-- Meeting Room B -->
                                 <td class="{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
+                                    @if($day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
 
                                 <!-- Meeting Room C -->
                                 <td class="{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
+                                    @if($day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
                                     </div>
+                                    @endif
                                     @endif
                                 </td>
                                 @endif
@@ -138,25 +158,53 @@
                                 <!-- Meeting Room A -->
                                 <td class="{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
                                     @if($day2Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
+                                    @if($day2Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day2Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
-
                                 <!-- Meeting Room B -->
                                 <td class="{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
                                     @if($day2Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
-                                    <!-- Display details for Meeting Room B -->
+                                    @if($day2Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
+                                    <h4>{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
+                                    <div class="hover">
+                                        <h4>{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
+                                        <span>Reserved by: {{ $day2Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
+                                    </div>
+                                    @endif
                                     @endif
                                 </td>
 
                                 <!-- Meeting Room C -->
                                 <td class="{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
                                     @if($day2Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
-                                    <!-- Display details for Meeting Room C -->
+                                    @if($day2Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
+                                    <h4>{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
+                                    <div class="hover">
+                                        <h4>{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day2Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
+                                        <span>Reserved by: {{ $day2Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
+                                    </div>
+                                    @endif
                                     @endif
                                 </td>
                                 @endif
@@ -208,33 +256,53 @@
                                 <!-- Meeting Room A -->
                                 <td class="{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
                                     @if($day3Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
+                                    @if($day3Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day3Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
-
                                 <!-- Meeting Room B -->
                                 <td class="{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
                                     @if($day3Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
+                                    @if($day3Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day3Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
 
                                 <!-- Meeting Room C -->
                                 <td class="{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
                                     @if($day3Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
+                                    @if($day3Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day3Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day3Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
                                     </div>
+                                    @endif
                                     @endif
                                 </td>
                                 @endif
@@ -282,33 +350,53 @@
                                 <!-- Meeting Room A -->
                                 <td class="{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
                                     @if($day4Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
+                                    @if($day4Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day4Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
-
                                 <!-- Meeting Room B -->
                                 <td class="{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
                                     @if($day4Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
+                                    @if($day4Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day4Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
 
                                 <!-- Meeting Room C -->
                                 <td class="{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
                                     @if($day4Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
+                                    @if($day4Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
+                                    <div class="hover">
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
                                     <h4>{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
                                     <div class="hover">
                                         <h4>{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day4Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
                                         <span>Reserved by: {{ $day4Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
                                     </div>
+                                    @endif
                                     @endif
                                 </td>
                                 @endif
@@ -324,7 +412,7 @@
     </div>
 
     <div id="schedule-day5" class="schedule-container" style="display: none;">
-        <header class="day-header">Day 5, October 2024</header>>
+        <header class="day-header">Day 5, October 2024</header>
         <div class="row">
             <div class="col-md">
                 <div class="schedule-table">
@@ -348,42 +436,62 @@
                             @endphp
                             @foreach($time_slots as $time_slot)
                             @php
-                            $day5meetings = $meeting_rooms->where('days_drop', 'Day 5')->where('time_drop', $time_slot);
+                            $day5Meetings = $meeting_rooms->where('days_drop', 'Day 5')->where('time_drop', $time_slot);
                             @endphp
 
                             <tr>
                                 <td class="day">{{ $time_slot }}</td>
-                                @if($day5meetings->count() > 0)
+                                @if($day5Meetings->count() > 0)
                                 <!-- Meeting Room A -->
-                                <td class="{{ $day5meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
-                                    @if($day5meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
-                                    <h4>{{ $day5meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day5meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
+                                <td class="{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0 ? 'active' : '' }}">
+                                    @if($day5Meetings->where('meeting_room_drop', 'Meeting Room A')->count() > 0)
+                                    @if($day5Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
                                     <div class="hover">
-                                        <h4>{{ $day5meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day5meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
-                                        <span>Reserved by: {{ $day5meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
+                                        <h4>Decision Pending</h4>
+                                    </div>
+                                    @else
+                                    <h4>{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
+                                    <div class="hover">
+                                        <h4>{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}-{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->country_drop }}</h4>
+                                        <span>Reserved by: {{ $day5Meetings->where('meeting_room_drop', 'Meeting Room A')->first()->reserved_by }}</span>
                                     </div>
                                     @endif
+                                    @endif
                                 </td>
-
                                 <!-- Meeting Room B -->
-                                <td class="{{ $day5meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
-                                    @if($day5meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
-                                    <h4>{{ $day5meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day5meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
+                                <td class="{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
+                                    @if($day5Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
+                                    @if($day5Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
                                     <div class="hover">
-                                        <h4>{{ $day5meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day5meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
-                                        <span>Reserved by: {{ $day5meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
+                                        <h4>Decision Pending</h4>
                                     </div>
+                                    @else
+                                    <h4>{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
+                                    <div class="hover">
+                                        <h4>{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}-{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->country_drop }}</h4>
+                                        <span>Reserved by: {{ $day5Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->reserved_by }}</span>
+                                    </div>
+                                    @endif
                                     @endif
                                 </td>
 
                                 <!-- Meeting Room C -->
-                                <td class="{{ $day5meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
-                                    @if($day5meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
-                                    <h4>{{ $day5meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day5meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
+                                <td class="{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
+                                    @if($day5Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
+                                    @if($day5Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->approval_status === 'For Decision')
+                                    <h4>Decision Pending</h4>
                                     <div class="hover">
-                                        <h4>{{ $day5meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day5meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
-                                        <span>Reserved by: {{ $day5meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
+                                        <h4>Decision Pending</h4>
                                     </div>
+                                    @else
+                                    <h4>{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
+                                    <div class="hover">
+                                        <h4>{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}-{{ $day5Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->country_drop }}</h4>
+                                        <span>Reserved by: {{ $day5Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->reserved_by }}</span>
+                                    </div>
+                                    @endif
                                     @endif
                                 </td>
                                 @endif

@@ -14,6 +14,7 @@ class SideMeeting extends Model
         'country_drop',
         'reserved_by',
         'reservee',
+        'approval_status',
     ];
 
     public function user()

@@ -49,22 +49,7 @@
 .account-name-sidebar{
     margin-top: 25px;
 }
-#files:hover{
-    background-color:#74C9F8;
-    color: #ffff;
-}
-#meetings:hover{
-    background-color:#38b98a;
-    color: #ffff;
-}
-#delegates:hover{
-    background-color:#e7bc50;
-    color: #ffff;
-}
-#pending:hover{
-    background-color:#FD6F6F;
-    color: #ffff;
-}
+
 .icon-img{
     position: absolute;
     top: 0;
@@ -84,6 +69,7 @@
 }
 .stat-value{
     font-size: 2.5rem;
+    font-weight: bold;
 }
 .item-name{
     margin-left: 10px;
@@ -108,4 +94,22 @@
         width: 20px;
     }
 }
+.stat-card:hover .icon-img i {
+    transform: rotate(8deg) scale(1.5);
+    transition: transform 0.3s ease;
+}
+#files, #meetings, #delegates, #pending {
+    color: #fff;
+}
 
+#files { background-color: #74C9F8; }
+#meetings { background-color: #38b98a; }
+#delegates { background-color: #e7bc50; }
+#pending { background-color: #FD6F6F; }
+
+
+#files:hover, #meetings:hover, #delegates:hover, #pending:hover {
+    background-color: #ffff;
+    color: #3b3b3b;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

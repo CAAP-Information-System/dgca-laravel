@@ -92,7 +92,7 @@ class SideMeetingController extends Controller
         ];
 
         $meeting_rooms = SideMeeting::all();
-        return view('main.meeting_room', compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'meeting_rooms','country_drop'));
+        return view('main.meeting_room', compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'meeting_rooms', 'country_drop'));
     }
 
     public function reserveMeetingRoom(Request $request)
@@ -177,8 +177,10 @@ class SideMeetingController extends Controller
             "Viet Nam",
         ];
 
-        return view('admin.create_meeting',
-        compact('user','days_drop','meeting_room_drop','time_drop','country_drop'));
+        return view(
+            'admin.create_meeting',
+            compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'country_drop')
+        );
     }
 
     public function createMeetingRoom(Request $request)
@@ -190,11 +192,28 @@ class SideMeetingController extends Controller
             'time_drop' => 'required|string',
             'country_drop' => 'required|string',
             'reserved_by' => 'required|string',
+            'approval_status' => 'required|string',
         ]);
 
+        // Get the input values
+        $selectedDay = $request->input('days_drop');
+        $selectedTime = $request->input('time_drop');
+        if ($this->isTimeAlreadyReserved($selectedDay, $selectedTime)) {
+            // The time is already reserved, return an error response
+            return redirect()->back()->with('error', 'The selected time is already reserved on ' . $selectedDay . '. Please choose another time.');
+        }
         $meeting_room = new SideMeeting($validateMeeting);
         $meeting_room->save();
 
+
         return redirect()->back();
+    }
+
+    // Function to check if the selected time is already reserved
+    private function isTimeAlreadyReserved($selectedDay, $selectedTime)
+    {
+        // You need to replace this with your actual logic to check if the time is reserved
+        // Example: Assuming there's a Reservation model with reserved times
+        return SideMeeting::where('days_drop', $selectedDay)->where('time_drop', $selectedTime)->exists();
     }
 }

@@ -3,6 +3,15 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/file_manager/create_file.css') }}">
 <div class="container">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <div class="card">
         <div class="card-header">
             <header class="page-header">Submission of Conference Papers</header>
@@ -22,14 +31,14 @@
                 <div class="form-group">
                     <label for="file">Select Document:</label>
                     <div class="custom-file">
-                        <input type="file" name="file" id="file" accept=".doc, .pdf" class="custom-file-input" onchange="updateFileName()">
+                        <input type="file" name="file" id="file" accept=".doc, .pdf, .xls, .xlsx, .ppt, .pptx" class="custom-file-input" onchange="updateFileName()" required>
                         <label class="custom-file-label" for="file">Choose DOC or PDF File</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="file_category">Select Category Placement:</label>
                     <div class="input-group">
-                        <select class="custom-select" id="file_category" name="file_category">
+                        <select class="custom-select" id="file_category" name="file_category" required>
                             <option value="-- Select Option --" disabled selected>-- Select Option -- </option>
                             <option value="Agenda">Agenda</option>
                             <option value="Programme">Order of Business</option>
