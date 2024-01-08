@@ -56,4 +56,8 @@ class User extends Authenticatable
     {
         return $this->first_name . ' ' . $this->last_name;
     }
+    public function sideMeetings()
+    {
+        return $this->hasMany(SideMeeting::class);
+    }
 }

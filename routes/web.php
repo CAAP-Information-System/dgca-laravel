@@ -30,7 +30,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
     Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
-    Route::get('/meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
+    Route::get('/create-meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
     Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
     Route::get('/download/{file}', [FileController::class, 'download'])->name('download.file');
 

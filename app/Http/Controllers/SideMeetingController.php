@@ -46,6 +46,49 @@ class SideMeetingController extends Controller
             "17:00-17:30",
             "17:30-18:00",
         ];
+ $country_drop = [
+            "Afghanistan",
+            "Australia",
+            "Bangladesh",
+            "Bhutan",
+            "Brunei Darussalam",
+            "Cambodia",
+            "China",
+            "Hong Kong",
+            "Macao",
+            "Cook Islands",
+            "Republic of Korea",
+            "Fiji",
+            "India",
+            "Indonesia",
+            "Japan",
+            "Kiribati",
+            "Lao People's Democratic Republic",
+            "Malaysia",
+            "Maldives",
+            "Marshall Islands",
+            "Micronesia (Federal States of)",
+            "Mongolia",
+            "Myanmar",
+            "Nauru",
+            "Nepal",
+            "New Zealand",
+            "Pakistan",
+            "Palau",
+            "Papua New Guinea",
+            "Philippines",
+            "Republic of Korea",
+            "Samoa",
+            "Singapore",
+            "Solomon Islands",
+            "Sri Lanka",
+            "Thailand",
+            "Timor Leste",
+            "Tonga",
+            "Tuvalu",
+            "Vanuatu",
+            "Viet Nam",
+        ];
 
         $country_drop = [
             "Afghanistan",
@@ -177,6 +220,7 @@ class SideMeetingController extends Controller
             "Viet Nam",
         ];
 
+
         return view(
             'admin.create_meeting',
             compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'country_drop')
@@ -195,9 +239,10 @@ class SideMeetingController extends Controller
             'approval_status' => 'required|string',
         ]);
 
-        // Get the input values
+
         $selectedDay = $request->input('days_drop');
         $selectedTime = $request->input('time_drop');
+
         if ($this->isTimeAlreadyReserved($selectedDay, $selectedTime)) {
             // The time is already reserved, return an error response
             return redirect()->back()->with('error', 'The selected time is already reserved on ' . $selectedDay . '. Please choose another time.');

@@ -5,10 +5,10 @@
 
 <div class="container">
     <header class="page-header">Reserved Meetings</header>
-
+    <a class="button-24" href="{{ route('reserveMeetingRoom') }}">Create New Reservation</a>
     <div class="wrapper">
         <table class="table table-hover">
-            <thead class="thead-dark">
+            <thead>
                 <tr>
                     <th>ID</th>
                     <th>Day Reserved</th>
