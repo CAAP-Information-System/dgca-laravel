@@ -46,7 +46,7 @@ class SideMeetingController extends Controller
             "17:00-17:30",
             "17:30-18:00",
         ];
- $country_drop = [
+        $reserved_by = [
             "Afghanistan",
             "Australia",
             "Bangladesh",
@@ -89,7 +89,49 @@ class SideMeetingController extends Controller
             "Vanuatu",
             "Viet Nam",
         ];
-
+        $country_drop = [
+            "Afghanistan",
+            "Australia",
+            "Bangladesh",
+            "Bhutan",
+            "Brunei Darussalam",
+            "Cambodia",
+            "China",
+            "Hong Kong",
+            "Macao",
+            "Cook Islands",
+            "Democratic People's Republic of Korea",
+            "Fiji",
+            "India",
+            "Indonesia",
+            "Japan",
+            "Kiribati",
+            "Lao People's Democratic Republic",
+            "Malaysia",
+            "Maldives",
+            "Marshall Islands",
+            "Micronesia (Federal States of)",
+            "Mongolia",
+            "Myanmar",
+            "Nauru",
+            "Nepal",
+            "New Zealand",
+            "Pakistan",
+            "Palau",
+            "Papua New Guinea",
+            "Philippines",
+            "Republic of Korea",
+            "Samoa",
+            "Singapore",
+            "Solomon Islands",
+            "Sri Lanka",
+            "Thailand",
+            "Timor Leste",
+            "Tonga",
+            "Tuvalu",
+            "Vanuatu",
+            "Viet Nam",
+        ];
         $country_drop = [
             "Afghanistan",
             "Australia",
@@ -135,7 +177,7 @@ class SideMeetingController extends Controller
         ];
 
         $meeting_rooms = SideMeeting::all();
-        return view('main.meeting_room', compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'meeting_rooms', 'country_drop'));
+        return view('main.meeting_room', compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'meeting_rooms', 'country_drop', 'reserved_by'));
     }
 
     public function reserveMeetingRoom(Request $request)
@@ -175,6 +217,49 @@ class SideMeetingController extends Controller
             "16:30-17:00",
             "17:00-17:30",
             "17:30-18:00",
+        ];
+        $reserved_by = [
+            "Afghanistan",
+            "Australia",
+            "Bangladesh",
+            "Bhutan",
+            "Brunei Darussalam",
+            "Cambodia",
+            "China",
+            "Hong Kong",
+            "Macao",
+            "Cook Islands",
+            "Democratic People's Republic of Korea",
+            "Fiji",
+            "India",
+            "Indonesia",
+            "Japan",
+            "Kiribati",
+            "Lao People's Democratic Republic",
+            "Malaysia",
+            "Maldives",
+            "Marshall Islands",
+            "Micronesia (Federal States of)",
+            "Mongolia",
+            "Myanmar",
+            "Nauru",
+            "Nepal",
+            "New Zealand",
+            "Pakistan",
+            "Palau",
+            "Papua New Guinea",
+            "Philippines",
+            "Republic of Korea",
+            "Samoa",
+            "Singapore",
+            "Solomon Islands",
+            "Sri Lanka",
+            "Thailand",
+            "Timor Leste",
+            "Tonga",
+            "Tuvalu",
+            "Vanuatu",
+            "Viet Nam",
         ];
         $country_drop = [
             "Afghanistan",
@@ -223,7 +308,7 @@ class SideMeetingController extends Controller
 
         return view(
             'admin.create_meeting',
-            compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'country_drop')
+            compact('user', 'days_drop', 'meeting_room_drop', 'time_drop', 'country_drop', 'reserved_by')
         );
     }
 

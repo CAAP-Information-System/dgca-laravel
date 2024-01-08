@@ -47,9 +47,17 @@
                     @endforeach
                 </select>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="reserved_by">Reserved By:</label>
                 <input type="text" class="form-control" id="reserved_by" name="reserved_by" value="{{ auth()->user()->country }}" readonly>
+            </div> -->
+            <div class="form-group">
+                <label for="reserved_by">Reserved By:</label>
+                <select class="form-control" id="reserved_by" name="reserved_by">
+                    @foreach($reserved_by as $country)
+                    <option value="{{ $country }}">{{ $country }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">
