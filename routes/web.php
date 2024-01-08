@@ -41,8 +41,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
 Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
 Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
-Route::get('/discussion-paper', [HomeController::class, 'viewDiscussionPapers'])->name('disc-paper');
-Route::get('/information-paper', [HomeController::class, 'viewInformationPapers'])->name('info-paper');
+Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
+Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
 Route::get('/the-gallery', [HomeController::class, 'viewGallery'])->name('the-gallery');
 Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('participants');
 Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');

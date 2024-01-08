@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="list-container">
-        <!-- Search field HTML -->
+
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search...">
             <button class="search-button">
@@ -26,35 +26,33 @@
         <button class="collapse-button" onclick="toggleList('list1')">
             <i id="icon1" class='bx bxs-caret-down-circle'></i> Agenda 1: Theme Topic
         </button>
-        <!-- List 1 -->
+
         <ul class="list" id="list1">
-            <li class="list-item">Item 1</li>
-            <li class="list-item">Item 2</li>
-            <li class="list-item">Item 3</li>
-            <li class="list-item">Item 4</li>
-            <li class="list-item">Item 5</li>
+            @foreach($agenda1 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
-        <!-- Toggle Button 2 -->
+
         <button class="collapse-button" onclick="toggleList('list2')">
             <i id="icon2" class='bx bxs-caret-down-circle'></i> Agenda 2: Review of Action Items arising from the previous Conference
         </button>
-        <!-- List 2 -->
+
         <ul class="list" id="list2">
-            <li class="list-item">Item A</li>
-            <li class="list-item">Item B</li>
-            <li class="list-item">Item C</li>
-            <li class="list-item">Item D</li>
-            <li class="list-item">Item E</li>
+            @foreach($agenda2 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+
+            @endforeach
         </ul>
-        <!-- Toggle Button 2 -->
+
         <button class="collapse-button" onclick="toggleList('list3')">
             <i id="icon3" class='bx bxs-caret-down-circle'></i> Agenda 3: Aviation Safety
         </button>
-        <!-- List 2 -->
+
         <ul class="list" id="list3">
-            <li class="list-item">Item 1A</li>
-            <li class="list-item">Item 2B</li>
+            @foreach($agenda3 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
 
         </ul>
         <!-- Toggle Button 4 -->
@@ -63,9 +61,9 @@
         </button>
         <!-- List 4 -->
         <ul class="list" id="list4">
-            <li class="list-item">Item X</li>
-            <li class="list-item">Item Y</li>
-            <li class="list-item">Item Z</li>
+            @foreach($agenda4 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 5 -->
@@ -74,9 +72,9 @@
         </button>
         <!-- List 5 -->
         <ul class="list" id="list5">
-            <li class="list-item">Item P</li>
-            <li class="list-item">Item Q</li>
-            <li class="list-item">Item R</li>
+            @foreach($agenda5 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 6 -->
@@ -85,18 +83,18 @@
         </button>
         <!-- List 6 -->
         <ul class="list" id="list6">
-            <li class="list-item">Item M</li>
-            <li class="list-item">Item N</li>
-            <li class="list-item">Item O</li>
+            @foreach($agenda6 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
         <button class="collapse-button" onclick="toggleList('list7')">
             <i id="icon7" class='bx bxs-caret-down-circle'></i> Agenda 7: Aviation and Environment
         </button>
         <!-- List 7 -->
         <ul class="list" id="list7">
-            <li class="list-item">Item G</li>
-            <li class="list-item">Item H</li>
-            <li class="list-item">Item I</li>
+            @foreach($agenda7 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 8 -->
@@ -105,9 +103,9 @@
         </button>
         <!-- List 8 -->
         <ul class="list" id="list8">
-            <li class="list-item">Item U</li>
-            <li class="list-item">Item V</li>
-            <li class="list-item">Item W</li>
+            @foreach($agenda8 as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 9 -->
@@ -116,18 +114,18 @@
         </button>
         <!-- List 9 -->
         <ul class="list" id="list9">
-            <li class="list-item">Item L</li>
-            <li class="list-item">Item K</li>
-            <li class="list-item">Item J</li>
+            @foreach($agenda9a as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
         <button class="collapse-button" onclick="toggleList('list10')">
             <i id="icon10" class='bx bxs-caret-down-circle'></i> Agenda Item 9b: Updates
         </button>
         <!-- List 9 -->
         <ul class="list" id="list10">
-            <li class="list-item">Item L</li>
-            <li class="list-item">Item K</li>
-            <li class="list-item">Item J</li>
+            @foreach($agenda9b as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
         <!-- Toggle Button 10 -->
         <button class="collapse-button" onclick="toggleList('list11')">
@@ -135,8 +133,9 @@
         </button>
         <!-- List 10 -->
         <ul class="list" id="list11">
-            <li class="list-item">Item S</li>
-            <li class="list-item">Item T</li>
+            @foreach($agenda10a as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 11 -->
@@ -145,8 +144,9 @@
         </button>
         <!-- List 11 -->
         <ul class="list" id="list12">
-            <li class="list-item">Item D</li>
-            <li class="list-item">Item E</li>
+            @foreach($agenda10b as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 12 -->
@@ -155,9 +155,9 @@
         </button>
         <!-- List 12 -->
         <ul class="list" id="list13">
-            <li class="list-item">Item X</li>
-            <li class="list-item">Item Y</li>
-            <li class="list-item">Item Z</li>
+            @foreach($agenda10c as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
 
         <!-- Toggle Button 13 -->
@@ -166,9 +166,9 @@
         </button>
         <!-- List 13 -->
         <ul class="list" id="list14">
-            <li class="list-item">Item A</li>
-            <li class="list-item">Item B</li>
-            <li class="list-item">Item C</li>
+            @foreach($presentation as $discussion)
+            <li class="list-item">{{ $discussion->name }}</li>
+            @endforeach
         </ul>
     </div>
 </div>

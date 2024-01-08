@@ -14,5 +14,7 @@ class File extends Model
         'upload_date',
         'size',
         'file_category',
+        'discussion_agenda',
+        'information_agenda',
     ];
 }

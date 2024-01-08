@@ -29,14 +29,7 @@ class HomeController extends Controller
         return view('welcome');
     }
 
-    public function viewDiscussionPapers()
-    {
-        return view('main.conference.documents.discussion_paper');
-    }
-    public function viewInformationPapers()
-    {
-        return view('main.conference.documents.information_paper');
-    }
+
 
     public function viewGallery()
     {

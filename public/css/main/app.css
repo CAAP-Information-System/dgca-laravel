@@ -18,9 +18,20 @@ body {
 }
 .nav-caap-logo {
     height: auto;
-    width: 100px;
     width: 120px;
     padding-left: 25px;
+}
+.footer-caap-logo{
+    height: auto;
+    width: 80px;
+}
+.footer-dgca-logo{
+    height: auto;
+    width: 120px;
+}
+.footer-span-header{
+    font-size: 17px;
+    margin-left: 15px;
 }
 .nav-bagong-pilipinas-logo {
     height: auto;

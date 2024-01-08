@@ -99,7 +99,6 @@
 
 .rotated {
     transform: rotate(180deg);
-
 }
 
 .list.expanded .rotated {

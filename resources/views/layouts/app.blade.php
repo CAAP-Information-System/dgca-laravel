@@ -296,7 +296,100 @@
     </div>
 </body>
 
+@if(auth()->check() && auth()->user()->access_role != "admin")
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo">
 
+            <span class="footer-span-header">
+                Civil Aviation Authority of the Philippines
+            </span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div class="right-logos">
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>59th DGCA Conference - APAC
+                    </h6>
+                    <p>
+                        <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="footer-dgca-logo">
+                    </p>
+                    <p>
+                        Place supporting details of the DGCA here
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-file-pdf mr-3" style="color:#931f1f;"></i>Event Booklet PDF</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-file-pdf mr-3" style="color:#931f1f;"></i>Brochure PDF</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Facebook Live Link</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Youtube Live Link</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> Address</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@example.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        Copyright © <span class="text-bold">59th Conference of DGCA</span> All rights reserved.
+    </div>
+    <!-- Copyright -->
+</footer>
+@endif
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {

@@ -55,6 +55,8 @@ class FileController extends Controller
                 $request->validate([
                     'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx|max:10240',
                     'file_category' => 'required|string',
+                    'discussion_agenda' => 'nullable|string',
+                    'information_agenda' => 'nullable|string',
                 ], [
                     'file.required' => 'Please select a file to upload.',
                     'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',
@@ -71,12 +73,16 @@ class FileController extends Controller
                 $path = $file->storeAs('public/conference', $fileName);
                 $size = $file->getSize();
                 $fileCategories = $request->input('file_category');
+                $discussionAgenda = $request->input('discussion_agenda');
+                $informationAgenda = $request->input('information_agenda');
                 $createdFile = File::create([
                     'name' => $fileName,
                     'owner' => $owner,
                     'upload_date' => now(),
                     'size' => $size,
                     'file_category' => $fileCategories,
+                    'discussion_agenda' => $discussionAgenda,
+                    'information_agenda' => $informationAgenda,
 
                 ]);
                 if (!$request->hasFile('file')) {
@@ -160,4 +166,72 @@ class FileController extends Controller
         }
     }
 
+    public function viewDiscussionPapers(Request $request)
+    {
+        $agenda1 = File::where('discussion_agenda', 'Agenda 1')->get();
+        $agenda2 = File::where('discussion_agenda', 'Agenda 2')->get();
+        $agenda3 = File::where('discussion_agenda', 'Agenda 3')->get();
+        $agenda4 = File::where('discussion_agenda', 'Agenda 4')->get();
+        $agenda5 = File::where('discussion_agenda', 'Agenda 5')->get();
+        $agenda6 = File::where('discussion_agenda', 'Agenda 6')->get();
+        $agenda7 = File::where('discussion_agenda', 'Agenda 7')->get();
+        $agenda8 = File::where('discussion_agenda', 'Agenda 8')->get();
+        $agenda9a = File::where('discussion_agenda', 'Agenda 9a')->get();
+        $agenda9b = File::where('discussion_agenda', 'Agenda 9b')->get();
+        $agenda10a = File::where('discussion_agenda', 'Agenda 10a')->get();
+        $agenda10b = File::where('discussion_agenda', 'Agenda 10b')->get();
+        $agenda10c = File::where('discussion_agenda', 'Agenda 10c')->get();
+        $presentation = File::where('discussion_agenda', 'Presentation/Video')->get();
+
+        return view('main.conference.documents.discussion_paper', compact(
+            'agenda1',
+            'agenda2',
+            'agenda3',
+            'agenda4',
+            'agenda5',
+            'agenda6',
+            'agenda7',
+            'agenda8',
+            'agenda9a',
+            'agenda9b',
+            'agenda10a',
+            'agenda10b',
+            'agenda10c',
+            'presentation'
+        ));
+    }
+    public function viewInformationPapers(Request $request)
+    {
+        $agenda1 = File::where('information_agenda', 'Agenda 1')->get();
+        $agenda2 = File::where('information_agenda', 'Agenda 2')->get();
+        $agenda3 = File::where('information_agenda', 'Agenda 3')->get();
+        $agenda4 = File::where('information_agenda', 'Agenda 4')->get();
+        $agenda5 = File::where('information_agenda', 'Agenda 5')->get();
+        $agenda6 = File::where('information_agenda', 'Agenda 6')->get();
+        $agenda7 = File::where('information_agenda', 'Agenda 7')->get();
+        $agenda8 = File::where('information_agenda', 'Agenda 8')->get();
+        $agenda9a = File::where('information_agenda', 'Agenda 9a')->get();
+        $agenda9b = File::where('information_agenda', 'Agenda 9b')->get();
+        $agenda10a = File::where('information_agenda', 'Agenda 10a')->get();
+        $agenda10b = File::where('information_agenda', 'Agenda 10b')->get();
+        $agenda10c = File::where('information_agenda', 'Agenda 10c')->get();
+        $presentation = File::where('information_agenda', 'Presentation/Video')->get();
+
+        return view('main.conference.documents.information_paper', compact(
+            'agenda1',
+            'agenda2',
+            'agenda3',
+            'agenda4',
+            'agenda5',
+            'agenda6',
+            'agenda7',
+            'agenda8',
+            'agenda9a',
+            'agenda9b',
+            'agenda10a',
+            'agenda10b',
+            'agenda10c',
+            'presentation'
+        ));
+    }
 }
