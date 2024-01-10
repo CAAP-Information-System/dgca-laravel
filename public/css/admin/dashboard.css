@@ -1,20 +1,19 @@
-.main-sidebar{
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+.main-sidebar {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 25px;
 }
-.sidebar{
+.sidebar {
     background-color: #ffff;
     color: #fff;
     position: fixed;
     width: 250px;
     overflow-x: hidden;
-
-
 }
-.sidebar .nav-item{
+.sidebar .nav-item {
     padding: 5px;
 }
-.sidebar .nav-item .sidebar-item{
+.sidebar .nav-item .sidebar-item {
     color: #3b3b3b;
     display: flex;
     text-decoration: none;
@@ -22,35 +21,43 @@
     font-size: 17px;
     align-items: center;
 }
-.sidebar .nav-item  .sidebar-item:hover{
+.sidebar .nav-item .sidebar-item:hover {
     color: #ffff;
-    background-color: #50A9FB;
+    background-color: #50a9fb;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: .2s;
+    transition: 0.2s;
 }
-.content-wrapper{
+.content-wrapper {
     background-color: #ffff;
 }
-.navbar-header{
+.navbar-header {
     font-size: 25px;
     color: #3b3b3b;
     padding: 12px;
 }
 
-.stat-card{
+.stat-card {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 15px;
     border-radius: 16px;
     position: relative;
-    transition: .1s ease-in;
+    transition: 0.1s ease-in;
     color: #3b3b3b;
 }
-.account-name-sidebar{
+.account-name-sidebar {
     margin-top: 25px;
 }
 
-.icon-img{
+#navbarDropdown:hover {
+    background-color: #fd6f6f;
+}
+#logout:hover {
+    background-color: #007bff;
+    color: #ffff;
+}
+
+.icon-img {
     position: absolute;
     top: 0;
     right: 0;
@@ -58,57 +65,173 @@
     height: auto;
     font-size: 3.6rem;
 }
-.inner{
+.inner {
     padding-left: 25px;
 }
 
-.stat-header{
+.stat-header {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
 }
-.stat-value{
+.stat-value {
     font-size: 2.5rem;
     font-weight: bold;
 }
-.item-name{
+.item-name {
     margin-left: 10px;
 }
 .sidebar-item.active {
     background-color: #007bff; /* Change this to your desired active state background color */
     color: #ffffff; /* Change this to your desired active state text color */
 }
-@media screen and (min-width: 769px) and (max-width: 900px) {
-    .stat-card{
+@media screen and (max-width: 768px) and (max-width: 920px) {
+    .screen-dashboard {
+        display: none;
+    }
+    .stat-card {
         padding: 5px;
         border-radius: 16px;
         position: relative;
-        transition: .1s ease-in;
+        transition: 0.1s ease-in;
         color: #3b3b3b;
         margin: 10px;
     }
-    .stat-header{
+    .stat-header {
         padding-top: 10px;
     }
-    .stat-values{
+    .stat-values {
         width: 20px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        width: 400px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .card-content {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6vh;
+    }
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center; /* This is added for centering the text horizontally */
+    }
+    .icon {
+        font-size: 3rem;
+    }
+    .mobile-icons {
+        width: 80px;
+        height: auto;
+        margin-right: 10px;
+    }
+    .link-title {
+        margin: 0;
+        font-size: 23px;
+    }
+
+    .card:hover{
+        background-color: #007bff;
+        color: #ffff;
+        transition: .2s ease;
+        font-weight: bold;
+    }
+    .card:hover .mobile-icons{
+        transform: rotate(-8deg) scale(1.2);
+        transition: transform 0.3s ease;
+    }
+    .button-5 {
+        align-items: center;
+        background-clip: padding-box;
+        background-color: #fa6400;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+            Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+    }
+
+    .button-5:hover,
+    .button-5:focus {
+        background-color: #fb8332;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+
+    .button-5:hover {
+        transform: translateY(-1px);
+    }
+
+    .button-5:active {
+        background-color: #c85000;
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        transform: translateY(0);
     }
 }
 .stat-card:hover .icon-img i {
     transform: rotate(8deg) scale(1.5);
     transition: transform 0.3s ease;
 }
-#files, #meetings, #delegates, #pending {
+#files,
+#meetings,
+#delegates,
+#pending {
     color: #fff;
 }
 
-#files { background-color: #74C9F8; }
-#meetings { background-color: #38b98a; }
-#delegates { background-color: #e7bc50; }
-#pending { background-color: #FD6F6F; }
+#files {
+    background-color: #74c9f8;
+}
+#meetings {
+    background-color: #38b98a;
+}
+#delegates {
+    background-color: #e7bc50;
+}
+#pending {
+    background-color: #fd6f6f;
+}
 
-
-#files:hover, #meetings:hover, #delegates:hover, #pending:hover {
+#files:hover,
+#meetings:hover,
+#delegates:hover,
+#pending:hover {
     background-color: #ffff;
     color: #3b3b3b;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

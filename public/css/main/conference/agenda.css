@@ -78,7 +78,31 @@
     color: #3D3834;
     text-decoration: none;
 }
+.message-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3vh;
+    text-align: center;
+}
+.missing-svg{
+    width: 400px;
+    height: auto;
 
+}
+.message-content-header{
+    font-size: 2rem;
+    padding: 15px;
+    font-weight: bold;
+    color: #002868;
+}
+.message-header-subtitle{
+    font-size: 1rem;
+    color: #969696;
+    font-style: italic;
+}
 @media (max-width: 768px) {
     .card {
         flex: 1 0 100%;

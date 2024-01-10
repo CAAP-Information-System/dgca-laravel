@@ -27,6 +27,7 @@ class User extends Authenticatable
         'password',
         'country',
         'conference_role',
+        'access_role',
     ];
 
     /**

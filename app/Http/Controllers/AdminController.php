@@ -28,13 +28,15 @@ class AdminController extends Controller
         ]);
     }
 
-    public function account_list(){
-        $user= User::all();
+    public function account_list()
+    {
+        $user = User::all();
 
-        return view('admin.account_list', [ 'users' => $user]);
+        return view('admin.account_list', ['users' => $user]);
     }
 
-    public function file_uploads(){
+    public function file_uploads()
+    {
         $files = File::all();
 
         return view('admin.file_upload', [
@@ -42,8 +44,33 @@ class AdminController extends Controller
         ]);
     }
 
-    public function reservation_view(){
+    public function reservation_view()
+    {
         $meetings = SideMeeting::all();
         return view('admin.reservation_view', ['meetings' => $meetings]);
+    }
+
+    public function updateAccessRole(Request $request)
+    {
+        // Log the request data
+        logger($request->all());
+
+        $request->validate([
+            'access_role' => 'required|in:admin,guest',
+        ]);
+
+        $userIdsAndRoles = $request->input('access_role');
+
+        foreach ($userIdsAndRoles as $userId => $accessRole) {
+            $user = User::find($userId);
+
+            if ($user) {
+                $user->update(['access_role' => $accessRole]);
+            } else {
+                logger("User with ID $userId not found.");
+            }
+        }
+
+        return redirect()->back()->with('success', 'Access roles updated successfully');
     }
 }

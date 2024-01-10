@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
@@ -58,19 +59,30 @@
         bottom: 0;
     }
 
-    #logout {
-        color: #E83E3E;
-    }
+
 
     #login-register {
         color: #002868;
         font-size: 16px;
         padding: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        border-radius: 15px;
+        border: solid 1px transparent;
     }
 
     .nav-link:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        transition: .1s ease-in-out;
+        border: solid 1px #2658AB;
+        transition: .1s ease-in;
         border-radius: 15px;
     }
 </style>
@@ -78,11 +90,11 @@
     <img src="{{ asset('gif/loader-caap.gif') }}" alt="CAAP Logo" class="">
 </div>
 
-<body>
+<body class="">
+    <div id="">
 
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="nav-caap-logo">
                 </a>
@@ -98,20 +110,13 @@
                 <a href="url_for_bagong_pilipinas_logo" target="_blank">
                     <img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo">
                 </a>
-
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav">
+                <nav class="navbar navbar-expand-lg ">
+                    <button style="margin-top: 2vh;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars fa-lg" style="color: #002868;"></i>
+                        Main Navigation
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div style="margin-left: 70%;"></div>
                         @guest
                         @if (Route::has('login'))
 
@@ -122,12 +127,6 @@
                             </a>
                         </li>
                         @endif
-
-                        <!-- @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">Register</a>
-                        </li>
-                        @endif -->
                         @else
                         @if(auth()->check() && auth()->user()->access_role != "admin")
                         <li class="nav-item">
@@ -138,7 +137,7 @@
                         </li>
                         <div style="margin: 15px;"></div>
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown " class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="login-register" class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <i class="fa-solid fa-circle-user"></i>&nbsp
                                 {{ Auth::user()->first_name }}
                             </a>
@@ -156,143 +155,167 @@
                         </li>
                         @endif
                         @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        @if(auth()->check() && auth()->user()->access_role == "admin")
-        <aside class="main-sidebar">
-            <!-- Brand Logo -->
-            <header class="navbar-header">DGCA Admin</header>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </div>
+    </nav>
+    @if(auth()->check() && auth()->user()->access_role == "admin")
+    <aside class="main-sidebar elevation-4" id="navbarSupportedContent">
+        <!-- Brand Logo -->
+        <header class="navbar-header">DGCA Admin</header>
 
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <nav class="mt-3">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Dashboard -->
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard') }}" class="sidebar-item">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav class="mt-3">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Dashboard -->
+                    <li class="nav-item menu-open">
+                        <a href="{{ route('dashboard') }}" class="sidebar-item">
 
-                                <i class="fa-solid fa-chart-column fa-lg"></i>
-                                <div class="item-name">Dashboard</div>
+                            <i class="fa-solid fa-chart-column fa-lg"></i>
+                            <div class="item-name">Dashboard</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('files') }}" class="sidebar-item">
+                            <i class="fa-regular fa-file-lines fa-lg"></i>
+                            <div class="item-name">Files Uploaded</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('meeting-reservations') }}" class="sidebar-item">
+                            <i class="fa-regular fa-calendar-check fa-lg"></i>
+                            <div class="item-name">Reservation</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('account_list') }}" class="sidebar-item">
+                            <i class="fa-solid fa-users"></i>
+                            <div class="item-name">Account Lists</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="sidebar-item">
+                            <i class="fa-solid fa-spinner fa-lg"></i>
+                            <div class="item-name">Pending Accounts</div>
+                        </a>
+                    </li>
+                    <div class="account-name-sidebar">
+                        <li class="nav-item dropdown " id="account-name">
+                            @auth
+                            <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('files') }}" class="sidebar-item">
-                                <i class="fa-regular fa-file-lines fa-lg"></i>
-                                <div class="item-name">Files Uploaded</div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('meeting-reservations') }}" class="sidebar-item">
-                                <i class="fa-regular fa-calendar-check fa-lg"></i>
-                                <div class="item-name">Reservation</div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('account_list') }}" class="sidebar-item">
-                                <i class="fa-solid fa-users"></i>
-                                <div class="item-name">Account Lists</div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="sidebar-item">
-                                <i class="fa-solid fa-spinner fa-lg"></i>
-                                <div class="item-name">Pending Accounts</div>
-                            </a>
-                        </li>
-                        <div class="account-name-sidebar">
-                            <li class="nav-item dropdown ">
-                                @auth
-                                <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Logout
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        <i class="fa-solid fa-right-from-bracket"></i> Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                                @endauth
-                            </li>
-                        </div>
-                    </ul>
-                </nav>
-
-            </div>
-
-        </aside>
-        @endif
-
-        <main class="py-4">
-
-            @if(auth()->check() && auth()->user()->access_role != "admin")
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subnavbar" aria-controls="subnavbar" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="welcome-navbar" id="subnavbar">
-                <ul class="navbar-links">
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="#">Conference</a>
-                        <div class="dropdown">
-                            <a class="sub" href="{{ route('welcome') }}">Welcome Message</a>
-                            <a class="sub" href="{{ route('agenda') }}">Agenda</a>
-                            <a class="sub" href="#">Programme</a>
-                            <a class="sub" href="{{ route('participants') }}">Participants</a>
-                            <a class="sub" href="{{ route('the-gallery') }}">The Gallery</a>
-                        </div>
-                    </li>
-
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="{{ route('meeting-room') }}">Side Meeting</a>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="#">Documents</a>
-                        <div class="dropdown">
-                            <a class="sub" href="{{ route('disc-paper') }}">Discussion</a>
-                            <a class="sub" href="{{ route('info-paper') }}">Information</a>
-                            <a class="sub" href="#">Paper Submission Guide</a>
-
-                        </div>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="#">Events</a>
-                        <div class="dropdown">
-                            <a class="sub" href="#">Social/Cultural Function</a>
-
-                        </div>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="#">Exhbits and Sponsors</a>
-                        <div class="dropdown">
-                            <a class="sub" href="#">Floor Plan</a>
-                            <a class="sub" href="#">Exhibit Services</a>
-                            <a class="sub" href="#">Exhibition Registration</a>
-                            <a class="sub" href="#">Our Sponsors</a>
-                        </div>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="#">Delegate's Corner</a>
-                        <div class="dropdown">
-                            <a class="sub" href="{{ route('bulletin') }}">Conference Bulletin</a>
-                            <a class="sub" href="#">Transport Schedule</a>
-                            <a class="sub" href="#">Venue</a>
-                            <a class="sub" href="#">Registration</a>
-                            <a class="sub" href="#">Other Notices</a>
-                        </div>
-                    </li>
-                    <li class="navbar-dropdown">
-                        <a class="navbar-main" href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">About Philippines</a>
-                    </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                            @endauth
+                        </li>
+                    </div>
                 </ul>
             </nav>
-            @endif
-            @yield('content')
-        </main>
+
+        </div>
+
+    </aside>
+    @endif
+
+    <main class="py-4">
+
+        @if(auth()->check() && auth()->user()->access_role != "admin")
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown1" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars fa-lg" style="color: #002868;"></i>
+                        Conference Navigation
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown1">
+                        <div class="sub-nav">
+                            <ul class="navbar-nav" style="color: #002868;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Conference
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('welcome') }}">Welcome Message</a>
+                                        <a class="dropdown-item" href="{{ route('agenda') }}">Agenda</a>
+                                        <a class="dropdown-item" href="#">Programme</a>
+                                        <a class="dropdown-item" href="{{ route('participants') }}">Participants</a>
+                                        <a class="dropdown-item" href="{{ route('the-gallery') }}">The Gallery</a>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('meeting-room') }}">
+                                        Side Meeting
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Documents
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('disc-paper') }}">Discussion</a>
+                                        <a class="dropdown-item" href="{{ route('info-paper') }}">Information</a>
+                                        <a class="dropdown-item" href="#">Paper Submission Guide</a>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Events
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">
+                                            Social/Cultural Function
+                                        </a>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Exhibits and Sponsors
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Floor Plan</a>
+                                        <a class="dropdown-item" href="#">Exhibit Services</a>
+                                        <a class="dropdown-item" href="#">Exhibition Registration</a>
+                                        <a class="dropdown-item" href="#">Our Sponsors</a>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Delegate's Corner
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('bulletin') }}">Conference Bulletin</a>
+                                        <a class="dropdown-item" href="#">Transport Schedule</a>
+                                        <a class="dropdown-item" href="#">Venue</a>
+                                        <a class="dropdown-item" href="#">Registration</a>
+                                        <a class="dropdown-item" href="#">Other Notices</a>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">About Philippines</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        @endif
+        @yield('content')
+    </main>
     </div>
 </body>
 
@@ -390,7 +413,27 @@
     <!-- Copyright -->
 </footer>
 @endif
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
@@ -399,5 +442,6 @@
         }, 1000);
     });
 </script>
+
 
 </html>

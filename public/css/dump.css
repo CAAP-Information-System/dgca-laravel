@@ -1,4 +1,3 @@
-
 .welcome-navbar {
     display: flex;
     align-items: center;
@@ -102,46 +101,7 @@
 .sub-dropdown-content a:hover {
     background-color: #f5f5f5;
 }
-
-.sub-nav .navbar-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 999999;
-    background-color: #ffff;
-}
-.sub-nav .navbar-nav .nav-item{
-    font-size: 17px;
-    color: #002868;
-}
-.sub-nav .navbar-nav .nav-item .nav-link{
-    padding: 15px;
-}
-.sub-nav .navbar-nav .nav-item .nav-link:hover{
-    background-color: #002868;
-    color: #ffff;
-}
-.sub-nav
-.navbar-nav
-.nav-item
-.nav-link
-.dropdown-menu{
-    width: 600px;
-}
-
-.dropdown-item{
-    font-size: 17px;
-}
-.dropdown-item:hover{
-    background-color: #2658ab;
-}
-
-#subnavbarNavDropdown .navbar-nav{
-    font-size: 17px;
-}
-
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 768px) {
     .welcome-navbar {
         display: flex;
         flex-direction: column;

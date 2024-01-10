@@ -33,7 +33,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/create-meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
     Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
     Route::get('/download/{file}', [FileController::class, 'download'])->name('download.file');
-
+    Route::post('/update-access-role', [AdminController::class, 'updateAccessRole'])->name('update-access-role');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
 
 });

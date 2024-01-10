@@ -14,7 +14,7 @@
     position: absolute;
     width: 450px;
     height: auto;
-    top: 17%;
+    top: 20%;
     right: 68%;
     z-index: 1;
 }
@@ -30,7 +30,7 @@
 .dg-details {
     position: absolute;
     width: 400px;
-    top: 70%;
+    top: 75%;
     right: 73%;
     z-index: 5;
     background-color: #002868;
@@ -122,6 +122,10 @@
 .dg-span {
     line-height: 6vh;
 }
+/* .dg-span:hover{
+    transform: scale(1.5);
+    transition: .3s ease;
+} */
 .conference {
     color: #0046b9;
     font-size: 3rem;
@@ -176,7 +180,7 @@
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  width: 50%;
+  width: 20%;
   text-decoration: none;
 }
 
@@ -376,12 +380,17 @@
         flex-direction: column;
         align-items: center;
     }
+    .airport-hdr{
+        font-size: 4.2rem;
+        line-height: 8vh;
+        margin-top: 6vh;
+    }
 }
 
 
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
     .announcements {
         font-size: 1.2rem;
         padding: 5px;

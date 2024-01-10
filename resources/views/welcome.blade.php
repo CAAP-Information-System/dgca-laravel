@@ -10,8 +10,7 @@
 
         <section>
             <marquee class="announcements" behavior="" direction="">
-                This is a marquee line for important announcements. For testing purposes.
-                Test
+                This is a scrolling marquee displaying important announcements for testing purposes. Kindly coordinate with the developers for the posting of official announcements here. Thank you very much!
             </marquee>
         </section>
 
