@@ -14,14 +14,16 @@ TO DO:
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <section class="screen-dashboard">
-            <main class="py-4">
+            <main class="dashboard-main">
                 <div class="content-wrapper">
                     <!-- Content Header (Page header) -->
-                    <div id="" class="content-header">
+                    <div id="" class="">
                         <div class="container-fluid">
                             <div class="row mb-3">
                                 <div class="col-sm-6">
-                                    <h1 class="m-0">Dashboard</h1>
+                                    <div class="content-header">
+                                        <i class="fa-solid fa-chart-column"></i>&nbsp;&nbsp;Dashboard
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,6 +131,21 @@ TO DO:
                         </div>
                     </div>
                 </a>
+
+                <div class="">
+                    @auth
+                    <div class="logout-content">
+                        <a class="button-5" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Sign Out
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+
+                    @endauth
+                </div>
             </div>
         </section>
 

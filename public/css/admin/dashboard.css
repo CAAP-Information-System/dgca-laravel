@@ -1,3 +1,7 @@
+.mobile-dashboard{
+    display: none;
+}
+
 .main-sidebar {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
         rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -8,6 +12,7 @@
     color: #fff;
     position: fixed;
     width: 250px;
+    height: 100vh;
     overflow-x: hidden;
 }
 .sidebar .nav-item {
@@ -56,6 +61,11 @@
     background-color: #007bff;
     color: #ffff;
 }
+.content-header{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3b3b3b;
+}
 
 .icon-img {
     position: absolute;
@@ -85,9 +95,51 @@
     background-color: #007bff; /* Change this to your desired active state background color */
     color: #ffffff; /* Change this to your desired active state text color */
 }
-@media screen and (max-width: 768px) and (max-width: 920px) {
+
+
+
+
+.stat-card:hover .icon-img i {
+    transform: rotate(8deg) scale(1.5);
+    transition: transform 0.3s ease;
+}
+#files,
+#meetings,
+#delegates,
+#pending {
+    color: #fff;
+}
+
+#files {
+    background-color: #74c9f8;
+}
+#meetings {
+    background-color: #38b98a;
+}
+#delegates {
+    background-color: #e7bc50;
+}
+#pending {
+    background-color: #fd6f6f;
+}
+
+#files:hover,
+#meetings:hover,
+#delegates:hover,
+#pending:hover {
+    background-color: #ffff;
+    color: #3b3b3b;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (width <= 768px) {
+    .main-logo{
+        margin-left: 0;
+    }
     .screen-dashboard {
         display: none;
+    }
+    .mobile-dashboard{
+        display: contents;
     }
     .stat-card {
         padding: 5px;
@@ -148,13 +200,13 @@
         font-size: 23px;
     }
 
-    .card:hover{
+    .card:hover {
         background-color: #007bff;
         color: #ffff;
-        transition: .2s ease;
+        transition: 0.2s ease;
         font-weight: bold;
     }
-    .card:hover .mobile-icons{
+    .card:hover .mobile-icons {
         transform: rotate(-8deg) scale(1.2);
         transition: transform 0.3s ease;
     }
@@ -203,36 +255,101 @@
         box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
         transform: translateY(0);
     }
-}
-.stat-card:hover .icon-img i {
-    transform: rotate(8deg) scale(1.5);
-    transition: transform 0.3s ease;
-}
-#files,
-#meetings,
-#delegates,
-#pending {
-    color: #fff;
+
+    .logout-content {
+        padding: 15px;
+    }
+    /* CSS */
+    .button-5 {
+        align-items: center;
+        background-clip: padding-box;
+        background-color: #fa6400;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+            Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+    }
+
+    .button-5:hover,
+    .button-5:focus {
+        background-color: #fb8332;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+
+    .button-5:hover {
+        transform: translateY(-1px);
+    }
+
+    .button-5:active {
+        background-color: #c85000;
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        transform: translateY(0);
+    }
 }
 
-#files {
-    background-color: #74c9f8;
-}
-#meetings {
-    background-color: #38b98a;
-}
-#delegates {
-    background-color: #e7bc50;
-}
-#pending {
-    background-color: #fd6f6f;
+@media (918px  <= width <= 1500px  ){
+    .main-logo{
+        margin-left: 20vh;
+    }
 }
 
-#files:hover,
-#meetings:hover,
-#delegates:hover,
-#pending:hover {
-    background-color: #ffff;
-    color: #3b3b3b;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+@media (width <= 990px  ) {
+
+    .screen-dashboard{
+        width: 100%;
+    }
+    .dashboard-main{
+        margin-left: 33vh;
+    }
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .stat-card{
+        margin: 5px;
+    }
+}
+@media (width <= 918px  ) {
+    .screen-dashboard{
+        width: 100%;
+    }
+    .dashboard-main{
+        margin-left: 33vh;
+    }
+    .content-wrapper{
+        display: inline-block;
+    }
+    .content-header{
+        width: 100%;
+    }
+    .stat-card{
+        width: 100%;
+        margin: 5px;
+    }
+    .icon-img{
+        display: none;
+    }
+    .stat-value{
+        font-size: 3rem;
+    }
 }

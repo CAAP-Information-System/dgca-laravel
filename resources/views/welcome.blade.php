@@ -17,7 +17,15 @@
         <section class="main-title fade-in-section">
             <section class="welcome-message">
                 <main class="message-main">
-                    <header class="message-header"><span style="color: #2658AB;">Mabuhay!</span> <span style="font-style: italic;">59th DGCA Conference</span></header>
+                    <header class="message-header"><span class="" style="color: #2658AB;">Mabuhay!</span> <span class="dgca-conf" style="font-style: italic;">59th DGCA Conference</span></header>
+                    <div class="responsive-content">
+                        <img src="{{ asset('img/capt-tamayo-2x2.png') }}" alt="CAAP Logo" class="responsive-tamayo-img">
+                        <div class="responsive-name-position">
+                            <span class="responsive-name">Captain Manuel Antonio L. Tamayo</span>
+                            <span class="responsive-position">Director General of CAA Philippines</span>
+                        </div>
+
+                    </div>
                     <div class="message-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         <br><br>
@@ -29,7 +37,7 @@
                 <img src="{{ asset('img/capt-tamayo.png') }}" alt="CAAP Logo" class="tamayo-img">
                 <img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="caap-img">
                 <div class="dg-details">
-                    <header class="name">Captain Manuel Antonio Tamayo</header>
+                    <header class="name">Captain Manuel Antonio L.Tamayo</header>
                     <div class="position">Director General of CAA Philippines</div>
                 </div>
             </div>

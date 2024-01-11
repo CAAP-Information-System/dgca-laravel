@@ -164,71 +164,73 @@
     </div>
     </nav>
     @if(auth()->check() && auth()->user()->access_role == "admin")
-    <aside class="main-sidebar elevation-4" id="navbarSupportedContent">
-        <!-- Brand Logo -->
-        <header class="navbar-header">DGCA Admin</header>
+    <div class="admin-navigation">
+        <aside class="main-sidebar elevation-4" id="navbarSupportedContent">
+            <!-- Brand Logo -->
+            <header class="navbar-header">DGCA Admin</header>
 
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <nav class="mt-3">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <!-- Dashboard -->
-                    <li class="nav-item menu-open">
-                        <a href="{{ route('dashboard') }}" class="sidebar-item">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <nav class="mt-3">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Dashboard -->
+                        <li class="nav-item menu-open">
+                            <a href="{{ route('dashboard') }}" class="sidebar-item">
 
-                            <i class="fa-solid fa-chart-column fa-lg"></i>
-                            <div class="item-name">Dashboard</div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('files') }}" class="sidebar-item">
-                            <i class="fa-regular fa-file-lines fa-lg"></i>
-                            <div class="item-name">Files Uploaded</div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('meeting-reservations') }}" class="sidebar-item">
-                            <i class="fa-regular fa-calendar-check fa-lg"></i>
-                            <div class="item-name">Reservation</div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('account_list') }}" class="sidebar-item">
-                            <i class="fa-solid fa-users"></i>
-                            <div class="item-name">Account Lists</div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="sidebar-item">
-                            <i class="fa-solid fa-spinner fa-lg"></i>
-                            <div class="item-name">Pending Accounts</div>
-                        </a>
-                    </li>
-                    <div class="account-name-sidebar">
-                        <li class="nav-item dropdown " id="account-name">
-                            @auth
-                            <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
+                                <i class="fa-solid fa-chart-column fa-lg"></i>
+                                <div class="item-name">Dashboard</div>
                             </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('files') }}" class="sidebar-item">
+                                <i class="fa-regular fa-file-lines fa-lg"></i>
+                                <div class="item-name">Files Uploaded</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('meeting-reservations') }}" class="sidebar-item">
+                                <i class="fa-regular fa-calendar-check fa-lg"></i>
+                                <div class="item-name">Reservation</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('account_list') }}" class="sidebar-item">
+                                <i class="fa-solid fa-users"></i>
+                                <div class="item-name">Account Lists</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="sidebar-item">
+                                <i class="fa-solid fa-spinner fa-lg"></i>
+                                <div class="item-name">Pending Accounts</div>
+                            </a>
+                        </li>
+                        <div class="account-name-sidebar">
+                            <li class="nav-item dropdown " id="account-name">
+                                @auth
+                                <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                            @endauth
-                        </li>
-                    </div>
-                </ul>
-            </nav>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fa-solid fa-right-from-bracket"></i> Logout
+                                    </a>
 
-        </div>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                                @endauth
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
 
-    </aside>
+            </div>
+
+        </aside>
+    </div>
     @endif
 
     <main class="py-4">
@@ -319,7 +321,6 @@
     </div>
 </body>
 
-@if(auth()->check() && auth()->user()->access_role != "admin")
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -412,7 +413,6 @@
     </div>
     <!-- Copyright -->
 </footer>
-@endif
 <script>
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
