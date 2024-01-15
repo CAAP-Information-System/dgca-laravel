@@ -26,9 +26,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
-    }
+        $user = auth()->user();
 
+        // Check if the modal has already been shown in this session
+        $modalShown = session('modal_shown', false);
+
+        // Store the flag in the session to ensure it's shown only once per login
+        session(['modal_shown' => true]);
+
+        return view('welcome', compact('user', 'modalShown'));
+    }
 
 
     public function viewGallery()
@@ -63,7 +70,7 @@ class HomeController extends Controller
 
     public function sendNotif()
     {
-        $user=User::all();
+        $user = User::all();
 
         $details = [
             'greeting' => 'Hi Artisan',
@@ -78,5 +85,4 @@ class HomeController extends Controller
 
         dd('done');
     }
-
 }

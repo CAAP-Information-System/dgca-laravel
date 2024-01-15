@@ -2,10 +2,38 @@
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}">
-<div class="container">
-
-</div>
 <main class="content-main">
+
+
+
+
+    @if (auth()->check() && auth()->user()->status === 'Pending')
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Welcome, <span style="font-weight: bold;">{{$user->first_name}} {{$user->last_name}}</span></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="congratulations">We are pleased to inform you that your registration for the 59th DGCA Online Conference has been successfully received.</p>
+                    <div style="margin-top: 35px;"></div>
+                    <span class="note">Reminders:</span>
+
+                    <p>Please note that your current account is under <span style="color: #FFB302; font-weight:bold;">PENDING</span> approval by the conference administrators.</p>
+                    <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact the DGCA Secretariat:</p>
+                    <a class="email-link" href="#">secretariat-email-here@example.com</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="closeButton">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+
     <div class="container">
 
         <section>
@@ -138,6 +166,20 @@
 </div> -->
     </footer>
 </div>
+<script>
+    // Use this script if you are using Bootstrap 5
+    document.addEventListener('DOMContentLoaded', function() {
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+
+        myModal.show();
+
+        // Close the modal when clicking the close button
+        var closeButton = document.getElementById('closeButton');
+        closeButton.addEventListener('click', function() {
+            myModal.hide();
+        });
+    });
+</script>
 <script>
     $(document).ready(function() {
         // Function to check fade on scroll

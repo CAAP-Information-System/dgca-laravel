@@ -4,9 +4,11 @@ body {
     background: rgba(255, 255, 255, 0.2) url("/img/map2.png") bottom right / 30%
         no-repeat fixed;
 }
-.main-logo{
+.logos-main {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    width: 100%;
 }
 .map-img {
     position: absolute;

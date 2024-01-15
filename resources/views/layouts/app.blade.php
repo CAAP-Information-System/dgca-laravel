@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -21,6 +21,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
+
     <!-- Your custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,16 +38,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- ADMIN LTE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -95,28 +103,30 @@
 
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-white">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="nav-caap-logo">
-                </a>
+                <span class="logos-main">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="nav-caap-logo">
+                    </a>
 
-                <a href="url_for_icao_logo" target="_blank">
-                    <img src="{{ asset('img/icao.png') }}" alt="ICAO Logo" class="nav-bagong-pilipinas-logo">
-                </a>
+                    <a href="url_for_icao_logo" target="_blank">
+                        <img src="{{ asset('img/icao.png') }}" alt="ICAO Logo" class="nav-bagong-pilipinas-logo">
+                    </a>
 
-                <a href="https://caap.gov.ph" target="_blank">
-                    <img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
-                </a>
+                    <a href="https://caap.gov.ph" target="_blank">
+                        <img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
+                    </a>
 
-                <a href="url_for_bagong_pilipinas_logo" target="_blank">
-                    <img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo">
-                </a>
+                    <a href="url_for_bagong_pilipinas_logo" target="_blank">
+                        <img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo">
+                    </a>
+                </span>
                 <nav class="navbar navbar-expand-lg ">
-                    <button style="margin-top: 2vh;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <button id="main-toggle" style="margin-top: 2vh;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa-solid fa-bars fa-lg" style="color: #002868;"></i>
                         Main Navigation
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <div style="margin-left: 70%;"></div>
+                        <div style="margin-left: 60%;"></div>
                         @guest
                         @if (Route::has('login'))
 
@@ -205,25 +215,20 @@
                                 <div class="item-name">Pending Accounts</div>
                             </a>
                         </li>
-                        <div class="account-name-sidebar">
-                            <li class="nav-item dropdown " id="account-name">
-                                @auth
-                                <a id="navbarDropdown" class="sidebar-item dropdown-toggle" style="font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fa-solid fa-user-large fa-lg user-large"></i> {{ Auth::user()->first_name }}
+                        <li class="nav-item " id="account-name">
+                            @auth
+                            <div class="logout-content">
+                                <a class="button-24" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Sign Out
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        <i class="fa-solid fa-right-from-bracket"></i> Logout
-                                    </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                                @endauth
-                            </li>
-                        </div>
+                            @endauth
+                        </li>
                     </ul>
                 </nav>
 
@@ -413,6 +418,11 @@
     </div>
     <!-- Copyright -->
 </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */

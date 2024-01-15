@@ -14,7 +14,7 @@
             <div class="user__details">
                 <div class="input__box">
                     <span class="details">First Name</span>
-                    <input type="text" placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
+                    <input type="text"  placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
                 </div>
 
                 <div class="input__box">

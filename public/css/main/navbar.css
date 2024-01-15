@@ -8,7 +8,7 @@
 .navbar-links {
     list-style-type: none;
     display: flex;
-    z-index: 2;
+    z-index: 99999;
 }
 .navbar-links li a {
     display: block;
