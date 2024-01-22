@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\File;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
 
@@ -233,5 +234,20 @@ class FileController extends Controller
             'agenda10c',
             'presentation'
         ));
+    }
+
+    public function editFileName($id){
+        $user = Auth::user();
+        $files = File::find($id);
+        return view('file_manager.edit_files', compact('files','user'));
+    }
+    public function updateFileName(Request $request, $id)
+    {
+        $files = File::find($id);
+        $files->name = $request->input('name');
+        $files->doc_status = $request->input('doc_status');
+
+        $files->save();
+        return redirect('/admin/files')->with('success', 'Item updated successfully');
     }
 }

@@ -11,7 +11,7 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Change Logs](#changelog)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -21,13 +21,31 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
 Before you begin, ensure you have met the following requirements:
 
 - **Node.js**: Make sure you have Node.js installed. You can download it from [https://nodejs.org/](https://nodejs.org/).
-
 - **npm (Node Package Manager)**: This project uses npm to manage dependencies. It usually comes with Node.js installation.
-
 - **Composer**: If your project is built with PHP, you might need Composer for managing PHP dependencies. You can download it from [https://getcomposer.org/](https://getcomposer.org/).
-
 - **Web Browser**: Ensure you have a modern web browser like Google Chrome, Firefox, or Safari for testing and running the application.
 
 ### Installations
 - **laravel/ui**: 
 [Specify any software or dependencies that need to be installed before running the project]
+
+## Change Logs
+[!IMPORTANT]
+Starting January 2024, the project has undergone several enhancements to improve its functionality, design, and overall user experience. Below are detailed summaries of the changes made in each log file:
+
+1. [**User Navigation Bar**] (01-05-2024): 
+    - Addressed login and registration issues, ensuring interface responsiveness.
+    - Enhanced CSS and JavaScript for media queries and breakpoints, optimizing user navigation.
+2. [**Paper/document placements**] (01-08-2024): 
+    - Refined controllers for file uploading, organizing files based on dropdown input field categories.
+3. [**Create meeting button**] (01-08-2024): 
+    - Implemented a "Create Meeting" button for admin users, providing a streamlined process for initiating meetings.
+4. [**Main Navigation**] (01-10-2024):
+    - Revamped the navigation bar design for both user and admin interfaces.
+    - Introduced a more aesthetic and user-friendly navigation structure for improved usability.
+5. [**Page Responsiveness**] (01-11-2024): 
+    - Applied CSS media query breakpoints tailored for specific devices and browsers.
+    - Ensured a more interactive interface with enhanced responsiveness across various platforms.
+6. [**Bootstrap Package**] (01-15-2024): 
+    - Integrated Bootstrap UI and Vue.js packages and dependencies into the Laravel framework.
+    - This addition sets the foundation for further development of the frontend framework.

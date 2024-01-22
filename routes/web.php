@@ -26,6 +26,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/update-access-role', [AdminController::class, 'updateAccessRole'])->name('update-access-role');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
 
+    Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
+    Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');

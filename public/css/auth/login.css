@@ -190,6 +190,12 @@
     opacity: 1;
     transform: translateY(0);
 }
+@media screen and (max-width: 1024px) {
+    .login-main{
+        width: 80%;
+    }
+
+}
 
 @media screen and (max-width: 768px) {
     .auth-hdr{

@@ -345,7 +345,6 @@
 }
 .note{
     font-size: 1.2rem;
-    font-weight: bold;
     font-style: italic;
     color: #0046b9;
 }
@@ -353,6 +352,18 @@
     font-size: 15px;
     margin-top: 15px;
     font-style: italic;
+}
+@media screen and (max-width: 1024px){
+    .grp-1{
+        line-height: 3vh;
+    }
+    .conference{
+        line-height: 5vh;
+    }
+    .hosts-grp{
+        gap: 4vh;
+    }
+
 }
 @media screen and (max-width: 768px) {
     h1 {
@@ -621,6 +632,7 @@
         width: 70%;
     }
 }
+
 @media (1281px <= width <= 1590px) {
     .tamayo-img {
         position: absolute;

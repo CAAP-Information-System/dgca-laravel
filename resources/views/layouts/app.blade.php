@@ -18,14 +18,16 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
     <!-- Your custom CSS -->
@@ -38,17 +40,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <!-- ADMIN LTE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -75,6 +69,18 @@
         padding: 10px;
         text-align: center;
         text-decoration: none;
+        display: inline-block;
+        width: 100%;
+    }
+    #logout{
+        text-decoration: none;
+        color: #002868;
+        margin-left: 15px;
+        padding: 7px;
+        font-size: 15px;
+    }
+    #logout:hover{
+        background-color: #931f1f;
     }
 
     .nav-item {
@@ -102,7 +108,7 @@
     <div id="">
 
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <div class="navbar navbar-expand-md navbar-light bg-white">
                 <span class="logos-main">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="nav-caap-logo">
@@ -120,7 +126,7 @@
                         <img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo">
                     </a>
                 </span>
-                <nav class="navbar navbar-expand-lg ">
+                <div class="navbar navbar-expand-lg ">
                     <button id="main-toggle" style="margin-top: 2vh;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa-solid fa-bars fa-lg" style="color: #002868;"></i>
                         Main Navigation
@@ -153,7 +159,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="fa-solid fa-right-from-bracket"></i>
                                     Logout
                                 </a>
@@ -168,8 +174,9 @@
                         </li>
                         </ul>
                     </div>
-                </nav>
-            </nav>
+
+                </div>
+            </div>
         </div>
     </div>
     </nav>
@@ -218,7 +225,7 @@
                         <li class="nav-item " id="account-name">
                             @auth
                             <div class="logout-content">
-                                <a class="button-24" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a class="button-31" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Sign Out
                                 </a>
 
@@ -242,80 +249,82 @@
 
         @if(auth()->check() && auth()->user()->access_role != "admin")
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown1" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars fa-lg" style="color: #002868;"></i>
-                        Conference Navigation
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown1">
-                        <div class="sub-nav">
-                            <ul class="navbar-nav" style="color: #002868;">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Conference
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="{{ route('welcome') }}">Welcome Message</a>
-                                        <a class="dropdown-item" href="{{ route('agenda') }}">Agenda</a>
-                                        <a class="dropdown-item" href="#">Programme</a>
-                                        <a class="dropdown-item" href="{{ route('participants') }}">Participants</a>
-                                        <a class="dropdown-item" href="{{ route('the-gallery') }}">The Gallery</a>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('meeting-room') }}">
-                                        Side Meeting
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Documents
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="{{ route('disc-paper') }}">Discussion</a>
-                                        <a class="dropdown-item" href="{{ route('info-paper') }}">Information</a>
-                                        <a class="dropdown-item" href="#">Paper Submission Guide</a>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Events
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">
-                                            Social/Cultural Function
-                                        </a>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Exhibits and Sponsors
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Floor Plan</a>
-                                        <a class="dropdown-item" href="#">Exhibit Services</a>
-                                        <a class="dropdown-item" href="#">Exhibition Registration</a>
-                                        <a class="dropdown-item" href="#">Our Sponsors</a>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Delegate's Corner
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="{{ route('bulletin') }}">Conference Bulletin</a>
-                                        <a class="dropdown-item" href="#">Transport Schedule</a>
-                                        <a class="dropdown-item" href="#">Venue</a>
-                                        <a class="dropdown-item" href="#">Registration</a>
-                                        <a class="dropdown-item" href="#">Other Notices</a>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">About Philippines</a>
-                                </li>
-                            </ul>
+            <nav class="main-navigation">
+                <div class="navbar">
+                    <i class='bx bx-menu'></i>
+                    <div class="nav-links">
+                        <div class="sidebar-logo">
+
+                            <i class='bx bx-x'></i>
                         </div>
+                        <ul class="links">
+                            <li>
+                                <a href="#">Conference</a>
+                                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                                <ul class="htmlCss-sub-menu sub-menu">
+                                    <li><a href="{{ route('welcome') }}">Welcome Message</a></li>
+                                    <li><a href="{{ route('agenda') }}">Agenda</a></li>
+                                    <li><a href="#">Programme</a></li>
+                                    <li><a href="{{ route('participants') }}">Participants</a></li>
+                                    <li><a href="{{ route('the-gallery') }}">The Gallery</a></li>
+                                    <!-- <li class="more">
+                                        <span><a href="#">More</a>
+                                            <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                                        </span>
+                                        <ul class="more-sub-menu sub-menu">
+                                            <li><a href="#">Neumorphism</a></li>
+                                            <li><a href="#">Pre-loader</a></li>
+                                            <li><a href="#">Glassmorphism</a></li>
+                                        </ul>
+                                    </li> -->
+                                </ul>
+                            </li>
+                            <li> <a href="{{ route('meeting-room') }}"> Side Meeting</a></li>
+                            <li>
+                                <a href="#">Documents</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="{{ route('disc-paper') }}">Discussion</a></li>
+                                    <li><a href="{{ route('info-paper') }}">Information</a></li>
+                                    <li><a href="#">Paper Submission Guide</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Events</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">Social/Cultural Function</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Exhibits and Sponsors</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">Floor Plan</a></li>
+                                    <li><a href="#">Exhibit Services</a></li>
+                                    <li><a href="#">Exhibition Registration</a></li>
+                                    <li><a href="#">Our Sponsors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Delegate's Corner</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="{{ route('bulletin') }}">Conference Bulletin</a></li>
+                                    <li><a href="#">Transport Schedule</a></li>
+                                    <li><a href="#">Venue</a></li>
+                                    <li><a href="#">Registration</a></li>
+                                    <li><a href="#">Other Notices</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">About Philippines</a></li>
+                        </ul>
+                    </div>
+                    <div class="search-box">
+                        <i class='bx bx-search'></i>
+                        <!-- <div class="input-box">
+                            <input type="text" placeholder="Search...">
+                        </div> -->
                     </div>
                 </div>
             </nav>
@@ -418,14 +427,48 @@
     </div>
     <!-- Copyright -->
 </footer>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
-    /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+    // search-box open close js code
+    let navbar = document.querySelector(".navbar");
+    let searchBox = document.querySelector(".search-box .bx-search");
+    // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+    searchBox.addEventListener("click", () => {
+        navbar.classList.toggle("showInput");
+        if (navbar.classList.contains("showInput")) {
+            searchBox.classList.replace("bx-search", "bx-x");
+        } else {
+            searchBox.classList.replace("bx-x", "bx-search");
+        }
+    });
+
+    // sidebar open close js code
+    let navLinks = document.querySelector(".nav-links");
+    let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+    let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+    menuOpenBtn.onclick = function() {
+        navLinks.style.left = "0";
+    };
+    menuCloseBtn.onclick = function() {
+        navLinks.style.left = "-100%";
+    };
+
+    // sidebar submenu open close js code
+    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+    htmlcssArrow.onclick = function() {
+        navLinks.classList.toggle("show1");
+    };
+    let moreArrow = document.querySelector(".more-arrow");
+    moreArrow.onclick = function() {
+        navLinks.classList.toggle("show2");
+    };
+    let jsArrow = document.querySelector(".js-arrow");
+    jsArrow.onclick = function() {
+        navLinks.classList.toggle("show3");
+    };
+</script>
+
+<script>
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }

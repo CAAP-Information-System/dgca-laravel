@@ -60,6 +60,7 @@
     width: 60%;
     border-radius: 20px;
     padding: 5vh;
+    background-color: #ffff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .container .register-user .user__details {
@@ -213,7 +214,13 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .container .register-user{
+        width: 100%;
+        background-color: #ffff;
+    }
 
+}
 
 @media screen and (max-width: 768px) {
     .auth-hdr{

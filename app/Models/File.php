@@ -17,4 +17,10 @@ class File extends Model
         'discussion_agenda',
         'information_agenda',
     ];
+
+    // Function to update the file name
+    public function updateFileName($newName)
+    {
+        $this->update(['name' => $newName]);
+    }
 }

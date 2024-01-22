@@ -82,7 +82,7 @@
                                 <td class="{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0 ? 'active' : '' }}">
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room B')->count() > 0)
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room B')->first()->approval_status === 'For Decision')
-                                    <h4>Decision Pending</h4>
+                                    <h4 class="decision-pending">Decision Pending</h4>
                                     <div class="hover">
                                         <h4>Decision Pending</h4>
                                     </div>
@@ -100,7 +100,7 @@
                                 <td class="{{ $day1Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0 ? 'active' : '' }}">
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room C')->count() > 0)
                                     @if($day1Meetings->where('meeting_room_drop', 'Meeting Room C')->first()->approval_status === 'For Decision')
-                                    <h4>Decision Pending</h4>
+                                    <h4 class="decision-pending">Decision Pending</h4>
                                     <div class="hover">
                                         <h4>Decision Pending</h4>
                                     </div>

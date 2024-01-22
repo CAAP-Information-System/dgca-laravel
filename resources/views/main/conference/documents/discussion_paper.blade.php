@@ -27,10 +27,15 @@
             <i id="icon1" class='bx bxs-caret-down-circle'></i> Agenda 1: Theme Topic
         </button>
 
+
         <ul class="list" id="list1">
+
             @foreach($agenda1 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
+
         </ul>
 
 
@@ -40,8 +45,9 @@
 
         <ul class="list" id="list2">
             @foreach($agenda2 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/2/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -51,7 +57,9 @@
 
         <ul class="list" id="list3">
             @foreach($agenda3 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/3/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
 
         </ul>
@@ -62,7 +70,9 @@
         <!-- List 4 -->
         <ul class="list" id="list4">
             @foreach($agenda4 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/4/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -73,7 +83,9 @@
         <!-- List 5 -->
         <ul class="list" id="list5">
             @foreach($agenda5 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -84,7 +96,9 @@
         <!-- List 6 -->
         <ul class="list" id="list6">
             @foreach($agenda6 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
         <button class="collapse-button" onclick="toggleList('list7')">
@@ -93,7 +107,9 @@
         <!-- List 7 -->
         <ul class="list" id="list7">
             @foreach($agenda7 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -104,7 +120,9 @@
         <!-- List 8 -->
         <ul class="list" id="list8">
             @foreach($agenda8 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -115,7 +133,9 @@
         <!-- List 9 -->
         <ul class="list" id="list9">
             @foreach($agenda9a as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
         <button class="collapse-button" onclick="toggleList('list10')">
@@ -124,7 +144,9 @@
         <!-- List 9 -->
         <ul class="list" id="list10">
             @foreach($agenda9b as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
         <!-- Toggle Button 10 -->
@@ -134,7 +156,9 @@
         <!-- List 10 -->
         <ul class="list" id="list11">
             @foreach($agenda10a as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -145,7 +169,9 @@
         <!-- List 11 -->
         <ul class="list" id="list12">
             @foreach($agenda10b as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -156,7 +182,9 @@
         <!-- List 12 -->
         <ul class="list" id="list13">
             @foreach($agenda10c as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
 
@@ -167,7 +195,9 @@
         <!-- List 13 -->
         <ul class="list" id="list14">
             @foreach($presentation as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
+            @if($discussion->doc_status == 'Approved')
+            <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+            @endif
             @endforeach
         </ul>
     </div>

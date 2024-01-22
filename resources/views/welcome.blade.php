@@ -22,7 +22,7 @@
                     <div style="margin-top: 35px;"></div>
                     <span class="note">Reminders:</span>
 
-                    <p>Please note that your current account is under <span style="color: #FFB302; font-weight:bold;">PENDING</span> approval by the conference administrators.</p>
+                    <p>Please note that your current account is under <span style="color: #FD6F6F; font-weight:bold;">PENDING</span> approval by the conference administrators.</p>
                     <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact the DGCA Secretariat:</p>
                     <a class="email-link" href="#">secretariat-email-here@example.com</a>
                 </div>
@@ -35,7 +35,6 @@
     @endif
 
     <div class="container">
-
         <section>
             <marquee class="announcements" behavior="" direction="">
                 This is a scrolling marquee displaying important announcements for testing purposes. Kindly coordinate with the developers for the posting of official announcements here. Thank you very much!
@@ -52,7 +51,6 @@
                             <span class="responsive-name">Captain Manuel Antonio L. Tamayo</span>
                             <span class="responsive-position">Director General of CAA Philippines</span>
                         </div>
-
                     </div>
                     <div class="message-content">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -80,7 +78,6 @@
         </div>
         <div class="asia-pacific">Asia and Pacific Region</div>
         <header class="philippines">Philippines 2024</header>
-
         <a href="{{ route('login')}}" class="button-19">Let's Join Now!</a>
         <!-- <div class="plane">
         <img src="{{ asset('img/new-plane.png') }}" alt="CAAP Logo" class="plane-img">
