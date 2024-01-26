@@ -5,7 +5,7 @@
 <div class="container">
     <header class="page-header">Files Upload</header>
     <div class="main">
-        <a class="button-24" href="{{ route('registerDocument') }}"> Register New Document </a>
+        <a class="button-24" href="{{ route('create.file') }}"> Register New Document </a>
         <table class="table ">
             <thead>
                 <tr>

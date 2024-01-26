@@ -55,6 +55,8 @@ class LoginController extends Controller
             return redirect('welcome');  // Redirect to the home page if authenticated
         }
 
-        return view('auth.login');
+        // If not authenticated, return the login view
+        return view('auth.login')->with('error', 'Sorry, you are not yet registered.');
     }
+
 }

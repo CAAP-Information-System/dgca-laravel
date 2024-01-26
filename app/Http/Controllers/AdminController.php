@@ -7,6 +7,7 @@ use App\Models\File;
 use App\Models\SideMeeting;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -72,5 +73,30 @@ class AdminController extends Controller
         }
 
         return redirect()->back()->with('success', 'Access roles updated successfully');
+    }
+
+    public function viewPendingAccounts()
+    {
+        $user = User::all();
+        return view('admin.pending_account', ['users' => $user]);
+    }
+    public function viewUserProfile($id)
+    {
+        $user = User::find($id);
+        if (!$user) {
+            // You can customize this part based on how you want to handle a non-existing user
+            abort(404, 'User not found');
+        }
+        return view('admin.account_profile', ['user' => $user]);
+    }
+    public function approveUser($id){
+
+            $user = User::find($id); // Find the user by ID
+
+            // Update the user status to 'APPROVED'
+            $user->status = 'Approved';
+            $user->save();
+            Session::flash('success', 'User approved successfully');
+            return redirect()->back()->with('success', 'User approved successfully.');
     }
 }

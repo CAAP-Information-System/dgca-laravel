@@ -6,28 +6,31 @@
     <div class="header-container">
         <header class="auth-hdr">Welcome and Mabuhay!</header>
     </div>
+
     <section class="main">
         <div class="login-main">
+
             <form class="login-form" method="POST" action="{{ route('login') }}">
                 <header class="login-hdr">Sign In Now</header>
                 @csrf
+                @if(session('error'))
+                <div class="alert alert-info">
+                    {{ session('error') }}
+                </div>
+                @endif
                 <br>
                 <div class="form-fields">
                     <div class="user__details">
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form1Example13">Email address:</label>
+                            <label class="form-label" for="form1Example13">Email Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class='bx bx-envelope'></i></span>
                                 </div>
-                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field @error('email') is-invalid @enderror""
+                                name=" email" value="{{ old('email') }}" autocomplete="email" required>
                             </div>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
                         </div>
 
                         <!-- Password input -->
@@ -37,7 +40,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class='bx bx-key'></i></span>
                                 </div>
-                                <input id="password" type="password" placeholder="Enter Password" class="input-field" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" placeholder="Enter Password" class="input-field" name="password" autocomplete="current-password" required>
                             </div>
 
                             <br>
@@ -45,11 +48,6 @@
                                 <input type="checkbox" id="show-password" class="form-check-input">
                                 <label for="show-password" class="form-check-label">Show Password</label>
                             </div>
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
                             <div id="caps-lock-warning" class="caps-warning" style="display: none;">
                                 Your CAPS LOCK is on
                             </div>

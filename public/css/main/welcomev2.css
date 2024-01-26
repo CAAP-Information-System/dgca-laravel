@@ -1,0 +1,326 @@
+@import url("https://fonts.cdnfonts.com/css/quiapo-free");
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.welcome-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+    filter: blur(0px);
+
+}
+.welcome-banner {
+    padding: 15px;
+    /* Other background properties or styles */
+}
+.banner{
+    color: #ffff;
+    margin-left: 10%;
+}
+.title{
+    margin-top: 8vh;
+    font-size: 5.2rem;
+    font-weight: 800;
+    line-height: 8vh;
+    width: 35%;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+}
+.title-sub{
+    font-size: 5rem;
+    /* font-family: "Quiapo Free", sans-serif;
+    color: #002868; */
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+}
+
+.conf-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.conf-nav li {
+    list-style-type: none;
+}
+
+.conf-nav li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #3b3b3b;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.conf-nav li a .fa-solid{
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: #001E50;
+}
+/* .conf-nav li a:hover{
+    background-color: #001E50;
+    color: #ffff;
+    border-radius: 15px;
+    transition: .1s ease-in-out;
+
+} */
+
+
+/* Dropdown styles */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    background-color: #ffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: #3b3b3b;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    font-weight: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #001E50;
+    color: #ffff;
+    transition: .1s ease;
+    margin-left: 10px;
+    border-radius: 0 15px 15px 0;
+}
+.section-divider{
+    background-color: #FFD54F;
+    padding: 2vh;
+}
+.div-header{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.dg-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+
+}
+.message-card{
+    width: 50%;
+    font-size: 15px;
+}
+.message-title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 15px;
+    color: #38B9E1;
+    letter-spacing: 5px;
+    line-height: 5vh;
+}
+.dg-content{
+    padding: 5vh;
+}
+.dg-img{
+    width: 400px;
+    height: auto;
+}
+.count-section {
+    margin-top: 5vh;
+    width: 100%;
+}
+.countdown-sect {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+.countdown-main{
+    background-color: #ffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 4vh;
+    border-radius: 20px;
+}
+.countdown-header {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 2vh;
+}
+
+.countdown ul li {
+    display: inline-block;
+    font-size: 1.5rem;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.countdown ul li span {
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+    color: #3b3b3b;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+.notices-section{
+    padding: 5vh;
+}
+.notice-header{
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.notice-content{
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .banner{
+        color: #ffff;
+        text-align: center;
+    }
+
+    .title{
+        margin-top: 8vh;
+        font-size: 4=3rem;
+        font-weight: 800;
+        line-height: 7vh;
+        width: 100%;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .title-sub{
+        margin-top: 2vh;
+        font-size: 3rem;
+        line-height: 9vh;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .conf-nav{
+        margin-bottom: 8vh;
+    }
+    .conf-nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+    }
+    .conf-nav ul li a {
+        padding: 16px;
+    }
+    .dg-message{
+        margin-top: 5vh;
+    }
+    .dg-content{
+        display: none;
+    }
+    .message-card{
+        width: 100%;
+        padding: 15px;
+    }
+    .message-title{
+        text-align: center;
+        line-height: 4vh;
+        font-size: 2.5rem;
+        letter-spacing: normal;
+    }
+    .message-content{
+        text-align: justify;
+        padding: 15px;
+    }
+}
+
+.button-19 {
+    appearance: button;
+    background-color: #1899d6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 20%;
+    text-decoration: none;
+    margin-bottom: 4vh;
+}
+
+.button-19:after {
+    background-clip: padding-box;
+    background-color: #1cb0f6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+    user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+    text-decoration: none;
+}
+
+.button-19:disabled {
+    cursor: auto;
+}
+

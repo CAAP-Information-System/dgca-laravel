@@ -61,8 +61,6 @@
         bottom: 0;
     }
 
-
-
     #login-register {
         color: #002868;
         font-size: 16px;
@@ -70,16 +68,22 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        width: 100%;
+        margin-left: 10px;
     }
-    #logout{
+
+    .logout {
         text-decoration: none;
         color: #002868;
-        margin-left: 15px;
         padding: 7px;
         font-size: 15px;
+        display: inline-block;
+        width: 100%;
+        font-weight: bold;
     }
-    #logout:hover{
+
+    .logout:hover {
+        color: #ffff;
+        text-decoration: none;
         background-color: #931f1f;
     }
 
@@ -98,6 +102,7 @@
         border: solid 1px #2658AB;
         transition: .1s ease-in;
         border-radius: 15px;
+
     }
 </style>
 <div class="preloader-container" id="preloader">
@@ -105,90 +110,150 @@
 </div>
 
 <body class="">
-    <div id="">
+    <div class="main-nav-content">
+        <div class="head-navbar">
+            <div class="logos-main">
+                <a class="caap-nav" href="{{ route('welcome') }}">
+                    <img src="{{ asset('img/dgca-logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
+                    <header class="caap-name">
+                        Civil Aviation Authority of the Philippines
+                        <div class="dgca-name">59th Conference of Director Generals</div>
+                    </header>
 
-        <div class="container">
-            <div class="navbar navbar-expand-md navbar-light bg-white">
-                <span class="logos-main">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="nav-caap-logo">
-                    </a>
+                </a>
+            </div>
+            <div class="navbar navbar-expand-lg ">
 
-                    <a href="url_for_icao_logo" target="_blank">
-                        <img src="{{ asset('img/icao.png') }}" alt="ICAO Logo" class="nav-bagong-pilipinas-logo">
-                    </a>
+                <div class="top-nav">
+                    <!-- <div style="margin-left: 60%;"></div> -->
+                    @guest
+                    @if (Route::has('login'))
 
-                    <a href="https://caap.gov.ph" target="_blank">
-                        <img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
-                    </a>
+                    <li class="nav-item">
+                        <a id="login-register" class="nav-link" href="{{ route('login') }}">
+                            <!-- <i class="fa-solid fa-right-to-bracket fa-lg"></i> &nbsp -->
+                            Login/Register
+                        </a>
+                    </li>
+                    @endif
+                    @else
+                    @if(auth()->check() && auth()->user()->access_role != "admin")
+                    <li class="nav-item">
+                        <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
+                            <!-- <i class="fa-solid fa-house"></i>&nbsp -->
+                            Home
+                        </a>
+                    </li>
 
-                    <a href="url_for_bagong_pilipinas_logo" target="_blank">
-                        <img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo">
-                    </a>
-                </span>
-                <div class="navbar navbar-expand-lg ">
-                    <button id="main-toggle" style="margin-top: 2vh;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars fa-lg" style="color: #002868;"></i>
-                        Main Navigation
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <div style="margin-left: 60%;"></div>
-                        @guest
-                        @if (Route::has('login'))
+                    <li class="nav-item dropdown">
+                        <a id="login-register" class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <!-- <i class="fa-solid fa-circle-user"></i>&nbsp -->
+                            {{ Auth::user()->first_name }}
+                        </a>
 
-                        <li class="nav-item">
-                            <a id="login-register" class="nav-link" href="{{ route('login') }}">
-                                <i class="fa-solid fa-right-to-bracket fa-lg"></i> &nbsp
-                                Login/Register
-                            </a>
-                        </li>
-                        @endif
-                        @else
-                        @if(auth()->check() && auth()->user()->access_role != "admin")
-                        <li class="nav-item">
-                            <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
-                                <i class="fa-solid fa-house"></i>&nbsp
-                                Home
-                            </a>
-                        </li>
-                        <div style="margin: 15px;"></div>
-                        <li class="nav-item dropdown">
-                            <a id="login-register" class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="fa-solid fa-circle-user"></i>&nbsp
-                                {{ Auth::user()->first_name }}
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="fa-solid fa-right-from-bracket"></i>
-                                    Logout
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                        @endif
-                        @endguest
-                        </li>
-                        </ul>
-                    </div>
-
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endif
+                    @endguest
+                    </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
+        @if(auth()->check() && auth()->user()->access_role != "admin")
+        <div class="main-nav">
+            <nav class="main-navigation">
+                <div class="navbar">
+                    <i class='bx bx-menu'></i>
+                    <div class="nav-links">
+                        <div class="sidebar-logo">
+                            <i class='bx bx-x'></i>
+                        </div>
+                        <ul class="links">
+                            <li><a href="{{ route('welcome') }}">Home</a></li>
+                            <li>
+                                <a href="#">About Us</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="{{ route('about-caap') }}">CAAP</a></li>
+                                    <li><a href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">The Philippines</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Event</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">Program Overview</a></li>
+                                    <li><a href="#">Social/Cultural Function</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <a href="#">Exhibits and Sponsors</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">Floor Plan</a></li>
+                                    <li><a href="#">Exhibit Services</a></li>
+                                    <li><a href="#">Exhibition Registration</a></li>
+                                    <li><a href="#">Our Sponsors</a></li>
+                                </ul>
+                            </li> -->
+
+                            <li>
+                                <a href="#">Delegate's Corner</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="{{ route('bulletin') }}">Conference Bulletin</a></li>
+                                    <li><a href="#">VISA Information</a></li>
+                                    <li><a href="#">Transport Schedule</a></li>
+                                    <li><a href="#">Venue</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Exhibit & Sponsors</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">Floor Plan</a></li>
+                                    <li><a href="#">Our Sponsors</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Exhibition Registration</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ route('registration-page') }}">Registration</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="search-box">
+
+                        <!-- <div class="input-box">
+                            <input type="text" placeholder="Search...">
+                        </div> -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+        @endif
     </div>
-    </nav>
     @if(auth()->check() && auth()->user()->access_role == "admin")
     <div class="admin-navigation">
         <aside class="main-sidebar elevation-4" id="navbarSupportedContent">
-            <!-- Brand Logo -->
-            <header class="navbar-header">DGCA Admin</header>
+
 
             <!-- Sidebar -->
             <div class="sidebar">
+                <!-- Brand Logo -->
+                <header class="navbar-header">DGCA Admin</header>
                 <nav class="mt-3">
+
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Dashboard -->
                         <li class="nav-item menu-open">
@@ -217,7 +282,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="sidebar-item">
+                            <a href="{{ route('pending-accounts') }}" class="sidebar-item">
                                 <i class="fa-solid fa-spinner fa-lg"></i>
                                 <div class="item-name">Pending Accounts</div>
                             </a>
@@ -225,7 +290,7 @@
                         <li class="nav-item " id="account-name">
                             @auth
                             <div class="logout-content">
-                                <a class="button-31" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a class="button-31" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Sign Out
                                 </a>
 
@@ -245,91 +310,9 @@
     </div>
     @endif
 
-    <main class="py-4">
+    <main class="">
 
-        @if(auth()->check() && auth()->user()->access_role != "admin")
-        <div class="container">
-            <nav class="main-navigation">
-                <div class="navbar">
-                    <i class='bx bx-menu'></i>
-                    <div class="nav-links">
-                        <div class="sidebar-logo">
 
-                            <i class='bx bx-x'></i>
-                        </div>
-                        <ul class="links">
-                            <li>
-                                <a href="#">Conference</a>
-                                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                                <ul class="htmlCss-sub-menu sub-menu">
-                                    <li><a href="{{ route('welcome') }}">Welcome Message</a></li>
-                                    <li><a href="{{ route('agenda') }}">Agenda</a></li>
-                                    <li><a href="#">Programme</a></li>
-                                    <li><a href="{{ route('participants') }}">Participants</a></li>
-                                    <li><a href="{{ route('the-gallery') }}">The Gallery</a></li>
-                                    <!-- <li class="more">
-                                        <span><a href="#">More</a>
-                                            <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                                        </span>
-                                        <ul class="more-sub-menu sub-menu">
-                                            <li><a href="#">Neumorphism</a></li>
-                                            <li><a href="#">Pre-loader</a></li>
-                                            <li><a href="#">Glassmorphism</a></li>
-                                        </ul>
-                                    </li> -->
-                                </ul>
-                            </li>
-                            <li> <a href="{{ route('meeting-room') }}"> Side Meeting</a></li>
-                            <li>
-                                <a href="#">Documents</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="{{ route('disc-paper') }}">Discussion</a></li>
-                                    <li><a href="{{ route('info-paper') }}">Information</a></li>
-                                    <li><a href="#">Paper Submission Guide</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="#">Social/Cultural Function</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Exhibits and Sponsors</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="#">Floor Plan</a></li>
-                                    <li><a href="#">Exhibit Services</a></li>
-                                    <li><a href="#">Exhibition Registration</a></li>
-                                    <li><a href="#">Our Sponsors</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Delegate's Corner</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="{{ route('bulletin') }}">Conference Bulletin</a></li>
-                                    <li><a href="#">Transport Schedule</a></li>
-                                    <li><a href="#">Venue</a></li>
-                                    <li><a href="#">Registration</a></li>
-                                    <li><a href="#">Other Notices</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">About Philippines</a></li>
-                        </ul>
-                    </div>
-                    <div class="search-box">
-                        <i class='bx bx-search'></i>
-                        <!-- <div class="input-box">
-                            <input type="text" placeholder="Search...">
-                        </div> -->
-                    </div>
-                </div>
-            </nav>
-        </div>
-        @endif
         @yield('content')
     </main>
     </div>
@@ -340,11 +323,9 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo">
-
-            <span class="footer-span-header">
-                Civil Aviation Authority of the Philippines
-            </span>
+            <a href="https://caap.gov.ph" target="_blank"><img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo"></a>
+            <a href="https://www.icao.int/Pages/default.aspx" target="_blank"><img src="{{ asset('img/icao.png') }}" alt="ICAO Logo" class="nav-bagong-pilipinas-logo"></a>
+            <a href="#"><img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo"></a>
         </div>
         <!-- Left -->
 
@@ -360,11 +341,16 @@
         </div>
         <!-- Right -->
     </section>
+    <section class="sponsors">
+        <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
+        <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
+        <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
+    </section>
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->
     <section class="">
-        <div class="container text-center text-md-start mt-5">
+        <div class="text-center text-md-start mt-5">
             <!-- Grid row -->
             <div class="row mt-3">
                 <!-- Grid column -->
@@ -374,7 +360,7 @@
                         <i class="fas fa-gem me-3"></i>59th DGCA Conference - APAC
                     </h6>
                     <p>
-                        <img src="{{ asset('img/dgca-logo.jpg') }}" alt="CAAP Logo" class="footer-dgca-logo">
+                        <img src="{{ asset('img/dgca-logo.png') }}" alt="CAAP Logo" class="footer-dgca-logo">
                     </p>
                     <p>
                         Place supporting details of the DGCA here
@@ -412,7 +398,7 @@
                         info@example.com
                     </p>
                     <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+
                 </div>
                 <!-- Grid column -->
             </div>
@@ -433,14 +419,7 @@
     let searchBox = document.querySelector(".search-box .bx-search");
     // let searchBoxCancel = document.querySelector(".search-box .bx-x");
 
-    searchBox.addEventListener("click", () => {
-        navbar.classList.toggle("showInput");
-        if (navbar.classList.contains("showInput")) {
-            searchBox.classList.replace("bx-search", "bx-x");
-        } else {
-            searchBox.classList.replace("bx-x", "bx-search");
-        }
-    });
+
 
     // sidebar open close js code
     let navLinks = document.querySelector(".nav-links");

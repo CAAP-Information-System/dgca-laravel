@@ -1,0 +1,38 @@
+.page-header {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+.wrapper table thead th {
+    background-color: #2658AB;
+    padding: 15px;
+    font-size: 17px;
+    color: #ffff;
+}
+.message-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3vh;
+    text-align: center;
+}
+.missing-svg{
+    width: 400px;
+    height: auto;
+
+}
+.message-content-header{
+    font-size: 2rem;
+    padding: 15px;
+    font-weight: bold;
+    color: #002868;
+}
+.message-header-subtitle{
+    font-size: 1rem;
+    color: #969696;
+    font-style: italic;
+}

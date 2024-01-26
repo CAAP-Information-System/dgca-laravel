@@ -24,6 +24,13 @@
                     <li>Documents for revision will be accepted for resubmission.</li>
                 </ol>
             </div>
+            <div class="subm-guide-btn">
+                <a href="#" class="guide-link">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <!-- <img src="{{ asset('img/icon/pdf.png') }}" alt="pdf-icon" class="pdf-icon"> -->
+                    See Detailed Guide
+                </a>
+            </div>
         </div>
         <div class="card-body">
             <form action="{{ route('file.upload') }}" method="post" enctype="multipart/form-data" id="uploadForm">
@@ -31,7 +38,7 @@
                 <div class="form-group">
                     <label for="file">Select Document:</label>
                     <div class="custom-file">
-                        <input type="file" name="file" id="file" accept=".doc, .pdf, .xls, .xlsx, .ppt, .pptx" class="custom-file-input" onchange="updateFileName()" required>
+                        <input type="file" name="file" id="file" accept=".doc, .pdf, .xls, .xlsx, .ppt, .pptx, .mp4, .avi, .mov" class="custom-file-input" onchange="updateFileName()" required>
                         <label class="custom-file-label" for="file">Choose DOC or PDF File</label>
                     </div>
                 </div>

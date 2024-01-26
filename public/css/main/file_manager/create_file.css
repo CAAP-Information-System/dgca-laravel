@@ -23,7 +23,26 @@
     border-radius: 10px;
 
 }
-
+.subm-guide-btn{
+    padding: 10px;
+}
+.guide-link{
+    padding: 10px;
+    background-color: #ffff;
+    color: #3b3b3b;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+.pdf-icon{
+    width: 25px;
+    height: auto;
+}
+.guide-link:hover{
+    transition: .1s ease-in;
+    background-color: #FD6F6F;
+    color: #ffff;
+}
 /* CSS */
 .button-18 {
   align-items: center;

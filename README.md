@@ -11,7 +11,7 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Change Logs](#changelog)
+- [Change Logs](#change-logs)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 

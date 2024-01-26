@@ -1,0 +1,99 @@
+.page-header {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+.main-content{
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+.status-form{
+    padding: 15px;
+    background-color: #002868;
+    margin-bottom: 3vh;
+    color: #ffff;
+    width: 53%;
+    border-radius: 20px;
+}
+.status-reminder{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+.status-message{
+    font-size: 18px;
+
+}
+.profile-label{
+    font-size: 15px;
+}
+.main-content p{
+    font-size: 17px;
+    background-color: #ffff;
+    width: 100%;
+    border: 1px solid #969696;
+    padding: 7px;
+    border-radius: 16px;
+    display: inline-block;
+}
+.left-col, .right-col{
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    border: 1px solid #969696;
+    padding: 18px;
+}
+.left-col{
+    width: 500px;
+}
+.upper{
+    display: flex;
+    justify-content: space-between;
+}
+.right-col{
+    width: 400px;
+}
+
+/* CSS */
+.button-44 {
+  background: #e62143;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: Mija,-apple-system,BlinkMacSystemFont,Roboto,"Roboto Slab","Droid Serif","Segoe UI",system-ui,Arial,sans-serif;
+  font-size: 1.15em;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 33.4929px;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  text-shadow: rgba(0, 0, 0, .3) 1px 1px 1px;
+  text-underline-offset: 1px;
+  transition: all .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-44:active,
+.button-44:focus {
+  border-bottom-style: none;
+  border-color: #dadada;
+  box-shadow: rgba(0, 0, 0, .3) 0 3px 3px inset;
+  outline: 0;
+}
+
+.button-44:hover {
+  border-bottom-style: none;
+  border-color: #dadada;
+}

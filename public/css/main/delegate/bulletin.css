@@ -1,38 +1,116 @@
-.bulletin-header {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #002868;
-    text-align: center;
-    text-shadow: #b4c4db 3px 3px;
-    margin-bottom: 20px;
+/* BANNER CSS */
+.head-banner {
+    position: relative;
+    overflow: hidden;
 }
-.bulletin-content{
+
+.head-banner .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+    filter: blur(0px);
+}
+.banner-content {
+    display: flex;
+    justify-content: space-around;
+}
+.banner-title {
+    font-size: 4rem;
+    color: #ffff;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    margin-top: 40vh;
+    font-weight: bold;
+    margin-left: 15vh;
+    width: 100%;
+}
+.dgca-title {
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    color: #ffff;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 8vh;
+    text-transform: uppercase;
+    margin-left: 10vh;
+    margin-top: 10vh;
+    width: 60%;
+    text-align: end;
+}
+@media screen and (max-width: 768px) {
+    .banner-content {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .banner-title {
+        margin: 0;
+    }
+    .dgca-title {
+        margin: 0;
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 6vh;
+        margin-top: 3vh;
+    }
+    .reg-steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* --------------------------------- */
+
+
+.bulletin-content {
     padding: 10px;
     background-color: #ffff;
+    margin-left: 15vh;
 }
-.bulletin-grp{
+.bulletin-grp {
     margin-top: 5vh;
 }
-.bullet-hdr{
+.bullet-hdr {
     font-size: 2rem;
-    font-weight: bold;
-    color: #ffff;
-    background-color: #002868;
-    width: 50%;
+    color: #002868;
+    width: 100%;
     padding: 10px;
+    display: flex;
+    align-items: center;
 }
-.bullet-details{
+.bullet-details {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.bullet-img{
-    width: 300px;
+.bullet-img {
+    width: 100px;
     height: auto;
+    margin-right: 5vh;
 }
-.bullet-desc{
+.bullet-desc {
     width: 60%;
     text-align: justify;
-    margin-left:10vh;
     font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+    .bulletin-content{
+        margin: 0;
+    }
+    .bullet-hdr{
+        font-size: 1.5rem;
+    }
+    .bullet-desc{
+        width: 100%;
+        padding-top: 3vh;
+    }
+    .bullet-img {
+        width: 60px;
+        height: auto;
+        margin-right: 3vh;
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\File;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
@@ -54,7 +55,7 @@ class FileController extends Controller
                 Log::info('FileManagerController@upload');
 
                 $request->validate([
-                    'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx|max:10240',
+                    'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx,mp4,avi,mov|max:10240',
                     'file_category' => 'required|string',
                     'discussion_agenda' => 'nullable|string',
                     'information_agenda' => 'nullable|string',
@@ -156,10 +157,11 @@ class FileController extends Controller
     {
         try {
             // Retrieve files with file_category equal to "Agenda"
+            $user = User::all();
             $agendaFiles = File::where('file_category', 'Agenda')->get();
 
             // Pass the agendaFiles to the view
-            return view('main.conference.agenda', ['agendaFiles' => $agendaFiles]);
+            return view('main.conference.agenda', ['agendaFiles' => $agendaFiles, 'user' => $user]);
         } catch (\Exception $e) {
             // Log the exception for debugging
             Log::error($e);

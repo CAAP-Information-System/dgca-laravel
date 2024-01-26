@@ -25,6 +25,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/download/{file}', [FileController::class, 'download'])->name('download.file');
     Route::post('/update-access-role', [AdminController::class, 'updateAccessRole'])->name('update-access-role');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
+    Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
+    Route::get('/profile/{id}', [AdminController::class, 'viewUserProfile'])->name('user-profile');
+    Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
+
 
     Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
     Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
@@ -36,8 +40,10 @@ Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
 Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
 Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
 Route::get('/the-gallery', [HomeController::class, 'viewGallery'])->name('the-gallery');
+Route::get('/registration', [App\Http\Controllers\HomeController::class, 'viewRegistrationPage'])->name('registration-page');
 Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('participants');
 Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
+Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
 
 Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
 
@@ -46,7 +52,7 @@ Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bu
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/create-file', [FileController::class, 'registerDocument'])->name('registerDocument');
+    Route::get('/create-file', [FileController::class, 'registerDocument'])->name('create.file');
     Route::get('/view-files', [FileController::class, 'viewFiles'])->name('viewFiles');
     Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');
     Route::get('/files/view/{id}', [FileController::class, 'view'])->name('file.view');

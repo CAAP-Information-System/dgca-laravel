@@ -85,4 +85,10 @@ class HomeController extends Controller
 
         dd('done');
     }
+    public function viewRegistrationPage(){
+        return view('main.registration');
+    }
+    public function viewAboutCAAP(){
+        return view('about-us.about-caap');
+    }
 }

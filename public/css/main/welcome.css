@@ -89,12 +89,13 @@
     text-align: justify;
 }
 
-.grp-1 {
+.welcome-banner {
     margin-top: 10vh;
     line-height: 5vh;
     text-align: center;
     margin-bottom: 10vh;
-    background-color: #ffff;
+    /* background: rgb(248,249,253);
+    background: linear-gradient(180deg, rgba(248,249,253,1) 0%, rgba(218,238,249,1) 94%, rgba(181,224,243,1) 100%, rgba(134,206,236,1) 100%, rgba(44,172,223,1) 100%); */
 }
 
 .welcome {
@@ -247,6 +248,7 @@
     width: 100%;
 }
 .countdown-sect {
+
     color: #333;
     margin: 0 auto;
     text-align: center;
@@ -330,40 +332,39 @@
 }
 
 /* Modal CSS */
-.modal{
+.modal {
     color: #3b3b3b;
 }
-.modal-header{
+.modal-header {
     color: #ffff;
     font-size: 1.5rem;
     background-color: #0046b9;
 }
-.congratulations{
+.congratulations {
     font-size: 1.1rem;
     font-style: italic;
     line-height: 25px;
 }
-.note{
+.note {
     font-size: 1.2rem;
     font-style: italic;
     color: #0046b9;
 }
-.email-link{
+.email-link {
     font-size: 15px;
     margin-top: 15px;
     font-style: italic;
 }
-@media screen and (max-width: 1024px){
-    .grp-1{
+@media screen and (max-width: 1024px) {
+    .welcome-banner {
         line-height: 3vh;
     }
-    .conference{
+    .conference {
         line-height: 5vh;
     }
-    .hosts-grp{
+    .hosts-grp {
         gap: 4vh;
     }
-
 }
 @media screen and (max-width: 768px) {
     h1 {
@@ -488,7 +489,7 @@
         margin-top: 6vh;
     }
 
-    .grp-1 {
+    .welcome-banner {
         margin-top: 5vh;
         line-height: 3vh;
         margin-bottom: 5vh;
