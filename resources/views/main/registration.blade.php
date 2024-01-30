@@ -58,6 +58,7 @@
                 <div class="card-content">
 
                     <p>You will be notified through email once the admin approved your registration.</p>
+                    <p>You can have access to some features and pages while your account is still pending.</p>
                 </div>
             </div>
         </section>

@@ -14,11 +14,11 @@
     z-index: -5;
     filter: blur(0px);
 }
-.banner-content{
+.banner-content {
     display: flex;
     justify-content: space-around;
 }
-.banner-title{
+.banner-title {
     font-size: 4rem;
     color: #ffff;
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
@@ -26,9 +26,8 @@
     font-weight: bold;
     margin-left: 15vh;
     width: 100%;
-
 }
-.dgca-title{
+.dgca-title {
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     color: #ffff;
     font-size: 4rem;
@@ -41,16 +40,15 @@
     text-align: end;
 }
 @media screen and (max-width: 768px) {
-    .banner-content{
+    .banner-content {
         margin-top: 0;
         display: flex;
         flex-direction: column-reverse;
     }
-    .banner-title{
+    .banner-title {
         margin: 0;
-
     }
-    .dgca-title{
+    .dgca-title {
         margin: 0;
         text-align: left;
         font-size: 2.5rem;
@@ -66,40 +64,43 @@
 }
 
 /* --------------------------------- */
+.sponsors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid with minimum width of 280px */
+    grid-gap: 20px; /* Gap between grid items */
+    padding: 20px;
+    margin-top: 8vh;
+}
 
-.caap-logo-grp{
-    margin-top: 5vh;
+.card {
+    border: 1px solid #50A9FB;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 15px;
+    width: 300px;
+    height: 400px;
+}
+
+.sponsor-name {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #3b3b3b;
+    margin: 0;
+    padding: 10px;
+    line-height: 3vh;
+}
+
+.card .img-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8vh;
 }
-.caap-img{
-    width: 200px;
+.card .sponsor-img {
+    width: 150px;
     height: auto;
-}
-.caapname{
-    font-size: 2rem;
-    font-weight: bold;
-    color: #002868;
-    width: 80%;
-    line-height: 4vh;
-}
-
-.history-header{
     margin-top: 5vh;
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: #50A9FB;
-    border-bottom: 1px solid #002868;
-    width: 15%;
-}
-.history-content{
-    text-align: justify;
-    font-size: 16px;
-    padding: 15px;
-    color: #3b3b3b;
-}
-.history-content span{
-    font-weight: bold;
 }

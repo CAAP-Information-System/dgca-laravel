@@ -91,4 +91,7 @@ class HomeController extends Controller
     public function viewAboutCAAP(){
         return view('about-us.about-caap');
     }
+    public function viewOurSponsors(){
+        return view('sponsors.our_sponsors');
+    }
 }

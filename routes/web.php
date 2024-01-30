@@ -44,6 +44,7 @@ Route::get('/registration', [App\Http\Controllers\HomeController::class, 'viewRe
 Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('participants');
 Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
 Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
+Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
 
 Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
 

@@ -97,6 +97,40 @@
     text-align: justify;
     font-size: 18px;
 }
+.bullet-desc li{
+    list-style-type: none;
+    margin: 10px;
+    text-align: left;
+}
+.bullet-desc .bullet-email{
+    text-decoration: none;
+    margin-left: 7px;
+}
+.backtotop-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+.backtotop{
+    text-align: center;
+    text-decoration: none;
+    color: #ffff;
+    background-color: #50A9FB;
+    padding: 25px;
+    border-radius: 99px;
+    width: 20%;
+
+}
+.backtotop:hover{
+    background-color: #969696;
+    color: #ffff;
+    text-decoration: none;
+}
+.highlight{
+    color: #002868;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
     .bulletin-content{
         margin: 0;
@@ -112,5 +146,8 @@
         width: 60px;
         height: auto;
         margin-right: 3vh;
+    }
+    .backtotop{
+        width: 80%;
     }
 }

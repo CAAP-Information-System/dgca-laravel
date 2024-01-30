@@ -17,7 +17,7 @@
 </section>
 <div class="container">
     <section class="caap-logo-grp">
-        <img src="{{ asset('img/caap_logo.png') }}" alt="caap-logo" class="caap-img">
+        <img src="{{ asset('img/logo/caap_logo.png') }}" alt="caap-logo" class="caap-img">
         <div>
             <header class="caapname">Civil Aviation Authority of the Philippines</header>
         </div>

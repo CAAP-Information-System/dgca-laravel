@@ -11,12 +11,15 @@
     align-items: center;
     text-decoration: none;
 }
-.caap-name{
+.header-name{
     font-size: 1.2rem;
     color:#002868;
     overflow: hidden;
     display: block;
     line-height: 3vh;
+}
+.header-name:hover{
+    color: #50A9FB;
 }
 .dgca-name{
     font-weight: bold;
@@ -56,6 +59,11 @@
     font-size: 17px;
     margin-left: 15px;
 }
+.icao-logo{
+    height: auto;
+    width: 200px;
+    padding-left: 25px;
+}
 .nav-bagong-pilipinas-logo {
     height: auto;
     width: 100px;
@@ -87,7 +95,7 @@
     height: 50px;
     animation: fadeOut 1s ease-out; /* Add fade-out animation */
 }
-.sponsors{
+.sponsors-logo{
     display: flex;
     align-items: center;
     padding: 3vh;
@@ -97,6 +105,7 @@
     width: 100px;
     height: auto;
 }
+
 
 @keyframes fadeOut {
     from {
@@ -211,8 +220,8 @@ nav .navbar .links li .js-sub-menu{
   font-weight: 500;
   display: inline-block;
   width: 100%;
-  padding: 5px;
   border: 1px solid transparent;
+  text-transform: capitalize;
 }
 .navbar .links li .sub-menu a:hover{
     transition: .2s ease;

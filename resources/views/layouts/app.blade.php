@@ -114,8 +114,8 @@
         <div class="head-navbar">
             <div class="logos-main">
                 <a class="caap-nav" href="{{ route('welcome') }}">
-                    <img src="{{ asset('img/dgca-logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
-                    <header class="caap-name">
+                    <img src="{{ asset('img/logo/dgca-logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
+                    <header class="header-name">
                         Civil Aviation Authority of the Philippines
                         <div class="dgca-name">59th Conference of Director Generals</div>
                     </header>
@@ -323,25 +323,16 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <a href="https://caap.gov.ph" target="_blank"><img src="{{ asset('img/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo"></a>
-            <a href="https://www.icao.int/Pages/default.aspx" target="_blank"><img src="{{ asset('img/icao.png') }}" alt="ICAO Logo" class="nav-bagong-pilipinas-logo"></a>
-            <a href="#"><img src="{{ asset('img/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo"></a>
+            <a href="https://caap.gov.ph" target="_blank">
+                <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo">
+            </a>
+            <a href="https://www.icao.int/Pages/default.aspx" target="_blank"><img src="{{ asset('img/logo/icao-logo.png') }}" alt="ICAO Logo" class="icao-logo"></a>
+            <a href="#"><img src="{{ asset('img/logo/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo"></a>
         </div>
         <!-- Left -->
 
-        <!-- Right -->
-        <div class="right-logos">
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-twitter"></i>
-            </a>
-
-        </div>
-        <!-- Right -->
     </section>
-    <section class="sponsors">
+    <section class="sponsors-logo">
         <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
         <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
         <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
@@ -360,7 +351,7 @@
                         <i class="fas fa-gem me-3"></i>59th DGCA Conference - APAC
                     </h6>
                     <p>
-                        <img src="{{ asset('img/dgca-logo.png') }}" alt="CAAP Logo" class="footer-dgca-logo">
+                        <img src="{{ asset('img/logo/dgca-logo.png') }}" alt="CAAP Logo" class="footer-dgca-logo">
                     </p>
                     <p>
                         Place supporting details of the DGCA here
