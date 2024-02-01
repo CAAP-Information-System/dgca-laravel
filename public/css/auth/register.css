@@ -214,6 +214,22 @@
     text-decoration: none;
 }
 
+.privacy-policy{
+    text-align: justify;
+}
+.privacy-pol-link{
+    text-decoration: none;
+}
+.privacy-policy-check{
+    display: flex;
+    text-align: center;
+     gap: 15px;
+}
+
+.checkbox{
+    padding: 10px;
+    border-radius: 10px;
+}
 @media screen and (max-width: 1024px) {
     .container .register-user{
         width: 100%;

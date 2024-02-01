@@ -24,7 +24,20 @@
                 Passport and Visa Requirements
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                <div class="bullet-desc">
+                    All foreign visitors to Philippines must ensure their passports, travel documents, and visas have a <b class="text-primary">minimum validity of six (6) months </b>from their arrival date. While visa on arrival is an option for select countries, please refer to the conference website for comprehensive visa requirements based on nationality.
+                    <br><br>
+                    <p>
+                        For further details, kindly inquire with the <a href="https://immigration.gov.ph/contacts/">Bureau of Immigration</a>, or reach out to your nearest Philippine Diplomatic or Consular Missions. Any questions regarding visa requirements can be directed to us via email at <a href="#">secretariat-email@email.com</a>.
+                    </p>
+                    <br>
+                    <label for="">For more information kindly visit:</label>
+                    <div class="visa-grp">
+                        <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank" class="visa-link">
+                            DFA VISA Requirements
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -43,7 +56,7 @@
                 Conference Venue
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">Cebu, Philippines.</div>
+                <div class="bullet-desc">Shangri-La Mactan, Cebu Philippines.</div>
             </div>
         </div>
         <div class="bulletin-grp">
@@ -122,7 +135,9 @@
                 Conference Secretariat
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="bullet-desc">
+                    The ICAO Asia and Pacific Regional Office, along with the Civil Aviation Authority of the Philippines, will serve as the secretariat for the conference. For all inquiries and general correspondence, please direct your communication to <a href="#">secretariat-email@email.com</a>, ensuring to cc <a href="#">apac@icao.int</a>.
+                </div>
             </div>
         </div>
         <div class="bulletin-grp">
@@ -131,7 +146,12 @@
                 Side Meeting Rooms
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="bullet-desc">
+                    Three (3) meeting rooms will be provided for conducting bilateral meetings as needed; however, it's essential to book in advance to ensure availability and reservation of the rooms.
+                    <br><br>
+                    To inquire about availability and secure the rooms for any proposed meetings, kindly send an email with your request to: <br><a href="#">secretariat-email@email.com</a>.
+
+                </div>
             </div>
         </div>
         <div class="bulletin-grp">
@@ -158,7 +178,9 @@
                 Hotel Reservation
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="bullet-desc">
+                    You can make your hotel accommodation booking using the details provided on the conference website. In addition to the conference venue hotel, other hotel options are listed on the website. It's advisable to make your hotel booking as early as possible to avoid any shortage of rooms in your preferred hotel. If you encounter any difficulties with hotel reservation, feel free to email us at <a href="#">reg-team@email.com</a>.
+                </div>
             </div>
         </div>
         <div class="bulletin-grp">
@@ -195,7 +217,9 @@
                 Other Information
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">The conference administrators will gladly assist you with useful and relevant informations. We will provide you real-time updates.</div>
+                <div class="bullet-desc">
+                    The Conference website offers additional valuable and up-to-date information. Any updates or changes will be reflected in the Conference Bulletin and Notice Board.
+                </div>
             </div>
         </div>
         <div class="backtotop-container">
@@ -204,6 +228,17 @@
     </section>
 
 </div>
-
+<script>
+    // All this jquery is just used for presentation. Not required at all for the radio buttons to work.
+    $(document).ready(function() {
+        //   Hide the border by commenting out the variable below
+        var $on = 'section';
+        $($on).css({
+            'background': 'none',
+            'border': 'none',
+            'box-shadow': 'none'
+        });
+    });
+</script>
 
 @endsection

@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         day = hour * 24;
 
     // Set the countdown end date to October 15, 2024
-    const countDownDate = new Date("October 21, 2024 00:00:00").getTime();
+    const countDownDate = new Date("October 14, 2024 00:00:00").getTime();
 
     const x = setInterval(function () {
         const now = new Date().getTime();

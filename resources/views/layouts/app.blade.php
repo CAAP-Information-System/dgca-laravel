@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', '59th DGCA Conference')</title>
-    <link rel="icon" href="img/dgca-logo.jpg" type="image/x-icon">
+    <link rel="icon" href="img/logo/dgca-logo-white.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/navbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
@@ -113,7 +113,7 @@
     <div class="main-nav-content">
         <div class="head-navbar">
             <div class="logos-main">
-                <a class="caap-nav" href="{{ route('welcome') }}">
+                <a class="caap-nav" href="{{ url('/') }}">
                     <img src="{{ asset('img/logo/dgca-logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
                     <header class="header-name">
                         Civil Aviation Authority of the Philippines
@@ -170,7 +170,7 @@
 
             </div>
         </div>
-        @if(auth()->check() && auth()->user()->access_role != "admin")
+
         <div class="main-nav">
             <nav class="main-navigation">
                 <div class="navbar">
@@ -193,22 +193,12 @@
                                 <a href="#">Event</a>
                                 <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                 <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">News & Updates</a></li>
                                     <li><a href="#">Program Overview</a></li>
                                     <li><a href="#">Social/Cultural Function</a></li>
                                 </ul>
                             </li>
                             <!-- <li>
-                                <a href="#">Exhibits and Sponsors</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="#">Floor Plan</a></li>
-                                    <li><a href="#">Exhibit Services</a></li>
-                                    <li><a href="#">Exhibition Registration</a></li>
-                                    <li><a href="#">Our Sponsors</a></li>
-                                </ul>
-                            </li> -->
-
-                            <li>
                                 <a href="#">Delegate's Corner</a>
                                 <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                 <ul class="js-sub-menu sub-menu">
@@ -217,14 +207,14 @@
                                     <li><a href="#">Transport Schedule</a></li>
                                     <li><a href="#">Venue</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#">Exhibit & Sponsors</a>
                                 <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                 <ul class="js-sub-menu sub-menu">
                                     <li><a href="#">Floor Plan</a></li>
-                                    <li><a href="#">Our Sponsors</a></li>
-                                    <li><a href="#">Services</a></li>
+                                    <li><a href="{{ route('our-sponsors') }}">Our Sponsors</a></li>
+                                    <li><a href="#">Exhibit Services</a></li>
                                     <li><a href="#">Exhibition Registration</a></li>
                                 </ul>
                             </li>
@@ -232,30 +222,21 @@
 
                         </ul>
                     </div>
-                    <div class="search-box">
-
-                        <!-- <div class="input-box">
-                            <input type="text" placeholder="Search...">
-                        </div> -->
-                    </div>
                 </div>
             </nav>
         </div>
-        @endif
+
     </div>
     @if(auth()->check() && auth()->user()->access_role == "admin")
     <div class="admin-navigation">
         <aside class="main-sidebar elevation-4" id="navbarSupportedContent">
 
 
-            <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Brand Logo -->
                 <header class="navbar-header">DGCA Admin</header>
                 <nav class="mt-3">
 
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Dashboard -->
                         <li class="nav-item menu-open">
                             <a href="{{ route('dashboard') }}" class="sidebar-item">
 
@@ -318,7 +299,7 @@
     </div>
 </body>
 
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+<footer class="text-center bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
@@ -337,11 +318,9 @@
         <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
         <img src="{{ asset('img/sponsors/sponsor-sample.png') }}" alt="sponsor logo" class="sponsor-logo">
     </section>
-    <!-- Section: Social media -->
 
-    <!-- Section: Links  -->
     <section class="">
-        <div class="text-center text-md-start mt-5">
+        <div class="container text-center text-md-start mt-5">
             <!-- Grid row -->
             <div class="row mt-3">
                 <!-- Grid column -->
@@ -353,50 +332,39 @@
                     <p>
                         <img src="{{ asset('img/logo/dgca-logo.png') }}" alt="CAAP Logo" class="footer-dgca-logo">
                     </p>
-                    <p>
-                        Place supporting details of the DGCA here
-                    </p>
                 </div>
+                <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Links
+                        Products
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-solid fa-file-pdf mr-3" style="color:#931f1f;"></i>Event Booklet PDF</a>
+                        <a href="#!" class="text-reset">Event Booklet</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-solid fa-file-pdf mr-3" style="color:#931f1f;"></i>Brochure PDF</a>
+                        <a href="#!" class="text-reset">Brochure</a>
                     </p>
-                    <p>
-                        <a href="#!" class="text-reset">Facebook Live Link</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Youtube Live Link</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
 
-                <!-- Grid column -->
+                </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i> Address</p>
+                    <p><i class="fas fa-home me-3"></i> Shangri-La Mactan Cebu, Philippines</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
                         info@example.com
                     </p>
                     <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-
                 </div>
                 <!-- Grid column -->
             </div>
             <!-- Grid row -->
         </div>
     </section>
-    <!-- Section: Links  -->
+
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">

@@ -252,4 +252,9 @@ class FileController extends Controller
         $files->save();
         return redirect('/admin/files')->with('success', 'Item updated successfully');
     }
+
+    public function viewSubmissionGuide()
+    {
+        return view('file_manager.submission_guide');
+    }
 }

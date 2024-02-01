@@ -26,7 +26,9 @@
     margin-top: 40vh;
     font-weight: bold;
     margin-left: 15vh;
-
+    line-height: 7vh;
+    padding: 20px;
+    width: 100%;
 }
 .dgca-title{
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);

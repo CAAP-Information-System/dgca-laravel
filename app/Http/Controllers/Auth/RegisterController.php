@@ -62,6 +62,7 @@ class RegisterController extends Controller
             'country' => ['required', 'string', 'max:255'],
             'conference_role' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
+            'privacy' => ['required', 'string'],
         ]);
     }
 
@@ -83,6 +84,7 @@ class RegisterController extends Controller
             'designation' => $data['designation'],
             'country' => $data['country'],
             'conference_role' => $data['conference_role'],
+            'privacy' => $data['privacy'] ? 'Approved' : 'Unapproved',
         ]);
     }
 }

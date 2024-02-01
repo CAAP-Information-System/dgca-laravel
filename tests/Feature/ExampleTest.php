@@ -10,10 +10,23 @@ class ExampleTest extends TestCase
     /**
      * A basic test example.
      */
-    public function test_the_application_returns_a_successful_response(): void
+    public function testUserCreation()
     {
-        $response = $this->get('/');
+        $userData = [
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'organization' => 'Example Org',
+            'email' => 'john@example.com',
+            'password' => 'password123',
+            'gender' => 'male',
+            'designation' => 'Engineer',
+            'country' => 'US',
+            'conference_role' => 'Participant',
+        ];
 
-        $response->assertStatus(200);
+        $response = $this->post('/register', $userData);
+
+        $response->assertStatus(200) // Assuming successful creation returns 200
+                 ->assertJson($userData);
     }
 }

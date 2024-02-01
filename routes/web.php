@@ -18,6 +18,7 @@ Route::get('/', function () {
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard2', [AdminController::class, 'dashboardv2'])->name('dashboard2');
     Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
     Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
     Route::get('/create-meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
@@ -34,7 +35,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
+
+
+Route::middleware('public')->group(function () {
+
+});
+Route::get('/home', [HomeController::class, 'index'])->name('welcome');
 Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
 Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
 Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
@@ -48,9 +54,9 @@ Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('o
 
 Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
 
-
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');
-
+Route::get('/medical-support', [HomeController::class, 'viewMedicalSupport'])->name('medical-support');
+Route::get('/venue', [HomeController::class, 'viewVenueInformation'])->name('venue');
 
 Route::middleware('auth')->group(function () {
     Route::get('/create-file', [FileController::class, 'registerDocument'])->name('create.file');
@@ -58,6 +64,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');
     Route::get('/files/view/{id}', [FileController::class, 'view'])->name('file.view');
     Route::delete('/delete/{id}', [FileController::class, 'delete'])->name('file.delete');
+    Route::get('/view-submission', [FileController::class, 'viewSubmissionGuide'])->name('view-submission');
 });
 
 Route::get('send', [HomeController::class, 'sendNotif']);

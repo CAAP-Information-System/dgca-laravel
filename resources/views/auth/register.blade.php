@@ -14,13 +14,14 @@
             <div class="user__details">
                 <div class="input__box">
                     <span class="details">First Name</span>
-                    <input type="text"  placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
+                    <input type="text" placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
                 </div>
 
                 <div class="input__box">
                     <span class="details">Last Name</span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" required>
                 </div>
+
                 <div class="input__box">
                     <span class="details">Email Address</span>
                     <input type="text" placeholder="e.g: yourname@example.com" name="email" value="{{ old('email') }}" required>
@@ -30,10 +31,12 @@
                     <span class="details">Country</span>
                     <input type="text" placeholder="e.g: Philippines" name="country" value="{{ old('country') }}" required>
                 </div>
+
                 <div class="input__email">
                     <span class="details">Designation/Position</span>
                     <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
                 </div>
+
                 <div class="input__email">
                     <span class="details">Organization</span>
                     <input type="text" placeholder="e.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
@@ -63,7 +66,7 @@
                 </div>
                 <div class="input__box">
                     <span class="details">Confirm Password</span>
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Enter Confirm Password" required autocomplete="new-password" required>
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Enter Confirm Password" autocomplete="new-password" required>
                 </div>
 
                 <div class="password-requirements">
@@ -76,7 +79,23 @@
                 </div>
 
             </div>
+            <div class="privacy-policy">
+                <br>
+                <h4>Privacy Policy</h4>
+                <p>
+                    All information provided herein shall be kept private and confidential by the PPP Center and shall be used solely for legal purposes as mandated by the <b>Data Privacy Act of 2012</b> and other relevant laws. Videos and pictures taken during the event may also be used in PPP Center’s promotional and publicity materials.
+                </p>
+                <p>For data privacy concerns, kindly contact the PPP Center’s Data Protection Officer at
+                    <a href="#" class="privacy-pol-link">
+                        pppc.dpo@ppp.gov.ph.
+                    </a>
+                </p>
+            </div>
+            <div class="privacy-policy-check">
+                <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
+                <span class="details">By checking this box, I agree that I have read the privacy policy policy</span>
 
+            </div>
             <!-- <div class="file-drop">
                 <div class="file-drop-area" id="fileDropArea">
                     <p>Drag and drop files here or click to select</p>

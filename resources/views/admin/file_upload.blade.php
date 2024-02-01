@@ -12,9 +12,9 @@
                     <th>Document Name</th>
                     <th>Uploaded by</th>
                     <th>Category</th>
-                    <th>Status</th>
                     <th>Upload Date</th>
                     <th>Size</th>
+                    <th>Status</th>
                     <th>Actions</th>
                     <th></th>
                 </tr>
@@ -25,13 +25,13 @@
                     <td style="font-weight: bold; width: 45%;">{{ $file->name }}</td>
                     <td>{{ $file->owner }}</td>
                     <td>{{ $file->file_category }}</td>
-                    <td>{{ $file->doc_status }}</td>
                     <td style="width: 10%;">{{ $file->upload_date }}</td>
                     <td style="width: 10%;">
                         @php
                         echo $file->size ? \App\Http\Controllers\FileController::formatFileSize($file->size) : 'N/A';
                         @endphp
                     </td>
+                    <td>{{ $file->doc_status }}</td>
                     <td>
                         <a href="{{ route('editFileName', $file->id) }}" class="btn btn-warning" style="width: 100%;">Edit</a> <!-- Add this line for the new column -->
                     </td>

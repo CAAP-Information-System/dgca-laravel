@@ -28,6 +28,7 @@ class User extends Authenticatable
         'country',
         'conference_role',
         'access_role',
+        'privacy',
     ];
 
     /**

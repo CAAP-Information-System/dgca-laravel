@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
+    public function dashboardv2(){
+        return view('admin.dashboardv2');
+    }
     public function dashboard()
     {
         $userCount = User::count();

@@ -14,10 +14,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -38,6 +34,8 @@ class HomeController extends Controller
     }
 
 
+    // Public routes accessible without authentication
+
     public function viewGallery()
     {
         return view('main.conference.gallery');
@@ -47,6 +45,7 @@ class HomeController extends Controller
     {
         return view('main.conference.welcome_message');
     }
+
     public function viewAgenda()
     {
         return view('main.conference.agenda');
@@ -62,11 +61,34 @@ class HomeController extends Controller
         return view('main.conference.participant_list.participant_list');
     }
 
-
     public function viewDelegateCorner()
     {
         return view('main.delegates.conf_bulletin');
     }
+
+    public function viewRegistrationPage()
+    {
+        return view('main.registration');
+    }
+
+    public function viewAboutCAAP()
+    {
+        return view('about-us.about-caap');
+    }
+
+    public function viewOurSponsors()
+    {
+        return view('sponsors.our_sponsors');
+    }
+    public function viewMedicalSupport()
+    {
+        return view('main.delegates.medical_support');
+    }
+    public function viewVenueInformation()
+    {
+        return view('main.delegates.venue_info');
+    }
+
 
     public function sendNotif()
     {
@@ -84,14 +106,5 @@ class HomeController extends Controller
         Notification::send($user, new ApprovalNotification($details));
 
         dd('done');
-    }
-    public function viewRegistrationPage(){
-        return view('main.registration');
-    }
-    public function viewAboutCAAP(){
-        return view('about-us.about-caap');
-    }
-    public function viewOurSponsors(){
-        return view('sponsors.our_sponsors');
     }
 }

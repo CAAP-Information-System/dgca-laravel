@@ -1,0 +1,81 @@
+/* BANNER CSS */
+.head-banner {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 8vh;
+}
+
+.head-banner .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+    filter: blur(0px);
+}
+.banner-content{
+    display: flex;
+    justify-content: space-around;
+}
+.banner-title{
+    font-size: 4rem;
+    color: #ffff;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    margin-top: 40vh;
+    font-weight: bold;
+    margin-left: 15vh;
+    line-height: 7vh;
+    padding: 20px;
+
+}
+.dgca-title{
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    color: #ffff;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 8vh;
+    text-transform: uppercase;
+    margin-left: 10vh;
+    margin-top: 10vh;
+    width: 60%;
+    text-align: end;
+}
+/* ----------------------- */
+
+.section-grp{
+    padding: 10px;
+}
+.section-hdr{
+    font-size: 2.5rem;
+    color: #50A9FB;
+    text-transform: capitalize;
+}
+.section-content{
+    padding: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+.section-subheader{
+    font-size: 1.5rem;
+    color: #50A9FB;
+}
+.section-subheader-content{
+    font-size: 16px;
+    padding: 15px;
+    text-align: justify;
+}
+.section-subheader-content ol li{
+    padding: 10px;
+}
+.note-message{
+    color: #969696;
+    font-style: italic;
+}
+.section-content .conf-addresses{
+    list-style-type: none;
+}
+.section-content .conf-addresses a{
+    text-decoration: none;
+}

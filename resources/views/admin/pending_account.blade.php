@@ -12,7 +12,7 @@
                 <section class="content">
                     @if($users->where('status', 'Pending')->count() > 0)
                     <div class="accounts-table">
-                        <form action="{{ route('your-access-role') }}" method="POST">
+                        <form action="" method="POST">
                             @csrf
                             <header class="page-header">Pending Accounts</header>
                             <table class="table table-hover">

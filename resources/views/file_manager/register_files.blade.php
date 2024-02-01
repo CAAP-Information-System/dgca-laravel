@@ -25,7 +25,7 @@
                 </ol>
             </div>
             <div class="subm-guide-btn">
-                <a href="#" class="guide-link">
+                <a href="{{ route('view-submission') }}" class="guide-link">
                     <i class="fa-solid fa-up-right-from-square"></i>
                     <!-- <img src="{{ asset('img/icon/pdf.png') }}" alt="pdf-icon" class="pdf-icon"> -->
                     See Detailed Guide

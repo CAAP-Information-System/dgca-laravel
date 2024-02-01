@@ -41,18 +41,21 @@
                 <!-- <header class="welcome-title">Welcome</header> -->
                 <header class="title">59th Conference of Director Generals</header>
                 <p class="title-sub">Philippines 2024</p>
+                @if(!auth()->check())
                 <a href="{{ route('login')}}" class="button-19">Let's Join Now!</a>
+                @endif
             </main>
         </section>
     </div>
-    <section class="container">
+
+    <section class="main-conf-nav">
         <nav class="conf-nav">
             <ul>
                 <li class="dropdown">
                     <a href="#">
                         <i class="fa-solid fa-users"></i>
                         Conference
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
                     </a>
                     <div class="dropdown-content">
                         <!-- Dropdown content goes here -->
@@ -64,24 +67,42 @@
                     </div>
                 </li>
 
+
                 <li>
                     <a href="{{ route('meeting-room') }}">
                         <i class="fa-solid fa-handshake"></i>
                         Side Meeting
-                        <i class="fa-solid fa-chevron-down side" style="color: #ffff;"></i>
+                        <!-- <i class="fa-solid fa-chevron-down side" style="color: #ffff;"></i> -->
 
                     </a>
                 </li>
                 <li class="dropdown">
                     <a href="#">
+                        <i class="fa-solid fa-user-tie"></i>
+                        Delegate's Corner
+                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="{{ route('bulletin') }}">Conference Bulletin</a>
+                        <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
+                        <a href="#">Transport Schedule</a>
+                        <a href="{{ route('venue') }}">Venue Information</a>
+                        <a href="{{ route('medical-support') }}">Medical Support</a>
+                        <a href="#">Hotel Recommendations</a>
+                        <a href="#">Tips and Advices</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">
                         <i class="fa-solid fa-folder-open"></i>
                         Documents
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
                     </a>
                     <div class="dropdown-content">
                         <a href="{{ route('disc-paper') }}">Discussion</a>
                         <a href="{{ route('info-paper') }}">Information</a>
-                        <a href="{{ route('create.file') }}">Document Submission</a>
+                        <a href="{{ route('view-submission') }}">Submission Guide</a>
+                        <a href="{{ route('create.file') }}">Submit Document</a>
                     </div>
                 </li>
             </ul>
@@ -89,6 +110,21 @@
 
     </section>
 
+    <section class="container count-section fade-in-section">
+        <main class="countdown-main">
+            <div class="countdown-sect">
+                <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
+                <div id="countdown" class="countdown">
+                    <ul>
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+    </section>
 
     <section class="section-divider">
         <header class="div-header">Welcome and Mabuhay Delegates!</header>
@@ -109,21 +145,7 @@
 
 
     </section>
-    <section class="container count-section fade-in-section">
-        <main class="countdown-main">
-            <div class="countdown-sect">
-                <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
-                <div id="countdown" class="countdown">
-                    <ul>
-                        <li><span id="days"></span>days</li>
-                        <li><span id="hours"></span>Hours</li>
-                        <li><span id="minutes"></span>Minutes</li>
-                        <li><span id="seconds"></span>Seconds</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-    </section>
+
 
     <section class="notices-section">
         <header class="notice-header">Notice Board</header>
@@ -135,7 +157,7 @@
             <div class="slide_viewer">
                 <div class="slide_group">
                     <div class="slide">
-                    <img src="{{ asset('img/welcome-msg/capt-tamayo-new.png') }}" alt="dg-tamayo" class="dg-img">
+                        <img src="{{ asset('img/welcome-msg/capt-tamayo-new.png') }}" alt="dg-tamayo" class="dg-img">
                     </div>
                     <div class="slide">
                     </div>

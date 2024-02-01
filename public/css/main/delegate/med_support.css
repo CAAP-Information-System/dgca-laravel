@@ -14,11 +14,11 @@
     z-index: -5;
     filter: blur(0px);
 }
-.banner-content{
+.banner-content {
     display: flex;
     justify-content: space-around;
 }
-.banner-title{
+.banner-title {
     font-size: 4rem;
     color: #ffff;
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
@@ -28,9 +28,8 @@
     line-height: 7vh;
     padding: 20px;
     width: 100%;
-
 }
-.dgca-title{
+.dgca-title {
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     color: #ffff;
     font-size: 4rem;
@@ -43,16 +42,15 @@
     text-align: end;
 }
 @media screen and (max-width: 768px) {
-    .banner-content{
+    .banner-content {
         margin-top: 0;
         display: flex;
         flex-direction: column-reverse;
     }
-    .banner-title{
+    .banner-title {
         margin: 0;
-
     }
-    .dgca-title{
+    .dgca-title {
         margin: 0;
         text-align: left;
         font-size: 2.5rem;
@@ -69,45 +67,31 @@
 
 /* --------------------------------- */
 
-.caap-logo-grp{
-    margin-top: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8vh;
-}
-.caap-img{
-    width: 200px;
-    height: auto;
-}
-.caapname{
+
+.medical-hdr {
     font-size: 2rem;
-    font-weight: bold;
-    color: #002868;
-    width: 80%;
-    line-height: 4vh;
-}
-.about-title-img{
-    width: 80px;
-    height: auto;
-}
-.about-section-header{
+    color: #50A9FB;
+    width: 100%;
+    padding: 10px;
     display: flex;
     align-items: center;
-    gap: 4vh;
-    margin-top: 5vh;
-    font-size: 3rem;
-    padding: 15px;
-    text-transform: uppercase;
-    color: #50A9FB;
+    gap: 5vh;
 }
-.about-content{
-    text-align: justify;
+.medical-img{
+    width: 90px;
+    height: auto;
+}
+.medical-content{
+    padding: 25px;
     font-size: 16px;
-    padding: 10px;
-    margin: 10px;
-    color: #3b3b3b;
+    text-align: justify;
 }
-.about-content span{
-    font-weight: bold;
+.medical-content ul{
+    padding: 15px;
+}
+.medical-content li{
+    list-style-type: none;
+}
+.medical-content a{
+    text-decoration: none;
 }
