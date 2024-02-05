@@ -279,6 +279,15 @@ nav .navbar .links li .js-sub-menu{
   nav .navbar .links li a {
     font-size: 15px;
   }
+  .nav-caap-logo {
+    width: 15%;
+}
+  .caap-name{
+    font-size: 3vw;
+  }
+  .dgca-name{
+    font-size: 3vw;
+  }
 }
 
 @media (max-width: 800px) {
@@ -376,9 +385,34 @@ nav .navbar .links li .js-sub-menu{
   .navbar .nav-links.show2 .links .more-arrow {
     transform: rotate(90deg);
   }
+  .nav-caap-logo{
+    margin-left: -5%;
+  }
+  .caap-name{
+    font-size: 3vw;
+  }
+  .dgca-name{
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    .nav-caap-logo{
+        margin-left: -8%;
+        width: 13vw;
+      }
+      .caap-name{
+        font-size: 2.5vw;
+      }
+      .dgca-name{
+        font-size: 2.5vw;
+      }
 }
 @media (max-width: 370px) {
   nav .navbar .nav-links {
     max-width: 100%;
   }
+  .nav-caap-logo {
+    width: 20vw;
+    margin-left: -15%;
+}
 }

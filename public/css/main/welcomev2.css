@@ -40,8 +40,14 @@
     color: #002868; */
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
 }
+<<<<<<< Updated upstream
 .main-conf-nav {
     max-width: 1000px;
+=======
+
+.container {
+    max-width: 800px;
+>>>>>>> Stashed changes
     margin: 0 auto;
     padding-bottom: 5vh;
 }
@@ -340,6 +346,7 @@ a.slide_btn {
         right: 50px;
     }
 }
+<<<<<<< Updated upstream
 
 @media screen and (max-width: 768px) {
     .banner {
@@ -394,6 +401,8 @@ a.slide_btn {
     }
 }
 
+=======
+>>>>>>> Stashed changes
 .button-19 {
     appearance: button;
     background-color: #1899d6;
@@ -405,7 +414,7 @@ a.slide_btn {
     cursor: pointer;
     display: inline-block;
     font-family: din-round, sans-serif;
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 20px;
@@ -431,7 +440,7 @@ a.slide_btn {
     background-color: #1cb0f6;
     border: solid transparent;
     border-radius: 16px;
-    border-width: 0 0 4px;
+    border-width: 0 0 6px;
     bottom: -4px;
     content: "";
     left: 0;
@@ -440,18 +449,203 @@ a.slide_btn {
     top: 0;
     z-index: -1;
 }
+@media only screen and (min-width: 1441px){
 
-.button-19:main,
-.button-19:focus {
-    user-select: auto;
 }
 
-.button-19:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-    text-decoration: none;
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+.welcome-banner video {
+
+    width: 130rem;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+    filter: blur(0px);
+
+}
+.title{
+    margin-top: 8vh;
+    font-size: 5vw;
+    width: 35%;
+
+}
+.title-sub{
+    font-size: 5vw;
+}
+.div-header{
+    font-size: 4.5vw;
+}
+.message-title{
+    padding: 20px;
+    width: 60vw;
+    font-size: 300%;
+
+}
+.message-content{
+    text-align: justify;
+    padding: 20px;
+    width: 55vw;
 }
 
-.button-19:disabled {
-    cursor: auto;
 }
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .banner{
+        color: #ffff;
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .title{
+        margin-top: 8vh;
+        font-size: 7vw;
+        font-weight: 800;
+        line-height: 7vh;
+        width: 100%;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .title-sub{
+        margin-top: 2vh;
+        font-size: 6vw;
+        line-height: 9vh;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .button-19{
+        font-size: 16px; /* Adjust the font size for small screens */
+        width: 50%;
+    }
+    .conf-nav{
+        margin-bottom: 8vh;
+    }
+    .conf-nav ul{
+        display: flex;
+        justify-content:center;
+    }
+    .conf-nav ul li a {
+        padding: 16px;
+        font-size: 1.5vw;
+    }
+    .div-header{
+        font-size: 5vw;
+    }
+    .dg-message{
+        margin-top: 5vh;
+    }
+    .dg-content{
+        display: none;
+    }
+    .message-card{
+        width: 100%;
+        padding: 15px;
+    }
+    .message-title{
+        text-align: center;
+        line-height: 4vh;
+        font-size: 2.5rem;
+        letter-spacing: normal;
+    }
+    .message-content{
+        text-align: justify;
+        padding: 15px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+    .banner{
+        color: #ffff;
+        text-align: center;
+        margin-left: -5px;
+
+    }
+
+    .title{
+        margin-top: 8vh;
+        font-size: 9vw;
+        font-weight: 800;
+        line-height: 7vh;
+        width: 100%;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .title-sub{
+        margin-top: 2vh;
+        font-size: 9vw;
+        line-height: 9vh;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+
+    .button-19 {
+        font-size: 16px; /* Adjust the font size for small screens */
+        width: 50%;    /* Make the button full width on small screens */
+    }
+    .conf-nav{
+        margin-bottom: 10vh;
+    }
+    .conf-nav ul{
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+    }
+    .conf-nav ul li a {
+        padding: 16px;
+        font-size: 4vw;
+
+    }
+    .div-header{
+        font-size: 7vw;
+    }
+    .dg-message{
+        margin-top: 5vh;
+    }
+    .dg-content{
+        display: none;
+    }
+    .message-card{
+        width: 100%;
+        padding: 15px;
+    }
+    .message-title{
+        text-align: center;
+        line-height: 5.5vh;
+        font-size: 3rem;
+        letter-spacing: normal;
+    }
+    .message-content{
+        text-align: justify;
+        padding: 15px;
+    }
+    .countdown-header{
+        font-size: 4.5vw;
+    }
+    .countdown ul li {
+        display: inline-block;
+        font-size: 2.3vw;
+        list-style-type: none;
+        text-transform: uppercase;
+    }
+    .countdown ul {
+        margin-left: -10%;
+    }
+
+    .countdown ul li span {
+        width: 100%;
+        display: block;
+        font-size: 6vw;
+        color: #3b3b3b;
+        padding: 10px;
+        border-radius: 20px;
+        font-weight: 800;
+    }
+
+    .notice-header{
+        font-size: 5vw;
+    }
+    .notice-content{
+        font-size: 5vw;
+    }
+}
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
