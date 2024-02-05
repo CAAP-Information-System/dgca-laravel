@@ -282,18 +282,26 @@ nav .navbar .links li .js-sub-menu{
   .nav-caap-logo {
     width: 15%;
 }
-  .caap-name{
-    font-size: 3vw;
-  }
-  .dgca-name{
-    font-size: 3vw;
-  }
+
 }
 
 @media (max-width: 800px) {
 
   .navbar .bx-menu {
     display: block;
+  }
+  .nav-item{
+    display: none !important;
+  }
+  .main-nav{
+    width: 5%;
+    float: right;
+    margin-top: -5.5rem;
+    height: 1vh;
+    margin-right: 5%;
+  }
+  .head-navbar {
+    width: 95%;
   }
   nav .navbar .nav-links {
     position: fixed;
@@ -388,31 +396,60 @@ nav .navbar .links li .js-sub-menu{
   .nav-caap-logo{
     margin-left: -5%;
   }
-  .caap-name{
-    font-size: 3vw;
-  }
-  .dgca-name{
-    font-size: 3vw;
-  }
+
 }
-@media only screen and (min-width: 300px) and (max-width: 600px){
+@media screen and (min-width: 601px) and (max-width: 800px){
+    .header-name{
+        font-size:3vw;
+      }
+      .dgca-name{
+        font-size: 3vw;
+    }
+}
+@media only screen and (min-width: 460px) and (max-width: 600px){
     .nav-caap-logo{
         margin-left: -8%;
         width: 13vw;
       }
-      .caap-name{
-        font-size: 2.5vw;
+      .header-name{
+        font-size:4vw;
       }
       .dgca-name{
-        font-size: 2.5vw;
+        font-size: 4vw;
+    }
+    .header-name{
+        font-size:3vw;
       }
+      .dgca-name{
+        font-size: 3vw;
+    }
+    nav .navbar .nav-links {
+        max-width: 100%;
+      }
+
 }
-@media (max-width: 370px) {
-  nav .navbar .nav-links {
-    max-width: 100%;
-  }
-  .nav-caap-logo {
-    width: 20vw;
-    margin-left: -15%;
+@media only screen and (min-width: 300px) and (max-width: 459px){
+    .nav-caap-logo{
+        margin-left: -8%;
+        width: 18vw;
+      }
+      .header-name{
+        font-size:4vw;
+      }
+      .dgca-name{
+        font-size: 4vw;
+    }
+    .header-name{
+        font-size:3vw;
+      }
+      .dgca-name{
+        font-size: 3vw;
+    }
+    nav .navbar .nav-links {
+        max-width: 100%;
+      }
+
 }
-}
+
+
+
