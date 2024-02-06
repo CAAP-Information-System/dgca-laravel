@@ -457,8 +457,8 @@ a.slide_btn {
         }
 
         .button-19 {
-            font-size: 3vw !important;
-            width: 40% !important; /* Adjust the width as needed */
+            font-size: 4vw !important;
+            width: 50% !important; /* Adjust the width as needed */
         }
         .conf-nav{
             margin-bottom: 10vh;
@@ -497,7 +497,7 @@ a.slide_btn {
             padding: 15px;
         }
         .countdown-header{
-            font-size: 4.5vw;
+            font-size: 5vw;
         }
         .countdown-main{
             margin-top: 15rem !important;
