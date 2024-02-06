@@ -73,7 +73,7 @@
 .shangrila-img-grp{
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 3vh;
 
@@ -159,4 +159,22 @@
     background-color: #002868;
     color: #ffff;
     transition: .1s ease;
+}
+@media screen and (max-width: 768px) {
+    .shangrila-img-grp {
+        flex-direction: column; /* Align vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .shangrila-img {
+        max-width: 100%; /* Take full width on smaller screens */
+        margin-bottom: 15px; /* Add spacing between images */
+    }
+
+
+}
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    .website-btn {
+        font-size: 3vw;
+    }
 }

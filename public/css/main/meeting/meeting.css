@@ -30,7 +30,7 @@
     padding: 20px;
     width: 100%;
 }
-.dgca-title{
+.dgca-title {
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     color: #ffff;
     font-size: 4rem;
@@ -400,5 +400,28 @@
 
     .day-selector button:hover {
         background-color: #2980b9;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner-content {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .banner-title {
+        margin: 0;
+    }
+    .dgca-title {
+        margin: 0;
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 6vh;
+        margin-top: 3vh;
+    }
+    .reg-steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

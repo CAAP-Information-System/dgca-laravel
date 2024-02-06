@@ -454,6 +454,9 @@ nav .navbar .links li .js-sub-menu{
     nav .navbar .nav-links {
         max-width: 100%;
       }
+      .main-nav{
+        margin-top: -5rem;
+      }
 
 }
 
