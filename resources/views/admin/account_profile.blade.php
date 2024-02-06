@@ -4,56 +4,85 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/account_profile.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/header.css') }}">
 <div class="container">
-    <header class="page-header">User Profile</header>
-    @if($user->status == 'Pending')
-    <form class="status-form" action="{{ route('user.approve', ['id' => $user->id]) }}" method="POST">
-        @csrf
-        <header class="status-reminder">Reminder :</header>
-        <p class="status-message">Current account is still under <span style="font-weight:bold;" class="text-danger">PENDING</span> status. Continue for approval?</p>
-        <button class="button-44">Approve User</button>
-    </form>
-    @endif
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
+    <header class="page-header">User Information</header>
 
-    <div class="main-content">
-        <section class="left-col">
-            <div class="upper">
-                <div>
-                    <label class="profile-label">ID</label>
-                    <p>{{ $user->id }}</p>
+
+    <main class="main-content">
+        <div class="image-grp">
+            @if($user->profile_image)
+            <img src="{{ asset('storage/profile_images/' . $user->profile_image) }}" alt="profile image" class="profile-img" />
+            @else
+            <img src="{{ asset('img/blank-profile.png') }}" alt="profile image"  class="profile-img" />
+            @endif
+            <header class="organization">{{ $user->organization }}</header>
+        </div>
+        <div class="pending-reminder">
+            @if($user->status == 'Pending')
+            <form class="status-form" action="{{ route('user.approve', ['id' => $user->id]) }}" method="POST">
+                @csrf
+                <header class="status-reminder">Reminder :</header>
+                <p class="status-message">Current account is still under <span style="font-weight:bold;" class="text-danger">PENDING</span> status. Continue for approval?</p>
+                <button class="button-44">Approve User</button>
+            </form>
+            @endif
+            @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+        </div>
+        <section class="access-section">
+            <div class="multi-grp">
+                <div class="sub">
+                    <header class="header-label">Access Role</header>
+                    <p class="profile-details">{{ $user->access_role }}</p>
                 </div>
-                <div>
-                    <label class="profile-label">First Name</label>
-                    <p>{{$user->first_name}}</p>
-                </div>
-                <div>
-                    <label class="profile-label">Last Name</label>
-                    <p>{{$user->last_name}}</p>
+                <div class="sub">
+                    <header class="header-label">Account Status</header>
+                    <p class="profile-details badge badge-danger">{{ $user->status }}</p>
                 </div>
             </div>
-            <label class="profile-label">Organization Name</label>
-            <p>{{$user->organization}}</p>
-            <label class="profile-label">Email Address</label>
-            <p>{{$user->email}}</p>
 
         </section>
-        <section class="right-col">
-            <label class="profile-label">Country</label>
-            <p>{{$user->country}}</p>
-            <label class="profile-label">Designation/Position</label>
-            <p>{{$user->designation}}</p>
-            <label class="profile-label">Conference Role</label>
-            <p>{{$user->conference_role}}</p>
-            <label class="profile-label">Account Status</label>
-            <p>{{$user->status}}</p>
-            <label class="profile-label">Account Role</label>
-            <p>{{$user->access_role}}</p>
+        <section class="name-section">
+
+            <div class="multi-grp">
+                <div class="sub">
+                    <header class="header-label">First Name</header>
+                    <p class="profile-details">{{ $user->first_name }}</p>
+                </div>
+                <div class="sub">
+                    <header class="header-label">Last Name</header>
+                    <p class="profile-details">{{ $user->last_name }}</p>
+                </div>
+            </div>
+
         </section>
-    </div>
+        <section class="email-section">
+            <div class="grp">
+                <header class="header-label">Email Address</header>
+                <p class="profile-details">{{ $user->email }}</p>
+            </div>
+        </section>
+        <section class="user-details-section">
+            <div class="multi-grp">
+                <div class="sub">
+                    <header class="header-label">Position</header>
+                    <p class="profile-details">{{ $user->designation }}</p>
+                </div>
+                <div class="sub">
+                    <header class="header-label">Conference Role</header>
+                    <p class="profile-details">{{ $user->conference_role }}</p>
+                </div>
+            </div>
+            <div class="grp">
+                <header class="header-label">Country</header>
+                <p class="profile-details">{{ $user->country }}</p>
+            </div>
+
+        </section>
+
+    </main>
 
 </div>
 

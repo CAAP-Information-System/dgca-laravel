@@ -122,14 +122,18 @@
     font-weight: bold;
 }
 
-.password-requirements{
+.requirements-box{
     font-style: italic;
     color: #666666;
     border: 2px dashed #868484;
     padding: 15px;
     width: 100%;
+    margin: 10px;
 }
-
+.requirements-header{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
 .file-drop {
     text-align: center;
 }
@@ -224,6 +228,9 @@
     display: flex;
     text-align: center;
      gap: 15px;
+}
+.dpa-link{
+    text-decoration: none;
 }
 
 .checkbox{

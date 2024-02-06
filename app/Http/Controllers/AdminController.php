@@ -34,9 +34,9 @@ class AdminController extends Controller
 
     public function account_list()
     {
-        $user = User::all();
-
-        return view('admin.account_list', ['users' => $user]);
+        $user = User::paginate(10);
+        $usercount = User::count();
+        return view('admin.account_list', ['users' => $user, 'usercount' => $usercount]);
     }
 
     public function file_uploads()

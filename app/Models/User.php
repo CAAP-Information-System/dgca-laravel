@@ -29,6 +29,7 @@ class User extends Authenticatable
         'conference_role',
         'access_role',
         'privacy',
+        'profile_image'
     ];
 
     /**

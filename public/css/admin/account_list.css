@@ -13,6 +13,10 @@
     font-size: 17px;
 
 }
+.count-value{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 .accounts-table{
     padding-top: 15px;
 }

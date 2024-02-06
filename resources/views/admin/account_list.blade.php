@@ -13,50 +13,63 @@
                     <header class="count-header">
                         <div class="count-card">
                             <p class="total-accounts">Total Accounts Registered:</p>
+                            <p class="count-value">{{ $usercount }}</p>
                         </div>
                     </header>
 
                     <div class="accounts-table">
                         <form action="{{ route('update-access-role') }}" method="POST">
                             @csrf
-                            <table class="table table-hover">
-                                <thead>
+                            <table class="table align-middle mb-0 bg-white">
+                                <thead class="bg-light">
                                     <tr>
-                                        <th scope="col">Email Address</th>
-                                        <th scope="col">Full Name</th>
-                                        <th scope="col">Designation / Position</th>
-                                        <th scope="col">Country</th>
-                                        <th scope="col">Conference Role</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Access Role</th>
-                                        <th scope="col">Action</th>
+                                        <th>Name</th>
+                                        <th>Title</th>
+                                        <th>Status</th>
+                                        <th>Position</th>
+                                        <th>Country</th>
+                                        <th>Role</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
+                                @foreach($users as $user)
                                 <tbody>
-                                    @foreach($users as $user)
                                     <tr>
-                                        <td>{{$user->email}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->designation}}</td>
-                                        <td>{{$user->country}}</td>
-                                        <td>{{$user->conference_role}}</td>
-                                        <td>{{$user->status}}</td>
                                         <td>
-                                            <!-- TO DO:
-                                            1. the access role does not update the selected role
-                                             -->
-                                            <select name="access_role" class="form-control">
-                                                <option value="admin" {{ $user->access_role === 'admin' ? 'selected' : '' }}>Admin</option>
-                                                <option value="user" {{ $user->access_role === 'user' ? 'selected' : '' }}>Guest</option>
-                                            </select>
+                                            <div class="d-flex align-items-center">
+                                                @if($user->profile_image)
+                                                <img src="{{ asset('storage/profile_images/' . $user->profile_image) }}" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                                                @else
+                                                <img src="{{ asset('img/blank-profile.png') }}" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                                                @endif
+                                                <div class="ms-3">
+                                                    <p class="fw-bold mb-1">{{ $user->name }}</p>
+                                                    <p class="text-muted mb-0">{{ $user->email }}</p>
+                                                </div>
+                                            </div>
                                         </td>
                                         <td>
-                                            <button type="submit" class="btn btn-info">Update</button>
+                                            <p class="fw-normal mb-1">{{ $user->designation }}</p>
+                                            <p class="text-muted mb-0">{{ $user->organization }}</p>
+                                        </td>
+                                        <td>
+                                            @if($user->status === 'Approved')
+                                            <span class="badge badge-success rounded-pill d-inline">{{ $user->status }}</span>
+                                            @else
+                                            <span class="badge badge-warning rounded-pill d-inline">{{ $user->status }}</span>
+                                            @endif
+                                        </td>
+                                        <td>{{ $user->conference_role }}</td>
+                                        <td>{{ $user->country }}</td>
+                                        <td>{{ $user->access_role }}</td>
+                                        <td>
+                                            <a href="{{ route('user-profile', ['id' => $user->id]) }}" class="btn btn-warning">View</a>
                                         </td>
                                     </tr>
-                                    @endforeach
                                 </tbody>
+                                @endforeach
                             </table>
+                            {{ $users->links() }}
                         </form>
                     </div>
                 </section>
