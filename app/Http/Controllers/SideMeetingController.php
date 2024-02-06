@@ -346,4 +346,16 @@ class SideMeetingController extends Controller
         // Example: Assuming there's a Reservation model with reserved times
         return SideMeeting::where('days_drop', $selectedDay)->where('time_drop', $selectedTime)->exists();
     }
+
+    public function deleteMeetingRoom(Request $request, $id)
+    {
+        // Find the meeting by its ID
+        $meeting = SideMeeting::findOrFail($id);
+
+        // Delete the meeting
+        $meeting->delete();
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Meeting deleted successfully.');
+    }
 }

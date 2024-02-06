@@ -16,6 +16,7 @@
                     <th>Time Designated</th>
                     <th>Reserved By</th>
                     <th>Country to Meet</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,13 @@
                     <td>{{ $meeting->time_drop }}</td>
                     <td>{{ $meeting->reserved_by }}</td>
                     <td>{{ $meeting->country_drop }}</td>
+                    <td>
+                        <form action="{{ route('meeting-room.delete', ['id' => $meeting->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Delete Meeting</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

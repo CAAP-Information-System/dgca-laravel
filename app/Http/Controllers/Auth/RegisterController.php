@@ -42,6 +42,8 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -63,17 +65,20 @@ class RegisterController extends Controller
             'conference_role' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
             'privacy' => ['required', 'string'],
+            'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
+
     protected function create(array $data)
     {
+        $profileImagePath = null;
+
+        if (isset($data['profile_image'])) {
+            $fullName = $data['first_name'] . '_' . $data['last_name'];
+            $profileImagePath = $data['profile_image']->storeAs('profile_images', $fullName . '.jpg', 'public');
+        }
+
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -85,6 +90,7 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'conference_role' => $data['conference_role'],
             'privacy' => $data['privacy'] ? 'Approved' : 'Unapproved',
+            'profile_image' => $profileImagePath,
         ]);
     }
 }

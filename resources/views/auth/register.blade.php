@@ -8,10 +8,18 @@
     </div>
 
     <div class="form-main">
-        <form class="register-user" action="{{ route('register') }}" method="POST">
+        <form class="register-user" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
             <header class="title">Registration</header>
             @csrf
+            <div class="form-group">
+                <label for="profile_image">Profile Image</label>
+                <input id="profile_image" type="file" class="form-control @error('profile_image') is-invalid @enderror" name="profile_image" accept=".jpg, .png, .jpeg" >
+                @error('profile_image')
+                <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                @enderror
+            </div>
             <div class="user__details">
+
                 <div class="input__box">
                     <span class="details">First Name</span>
                     <input type="text" placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
