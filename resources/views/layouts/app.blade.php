@@ -279,26 +279,21 @@
                                     @csrf
                                 </form>
                             </div>
-
                             @endauth
                         </li>
                     </ul>
                 </nav>
-
             </div>
-
         </aside>
     </div>
     @endif
 
     <main class="">
-
-
         @yield('content')
     </main>
     </div>
 </body>
-
+@if(auth()->check() && auth()->user()->access_role == "user")
 <footer class="text-center bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -372,6 +367,7 @@
     </div>
     <!-- Copyright -->
 </footer>
+@endif
 <script>
     // search-box open close js code
     let navbar = document.querySelector(".navbar");

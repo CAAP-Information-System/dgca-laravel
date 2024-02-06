@@ -11,6 +11,14 @@
         <form class="register-user" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
             <header class="title">Registration</header>
             @csrf
+            <div class="requirements-box">
+                    <header class="requirements-header">Reminders:</header>
+                    <ul>
+                        <li>Upload a 2x2 ID picture in formal attire</li>
+                        <li>The image should be in JPG, PNG, or JPEG format</li>
+                        <li>Image file size must not exceed at least 10 megabytes (MB)</li>
+                    </ul>
+                </div>
             <div class="form-group">
                 <label for="profile_image">Profile Image</label>
                 <input id="profile_image" type="file" class="form-control @error('profile_image') is-invalid @enderror" name="profile_image" accept=".jpg, .png, .jpeg" >
@@ -77,7 +85,7 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Enter Confirm Password" autocomplete="new-password" required>
                 </div>
 
-                <div class="password-requirements">
+                <div class="requirements-box">
                     <ul>
                         <li class="password-requirement">Must be at least 8 characters or longer</li>
                         <li class="password-requirement">Must contain at least one letter</li>
@@ -91,7 +99,7 @@
                 <br>
                 <h4>Privacy Policy</h4>
                 <p>
-                    All information provided herein shall be kept private and confidential by the PPP Center and shall be used solely for legal purposes as mandated by the <b>Data Privacy Act of 2012</b> and other relevant laws. Videos and pictures taken during the event may also be used in PPP Center’s promotional and publicity materials.
+                    All information provided herein shall be kept private and confidential by the PPP Center and shall be used solely for legal purposes as mandated by the <a class="text-primary text-bold dpa-link" href="https://privacy.gov.ph/data-privacy-act/#w10">Data Privacy Act of 2012</a> and other relevant laws. Videos and pictures taken during the event may also be used in PPP Center’s promotional and publicity materials.
                 </p>
                 <p>For data privacy concerns, kindly contact the PPP Center’s Data Protection Officer at
                     <a href="#" class="privacy-pol-link">
@@ -101,7 +109,7 @@
             </div>
             <div class="privacy-policy-check">
                 <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
-                <span class="details">By checking this box, I agree that I have read the privacy policy policy</span>
+                <span class="details">By checking this box, I agree that I have read the privacy policy</span>
 
             </div>
             <!-- <div class="file-drop">

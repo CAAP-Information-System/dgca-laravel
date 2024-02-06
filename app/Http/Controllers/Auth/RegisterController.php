@@ -76,7 +76,8 @@ class RegisterController extends Controller
 
         if (isset($data['profile_image'])) {
             $fullName = $data['first_name'] . '_' . $data['last_name'];
-            $profileImagePath = $data['profile_image']->storeAs('profile_images', $fullName . '.jpg', 'public');
+            $fileName = $fullName;
+            $profileImagePath = $data['profile_image']->storeAs('profile_images', $fileName, 'public');
         }
 
         return User::create([
@@ -90,7 +91,7 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'conference_role' => $data['conference_role'],
             'privacy' => $data['privacy'] ? 'Approved' : 'Unapproved',
-            'profile_image' => $profileImagePath,
+            'profile_image' => $fileName, // Save only the file name
         ]);
     }
 }
