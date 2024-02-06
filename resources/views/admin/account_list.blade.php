@@ -18,9 +18,9 @@
                     </header>
 
                     <div class="accounts-table">
-                        <form action="{{ route('update-access-role') }}" method="POST">
+                        <form action="" method="POST">
                             @csrf
-                            <table class="table align-middle mb-0 bg-white">
+                            <table class="table align-middle mb-0 bg-white table-hover">
                                 <thead class="bg-light">
                                     <tr>
                                         <th>Name</th>

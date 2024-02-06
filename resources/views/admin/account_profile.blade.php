@@ -12,7 +12,7 @@
             @if($user->profile_image)
             <img src="{{ asset('storage/profile_images/' . $user->profile_image) }}" alt="profile image" class="profile-img" />
             @else
-            <img src="{{ asset('img/blank-profile.png') }}" alt="profile image"  class="profile-img" />
+            <img src="{{ asset('img/blank-profile.png') }}" alt="profile image" class="profile-img" />
             @endif
             <header class="organization">{{ $user->organization }}</header>
         </div>
@@ -35,11 +35,23 @@
             <div class="multi-grp">
                 <div class="sub">
                     <header class="header-label">Access Role</header>
-                    <p class="profile-details">{{ $user->access_role }}</p>
+                    <p class="text-muted mb-0 text-italic">Please request approval from the head administrator before updating the access role.</p>
+                    <form style="padding: 15px;" action="{{ route('update-access-role', ['id' => $user->id]) }}" method="POST">
+                        @csrf
+                        <select name="access_role" class="form-control">
+                            <option value="user" {{ $user->access_role == 'user' ? 'selected' : '' }}>User</option>
+                            <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Admin</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-2">Update Role</button>
+                    </form>
                 </div>
                 <div class="sub">
                     <header class="header-label">Account Status</header>
-                    <p class="profile-details badge badge-danger">{{ $user->status }}</p>
+                    @if($user->status === 'Approved')
+                    <span class="profile-details badge badge-success">{{ $user->status }}</span>
+                    @else
+                    <span class="profile-details badge badge-danger">{{ $user->status }}</span>
+                    @endif
                 </div>
             </div>
 

@@ -1,4 +1,9 @@
 /* create_meeting.css */
+.form-content{
+    display: flex;
+    justify-content: center;
+
+}
 .create-meeting-form{
     width: 70%;
     background-color: #ffff;
@@ -14,6 +19,20 @@
     color: #ffff;
     padding: 10px;
     margin-bottom: 5px;
+}
+.reminder-grp{
+    color: #969696;
+    padding: 15px;
+    margin: 15px;
+    border: 2px dashed #9696;
+    font-style: italic;
+}
+.reminder-header{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.reminder-content{
+    font-size: 16px;
 }
 .field-grp{
     padding: 25px;
@@ -67,9 +86,7 @@ input[type="text"]:focus {
   min-height: 40px;
   min-width: 0px;
   overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   text-align: center;
   touch-action: manipulation;
   transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;

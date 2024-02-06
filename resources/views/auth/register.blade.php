@@ -109,7 +109,7 @@
             </div>
             <div class="privacy-policy-check">
                 <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
-                <span class="details">By checking this box, I agree that I have read the privacy policy policy</span>
+                <span class="details">By checking this box, I agree that I have read the privacy policy</span>
 
             </div>
             <!-- <div class="file-drop">

@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    public function dashboardv2(){
+    public function dashboardv2()
+    {
         return view('admin.dashboardv2');
     }
     public function dashboard()
@@ -50,32 +51,28 @@ class AdminController extends Controller
 
     public function reservation_view()
     {
-        $meetings = SideMeeting::all();
+        $meetings = SideMeeting::paginate(10);
         return view('admin.reservation_view', ['meetings' => $meetings]);
     }
 
-    public function updateAccessRole(Request $request)
+    public function updateAccessRole(Request $request, $id)
     {
-        // Log the request data
-        logger($request->all());
-
+        // Validate the incoming request
         $request->validate([
-            'access_role' => 'required|in:admin,guest',
+            'access_role' => 'required|in:user,admin', // Validate that the role is either 'user' or 'admin'
         ]);
 
-        $userIdsAndRoles = $request->input('access_role');
+        // Find the user by ID
+        $user = User::findOrFail($id);
 
-        foreach ($userIdsAndRoles as $userId => $accessRole) {
-            $user = User::find($userId);
+        // Update the access_role attribute
+        $user->access_role = $request->input('access_role');
 
-            if ($user) {
-                $user->update(['access_role' => $accessRole]);
-            } else {
-                logger("User with ID $userId not found.");
-            }
-        }
+        // Save the updated user
+        $user->save();
 
-        return redirect()->back()->with('success', 'Access roles updated successfully');
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Access role updated successfully.');
     }
 
     public function viewPendingAccounts()
@@ -92,14 +89,15 @@ class AdminController extends Controller
         }
         return view('admin.account_profile', ['user' => $user]);
     }
-    public function approveUser($id){
+    public function approveUser($id)
+    {
 
-            $user = User::find($id); // Find the user by ID
+        $user = User::find($id); // Find the user by ID
 
-            // Update the user status to 'APPROVED'
-            $user->status = 'Approved';
-            $user->save();
-            Session::flash('success', 'User approved successfully');
-            return redirect()->back()->with('success', 'User approved successfully.');
+        // Update the user status to 'APPROVED'
+        $user->status = 'Approved';
+        $user->save();
+        Session::flash('success', 'User approved successfully');
+        return redirect()->back()->with('success', 'User approved successfully.');
     }
 }

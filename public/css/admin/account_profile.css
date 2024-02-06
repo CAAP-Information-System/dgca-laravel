@@ -64,7 +64,7 @@
     color: #3b3b3b;
 
 }
-.access-section, .name-section, .email-section, .user-details-section{
+.email-section{
     border-bottom: 1px solid #50A9FB;
 }
 .image-grp{
