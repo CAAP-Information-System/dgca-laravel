@@ -53,6 +53,7 @@ Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about
 Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
 
 Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
+Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
 
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');
 Route::get('/medical-support', [HomeController::class, 'viewMedicalSupport'])->name('medical-support');

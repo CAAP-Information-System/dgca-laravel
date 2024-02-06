@@ -2,13 +2,14 @@
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/account_profile.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/admin/header.css') }}">
 <div class="container">
     <header class="page-header">User Profile</header>
     @if($user->status == 'Pending')
     <form class="status-form" action="{{ route('user.approve', ['id' => $user->id]) }}" method="POST">
         @csrf
         <header class="status-reminder">Reminder :</header>
-        <p class="status-message">Current account is still under <span style="font-weight:bold;">PENDING</span> status. Continue for approval?</p>
+        <p class="status-message">Current account is still under <span style="font-weight:bold;" class="text-danger">PENDING</span> status. Continue for approval?</p>
         <button class="button-44">Approve User</button>
     </form>
     @endif

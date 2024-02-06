@@ -19,7 +19,7 @@
     <section class="section-grp">
         <header class="section-hdr">Types of Papers</header>
         <div class="section-content">
-            <p>Papers submitted in advance by States/Administrations and International Organizations for the Conference are categorized as either <b>Discussion Papers</b> or <b>Information Papers</b>.</p>
+            <p>Papers submitted in advance by States/Administrations and International Organizations for the Conference are categorized as either <span class="text-primary text-bold">Discussion Papers or Information Papers</span>.</p>
             <header class="section-subheader">Discussion Papers (DP)</header>
             <div class="section-subheader-content">
                 <ol>
@@ -27,7 +27,7 @@
                         Discussion Papers (DP) deal with substantive matters that are intended to be raised at the Conference under the Agenda Items listed in the Provisional Agenda, provided in the Conference website. Since the Provisional Agenda may be changed, all papers received will be accommodated under appropriate items of the final Agenda.
                     </li>
                     <li>
-                        It is emphasized that the Discussion Papers for the Conference should focus more on matters at policy level, conceptual issues, as well as global and regional trends, for a more productive outcome. It should be noted that <b>ICAO APAC Contributory Bodies</b> such as the RASG-APAC, APANPIRG, RASCF and their affiliated bodies provide the most appropriate forum to deliberate on matters of specific technical nature in view of the presence of relevant subject matter experts in those fora, therefore it is strongly recommended that submission of Discussion Papers with such contents to the DGCA Conference be avoided to the extent possible.
+                        It is emphasized that the Discussion Papers for the Conference should focus more on matters at policy level, conceptual issues, as well as global and regional trends, for a more productive outcome. It should be noted that <b class="text-primary">ICAO APAC Contributory Bodies</b> such as the RASG-APAC, APANPIRG, RASCF and their affiliated bodies provide the most appropriate forum to deliberate on matters of specific technical nature in view of the presence of relevant subject matter experts in those fora, therefore it is strongly recommended that submission of Discussion Papers with such contents to the DGCA Conference be avoided to the extent possible.
                     </li>
                     <li>
                         States/Administrations and Organizations are also requested to avoid submitting Discussion Papers which have already been presented in previous DGCA Conferences as well as other regional meetings with similar content.
@@ -88,7 +88,7 @@
         <div class="section-content">
             <div class="section-subheader-content">
                 <p>
-                    Papers should <b class="text-danger">not exceed six (6) pages</b>, a guideline that's strongly encouraged. Submissions should be in electronic format using MS Word, facilitating final formatting by the Secretariat. Attachments not requiring editing should be in <b>Adobe Acrobat (.pdf) format</b>. Additionally, ensure that the overall file size, including any attachments, is optimized for convenient downloading from the website.
+                    Papers should <b class="text-danger">not exceed six (6) pages</b>, a guideline that's strongly encouraged. Submissions should be in electronic format using MS Word, facilitating final formatting by the Secretariat. Attachments not requiring editing should be in <b class="text-primary">Adobe Acrobat (.pdf) format</b>. Additionally, ensure that the overall file size, including any attachments, is optimized for convenient downloading from the website.
 
                 </p>
             </div>
