@@ -98,11 +98,11 @@
 .sponsors-logo{
     display: flex;
     align-items: center;
-    padding: 3vh;
+    padding: 1.5vh;
     gap: 3vh;
 }
 .sponsor-logo{
-    width: 100px;
+    width: 80px;
     height: auto;
 }
 
@@ -399,12 +399,18 @@ nav .navbar .links li .js-sub-menu{
 
 }
 @media screen and (min-width: 601px) and (max-width: 800px){
+
     .header-name{
         font-size:3vw;
       }
       .dgca-name{
         font-size: 3vw;
     }
+    .main-nav{
+        width: 5%;
+        margin-top: -14%;
+        margin-right: 5%;
+      }
 }
 @media only screen and (min-width: 460px) and (max-width: 600px){
     .nav-caap-logo{
