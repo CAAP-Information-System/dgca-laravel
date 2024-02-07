@@ -1,0 +1,45 @@
+.notices-section {
+    padding: 5vh;
+    color: #3b3b3b;
+    width: 100%;
+
+}
+
+.notice-header {
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.notice-card {
+    display: flex;
+    gap: 3vh;
+    background-color: #ffff;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.notice-img {
+    width: 200px;
+    height: auto;
+    align-self: center;
+}
+
+.notice-content {
+    padding: 15px;
+
+}
+
+.notice-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3b3b3b;
+}
+.notice-description {
+    font-size: 15px;
+    text-align: justify;
+}

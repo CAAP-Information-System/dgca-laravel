@@ -3,6 +3,7 @@
 @section('content')
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}"> -->
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev2.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/main/notice_board.css') }}">
 <main class="content-main">
     @if (auth()->check() && auth()->user()->status === 'Pending')
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -149,10 +150,22 @@
 
     <section class="notices-section">
         <header class="notice-header">Notice Board</header>
-        <p class="notice-content">Stay tuned!</p>
+        <div class="container">
+            <main class="notice-container">
+                <div class="notice-card">
+                    <img src="{{ asset('img/shangri-la/shangrila-full.jpg') }}" alt="notice image" class="notice-img">
+                    <div class="notice-content">
+                        <a href="#" class="notice-title">Figma ipsum component variant main</a>
+                        <p class="notice-description">
+                            Figma ipsum component variant main layer. Invite shadow comment bold rotate pixel. Ipsum overflow duplicate vector frame layer line team. Pencil library thumbnail library variant shadow.
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
     </section>
 
-    <section>
+    <!-- <section>
         <div class="slider">
             <div class="slide_viewer">
                 <div class="slide_group">
@@ -167,7 +180,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End // .slider -->
+        </div>
 
         <div class="slide_buttons">
         </div>
@@ -194,9 +207,9 @@
                     </g>
                 </svg>
             </div>
-        </div><!-- End // .directional_nav -->
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    </section>
+    </section> -->
     <!-- DIRECTOR GENERAL WELCOME MESSAGE -->
     <!-- <div class="container">
         <section>

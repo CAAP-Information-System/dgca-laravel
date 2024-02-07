@@ -207,20 +207,6 @@
     border-radius: 20px;
     font-weight: 800;
 }
-.notices-section {
-    padding: 5vh;
-}
-.notice-header {
-    font-weight: bold;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    text-align: center;
-}
-.notice-content {
-    font-size: 2rem;
-    text-align: center;
-}
-
 /* SLIDER CSS */
 .slider {
     margin: 0 auto;
