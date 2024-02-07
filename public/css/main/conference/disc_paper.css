@@ -1,3 +1,75 @@
+/* BANNER CSS */
+.head-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.head-banner .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+    filter: blur(0px);
+}
+.banner-content{
+    display: flex;
+    justify-content: space-around;
+}
+.banner-title{
+    font-size: 4rem;
+    color: #ffff;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    margin-top: 40vh;
+    font-weight: bold;
+    margin-left: 15vh;
+    line-height: 7vh;
+    padding: 20px;
+    width: 100%;
+}
+.dgca-title{
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    color: #ffff;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 8vh;
+    text-transform: uppercase;
+    margin-left: 10vh;
+    margin-top: 10vh;
+    width: 60%;
+    text-align: end;
+}
+@media screen and (max-width: 768px) {
+    .banner-content{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .banner-title{
+        margin: 0;
+
+    }
+    .dgca-title{
+        margin: 0;
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 6vh;
+        margin-top: 3vh;
+    }
+    .reg-steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ------------------------- */
+.container-main{
+    margin-top: 5vh;
+}
 .discussion-header {
     font-size: 3rem;
     font-weight: bold;
@@ -17,23 +89,19 @@
 }
 .dl-text {
     margin-left: 20px;
-    padding: 15px;
-    background-color: #002868;
+    padding: 25px;
+    background-color: #50A9FB;
     color: #ffff;
-    border-radius: 25px;
+    border-radius: 99px;
     font-size: 15px;
     text-decoration: none;
 }
 .dl-text:hover {
     text-decoration: none;
-    background-color: #ffff;
-    color: #002868;
-    padding: 15px;
+    color: #ffff;
+    background-color: #969696;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
         rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: 0.3s ease;
-    transform: translateY(-10px);
-    font-weight: bold;
 }
 /* Style for the search field container */
 .search-container {

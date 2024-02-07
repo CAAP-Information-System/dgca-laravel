@@ -2,178 +2,191 @@
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/info_paper.css') }}">
+<section class="head-banner">
+    <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
+    <main class="banner-content">
+        <div class="banner-text">
+            <header class="banner-title">Information Paper</header>
+        </div>
+        <div class="dgca-title">
+            <!-- <header class="welcome-title">Welcome</header> -->
+            <header class="title">59th Conference of Director Generals</header>
+            <header class="title-sub">Philippines 2024</header>
+        </div>
+    </main>
+</section>
 <div class="container">
-    <header class="discussion-header">Information Paper</header>
-    <div class="dl-temp-grp">
-        <div class="dl-grp">
-            <img src="{{ asset('img/word-template.svg') }}" alt="CAAP Logo" class="temp-svg">
-            <a href="{{ asset('document/dp_template_58dgca.doc') }}" class="dl-text" download="">Download Discussion Paper Template</a>
+    <main class="container-main">
+        <div class="dl-temp-grp">
+            <div class="dl-grp">
+                <img src="{{ asset('img/word-template.svg') }}" alt="CAAP Logo" class="temp-svg">
+                <a href="{{ asset('document/dp_template_58dgca.doc') }}" class="dl-text" download="">Download Information Paper Template</a>
+            </div>
+            <div class="dl-grp">
+                <img src="{{ asset('img/zip-file.svg') }}" alt="CAAP Logo" class="temp-svg">
+                <a href="{{ asset('document/all_discussion_papers.zip') }}" class="dl-text" download="">Download All Templates (ZIP)</a>
+            </div>
         </div>
-        <div class="dl-grp">
-            <img src="{{ asset('img/zip-file.svg') }}" alt="CAAP Logo" class="temp-svg">
-            <a href="{{ asset('document/all_discussion_papers.zip') }}" class="dl-text" download="">Download All Templates (ZIP)</a>
-        </div>
-    </div>
-    <div class="list-container">
+        <div class="list-container">
 
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search...">
-            <button class="search-button">
-                <i class='bx bx-search search-icon'></i>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">
+                    <i class='bx bx-search search-icon'></i>
+                </button>
+            </div>
+            <!-- Toggle Button 1 -->
+            <button class="collapse-button" onclick="toggleList('list1')">
+                <i id="icon1" class='bx bxs-caret-down-circle'></i> Agenda 1: Theme Topic
             </button>
+
+            <ul class="list" id="list1">
+                @foreach($agenda1 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+
+            <button class="collapse-button" onclick="toggleList('list2')">
+                <i id="icon2" class='bx bxs-caret-down-circle'></i> Agenda 2: Review of Action Items arising from the previous Conference
+            </button>
+
+            <ul class="list" id="list2">
+                @foreach($agenda2 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <button class="collapse-button" onclick="toggleList('list3')">
+                <i id="icon3" class='bx bxs-caret-down-circle'></i> Agenda 3: Aviation Safety
+            </button>
+
+            <ul class="list" id="list3">
+                @foreach($agenda3 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+
+            </ul>
+            <!-- Toggle Button 4 -->
+            <button class="collapse-button" onclick="toggleList('list4')">
+                <i id="icon4" class='bx bxs-caret-down-circle'></i> Agenda 4: Air Navigation
+            </button>
+            <!-- List 4 -->
+            <ul class="list" id="list4">
+                @foreach($agenda4 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 5 -->
+            <button class="collapse-button" onclick="toggleList('list5')">
+                <i id="icon5" class='bx bxs-caret-down-circle'></i> Agenda 5: Aviation Security and Facilitation
+            </button>
+            <!-- List 5 -->
+            <ul class="list" id="list5">
+                @foreach($agenda5 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 6 -->
+            <button class="collapse-button" onclick="toggleList('list6')">
+                <i id="icon6" class='bx bxs-caret-down-circle'></i> Agenda 6: Economic Development of Air Transport
+            </button>
+            <!-- List 6 -->
+            <ul class="list" id="list6">
+                @foreach($agenda6 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+            <button class="collapse-button" onclick="toggleList('list7')">
+                <i id="icon7" class='bx bxs-caret-down-circle'></i> Agenda 7: Aviation and Environment
+            </button>
+            <!-- List 7 -->
+            <ul class="list" id="list7">
+                @foreach($agenda7 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 8 -->
+            <button class="collapse-button" onclick="toggleList('list8')">
+                <i id="icon8" class='bx bxs-caret-down-circle'></i> Agenda 8: Capacity Development and Implementation
+            </button>
+            <!-- List 8 -->
+            <ul class="list" id="list8">
+                @foreach($agenda8 as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 9 -->
+            <button class="collapse-button" onclick="toggleList('list9')">
+                <i id="icon9" class='bx bxs-caret-down-circle'></i> Agenda Item 9a: Ratification of International Air Law Treaties
+            </button>
+            <!-- List 9 -->
+            <ul class="list" id="list9">
+                @foreach($agenda9a as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+            <button class="collapse-button" onclick="toggleList('list10')">
+                <i id="icon10" class='bx bxs-caret-down-circle'></i> Agenda Item 9b: Updates
+            </button>
+            <!-- List 9 -->
+            <ul class="list" id="list10">
+                @foreach($agenda9b as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+            <!-- Toggle Button 10 -->
+            <button class="collapse-button" onclick="toggleList('list11')">
+                <i id="icon11" class='bx bxs-caret-down-circle'></i> Agenda Item 10 a: Any Other Matters
+            </button>
+            <!-- List 10 -->
+            <ul class="list" id="list11">
+                @foreach($agenda10a as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 11 -->
+            <button class="collapse-button" onclick="toggleList('list12')">
+                <i id="icon12" class='bx bxs-caret-down-circle'></i> Agenda Item 10 b: Hosting Offer and Theme Topic for the forthcoming Conference(s) of APAC DGCA
+            </button>
+            <!-- List 11 -->
+            <ul class="list" id="list12">
+                @foreach($agenda10b as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 12 -->
+            <button class="collapse-button" onclick="toggleList('list13')">
+                <i id="icon13" class='bx bxs-caret-down-circle'></i> Agenda Item 10 c: Endorsement of Action Items arising from the present Conference
+            </button>
+            <!-- List 12 -->
+            <ul class="list" id="list13">
+                @foreach($agenda10c as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
+
+            <!-- Toggle Button 13 -->
+            <button class="collapse-button" onclick="toggleList('list14')">
+                <i id="icon14" class='bx bxs-caret-down-circle'></i> Presentation/Video
+            </button>
+            <!-- List 13 -->
+            <ul class="list" id="list14">
+                @foreach($presentation as $discussion)
+                <li class="list-item">{{ $discussion->name }}</li>
+                @endforeach
+            </ul>
         </div>
-        <!-- Toggle Button 1 -->
-        <button class="collapse-button" onclick="toggleList('list1')">
-            <i id="icon1" class='bx bxs-caret-down-circle'></i> Agenda 1: Theme Topic
-        </button>
-
-        <ul class="list" id="list1">
-            @foreach($agenda1 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-
-        <button class="collapse-button" onclick="toggleList('list2')">
-            <i id="icon2" class='bx bxs-caret-down-circle'></i> Agenda 2: Review of Action Items arising from the previous Conference
-        </button>
-
-        <ul class="list" id="list2">
-            @foreach($agenda2 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-
-            @endforeach
-        </ul>
-
-        <button class="collapse-button" onclick="toggleList('list3')">
-            <i id="icon3" class='bx bxs-caret-down-circle'></i> Agenda 3: Aviation Safety
-        </button>
-
-        <ul class="list" id="list3">
-            @foreach($agenda3 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-
-        </ul>
-        <!-- Toggle Button 4 -->
-        <button class="collapse-button" onclick="toggleList('list4')">
-            <i id="icon4" class='bx bxs-caret-down-circle'></i> Agenda 4: Air Navigation
-        </button>
-        <!-- List 4 -->
-        <ul class="list" id="list4">
-            @foreach($agenda4 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 5 -->
-        <button class="collapse-button" onclick="toggleList('list5')">
-            <i id="icon5" class='bx bxs-caret-down-circle'></i> Agenda 5: Aviation Security and Facilitation
-        </button>
-        <!-- List 5 -->
-        <ul class="list" id="list5">
-            @foreach($agenda5 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 6 -->
-        <button class="collapse-button" onclick="toggleList('list6')">
-            <i id="icon6" class='bx bxs-caret-down-circle'></i> Agenda 6: Economic Development of Air Transport
-        </button>
-        <!-- List 6 -->
-        <ul class="list" id="list6">
-            @foreach($agenda6 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-        <button class="collapse-button" onclick="toggleList('list7')">
-            <i id="icon7" class='bx bxs-caret-down-circle'></i> Agenda 7: Aviation and Environment
-        </button>
-        <!-- List 7 -->
-        <ul class="list" id="list7">
-            @foreach($agenda7 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 8 -->
-        <button class="collapse-button" onclick="toggleList('list8')">
-            <i id="icon8" class='bx bxs-caret-down-circle'></i> Agenda 8: Capacity Development and Implementation
-        </button>
-        <!-- List 8 -->
-        <ul class="list" id="list8">
-            @foreach($agenda8 as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 9 -->
-        <button class="collapse-button" onclick="toggleList('list9')">
-            <i id="icon9" class='bx bxs-caret-down-circle'></i> Agenda Item 9a: Ratification of International Air Law Treaties
-        </button>
-        <!-- List 9 -->
-        <ul class="list" id="list9">
-            @foreach($agenda9a as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-        <button class="collapse-button" onclick="toggleList('list10')">
-            <i id="icon10" class='bx bxs-caret-down-circle'></i> Agenda Item 9b: Updates
-        </button>
-        <!-- List 9 -->
-        <ul class="list" id="list10">
-            @foreach($agenda9b as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-        <!-- Toggle Button 10 -->
-        <button class="collapse-button" onclick="toggleList('list11')">
-            <i id="icon11" class='bx bxs-caret-down-circle'></i> Agenda Item 10 a: Any Other Matters
-        </button>
-        <!-- List 10 -->
-        <ul class="list" id="list11">
-            @foreach($agenda10a as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 11 -->
-        <button class="collapse-button" onclick="toggleList('list12')">
-            <i id="icon12" class='bx bxs-caret-down-circle'></i> Agenda Item 10 b: Hosting Offer and Theme Topic for the forthcoming Conference(s) of APAC DGCA
-        </button>
-        <!-- List 11 -->
-        <ul class="list" id="list12">
-            @foreach($agenda10b as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 12 -->
-        <button class="collapse-button" onclick="toggleList('list13')">
-            <i id="icon13" class='bx bxs-caret-down-circle'></i> Agenda Item 10 c: Endorsement of Action Items arising from the present Conference
-        </button>
-        <!-- List 12 -->
-        <ul class="list" id="list13">
-            @foreach($agenda10c as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-
-        <!-- Toggle Button 13 -->
-        <button class="collapse-button" onclick="toggleList('list14')">
-            <i id="icon14" class='bx bxs-caret-down-circle'></i> Presentation/Video
-        </button>
-        <!-- List 13 -->
-        <ul class="list" id="list14">
-            @foreach($presentation as $discussion)
-            <li class="list-item">{{ $discussion->name }}</li>
-            @endforeach
-        </ul>
-    </div>
+    </main>
 </div>
 
-</div>
+
 <script>
     function toggleList(listId) {
         const list = document.getElementById(listId);
