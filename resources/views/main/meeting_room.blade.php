@@ -22,11 +22,11 @@
         <main class="guidelines">
             <header class="guide-header">Guidelines for Meeting Room Reservation</header>
             <ul>
-                <li>You can make a reservation per hour. If you want a meeting room for more than 2 hours or for any other inquiries, please contact the 59th DGCA 2024 Secretariat (TBF).</li>
-                <li>The reservation will be confirmed after the acceptance of the request by the 59th DGCA Secretariat.</li>
-                <li>The requested side meeting will be added to the meeting schedule once the request has been accepted.</li>
-                <li>The side meeting rooms will be provided complimentary by the organizers.</li>
-                <li>The side meetings should not interrupt the main conference.</li>
+                <li>Reservations can be made per hour. For bookings exceeding 2 hours or for any other inquiries, please reach out to the 59th DGCA 2024 Secretariat (TBA).</li>
+                <li>Reservation confirmation will be subject to acceptance by the 59th DGCA Secretariat.</li>
+                <li>Once accepted, requested side meetings will be incorporated into the meeting schedule.</li>
+                <li>Side meeting rooms will be provided complimentary by the organizers.</li>
+                <li>Please ensure that the side meetings do not disrupt the main conference proceedings.</li>
             </ul>
         </main>
     </section>

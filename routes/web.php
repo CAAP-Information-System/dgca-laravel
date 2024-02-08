@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostingController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SideMeetingController;
 use Illuminate\Support\Facades\Auth;
@@ -51,9 +52,14 @@ Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('
 Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
 Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
 Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
-
 Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
 Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
+
+// News and Updates
+Route::get('/news', [HomeController::class, 'viewNews'])->name('news');
+Route::get('/create-news', [PostingController::class, 'createNews'])->name('create-news');
+Route::post('/register-news', [PostingController::class, 'registerNews'])->name('register-news');
+
 
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');
 Route::get('/medical-support', [HomeController::class, 'viewMedicalSupport'])->name('medical-support');

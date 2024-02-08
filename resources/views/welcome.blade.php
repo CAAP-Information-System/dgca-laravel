@@ -50,6 +50,7 @@
     </div>
 
     <section class="main-conf-nav">
+        <div class="container">
         <nav class="conf-nav">
             <ul>
                 <li class="dropdown">
@@ -108,6 +109,7 @@
                 </li>
             </ul>
         </nav>
+        </div>
 
     </section>
 
@@ -313,6 +315,18 @@
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
     })
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {
+        myFunction()
+    };
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
 </script>
 
 

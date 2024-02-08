@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use App\Models\User;
 use App\Notifications\ApprovalNotification;
 use Illuminate\Http\Request;
@@ -87,6 +88,11 @@ class HomeController extends Controller
     public function viewVenueInformation()
     {
         return view('main.delegates.venue_info');
+    }
+    public function viewNews()
+    {
+        $newspost = News::all();
+        return view('main.news.news_page', compact('newspost'));
     }
 
 

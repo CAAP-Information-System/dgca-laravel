@@ -117,9 +117,8 @@
     border-radius: 15px;
 }
 .guide-header{
-    font-size: 25px;
-    font-weight: bold;
-    color: #002868;
+    font-size: 2rem;
+    color: #50A9FB;
 }
 .guidelines ul li{
     padding-top: 15px;

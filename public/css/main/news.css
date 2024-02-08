@@ -1,0 +1,13 @@
+.news-main-header{
+    font-size: 3rem;
+    color: #3b3b3b;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 25px;
+}
+.news-card-title{
+    text-align: justify;
+}
+.news-card-text{
+    text-align: justify;
+}

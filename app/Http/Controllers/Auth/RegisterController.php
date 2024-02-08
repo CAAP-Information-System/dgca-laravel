@@ -76,7 +76,7 @@ class RegisterController extends Controller
 
         if (isset($data['profile_image'])) {
             $fullName = $data['first_name'] . '_' . $data['last_name'];
-            $fileName = $fullName;
+            $fileName = $fullName . '.jpg';
             $profileImagePath = $data['profile_image']->storeAs('profile_images', $fileName, 'public');
         }
 

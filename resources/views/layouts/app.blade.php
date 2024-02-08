@@ -50,7 +50,6 @@
     * {
         font-family: 'Poppins', sans-serif;
     }
-
     .caap-video {
         width: 100%;
         height: auto;
@@ -125,13 +124,11 @@
             <div class="navbar navbar-expand-lg ">
 
                 <div class="top-nav">
-                    <!-- <div style="margin-left: 60%;"></div> -->
                     @guest
                     @if (Route::has('login'))
 
                     <li class="nav-item">
                         <a id="login-register" class="nav-link" href="{{ route('login') }}">
-                            <!-- <i class="fa-solid fa-right-to-bracket fa-lg"></i> &nbsp -->
                             Login/Register
                         </a>
                     </li>
@@ -140,14 +137,12 @@
                     @if(auth()->check() && auth()->user()->access_role != "admin")
                     <li class="nav-item">
                         <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
-                            <!-- <i class="fa-solid fa-house"></i>&nbsp -->
                             Home
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a id="login-register" class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <!-- <i class="fa-solid fa-circle-user"></i>&nbsp -->
                             {{ Auth::user()->first_name }}
                         </a>
 
@@ -198,16 +193,6 @@
                                     <li><a href="#">Social/Cultural Function</a></li>
                                 </ul>
                             </li>
-                            <!-- <li>
-                                <a href="#">Delegate's Corner</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="{{ route('bulletin') }}">Conference Bulletin</a></li>
-                                    <li><a href="#">VISA Information</a></li>
-                                    <li><a href="#">Transport Schedule</a></li>
-                                    <li><a href="#">Venue</a></li>
-                                </ul>
-                            </li> -->
                             <li>
                                 <a href="#">Exhibit & Sponsors</a>
                                 <i class='bx bxs-chevron-down js-arrow arrow '></i>
