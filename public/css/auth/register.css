@@ -242,6 +242,9 @@
         width: 100%;
         background-color: #ffff;
     }
+    .auth-hdr {
+        width: 100%;
+    }
 
 }
 
