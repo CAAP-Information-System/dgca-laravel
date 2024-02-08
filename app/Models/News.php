@@ -11,6 +11,7 @@ class News extends Model
         'news_title',
         'news_description',
         'news_image',
+        'caption',
         'date_uploaded',
     ];
 

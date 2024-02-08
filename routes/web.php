@@ -59,6 +59,7 @@ Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeeti
 Route::get('/news', [HomeController::class, 'viewNews'])->name('news');
 Route::get('/create-news', [PostingController::class, 'createNews'])->name('create-news');
 Route::post('/register-news', [PostingController::class, 'registerNews'])->name('register-news');
+Route::get('/article/{id}', [HomeController::class, 'viewNewsArticle'])->name('article');
 
 
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');

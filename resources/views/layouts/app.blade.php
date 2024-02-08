@@ -188,7 +188,7 @@
                                 <a href="#">Event</a>
                                 <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                 <ul class="js-sub-menu sub-menu">
-                                    <li><a href="#">News & Updates</a></li>
+                                    <li><a href="{{ route('news') }}">News & Updates</a></li>
                                     <li><a href="#">Program Overview</a></li>
                                     <li><a href="#">Social/Cultural Function</a></li>
                                 </ul>

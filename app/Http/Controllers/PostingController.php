@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class PostingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function createNews()
     {
         return view('main.news.create_news');
@@ -33,12 +38,15 @@ class PostingController extends Controller
             $size = $news_image->getSize();
             $newsTitle = $request->input('news_title');
             $newsDesc = $request->input('news_description');
+            $newsCaption = $request->input('caption');
 
             News::create([
                 'date_uploaded' => now(),
                 'news_title' => $newsTitle,
                 'news_description' => $newsDesc,
-                'news_image' => $news_imageName
+                'news_image' => $news_imageName,
+                'caption' => $newsCaption,
+
             ]);
 
             // Include the news_image name in the success message

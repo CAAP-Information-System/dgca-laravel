@@ -1,0 +1,50 @@
+.news-main-header{
+    font-size: 3rem;
+    color: #3b3b3b;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 25px;
+}
+.news-title{
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: none;
+    color: #3b3b3b;
+    font-weight: 700;
+}
+.news-card-text{
+    margin-top: 15px;
+    text-align: justify;
+    height: 90px; /* Adjust as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show before ellipsis */
+    -webkit-box-orient: vertical;
+}
+.card-body{
+    margin: 1.5vh;
+}
+.img-fluid{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.read-button{
+    display: inline-block;
+    padding: 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    background-color: #50A9FB;
+    color: #ffff;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 99px;
+}
+.read-button:hover{
+    background-color: #969696;
+    color: #ffff;
+}

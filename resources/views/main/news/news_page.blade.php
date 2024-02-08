@@ -2,7 +2,7 @@
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url('css/main/news.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/main/news/news.css') }}">
 <section class="head-banner">
     <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
     <main class="banner-content">
@@ -26,16 +26,14 @@
                     @foreach($newspost as $post)
                     <div class="col-lg-4 col-md-12 mb-4">
                         <div class="card">
-                            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <div class="bg-image hover-overlay">
                                 <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
+
                             </div>
                             <div class="card-body">
-                                <h5 class="news-card-title">{{ $post->news_title }}</h5>
+                                <a href="{{ route('article', ['id' => $post->id]) }}" class="news-title" style="    text-align: justify;">{{ $post->news_title }}</a>
                                 <p class="news-card-text">{{ $post->news_description }}</p>
-                                <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Read</a>
+                                <a href="" class="read-button">Read More</a>
                             </div>
                         </div>
                     </div>

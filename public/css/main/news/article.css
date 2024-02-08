@@ -1,0 +1,35 @@
+.news-img{
+    display: block;
+    padding: 3vh;
+    margin: 0 auto;
+    width: 450px;
+    height: auto;
+}
+.img-caption{
+    color: #969696;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+}
+.article-header{
+    text-align: justify;
+    font-size: 2rem;
+    color: #50A9FB;
+    line-height: 5vh;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    text-transform: capitalize;
+}
+.article-published{
+    font-size: 17px;
+    color: #969696;
+    font-style: italic;
+
+}
+.article-content{
+    text-align: justify;
+    font-size: 16px;
+    color: #3b3b3b;
+    padding: 15px;
+    margin-top: 2vh;
+}

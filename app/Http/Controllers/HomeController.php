@@ -92,7 +92,12 @@ class HomeController extends Controller
     public function viewNews()
     {
         $newspost = News::all();
-        return view('main.news.news_page', compact('newspost'));
+        return view('main.news.news_page', ['newspost' => $newspost]);
+    }
+    public function viewNewsArticle($id)
+    {
+        $article = News::find($id);
+        return view('main.news.view_article', ['article' => $article]);
     }
 
 
