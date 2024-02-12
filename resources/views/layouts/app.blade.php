@@ -283,11 +283,9 @@
     </main>
     </div>
 </body>
-@if(auth()->check() && auth()->user()->access_role == "!admin" && auth()->user()->access_role == "!media")
+
 <footer class="text-center bg-body-tertiary text-muted">
-    <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
         <div class="me-5 d-none d-lg-block">
             <a href="https://caap.gov.ph" target="_blank">
                 <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo">
@@ -295,7 +293,6 @@
             <a href="https://www.icao.int/Pages/default.aspx" target="_blank"><img src="{{ asset('img/logo/icao-logo.png') }}" alt="ICAO Logo" class="icao-logo"></a>
             <a href="#"><img src="{{ asset('img/logo/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo"></a>
         </div>
-        <!-- Left -->
 
     </section>
     <section class="sponsors-logo">
@@ -349,76 +346,15 @@
             <!-- Grid row -->
         </div>
     </section>
-
-
-    <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         Copyright © <span class="text-bold">59th Conference of DGCA</span> All rights reserved.
     </div>
-    <!-- Copyright -->
+
 </footer>
-@endif
-<script>
-    // search-box open close js code
-    let navbar = document.querySelector(".navbar");
-    let searchBox = document.querySelector(".search-box .bx-search");
-    // let searchBoxCancel = document.querySelector(".search-box .bx-x");
 
-
-
-    // sidebar open close js code
-    let navLinks = document.querySelector(".nav-links");
-    let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-    let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-    menuOpenBtn.onclick = function() {
-        navLinks.style.left = "0";
-    };
-    menuCloseBtn.onclick = function() {
-        navLinks.style.left = "-100%";
-    };
-
-    // sidebar submenu open close js code
-    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-    htmlcssArrow.onclick = function() {
-        navLinks.classList.toggle("show1");
-    };
-    let moreArrow = document.querySelector(".more-arrow");
-    moreArrow.onclick = function() {
-        navLinks.classList.toggle("show2");
-    };
-    let jsArrow = document.querySelector(".js-arrow");
-    jsArrow.onclick = function() {
-        navLinks.classList.toggle("show3");
-    };
-</script>
-
-<script>
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(function() {
-            document.getElementById("preloader").style.display = "none";
-            document.querySelector(".content").style.display = "block";
-        }, 1000);
-    });
-</script>
+<script src="{{ asset('js/app/nav.js') }}"></script>
+<script src="{{ asset('js/app/dropdown.js') }}"></script>
+<script src="{{ asset('js/app/preloader.js') }}"></script>
 
 
 </html>

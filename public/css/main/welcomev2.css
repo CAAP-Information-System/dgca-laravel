@@ -144,21 +144,24 @@
         rgba(134, 206, 236, 1) 100%,
         rgba(44, 172, 223, 1) 100%
     );
+    padding: 7vh;
 }
 .message-card {
-    width: 50%;
+    width: 80%;
     font-size: 15px;
 }
 .message-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     padding-bottom: 15px;
     color: #38b9e1;
     letter-spacing: 5px;
     line-height: 5vh;
+    text-align: center;
 }
 .message-content {
     text-align: justify;
+    padding-top: 3vh;
 }
 .dg-content {
     padding: 5vh;

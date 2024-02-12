@@ -16,6 +16,7 @@
 
 .notice-card {
     display: flex;
+    align-items: center;
     gap: 3vh;
     margin: 30px;
     background-color: #ffff;
@@ -24,8 +25,8 @@
 }
 
 .notice-img {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     align-self: center;
 }
@@ -51,4 +52,8 @@
     margin-top: 20px;
     font-size: 15px;
     text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
 }

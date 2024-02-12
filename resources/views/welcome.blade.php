@@ -148,9 +148,9 @@
                 Enim diam vulputate ut pharetra. Quam adipiscing vitae proin sagittis. Lectus urna duis convallis convallis tellus id. Luctus accumsan tortor posuere ac. Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Ipsum consequat nisl vel pretium lectus quam id. Massa tempor nec feugiat nisl pretium. Faucibus in ornare quam viverra orci sagittis. Mollis nunc sed id semper risus in. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Imperdiet dui accumsan sit amet nulla. Sit amet cursus sit amet dictum. Posuere ac ut consequat semper viverra nam libero justo. Lorem dolor sed viverra ipsum.
             </div>
         </div>
-        <div class="dg-content">
+        <!-- <div class="dg-content">
             <img src="{{ asset('img/welcome-msg/capt-tamayo-new.png') }}" alt="dg-tamayo" class="dg-img">
-        </div>
+        </div> -->
 
 
     </section>
@@ -167,9 +167,9 @@
                     <div class="notice-content">
                         <a href="#" class="notice-title">{{ $post->news_title }}</a>
                         <div class="date">{{ $post->date_uploaded }}</div>
-                        <p class="notice-description">
-                            {{ $post->news_description }}
-                        </p>
+                        <!-- <p class="notice-description">
+                            {!!$post->news_description!!}
+                        </p> -->
                     </div>
 
                 </div>
