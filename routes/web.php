@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SideMeetingController;
@@ -39,7 +40,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
 
 Route::middleware('public')->group(function () {
-
 });
 Route::get('/home', [HomeController::class, 'index'])->name('welcome');
 Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
@@ -60,6 +60,17 @@ Route::get('/news', [HomeController::class, 'viewNews'])->name('news');
 Route::get('/create-news', [PostingController::class, 'createNews'])->name('create-news');
 Route::post('/register-news', [PostingController::class, 'registerNews'])->name('register-news');
 Route::get('/article/{id}', [HomeController::class, 'viewNewsArticle'])->name('article');
+
+// Media Middleware
+Route::prefix('media')->middleware(['auth', 'isMedia'])->group(function () {
+    Route::get('/dashboard', [MediaController::class, 'dashboard'])->name('media-dashboard');
+    Route::get('/create-news', [PostingController::class, 'createNews'])->name('create-news');
+    Route::post('/register-news', [PostingController::class, 'registerNews'])->name('register-news');
+    Route::get('/edit-news/{id}', [MediaController::class, 'edit'])->name('edit-news');
+    Route::put('/update-news/{id}', [MediaController::class, 'update'])->name('update-news');
+    Route::delete('/news/{id}', [MediaController::class, 'delete'])->name('delete-news');
+});
+
 
 
 Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bulletin');

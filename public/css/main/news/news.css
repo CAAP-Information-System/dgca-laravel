@@ -5,13 +5,23 @@
     text-transform: capitalize;
     margin: 25px;
 }
+.card{
+    width: 400px;
+    height: 500px;
+}
 .news-title{
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 20px;
     text-decoration: none;
     color: #3b3b3b;
     font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show before ellipsis */
+    -webkit-box-orient: vertical;
 }
+
 .news-card-text{
     margin-top: 15px;
     text-align: justify;
@@ -32,9 +42,13 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+.read-more-container{
+    display: flex;
+    justify-content: baseline;
+}
 .read-button{
-    display: inline-block;
+    display: block;
+    text-align: center;
     padding: 15px;
     font-size: 16px;
     letter-spacing: 2px;
@@ -42,7 +56,6 @@
     color: #ffff;
     text-decoration: none;
     width: 100%;
-    border-radius: 99px;
 }
 .read-button:hover{
     background-color: #969696;

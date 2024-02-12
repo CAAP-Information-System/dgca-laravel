@@ -23,15 +23,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = auth()->user();
 
+        $user = auth()->user();
+        $newspost = News::all();
         // Check if the modal has already been shown in this session
         $modalShown = session('modal_shown', false);
 
         // Store the flag in the session to ensure it's shown only once per login
         session(['modal_shown' => true]);
 
-        return view('welcome', compact('user', 'modalShown'));
+        return view('welcome', compact('user', 'modalShown', 'newspost'));
     }
 
 

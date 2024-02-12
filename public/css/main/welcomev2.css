@@ -30,19 +30,20 @@
     margin-top: 5vh;
     font-size: 5.2rem;
     font-weight: 800;
-    line-height: 9vh;
+    line-height: 8vh;
     width: 35%;
+    font-family: 'Segoe UI', sans-serif;
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
 }
 .title-sub {
-    font-size: 5rem;
+    padding-top: 3vh;
+    font-size: 3rem;
     /* font-family: "Quiapo Free", sans-serif;
     color: #002868; */
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .container {
-
     margin: 0 auto;
     padding-bottom: 5vh;
 }
@@ -354,174 +355,168 @@ a.slide_btn {
         width: 55vw;
     }
 }
-    @media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-        .banner{
-            color: #ffff;
-            text-align: center;
-            margin-left: 15px;
-        }
-
-        .title{
-            margin-top: 8vh;
-            font-size: 9vw;
-            font-weight: 800;
-            line-height: 10vh;
-            width: 100%;
-            text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
-
-        }
-        .title-sub{
-            margin-top: 2vh;
-            font-size: 6vw!important;
-            line-height: 9vh;
-            text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
-        }
-        .button-19 {
-            font-size: 1.8vw !important;
-            width: 35% !important;
-        }
-        .conf-nav{
-            margin-bottom: 8vh;
-        }
-        .conf-nav ul{
-            display: flex;
-            justify-content:center;
-        }
-        .conf-nav ul li a {
-            padding: 16px;
-            font-size: 1.5vw;
-        }
-        .div-header{
-            font-size: 5vw;
-        }
-        .dg-message{
-            margin-top: 5vh;
-        }
-        .dg-content{
-            display: none;
-        }
-        .message-card{
-            width: 100%;
-            padding: 15px;
-        }
-        .message-title{
-            text-align: center;
-            line-height: 4vh;
-            font-size: 2.5rem;
-            letter-spacing: normal;
-        }
-        .message-content{
-            text-align: justify;
-            padding: 15px;
-        }
-        .countdown ul li{
-            font-size: 3vw;
-        }
-    }
-    @media only screen and (min-width: 300px) and (max-width: 600px) {
-
-        .banner{
-            color: #ffff;
-            text-align: center;
-            margin-left: -5px;
-
-        }
-
-        .title{
-            margin-top: 8vh;
-            font-size: 12vw;
-            font-weight: 800;
-            line-height: 7vh;
-            width: 100%;
-            text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
-        }
-        .title-sub{
-            margin-top: 2vh;
-            font-size: 10vw!important;
-            line-height: 9vh;
-            text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
-        }
-
-        .button-19 {
-            font-size: 4vw !important;
-            width: 50% !important; /* Adjust the width as needed */
-        }
-        .conf-nav{
-            margin-bottom: 10vh;
-        }
-        .dropdown-content {
-            margin-left: -7vw;
-            width: 50vw;
-        }
-
-        .conf-nav ul{
-            display: flex;
-            justify-content:center;
-            flex-wrap: wrap;
-        }
-        .conf-nav ul li a {
-            padding: 16px;
-            font-size: 4vw;
-
-        }
-        .div-header{
-            font-size: 7vw;
-        }
-        .dg-message{
-            margin-top: 5vh;
-        }
-        .dg-content{
-            display: none;
-        }
-        .message-card{
-            width: 100%;
-            padding: 15px;
-        }
-        .message-title{
-            text-align: center;
-            line-height: 6vh !important;
-            font-size: 3rem;
-            letter-spacing: normal;
-        }
-        .message-content{
-            text-align: justify;
-            padding: 15px;
-        }
-        .countdown-header{
-            font-size: 5vw;
-        }
-        .countdown-main{
-            margin-top: 15rem !important;
-        }
-        .countdown ul li {
-            display: inline-block;
-            font-size: 3.3vw;
-            list-style-type: none;
-            text-transform: uppercase;
-        }
-        .countdown ul {
-            margin-left: -10%;
-        }
-
-        .countdown ul li span {
-            width: 100%;
-            display: block;
-            font-size: 6vw;
-            color: #3b3b3b;
-            padding: 10px;
-            border-radius: 20px;
-            font-weight: 800;
-        }
-
-        .notice-header{
-            font-size: 5vw;
-        }
-        .notice-content{
-            font-size: 5vw;
-        }
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .banner {
+        color: #ffff;
+        text-align: center;
+        margin-left: 15px;
     }
 
+    .title {
+        margin-top: 8vh;
+        font-size: 9vw;
+        font-weight: 800;
+        line-height: 10vh;
+        width: 100%;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .title-sub {
+        margin-top: 2vh;
+        font-size: 6vw !important;
+        line-height: 9vh;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .button-19 {
+        font-size: 1.8vw !important;
+        width: 35% !important;
+    }
+    .conf-nav {
+        margin-bottom: 8vh;
+    }
+    .conf-nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    .conf-nav ul li a {
+        padding: 16px;
+        font-size: 1.5vw;
+    }
+    .div-header {
+        font-size: 5vw;
+    }
+    .dg-message {
+        margin-top: 5vh;
+    }
+    .dg-content {
+        display: none;
+    }
+    .message-card {
+        width: 100%;
+        padding: 15px;
+    }
+    .message-title {
+        text-align: center;
+        line-height: 4vh;
+        font-size: 2.5rem;
+        letter-spacing: normal;
+    }
+    .message-content {
+        text-align: justify;
+        padding: 15px;
+    }
+    .countdown ul li {
+        font-size: 3vw;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .banner {
+        color: #ffff;
+        text-align: center;
+        margin-left: -5px;
+    }
+
+    .title {
+        margin-top: 8vh;
+        font-size: 12vw;
+        font-weight: 800;
+        line-height: 7vh;
+        width: 100%;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .title-sub {
+        margin-top: 2vh;
+        font-size: 10vw !important;
+        line-height: 9vh;
+        text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
+    }
+
+    .button-19 {
+        font-size: 4vw !important;
+        width: 50% !important; /* Adjust the width as needed */
+    }
+    .conf-nav {
+        margin-bottom: 10vh;
+    }
+    .dropdown-content {
+        margin-left: -7vw;
+        width: 50vw;
+    }
+
+    .conf-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .conf-nav ul li a {
+        padding: 16px;
+        font-size: 4vw;
+    }
+    .div-header {
+        font-size: 7vw;
+    }
+    .dg-message {
+        margin-top: 5vh;
+    }
+    .dg-content {
+        display: none;
+    }
+    .message-card {
+        width: 100%;
+        padding: 15px;
+    }
+    .message-title {
+        text-align: center;
+        line-height: 6vh !important;
+        font-size: 3rem;
+        letter-spacing: normal;
+    }
+    .message-content {
+        text-align: justify;
+        padding: 15px;
+    }
+    .countdown-header {
+        font-size: 5vw;
+    }
+    .countdown-main {
+        margin-top: 15rem !important;
+    }
+    .countdown ul li {
+        display: inline-block;
+        font-size: 3.3vw;
+        list-style-type: none;
+        text-transform: uppercase;
+    }
+    .countdown ul {
+        margin-left: -10%;
+    }
+
+    .countdown ul li span {
+        width: 100%;
+        display: block;
+        font-size: 6vw;
+        color: #3b3b3b;
+        padding: 10px;
+        border-radius: 20px;
+        font-weight: 800;
+    }
+
+    .notice-header {
+        font-size: 5vw;
+    }
+    .notice-content {
+        font-size: 5vw;
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .previous_btn {
@@ -530,7 +525,7 @@ a.slide_btn {
     .next_btn {
         right: 50px;
     }
-    .countdown-main{
+    .countdown-main {
         margin-top: 40%;
     }
     .conf-nav ul li a {
@@ -543,13 +538,12 @@ a.slide_btn {
 }
 
 @media screen and (max-width: 768px) {
-
-    .banner{
+    .banner {
         color: #ffff;
         text-align: center;
     }
 
-    .title{
+    .title {
         margin-top: 8vh;
         font-size: 4=3rem;
         font-weight: 800;
@@ -557,44 +551,64 @@ a.slide_btn {
         width: 100%;
         text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     }
-    .title-sub{
+    .title-sub {
         margin-top: 2vh;
         font-size: 3rem;
         line-height: 9vh;
         text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     }
 
-    .conf-nav{
+    .conf-nav {
         margin-bottom: 8vh;
     }
-    .conf-nav ul{
+    .conf-nav ul {
         display: flex;
         flex-direction: column;
-        justify-content:left;
+        justify-content: left;
     }
     .conf-nav ul li a {
         padding: 16px;
     }
-    .dg-message{
+    .dg-message {
         margin-top: 5vh;
     }
-    .dg-content{
+    .dg-content {
         display: none;
     }
-    .message-card{
+    .message-card {
         width: 100%;
         padding: 15px;
     }
-    .message-title{
+    .message-title {
         text-align: center;
         line-height: 4vh;
         font-size: 2.5rem;
         letter-spacing: normal;
     }
-    .message-content{
+    .message-content {
         text-align: justify;
         padding: 15px;
     }
+}
+.join-container{
+    padding-top: 15px;
+    padding-bottom: 25px;
+    width: 100%;
+}
+.join-now{
+    font-size: 19px;
+    padding: 15px;
+    border: 3px solid #ffff;
+    text-decoration: none;
+    color: #001e50;
+    border-radius: 99px;
+    background-color: #ffff;
+    text-align: center;
+    width: 40%;
+    transition: .1s ease;
+}
+.join-now:hover{
+    background-color: transparent;
 }
 
 .button-19 {
@@ -658,4 +672,3 @@ a.slide_btn {
 .button-19:disabled {
     cursor: auto;
 }
-

@@ -1,0 +1,18 @@
+.dashboard-main {
+    background-color: #fbfbfb;
+}
+.md-header{
+    font-size: 3rem;
+    color: #50A9FB;
+    padding: 20px;
+}
+.md-table-section tr{
+    color: #3b3b3b;
+}
+.short{
+    width: 30%;
+}
+.thead{
+    padding: 15px;
+    background-color: #50A9FB;
+}

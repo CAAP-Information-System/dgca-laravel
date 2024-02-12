@@ -47,6 +47,10 @@ class LoginController extends Controller
         {
             return redirect('admin/dashboard');
         }
+        elseif(Auth::user()->access_role == 'media')
+        {
+            return redirect('/');
+        }
     }
 
     public function showLoginForm()

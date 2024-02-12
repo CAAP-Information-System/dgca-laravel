@@ -41,7 +41,7 @@
 
                         <div class="form-group">
                             <label for="news_description" class="form-label">{{ __('News Description') }}</label>
-                            <textarea id="news_description" class="form-control form-input @error('news_description') is-invalid @enderror" name="news_description" required>{{ old('news_description') }}</textarea>
+                            <textarea id="news_description" class="form-control form-input summernote @error('news_description') is-invalid @enderror" name="news_description" required>{{ old('news_description') }}</textarea>
                             @error('news_description')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -83,6 +83,7 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/media/edit.js') }}"></script>
 <script>
     function previewImage(event) {
         var reader = new FileReader();

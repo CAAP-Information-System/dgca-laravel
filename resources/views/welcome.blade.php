@@ -40,10 +40,12 @@
             </video>
             <main class="banner">
                 <!-- <header class="welcome-title">Welcome</header> -->
-                <header class="title">59th Conference of Director Generals</header>
+                <header class="title">'59th Conference of Director Generals'</header>
                 <p class="title-sub">Philippines 2024</p>
                 @if(!auth()->check())
-                <a href="{{ route('login')}}" class="button-19">Let's Join Now!</a>
+                <div class="join-container">
+                    <a href="{{ route('login')}}" class="join-now">Join Now!</a>
+                </div>
                 @endif
             </main>
         </section>
@@ -51,64 +53,68 @@
 
     <section class="main-conf-nav">
         <div class="container">
-        <nav class="conf-nav">
-            <ul>
-                <li class="dropdown">
-                    <a href="#">
-                        <i class="fa-solid fa-users"></i>
-                        Conference
-                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
-                    </a>
-                    <div class="dropdown-content">
-                        <!-- Dropdown content goes here -->
-                        <a href="{{ route('welcome') }}">Welcome Message</a>
-                        <a href="{{ route('agenda') }}">Agenda</a>
-                        <a href="#">Programme</a>
-                        <!-- <a href="{{ route('participants') }}">Participants</a> -->
-                        <a href="{{ route('the-gallery') }}">The Gallery</a>
-                    </div>
-                </li>
-
-
-                <li>
-                    <a href="{{ route('meeting-room') }}">
-                        <i class="fa-solid fa-handshake"></i>
-                        Side Meeting
-                        <!-- <i class="fa-solid fa-chevron-down side" style="color: #ffff;"></i> -->
-
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">
-                        <i class="fa-solid fa-user-tie"></i>
-                        Delegate's Corner
-                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="{{ route('bulletin') }}">Conference Bulletin</a>
-                        <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
-                        <a href="#">Transport Schedule</a>
-                        <a href="{{ route('venue') }}">Venue Information</a>
-                        <a href="{{ route('medical-support') }}">Medical Support</a>
-                        <a href="#">Hotel Recommendations</a>
-                        <a href="#">Tips and Advices</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">
-                        <i class="fa-solid fa-folder-open"></i>
-                        Documents
-                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="{{ route('disc-paper') }}">Discussion</a>
-                        <a href="{{ route('info-paper') }}">Information</a>
-                        <a href="{{ route('view-submission') }}">Submission Guide</a>
-                        <a href="{{ route('create.file') }}">Submit Document</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+            <nav class="conf-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            Conference
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('welcome') }}">Welcome Message</a>
+                            <a href="{{ route('agenda') }}">Agenda</a>
+                            <a href="#">Programme</a>
+                            <a href="{{ route('the-gallery') }}">The Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{ route('meeting-room') }}">
+                            <i class="fa-solid fa-handshake"></i>
+                            Side Meeting
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-user-tie"></i>
+                            Delegate's Corner
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
+                            <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
+                            <a href="#">Transport Schedule</a>
+                            <a href="{{ route('venue') }}">Venue Information</a>
+                            <a href="{{ route('medical-support') }}">Medical Support</a>
+                            <a href="#">Hotel Recommendations</a>
+                            <a href="#">Tips and Advices</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-folder-open"></i>
+                            Documents
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('disc-paper') }}">Create News</a>
+                            <a href="{{ route('info-paper') }}">Upload Gallery</a>
+                            <a href="{{ route('view-submission') }}">Submission Guide</a>
+                            <a href="{{ route('create.file') }}">Submit Document</a>
+                        </div>
+                    </li>
+                    @if(auth()->check() && auth()->user()->access_role == "media")
+                    <li class="dropdown">
+                        <a href="#" class="text-danger">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Media Committee
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('create-news') }}">Create News</a>
+                            <a href="{{ route('info-paper') }}">Upload Gallery</a>
+                            <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
+                        </div>
+                    </li>
+                    @endif
+                </ul>
+            </nav>
         </div>
 
     </section>
@@ -149,23 +155,31 @@
 
     </section>
 
-
+    @if(isset($newspost))
     <section class="notices-section">
         <header class="notice-header">Notice Board</header>
         <div class="container">
             <main class="notice-container">
+
+                @foreach($newspost as $post)
                 <div class="notice-card">
-                    <img src="{{ asset('img/shangri-la/shangrila-full.jpg') }}" alt="notice image" class="notice-img">
+                    <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" alt="notice image" class="notice-img">
                     <div class="notice-content">
-                        <a href="#" class="notice-title">Figma ipsum component variant main</a>
+                        <a href="#" class="notice-title">{{ $post->news_title }}</a>
+                        <div class="date">{{ $post->date_uploaded }}</div>
                         <p class="notice-description">
-                            Figma ipsum component variant main layer. Invite shadow comment bold rotate pixel. Ipsum overflow duplicate vector frame layer line team. Pencil library thumbnail library variant shadow.
+                            {{ $post->news_description }}
                         </p>
                     </div>
+
                 </div>
+                @endforeach
+
             </main>
+
         </div>
     </section>
+    @endif
 
     <!-- <section>
         <div class="slider">

@@ -30,6 +30,10 @@
 
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
+    <!-- SUMMERNOTE CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
     <!-- Your custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +54,7 @@
     * {
         font-family: 'Poppins', sans-serif;
     }
+
     .caap-video {
         width: 100%;
         height: auto;
@@ -278,6 +283,7 @@
     </main>
     </div>
 </body>
+@if(auth()->check() && auth()->user()->access_role == "!admin" && auth()->user()->access_role == "!media")
 <footer class="text-center bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -351,7 +357,7 @@
     </div>
     <!-- Copyright -->
 </footer>
-
+@endif
 <script>
     // search-box open close js code
     let navbar = document.querySelector(".navbar");

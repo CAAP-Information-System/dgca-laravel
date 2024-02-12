@@ -1,3 +1,6 @@
+.main-content{
+    margin: 3vh;
+}
 .news-img{
     display: block;
     padding: 3vh;
@@ -32,4 +35,21 @@
     color: #3b3b3b;
     padding: 15px;
     margin-top: 2vh;
+}
+.return-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    color: #50A9FB;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 99px;
+    border: 2px solid #50A9FB;
+    width: 20%;
+    text-align: center;
+    transition: .1s ease;
+}
+.return-btn:hover{
+    background-color: #50A9FB;
+    color: #ffff;
 }

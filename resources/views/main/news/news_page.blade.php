@@ -32,9 +32,12 @@
                             </div>
                             <div class="card-body">
                                 <a href="{{ route('article', ['id' => $post->id]) }}" class="news-title" style="    text-align: justify;">{{ $post->news_title }}</a>
-                                <p class="news-card-text">{{ $post->news_description }}</p>
-                                <a href="" class="read-button">Read More</a>
+                                <!-- <p class="news-card-text">{!!$post->news_description!!}</p> -->
+
                             </div>
+                            <div class="read-more-container">
+                                    <a href="{{ route('article', ['id' => $post->id]) }}" class="read-button">Read More</a>
+                                </div>
                         </div>
                     </div>
                     @endforeach
