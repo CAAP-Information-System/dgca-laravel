@@ -32,24 +32,24 @@
     </div>
     @endif
 
-    <div class="">
-        <section class="welcome-banner">
-            <video autoplay loop muted>
-                <source src="{{ asset('mp4/edited-dgca52.mp4') }}" type="video/mp4">
+    <section class="welcome-banner">
+        <video autoplay loop muted>
+            <source src="{{ asset('mp4/edited-dgca52.mp4') }}" type="video/mp4">
 
-            </video>
-            <main class="banner">
-                <!-- <header class="welcome-title">Welcome</header> -->
-                <header class="title">'59th Conference of Director Generals'</header>
-                <p class="title-sub">Philippines 2024</p>
-                @if(!auth()->check())
-                <div class="join-container">
-                    <a href="{{ route('login')}}" class="join-now">Join Now!</a>
-                </div>
-                @endif
-            </main>
-        </section>
-    </div>
+        </video>
+        <main class="banner">
+            <!-- <header class="welcome-title">Welcome</header> -->
+            <header class="title">59<span class="th">th</span> Conference of Director Generals</header>
+            <!-- <p class="banner-theme">This is a theme message</p> -->
+            <p class="title-sub">Philippines 2024</p>
+
+            @if(!auth()->check())
+            <div class="join-container">
+                <a href="{{ route('login')}}" class="join-now">Join Now!</a>
+            </div>
+            @endif
+        </main>
+    </section>
 
     <section class="main-conf-nav">
         <div class="container">
@@ -119,7 +119,7 @@
 
     </section>
 
-    <section class="container count-section fade-in-section hidden">
+    <section class="container count-section fade-in-section">
         <main class="countdown-main">
             <div class="countdown-sect">
                 <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
@@ -138,9 +138,9 @@
     <section class="section-divider">
         <header class="div-header">Welcome and Mabuhay Delegates!</header>
     </section>
-    <section class="dg-message hidden">
+    <section class="dg-message ">
 
-        <div class="message-card">
+        <div class="message-card hidden">
             <header class="message-title">Message from the Director General</header>
             <div class="message-content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

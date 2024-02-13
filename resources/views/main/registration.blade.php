@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title','Registration')
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/registration.css') }}">
 
 <body>
@@ -30,7 +31,7 @@
             </main>
 
         </section>
-        <section class="reg-steps">
+        <section class="reg-steps hidden">
             <div class="card">
                 <header class="step-num">Step 1</header>
                 <img src="{{ asset('img/registration/register.png') }}" alt="Card Image" class="step-img">
@@ -63,5 +64,5 @@
             </div>
         </section>
 </body>
-
+<script src="{{ asset('js/welcome/scroll.js') }}"></script>
 @endsection

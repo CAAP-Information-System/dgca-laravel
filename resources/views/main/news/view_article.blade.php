@@ -6,6 +6,9 @@
 <section class="head-banner">
     <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
     <main class="banner-content">
+        <div class="banner-text">
+            <header class="banner-title">Article No: {{ $article->id }}</header>
+        </div>
         <div class="dgca-title">
             <header class="title">59th Conference of Director Generals</header>
             <header class="title-sub">Philippines 2024</header>

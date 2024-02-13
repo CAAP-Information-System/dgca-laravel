@@ -2,6 +2,9 @@
 .head-banner {
     position: relative;
     overflow: hidden;
+    margin-bottom: 5vh;
+    background: rgb(248,249,253);
+    background: linear-gradient(24deg, rgba(248,249,253,1) 0%, rgba(0,51,138,0.738532913165266) 0%, rgba(44,107,210,0) 51%);
 }
 
 .head-banner .banner-bg {

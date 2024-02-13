@@ -31,6 +31,7 @@
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/scrollreveal@4"></script>
 
+
     <!-- SUMMERNOTE CDN -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>

@@ -66,7 +66,15 @@
 }
 
 /* --------------------------------- */
-
+.hidden{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0)
+}
 .container{
     color: #3b3b3b;
 }

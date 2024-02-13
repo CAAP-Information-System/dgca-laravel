@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/file_manager/submission_guide.css') }}">
 <section class="head-banner">
     <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
@@ -45,7 +46,7 @@
     </section>
     <section class="section-grp">
         <header class="section-hdr">Content of Papers</header>
-        <div class="section-content">
+        <div class="section-content hidden">
             <header class="section-subheader">Structure of Paper</header>
             <div class="section-subheader-content">
                 <ol>
@@ -85,7 +86,7 @@
     </section>
     <section class="section-grp">
         <header class="section-hdr">Format of Papers</header>
-        <div class="section-content">
+        <div class="section-content hidden">
             <div class="section-subheader-content">
                 <p>
                     Papers should <b class="text-danger">not exceed six (6) pages</b>, a guideline that's strongly encouraged. Submissions should be in electronic format using MS Word, facilitating final formatting by the Secretariat. Attachments not requiring editing should be in <b class="text-primary">Adobe Acrobat (.pdf) format</b>. Additionally, ensure that the overall file size, including any attachments, is optimized for convenient downloading from the website.
@@ -93,7 +94,7 @@
                 </p>
             </div>
             <header class="section-subheader">Paper Format</header>
-            <div class="section-content">
+            <div class="section-content hidden">
                 <div class="section-subheader-content">
                     <ol>
                         <li>Font: Times New Roman</li>
@@ -106,7 +107,7 @@
     </section>
     <section class="section-grp">
         <header class="section-hdr">Submission of Papers and Website Publication</header>
-        <div class="section-content">
+        <div class="section-content hidden">
             <p>
                 States/Administrations and International Organizations are urged to submit their papers at the earliest possible convenience, but not later than <b>(day) (Month) 2024</b>.
             </p>
@@ -131,5 +132,5 @@
         </div>
     </section>
 </div>
-
+<script src="{{ asset('js/welcome/scroll.js') }}"></script>
 @endsection

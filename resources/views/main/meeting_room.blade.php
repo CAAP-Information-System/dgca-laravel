@@ -1,6 +1,7 @@
 @extends('layouts.app')
 <title>@yield('title', 'Meeting Schedule-59th DGCA')</title>
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/meeting/meeting.css') }}">
 <section class="head-banner">
     <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
