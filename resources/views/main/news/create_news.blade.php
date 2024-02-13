@@ -22,7 +22,9 @@
                 <header class="register-card-header">Register News Article</header>
                 <div class="register-news-reminder">
                     <header class="register-reminder-header">Notes:</header>
-                    <p class="register-reminder-message">The posting feature can only be accessed by the Marketing and Advertisement Committee.</p>
+                    <p class="register-reminder-message">
+                        The posting feature can only be accessed by the Marketing and Advertisement Committee.
+                    </p>
                 </div>
 
                 <div class="card-body">

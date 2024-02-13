@@ -67,7 +67,9 @@
 
 /* --------------------------------- */
 
-
+.medical-support{
+    padding-top: 5vh;
+}
 .medical-hdr {
     font-size: 2rem;
     color: #50A9FB;

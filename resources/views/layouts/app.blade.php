@@ -29,6 +29,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
 
     <!-- SUMMERNOTE CDN -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
@@ -194,7 +195,7 @@
                                 <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                 <ul class="js-sub-menu sub-menu">
                                     <li><a href="{{ route('news') }}">News & Updates</a></li>
-                                    <li><a href="#">Program Overview</a></li>
+                                    <li><a href="{{ route('program-overview') }}">Program Overview</a></li>
                                     <li><a href="#">Social/Cultural Function</a></li>
                                 </ul>
                             </li>
@@ -290,7 +291,9 @@
             <a href="https://caap.gov.ph" target="_blank">
                 <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo">
             </a>
-            <a href="https://www.icao.int/Pages/default.aspx" target="_blank"><img src="{{ asset('img/logo/icao-logo.png') }}" alt="ICAO Logo" class="icao-logo"></a>
+            <a href="https://www.icao.int/Pages/default.aspx" target="_blank">
+                <img src="{{ asset('img/logo/icao-logo.png') }}" alt="ICAO Logo" class="icao-logo">
+            </a>
             <a href="#"><img src="{{ asset('img/logo/bagong-pilipinas-logo.png') }}" alt="Bagong Pilipinas Logo" class="nav-bagong-pilipinas-logo"></a>
         </div>
 

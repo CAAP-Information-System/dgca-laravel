@@ -101,7 +101,13 @@ class HomeController extends Controller
         return view('main.news.view_article', ['article' => $article]);
     }
 
+    public function viewProgram(){
+        return view('error.error_503');
+    }
 
+    public function error_503(){
+        return view('error.error_503');
+    }
     public function sendNotif()
     {
         $user = User::all();

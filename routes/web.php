@@ -16,6 +16,7 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
@@ -31,7 +32,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
     Route::get('/profile/{id}', [AdminController::class, 'viewUserProfile'])->name('user-profile');
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
-
 
     Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
     Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
@@ -53,6 +53,7 @@ Route::get('/list-of-participants', [HomeController::class, 'viewListParticipant
 Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
 Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
 Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
+Route::get('/program-overview', [HomeController::class, 'viewProgram'])->name('program-overview');
 Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
 
 // News and Updates

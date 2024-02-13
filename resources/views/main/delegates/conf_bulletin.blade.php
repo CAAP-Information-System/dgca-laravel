@@ -66,7 +66,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    The preliminary agenda and tentative program, along with any updates, will be posted on the <span class="highlight">DGCA59 Conference Website</span> as soon as they are finalized and ready for distribution.
+                    The preliminary agenda and tentative program, along with any updates, will be posted on the <b class="text-primary">DGCA59 Conference Website</b> as soon as they are finalized and ready for distribution.
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Free Wi-Fi accessibility will be available throughout the conference venue. Access details will be distributed during the event. Additionally, internet facilities will be accessible for delegates on-site. Participants are advised to <span class="highlight">bring their own laptops to access conference materials</span>.
+                    Free Wi-Fi accessibility will be available throughout the conference venue. Access details will be distributed during the event. Additionally, internet facilities will be accessible for delegates on-site. Participants are advised to <b class="text-primary">bring their own laptops to access conference materials</b>.
                 </div>
             </div>
         </div>
@@ -147,7 +147,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Three (3) meeting rooms will be provided for conducting bilateral meetings as needed; however, it's essential to book in advance to ensure availability and reservation of the rooms.
+                    <b class="text-primary">Three (3) meeting rooms</b> will be provided for conducting bilateral meetings as needed; however, it's essential to book in advance to ensure availability and reservation of the rooms.
                     <br><br>
                     To inquire about availability and secure the rooms for any proposed meetings, kindly send an email with your request to: <br><a href="#">secretariat-email@email.com</a>.
 
