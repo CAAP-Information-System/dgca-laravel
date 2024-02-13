@@ -463,6 +463,7 @@ a.slide_btn {
     .dropdown-content {
         margin-left: -7vw;
         width: 50vw;
+        justify-content: space-around;
     }
 
     .conf-nav ul {
