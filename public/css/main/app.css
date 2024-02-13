@@ -411,6 +411,12 @@ nav .navbar .links li .js-sub-menu{
         margin-top: -14%;
         margin-right: 5%;
       }
+      nav .navbar .nav-links {
+        max-width: 100%;
+      }
+      .navbar{
+        padding-top: 10%!important;
+    }
 }
 @media only screen and (min-width: 460px) and (max-width: 600px){
     .nav-caap-logo{
@@ -432,6 +438,9 @@ nav .navbar .links li .js-sub-menu{
     nav .navbar .nav-links {
         max-width: 100%;
       }
+      .navbar{
+        margin-top: -0.2rem!important;
+    }
 
 }
 @media only screen and (min-width: 300px) and (max-width: 459px){
@@ -450,6 +459,9 @@ nav .navbar .links li .js-sub-menu{
       }
       .dgca-name{
         font-size: 3vw;
+    }
+    .navbar{
+        margin-top: -0.5rem!important;
     }
     nav .navbar .nav-links {
         max-width: 100%;
