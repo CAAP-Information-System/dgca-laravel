@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\GalleryPostingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PostingController;
@@ -70,6 +71,8 @@ Route::prefix('media')->middleware(['auth', 'isMedia'])->group(function () {
     Route::get('/edit-news/{id}', [MediaController::class, 'edit'])->name('edit-news');
     Route::put('/update-news/{id}', [MediaController::class, 'update'])->name('update-news');
     Route::delete('/news/{id}', [MediaController::class, 'delete'])->name('delete-news');
+    Route::get('/create-gallery', [GalleryPostingController::class, 'viewGalleryForm'])->name('create-gallery');
+    Route::post('/register-image', [GalleryPostingController::class, 'registerImage'])->name('register-image');
 });
 
 
