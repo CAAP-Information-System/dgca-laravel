@@ -25,8 +25,7 @@ class MediaMiddleware
                 return $next($request);
             }
             else{
-                abort(403);
-                return redirect('/home')->with('message', 'Access Denied');
+                return response()->view('error.error_403', [], 403);
             }
         }
         else{

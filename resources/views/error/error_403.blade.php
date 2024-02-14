@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/error/403.css') }}">
 
 <div class="container">
-    <main class="error-main">i
+    <main class="error-main">
         <img src="{{ asset('img/error/restricted.svg') }}" alt="restricted access" class="error-img">
         <div class="error-content">
             <header class="error-header">Forbidden Access</header>
