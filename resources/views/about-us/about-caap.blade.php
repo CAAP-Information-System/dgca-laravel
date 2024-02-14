@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'About Us-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/about-us/about-caap.css') }}">

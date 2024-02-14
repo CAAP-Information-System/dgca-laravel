@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Account List-59th DGCA')</title>
 @section('content')
 
 <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">

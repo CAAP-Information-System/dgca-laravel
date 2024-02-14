@@ -5,11 +5,12 @@
     align-items: center;
     gap: 5vh;
     margin-top: 10vh;
+    margin-bottom: 10%;
 }
 .error-img{
     width: 500px;
     height: auto;
-    margin-bottom: 10%;
+
 }
 .error-content{
     text-align: left;
@@ -22,7 +23,7 @@
     color: #969696;
     font-style: italic;
     font-size: 19px;
-    margin-bottom: 10%;
+
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
@@ -38,6 +39,9 @@
         height: auto;
         margin-bottom: 0%;
     }
+    .error-content{
+        text-align: center;
+     }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 600px){
