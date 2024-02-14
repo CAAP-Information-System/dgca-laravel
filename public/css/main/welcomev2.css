@@ -371,17 +371,24 @@ a.slide_btn {
 
     .message-title {
         padding: 20px;
-        width: 60vw;
+        width: 100%;
         font-size: 300%;
     }
 
     .message-content {
         text-align: justify;
         padding: 20px;
-        width: 55vw;
+        width: 100%;
     }
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .welcome-banner {
+        position: relative;
+        overflow: hidden;
+        padding: 5vh;
+        background: rgb(248,249,253);
+        background: linear-gradient(90deg, rgba(248,249,253,1) 0%, rgb(0, 51, 138) 0%, rgba(0, 51, 138, 0.30) 0%);
+    }
     .banner {
         color: #ffff;
         text-align: center;
@@ -445,6 +452,14 @@ a.slide_btn {
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 600px) {
+    .welcome-banner {
+        position: relative;
+        overflow: hidden;
+        padding: 5vh;
+        background: rgb(248,249,253);
+        background: linear-gradient(90deg, rgba(248,249,253,1) 0%, rgb(0, 51, 138) 0%, rgba(0, 51, 138, 0.30) 0%);
+    }
+
     .banner {
         color: #ffff;
         text-align: center;
