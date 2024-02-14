@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Dashboard-59th DGCA')</title>
 @section('content')
 
 <!--

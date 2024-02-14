@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'News Page-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/news/news.css') }}">

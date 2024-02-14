@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Register-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/auth/register.css') }}">
 <div class="container">

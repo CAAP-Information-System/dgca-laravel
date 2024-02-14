@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Account Profile-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/account_profile.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/header.css') }}">

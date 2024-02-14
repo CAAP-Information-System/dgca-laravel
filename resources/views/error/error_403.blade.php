@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Error 403-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/error/403.css') }}">
 

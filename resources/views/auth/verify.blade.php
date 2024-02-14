@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>@yield('title', 'Verify-59th DGCA')</title>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
