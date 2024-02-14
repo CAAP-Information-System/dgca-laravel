@@ -65,13 +65,13 @@
                     </div>
                     @else
                     <div class="message-content">
-                        <img src="{{ asset('img/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
+                        <img src="{{ asset('img/error/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
                         <header class="message-content-header">
-                            No Pending Accounts Found.
+                            You're all good
                         </header>
-                        <!-- <p class="message-header-subtitle">
-                            Kindly coordinate with our conference secretariat for your concerns and inquiries. Thank you!
-                        </p> -->
+                        <p class="message-header-subtitle">
+                            Currently, there are no registered accounts pending approval or awaiting processing.
+                        </p>
                     </div>
                     @endif
                 </section>

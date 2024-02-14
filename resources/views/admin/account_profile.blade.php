@@ -39,8 +39,9 @@
                     <form style="padding: 15px;" action="{{ route('update-access-role', ['id' => $user->id]) }}" method="POST">
                         @csrf
                         <select name="access_role" class="form-control">
-                            <option value="user" {{ $user->access_role == 'user' ? 'selected' : '' }}>User</option>
-                            <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Admin</option>
+                            <option value="user" {{ $user->access_role == 'user' ? 'selected' : '' }}>Guest</option>
+                            <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Website Admin</option>
+                            <option value="media" {{ $user->access_role == 'media' ? 'selected' : '' }}>Media Admin</option>
                         </select>
                         <button type="submit" class="btn btn-primary mt-2">Update Role</button>
                     </form>

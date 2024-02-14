@@ -59,7 +59,7 @@ class AdminController extends Controller
     {
         // Validate the incoming request
         $request->validate([
-            'access_role' => 'required|in:user,admin', // Validate that the role is either 'user' or 'admin'
+            'access_role' => 'required|in:user,admin,media', // Validate that the role is either 'user' or 'admin'
         ]);
 
         // Find the user by ID
@@ -100,4 +100,16 @@ class AdminController extends Controller
         Session::flash('success', 'User approved successfully');
         return redirect()->back()->with('success', 'User approved successfully.');
     }
+    public function deleteAccount(Request $request, $id)
+    {
+        // Find the meeting by its ID
+        $users = User::findOrFail($id);
+
+        // Delete the meeting
+        $users->delete();
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Account deleted successfully.');
+    }
 }
+

@@ -62,8 +62,13 @@
                                         <td>{{ $user->conference_role }}</td>
                                         <td>{{ $user->country }}</td>
                                         <td>{{ $user->access_role }}</td>
-                                        <td>
+                                        <td colspan="2">
                                             <a href="{{ route('user-profile', ['id' => $user->id]) }}" class="btn btn-warning">View</a>
+                                            <form action="{{ route('delete-account', ['id' => $user->id]) }}" method="POST" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this account?')">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 </tbody>

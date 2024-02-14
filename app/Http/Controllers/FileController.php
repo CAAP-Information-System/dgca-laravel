@@ -257,4 +257,15 @@ class FileController extends Controller
     {
         return view('file_manager.submission_guide');
     }
+    public function deleteFile(Request $request, $id)
+    {
+        // Find the meeting by its ID
+        $file = File::findOrFail($id);
+
+        // Delete the meeting
+        $file->delete();
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Meeting deleted successfully.');
+    }
 }

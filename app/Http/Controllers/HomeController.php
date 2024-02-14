@@ -110,6 +110,9 @@ class HomeController extends Controller
     public function error_503(){
         return view('error.error_503');
     }
+    public function error_403(){
+        return view('error.error_403');
+    }
     public function sendNotif()
     {
         $user = User::all();

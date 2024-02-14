@@ -16,7 +16,6 @@
                     <th>Size</th>
                     <th>Status</th>
                     <th>Actions</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -32,12 +31,15 @@
                         @endphp
                     </td>
                     <td>{{ $file->doc_status }}</td>
-                    <td>
-                        <a href="{{ route('editFileName', $file->id) }}" class="btn btn-warning" style="width: 100%;">Edit</a> <!-- Add this line for the new column -->
-                    </td>
-                    <td>
+                    <td class="mt-2" colspan="3">
+                        <a href="{{ route('editFileName', $file->id) }}" class="btn btn-warning">Edit File</a>
                         <a href="{{ route('download.file', ['file' => $file]) }}" class="btn btn-primary">Download</a>
-                        <!-- Add other actions/buttons as needed -->
+                        <form action="{{ route('file.delete', ['id' => $file->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Remove</button>
+                        </form>
+
                     </td>
                 </tr>
                 @endforeach
