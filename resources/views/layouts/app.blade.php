@@ -57,59 +57,6 @@
         font-family: 'Poppins', sans-serif;
     }
 
-    .caap-video {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
-    #login-register {
-        color: #002868;
-        font-size: 16px;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin-left: 10px;
-    }
-
-    .logout {
-        text-decoration: none;
-        color: #002868;
-        padding: 7px;
-        font-size: 15px;
-        display: inline-block;
-        width: 100%;
-        font-weight: bold;
-    }
-
-    .logout:hover {
-        color: #ffff;
-        text-decoration: none;
-        background-color: #931f1f;
-    }
-
-    .nav-item {
-        list-style: none;
-    }
-
-    .nav-link {
-        text-decoration: none;
-        border-radius: 15px;
-        border: solid 1px transparent;
-    }
-
-    .nav-link:hover {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border: solid 1px #2658AB;
-        transition: .1s ease-in;
-        border-radius: 15px;
-
-    }
 </style>
 <div class="preloader-container" id="preloader">
     <img src="{{ asset('gif/loader-caap.gif') }}" alt="CAAP Logo" class="">

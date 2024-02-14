@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use App\Models\News;
 use App\Models\User;
 use App\Notifications\ApprovalNotification;
@@ -40,7 +41,8 @@ class HomeController extends Controller
 
     public function viewGallery()
     {
-        return view('main.conference.gallery');
+        $galleryposts = Gallery::all();
+        return view('main.gallery.view_gallery', compact('galleryposts'));
     }
 
     public function viewWelcomeMessage()
