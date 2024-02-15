@@ -92,4 +92,9 @@ class Kernel extends HttpKernel
         'isAdmin' => \App\Http\Middleware\AdminMiddleware::class,
         'isMedia' => \App\Http\Middleware\MediaMiddleware::class,
     ];
+
+    protected $routeMiddleware = [
+        // Other middlewares...
+        'check_user_status' => \App\Http\Middleware\CheckStatus::class,
+    ];
 }

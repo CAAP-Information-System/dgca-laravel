@@ -36,7 +36,7 @@ class HomeController extends Controller
         // Store the flag in the session to ensure it's shown only once per login
         session(['modal_shown' => true]);
 
-        return view('welcome', compact('user', 'modalShown', 'newspost'));
+        return view('welcome', compact( 'modalShown', 'newspost'));
     }
 
 

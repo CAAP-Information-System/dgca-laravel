@@ -21,6 +21,32 @@ Route::get('/', function () {
 });
 Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 Route::get('/403', [HomeController::class, 'error_403'])->name('403');
+
+// GUEST PAGE DIRECTORIES
+Route::middleware('public')->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('welcome');
+    Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
+    Route::get('/the-gallery', [HomeController::class, 'viewGallery'])->name('the-gallery');
+    Route::get('/registration', [App\Http\Controllers\HomeController::class, 'viewRegistrationPage'])->name('registration-page');
+    Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('participants');
+    Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
+    Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
+    Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
+
+    Route::get('/program-overview', [HomeController::class, 'viewProgram'])->name('program-overview');
+
+});
+
+Route::group(['middleware' => 'check_user_status'], function () {
+    Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
+    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
+    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
+    Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
+    Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
+});
+
+
+
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -43,23 +69,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 });
 
 
-
-Route::middleware('public')->group(function () {
-});
-Route::get('/home', [HomeController::class, 'index'])->name('welcome');
-Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
-Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
-Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
-Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
-Route::get('/the-gallery', [HomeController::class, 'viewGallery'])->name('the-gallery');
-Route::get('/registration', [App\Http\Controllers\HomeController::class, 'viewRegistrationPage'])->name('registration-page');
-Route::get('/participants', [HomeController::class, 'viewParticipants'])->name('participants');
-Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
-Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
-Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
-Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
-Route::get('/program-overview', [HomeController::class, 'viewProgram'])->name('program-overview');
-Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
 
 // News and Updates
 Route::get('/news', [HomeController::class, 'viewNews'])->name('news');

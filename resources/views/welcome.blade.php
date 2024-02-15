@@ -10,7 +10,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title">Welcome, <span style="font-weight: bold;">{{$user->first_name}} {{$user->last_name}}</span></div>
+                    <div class="modal-title">Welcome, <span style="font-weight: bold;">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</span></div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -50,7 +50,6 @@
             @endif
         </main>
     </section>
-    <a href="/send-mail" class="btn btn-primary">SEND EMAIL</a>
     <section class="main-conf-nav">
         <div class="container">
             <nav class="conf-nav">
