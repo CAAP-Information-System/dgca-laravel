@@ -50,7 +50,7 @@
             @endif
         </main>
     </section>
-
+    <a href="/send-mail" class="btn btn-primary">SEND EMAIL</a>
     <section class="main-conf-nav">
         <div class="container">
             <nav class="conf-nav">

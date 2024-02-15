@@ -8,7 +8,9 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SideMeetingController;
+use App\Mail\ApprovalMail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 
@@ -92,4 +94,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/view-submission', [FileController::class, 'viewSubmissionGuide'])->name('view-submission');
 });
 
-Route::get('send', [HomeController::class, 'sendNotif']);
+
+
+Route::get('send', [HomeController::class, 'sendNotif'])->name('send');

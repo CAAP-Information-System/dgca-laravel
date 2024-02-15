@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ApprovalMail;
 use App\Models\File;
 use App\Models\SideMeeting;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -91,15 +93,19 @@ class AdminController extends Controller
     }
     public function approveUser($id)
     {
-
         $user = User::find($id); // Find the user by ID
 
         // Update the user status to 'APPROVED'
         $user->status = 'Approved';
         $user->save();
+
+        // Send approval notification email
+        Mail::to($user->email)->send(new ApprovalMail($user));
+
         Session::flash('success', 'User approved successfully');
         return redirect()->back()->with('success', 'User approved successfully.');
     }
+
     public function deleteAccount(Request $request, $id)
     {
         // Find the meeting by its ID
