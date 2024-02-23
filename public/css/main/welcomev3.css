@@ -130,16 +130,16 @@
 .arrow-dotted{
     width: 40px;
     height: auto;
-    margin-top: 4vh;
     margin-left: 5vh;
+    transform: rotate(270deg)
 }
 
 .city-smoke-bg {
-    width: 160%;
+    width: 120%;
     height: auto;
     position: absolute;
-    top: 75%;
-    right: -60%;
+    top: 80%;
+    left: -3%;
 
 }
 .cebu-info {
@@ -151,29 +151,36 @@
 }
 
 .cebu-details {
-    background-color: #3b3b3b;
+    background-color: rgba(59, 59, 59, 0.7);
     z-index: 3;
     position: relative;
     color: #ffff;
     padding: 25px;
     margin-right: 50%;
     width: 600px;
+    max-height: 600px;
+    overflow-y: auto;
+
+
 }
 .detail-headers{
-    line-height: 4.5vh;
+    line-height: 6.5vh;
 }
 .detail-main-header{
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 5px;
 }
 
-.subheader{
-    font-size: 17px;
+.detail-subheader{
+    font-size: 20px;
     text-transform: uppercase;
 }
 .detail-content{
     margin-top: 3%;
+    max-height: 700px;
+
 }
 .cebu-pinned-img {
     position: absolute;
@@ -204,4 +211,46 @@
 
 ul li{
     margin: 10px;
+}
+
+.count-section {
+    width: 100%;
+    text-align: left;
+}
+.countdown-sect {
+    color: #3b3b3b;
+}
+.countdown-main {
+    border-radius: 20px;
+}
+.countdown-header {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.countdown ul{
+    display: flex;
+    gap: 6vh;
+}
+.countdown ul li {
+    display: inline-block;
+    font-size: 1rem;
+    list-style-type: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.countdown ul li span {
+    width: 100%;
+    display: block;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    font-weight: 800;
+}
+.countdown-message{
+    font-size: 1.5rem;
+    font-style: italic;
+
 }

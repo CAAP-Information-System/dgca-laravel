@@ -81,14 +81,14 @@
                                     </div>
                                     <ul class="links">
                                         <li><a href="{{ route('welcome') }}">Home</a></li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="#">About Us</a>
                                             <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                             <ul class="js-sub-menu sub-menu">
                                                 <li><a href="{{ route('about-caap') }}">CAAP</a></li>
                                                 <li><a href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">The Philippines</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a href="#">Event</a>
                                             <i class='bx bxs-chevron-down js-arrow arrow '></i>
@@ -109,6 +109,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('registration-page') }}">Registration</a></li>
+                                        <li><a href="#">Contact Us</a></li>
 
                                     </ul>
                                 </div>

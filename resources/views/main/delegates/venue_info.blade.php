@@ -2,18 +2,7 @@
 <title>@yield('title', 'Venue-59th DGCA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/delegate/venue_info.css') }}">
-<section class="head-banner">
-    <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
-    <main class="banner-content">
-        <div class="banner-text">
-            <header class="banner-title">Venue Information</header>
-        </div>
-        <div class="dgca-title">
-            <header class="title">59th Conference of Director Generals</header>
-            <header class="title-sub">Philippines 2024</header>
-        </div>
-    </main>
-</section>
+
 <div class="container">
     <section class="shangrila-img-grp">
         <img src="{{ asset('img/shangri-la/shangrila-full.jpg') }}" alt="shangrila bird eye" class="shangrila-img">

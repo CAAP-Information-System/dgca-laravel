@@ -108,34 +108,57 @@
             </nav>
 
         </div>
+        <br>
         <div class="abt-us-ctn">
-            <a href="#" class="about-us-btn">About Us</a>
+            <a href="#about-cebu" class="about-us-btn">Learn More</a>
         </div>
         <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted">
+        <div class="count-section fade-in-section">
+            <main class="countdown-main">
+                <div class="countdown-sect">
+                    <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
+                    <div id="countdown" class="countdown">
+                        <ul>
+                            <li><span id="days"></span>days</li>
+                            <li><span id="hours"></span>Hours</li>
+                            <li><span id="minutes"></span>Minutes</li>
+                            <li><span id="seconds"></span>Seconds</li>
+                        </ul>
+                    </div>
+                    <hr width="10%" style="border: 1px solid #3b3b3b;">
+                    <p class="countdown-message">Countdown until the 59th DGCA <br> Conference!</p>
+                </div>
+        </div>
+
 
     </section>
-    <section class="about-cebu">
+    <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
-        <div class="cebu-info">
-            <div class="cebu-details">
-                <div class="detail-headers">
-                    <header class="detail-main-header">Cebu</header>
-                    <header class="detail-subheader">Venue for DGCA 59</header>
-                </div>
-                <div class="detail-content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                        Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                    </p>
-                </div>
+
+    </section>
+    <div class="cebu-info">
+        <div class="cebu-details">
+            <div class="detail-headers">
+                <header class="detail-main-header">Cebu</header>
+                <header class="detail-subheader">Venue for DGCA 59</header>
             </div>
-            <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
+            <div class="detail-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                </p>
+                <p>
+                    Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                </p>
+            </div>
         </div>
+        <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
+    </div>
     </section>
     <section class="announcements">
         <header class="announcement-header">
@@ -153,24 +176,8 @@
 
 
 
-    <!-- <section class="container count-section fade-in-section">
-        <main class="countdown-main">
-            <div class="countdown-sect">
-                <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
-                <div id="countdown" class="countdown">
-                    <ul>
-                        <li><span id="days"></span>days</li>
-                        <li><span id="hours"></span>Hours</li>
-                        <li><span id="minutes"></span>Minutes</li>
-                        <li><span id="seconds"></span>Seconds</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-    </section> -->
 
-<!--
-    @if(isset($newspost))
+    <!-- @if(isset($newspost))
     <section class="notices-section hidden">
         <header class="notice-header">Notice Board</header>
         <div class="container">
@@ -191,13 +198,27 @@
 
         </div>
     </section>
-    @endif -->
+    @endif  -->
 </main>
+
 <script src="{{ asset('js/welcome/pending-modal.js') }}"></script>
 <script src="{{ asset('js/welcome/countdown.js') }}"></script>
 <script src="{{ asset('js/welcome/carousel.js') }}"></script>
 <script src="{{ asset('js/welcome/scroll.js') }}"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const aboutUsBtn = document.querySelector('.about-us-btn');
+        aboutUsBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            const targetSection = document.getElementById('about-cebu');
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            }); // Smooth scroll to the target section
+        });
+    });
+</script>
 <script>
     const menuToggle = document.querySelector('.toggle');
     const showcase = document.querySelector('.showcase');
