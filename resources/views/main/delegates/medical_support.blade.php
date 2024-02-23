@@ -10,7 +10,6 @@
             <header class="banner-title">Medical Support</header>
         </div>
         <div class="dgca-title">
-            <!-- <header class="welcome-title">Welcome</header> -->
             <header class="title">59th Conference of Director Generals</header>
             <header class="title-sub">Philippines 2024</header>
         </div>

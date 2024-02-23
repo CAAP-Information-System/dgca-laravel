@@ -31,7 +31,6 @@
                             </div>
                             <div class="card-body">
                                 <a href="{{ route('article', ['id' => $post->id]) }}" class="news-title" style="    text-align: justify;">{{ $post->news_title }}</a>
-                                <!-- <p class="news-card-text">{!!$post->news_description!!}</p> -->
 
                             </div>
                             <div class="read-more-container">

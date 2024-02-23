@@ -53,10 +53,11 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <style>
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap');
 
+    * {
+        font-family: "Montserrat", sans-serif;
+    }
 </style>
 <div class="preloader-container" id="preloader">
     <img src="{{ asset('gif/loader-caap.gif') }}" alt="CAAP Logo" class="">
@@ -67,16 +68,56 @@
         <div class="head-navbar">
             <div class="logos-main">
                 <a class="caap-nav" href="{{ url('/') }}">
-                    <img src="{{ asset('img/logo/dgca-logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
-                    <header class="header-name">
-                        Civil Aviation Authority of the Philippines
-                        <div class="dgca-name">59th Conference of Director Generals</div>
-                    </header>
+                    <img src="{{ asset('img/home/dgca-logo-outlined.png') }}" alt="DGCA Logo" class="nav-caap-logo">
+                    <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
 
+                    <div class="main-nav">
+                        <nav class="main-navigation">
+                            <div class="navbar">
+                                <i class='bx bx-menu'></i>
+                                <div class="nav-links">
+                                    <div class="sidebar-logo">
+                                        <i class='bx bx-x'></i>
+                                    </div>
+                                    <ul class="links">
+                                        <li><a href="{{ route('welcome') }}">Home</a></li>
+                                        <li>
+                                            <a href="#">About Us</a>
+                                            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                            <ul class="js-sub-menu sub-menu">
+                                                <li><a href="{{ route('about-caap') }}">CAAP</a></li>
+                                                <li><a href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">The Philippines</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Event</a>
+                                            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                            <ul class="js-sub-menu sub-menu">
+                                                <li><a href="{{ route('news') }}">News & Updates</a></li>
+                                                <li><a href="{{ route('program-overview') }}">Program Overview</a></li>
+                                                <li><a href="#">Social/Cultural Function</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Exhibit & Sponsors</a>
+                                            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                                            <ul class="js-sub-menu sub-menu">
+                                                <li><a href="#">Floor Plan</a></li>
+                                                <li><a href="{{ route('our-sponsors') }}">Our Sponsors</a></li>
+                                                <li><a href="#">Exhibit Services</a></li>
+                                                <li><a href="#">Exhibition Registration</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ route('registration-page') }}">Registration</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </a>
             </div>
             <div class="navbar navbar-expand-lg ">
-
                 <div class="top-nav">
                     @guest
                     @if (Route::has('login'))
@@ -118,51 +159,6 @@
                 </div>
 
             </div>
-        </div>
-
-        <div class="main-nav">
-            <nav class="main-navigation">
-                <div class="navbar">
-                    <i class='bx bx-menu'></i>
-                    <div class="nav-links">
-                        <div class="sidebar-logo">
-                            <i class='bx bx-x'></i>
-                        </div>
-                        <ul class="links">
-                            <li><a href="{{ route('welcome') }}">Home</a></li>
-                            <li>
-                                <a href="#">About Us</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="{{ route('about-caap') }}">CAAP</a></li>
-                                    <li><a href="https://beta.tourism.gov.ph/about-the-philippines/" target="_blank">The Philippines</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Event</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="{{ route('news') }}">News & Updates</a></li>
-                                    <li><a href="{{ route('program-overview') }}">Program Overview</a></li>
-                                    <li><a href="#">Social/Cultural Function</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Exhibit & Sponsors</a>
-                                <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                                <ul class="js-sub-menu sub-menu">
-                                    <li><a href="#">Floor Plan</a></li>
-                                    <li><a href="{{ route('our-sponsors') }}">Our Sponsors</a></li>
-                                    <li><a href="#">Exhibit Services</a></li>
-                                    <li><a href="#">Exhibition Registration</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="{{ route('registration-page') }}">Registration</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
         </div>
 
     </div>
@@ -227,14 +223,14 @@
     </div>
     @endif
 
-    <main class="">
+    <main style="margin-left: 10vh;">
         @yield('content')
     </main>
     </div>
 </body>
 
-<footer class="text-center bg-body-tertiary text-muted">
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+<footer class="text-center text-muted">
+    <!-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div class="me-5 d-none d-lg-block">
             <a href="https://caap.gov.ph" target="_blank">
                 <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="footer-caap-logo">
@@ -254,11 +250,9 @@
 
     <section class="">
         <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
             <div class="row mt-3">
-                <!-- Grid column -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
+
                     <h6 class="text-uppercase fw-bold mb-4">
                         <i class="fas fa-gem me-3"></i>59th DGCA Conference - APAC
                     </h6>
@@ -266,11 +260,7 @@
                         <img src="{{ asset('img/logo/dgca-logo.png') }}" alt="CAAP Logo" class="footer-dgca-logo">
                     </p>
                 </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         Products
                     </h6>
@@ -280,10 +270,8 @@
                     <p>
                         <a href="#!" class="text-reset">Brochure</a>
                     </p>
-
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                     <p><i class="fas fa-home me-3"></i> Shangri-La Mactan Cebu, Philippines</p>
                     <p>
@@ -292,13 +280,12 @@
                     </p>
                     <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
                 </div>
-                <!-- Grid column -->
+
             </div>
-            <!-- Grid row -->
         </div>
-    </section>
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        Copyright © <span class="text-bold">59th Conference of DGCA</span> All rights reserved.
+    </section> -->
+    <div class="text-center">
+        <b>www.DGCA.ph // DGCA.PH@gmail.com //</b>
     </div>
 
 </footer>

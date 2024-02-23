@@ -19,10 +19,12 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
+
+// ERROR ROUTES
 Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 Route::get('/403', [HomeController::class, 'error_403'])->name('403');
 
-// GUEST PAGE DIRECTORIES
+// GUEST PAGE ROUTES
 Route::middleware('public')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('welcome');
     Route::get('/welcome-message', [HomeController::class, 'viewWelcomeMessage'])->name('message');
@@ -32,11 +34,10 @@ Route::middleware('public')->group(function () {
     Route::get('/list-of-participants', [HomeController::class, 'viewListParticipants'])->name('list-of-participants');
     Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
     Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
-
     Route::get('/program-overview', [HomeController::class, 'viewProgram'])->name('program-overview');
-
 });
 
+// RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
     Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
@@ -70,7 +71,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
 
 
-// News and Updates
+// NEWS & UPDATES ROUTES
 Route::get('/news', [HomeController::class, 'viewNews'])->name('news');
 Route::get('/create-news', [PostingController::class, 'createNews'])->name('create-news');
 Route::post('/register-news', [PostingController::class, 'registerNews'])->name('register-news');

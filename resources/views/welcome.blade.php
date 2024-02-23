@@ -2,8 +2,9 @@
 @section('title', '59th DGCA Conference')
 @section('content')
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}"> -->
-<link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev2.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev3.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/notice_board.css') }}">
+
 <main class="content-main">
     @if (auth()->check() && auth()->user()->status === 'Pending')
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -31,27 +32,18 @@
         </div>
     </div>
     @endif
-
-    <section class="welcome-banner">
-        <video autoplay loop muted>
-            <source src="{{ asset('mp4/edited-dgca52.mp4') }}" type="video/mp4">
-
-        </video>
-        <main class="banner">
-            <!-- <header class="welcome-title">Welcome</header> -->
-            <header class="title">59<span class="th">th</span> Conference of Director Generals</header>
-            <!-- <p class="banner-theme">This is a theme message</p> -->
-            <p class="title-sub">Philippines 2024</p>
-
-            @if(!auth()->check())
-            <div class="join-container">
-                <a href="{{ route('login')}}" class="join-now">Join Now!</a>
-            </div>
-            @endif
-        </main>
-    </section>
-    <section class="main-conf-nav">
-        <div class="container">
+    <section class="welcome">
+        <header class="welcome-header">
+            Welcome to the
+            <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="pane" class="plane-sketch"></span>
+            <br>
+            <span class="span">DGCA 59 PH</span> Official Page
+        </header>
+        <header class="theme">Sustainable, Resilient, & Inclusive</header>
+        <p class="theme-message">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="main-conf-nav">
             <nav class="conf-nav">
                 <ul>
                     <li class="dropdown">
@@ -114,11 +106,54 @@
                     @endif
                 </ul>
             </nav>
+
         </div>
+        <div class="abt-us-ctn">
+            <a href="#" class="about-us-btn">About Us</a>
+        </div>
+        <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted">
 
     </section>
+    <section class="about-cebu">
+        <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
+        <div class="cebu-info">
+            <div class="cebu-details">
+                <div class="detail-headers">
+                    <header class="detail-main-header">Cebu</header>
+                    <header class="detail-subheader">Venue for DGCA 59</header>
+                </div>
+                <div class="detail-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                    </p>
+                </div>
+            </div>
+            <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
+        </div>
+    </section>
+    <section class="announcements">
+        <header class="announcement-header">
+            Announcements
+            <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
+        </header>
+        <div class="announcement-content">
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non pulvinar neque laoreet suspendisse interdum.</li>
+                <li>Lectus mauris ultrices eros in. Tristique senectus et netus et malesuada fames ac turpis egestas. Consectetur adipiscing elit duis tristique sollicitudin. Eu ultrices vitae auctor eu augue ut lectus.</li>
+                <li>In vitae turpis massa sed. Ornare quam viverra orci sagittis eu volutpat odio. Nec dui nunc mattis enim ut tellus elementum sagittis. At quis risus sed vulputate odio. Tempus iaculis urna id volutpat lacus. A cras semper auctor neque vitae tempus quam pellentesque.</li>
+            </ul>
+        </div>
+    </section>
 
-    <section class="container count-section fade-in-section">
+
+
+    <!-- <section class="container count-section fade-in-section">
         <main class="countdown-main">
             <div class="countdown-sect">
                 <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header>
@@ -132,28 +167,9 @@
                 </div>
             </div>
             </div>
-    </section>
+    </section> -->
 
-    <section class="section-divider">
-        <header class="div-header">Welcome and Mabuhay Delegates!</header>
-    </section>
-    <section class="dg-message ">
-
-        <div class="message-card hidden">
-            <header class="message-title">Message from the Director General</header>
-            <div class="message-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <br><br>
-                Enim diam vulputate ut pharetra. Quam adipiscing vitae proin sagittis. Lectus urna duis convallis convallis tellus id. Luctus accumsan tortor posuere ac. Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Ipsum consequat nisl vel pretium lectus quam id. Massa tempor nec feugiat nisl pretium. Faucibus in ornare quam viverra orci sagittis. Mollis nunc sed id semper risus in. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Imperdiet dui accumsan sit amet nulla. Sit amet cursus sit amet dictum. Posuere ac ut consequat semper viverra nam libero justo. Lorem dolor sed viverra ipsum.
-            </div>
-        </div>
-        <!-- <div class="dg-content">
-            <img src="{{ asset('img/welcome-msg/capt-tamayo-new.png') }}" alt="dg-tamayo" class="dg-img">
-        </div> -->
-
-
-    </section>
-
+<!--
     @if(isset($newspost))
     <section class="notices-section hidden">
         <header class="notice-header">Notice Board</header>
@@ -166,9 +182,6 @@
                     <div class="notice-content">
                         <a href="#" class="notice-title">{{ $post->news_title }}</a>
                         <div class="date">{{ $post->date_uploaded }}</div>
-                        <!-- <p class="notice-description">
-                            {!!$post->news_description!!}
-                        </p> -->
                     </div>
 
                 </div>
@@ -178,7 +191,7 @@
 
         </div>
     </section>
-    @endif
+    @endif -->
 </main>
 <script src="{{ asset('js/welcome/pending-modal.js') }}"></script>
 <script src="{{ asset('js/welcome/countdown.js') }}"></script>
