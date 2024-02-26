@@ -4,55 +4,63 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/delegate/venue_info.css') }}">
 
 <div class="container">
-    <section class="shangrila-img-grp">
-        <img src="{{ asset('img/shangri-la/shangrila-full.jpg') }}" alt="shangrila bird eye" class="shangrila-img">
-        <img src="{{ asset('img/shangri-la/shangrila-conf.jpg') }}" alt="shangrila bird eye" class="shangrila-img">
-    </section>
     <section class="venue-header hidden">
-        <header class="shangrila-header">
-            Shangri-La Mactan, Cebu
+        <header class="hotel-header">
+            Dusit Thani Mactan Cebu Resort
         </header>
-        <p class="shangrila-subheader">
+        <p class="hotel-subheader">
             <i class="fa-solid fa-location-dot"></i>
             &nbsp;
-            Punta Engano Road, Lapu-Lapu, Cebu 6015 Philippines
+            Punta Engaño Road, Mactan Island, Lapu-Lapu City 6015, Cebu, Philippines
         </p>
     </section>
-    <section class="shangrila-content">
-        <div class="hidden">
-            <p>
-                Nestled amidst 13 hectares of lush greenery, landscaped gardens and with a 350-meter white-sand beach, Shangri-La Mactan, Cebu is a multi-faceted leisure destination providing a mix of luxury relaxation and wellness, entertainment, and exciting recreational activities including captivating child-friendly facilities. Guests can savour beach-side luxe within its spacious 530 guest rooms and suites, along with enticing wining and dining options.
-            </p>
-            <p>
-                Shangri-La Mactan, Cebu, is located in Lapu-Lapu City, which is connected to the main island of Cebu by several bridges. Both Mactan and Cebu are home to many beautiful beaches and historic sites.The province of Cebu is famous for its natural beaches, sweet mangoes,
-            </p>
-            <ul class="shangrila-list">
-                <li>530 guest rooms, 7 restaurants and landscaped gardens</li>
-                <li>20-minute drive from Mactan Cebu International Airport</li>
-                <li>5-minute walk to the Shangri-La beachfront sanctuary</li>
+    <section class="hotel-img-grp">
+        <img src="{{ asset('img/hotel/dusit-entrance.jpg') }}" alt="dusit entrance" class="hotel-img">
+        <img src="{{ asset('img/hotel/dusit-lobby.jpg') }}" alt="dusit lobby" class="hotel-img">
+    </section>
+
+    <section class="hotel-content">
+        <header class="about-hotel">Overview</header>
+        <div class="">
+            <div class="hotel-desc">
+                <p>
+                    A vibrant and inviting retreat blends Filipino warmth and Thai hospitality for a heavenly haven by the ocean at our hotel Mactan Cebu, Philippines resort.
+                </p>
+                <p>
+                    On northern tip of the Punta Engaño Peninsula, Dusit Thani Mactan Cebu is easily accessible from the Mactan-Cebu International Airport by land and sea transport. Surrounded by tropical islands, natural, cultural and historic treasures are all within reach.
+                </p>
+                <p>
+                    Guests relax in stylish rooms and suites, with gracious service, innovative cuisine, luxurious amenities and stunning views all on hand.
+                </p>
+            </div>
+            <ul class="hotel-list">
+                <li>28-minute drive from Mactan Cebu International Airport</li>
+                <li>Concierge services available to assist with transportation, tours, and local attractions. Transportation options include taxis and local shuttles</li>
+                <li>Complimentary shuttle service from the resort to malls in Cebu City are available daily. First come, first serve basis.</li>
+                <li>Complimentary high-speed Wi-Fi available throughout the hotel for guests.</li>
             </ul>
         </div>
-        <div class="shangrila-btn-grp">
-            <a href="https://www.shangri-la.com/en/cebu/mactanresort/" target="_blank" class="website-btn">Visit Shangri-La Mactan Official Website</a>
+        <div class="hotel-btn-grp">
+            <a href="https://www.dusit.com/dusitthani-mactancebu/" target="_blank" class="website-btn">Visit Dusit Thani Official Website</a>
         </div>
-        <div class="venue-contacts hidden">
+        <div class="venue-contacts">
             <header class="venue-hdr">
                 <img src="{{ asset('img/icon/venue.png') }}" alt="venue" class="venue-img">
                 Venue Contact and Address
             </header>
-            <div class="shangrila-link">
+            <div class="hotel-link">
                 <div>
                     <a href="#" class="link-item">
                         <i class="fa-solid fa-phone"></i>
                         &nbsp;&nbsp;
-                        (63 32) 231 0288
+                        +63 32 888 1388
                     </a>
                 </div>
                 <div>
                     <a href="#" class="link-item">
                         <i class="fa-solid fa-envelope"></i>
                         &nbsp;&nbsp;
-                        Mactan@shangri-la.com
+                        dtmc@dusit.com
                     </a>
                 </div>
             </div>

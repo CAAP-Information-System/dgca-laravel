@@ -1,0 +1,52 @@
+.reco-title{
+    font-size: 2rem;
+    color: #50A9FB;
+}
+.reco-details{
+    margin-top: 3vh;
+    font-size: 17px;
+    font-style: italic;
+    color: #969696;
+    text-align: justify;
+}
+
+.hotel-reco{
+    padding: 15px;
+    margin: 0;
+    color: #3B3B3B;
+}
+.hotel{
+    display: flex;
+    align-items: center;
+    margin-top: 8vh;
+    gap: 10vh;
+    border-bottom: 1px solid #969696;
+
+}
+.hotel-image{
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+.hotel-name{
+    font-size: 3rem;
+    color: #50A9FB;
+}
+.hotel-address{
+    font-size: 17px;
+    font-style: italic;
+}
+.div-header{
+    font-size: 1.5rem;
+    color: #3B3B3B;
+    font-weight: bold;
+}
+.div-details{
+    padding: 15px;
+}
+.hotel-item{
+    font-size: 16px;
+}
+.hotel-item a{
+    text-decoration: none;
+}

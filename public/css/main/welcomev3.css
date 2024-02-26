@@ -6,6 +6,16 @@
     font-family: 'Batangas'; /* Specify the font family name */
     src: url('/font/batangas-700.otf') format('opentype'); /* Specify the correct format for the font file */
 }
+
+.hidden{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0)
+}
 .welcome{
     background: url("/img/home/photo-tiles-strip.png");
     background-size: 70%;
@@ -34,7 +44,7 @@
     font-family: 'Batangas';
 }
 .theme-message{
-    width: 40%;
+    width: 60%;
 }
 
 /* SUB NAVIGATION */
@@ -64,6 +74,9 @@
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px;
+}
+.conf-nav li a:hover{
+    text-decoration: underline;
 }
 .conf-nav li a .fa-solid {
     margin-right: 10px;
@@ -135,19 +148,18 @@
 }
 
 .city-smoke-bg {
-    width: 120%;
+    width: 100%; /* Set width to 100% to fit the screen */
     height: auto;
     position: absolute;
-    top: 80%;
-    left: -3%;
-
+    top: 85%;
+    left: 0; /* Set left to 0 to align with the left edge of the screen */
 }
 .cebu-info {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 .cebu-details {
@@ -254,3 +266,4 @@ ul li{
     font-style: italic;
 
 }
+

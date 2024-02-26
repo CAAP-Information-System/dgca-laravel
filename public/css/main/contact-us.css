@@ -1,0 +1,15 @@
+.contact-header{
+    color: #50A9FB;
+    font-size: 3rem;
+}
+.contact-message{
+    font-size: 17px;
+    color: #969696;
+    font-style: italic;
+}
+.contact-details{
+    font-size: 17px;
+}
+.contact-details a{
+    text-decoration: none;
+}

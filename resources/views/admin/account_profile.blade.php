@@ -21,8 +21,8 @@
             <form class="status-form" action="{{ route('user.approve', ['id' => $user->id]) }}" method="POST">
                 @csrf
                 <header class="status-reminder">Reminder :</header>
-                <p class="status-message">Current account is still under <span style="font-weight:bold;" class="text-danger">PENDING</span> status. Continue for approval?</p>
-                <button class="button-44">Approve User</button>
+                <p class="status-message">Current account is still under <span style="font-weight:bold;" class="badge badge-danger">PENDING</span> status. Continue for approval?</p>
+                <button class="approve-btn">Approve User</button>
             </form>
             @endif
             @if(session('success'))

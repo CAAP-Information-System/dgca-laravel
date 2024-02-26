@@ -1,0 +1,53 @@
+{
+    "hotels": [
+        {
+            "image": "/img/hotel/chataeu-by-the-sea.jpg",
+            "name": "Chateau By The Sea",
+            "address": "Barangay Buot, Punta Engaño, Lapu-Lapu City, 6015 Cebu",
+            "link": "https://chateaubythesea.com.ph/weddings.html",
+            "rating": "4.3",
+            "email": "chateaubythesea.mactan@gmail.com",
+            "mobile": "(0917) 306 2900",
+            "distance-airport": "9.7km",
+            "distance-venue": "2.7km - 8 minutes by car"
+        },
+
+        {
+            "image": "/img/hotel/be-resort.jpg",
+            "name": "Be Resort Mactan",
+            "address": "Punta Engaño Rd, Lapu-Lapu City, Cebu",
+            "link": "https://beresortmactan.com",
+            "rating": "4.1",
+            "email": "mactan@beresorts.com",
+            "mobile": " +63 32 236 8888",
+            "distance-airport": "9.6km",
+            "distance-venue": "2.8km - 8 minutes by car"
+        },
+
+        {
+            "image": "/img/hotel/shangrila-mactan.jpg",
+            "name": "Shangri-La Mactan, Cebu",
+            "address": "Punta Engaño Rd, Lapu-Lapu City, Cebu, 6015 Cebu",
+            "link": "https://www.shangri-la.com/en/cebu/mactanresort/",
+            "rating": "4.6",
+            "email": "Mactan@shangri-la.com",
+            "mobile": "(63 32) 231 0288",
+            "distance-airport": "8.9km",
+            "distance-venue": "3.9km - 11 minutes by car"
+        },
+
+        {
+            "image": "/img/hotel/movenpick.jpg",
+            "name": "Mövenpick Cebu",
+            "address": "Mactan Island, Lapu-Lapu City, 6015 Cebu",
+            "link": "https://movenpick.accor.com/en/asia/philippines/cebu/hotel-mactan-island-cebu.html",
+            "rating": "4.4",
+            "email": "hotel.cebu@movenpick.com",
+            "mobile": "+63 919 071 8346",
+            "distance-airport": "4.78km",
+            "distance-venue": "3.5km - 10 minutes by car"
+        }
+
+
+    ]
+}

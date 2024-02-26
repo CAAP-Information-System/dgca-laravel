@@ -33,86 +33,90 @@
     </div>
     @endif
     <section class="welcome">
-        <header class="welcome-header">
-            Welcome to the
-            <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="pane" class="plane-sketch"></span>
-            <br>
-            <span class="span">DGCA 59 PH</span> Official Page
-        </header>
-        <header class="theme">Sustainable, Resilient, & Inclusive</header>
-        <p class="theme-message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="main-conf-nav">
-            <nav class="conf-nav">
-                <ul>
-                    <li class="dropdown">
-                        <a href="#">
-                            <i class="fa-solid fa-users"></i>
-                            Conference
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('welcome') }}">Welcome Message</a>
-                            <a href="{{ route('agenda') }}">Agenda</a>
-                            <a href="#">Programme</a>
-                            <a href="{{ route('the-gallery') }}">The Gallery</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{{ route('meeting-room') }}">
-                            <i class="fa-solid fa-handshake"></i>
-                            Side Meeting
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">
-                            <i class="fa-solid fa-user-tie"></i>
-                            Delegate's Corner
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
-                            <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
-                            <a href="#">Transport Schedule</a>
-                            <a href="{{ route('venue') }}">Venue Information</a>
-                            <a href="{{ route('medical-support') }}">Medical Support</a>
-                            <a href="#">Hotel Recommendations</a>
-                            <a href="#">Tips and Advices</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">
-                            <i class="fa-solid fa-folder-open"></i>
-                            Documents
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('disc-paper') }}">Discussion Papers</a>
-                            <a href="{{ route('info-paper') }}">Information Papers</a>
-                            <a href="{{ route('view-submission') }}">Submission Guide</a>
-                            <a href="{{ route('create.file') }}">Submit Document</a>
-                        </div>
-                    </li>
-                    @if(auth()->check() && auth()->user()->access_role == "media")
-                    <li class="dropdown">
-                        <a href="#" class="text-danger">
-                            <i class="fa-solid fa-hashtag"></i>
-                            Media Committee
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('create-news') }}">Create News</a>
-                            <a href="#">Upload Gallery</a>
-                            <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
-                        </div>
-                    </li>
-                    @endif
-                </ul>
-            </nav>
+        <div>
+            <div class="hidden">
+                <header class="welcome-header">
+                    Welcome to the
+                    <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="pane" class="plane-sketch"></span>
+                    <br>
+                    <span class="span">DGCA 59 PH</span> Official Page
+                </header>
+                <header class="theme">Sustainable, Resilient, & Inclusive</header>
+                <p class="theme-message">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="main-conf-nav">
+                <nav class="conf-nav">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#">
+                                <i class="fa-solid fa-users"></i>
+                                Conference
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="{{ route('welcome') }}">Welcome Message</a>
+                                <a href="{{ route('agenda') }}">Agenda</a>
+                                <a href="#">Programme</a>
+                                <a href="{{ route('the-gallery') }}">The Gallery</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{{ route('meeting-room') }}">
+                                <i class="fa-solid fa-handshake"></i>
+                                Side Meeting
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                <i class="fa-solid fa-user-tie"></i>
+                                Delegate's Corner
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="{{ route('bulletin') }}">Conference Bulletin</a>
+                                <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
+                                <a href="{{ route('venue') }}">Venue Information</a>
+                                <a href="#">Transport Schedule</a>
+                                <a href="{{ route('medical-support') }}">Medical Support</a>
+                                <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
+                                <a href="#">Tips and Advices</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                <i class="fa-solid fa-folder-open"></i>
+                                Documents
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="{{ route('disc-paper') }}">Discussion Papers</a>
+                                <a href="{{ route('info-paper') }}">Information Papers</a>
+                                <a href="{{ route('view-submission') }}">Submission Guide</a>
+                                <a href="{{ route('create.file') }}">Submit Document</a>
+                            </div>
+                        </li>
+                        @if(auth()->check() && auth()->user()->access_role == "media")
+                        <li class="dropdown">
+                            <a href="#" class="text-danger">
+                                <i class="fa-solid fa-hashtag"></i>
+                                Media Committee
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="{{ route('create-news') }}">Create News</a>
+                                <a href="#">Upload Gallery</a>
+                                <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
+                            </div>
+                        </li>
+                        @endif
+                    </ul>
+                </nav>
 
+            </div>
+            <br>
+            <div class="abt-us-ctn">
+                <a href="#about-cebu" class="about-us-btn">Learn More</a>
+            </div>
+            <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted">
         </div>
-        <br>
-        <div class="abt-us-ctn">
-            <a href="#about-cebu" class="about-us-btn">Learn More</a>
-        </div>
-        <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted">
         <div class="count-section fade-in-section">
             <main class="countdown-main">
                 <div class="countdown-sect">
@@ -134,33 +138,33 @@
     </section>
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
+        <div class="cebu-info">
+            <div class="cebu-details">
+                <div class="detail-headers">
+                    <header class="detail-main-header">Cebu</header>
+                    <header class="detail-subheader">Venue for DGCA 59</header>
+                </div>
+                <div class="detail-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                    </p>
+                    <p>
+                        Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                    </p>
+                </div>
+            </div>
+            <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
+        </div>
+    </section>
 
     </section>
-    <div class="cebu-info">
-        <div class="cebu-details">
-            <div class="detail-headers">
-                <header class="detail-main-header">Cebu</header>
-                <header class="detail-subheader">Venue for DGCA 59</header>
-            </div>
-            <div class="detail-content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                </p>
-                <p>
-                    Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                </p>
-            </div>
-        </div>
-        <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
-    </div>
-    </section>
-    <section class="announcements">
+    <section class="announcements ">
         <header class="announcement-header">
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
@@ -173,8 +177,6 @@
             </ul>
         </div>
     </section>
-
-
 
 
     <!-- @if(isset($newspost))

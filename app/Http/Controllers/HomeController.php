@@ -11,6 +11,7 @@ use App\Notifications\RegistrationApproval;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -36,7 +37,7 @@ class HomeController extends Controller
         // Store the flag in the session to ensure it's shown only once per login
         session(['modal_shown' => true]);
 
-        return view('welcome', compact( 'modalShown', 'newspost'));
+        return view('welcome', compact('modalShown', 'newspost'));
     }
 
 
@@ -72,6 +73,14 @@ class HomeController extends Controller
     {
         return view('main.delegates.conf_bulletin');
     }
+    public function viewHotelRecommendations()
+    {
+        // Read JSON data from the file
+        $hotelsJson = file_get_contents(public_path('json/hotels.json'));
+
+        // Pass the decoded data to the view
+        return view('main.delegates.hotel_recommendation', ['hotelsJson' => $hotelsJson]);
+    }
 
     public function viewRegistrationPage()
     {
@@ -95,6 +104,10 @@ class HomeController extends Controller
     {
         return view('main.delegates.venue_info');
     }
+    public function viewContactUs()
+    {
+        return view('main.contact-us');
+    }
     public function viewNews()
     {
         $newspost = News::all();
@@ -106,15 +119,17 @@ class HomeController extends Controller
         return view('main.news.view_article', ['article' => $article]);
     }
 
-    public function viewProgram(){
+    public function viewProgram()
+    {
         return view('error.error_503');
     }
 
-    public function error_503(){
+    public function error_503()
+    {
         return view('error.error_503');
     }
-    public function error_403(){
+    public function error_403()
+    {
         return view('error.error_403');
     }
-
 }

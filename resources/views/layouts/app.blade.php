@@ -131,11 +131,11 @@
                     @endif
                     @else
                     @if(auth()->check() && auth()->user()->access_role != "admin")
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
                             Home
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item dropdown">
                         <a id="login-register" class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -286,7 +286,7 @@
         </div>
     </section> -->
     <div class="text-center">
-        <b>www.DGCA.ph // DGCA.PH@gmail.com //</b>
+        <b>www.dgca59.gov.ph &nbsp;&nbsp;| &nbsp;&nbsp; DGCA.PH@gmail.com &nbsp;&nbsp; |</b>
     </div>
 
 </footer>

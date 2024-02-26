@@ -17,24 +17,23 @@ body {
     bottom: 0;
 }
 
-#login-register {
-    color: #002868;
+/* #login-register {
+    color: #3b3b3b;
     font-size: 16px;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin-left: 10px;
-}
+    margin-left: 5px;
+} */
 
 .logout {
     text-decoration: none;
-    color: #002868;
+    color: #3b3b3b;
     padding: 7px;
     font-size: 15px;
     display: inline-block;
     width: 100%;
-    font-weight: bold;
 }
 
 .logout:hover {
@@ -42,22 +41,31 @@ body {
     text-decoration: none;
     background-color: #931f1f;
 }
+.top-nav{
+    display: flex;
+    gap: 15px;
 
+}
+.nav-item{
+    padding: 15px;
+}
 .nav-item {
     list-style: none;
 }
 
-.nav-link {
+.nav-item .nav-link {
+    width: 100%;
     text-decoration: none;
-    border-radius: 15px;
-    border: solid 1px transparent;
+    border-radius: 99px;
+    padding: 10px;
+    color: #ffff;
+    background-color: #50A9FB;
 }
 
 .nav-link:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: solid 1px #2658ab;
-    transition: 0.1s ease-in;
-    border-radius: 15px;
+    background-color: #969696;
+    transition: 0.1s ease;
+    color: #ffff;
 }
 .caap-nav{
     display: flex;
@@ -94,10 +102,7 @@ body {
     display: flex;
 
 }
-.top-nav{
-    display: flex;
 
-}
 .nav-caap-logo {
     height: auto;
     width: 80px;
@@ -240,6 +245,10 @@ nav .navbar .links li a {
   text-transform: uppercase;
 }
 
+nav .navbar .links li a:hover{
+    text-decoration: underline;
+}
+
 .links li:hover .htmlcss-arrow,
 .links li:hover .js-arrow {
   transform: rotate(180deg);
@@ -287,6 +296,7 @@ nav .navbar .links li .js-sub-menu{
   text-transform: capitalize;
 }
 .navbar .links li .sub-menu a:hover{
+    text-decoration: none;
     transition: .2s ease;
     border-bottom: 1px solid #3498db;
 }

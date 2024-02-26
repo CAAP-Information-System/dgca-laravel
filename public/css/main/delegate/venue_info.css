@@ -78,7 +78,7 @@
 .container{
     color: #3b3b3b;
 }
-.shangrila-img-grp{
+.hotel-img-grp{
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -86,34 +86,41 @@
     gap: 3vh;
 
 }
-.shangrila-img {
+.hotel-img {
     width: 100%; /* Set the width to 100% to make the images fill the container */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     max-width: 600px; /* Limit the maximum width to prevent images from becoming too large */
 }
-.shangrila-header{
+.hotel-header{
     font-size: 3rem;
     color: #50A9FB;
     text-align: center;
     margin-top: 15px;
 }
-.shangrila-subheader{
+.hotel-subheader{
     padding: 10px;
     font-size: 1.2rem;
     text-align: center;
 }
-.shangrila-content{
+.hotel-content{
     padding: 3vh;
     text-align: justify;
     font-size: 18px;
 }
-.shangrila-list{
+.about-hotel{
+    font-size: 2.5rem;
+    color: #50A9FB;
+}
+.hotel-desc{
     padding: 15px;
 }
-.shangrila-list li{
+.hotel-list{
+    padding: 15px;
+}
+.hotel-list li{
     margin: 15px;
 }
-.shangrila-btn-grp {
+.hotel-btn-grp {
     margin: 4vh 0;
 }
 .website-btn{
@@ -148,7 +155,7 @@
     font-size: 2rem;
     margin-top: 4vh;
 }
-.shangrila-link{
+.hotel-link{
     display: block;
     margin: 3vh;
 }
@@ -159,7 +166,7 @@
     margin: 5px;
     border-radius: 16px;
 }
-.shangrila-link div{
+.hotel-link div{
     margin: 10px;
 }
 
@@ -169,12 +176,12 @@
     transition: .1s ease;
 }
 @media screen and (max-width: 768px) {
-    .shangrila-img-grp {
+    .hotel-img-grp {
         flex-direction: column; /* Align vertically */
         align-items: center; /* Center items horizontally */
     }
 
-    .shangrila-img {
+    .hotel-img {
         max-width: 100%; /* Take full width on smaller screens */
         margin-bottom: 15px; /* Add spacing between images */
     }
