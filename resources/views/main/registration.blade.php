@@ -31,7 +31,7 @@
             </main>
 
         </section>
-        <section class="reg-steps hidden">
+        <section class="reg-steps">
             <div class="card">
                 <header class="step-num">Step 1</header>
                 <img src="{{ asset('img/registration/register.png') }}" alt="Card Image" class="step-img">

@@ -109,7 +109,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('registration-page') }}">Registration</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
 
                                     </ul>
                                 </div>

@@ -27,6 +27,7 @@
                 <img src="{{ asset($hotel->image) }}" alt="{{ $hotel->name }}" class="hotel-image"> <!-- Use asset() helper to generate full URL -->
                 <div class="hotel-details">
                     <header class="hotel-name">{{ $hotel->name }}</header>
+                    <p class="hotel-rating">{{ $hotel->rating }}</p>
                     <p class="hotel-address">{{ $hotel->address }}</p>
                     <header class="div-header">Contact Information</header>
                     <div class="div-details">

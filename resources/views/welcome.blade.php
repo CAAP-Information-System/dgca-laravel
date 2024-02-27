@@ -33,90 +33,109 @@
     </div>
     @endif
     <section class="welcome">
-        <div>
-            <div class="hidden">
-                <header class="welcome-header">
-                    Welcome to the
-                    <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="pane" class="plane-sketch"></span>
-                    <br>
-                    <span class="span">DGCA 59 PH</span> Official Page
-                </header>
-                <header class="theme">Sustainable, Resilient, & Inclusive</header>
-                <p class="theme-message">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-            <div class="main-conf-nav">
-                <nav class="conf-nav">
-                    <ul>
-                        <li class="dropdown">
-                            <a href="#">
-                                <i class="fa-solid fa-users"></i>
-                                Conference
-                            </a>
-                            <div class="dropdown-content">
-                                <a href="{{ route('welcome') }}">Welcome Message</a>
-                                <a href="{{ route('agenda') }}">Agenda</a>
-                                <a href="#">Programme</a>
-                                <a href="{{ route('the-gallery') }}">The Gallery</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="{{ route('meeting-room') }}">
-                                <i class="fa-solid fa-handshake"></i>
-                                Side Meeting
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">
-                                <i class="fa-solid fa-user-tie"></i>
-                                Delegate's Corner
-                            </a>
-                            <div class="dropdown-content">
-                                <a href="{{ route('bulletin') }}">Conference Bulletin</a>
-                                <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
-                                <a href="{{ route('venue') }}">Venue Information</a>
-                                <a href="#">Transport Schedule</a>
-                                <a href="{{ route('medical-support') }}">Medical Support</a>
-                                <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
-                                <a href="#">Tips and Advices</a>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">
-                                <i class="fa-solid fa-folder-open"></i>
-                                Documents
-                            </a>
-                            <div class="dropdown-content">
-                                <a href="{{ route('disc-paper') }}">Discussion Papers</a>
-                                <a href="{{ route('info-paper') }}">Information Papers</a>
-                                <a href="{{ route('view-submission') }}">Submission Guide</a>
-                                <a href="{{ route('create.file') }}">Submit Document</a>
-                            </div>
-                        </li>
-                        @if(auth()->check() && auth()->user()->access_role == "media")
-                        <li class="dropdown">
-                            <a href="#" class="text-danger">
-                                <i class="fa-solid fa-hashtag"></i>
-                                Media Committee
-                            </a>
-                            <div class="dropdown-content">
-                                <a href="{{ route('create-news') }}">Create News</a>
-                                <a href="#">Upload Gallery</a>
-                                <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
-                            </div>
-                        </li>
-                        @endif
-                    </ul>
-                </nav>
+        <div class="carousel-container">
+            <input type="radio" name="carousel-radio" id="radio1" class="carousel-radio" checked>
+            <label for="radio1" class="carousel-radio-label"></label>
 
+            <input type="radio" name="carousel-radio" id="radio2" class="carousel-radio">
+            <label for="radio2" class="carousel-radio-label"></label>
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <header class="welcome-header">
+                        Welcome to the
+                        <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch"></span>
+                        <br>
+                        <span class="span">DGCA 59 PH</span> Official Page
+                    </header>
+                    <header class="theme">Sustainable, Resilient, & Inclusive</header>
+                    <p class="theme-message">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpaper-full-collection.jpg" alt="Image 2" style="max-width: 50%; max-height: 150%;">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpazper-full-collection.jpg" alt="Image 3" style="max-width: 50%; max-height: 150%;">
+                </div>
             </div>
-            <br>
-            <div class="abt-us-ctn">
-                <a href="#about-cebu" class="about-us-btn">Learn More</a>
-            </div>
-            <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted">
         </div>
+
+
+        <div class="main-conf-nav">
+            <nav class="conf-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            Conference
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('welcome') }}">Welcome Message</a>
+                            <a href="{{ route('agenda') }}">Agenda</a>
+                            <a href="#">Programme</a>
+                            <a href="{{ route('the-gallery') }}">The Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{ route('meeting-room') }}">
+                            <i class="fa-solid fa-handshake"></i>
+                            Side Meeting
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-user-tie"></i>
+                            Delegate's Corner
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
+                            <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
+                            <a href="#">Transport Schedule</a>
+                            <a href="{{ route('venue') }}">Venue Information</a>
+                            <a href="{{ route('medical-support') }}">Medical Support</a>
+                            <a href="#">Hotel Recommendations</a>
+                            <a href="#">Tips and Advices</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fa-solid fa-folder-open"></i>
+                            Documents
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('disc-paper') }}">Discussion Papers</a>
+                            <a href="{{ route('info-paper') }}">Information Papers</a>
+                            <a href="{{ route('view-submission') }}">Submission Guide</a>
+                            <a href="{{ route('create.file') }}">Submit Document</a>
+                        </div>
+                    </li>
+                    @if(auth()->check() && auth()->user()->access_role == "media")
+                    <li class="dropdown">
+                        <a href="#" class="text-danger">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Media Committee
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('create-news') }}">Create News</a>
+                            <a href="#">Upload Gallery</a>
+                            <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
+                        </div>
+                    </li>
+                    @endif
+                </ul>
+            </nav>
+
+        </div>
+        <br>
+        <div class="abt-us-ctn">
+            <a href="#about-cebu" class="about-us-btn">Learn More</a>
+        </div>
+        <!-- <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted"> -->
         <div class="count-section fade-in-section">
             <main class="countdown-main">
                 <div class="countdown-sect">

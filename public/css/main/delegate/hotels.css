@@ -21,6 +21,7 @@
     margin-top: 8vh;
     gap: 10vh;
     border-bottom: 1px solid #969696;
+    transition: all .2s ease;
 
 }
 .hotel-image{
@@ -28,9 +29,17 @@
     height: auto;
     object-fit: cover;
 }
+.hotel-image:hover{
+    border-radius: 15px;
+}
 .hotel-name{
     font-size: 3rem;
     color: #50A9FB;
+}
+.hotel-rating{
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
 }
 .hotel-address{
     font-size: 17px;

@@ -4,4 +4,4 @@ February 26 - March 1
 1. Improve file submission
 2. Ensure file submission has relational links to ID
 3. Improve UI design
-4. E
+4. Change scrollbar design

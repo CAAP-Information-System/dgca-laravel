@@ -2,7 +2,7 @@
 
 body {
     background: rgba(255, 255, 255, 0.2) url("/img/bg-home.png");
-    background-size: 100%;
+    background-size: 140%;
     background-repeat: repeat-y;
     background-position: fixed;
 
@@ -544,6 +544,26 @@ nav .navbar .links li .js-sub-menu{
       }
 
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #50A9FB;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2263a0;
+  }
 
 
 
