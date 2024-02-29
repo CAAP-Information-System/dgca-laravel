@@ -23,7 +23,7 @@
 
                     <p>Please note that your current account is under <span style="color: #FD6F6F; font-weight:bold;">PENDING</span> approval by the conference administrators.</p>
                     <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact the DGCA Secretariat:</p>
-                    <a class="email-link" href="#">dgca59_secretariat@caap.gov.ph</a>
+                    <a class="email-link" href="#">secretariat-email-here@example.com</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal" id="closeButton">Close</button>
@@ -56,11 +56,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpaper-full-collection.jpg" alt="Image 2" style="max-width: 50%; max-height: 150%;">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpazper-full-collection.jpg" alt="Image 3" style="max-width: 50%; max-height: 150%;">
+                    <img src="{{ asset('img/logo/caap_logo.png') }}" alt="Image 3" style="width: 20%; height:auto;">
                 </div>
             </div>
         </div>
@@ -98,7 +94,7 @@
                             <a href="#">Transport Schedule</a>
                             <a href="{{ route('venue') }}">Venue Information</a>
                             <a href="{{ route('medical-support') }}">Medical Support</a>
-                            <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
+                            <a href="#">Hotel Recommendations</a>
                             <a href="#">Tips and Advices</a>
                         </div>
                     </li>

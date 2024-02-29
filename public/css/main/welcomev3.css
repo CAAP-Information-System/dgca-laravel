@@ -18,18 +18,18 @@
 }
 .welcome {
     background: url("/img/home/photo-tiles-strip.png");
-    background-size: 70%;
+    background-size: 85% auto;
     background-repeat: no-repeat;
-    background-position: 175% 45%;
+    background-position: calc(100% - -28vw) center; /* Adjust the value as needed */
     z-index: 5;
     padding: 5vh;
     color: #3b3b3b;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
 }
 .carousel-container{
-    width: 100vw;
+    width: 90vw;
     margin-top: -3%;
 
 }
@@ -276,7 +276,7 @@ ul li {
 }
 .countdown ul li {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1vw;
     list-style-type: none;
     text-transform: uppercase;
     text-align: center;
@@ -285,12 +285,12 @@ ul li {
 .countdown ul li span {
     width: 100%;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.5vw !important;
     border-radius: 20px;
     font-weight: 800;
 }
 .countdown-message {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     font-style: italic;
 }
 
@@ -361,17 +361,17 @@ ul li {
 @media only screen and (min-width: 1260px) and (max-width: 1440px){
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
-        background-size: 85%;
+        background-size: 100% auto;
         background-repeat: no-repeat;
-        background-position: 290% 45%;
+        background-position: calc(100% - -45vw) center; /* Adjust the value as needed */
         z-index: 5;
         padding: 5vh;
         color: #3b3b3b;
-        width: 100vw;
+        width: 103%;
         height: 100vh;
     }
     .carousel-container{
-        width: 100vw;
+        width: 90vw;
         margin-top: -4%;
 
     }
@@ -403,31 +403,30 @@ ul li {
         font-size: 1.3vw !important;
     }
     .countdown-message{
-        font-size: 1.5vw;
+        font-size: 1.2vw;
     }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1259px){
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
-        background-size: 85%;
+        background-size: 110% auto;
         background-repeat: no-repeat;
-        background-position: 230% 45%;
+        background-position: calc(100% - -55vw) center; /* Adjust the value as needed */
         z-index: 5;
         padding: 5vh;
         color: #3b3b3b;
-        width: 100vw;
+        width: 103%;
         /* height: 90vh; */
     }
     .carousel-container{
-        width: 100vw;
-        margin-top: -3%;
-
+        width: 89vw;
+        margin-top: -8%;
     }
     .welcome{
         margin-left: -3%;
     }
     .welcome-header{
-        font-size: 5vw;
+        font-size: 4.3vw;
     }
     .theme{
         font-size: 2vw;
@@ -439,12 +438,13 @@ ul li {
         width: 70vw;
     }
     .main-conf-nav ul{
-        width: 55vw;
+        width: 60vw;
     }
     .main-conf-nav a{
         width: 20%;
-        font-size: 0.65vw !important;
+        font-size: 0.85vw !important;
     }
+
     .conf-nav i.fa-solid {
         font-size: 1vw !important; /* Adjust the size according to your preference */
         margin-right: 2px; /* Optional: Add some space between the icon and text */
@@ -462,6 +462,200 @@ ul li {
         font-size: 1.5vw;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 1024px){
+@media only screen and (min-width: 800px) and (max-width: 1024px){
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 120% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -50vw) center; /* Adjust the value as needed */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 100%;
+        /* height: 90vh; */
+    }
+    .carousel-container{
+        width: 100%;
+        margin-top: -2%;
+    }
+    .plane-sketch {
+        width: 50px; /* Set the desired width */
+        height: 50px; /* Set the desired height */
+    }
+    .welcome-header{
+        font-size: 5vw;
+    }
+    .theme{
+        font-size: 2.8vw;
+    }
+    .theme-message{
+        font-size: 1.5vw;
+        width: 50vw;
+    }
+    .main-conf-nav{
+        margin-top: 3%;
+        width: 88vw;
+    }
+    .conf-nav i.fa-solid {
+        font-size: 1.5vw !important; /* Adjust the size according to your preference */
+        margin-right: 2px; /* Optional: Add some space between the icon and text */
+    }
+    .main-conf-nav a{
+        font-size: 1.4vw !important;
+    }
+    .about-us-btn{
+        font-size: 1.3vw;
+     }
+    .countdown-sect{
+        margin-top: -1%;
+    }
+    .countdown ul li span {
+        font-size: 2.5vw !important;
+    }
+    .countdown ul li{
+        font-size: 1.5vw !important;
+    }
+    .countdown ul{
+        gap: 2%;
+    }
+    .countdown-message{
+        font-size: 1.5vw;
+    }
 
+}
+
+@media only screen and (min-width: 670px) and (max-width: 799px){
+    .content-main{
+        margin-left: -2%;
+    }
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 150% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -75vw) center; /* Adjust the value as needed */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 103%;
+        /* height: 90vh; */
+    }
+    .welcome{
+        margin-left: -3%;
+    }
+    .carousel-container{
+        width: 89vw;
+        margin-top: -2%;
+    }
+    .plane-sketch {
+        width: 50px; /* Set the desired width */
+        height: 50px; /* Set the desired height */
+    }
+    .welcome-header{
+        font-size: 5.5vw;
+    }
+    .theme{
+        font-size: 3.5vw;
+    }
+    .theme-message{
+        font-size: 1.8vw;
+        width: 50vw;
+    }
+    .main-conf-nav{
+        margin-top: 3%;
+        width: 88vw;
+    }
+    .conf-nav i.fa-solid {
+        display: none;
+    }
+    .main-conf-nav a{
+        font-size: 1.6vw !important;
+    }
+    .about-us-btn{
+        font-size: 1.8vw;
+     }
+    .countdown-sect{
+        margin-top: -1%;
+        margin-left: -5%;
+    }
+    .countdown ul li span {
+        font-size: 2.5vw !important;
+    }
+    .countdown ul li{
+        font-size: 1.5vw !important;
+    }
+    .countdown ul{
+        gap: 2%;
+    }
+    .countdown-message{
+        font-size: 2vw;
+        margin-left: 5%;
+    }
+
+}
+@media only screen and (min-width: 450px) and (max-width: 669px){
+    .content-main{
+        margin-left: -2%;
+    }
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 150% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -75vw) center; /* Adjust the value as needed */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 103%;
+        /* height: 90vh; */
+    }
+    .welcome{
+        margin-left: -3%;
+    }
+    .carousel-container{
+        width: 89vw;
+        margin-top: -2%;
+    }
+    .plane-sketch {
+        width: 50px; /* Set the desired width */
+        height: 50px; /* Set the desired height */
+    }
+    .welcome-header{
+        font-size: 5.5vw;
+    }
+    .theme{
+        font-size: 3.5vw;
+    }
+    .theme-message{
+        font-size: 1.8vw;
+        width: 50vw;
+    }
+    .main-conf-nav{
+        margin-top: 3%;
+        width: 88vw;
+    }
+    .conf-nav i.fa-solid {
+        display: none;
+    }
+    .main-conf-nav a{
+        font-size: 1.6vw !important;
+    }
+    .about-us-btn{
+        font-size: 1.8vw;
+     }
+    .countdown-sect{
+        margin-top: -1%;
+        margin-left: -5%;
+    }
+    .countdown ul li span {
+        font-size: 2.5vw !important;
+    }
+    .countdown ul li{
+        font-size: 1.5vw !important;
+    }
+    .countdown ul{
+        gap: 2%;
+    }
+    .countdown-message{
+        font-size: 2vw;
+        margin-left: 5%;
+    }
 }
