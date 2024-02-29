@@ -56,7 +56,16 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpaper-full-collection.jpg" alt="Image 2" style="max-width: 50%; max-height: 150%;">
+                    <header class="welcome-header">
+                        Welcome to the
+                        <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch"></span>
+                        <br>
+                        <span class="span">DGCA 59 PH</span> Official Page
+                    </header>
+                    <header class="theme">Sustainable, Resilient, & Inclusive</header>
+                    <p class="theme-message">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
                 </div>
 
                 <div class="carousel-item">
