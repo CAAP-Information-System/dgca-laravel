@@ -472,9 +472,8 @@ nav .navbar .links li .js-sub-menu{
 
 }
 @media screen and (min-width: 1025px) and (max-width: 1440px){
-
     .nav-caap-logo{
-        width: 6vw !important;
+        width: 6vw;
     }
     .main-nav{
         width: 60vw;
@@ -482,6 +481,7 @@ nav .navbar .links li .js-sub-menu{
     .nav-links ul li a{
         font-size: 1vw !important;
     }
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 800px){

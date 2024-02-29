@@ -269,7 +269,7 @@ ul li {
 }
 .countdown ul li {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1vw;
     list-style-type: none;
     text-transform: uppercase;
     text-align: center;
@@ -278,7 +278,7 @@ ul li {
 .countdown ul li span {
     width: 100%;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.5vw !important;
     border-radius: 20px;
     font-weight: 800;
 }
@@ -364,7 +364,7 @@ ul li {
     }
     .carousel-container{
         width: 95vw;
-        height: 45vh;
+        height: 40vh;
         margin-top: -4%;
 
     }
@@ -396,7 +396,7 @@ ul li {
         font-size: 1.3vw !important;
     }
     .countdown-message{
-        font-size: 1.5vw;
+        font-size: 1.2vw;
     }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1259px){
