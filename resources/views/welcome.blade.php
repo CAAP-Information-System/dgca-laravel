@@ -56,7 +56,11 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{{ asset('img/logo/caap_logo.png') }}" alt="Image 2" style="max-width: 50%; max-height: 150%;">
+                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpaper-full-collection.jpg" alt="Image 2" style="max-width: 50%; max-height: 150%;">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://genshin.global/wp-content/uploads/2022/07/genshin-impact-official-wallpazper-full-collection.jpg" alt="Image 3" style="max-width: 50%; max-height: 150%;">
                 </div>
             </div>
         </div>

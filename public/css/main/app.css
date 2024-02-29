@@ -483,9 +483,79 @@ nav .navbar .links li .js-sub-menu{
     }
 
 }
+@media only screen and (min-width: 877px) and (max-width: 1024px){
+    .nav-caap-logo{
+        width: 6vw;
+        margin-left: -10%;
+    }
+    .caap-nav img {
+        margin-left: -10%;
+    }
+    .main-nav{
+        width: 60vw;
+    }
+    .nav-links ul li a{
+        font-size: 1vw !important;
+    }
+    .links{
+        width: 50%;
+    }
+    .links li{
+        gap: 0% !important;
+        margin-left: -3%;
+    }
+    .nav-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; /* Reset default margin for list */
+    }
 
-@media screen and (min-width: 601px) and (max-width: 800px){
+}
+@media only screen and (min-width: 800px) and (max-width: 876px){
+    .logos-main{
+        width: 100%;
+    }
+    .nav-caap-logo{
+        width: 7vw;
+        margin-left: -10%;
+    }
+    .caap-nav{
+        width: 20vw;
+    }
+    .main-nav{
+        width: 50vw;
+        padding-right: 50%;
+    }
 
+    .nav-links ul li a{
+        font-size: 1.2vw !important;
+    }
+    .links{
+        width: 100%;
+    }
+    .links li{
+        gap: 0% !important;
+        margin-left: -2%;
+    }
+    .nav-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; /* Reset default margin for list */
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 799px){
+    .nav-caap-logo{
+        width: 8vw;
+        margin-left: -1%;
+
+    }
+    .navbar .bx-menu{
+        margin-top: 2rem !important;
+        margin-left: 1rem !important;
+    }
+    .caap-nav{
+        width: 100%;
+    }
     .header-name{
         font-size:3vw;
       }
@@ -497,11 +567,15 @@ nav .navbar .links li .js-sub-menu{
         margin-top: -14%;
         margin-right: 5%;
       }
+
       nav .navbar .nav-links {
         max-width: 100%;
       }
       .navbar{
         padding-top: 10%!important;
+    }
+    .menu-icon {
+        margin-left: auto; /* Move the menu icon to the right */
     }
 }
 @media only screen and (min-width: 460px) and (max-width: 600px){
