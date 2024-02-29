@@ -97,7 +97,7 @@ Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bu
 Route::get('/medical-support', [HomeController::class, 'viewMedicalSupport'])->name('medical-support');
 Route::get('/venue', [HomeController::class, 'viewVenueInformation'])->name('venue');
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth','statusCheck')->group(function () {
     Route::get('/create-file', [FileController::class, 'registerDocument'])->name('create.file');
     Route::get('/view-files', [FileController::class, 'viewFiles'])->name('viewFiles');
     Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');

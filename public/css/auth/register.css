@@ -7,7 +7,10 @@
     --sub-grey: #d9d9d9;
 }
 
-
+.required-symbol {
+    color: red; /* Or any color you prefer */
+    margin-left: 5px; /* Adjust as needed */
+}
 .header-container{
     display: flex;
     justify-content: center;
@@ -22,6 +25,11 @@
     background-color: #07275A;
     width: 70%;
     margin-bottom: 4vh;
+}
+.barong-size{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 /* container and .register-user */
 .container .reg-hdr{
@@ -39,7 +47,13 @@
     font-weight: 500;
     text-align: center;
 }
-
+.form-group{
+    width: 100%;
+}
+.form-check{
+    display: flex;
+    align-items: center;
+}
 .container .title::before {
     content: "";
     position: absolute;

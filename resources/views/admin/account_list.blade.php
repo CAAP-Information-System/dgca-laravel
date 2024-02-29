@@ -54,7 +54,7 @@
                                         </td>
                                         <td>
                                             @if($user->status === 'Approved')
-                                            <span class="badge badge-success rounded-pill d-inline">{{ $user->status }}</span>
+                                            <span class="badge badge-success rounded-pill d-inline mt-5">{{ $user->status }}</span>
                                             @else
                                             <span class="badge badge-warning rounded-pill d-inline">{{ $user->status }}</span>
                                             @endif

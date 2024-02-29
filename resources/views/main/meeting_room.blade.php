@@ -23,11 +23,14 @@
         <main class="guidelines">
             <header class="guide-header">Guidelines for Meeting Room Reservation</header>
             <ul>
-                <li>Reservations can be made per hour. For bookings exceeding 2 hours or for any other inquiries, please reach out to the 59th DGCA 2024 Secretariat (TBA).</li>
+                <li>Reservations can be made per hour. For bookings exceeding 2 hours or for any other inquiries, please reach out to the 59th DGCA 2024 Secretariat (<a href="mailto:dgca59_secretariat@caap.gov.ph" style="text-decoration: none;">dgca59_secretariat@caap.gov.ph</a>).</li>
                 <li>Reservation confirmation will be subject to acceptance by the 59th DGCA Secretariat.</li>
                 <li>Once accepted, requested side meetings will be incorporated into the meeting schedule.</li>
                 <li>Side meeting rooms will be provided complimentary by the organizers.</li>
                 <li>Please ensure that the side meetings do not disrupt the main conference proceedings.</li>
+                <li>
+                    For inquiries, please contact our <b class="text-primary">Registration Committee</b> at <a href="mailto:dgca59_registration@caap.gov.ph" target="_blank" style="text-decoration: none;">dgca59_registration@caap.gov.ph</a> no later than 5 days before the date of your side meeting reservation.
+                </li>
             </ul>
         </main>
     </section>

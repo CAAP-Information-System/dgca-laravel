@@ -29,7 +29,14 @@ class User extends Authenticatable
         'conference_role',
         'access_role',
         'privacy',
-        'profile_image'
+        'profile_image',
+        'airport_destination',
+        'neck',
+        'shoulder',
+        'special_requirement',
+        'preferred_activity',
+        'preferred_meals',
+        'has_spouse',
     ];
 
     /**

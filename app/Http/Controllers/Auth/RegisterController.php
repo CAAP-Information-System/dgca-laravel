@@ -66,6 +66,12 @@ class RegisterController extends Controller
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
             'privacy' => ['required', 'string'],
             'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'airport_destination' => ['nullable', 'string', 'max:255'],
+            'neck' => ['nullable', 'integer'],
+            'shoulder' => ['nullable', 'integer'],
+            'preferred_activity' => ['nullable', 'string', 'max:255'],
+            'preferred_meals' => ['nullable', 'string', 'max:255'],
+            'has_spouse' => ['nullable', 'string'],
         ]);
     }
 
@@ -92,6 +98,12 @@ class RegisterController extends Controller
             'conference_role' => $data['conference_role'],
             'privacy' => $data['privacy'] ? 'Approved' : 'Unapproved',
             'profile_image' => $fileName, // Save only the file name
+            'airport_destination' => $data['airport_destination'],
+            'neck' => $data['neck'],
+            'shoulder' => $data['shoulder'],
+            'preferred_activity' => $data['preferred_activity'],
+            'preferred_meals' => $data['preferred_meals'],
+            'has_spouse' => $data['has_spouse'],
         ]);
     }
 }

@@ -12,16 +12,16 @@
             <header class="title">Registration</header>
             @csrf
             <div class="requirements-box">
-                    <header class="requirements-header">Reminders:</header>
-                    <ul>
-                        <li>Upload a 2x2 ID picture in formal attire</li>
-                        <li>The image should be in JPG, PNG, or JPEG format</li>
-                        <li>Image file size must not exceed at least 10 megabytes (MB)</li>
-                    </ul>
-                </div>
+                <header class="requirements-header">Reminders:</header>
+                <ul>
+                    <li>Upload a 2x2 ID picture in formal attire</li>
+                    <li>The image should be in JPG, PNG, or JPEG format</li>
+                    <li>Image file size must not exceed at least 10 megabytes (MB)</li>
+                </ul>
+            </div>
             <div class="form-group">
-                <label for="profile_image">Profile Image</label>
-                <input id="profile_image" type="file" class="form-control @error('profile_image') is-invalid @enderror" name="profile_image" accept=".jpg, .png, .jpeg" >
+                <label for="profile_image">Profile Image <span class="required-symbol">*</span></label>
+                <input id="profile_image" type="file" class="form-control @error('profile_image') is-invalid @enderror" name="profile_image" accept=".jpg, .png, .jpeg">
                 @error('profile_image')
                 <span class="invalid-feedback" role="alert">{{ $message }}</span>
                 @enderror
@@ -29,36 +29,36 @@
             <div class="user__details">
 
                 <div class="input__box">
-                    <span class="details">First Name</span>
+                    <span class="details">First Name <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Juan" name="first_name" value="{{ old('first_name') }}" required>
                 </div>
 
                 <div class="input__box">
-                    <span class="details">Last Name</span>
+                    <span class="details">Last Name <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" required>
                 </div>
 
                 <div class="input__box">
-                    <span class="details">Email Address</span>
+                    <span class="details">Email Address <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: yourname@example.com" name="email" value="{{ old('email') }}" required>
                 </div>
 
                 <div class="input__box">
-                    <span class="details">Country</span>
+                    <span class="details">Country <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Philippines" name="country" value="{{ old('country') }}" required>
                 </div>
 
                 <div class="input__email">
-                    <span class="details">Designation/Position</span>
+                    <span class="details">Designation/Position <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
                 </div>
 
                 <div class="input__email">
-                    <span class="details">Organization</span>
+                    <span class="details">Organization <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
                 </div>
                 <div class="input__email">
-                    <span class="details">Conference Role</span>
+                    <span class="details">Conference Role <span class="required-symbol">*</span></span>
                     <select class="form-control" id="conference_role" name="conference_role">
                         <option value="">-- Select Option --</option>
                         <option value="Head Delegate">Head Delegate</option>
@@ -69,19 +69,74 @@
                     </select>
                 </div>
                 <div class="input__email">
-                    <span class="details">Gender</span>
+                    <span class="details">Gender <span class="required-symbol">*</span></span>
                     <select class="form-control" id="gender" name="gender">
                         <option value="-- Select Option --" disabled>-- Select Option -- </option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
                 </div>
+                <div class="input__email">
+                    <span class="details">Aiport Destination <span class="required-symbol">*</span></span>
+                    <select class="form-control" id="airport_destination" name="airport_destination">
+                        <option value="">-- Select Option --</option>
+                        <option value="MIA Terminal 1">MIA Terminal 1</option>
+                        <option value="MIA Terminal 2">MIA Terminal 2</option>
+                        <option value="MIA Terminal 3">MIA Terminal 3</option>
+                        <option value="Mactan-Cebu International Airport">Mactan-Cebu International Airport</option>
+                    </select>
+                </div>
+                <div class="input__email">
+                    <header class="barong-size">Select Barong Size</header>
+                    <i class="card-subtitle mb-2 text-muted">Sizes are in centimeters (cm)</i>
+                </div>
+
                 <div class="input__box">
-                    <span class="details">Password</span>
+                    <span class="details">Neck Size <span class="required-symbol">*</span></span>
+                    <input type="number" placeholder="Enter Measurement" name="neck" value="{{ old('neck') }}" required>
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Shoulder Size <span class="required-symbol">*</span></span>
+                    <input type="number" placeholder="Enter Measurement" name="shoulder" value="{{ old('shoulder') }}" required>
+                </div>
+                <div class="input__email">
+                    <span class="details">Add Special Requirements/Request:</span>
+                    <i class="text-muted">Enter N/A if not needed</i>
+                    <input type="text" placeholder="e.g: Adjust body length" name="special_requirement" value="{{ old('special_requirement') }}" required>
+                </div>
+                <div class="input__email">
+                    <span class="details">Preferred DGCA Activities <span class="required-symbol">*</span></span>
+                    <select class="form-control" id="preferred_activity" name="preferred_activity" required>
+                        <option value="">-- Select Option --</option>
+                        <option value="Event 1">Event 1</option>
+                        <option value="Event 2">Event 2</option>
+                        <option value="Event 3">Event 3</option>
+                    </select>
+                </div>
+                <div class="input__email">
+                    <span class="details">Food Restrictions: <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: Halal Foods" name="preferred_meals" value="{{ old('preferred_meals') }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="has_spouse">Are you accompanied with a spouse? <span class="required-symbol">*</span></label><br>
+                    <i class="text-muted">Please check 1 box</i>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="has_spouse" id="has_spouse_yes" value="Yes">
+                        <label class="form-check-label" for="has_spouse_yes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="has_spouse" id="has_spouse_yes" value="No">
+                        <label class=" form-check-label" for="has_spouse_yes">No</label>
+                    </div>
+                </div>
+                <br>
+                <div class="input__box">
+                    <span class="details">Password <span class="required-symbol">*</span></span>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter Password" autocomplete="new-password" required>
                 </div>
                 <div class="input__box">
-                    <span class="details">Confirm Password</span>
+                    <span class="details">Confirm Password <span class="required-symbol">*</span></span>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Enter Confirm Password" autocomplete="new-password" required>
                 </div>
 
@@ -97,7 +152,7 @@
             </div>
             <div class="privacy-policy">
                 <br>
-                <h4>Privacy Policy</h4>
+                <h4>Privacy Policy <span class="required-symbol">*</span></h4>
                 <p>
                     All information provided herein shall be kept private and confidential by the PPP Center and shall be used solely for legal purposes as mandated by the <a class="text-primary text-bold dpa-link" href="https://privacy.gov.ph/data-privacy-act/#w10">Data Privacy Act of 2012</a> and other relevant laws. Videos and pictures taken during the event may also be used in PPP Center’s promotional and publicity materials.
                 </p>

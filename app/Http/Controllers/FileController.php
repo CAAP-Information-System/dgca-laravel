@@ -33,14 +33,16 @@ class FileController extends Controller
 
     public function registerDocument()
     {
-        // Ensure the user is authenticated before accessing auth()->user()
-        if (auth()->check()) {
+        // checks if the user has approved status
+        if (auth()->check() && auth()->user()->status == 'Approved') {
+            // calls the entire table values
+            $user = User::all();
             $owner = auth()->user()->name;
             $files = File::where('owner', $owner)->get();
-            return view('file_manager.register_files', compact('files'));
+            return view('file_manager.register_files', compact('files','user'));
         } else {
             // Redirect or handle the case when the user is not authenticated
-            return redirect()->route('login');
+            return redirect()->route('home');
         }
     }
 
@@ -54,6 +56,7 @@ class FileController extends Controller
 
                 Log::info('FileManagerController@upload');
 
+                // Verifies and validates input data
                 $request->validate([
                     'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx,mp4,avi,mov|max:10240',
                     'file_category' => 'required|string',

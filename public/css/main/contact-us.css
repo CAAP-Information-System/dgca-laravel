@@ -1,3 +1,9 @@
+.contact-us{
+    color: #3b3b3b;
+}
+.contact-us a{
+    text-decoration: none;
+}
 .contact-header{
     color: #50A9FB;
     font-size: 3rem;
@@ -7,9 +13,40 @@
     color: #969696;
     font-style: italic;
 }
-.contact-details{
-    font-size: 17px;
+
+.dgca-emails{
+    padding: 20px;
 }
-.contact-details a{
-    text-decoration: none;
+.dgca-emails-header{
+    font-size: 2rem;
+    color: #50A9FB;
+}
+.grp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.email-grp{
+    padding-top: 2vh;
+}
+.email-label{
+    font-size: 1.5rem;
+}
+.email-label .fa-solid{
+    margin-right: 15px;
+}
+
+.email-add{
+    font-size: 1.3rem;
+}
+.email-content{
+    margin-top: 5vh;
+}
+.svg{
+    display: flex;
+    justify-content: end;
+}
+.contact-svg{
+    width: 70%;
+    height: auto;
+
 }
