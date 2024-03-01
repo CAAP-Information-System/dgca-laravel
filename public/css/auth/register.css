@@ -26,10 +26,23 @@
     width: 70%;
     margin-bottom: 4vh;
 }
-.barong-size{
+.category__header{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.category__header .category-name{
+    font-size: 2rem;
+    color: #2f96d0;
+    text-transform: capitalize;
+}
+.container{
+    color: #3b3b3b;
+}
+.subheader{
     font-size: 1.3rem;
     font-weight: bold;
     text-transform: capitalize;
+    font-style: italic;
 }
 /* container and .register-user */
 .container .reg-hdr{
@@ -107,11 +120,13 @@
     border-bottom-width: 2px;
     transition: all 0.3s ease;
 }
-.user__details .input__email{
+
+
+.user__details .input__box-long{
     width: 100%;
     margin-bottom: 15px;
 }
-.user__details .input__email input {
+.user__details .input__box-long input {
     height: 45px;
     width: 100%;
     outline: none;
@@ -128,11 +143,11 @@
     border-color: #2f96d0;
 }
 
-.user__details .input__email input:focus,
-.user__details .input__email input:valid {
+.user__details .input__box-long input:focus,
+.user__details .input__box-long input:valid {
     border-color: #2f96d0;
 }
-.user__details .input__box .details, .user__details .input__email .details {
+.user__details .input__box .details, .user__details .input__box-long .details {
     font-weight: bold;
 }
 
@@ -281,11 +296,11 @@
     .user__details .input__box input{
         width: 100%;
     }
-    .user__details .input__email input {
+    .user__details .input__box-long input {
         display: block;
         margin-bottom: 10px; /* Add some space between the blocks */
     }
-    .user__details .input__box .details, .user__details .input__email .details {
+    .user__details .input__box .details, .user__details .input__box-long .details {
         font-weight: bold;
     }
 

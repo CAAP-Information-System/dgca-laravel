@@ -18,25 +18,56 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        // Authentication
+        'email',
+        'email_verified_at',
+        'password',
+
+        // Personal Details
+        'status',
+        'salutation',
         'first_name',
         'last_name',
+        'passport_num',
         'designation',
-        'organization',
-        'email',
         'gender',
-        'password',
-        'country',
-        'conference_role',
-        'access_role',
-        'privacy',
+        'address',
+        'telephone',
+        'mobile',
         'profile_image',
+        'passport_photo',
+
+        // Conference Details
+        'badge_name',
+        'conference_role',
+        'country',
+        'organization',
+
+        // Flight Details
+        // Arrival
+        'arrival_flight_num',
+        'arrival_date',
+        'arrival_time',
+        // Departure
+        'departure_flight_num',
+        'departure_date',
+        'departure_time',
+
+        // Accommodations & Preferences
         'airport_destination',
+        'hotel_reco',
         'neck',
         'shoulder',
-        'special_requirement',
+        'attire_special_req',
         'preferred_activity',
-        'preferred_meals',
+        'dietary_restrictions',
+        'dietary_special_req',
+
+        // Accompanying Person/Spouse
         'has_spouse',
+
+        // Copyright & Privacy Policy
+        'privacy',
     ];
 
     /**
