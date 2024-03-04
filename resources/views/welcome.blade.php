@@ -23,7 +23,7 @@
 
                     <p>Please note that your current account is under <span style="color: #FD6F6F; font-weight:bold;">PENDING</span> approval by the conference administrators.</p>
                     <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact the DGCA Secretariat:</p>
-                    <a class="email-link" href="#">secretariat-email-here@example.com</a>
+                    <a class="email-link" href="#">dgca59_secretariat@caap.gov.ph</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal" id="closeButton">Close</button>

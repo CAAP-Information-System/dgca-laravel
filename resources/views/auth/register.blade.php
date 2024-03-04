@@ -187,7 +187,7 @@
                     <header class="category-name">Accomodations & Preferences</header>
                 </div>
                 <div class="input__box-long">
-                    <span class="details">Hotel Accomodations <span><i>(Optional)</i></span></span>
+                    <span class="details">Hotel Accomodations <span class="required-symbol">*</span></span>
                     <p><i class="text-muted">The options shown are recommended hotels nearest to the venue.</i></p>
                     <select class="form-control" id="hotel_reco" name="hotel_reco">
                         <option value="">-- Select Option --</option>
@@ -197,6 +197,13 @@
                         <option value="Mövenpick Cebu">Mövenpick Cebu</option>
                         <option value="Others">Others</option>
                     </select>
+                </div>
+                <!-- Hidden field for "Others" selection -->
+                <div class="input__box-long">
+                    <div id="otherHotelField" style="display: none;" class="input__box-long">
+                        <label for="otherHotel">Other Hotel Name:</label>
+                        <input type="text" placeholder="Enter Preferred Hotel" id="otherHotel" name="otherHotel" class="form-control">
+                    </div>
                 </div>
                 <div class="input__box-long">
                     <header class="subheader">Barong-Tagalog Size (Attire)</header>
@@ -213,9 +220,9 @@
                     <input type="number" placeholder="Enter Measurement" name="shoulder" value="{{ old('shoulder') }}" required>
                 </div>
                 <div class="input__box-long">
-                    <span class="details">Add Special Requirements/Request:<span><i>(Optional)</i></span></span>
+                    <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
                     <p><i class="text-muted">Include additional sizing if needed.</i></p>
-                    <input type="text" placeholder="Enter None if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}">
+                    <input type="text" placeholder="Enter None if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}" required>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Activities <span class="required-symbol">*</span></span>
@@ -227,8 +234,8 @@
                     </select>
                 </div>
                 <div class="input__box-long">
-                    <span class="details">Dietary Restrictions <span><i>(Optional)</i></span></span>
-                    <select class="form-control" id="dietary_restrictions" name="dietary_restrictions">
+                    <span class="details">Dietary Restrictions <span class="required-symbol">*</span></span>
+                    <select class="form-control" id="dietary_restrictions" name="dietary_restrictions" required>
                         <option value="">-- Select Option --</option>
                         <option value="Halal">Halal</option>
                         <option value="Vegetarian">Vegetarian</option>
@@ -238,9 +245,9 @@
                     </select>
                 </div>
                 <div class="input__box-long">
-                    <span class="details">Add Special Requirements/Request: <span><i>(Optional)</i></span></span>
+                    <span class="details">Add Special Requirements/Request: <span class="required-symbol">*</span></span>
                     <p><i class="text-muted">Special handling support, if any (health, etc.)</i></p>
-                    <input type="text" placeholder="Enter None if none" name="dietary_special_req" value="{{ old('dietary_special_req') }}">
+                    <input type="text" placeholder="Enter None if none" name="dietary_special_req" value="{{ old('dietary_special_req') }}" required>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Are you accompanied with a Person/Spouse? <span class="required-symbol">*</span></span>
@@ -249,6 +256,29 @@
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
+                </div>
+
+                <div id="accompaniedFields" style="display: none;">
+                    <div class="input__box-long">
+                        <label for="accomp_name">Name Accompanied Person/Spouse:</label>
+                        <input type="text" placeholder="Enter Person/Spouse Name" id="accomp_name" name="accomp_name" class="form-control">
+                    </div>
+                    <div class="input__box-long">
+                        <label for="accomp_country">Country Accompanied Person/Spouse:</label>
+                        <input type="text" placeholder="Enter Country" id="accomp_country" name="accomp_country" class="form-control" >
+                    </div>
+
+                    <div class="input__box-long">
+                        <label for="accomp_preferred_activity">Activities:</label>
+                        <select class="form-control" id="accomp_preferred_activity" name="accomp_preferred_activity" >
+                            <option value="">-- Select Option --</option>
+                            <option value="Event 1">Event 1</option>
+                            <option value="Event 2">Event 2</option>
+                            <option value="Event 3">Event 3</option>
+                        </select>
+                    </div>
+
+
                 </div>
                 <br>
                 <!-- PASSWORD CONFIRMATION-->
@@ -279,7 +309,7 @@
 
             <!-- COPYRIGHT & PRIVACY POLICY-->
             <div class="category__header">
-                <header class="category-name">Password Confirmation</header>
+                <header class="category-name">Copyright & Privacy Policy</header>
             </div>
             <div class="privacy-policy">
                 <br>
@@ -301,7 +331,7 @@
             </div>
             <div class="privacy-policy-check">
                 <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
-                <span class="details">By checking this box, I agree that I have read the privacy policy</span>
+                <span class="details"><b class="text-primary">By checking this box, I agree that I have read the privacy policy.</b></span>
 
             </div>
             <!-- <div class="file-drop">
@@ -374,6 +404,24 @@
         }
     });
 </script>
+<script>
+    document.getElementById('hotel_reco').addEventListener('change', function() {
+        var otherHotelField = document.getElementById('otherHotelField');
+        if (this.value === 'Others') {
+            otherHotelField.style.display = 'block';
+        } else {
+            otherHotelField.style.display = 'none';
+        }
+    });
 
+    document.getElementById('has_spouse').addEventListener('change', function() {
+        var accompaniedFields = document.getElementById('accompaniedFields');
+        if (this.value === 'Yes') {
+            accompaniedFields.style.display = 'block';
+        } else {
+            accompaniedFields.style.display = 'none';
+        }
+    });
+</script>
 
 @endsection

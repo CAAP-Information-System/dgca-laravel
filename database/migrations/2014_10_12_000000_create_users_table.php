@@ -50,15 +50,19 @@ return new class extends Migration
             // Accomodations & Preferences
             $table->string('airport_destination');
             $table->string('hotel_reco')->nullable();
-            $table->integer('neck')->nullable();;
-            $table->integer('shoulder')->nullable();;
-            $table->string('attire_special_req')->nullable();;
-            $table->string('preferred_activity')->nullable();;
+            $table->string('otherHotel')->nullable();
+            $table->integer('neck')->nullable();
+            $table->integer('shoulder')->nullable();
+            $table->string('attire_special_req')->nullable();
+            $table->string('preferred_activity')->nullable();
             $table->string('dietary_restrictions')->default('None')->nullable();
             $table->string('dietary_special_req')->default('None')->nullable();
 
             // Accompanying Person/Spouse
-            $table->string('has_spouse')->nullable();;
+            $table->string('has_spouse')->nullable();
+            $table->string('accomp_name')->nullable();
+            $table->string('accomp_country')->nullable();
+            $table->string('accomp_preferred_activity')->nullable();
 
             // Copyright & Privacy Policy
             $table->string('privacy')->default('Unapproved');

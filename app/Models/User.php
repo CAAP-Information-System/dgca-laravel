@@ -56,6 +56,7 @@ class User extends Authenticatable
         // Accommodations & Preferences
         'airport_destination',
         'hotel_reco',
+        'otherHotel',
         'neck',
         'shoulder',
         'attire_special_req',
@@ -65,6 +66,9 @@ class User extends Authenticatable
 
         // Accompanying Person/Spouse
         'has_spouse',
+        'accomp_name',
+        'accomp_country',
+        'accomp_preferred_activity',
 
         // Copyright & Privacy Policy
         'privacy',

@@ -93,6 +93,7 @@ class RegisterController extends Controller
             // Accommodations & Preferences
             'airport_destination' => ['nullable', 'string', 'max:255'],
             'hotel_reco' => ['nullable', 'string', 'max:255'],
+            'otherHotel' => ['nullable', 'string'],
             'neck' => ['nullable', 'integer'],
             'shoulder' => ['nullable', 'integer'],
             'attire_special_req' => ['required', 'string'],
@@ -102,6 +103,9 @@ class RegisterController extends Controller
 
             // Accompanying Person/Spouse
             'has_spouse' => ['nullable', 'string'],
+            'accomp_name' => ['nullable', 'string'],
+            'accomp_name' => ['nullable', 'string'],
+            'accomp_preferred_activity' => ['nullable', 'string', 'max:255'],
         ]);
     }
 
@@ -157,6 +161,10 @@ class RegisterController extends Controller
             'attire_special_req' => $data['attire_special_req'],
             'dietary_restrictions' => $data['dietary_restrictions'],
             'dietary_special_req' => $data['dietary_special_req'],
+            'otherHotel' => $data['otherHotel'],
+            'accomp_name' => $data['accomp_name'],
+            'accomp_country' => $data['accomp_country'],
+            'accomp_preferred_activity' => $data['accomp_preferred_activity'],
         ]);
     }
 }
