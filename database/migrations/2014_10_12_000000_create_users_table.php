@@ -67,6 +67,7 @@ return new class extends Migration
             // Copyright & Privacy Policy
             $table->string('privacy')->default('Unapproved');
             $table->string('password');
+            $table->time('time_test');
             $table->rememberToken();
             $table->timestamps();
             $table->timestamp('email_verified_at')->nullable();
