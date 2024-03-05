@@ -300,7 +300,7 @@ ul li {
 
 .carousel-inner {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 2s ease-in-out;
 }
 
 .carousel-item {
@@ -313,7 +313,7 @@ ul li {
     justify-content: flex-start;
     align-items: flex-start;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
 
 .carousel-item.active {
@@ -335,7 +335,7 @@ ul li {
 }
 
 .carousel-inner {
-    transition: transform 0.1s ease-in-out; /* Reduced transition duration */
+    transition: transform 2s ease-in-out; /* Reduced transition duration */
 }
 
 #radio1:checked + .carousel-radio-label {
@@ -440,6 +440,7 @@ ul li {
         width: 20%;
         font-size: 0.69vw !important;
     }
+
     .conf-nav ul {
         gap: -5% !important;
     }

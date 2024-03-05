@@ -26,12 +26,10 @@
     color: #3b3b3b;
     width: 100%;
     height: 100vh;
-
 }
-.carousel-container{
+.carousel-container {
     width: 90vw;
     margin-top: -3%;
-
 }
 .welcome-header {
     margin-top: 5vh;
@@ -99,8 +97,12 @@
 
 } */
 
-/* Dropdown styles */
-.dropdown:hover .dropdown-content {
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1:hover .dropdown-content {
     display: block;
 }
 
@@ -110,16 +112,68 @@
     top: 110%;
     background-color: #ffffff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    z-index: 5;
     width: 300px;
     border-radius: 15px;
 }
 
-.dropdown .dropdown-content a {
+.dropdown-content a {
     color: #3b3b3b;
-    padding: 12px 16px;
+    width: 100%;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.dropdown-content a:hover {
+    background-color: #001e50;
+    color: #ffff;
+    transition: 0.1s ease;
+    margin-left: 10px;
+    border-radius: 0 15px 15px 0;
+    z-index: 5;
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1:hover .dropdown-content {
     display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.conf-nav .dropdown-content .dropdown-link {
+    position: relative;
+    z-index: 1;
+}
+
+/* Dropdown styles */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown1 .dropdown-content a {
+    color: #3b3b3b;
     width: 100%;
     font-weight: 400;
     text-transform: capitalize;
@@ -130,7 +184,8 @@
     color: #ffff;
     transition: 0.1s ease;
     margin-left: 10px;
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px 15px 15px 15px;
+    z-index: 5;
 }
 
 .abt-us-ctn {
@@ -164,23 +219,19 @@
     left: 0; /* Set left to 0 to align with the left edge of the screen */
 }
 .cebu-info {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Adjusted from center to flex-start */
     margin-top: 10%;
 }
 
 .cebu-details {
     background-color: rgba(59, 59, 59, 0.7);
-    z-index: 3;
     position: relative;
     color: #ffff;
     padding: 25px;
-    margin-right: 50%;
-    width: 600px;
-    max-height: 600px;
-    overflow-y: auto;
+    width: 50%;
+    border-radius: 20px;
 }
 /* width */
 .cebu-details::-webkit-scrollbar {
@@ -206,6 +257,7 @@
 
 .detail-headers {
     line-height: 6.5vh;
+    width: 100%;
 }
 .detail-main-header {
     font-size: 5rem;
@@ -302,11 +354,11 @@ ul li {
     overflow: hidden;
     text-align: left;
     justify-content: center;
-    padding-right: 20%;
+    right: 30%;
 }
 
 .carousel-inner {
-    display: flex;
+    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -321,6 +373,7 @@ ul li {
     align-items: flex-start;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    left: 30%;
 }
 
 .carousel-item.active {
@@ -357,8 +410,7 @@ ul li {
     background-color: #565656;
 }
 
-
-@media only screen and (min-width: 1260px) and (max-width: 1440px){
+@media only screen and (min-width: 1260px) and (max-width: 1440px) {
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
         background-size: 100% auto;
@@ -370,43 +422,42 @@ ul li {
         width: 103%;
         height: 100vh;
     }
-    .carousel-container{
+    .carousel-container {
         width: 90vw;
         margin-top: -4%;
-
     }
-    .welcome{
+    .welcome {
         margin-left: -3%;
     }
-    .welcome-header{
+    .welcome-header {
         font-size: 4.1vw;
     }
-    .theme{
+    .theme {
         font-size: 2.3vw;
     }
-    .theme-message{
+    .theme-message {
         font-size: 1.2vw;
     }
-    .main-conf-nav{
+    .main-conf-nav {
         width: 55vw;
     }
-    .main-conf-nav a{
+    .main-conf-nav a {
         font-size: 0.8vw !important;
     }
-    .about-us-btn{
-       font-size: 1.1vw;
+    .about-us-btn {
+        font-size: 1.1vw;
     }
-    .countdown-sect{
+    .countdown-sect {
         margin-top: -1%;
     }
     .countdown ul li span {
         font-size: 1.3vw !important;
     }
-    .countdown-message{
+    .countdown-message {
         font-size: 1.2vw;
     }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1259px){
+@media only screen and (min-width: 1025px) and (max-width: 1259px) {
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
         background-size: 110% auto;
@@ -418,29 +469,29 @@ ul li {
         width: 103%;
         /* height: 90vh; */
     }
-    .carousel-container{
+    .carousel-container {
         width: 89vw;
         margin-top: -8%;
     }
-    .welcome{
+    .welcome {
         margin-left: -3%;
     }
-    .welcome-header{
+    .welcome-header {
         font-size: 4.3vw;
     }
-    .theme{
+    .theme {
         font-size: 2vw;
     }
-    .theme-message{
+    .theme-message {
         font-size: 0.9vw;
     }
-    .main-conf-nav{
+    .main-conf-nav {
         width: 70vw;
     }
-    .main-conf-nav ul{
+    .main-conf-nav ul {
         width: 60vw;
     }
-    .main-conf-nav a{
+    .main-conf-nav a {
         width: 20%;
         font-size: 0.85vw !important;
     }
@@ -449,20 +500,23 @@ ul li {
         font-size: 1vw !important; /* Adjust the size according to your preference */
         margin-right: 2px; /* Optional: Add some space between the icon and text */
     }
-    .about-us-btn{
-       font-size: 1.1vw;
+    .about-us-btn {
+        font-size: 1.1vw;
     }
-    .countdown-sect{
+    .countdown-sect {
         margin-top: -1%;
     }
     .countdown ul li span {
         font-size: 1.3vw !important;
     }
-    .countdown-message{
+    .countdown-message {
         font-size: 1.5vw;
     }
 }
-@media only screen and (min-width: 800px) and (max-width: 1024px){
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+    .content-main {
+        margin-left: -4%;
+    }
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
         background-size: 120% auto;
@@ -474,7 +528,7 @@ ul li {
         width: 100%;
         /* height: 90vh; */
     }
-    .carousel-container{
+    .carousel-container {
         width: 100%;
         margin-top: -2%;
     }
@@ -482,17 +536,17 @@ ul li {
         width: 50px; /* Set the desired width */
         height: 50px; /* Set the desired height */
     }
-    .welcome-header{
+    .welcome-header {
         font-size: 5vw;
     }
-    .theme{
+    .theme {
         font-size: 2.8vw;
     }
-    .theme-message{
+    .theme-message {
         font-size: 1.5vw;
         width: 50vw;
     }
-    .main-conf-nav{
+    .main-conf-nav {
         margin-top: 3%;
         width: 88vw;
     }
@@ -500,32 +554,31 @@ ul li {
         font-size: 1.5vw !important; /* Adjust the size according to your preference */
         margin-right: 2px; /* Optional: Add some space between the icon and text */
     }
-    .main-conf-nav a{
+    .main-conf-nav a {
         font-size: 1.4vw !important;
     }
-    .about-us-btn{
+    .about-us-btn {
         font-size: 1.3vw;
-     }
-    .countdown-sect{
+    }
+    .countdown-sect {
         margin-top: -1%;
     }
     .countdown ul li span {
         font-size: 2.5vw !important;
     }
-    .countdown ul li{
+    .countdown ul li {
         font-size: 1.5vw !important;
     }
-    .countdown ul{
+    .countdown ul {
         gap: 2%;
     }
-    .countdown-message{
+    .countdown-message {
         font-size: 1.5vw;
     }
-
 }
 
-@media only screen and (min-width: 670px) and (max-width: 799px){
-    .content-main{
+@media only screen and (min-width: 653px) and (max-width: 799px) {
+    .content-main {
         margin-left: -2%;
     }
     .welcome {
@@ -539,59 +592,572 @@ ul li {
         width: 103%;
         /* height: 90vh; */
     }
-    .welcome{
+    .welcome {
         margin-left: -3%;
     }
-    .carousel-container{
-        width: 89vw;
+    .carousel-container {
+        width: 110%;
         margin-top: -2%;
     }
     .plane-sketch {
         width: 50px; /* Set the desired width */
         height: 50px; /* Set the desired height */
     }
-    .welcome-header{
+    .welcome-header {
         font-size: 5.5vw;
     }
-    .theme{
+    .theme {
         font-size: 3.5vw;
     }
-    .theme-message{
+    .theme-message {
         font-size: 1.8vw;
         width: 50vw;
     }
-    .main-conf-nav{
+    .main-conf-nav {
         margin-top: 3%;
         width: 88vw;
     }
+
     .conf-nav i.fa-solid {
         display: none;
     }
-    .main-conf-nav a{
+    .main-conf-nav a {
         font-size: 1.6vw !important;
     }
-    .about-us-btn{
+    .about-us-btn {
         font-size: 1.8vw;
-     }
-    .countdown-sect{
+    }
+    .countdown-sect {
         margin-top: -1%;
         margin-left: -5%;
     }
     .countdown ul li span {
         font-size: 2.5vw !important;
     }
-    .countdown ul li{
+    .countdown ul li {
         font-size: 1.5vw !important;
     }
-    .countdown ul{
+    .countdown ul {
         gap: 2%;
     }
-    .countdown-message{
+    .countdown-message {
         font-size: 2vw;
         margin-left: 5%;
     }
-
+    .cebu-pinned-img {
+        display: none;
+    }
+    .cebu-details {
+        width: 90%;
+    }
 }
-@media only screen and (min-width: 670px) and (max-width: 799px){
+@media only screen and (min-width: 500px) and (max-width: 652px) {
+    .content-main {
+        margin-left: -7%;
+    }
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 170% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -95vw) center; /* Adjust the value as needed */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 103%;
+        /* height: 90vh; */
+    }
+    .welcome {
+        margin-left: -3%;
+    }
+    .carousel-container {
+        width: 105vw;
+        margin-top: -2%;
+    }
+    .carousel-item {
+        margin-left: -5%;
+    }
+    .carousel-inner {
+        left: 5%;
+    }
+    .plane-sketch {
+        width: 50px; /* Set the desired width */
+        height: 50px; /* Set the desired height */
+    }
+    .welcome-header {
+        font-size: 6vw;
+        z-index: 2;
+    }
+    .theme {
+        font-size: 3.8vw;
+    }
+    .theme-message {
+        font-size: 2vw;
+        width: 50vw;
+    }
+    .conf-nav {
+        height: 50%;
+        margin-left: -35%;
+    }
+    .conf-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .main-conf-nav {
+        margin-top: 3%;
+        width: 50vw;
+        margin-left: 18%;
+        margin-right: auto;
+    }
+    /* Set a higher z-index value for the dropdown container */
+    .conf-nav {
+        position: relative;
+        z-index: 2;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 110%;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        width: 300px;
+        border-radius: 15px;
+        left: 70%;
+    }
+    .about-us-btn {
+        border: 2px solid #ffffff;
+    }
+    .abt-us-ctn {
+        position: relative;
+        z-index: 1; /* Adjust the value as needed */
+        top: 10%;
+        margin-left: 30%;
 
+        margin-bottom: 3%;
+    }
+    .conf-nav i.fa-solid {
+        display: none;
+    }
+    .main-conf-nav a {
+        font-size: 2.6vw !important;
+    }
+    .about-us-btn {
+        font-size: 3vw;
+        z-index: 2;
+        color: #ffffff;
+    }
+
+    .count-section {
+        position: relative;
+        z-index: 2; /* Adjust the value as needed */
+    }
+
+    .countdown-sect {
+        margin-top: 20%;
+        margin-left: 1%;
+        position: relative;
+        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
+    }
+
+    .countdown ul li span {
+        font-size: 6vw !important;
+        color: #ffffff;
+    }
+    .countdown ul li {
+        font-size: 3vw !important;
+        color: #ffffff;
+    }
+    .countdown ul {
+        gap: 2%;
+    }
+    .countdown-message {
+        font-size: 3vw;
+        margin-left: 5%;
+        color: #ffffff;
+    }
+    .city-smoke-bg {
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        object-fit: cover;
+    }
+    .about-cebu {
+        height: 500% !important;
+    }
+    .cebu-info {
+        width: 100%;
+    }
+    .cebu-details {
+        margin-left: 0%;
+        margin-top: 25%;
+        width: 90%;
+    }
+    .cebu-pinned-img {
+        display: none !important;
+    }
+    .detail-main-header {
+        font-size: 10vw;
+    }
+    .announcements {
+        margin-left: -8%;
+    }
+    .announcement-header {
+        font-size: 6vw;
+    }
+}
+@media only screen and (min-width: 440px) and (max-width: 499px) {
+    .content-main {
+        margin-left: -2%;
+    }
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 240% auto;
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - -150vw) 50px;
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .carousel-container {
+        width: 105vw;
+        margin-top: -2%;
+    }
+    .carousel-inner {
+        width: 110vw;
+    }
+    .carousel-item {
+        left: 15%;
+    }
+    .plane-sketch {
+        width: 50px; /* Set the desired width */
+        height: 50px; /* Set the desired height */
+    }
+    .welcome-header {
+        font-size: 8.7vw;
+        z-index: 2;
+    }
+    .theme {
+        font-size: 4vw;
+    }
+    .theme-message {
+        font-size: 2.3vw;
+        width: 65vw;
+    }
+    .conf-nav {
+        height: 50%;
+        margin-left: -35%;
+    }
+    .conf-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 2; /* Set a higher z-index value */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .main-conf-nav {
+        margin-top: 3%;
+        width: 50vw;
+        margin-left: 18%;
+        margin-right: auto;
+    }
+    .about-us-btn {
+        border: 2px solid #ffffff;
+    }
+    .abt-us-ctn {
+        position: relative;
+        z-index: 1; /* Adjust the value as needed */
+        top: 10%;
+        margin-left: 25%;
+    }
+    .conf-nav i.fa-solid {
+        display: none;
+    }
+    .main-conf-nav a {
+        font-size: 2.6vw !important;
+    }
+    .about-us-btn {
+        font-size: 3vw;
+        z-index: 2;
+        color: #ffffff;
+    }
+
+    .count-section {
+        position: relative;
+        z-index: 2; /* Adjust the value as needed */
+    }
+
+    .countdown-sect {
+        margin-top: 28%;
+        margin-left: -10%;
+        position: relative;
+        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
+    }
+
+    .countdown ul li span {
+        font-size: 6vw !important;
+        color: #ffffff;
+    }
+    .countdown ul li {
+        font-size: 3vw !important;
+        color: #ffffff;
+    }
+    .countdown ul {
+        gap: 2%;
+    }
+    .countdown-message {
+        font-size: 3vw;
+        margin-left: 5%;
+        color: #ffffff;
+    }
+    .city-smoke-bg {
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        top: 75%;
+        left: 0;
+        object-fit: cover;
+    }
+    .about-cebu {
+        height: 500% !important;
+    }
+    .cebu-info {
+        width: 100%;
+    }
+    .cebu-details {
+        margin-left: -5%;
+        margin-top: 35%;
+        width: 90%;
+        height: 600px;
+        overflow-y: auto;
+    }
+    .cebu-pinned-img {
+        display: none !important;
+    }
+    .detail-main-header {
+        font-size: 10vw;
+    }
+    .announcements {
+        margin-left: -8%;
+    }
+    .announcement-header {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 439px) {
+    .content-main {
+        margin-left: -5%;
+    }
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 300% auto;
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - -155vw);
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 100%;
+    }
+
+    .carousel-container {
+        width: 100vw;
+        margin-top: -2%;
+    }
+    .carousel-inner {
+        width: 100vw;
+    }
+    .carousel-item {
+        left: 20%;
+    }
+    .plane-sketch {
+        display: none;
+    }
+    .welcome-header {
+        margin-right: 20% !important;
+        font-size: 8.7vw;
+        z-index: 2;
+    }
+    .welcome-header .span {
+        font-size: 13vw;
+    }
+    .theme {
+        font-size: 4vw;
+    }
+    .theme-message {
+        font-size: 2.3vw;
+        width: 65vw;
+    }
+    .conf-nav {
+        height: 50%;
+        margin-left: -35%;
+    }
+    .conf-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .main-conf-nav {
+        margin-top: 3%;
+        width: 50vw;
+        margin-left: 18%;
+        margin-right: auto;
+    }
+    .main-conf-nav a {
+        font-size: 2.6vw !important;
+    }
+    .about-us-btn {
+        border: 2px solid #ffffff;
+    }
+    .abt-us-ctn {
+        position: relative;
+        z-index: 1; /* Adjust the value as needed */
+        top: 10%;
+        bottom: 10%;
+        margin-left: 20%;
+    }
+    .conf-nav i.fa-solid {
+        display: none;
+    }
+
+    .about-us-btn {
+        font-size: 3vw;
+        z-index: 2;
+        color: #ffffff;
+    }
+
+    .count-section {
+        position: relative;
+        z-index: 2; /* Adjust the value as needed */
+    }
+
+    .countdown-sect {
+        margin-top: 28%;
+        margin-left: -15%;
+        position: relative;
+        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
+    }
+
+    .countdown ul li span {
+        font-size: 6vw !important;
+        color: #ffffff;
+    }
+    .countdown ul li {
+        font-size: 3vw !important;
+        color: #ffffff;
+    }
+    .countdown ul {
+        gap: 2%;
+    }
+    .countdown-message {
+        font-size: 3vw;
+        margin-left: 5%;
+        color: #ffffff;
+    }
+    .city-smoke-bg {
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        top: 75%;
+        left: 0;
+        object-fit: cover;
+    }
+    .about-cebu {
+        height: 500% !important;
+    }
+    .cebu-info {
+        width: 100%;
+    }
+    .cebu-details {
+        margin-left: -5%;
+        margin-top: 35%;
+        width: 90%;
+        height: 600px;
+        overflow-y: auto;
+    }
+    .cebu-pinned-img {
+        display: none !important;
+    }
+    .detail-main-header {
+        font-size: 10vw;
+    }
+    .announcements {
+        margin-left: -8%;
+    }
+    .announcement-header {
+        font-size: 5vw;
+    }
+    .announcement-arrow {
+        width: 25px; /* Adjust this value to make the image smaller */
+        /* Optionally, you can set the height to maintain the aspect ratio */
+        height: auto;
+    }
+    .text-center {
+        font-size: 3.2vw;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 385px) {
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 300% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -155vw) 50px; /* Adjust X and Y values */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 100%;
+    }
+    .main-conf-nav {
+        margin-top: 3%;
+        width: 60vw;
+        margin-left: 15%;
+        margin-right: auto;
+    }
+    .main-conf-nav a {
+        font-size: 3vw !important;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 370px) {
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 300% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -155vw) 70px; /* Adjust X and Y values */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 350px) {
+    .welcome {
+        background: url("/img/home/photo-tiles-strip.png");
+        background-size: 300% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - -155vw) 100%; /* Adjust X and Y values */
+        z-index: 5;
+        padding: 0vh;
+        color: #3b3b3b;
+        width: 100%;
+    }
 }

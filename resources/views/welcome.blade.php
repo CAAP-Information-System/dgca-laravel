@@ -78,7 +78,7 @@
         <div class="main-conf-nav">
             <nav class="conf-nav">
                 <ul>
-                    <li class="dropdown">
+                    <li class="dropdown1">
                         <a href="#">
                             <i class="fa-solid fa-users"></i>
                             Conference
@@ -96,7 +96,7 @@
                             Side Meeting
                         </a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown1">
                         <a href="#">
                             <i class="fa-solid fa-user-tie"></i>
                             Delegate's Corner
@@ -111,7 +111,7 @@
                             <a href="#">Tips and Advices</a>
                         </div>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown1">
                         <a href="#">
                             <i class="fa-solid fa-folder-open"></i>
                             Documents
