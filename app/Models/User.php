@@ -72,11 +72,8 @@ class User extends Authenticatable
 
         // Copyright & Privacy Policy
         'privacy',
-<<<<<<< HEAD
-=======
         'profile_image',
         'time_test',
->>>>>>> 1c45193a793f01c264caa5a340b26bae07fcce55
     ];
 
     /**

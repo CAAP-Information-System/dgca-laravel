@@ -69,7 +69,6 @@ class RegisterController extends Controller
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
             'privacy' => ['required', 'string'],
             'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
-<<<<<<< HEAD
             'salutation' => ['required', 'string', 'max:255'],
             'passport_num' => ['required', 'string'],
             'address' => ['required', 'string'],
@@ -107,9 +106,7 @@ class RegisterController extends Controller
             'accomp_name' => ['nullable', 'string'],
             'accomp_name' => ['nullable', 'string'],
             'accomp_preferred_activity' => ['nullable', 'string', 'max:255'],
-=======
             'time_test' => ['required', 'date_format:H:i'],
->>>>>>> 1c45193a793f01c264caa5a340b26bae07fcce55
         ]);
     }
 
@@ -141,7 +138,6 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'conference_role' => $data['conference_role'],
             'privacy' => $data['privacy'] ? 'Approved' : 'Unapproved',
-<<<<<<< HEAD
             'profile_image' => $profilefileName, // Save only the file name
             'airport_destination' => $data['airport_destination'],
             'neck' => $data['neck'],
@@ -170,10 +166,8 @@ class RegisterController extends Controller
             'accomp_name' => $data['accomp_name'],
             'accomp_country' => $data['accomp_country'],
             'accomp_preferred_activity' => $data['accomp_preferred_activity'],
-=======
-            'profile_image' => $fileName, // Save only the file name
+            'profile_image' => $profilefileName, // Save only the file name
             'time_test' => $data['time_test'],
->>>>>>> 1c45193a793f01c264caa5a340b26bae07fcce55
         ]);
     }
 }

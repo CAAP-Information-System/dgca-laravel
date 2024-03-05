@@ -130,8 +130,6 @@
                         <option value="Mactan-Cebu International Airport">Mactan-Cebu International Airport</option>
                     </select>
                 </div>
-<<<<<<< HEAD
-
                 <!-- FLIGHT DETAILS -->
                 <div class="category__header">
                     <header class="category-name">Flight Details</header>
@@ -144,11 +142,11 @@
                             Please indicate your flight details which will be used by our assigned committees.
                         </i>
                     </p>
-=======
+
                 <div class="input__email">
                     <span class="details">Time</span>
                     <input type="time" name="time_test" value="{{ old('time_test') }}" required>
->>>>>>> 1c45193a793f01c264caa5a340b26bae07fcce55
+
                 </div>
                 <div class="input__box">
                     <span class="details">Departure Flight No. <span class="required-symbol">*</span></span>
