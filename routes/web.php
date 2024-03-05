@@ -35,6 +35,8 @@ Route::middleware('public')->group(function () {
     Route::get('/about-caap', [HomeController::class, 'viewAboutCAAP'])->name('about-caap');
     Route::get('/our-sponsors', [HomeController::class, 'viewOurSponsors'])->name('our-sponsors');
     Route::get('/program-overview', [HomeController::class, 'viewProgram'])->name('program-overview');
+    Route::get('/transport-schedule', [HomeController::class, 'viewTransportSched'])->name('transport-schedule');
+    Route::get('/useful-tips', [HomeController::class, 'viewUsefulTips'])->name('useful-tips');
     Route::get('/hotel-recommendations', [HomeController::class, 'viewHotelRecommendations'])->name('hotel-recommendations');
     Route::get('/contact-us', [HomeController::class, 'viewContactUs'])->name('contact-us');
 });

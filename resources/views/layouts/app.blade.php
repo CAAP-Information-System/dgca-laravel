@@ -67,7 +67,7 @@
     <div class="main-nav-content">
         <div class="head-navbar">
             <div class="logos-main">
-                <a class="caap-nav" href="{{ url('/') }}">
+                <a class="caap-nav">
                     <img src="{{ asset('img/home/dgca-logo-outlined.png') }}" alt="DGCA Logo" class="nav-caap-logo">
                     <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
 
@@ -105,7 +105,6 @@
                                                 <li><a href="#">Floor Plan</a></li>
                                                 <li><a href="{{ route('our-sponsors') }}">Our Sponsors</a></li>
                                                 <li><a href="#">Exhibit Services</a></li>
-                                                <li><a href="#">Exhibition Registration</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('registration-page') }}">Registration</a></li>

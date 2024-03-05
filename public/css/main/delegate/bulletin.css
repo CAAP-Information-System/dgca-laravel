@@ -8,7 +8,16 @@
     opacity: 1;
     transform: translateY(0)
 }
-
+.bulletin-intro{
+    font-size: 19px;
+}
+.welcome2ph{
+    font-size: 2rem;
+    color: #50A9FB;
+}
+.intro-desc{
+    line-height: 4vh;
+}
 .bulletin-content {
     padding: 10px;
     background-color: #ffff;
@@ -36,7 +45,7 @@
     margin-right: 5vh;
 }
 .bullet-desc {
-    width: 60%;
+    width: 70%;
     text-align: justify;
     font-size: 18px;
     color: #3b3b3b;

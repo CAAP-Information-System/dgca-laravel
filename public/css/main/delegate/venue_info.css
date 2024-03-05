@@ -171,8 +171,7 @@
 }
 
 .link-item:hover{
-    background-color: #002868;
-    color: #ffff;
+    color: #50A9FB;
     transition: .1s ease;
 }
 @media screen and (max-width: 768px) {

@@ -5,6 +5,7 @@
     align-items: center;
     gap: 5vh;
     margin-top: 10vh;
+    padding: 3vh;
 }
 .error-img{
     width: 500px;
@@ -21,4 +22,20 @@
     color: #969696;
     font-style: italic;
     font-size: 19px;
+}
+.go-bome{
+    margin-top: 3vh;
+}
+.go-home-btn{
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 99px;
+    background-color: #50A9FB;
+    color: #ffff !important;
+}
+.go-home-btn:hover{
+    background-color: #969696;
 }

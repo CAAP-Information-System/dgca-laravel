@@ -265,12 +265,12 @@
                     </div>
                     <div class="input__box-long">
                         <label for="accomp_country">Country Accompanied Person/Spouse:</label>
-                        <input type="text" placeholder="Enter Country" id="accomp_country" name="accomp_country" class="form-control" >
+                        <input type="text" placeholder="Enter Country" id="accomp_country" name="accomp_country" class="form-control">
                     </div>
 
                     <div class="input__box-long">
                         <label for="accomp_preferred_activity">Activities:</label>
-                        <select class="form-control" id="accomp_preferred_activity" name="accomp_preferred_activity" >
+                        <select class="form-control" id="accomp_preferred_activity" name="accomp_preferred_activity">
                             <option value="">-- Select Option --</option>
                             <option value="Event 1">Event 1</option>
                             <option value="Event 2">Event 2</option>
@@ -316,17 +316,6 @@
                 <h4>Privacy Policy <span class="required-symbol">*</span></h4>
                 <p>
                     All information provided herein shall be kept private and confidential by the PPP Center and shall be used solely for legal purposes as mandated by the <a class="text-primary text-bold dpa-link" href="https://privacy.gov.ph/data-privacy-act/#w10">Data Privacy Act of 2012</a> and other relevant laws. Videos and pictures taken during the event may also be used in PPP Center’s promotional and publicity materials.
-                </p>
-                <b>Collection and Use of Personal Information and Presentation Materials</b>
-                <ol>
-
-                    <li>Items of personal information collected: <i> Title, County, Full Name, Affiliation, Department, Poistion/Designation, Telehone, Mobile, E-mail, Address, etc.</i></li>
-                    <li>Items of presentation materials collected: <i> Presentation, Agenda Files, etc.</i></li>
-                </ol>
-                <p>For data privacy concerns, kindly contact the PPP Center’s Data Protection Officer at
-                    <a href="#" class="privacy-pol-link">
-                        pppc.dpo@ppp.gov.ph.
-                    </a>
                 </p>
             </div>
             <div class="privacy-policy-check">

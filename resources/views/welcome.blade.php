@@ -51,7 +51,7 @@
                     </header>
                     <header class="theme">Sustainable, Resilient, & Inclusive</header>
                     <p class="theme-message">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity
                     </p>
                 </div>
 
@@ -71,7 +71,7 @@
                             Conference
                         </a>
                         <div class="dropdown-content">
-                            <a href="{{ route('welcome') }}">Welcome Message</a>
+                            <a href="{{ route('message') }}">Welcome Message</a>
                             <a href="{{ route('agenda') }}">Agenda</a>
                             <a href="#">Programme</a>
                             <a href="{{ route('the-gallery') }}">The Gallery</a>
@@ -91,11 +91,11 @@
                         <div class="dropdown-content">
                             <a href="{{ route('bulletin') }}">Conference Bulletin</a>
                             <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
-                            <a href="#">Transport Schedule</a>
+                            <a href="{{ route('transport-schedule') }}">Transport Schedule</a>
                             <a href="{{ route('venue') }}">Venue Information</a>
                             <a href="{{ route('medical-support') }}">Medical Support</a>
-                            <a href="#">Hotel Recommendations</a>
-                            <a href="#">Tips and Advices</a>
+                            <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
+                            <a href="{{ route('useful-tips') }}">Tips and Advices</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -184,22 +184,9 @@
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
         </header>
-        <div class="announcement-content">
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non pulvinar neque laoreet suspendisse interdum.</li>
-                <li>Lectus mauris ultrices eros in. Tristique senectus et netus et malesuada fames ac turpis egestas. Consectetur adipiscing elit duis tristique sollicitudin. Eu ultrices vitae auctor eu augue ut lectus.</li>
-                <li>In vitae turpis massa sed. Ornare quam viverra orci sagittis eu volutpat odio. Nec dui nunc mattis enim ut tellus elementum sagittis. At quis risus sed vulputate odio. Tempus iaculis urna id volutpat lacus. A cras semper auctor neque vitae tempus quam pellentesque.</li>
-            </ul>
-        </div>
-    </section>
-
-
-    <!-- @if(isset($newspost))
-    <section class="notices-section hidden">
-        <header class="notice-header">Notice Board</header>
-        <div class="container">
-            <main class="notice-container">
-
+        @if(isset($newspost))
+        <div class="notice-container">
+            <main class="container">
                 @foreach($newspost as $post)
                 <div class="notice-card">
                     <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" alt="notice image" class="notice-img">
@@ -214,8 +201,12 @@
             </main>
 
         </div>
+        @endif
     </section>
-    @endif  -->
+
+
+
+
 </main>
 
 <script src="{{ asset('js/welcome/pending-modal.js') }}"></script>

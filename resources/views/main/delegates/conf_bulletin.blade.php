@@ -7,7 +7,27 @@
 @include('main.banner', ['bannerTitle' => 'Conference Bulletin'])
 
 <div class="container">
+    <div class="bulletin-intro">
+        <p class="welcome2ph">Welcome to the Philippines</p>
+        <p class="intro-desc">
+            The Philippines is a diverse and vibrant country known for its rich cultural heritage, stunning
+            beaches, and diverse food selection. Whether you're visiting for business or leisure, this
+            information sheet will help you make the most of your trip.
+        </p>
+    </div>
     <section class="bulletin-content">
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/venue.png') }}" alt="venue" class="bullet-img">
+                Conference Venue
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    The 59nth Directors General Conference on Civil Aviation will be held on <b class="text-primary">14 – 18 October
+                        2024</b> at Dusit Thani, Mactan Cebu, Philippines.
+                </div>
+            </div>
+        </div>
         <div class="bulletin-grp ">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/visa.png') }}" alt="passport-visa" class="bullet-img">
@@ -18,7 +38,7 @@
                     All foreign visitors to Philippines must ensure their passports, travel documents, and visas have a <b class="text-primary">minimum validity of six (6) months </b>from their arrival date. While visa on arrival is an option for select countries, please refer to the conference website for comprehensive visa requirements based on nationality.
                     <br><br>
                     <p>
-                        For further details, kindly inquire with the <a href="https://immigration.gov.ph/contacts/">Bureau of Immigration</a>, or reach out to your nearest Philippine Diplomatic or Consular Missions. Any questions regarding visa requirements can be directed to us via email at <a href="#">secretariat-email@email.com</a>.
+                        For further details, kindly inquire with the <a href="https://immigration.gov.ph/contacts/">Bureau of Immigration</a>, or reach out to your nearest Philippine Diplomatic or Consular Missions. Any questions regarding visa requirements can be directed to us via email at <a href="#">dgca59_secretariat@caap.gov.ph</a>.
                     </p>
                     <br>
                     <label for="">For more information kindly visit:</label>
@@ -31,7 +51,29 @@
             </div>
         </div>
 
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/side-meetings.png') }}" alt="baggage" class="bullet-img">
+                Schedule of Meetings
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    <p>
+                        The opening ceremony of the event, keynotes addresses, as well as the opening of the
+                        exhibition area is scheduled to commence on Monday, 14 October 2024 at 09:00 hrs
+                    </p>
+                    <p>
+                        The <b class="text-primary">conference</b> is scheduled to commence on Monday, 14 October 2024 at 09:00 hrs.
+                    </p>
+                    <p>
+                        The <b class="text-primary">Gala Dinner</b> is scheduled for the evening of Tuesday, 15 October 2024 at
+                        (__________),(further details will be provided)
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/luggage.png') }}" alt="baggage" class="bullet-img">
                 Baggage Identification
@@ -39,17 +81,9 @@
             <div class="bullet-details">
                 <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
-        </div>
-        <div class="bulletin-grp hidden">
-            <header class="bullet-hdr">
-                <img src="{{ asset('img/icon/venue.png') }}" alt="venue" class="bullet-img">
-                Conference Venue
-            </header>
-            <div class="bullet-details">
-                <div class="bullet-desc">Shangri-La Mactan, Cebu Philippines.</div>
-            </div>
-        </div>
-        <div class="bulletin-grp hidden">
+        </div> -->
+
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/agenda.png') }}" alt="baggage" class="bullet-img">
                 Agenda and Programme
@@ -60,19 +94,33 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/participants.png') }}" alt="baggage" class="bullet-img">
                 Participant Registration
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Participants should register online the ICAO events webpage at
+                    <a href="https://www.icao.int/Meetings/CAAF3/Pages/default.aspx" target="_blank">https://www.icao.int/Meetings/CAAF3/Pages/default.aspx</a>.
 
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/documentation.png') }}" alt="baggage" class="bullet-img">
+                Documentation
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    Please note that no documentation will be available in hard copy format. Details regarding
+                    the event and upload of presentations after the event will be available on
+                    <a href="https://www.icao.int/Meetings/CAAF3/Pages/default.aspx" target="_blank">https://www.icao.int/Meetings/CAAF3/Pages/default.aspx</a>
+                </div>
+            </div>
+        </div>
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/papers.png') }}" alt="baggage" class="bullet-img">
                 Conference Paper
@@ -83,7 +131,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/email.png') }}" alt="baggage" class="bullet-img">
                 Website and Emails
@@ -91,12 +139,38 @@
             <div class="bullet-details">
                 <div class="bullet-desc">
                     <li>Conference Website: <a href="#" class="bullet-email">place-dgca-website-here.com</a></li>
-                    <li>Conference Secretariat: <a href="#" class="bullet-email">dgca-secretariat-email@email.com</a></li>
-                    <li>Conference Registration Team: <a href="#" class="bullet-email">reg-team@email.com</a></li>
+                    <li>Conference Secretariat: <a href="#" class="bullet-email">dgca59_secretariat@caap.gov.ph</a></li>
+                    <li>Conference Registration Team: <a href="#" class="bullet-email">dgca59_registration@caap.gov.ph</a></li>
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/hotel.png') }}" alt="baggage" class="bullet-img">
+                Hotel Reservation
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    Participants are requested to ensure that their return airline booking is confirmed. Details of
+                    the hotel, where the event will be held, along with other hotels within the vicinity providing
+                    preferential/corporate rates is available under the <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a> and <a href="https://dfa-oca.ph/visa/visa-general-info/">VISA Information</a> page of the event website. <b class="text-primary">Participants are responsible for their own hotel and travel
+                        reservations.</b>
+                </div>
+            </div>
+        </div>
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/insurance.png') }}" alt="baggage" class="bullet-img">
+                Insurances
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    Participants are advised to have insurance coverage for any unexpected contingency including transport hazards (taxi, buses, rented cars, etc.) and Medical Coverage
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/dress-code.png') }}" alt="baggage" class="bullet-img">
                 Event Dress Coding
@@ -107,8 +181,8 @@
 
                 </div>
             </div>
-        </div>
-        <div class="bulletin-grp hidden">
+        </div> -->
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/wifi.png') }}" alt="baggage" class="bullet-img">
                 Wifi and Network
@@ -119,7 +193,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/secretariat.png') }}" alt="baggage" class="bullet-img">
                 Conference Secretariat
@@ -130,7 +204,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <!-- <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/side-meetings.png') }}" alt="baggage" class="bullet-img">
                 Side Meeting Rooms
@@ -143,8 +217,8 @@
 
                 </div>
             </div>
-        </div>
-        <div class="bulletin-grp hidden">
+        </div> -->
+        <!-- <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/meals.png') }}" alt="baggage" class="bullet-img">
                 Meals and Refreshments
@@ -152,8 +226,8 @@
             <div class="bullet-details">
                 <div class="bullet-desc">Refreshments during mid-morning and mid-afternoon breaks and a working lunch will be provided for all delegates during each day of the conference.</div>
             </div>
-        </div>
-        <div class="bulletin-grp hidden">
+        </div> -->
+        <!-- <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/social-event.png') }}" alt="baggage" class="bullet-img">
                 Social Events
@@ -161,28 +235,20 @@
             <div class="bullet-details">
                 <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
-        </div>
-        <div class="bulletin-grp hidden">
-            <header class="bullet-hdr">
-                <img src="{{ asset('img/icon/hotel.png') }}" alt="baggage" class="bullet-img">
-                Hotel Reservation
-            </header>
-            <div class="bullet-details">
-                <div class="bullet-desc">
-                    You can make your hotel accommodation booking using the details provided on the conference website. In addition to the conference venue hotel, other hotel options are listed on the website. It's advisable to make your hotel booking as early as possible to avoid any shortage of rooms in your preferred hotel. If you encounter any difficulties with hotel reservation, feel free to email us at <a href="#">reg-team@email.com</a>.
-                </div>
-            </div>
-        </div>
-        <div class="bulletin-grp hidden">
+        </div> -->
+
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/transportation.png') }}" alt="baggage" class="bullet-img">
                 Transportation
             </header>
             <div class="bullet-details">
-                <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="bullet-desc">
+                    Participants are requested to make their own arrangements for transportation from the airport to the city and return. <b class="text-primary">Some hotels offer airport transfers</b>.
+                </div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <!-- <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/telephone-service.png') }}" alt="baggage" class="bullet-img">
                 Telephone Service
@@ -191,8 +257,8 @@
             <div class="bullet-details">
                 <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
-        </div>
-        <div class="bulletin-grp hidden">
+        </div> -->
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/travel-service.png') }}" alt="baggage" class="bullet-img">
                 Travel Service
@@ -201,7 +267,7 @@
                 <div class="bullet-desc">If you need any assistance with arranging private pre- or post-conference tours and excursions tailored to your preferences, please feel free to inquire at the Concierge Desk of your hotel.</div>
             </div>
         </div>
-        <div class="bulletin-grp hidden">
+        <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/other-info.png') }}" alt="baggage" class="bullet-img">
                 Other Information

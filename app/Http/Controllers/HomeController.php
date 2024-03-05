@@ -104,6 +104,10 @@ class HomeController extends Controller
     {
         return view('main.delegates.venue_info');
     }
+    public function viewUsefulTips()
+    {
+        return view('main.delegates.useful_tips');
+    }
     public function viewContactUs()
     {
         return view('main.contact-us');
@@ -120,6 +124,10 @@ class HomeController extends Controller
     }
 
     public function viewProgram()
+    {
+        return view('error.error_503');
+    }
+    public function viewTransportSched()
     {
         return view('error.error_503');
     }
