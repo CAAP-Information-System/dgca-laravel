@@ -235,6 +235,23 @@
         width: 100%;
     }
 }
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+    .container{
+        margin-left: -5%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .container {
+        margin-left: auto;
+        margin-right: 15%;
+    }
+}
+/* @media only screen and (min-width: 600px) and (max-width: 655px) {
+    .container {
+        margin-left: auto;
+        margin-right: 70rem;
+    }
+} */
 @media only screen and (min-width: 300px) and (max-width: 450px) {
     .auth-hdr {
         font-size: 6vw;
@@ -242,6 +259,10 @@
     }
     .input-group-prepend{
         width: 13%;
+    }
+    .container {
+        margin-left: auto;
+        margin-right: 100%;
     }
 
 }

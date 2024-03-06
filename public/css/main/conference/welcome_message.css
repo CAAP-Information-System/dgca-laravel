@@ -47,3 +47,111 @@
     width: 500px;
     height: auto;
 }
+@media only screen and (min-width: 961px) and (max-width: 1275px) {
+    .message-container{
+        width: 70%;
+    }
+    .message-header{
+        font-size: 2.6vw;
+    }
+    .message-content{
+        font-size: 1.3vw;
+    }
+    .dg-name{
+        font-size: 2vw;
+    }
+    .dgca-merged{
+        width: 30vw;
+    }
+}
+@media only screen and (min-width: 701px) and (max-width: 960px) {
+    .message-header{
+        font-size: 4vw;
+    }
+    .message-content{
+        font-size: 1.8vw;
+    }
+    .dg-name{
+        font-size: 2vw;
+    }
+    .dgca-merged{
+        width: 30vw;
+    }
+}
+@media only screen and (min-width: 531px) and (max-width: 700px) {
+    .message-container{
+        width: 100%;
+    }
+    .message-header{
+        font-size: 6.5vw;
+        font-weight: bold;
+    }
+    .message-content{
+        font-size: 2vw;
+    }
+    .dg-name{
+        font-size: 2.2vw;
+    }
+    .dgca-merged{
+        display: none;
+    }
+}
+@media only screen and (min-width: 470px) and (max-width: 530px) {
+    .message-container{
+        width: 100%;
+    }
+    .message-header{
+        font-size: 6.5vw;
+        font-weight: bold;
+    }
+    .message-content{
+        font-size: 2.6vw;
+    }
+    .dg-name{
+        font-size: 3vw;
+    }
+    .dgca-merged{
+        display: none;
+    }
+}
+@media only screen and (min-width: 414px) and (max-width: 469px) {
+    .message-container{
+        width: 100%;
+    }
+    .message-header{
+        font-size: 6vw;
+        font-weight: bold;
+    }
+    .message-content{
+        font-size: 2.9vw;
+        margin-left: -20;
+    }
+    .dg-name{
+        font-size: 3.5vw;
+    }
+    .dgca-merged{
+        display: none;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 413px) {
+    .message-container{
+        width: 100%;
+        margin-left: -8%;
+    }
+    .message-header{
+        font-size: 5vw;
+        font-weight: bold;
+    }
+    .message-content{
+        font-size: 3vw;
+        margin-left: -20;
+    }
+    .dg-name{
+        font-size: 3.5vw;
+    }
+    .dgca-merged{
+        display: none;
+    }
+}
+
+

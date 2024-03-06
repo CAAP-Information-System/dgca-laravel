@@ -230,7 +230,7 @@
     position: relative;
     color: #ffff;
     padding: 25px;
-    width: 50%;
+    width: 35%;
     border-radius: 20px;
 }
 /* width */
@@ -519,9 +519,9 @@ ul li {
     }
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
-        background-size: 120% auto;
+        background-size: 125% auto;
         background-repeat: no-repeat;
-        background-position: calc(100% - -50vw) center; /* Adjust the value as needed */
+        background-position: calc(100% - -55vw) center; /* Adjust the value as needed */
         z-index: 5;
         padding: 0vh;
         color: #3b3b3b;
@@ -574,6 +574,9 @@ ul li {
     }
     .countdown-message {
         font-size: 1.5vw;
+    }
+    .city-smoke-bg{
+        margin-top: 5%;
     }
 }
 
@@ -650,6 +653,9 @@ ul li {
     .cebu-details {
         width: 90%;
     }
+    .city-smoke-bg{
+        margin-top: 5%;
+    }
 }
 @media only screen and (min-width: 500px) and (max-width: 652px) {
     .content-main {
@@ -706,7 +712,7 @@ ul li {
     .main-conf-nav {
         margin-top: 3%;
         width: 50vw;
-        margin-left: 18%;
+        margin-left: 20%;
         margin-right: auto;
     }
     /* Set a higher z-index value for the dropdown container */
@@ -755,7 +761,7 @@ ul li {
 
     .countdown-sect {
         margin-top: 20%;
-        margin-left: 1%;
+        margin-left: 5%;
         position: relative;
         z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
     }
@@ -780,7 +786,7 @@ ul li {
         width: 100%;
         height: 150%;
         position: absolute;
-        top: 70%;
+        top: 75%;
         left: 0;
         object-fit: cover;
     }
@@ -792,7 +798,7 @@ ul li {
     }
     .cebu-details {
         margin-left: 0%;
-        margin-top: 25%;
+        margin-top: 30%;
         width: 90%;
     }
     .cebu-pinned-img {
@@ -801,11 +807,14 @@ ul li {
     .detail-main-header {
         font-size: 10vw;
     }
-    .announcements {
-        margin-left: -8%;
-    }
+
     .announcement-header {
-        font-size: 6vw;
+        font-size: 5vw !important;
+    }
+    .announcement-arrow {
+        width: 25px !important; /* Adjust this value to make the image smaller */
+        /* Optionally, you can set the height to maintain the aspect ratio */
+        height: auto;
     }
 }
 @media only screen and (min-width: 440px) and (max-width: 499px) {
@@ -946,7 +955,7 @@ ul li {
     }
     .cebu-details {
         margin-left: -5%;
-        margin-top: 35%;
+        margin-top: 40%;
         width: 90%;
         height: 600px;
         overflow-y: auto;
@@ -961,7 +970,12 @@ ul li {
         margin-left: -8%;
     }
     .announcement-header {
-        font-size: 6vw;
+        font-size: 5vw !important;
+    }
+    .announcement-arrow {
+        width: 25px !important; /* Adjust this value to make the image smaller */
+        /* Optionally, you can set the height to maintain the aspect ratio */
+        height: auto;
     }
 }
 
@@ -978,6 +992,7 @@ ul li {
         padding: 0vh;
         color: #3b3b3b;
         width: 100%;
+
     }
 
     .carousel-container {
@@ -1105,10 +1120,10 @@ ul li {
         margin-left: -8%;
     }
     .announcement-header {
-        font-size: 5vw;
+        font-size: 5vw !important;
     }
     .announcement-arrow {
-        width: 25px; /* Adjust this value to make the image smaller */
+        width: 25px !important; /* Adjust this value to make the image smaller */
         /* Optionally, you can set the height to maintain the aspect ratio */
         height: auto;
     }
@@ -1150,14 +1165,20 @@ ul li {
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 350px) {
+    .content-main {
+        margin-left: -10%;
+    }
     .welcome {
         background: url("/img/home/photo-tiles-strip.png");
         background-size: 300% auto;
         background-repeat: no-repeat;
-        background-position: calc(100% - -155vw) 100%; /* Adjust X and Y values */
+        background-position: calc(100% - -155vw) 3rem; /* Adjust X and Y values */
         z-index: 5;
         padding: 0vh;
         color: #3b3b3b;
         width: 100%;
+    }
+    .count-section{
+        margin-top: 40% !important;
     }
 }
