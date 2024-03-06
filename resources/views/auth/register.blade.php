@@ -142,11 +142,6 @@
                             Please indicate your flight details which will be used by our assigned committees.
                         </i>
                     </p>
-
-                <div class="input__email">
-                    <span class="details">Time</span>
-                    <input type="time" name="time_test" value="{{ old('time_test') }}" required>
-
                 </div>
                 <div class="input__box">
                     <span class="details">Departure Flight No. <span class="required-symbol">*</span></span>
@@ -335,16 +330,18 @@
                 <ul id="fileList" class="file-list"></ul>
             </div> -->
 
-            <div class="button">
-                <button type="submit" class="register">Create an Account</button>
+            <div class="form-actions">
+                <div class="button">
+                    <button type="submit" class="register">Create an Account</button>
+                </div>
+                <section class="already-registered">
+                    <div class="alt-label">Already have an account?</div>
+                    <br>
+                    @if (Route::has('login'))
+                    <a class="alt-link" href="{{ route('login') }}">Back to Sign In</a>
+                    @endif
+                </section>
             </div>
-            <section class="already-registered">
-                <div class="alt-label">Already have an account?</div>
-                <br>
-                @if (Route::has('login'))
-                <a class="alt-link" href="{{ route('login') }}">Back to Sign In</a>
-                @endif
-            </section>
         </form>
     </div>
 

@@ -7,6 +7,9 @@ body {
     background-position: fixed;
 
 }
+.main-content{
+    margin-left: 10vh;
+}
 .caap-video {
     width: 100%;
     height: auto;
@@ -649,6 +652,9 @@ nav .navbar .links li .js-sub-menu{
         background-repeat: repeat-y;
         background-position: fixed;
 
+    }
+    .main-content{
+        margin-left: 2.8vh;
     }
     .logos-main img{
 

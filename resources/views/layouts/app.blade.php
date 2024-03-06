@@ -223,7 +223,7 @@
     </div>
     @endif
 
-    <main style="margin-left: 10vh;">
+    <main class="main-content">
         @yield('content')
     </main>
     </div>

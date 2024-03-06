@@ -16,7 +16,9 @@
                             <p class="count-value">{{ $usercount }}</p>
                         </div>
                     </header>
-
+                    <div class="export-btn-container">
+                        <a href="{{ route('generate-list') }}" target="_blank" class="export-btn">Open Registration List</a>
+                    </div>
                     <div class="accounts-table">
                         <form action="" method="POST">
                             @csrf
@@ -52,9 +54,9 @@
                                             <p class="fw-normal mb-1">{{ $user->designation }}</p>
                                             <p class="text-muted mb-0">{{ $user->organization }}</p>
                                         </td>
-                                        <td>
+                                        <td class="mt-2">
                                             @if($user->status === 'Approved')
-                                            <span class="badge badge-success rounded-pill d-inline mt-5">{{ $user->status }}</span>
+                                            <span class="badge badge-success rounded-pill d-inline">{{ $user->status }}</span>
                                             @else
                                             <span class="badge badge-warning rounded-pill d-inline">{{ $user->status }}</span>
                                             @endif

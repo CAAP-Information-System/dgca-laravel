@@ -7,12 +7,15 @@
     "require": {
         "php": "^8.1",
         "almasaeed2010/adminlte": "~3.2",
+        "barryvdh/laravel-dompdf": "^2.0",
         "davejamesmiller/laravel-breadcrumbs": "5.x",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.2",
+        "maatwebsite/excel": "^1.1",
+        "psr/simple-cache": "1.0",
         "twbs/bootstrap": "4.0.0"
     },
     "require-dev": {

@@ -9,6 +9,7 @@
     width: 300px;
     border-radius: 15px;
 }
+
 .total-accounts{
     font-size: 17px;
 
@@ -16,6 +17,23 @@
 .count-value{
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.export-btn-container{
+    margin: 15px;
+    padding: 15px;
+}
+.export-btn{
+    background-color: #389006;
+    color: #ffff !important;
+    text-decoration: none;
+    padding: 25px;
+    border-radius: 100px;
+    text-align: center;
+}
+.export-btn:hover{
+    text-decoration: none;
+    background-color: #4fb912;
 }
 .accounts-table{
     padding-top: 15px;

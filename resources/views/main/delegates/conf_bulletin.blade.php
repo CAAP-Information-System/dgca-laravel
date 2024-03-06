@@ -23,7 +23,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    The 59nth Directors General Conference on Civil Aviation will be held on <b class="text-primary">14 – 18 October
+                    The 59th Directors General Conference on Civil Aviation will be held on <b class="text-primary">14 – 18 October
                         2024</b> at Dusit Thani, Mactan Cebu, Philippines.
                 </div>
             </div>

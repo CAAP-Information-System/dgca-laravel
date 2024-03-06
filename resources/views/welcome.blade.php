@@ -17,7 +17,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="congratulations">We are pleased to inform you that your registration for the 59th DGCA Online Conference has been successfully received.</p>
+                    <p class="congratulations">We are pleased to inform you that your registration for the 59th DGCA Online Conference has been successfully opened.</p>
                     <div style="margin-top: 35px;"></div>
                     <span class="note">Reminders:</span>
 

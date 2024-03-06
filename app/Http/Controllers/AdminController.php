@@ -61,7 +61,7 @@ class AdminController extends Controller
     {
         // Validate the incoming request
         $request->validate([
-            'access_role' => 'required|in:user,admin,media', // Validate that the role is either 'user' or 'admin'
+            'access_role' => 'required|in:user,admin,media,icao', // Validate that the role is either 'user' or 'admin'
         ]);
 
         // Find the user by ID

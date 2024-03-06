@@ -5,6 +5,7 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\GalleryPostingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SideMeetingController;
@@ -18,6 +19,10 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::group(['middleware' => 'check_user_status'], function () {
+    Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 });
 
 // ERROR ROUTES
@@ -54,6 +59,7 @@ Route::group(['middleware' => 'check_user_status'], function () {
 
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/generate-list', [PDFController::class, 'generatePDF'])->name('generate-list');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard2', [AdminController::class, 'dashboardv2'])->name('dashboard2');
     Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
@@ -99,7 +105,7 @@ Route::get('/bulletin', [HomeController::class, 'viewDelegateCorner'])->name('bu
 Route::get('/medical-support', [HomeController::class, 'viewMedicalSupport'])->name('medical-support');
 Route::get('/venue', [HomeController::class, 'viewVenueInformation'])->name('venue');
 
-Route::middleware('auth','statusCheck')->group(function () {
+Route::middleware('auth', 'statusCheck')->group(function () {
     Route::get('/create-file', [FileController::class, 'registerDocument'])->name('create.file');
     Route::get('/view-files', [FileController::class, 'viewFiles'])->name('viewFiles');
     Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');

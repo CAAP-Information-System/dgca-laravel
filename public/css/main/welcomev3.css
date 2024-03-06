@@ -16,6 +16,14 @@
     opacity: 1;
     transform: translateY(0);
 }
+.modal-body .email-link{
+    font-size: 17px;
+    text-decoration: none;
+}
+.modal-body .note{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
 .welcome {
     background: url("/img/home/photo-tiles-strip.png");
     background-size: 85% auto;

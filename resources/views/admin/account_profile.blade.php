@@ -40,8 +40,9 @@
                         @csrf
                         <select name="access_role" class="form-control">
                             <option value="user" {{ $user->access_role == 'user' ? 'selected' : '' }}>Guest</option>
-                            <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Website Admin</option>
-                            <option value="media" {{ $user->access_role == 'media' ? 'selected' : '' }}>Media Admin</option>
+                            <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Administrator</option>
+                            <option value="media" {{ $user->access_role == 'media' ? 'selected' : '' }}>Media Staff</option>
+                            <option value="icao" {{ $user->access_role == 'icao' ? 'selected' : '' }}>ICAO Staff</option>
                         </select>
                         <button type="submit" class="btn btn-primary mt-2">Update Role</button>
                     </form>

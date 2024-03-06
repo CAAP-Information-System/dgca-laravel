@@ -11,9 +11,10 @@
     background-color: #ffff;
     color: #fff;
     position: fixed;
-    width: 250px;
-    height: 100vh;
+    width: 280px;
+    height: 200vh;
     overflow-x: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .sidebar .nav-item {
     padding: 5px;
@@ -32,6 +33,9 @@
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.2s;
+}
+.sidebar .nav-item .sidebar-item .item-name{
+    margin-left: 30px;
 }
 .content-wrapper {
     background-color: #ffff;

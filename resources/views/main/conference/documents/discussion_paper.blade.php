@@ -46,7 +46,11 @@
 
                 @foreach($agenda1 as $discussion)
                 @if($discussion->doc_status == 'Approved')
-                <li class="list-item">59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}</li>
+                <li class="list-item">
+                    <a href="#">
+                        59/DP/1/{{$discussion->id}} {{ $discussion->name }} {{ $discussion->upload_date }}
+                    </a>
+                </li>
                 @endif
                 @endforeach
 

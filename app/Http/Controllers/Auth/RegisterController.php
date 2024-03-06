@@ -106,7 +106,6 @@ class RegisterController extends Controller
             'accomp_name' => ['nullable', 'string'],
             'accomp_name' => ['nullable', 'string'],
             'accomp_preferred_activity' => ['nullable', 'string', 'max:255'],
-            'time_test' => ['required', 'date_format:H:i'],
         ]);
     }
 
@@ -167,7 +166,6 @@ class RegisterController extends Controller
             'accomp_country' => $data['accomp_country'],
             'accomp_preferred_activity' => $data['accomp_preferred_activity'],
             'profile_image' => $profilefileName, // Save only the file name
-            'time_test' => $data['time_test'],
         ]);
     }
 }
