@@ -66,7 +66,7 @@
             <nav class="conf-nav">
                 <ul>
                     <li class="dropdown1">
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-users"></i>
                             Conference
                         </a>
@@ -84,7 +84,7 @@
                         </a>
                     </li>
                     <li class="dropdown1">
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-user-tie"></i>
                             Delegate's Corner
                         </a>
@@ -99,7 +99,7 @@
                         </div>
                     </li>
                     <li class="dropdown1">
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-folder-open"></i>
                             Documents
                         </a>

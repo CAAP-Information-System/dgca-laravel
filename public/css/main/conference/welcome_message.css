@@ -24,7 +24,7 @@
 
 .message-header {
     color: #50A9FB;
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: 5px;
     line-height: 6vh;
 }
@@ -35,7 +35,7 @@
     line-height: 4vh
 }
 .dg-name{
-    font-size: 2rem;
+    font-size: 1.5vw;
     margin-top: 4vh;
     font-weight: bold;
     line-height: 2vh;
@@ -47,15 +47,32 @@
     width: 500px;
     height: auto;
 }
+@media only screen and (min-width: 1276px) and (max-width: 1440px) {
+    .message-container{
+        width: 70%;
+    }
+    .message-header{
+        font-size: 2.5vw;
+    }
+    .message-content{
+        font-size: 1.1vw;
+    }
+    .dg-name{
+        font-size: 1.6vw;
+    }
+    .dgca-merged{
+        width: 30vw;
+    }
+}
 @media only screen and (min-width: 961px) and (max-width: 1275px) {
     .message-container{
         width: 70%;
     }
     .message-header{
-        font-size: 2.6vw;
+        font-size: 2.4vw;
     }
     .message-content{
-        font-size: 1.3vw;
+        font-size: 1.1vw;
     }
     .dg-name{
         font-size: 2vw;
@@ -66,13 +83,13 @@
 }
 @media only screen and (min-width: 701px) and (max-width: 960px) {
     .message-header{
-        font-size: 4vw;
+        font-size: 3vw;
     }
     .message-content{
-        font-size: 1.8vw;
+        font-size: 1.3vw;
     }
     .dg-name{
-        font-size: 2vw;
+        font-size: 1.7vw;
     }
     .dgca-merged{
         width: 30vw;
@@ -83,14 +100,14 @@
         width: 100%;
     }
     .message-header{
-        font-size: 6.5vw;
+        font-size: 3.2vw;
         font-weight: bold;
     }
     .message-content{
         font-size: 2vw;
     }
     .dg-name{
-        font-size: 2.2vw;
+        font-size: 2.5vw;
     }
     .dgca-merged{
         display: none;
@@ -101,7 +118,7 @@
         width: 100%;
     }
     .message-header{
-        font-size: 6.5vw;
+        font-size: 5.8vw;
         font-weight: bold;
     }
     .message-content{
@@ -117,6 +134,9 @@
 @media only screen and (min-width: 414px) and (max-width: 469px) {
     .message-container{
         width: 100%;
+    }
+    .main-title{
+        margin-left: 10%;
     }
     .message-header{
         font-size: 6vw;
@@ -138,8 +158,11 @@
         width: 100%;
         margin-left: -8%;
     }
+    .main-title{
+        margin-left: 15%;
+    }
     .message-header{
-        font-size: 5vw;
+        font-size: 6vw;
         font-weight: bold;
     }
     .message-content{

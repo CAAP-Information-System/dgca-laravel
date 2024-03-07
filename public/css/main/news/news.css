@@ -21,7 +21,9 @@
     -webkit-line-clamp: 4; /* Number of lines to show before ellipsis */
     -webkit-box-orient: vertical;
 }
-
+.title, .title-sub{
+    color: aliceblue;
+}
 .news-card-text{
     margin-top: 15px;
     text-align: justify;
