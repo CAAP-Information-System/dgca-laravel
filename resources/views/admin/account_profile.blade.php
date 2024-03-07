@@ -1,26 +1,16 @@
 @extends('layouts.app')
 <title>@yield('title', 'Account Profile-59th DGCA')</title>
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ url('css/admin/account_profile.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/admin/account_profile_v2.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/header.css') }}">
 <div class="container">
-    <header class="page-header">User Information</header>
-
-
-    <main class="main-content">
-        <div class="image-grp">
-            @if($user->profile_image)
-            <img src="{{ asset('storage/profile_images/' . $user->profile_image) }}" alt="profile image" class="profile-img" />
-            @else
-            <img src="{{ asset('img/blank-profile.png') }}" alt="profile image" class="profile-img" />
-            @endif
-            <header class="organization">{{ $user->organization }}</header>
-        </div>
-        <div class="pending-reminder">
+    <header class="page-header">Delegate Information</header>
+    <section class="pending-reminder">
+        <div class="pending-container">
             @if($user->status == 'Pending')
             <form class="status-form" action="{{ route('user.approve', ['id' => $user->id]) }}" method="POST">
                 @csrf
-                <header class="status-reminder">Reminder :</header>
+                <header class="status-reminder">Reminders:</header>
                 <p class="status-message">Current account is still under <span style="font-weight:bold;" class="badge badge-danger">PENDING</span> status. Continue for approval?</p>
                 <button class="approve-btn">Approve User</button>
             </form>
@@ -31,71 +21,158 @@
             </div>
             @endif
         </div>
-        <section class="access-section">
-            <div class="multi-grp">
-                <div class="sub">
-                    <header class="header-label">Access Role</header>
-                    <p class="text-muted mb-0 text-italic">Please request approval from the head administrator before updating the access role.</p>
-                    <form style="padding: 15px;" action="{{ route('update-access-role', ['id' => $user->id]) }}" method="POST">
-                        @csrf
-                        <select name="access_role" class="form-control">
-                            <option value="user" {{ $user->access_role == 'user' ? 'selected' : '' }}>Guest</option>
-                            <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Administrator</option>
-                            <option value="media" {{ $user->access_role == 'media' ? 'selected' : '' }}>Media Staff</option>
-                            <option value="icao" {{ $user->access_role == 'icao' ? 'selected' : '' }}>ICAO Staff</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary mt-2">Update Role</button>
-                    </form>
+    </section>
+
+    <main class="profile-main">
+        <section class="main-details-section">
+            <div class="profile-img-container">
+                @if($user->profile_image)
+                <img src="{{ asset('storage/profile_images/' . $user->profile_image) }}" alt="profile image" class="profile-img" />
+                @else
+                <img src="{{ asset('img/blank-profile.png') }}" alt="profile image" class="profile-img" />
+                @endif
+            </div>
+            <div class="profile-left">
+                <div class="multi-grp">
+                    <div class="profile-detail-grp">
+                        <div class="header-grp">
+                            <header class="header-label">Access Role</header>
+                            <p class="header-subtitle">Please request approval from the head administrator before updating the access role.</p>
+                        </div>
+                        @if(Auth::user() && Auth::user()->access_role == 'admin')
+                        <p class="profile-detail"><b class="text-primary">Administrator</b></p>
+                        @else
+                        <form action="{{ route('update-access-role', ['id' => $user->id]) }}" method="POST" class="access-role-form">
+                            @csrf
+                            <select name="access_role" class="form-control">
+                                <option value="user" {{ $user->access_role == 'user' ? 'selected' : '' }}>Guest</option>
+                                <option value="admin" {{ $user->access_role == 'admin' ? 'selected' : '' }}>Administrator</option>
+                                <option value="media" {{ $user->access_role == 'media' ? 'selected' : '' }}>Media Staff</option>
+                                <option value="icao" {{ $user->access_role == 'icao' ? 'selected' : '' }}>ICAO Staff</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary mt-2">Update Role</button>
+                        </form>
+                        @endif
+                    </div>
+                    <div class="profile-detail-grp">
+                        <header class="header-label">Full Name</header>
+                        <p class="profile-detail">{{ $user->first_name }} {{ $user->last_name }}</p>
+                    </div>
+                    <div class="profile-detail-grp">
+                        <header class="header-label">Company/Agency</header>
+                        <p class="profile-detail">{{ $user->organization }}</p>
+                    </div>
+
                 </div>
-                <div class="sub">
+            </div>
+            <div class="profile-right">
+                <div class="profile-detail-grp">
                     <header class="header-label">Account Status</header>
                     @if($user->status === 'Approved')
-                    <span class="profile-details badge badge-success">{{ $user->status }}</span>
+                    <p class="profile-detail badge badge-success">{{ $user->status }}</p>
                     @else
-                    <span class="profile-details badge badge-danger">{{ $user->status }}</span>
+                    <p class="profile-detail badge badge-danger">{{ $user->status }}</p>
                     @endif
                 </div>
-            </div>
-
-        </section>
-        <section class="name-section">
-
-            <div class="multi-grp">
-                <div class="sub">
-                    <header class="header-label">First Name</header>
-                    <p class="profile-details">{{ $user->first_name }}</p>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Email Address</header>
+                    <p class="profile-detail">{{ $user->email }}</p>
                 </div>
-                <div class="sub">
-                    <header class="header-label">Last Name</header>
-                    <p class="profile-details">{{ $user->last_name }}</p>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Country Representing</header>
+                    <p class="profile-detail">{{ $user->country }}</p>
                 </div>
             </div>
 
         </section>
-        <section class="email-section">
-            <div class="grp">
-                <header class="header-label">Email Address</header>
-                <p class="profile-details">{{ $user->email }}</p>
-            </div>
-        </section>
-        <section class="user-details-section">
-            <div class="multi-grp">
-                <div class="sub">
-                    <header class="header-label">Position</header>
-                    <p class="profile-details">{{ $user->designation }}</p>
+        <header class="profile-header">Files Submitted</header>
+        <section class="file-details-section">
+            <a href="{{ asset('storage/approval_docs/' . $user->approval_doc) }}" target="_blank" class="card-link">
+                <div class="file-card">
+                    <img src="{{ asset('img/icon/pdf-icon.png') }}" alt="pdf-icon" class="file-icon-img">
+                    <p class="card-name">Letter of Credentials</p>
                 </div>
-                <div class="sub">
+            </a>
+            <a href="{{ asset('storage/passport_photos/' . $user->passport_photo) }}" target="_blank" class="card-link">
+                <div class="file-card">
+                    <img src="{{ asset('img/icon/jpg-icon.png') }}" alt="jpg-icon" class="file-icon-img">
+                    <p class="card-name">Passport Image</p>
+                </div>
+            </a>
+
+        </section>
+
+        <header class="profile-header">Other Details</header>
+        <section class="other-details-section">
+            <div class="profile-left">
+                <div class="profile-detail-grp">
+                    <header class="header-label">Designation/Position</header>
+                    <p class="profile-detail">{{ $user->designation }}</p>
+                </div>
+                <div class="profile-detail-grp">
                     <header class="header-label">Conference Role</header>
-                    <p class="profile-details">{{ $user->conference_role }}</p>
+                    <p class="profile-detail">{{ $user->conference_role }}</p>
+                </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Passport Number</header>
+                    <p class="profile-detail">{{ $user->passport_num }}</p>
+                </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Address</header>
+                    <p class="profile-detail">{{ $user->address }}</p>
                 </div>
             </div>
-            <div class="grp">
-                <header class="header-label">Country</header>
-                <p class="profile-details">{{ $user->country }}</p>
+            <div class="profile-right">
+                <div class="profile-detail-grp">
+                    <header class="header-label">Gender</header>
+                    <p class="profile-detail">{{ $user->gender }}</p>
+                </div>
+                <div class="row" style="width: 120%;">
+                    <div class="col">
+                        <header class="header-label">Telephone Number</header>
+                        <p class="profile-detail">{{ $user->telephone }}</p>
+                    </div>
+                    <div class="col">
+                        <header class="header-label">Mobile Number</header>
+                        <p class="profile-detail">{{ $user->mobile }}</p>
+                    </div>
+                </div>
+                <header class="barong">Size Reference</header>
+                <div class="row">
+                    <div class="col">
+                        <header class="header-label">Neck Size</header>
+                        <p class="profile-detail">{{ $user->neck }}</p>
+                    </div>
+                    <div class="col">
+                        <header class="header-label">Shoulder Size</header>
+                        <p class="profile-detail">{{ $user->shoulder }}</p>
+                    </div>
+                </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Address</header>
+                    <p class="profile-detail">{{ $user->address }}</p>
+                </div>
             </div>
-
         </section>
-
+        <header class="profile-header">Spouse/Accompanying Person Details</header>
+        @if(Auth::user()->has_spouse == 'No')
+        <h4 class="text-primary"><i>Delegate has no Spouse or Accompanying Person</i></h4>
+        @else
+        <section class="spouse-details-section">
+            <div class="profile-detail-grp">
+                <header class="header-label">Spouse/Accompanying Person Name</header>
+                <p class="profile-detail">{{ $user->accomp_name }}</p>
+            </div>
+            <div class="profile-detail-grp">
+                <header class="header-label">Country Representing</header>
+                <p class="profile-detail">{{ $user->accomp_country }}</p>
+            </div>
+            <div class="profile-detail-grp">
+                <header class="header-label">Preferred Activity/s</header>
+                <p class="profile-detail">{{ $user->accomp_preferred_activity }}</p>
+            </div>
+        </section>
+        @endif
     </main>
 
 </div>

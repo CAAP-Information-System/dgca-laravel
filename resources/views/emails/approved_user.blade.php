@@ -54,7 +54,7 @@
 
     <div class="email-body">
         <p>We are pleased to inform you that your account has been <span class="highlight">successfully approved</span> by the conference administrators.</p>
-        <p>You can now access all the features and functionalities available on our platform. If you have any questions or need further assistance, please contact our DGCA Secretariat thru <a href="#">dgca-secretariat@gmail.com</a>.</p>
+        <p>You can now access all the features and functionalities available on our platform. If you have any questions or need further assistance, please contact our DGCA Secretariat thru <a href="#">dgca59_secretariat@caap.gov.ph</a>.</p>
         <p>Thank you for joining us!</p>
         <div class="regards">
             <i>Best regards,</i>

@@ -28,7 +28,7 @@
                                         <th>Name</th>
                                         <th>Title</th>
                                         <th>Status</th>
-                                        <th>Position</th>
+                                        <th>Designation</th>
                                         <th>Country</th>
                                         <th>Role</th>
                                         <th>Actions</th>

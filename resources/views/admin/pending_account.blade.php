@@ -55,19 +55,16 @@
                                             <a href="{{ route('user-profile', ['id' => $user->id]) }}" class="btn btn-warning">View</a>
                                         </td>
                                     </tr>
-
-
                                 </tbody>
                                 @endforeach
                             </table>
-
                         </form>
                     </div>
                     @else
                     <div class="message-content">
                         <img src="{{ asset('img/error/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
                         <header class="message-content-header">
-                            You're all good
+                            You're good to go!
                         </header>
                         <p class="message-header-subtitle">
                             Currently, there are no registered accounts pending approval or awaiting processing.

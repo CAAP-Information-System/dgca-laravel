@@ -94,7 +94,14 @@
                 </div>
                 <div class="form-group">
                     <label for="passport_photo">Passport Photo <span class="required-symbol">*</span></label>
-                    <input id="passport_photo" type="file" class="form-control @error('passport_photo') is-invalid @enderror" name="passport_photo" accept=".jpg, .png, .jpeg">
+                    <input id="passport_photo" type="file" class="form-control @error('passport_photo') is-invalid @enderror" name="passport_photo" accept=".jpg, .png, .jpeg required">
+                    @error('passport_photo')
+                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label for="approval_doc">Letter of Credentials (Softcopy) <span class="required-symbol">*</span></label>
+                    <input id="approval_doc" type="file" class="form-control @error('approval_doc') is-invalid @enderror" name="approval_doc" accept=".pdf" required>
                     @error('passport_photo')
                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                     @enderror
@@ -220,7 +227,7 @@
                 </div>
                 <div class="input__box-long">
                     <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
-                    <p><i class="text-muted">Include additional sizing if needed.</i></p>
+                    <p><i class="text-muted">Include additional sizing if needed. Place 'None' if there is no request</i></p>
                     <input type="text" placeholder="Enter None if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}" required>
                 </div>
                 <div class="input__box-long">
@@ -259,7 +266,7 @@
 
                 <div id="accompaniedFields" style="display: none;">
                     <div class="input__box-long">
-                        <label for="accomp_name">Name Accompanied Person/Spouse:</label>
+                        <label for="accomp_name">Full Name of Accompanied Person/Spouse:</label>
                         <input type="text" placeholder="Enter Person/Spouse Name" id="accomp_name" name="accomp_name" class="form-control">
                     </div>
                     <div class="input__box-long">
@@ -314,7 +321,7 @@
                 <br>
                 <h4>Privacy Policy <span class="required-symbol">*</span></h4>
                 <p>
-                    All information provided herein shall be kept private and confidential by the PPP Center and shall be used solely for legal purposes as mandated by the <a class="text-primary text-bold dpa-link" href="https://privacy.gov.ph/data-privacy-act/#w10">Data Privacy Act of 2012</a> and other relevant laws. Videos and pictures taken during the event may also be used in PPP Center’s promotional and publicity materials.
+                    All information provided herein shall be kept private and confidential by the CAAP and shall be used solely for legal purposes as mandated by the <a class="text-primary text-bold dpa-link" href="https://privacy.gov.ph/data-privacy-act/#w10">Data Privacy Act of 2012</a> and other relevant laws. Videos and pictures taken during the event may also be used in CAAP's promotional and publicity materials.
                 </p>
             </div>
             <div class="privacy-policy-check">

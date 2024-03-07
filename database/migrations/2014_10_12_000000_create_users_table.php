@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('mobile');
             $table->string('passport_photo')->nullable();
             $table->string('profile_image')->nullable();
+            $table->string('approval_doc')->nullable();
 
             // Conference Details
             $table->string('badge_name');
@@ -50,10 +51,10 @@ return new class extends Migration
             // Accomodations & Preferences
             $table->string('airport_destination');
             $table->string('hotel_reco')->nullable();
-            $table->string('otherHotel')->nullable();
+            $table->string('otherHotel')->default('None')->nullable();
             $table->integer('neck')->nullable();
             $table->integer('shoulder')->nullable();
-            $table->string('attire_special_req')->nullable();
+            $table->string('attire_special_req')->default('None')->nullable();
             $table->string('preferred_activity')->nullable();
             $table->string('dietary_restrictions')->default('None')->nullable();
             $table->string('dietary_special_req')->default('None')->nullable();

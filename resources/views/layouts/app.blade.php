@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', '59th DGCA Conference')</title>
-    <link rel="icon" href="img/logo/dgca-logo-white.jpg" type="image/x-icon">
+    <link rel="icon" href="{{ asset('dgca-icon.png') }}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/main/navbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
@@ -164,7 +164,7 @@
     </div>
     @if(auth()->check() && auth()->user()->access_role == "admin")
     <div class="admin-navigation">
-        <aside class="main-sidebar elevation-4" id="navbarSupportedContent">
+        <aside class="main-sidebar " id="navbarSupportedContent">
 
 
             <div class="sidebar">

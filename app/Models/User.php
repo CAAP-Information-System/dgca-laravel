@@ -36,6 +36,7 @@ class User extends Authenticatable
         'mobile',
         'profile_image',
         'passport_photo',
+        'approval_doc',
 
         // Conference Details
         'badge_name',

@@ -1,6 +1,8 @@
-.container {
+.file-upload-container {
     color: #3b3b3b;
-    width: 100%;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
 }
 .page-header {
     font-size: 2.3rem;

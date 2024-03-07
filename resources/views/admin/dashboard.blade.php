@@ -11,6 +11,7 @@ TO DO:
 <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
 
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <section class="screen-dashboard">
@@ -28,6 +29,7 @@ TO DO:
                             </div>
                         </div>
                     </div>
+
                     <section class="content">
                         <div class="container-fluid">
                             <!-- Small boxes (Stat box) -->

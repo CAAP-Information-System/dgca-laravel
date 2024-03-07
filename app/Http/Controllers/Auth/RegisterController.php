@@ -75,6 +75,8 @@ class RegisterController extends Controller
             'telephone' => ['required', 'string'],
             'mobile' => ['nullable', 'string'],
             'passport_photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'approval_doc' => ['required', 'file', 'mimes:pdf', 'max:2048'],
+
 
             // Conference Details
             'conference_role' => ['required', 'string', 'max:255'],
@@ -114,6 +116,7 @@ class RegisterController extends Controller
     {
         $profileImagePath = null;
         $passportImagePath = null;
+        $approvalDocPath = null;
 
         if (isset($data['profile_image'])) {
             $fullName = $data['first_name'] . '_' . $data['last_name'];
@@ -125,6 +128,11 @@ class RegisterController extends Controller
             $fullName = $data['first_name'] . '_' . $data['last_name'];
             $passportfileName = $fullName . '.jpg';
             $passportImagePath = $data['passport_photo']->storeAs('passport_photos', $passportfileName, 'public');
+        }
+        if (isset($data['approval_doc'])) {
+            $fullName = $data['first_name'] . '_' . $data['last_name'];
+            $approval_docName = $fullName . '.pdf';
+            $approvalDocPath = $data['approval_doc']->storeAs('approval_docs', $approval_docName, 'public');
         }
         return User::create([
             'first_name' => $data['first_name'],
@@ -165,7 +173,8 @@ class RegisterController extends Controller
             'accomp_name' => $data['accomp_name'],
             'accomp_country' => $data['accomp_country'],
             'accomp_preferred_activity' => $data['accomp_preferred_activity'],
-            'profile_image' => $profilefileName, // Save only the file name
+            'approval_doc' => $approval_docName,
+
         ]);
     }
 }

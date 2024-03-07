@@ -29,4 +29,20 @@ class PDFController extends Controller
         // Stream the generated PDF
         return $pdf->stream();
     }
+
+    // public function generateProfilePDF($id)
+    // {
+
+    //     $users = User::find($id);
+    //     $pdf = FacadePdf::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]);
+    //     $data = [
+    //         'title' => '59th DGCA Registration Report',
+    //         'date' => date('m/d/Y'),
+    //         'users' => $users,
+    //     ];
+    //     $pdf->setPaper('A4');
+    //     $pdf->loadView('.PDF.delegate_profile', $data);
+    //     // Stream the generated PDF
+    //     return $pdf->stream();
+    // }
 }

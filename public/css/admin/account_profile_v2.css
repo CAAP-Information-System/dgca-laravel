@@ -1,0 +1,186 @@
+/* PENDING REMINDER CSS */
+.pending-container {
+    border: 2px dashed #969696;
+    display: inline-block;
+    border-radius: 20px;
+}
+.status-form {
+    padding: 15px;
+    margin-bottom: 3vh;
+    color: #3b3b3b;
+    width: 100%;
+    border-radius: 20px;
+}
+.status-reminder {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #969696;
+}
+.status-message {
+    font-size: 18px;
+}
+/* APPROVE BUTTON CSS */
+.approve-btn {
+    padding: 15px;
+    background-color: #389006;
+    color: #ffff;
+    border-radius: 99px;
+    border: none;
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+}
+.approve-btn:hover {
+    background-color: #50a9fb;
+}
+.main-content {
+    flex: wrap;
+    width: 100%;
+    padding: 5vh;
+    color: #3b3b3b;
+}
+/*  */
+
+.profile-main {
+    color: #3b3b3b;
+}
+.profile-header {
+    font-size: 3rem;
+}
+.main-details-section {
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    margin: 3vh;
+    gap: 4vh;
+    /* background: rgb(37, 136, 227);
+    background: linear-gradient(
+        0deg,
+        rgba(37, 136, 227, 1) 0%,
+        rgba(157, 198, 255, 1) 100%
+    /* ); */
+}
+
+/* VIEW FILES */
+.file-details-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-link{
+    text-decoration: none;
+}
+.file-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+    margin: 10px; /* Add spacing between cards */
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+}
+
+.file-icon-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.file-card .card-name {
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.other-details-section {
+    display: flex;
+    margin: 3vh;
+    gap: 10vh;
+    justify-content: space-between;
+}
+.barong {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 200px;
+    transition: transform 0.3s ease;
+}
+.profile-img:hover {
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+
+.profile-detail-grp {
+    margin-bottom: 3vh;
+}
+/* LEFT COL STYLES */
+.profile-left,
+.profile-right {
+    display: block;
+}
+.access-role-form {
+    width: 40%;
+}
+.profile-left .header-grp {
+    margin-bottom: 2vh;
+}
+.profile-main .header-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+.header-subtitle {
+    width: 80%;
+}
+.profile-detail {
+    font-size: 20px;
+}
+@media (width <= 768px) {
+    .pending-reminder {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .profile-header{
+        text-align: center;
+    }
+    .header-subtitle {
+        display: none;
+    }
+    .approve-btn {
+        width: 100%;
+    }
+    .profile-img-container {
+        margin-bottom: 5vh;
+    }
+    .main-details-section {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .file-details-section{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .other-details-section {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+}
