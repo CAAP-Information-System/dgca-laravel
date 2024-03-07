@@ -33,6 +33,7 @@
 
 .banner-title {
     font-size: 4.5vw;
+    width: 400px;
     color: #ffff;
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     text-transform: capitalize;
@@ -42,7 +43,7 @@
 }
 
 .dgca-headear-img {
-    margin-left: 30vw;
+    margin-left: 40%;
     /* margin-top: 10vh; */
     width: 50%;
     height: auto;
@@ -70,6 +71,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .dgca-headear-img {
+        margin-left: 40%;
+        /* margin-top: 10vh; */
+        width: 50%;
+        height: auto;
     }
 }
 
