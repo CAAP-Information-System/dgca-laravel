@@ -38,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .bullet-img {
     width: 100px;
@@ -49,6 +50,7 @@
     text-align: justify;
     font-size: 18px;
     color: #3b3b3b;
+    word-wrap: break-word;
 }
 .bullet-desc li{
     list-style-type: none;
@@ -105,7 +107,9 @@
 @media screen and (max-width: 768px) {
     .bulletin-content{
         margin: 0;
+        font-size: 1.5vw;
     }
+
     .bullet-hdr{
         font-size: 1.5rem;
     }
