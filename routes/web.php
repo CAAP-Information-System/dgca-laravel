@@ -44,6 +44,7 @@ Route::middleware('public')->group(function () {
     Route::get('/useful-tips', [HomeController::class, 'viewUsefulTips'])->name('useful-tips');
     Route::get('/hotel-recommendations', [HomeController::class, 'viewHotelRecommendations'])->name('hotel-recommendations');
     Route::get('/contact-us', [HomeController::class, 'viewContactUs'])->name('contact-us');
+    Route::get('/view-submission', [FileController::class, 'viewSubmissionGuide'])->name('view-submission');
 });
 
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
@@ -111,7 +112,6 @@ Route::middleware('auth', 'statusCheck')->group(function () {
     Route::post('/files/upload', [FileController::class, 'upload'])->name('file.upload');
     Route::get('/files/view/{id}', [FileController::class, 'view'])->name('file.view');
     Route::delete('/delete/{id}', [FileController::class, 'delete'])->name('file.delete');
-    Route::get('/view-submission', [FileController::class, 'viewSubmissionGuide'])->name('view-submission');
 });
 
 

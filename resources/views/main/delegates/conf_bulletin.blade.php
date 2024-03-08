@@ -102,7 +102,7 @@
             <div class="bullet-details">
                 <div class="bullet-desc">
                     Participants should register online the ICAO events webpage at
-                    <a href="https://www.icao.int/Meetings/CAAF3/Pages/default.aspx" target="_blank">https://www.icao.int/Meetings/CAAF3/Pages/default.aspx</a>.
+                    <a href="{{ route('register') }}" target="_blank">59th DGCA Registration</a>.
 
                 </div>
             </div>
@@ -115,8 +115,8 @@
             <div class="bullet-details">
                 <div class="bullet-desc">
                     Please note that no documentation will be available in hard copy format. Details regarding
-                    the event and upload of presentations after the event will be available on
-                    <a href="https://www.icao.int/Meetings/CAAF3/Pages/default.aspx" target="_blank">https://www.icao.int/Meetings/CAAF3/Pages/default.aspx</a>
+                    the event and upload of presentations after the event will be available on the
+                    <a href="{{ route('view-submission') }}" target="_blank">Submission Guidance Page</a>.
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Participants are advised to have insurance coverage for any unexpected contingency including transport hazards (taxi, buses, rented cars, etc.) and Medical Coverage
+                    Participants are advised to have insurance coverage for any unexpected contingency including transport hazards (taxi, buses, rented cars, etc.) and Medical Coverage.
 
                 </div>
             </div>
@@ -189,7 +189,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Free Wi-Fi accessibility will be available throughout the conference venue. Access details will be distributed during the event. Additionally, internet facilities will be accessible for delegates on-site. Participants are advised to <b class="text-primary">bring their own laptops to access conference materials</b>.
+                    Free Wi-Fi accessibility will be available throughout the conference venue. Access details will be distributed during the event. In addition, the internet facilities will be accessible for delegates on-site. Participants are advised to <b class="text-primary">bring their own laptops to access conference materials</b>.
                 </div>
             </div>
         </div>
