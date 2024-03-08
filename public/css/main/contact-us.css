@@ -6,7 +6,7 @@
 }
 .contact-header{
     color: #50A9FB;
-    font-size: 3rem;
+    font-size: 4vw;
 }
 .contact-message{
     font-size: 17px;
@@ -20,6 +20,9 @@
 .dgca-emails-header{
     font-size: 2rem;
     color: #50A9FB;
+}
+.email-add {
+    word-break: break-all;
 }
 .grp{
     display: flex;
@@ -49,4 +52,16 @@
     width: 70%;
     height: auto;
 
+}
+@media screen and (max-width: 768px) {
+    .contact-header{
+        color: #50A9FB;
+        font-size: 7vw;
+    }
+    .email-label{
+        font-size: 3.5vw;
+    }
+    .email-add{
+        font-size: 3vw;
+    }
 }
