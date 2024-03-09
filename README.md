@@ -6,8 +6,11 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
 
 
 ## Project Features
-The project focuses on optimizing a international-based streamlining. It includes registration of international delegates not limited to APAC nations. The conference is expected to start by the month of October of 2024 including the project's complete lifecycle and optimization.
-
+- Optimized registration system for international delegates
+- Real-time meeting room reservation
+- File documentation and management
+- Streamlined document approval and user experience
+- ICAO standard friendly
 
 
 ## Getting Started
