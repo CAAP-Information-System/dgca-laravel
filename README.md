@@ -21,10 +21,38 @@ Before you begin, ensure you have met the following requirements:
 
 
 ### Installations
-1. Composer Dependencies
+1. **Composer Dependencies**
 ```
 composer install
 ```
+2. **NodeJS Dependencies**
+```
+npm install
+```
+3. **Update or Create Database**
+```
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
+4. **Generate Key**
+```
+php artisan key:generate
+```
+5. **Migrate Database**
+```
+php artisan migrate
+```
+6. **Compile Frontend Asset**
+```
+npm run dev
+```
+7. **Run Laravel Project**
+```
+php artisan serve
+```
+
+## Database Model
 
 
 ## Change Logs
