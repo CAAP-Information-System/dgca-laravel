@@ -35,13 +35,14 @@
             <div class="profile-left">
                 <div class="multi-grp">
                     <div class="profile-detail-grp">
-                        <div class="header-grp">
+                        <div class="profile-detail">
                             <header class="header-label">Access Role</header>
+                            @if($user->access_role != 'admin')
                             <p class="header-subtitle">Please request approval from the head administrator before updating the access role.</p>
+                            @endif
                         </div>
-                        @if(Auth::user() && Auth::user()->access_role == 'admin')
-                        <p class="profile-detail"><b class="text-primary">Administrator</b></p>
-                        @else
+
+                        @if($user->access_role != 'admin')
                         <form action="{{ route('update-access-role', ['id' => $user->id]) }}" method="POST" class="access-role-form">
                             @csrf
                             <select name="access_role" class="form-control">
@@ -52,6 +53,10 @@
                             </select>
                             <button type="submit" class="btn btn-primary mt-2">Update Role</button>
                         </form>
+                        @else
+                        <div class="profile-detail">
+                            <p class="header-subtitle"><b class="text-primary">Administrator</b></p>
+                        </div>
                         @endif
                     </div>
                     <div class="profile-detail-grp">
@@ -86,6 +91,7 @@
 
         </section>
         <header class="profile-header">Files Submitted</header>
+        <hr>
         <section class="file-details-section">
             <a href="{{ asset('storage/approval_docs/' . $user->approval_doc) }}" target="_blank" class="card-link">
                 <div class="file-card">
@@ -103,6 +109,7 @@
         </section>
 
         <header class="profile-header">Other Details</header>
+        <hr>
         <section class="other-details-section">
             <div class="profile-left">
                 <div class="profile-detail-grp">
@@ -137,6 +144,34 @@
                         <p class="profile-detail">{{ $user->mobile }}</p>
                     </div>
                 </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Address</header>
+                    <p class="profile-detail">{{ $user->address }}</p>
+                </div>
+            </div>
+        </section>
+        <header class="profile-header">Preferences</header>
+        <hr>
+        <section class="preferences-details-section">
+            <div class="profile-left">
+                <div class="profile-detail-grp">
+                    <header class="header-label">Hotel Accommodations</header>
+                    <p class="profile-detail">{{ $user->hotel_reco }}</p>
+                </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Activity/s</header>
+                    <p class="profile-detail">{{ $user->preferred_activity }}</p>
+                </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Dietary Restrictions</header>
+                    <p class="profile-detail">{{ $user->dietary_restrictions }}</p>
+                </div>
+                <div class="profile-detail-grp">
+                    <header class="header-label">Dietary Special Request</header>
+                    <p class="profile-detail">{{ $user->dietary_special_req }}</p>
+                </div>
+            </div>
+            <div class="profile-right">
                 <header class="barong">Size Reference</header>
                 <div class="row">
                     <div class="col">
@@ -149,13 +184,18 @@
                     </div>
                 </div>
                 <div class="profile-detail-grp">
+                    <header class="header-label">Barong-Tagalog Special Requirements</header>
+                    <p class="profile-detail">{{ $user->attire_special_req }}</p>
+                </div>
+                <div class="profile-detail-grp">
                     <header class="header-label">Address</header>
                     <p class="profile-detail">{{ $user->address }}</p>
                 </div>
-            </div>
+
         </section>
         <header class="profile-header">Spouse/Accompanying Person Details</header>
-        @if(Auth::user()->has_spouse == 'No')
+        <hr>
+        @if($user->has_spouse == 'No')
         <h4 class="text-primary"><i>Delegate has no Spouse or Accompanying Person</i></h4>
         @else
         <section class="spouse-details-section">
