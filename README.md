@@ -56,7 +56,11 @@ php artisan serve
 ```
 
 ## Database Model
+<<<<<<< HEAD
 ![DGCA Database Model](public/img/readme/dgcaDB-model.png)
+=======
+![DGCA Dataase Model](public/img/readme/dgcaDB-model.png)
+>>>>>>> 6d71c1fd500ef5bfbdf2617cb72dd176748500a0
 
 
 ## Change Logs
