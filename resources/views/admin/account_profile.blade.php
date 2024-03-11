@@ -144,10 +144,6 @@
                         <p class="profile-detail">{{ $user->mobile }}</p>
                     </div>
                 </div>
-                <div class="profile-detail-grp">
-                    <header class="header-label">Address</header>
-                    <p class="profile-detail">{{ $user->address }}</p>
-                </div>
             </div>
         </section>
         <header class="profile-header">Preferences</header>
@@ -195,7 +191,7 @@
         </section>
         <header class="profile-header">Spouse/Accompanying Person Details</header>
         <hr>
-        @if($user->has_spouse == 'No')
+        @if($user->has_spouse != 'Yes')
         <h4 class="text-primary"><i>Delegate has no Spouse or Accompanying Person</i></h4>
         @else
         <section class="spouse-details-section">

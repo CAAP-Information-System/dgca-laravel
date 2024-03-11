@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>@yield('title', 'Sorry!')</title>
+<title>@yield('title', 'Oops, Sorry!')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/error/bug_fix.css') }}">
 
@@ -8,7 +8,7 @@
         <img src="{{ asset('img/error/fixing.svg') }}" alt="bug fixing" class="error-img">
         <div class="error-content">
             <header class="error-header">Sorry for the inconvenience</header>
-            <p class="error-message">This page is under development maintence. You can still visit other pages!</p>
+            <p class="error-message">This page is under development maintenance. You can still visit other pages!</p>
 
             <div class="go-home">
                 <a href="{{ route('welcome') }}" class="go-home-btn">Go Home</a>
