@@ -93,9 +93,9 @@
                             <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
                             <a href="{{ route('transport-schedule') }}">Transport Schedule</a>
                             <a href="{{ route('venue') }}">Venue Information</a>
-                            <a href="{{ route('medical-support') }}">Medical Support</a>
                             <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
-                            <a href="{{ route('useful-tips') }}">Tips and Advices</a>
+                            <a href="{{ route('medical-support') }}">Medical Support</a>
+                            <a href="{{ route('useful-tips') }}">Useful Tips</a>
                         </div>
                     </li>
                     <li class="dropdown1">
@@ -111,7 +111,7 @@
                         </div>
                     </li>
                     @if(auth()->check() && auth()->user()->access_role == "media")
-                    <li class="dropdown">
+                    <li class="dropdown1">
                         <a href="#" class="text-danger">
                             <i class="fa-solid fa-hashtag"></i>
                             Media Committee
@@ -120,6 +120,19 @@
                             <a href="{{ route('create-news') }}">Create News</a>
                             <a href="#">Upload Gallery</a>
                             <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
+                        </div>
+                    </li>
+                    @elseif(auth()->check() && auth()->user()->access_role == "icao")
+                    <li class="dropdown1">
+                        <a href="#" class="text-danger">
+                            <i class="fa-solid fa-hashtag"></i>
+                            ICAO
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('files') }}">View Files</a>
+                            <a href="{{ route('meeting-reservations') }}">Meeting Reservation</a>
+                            <a href="{{ route('account_list') }}">Accounts Registered</a>
+
                         </div>
                     </li>
                     @endif
@@ -148,8 +161,6 @@
                     <p class="countdown-message">Countdown until the 59th DGCA <br> Conference!</p>
                 </div>
         </div>
-
-
     </section>
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">

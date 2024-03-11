@@ -57,31 +57,32 @@ Route::group(['middleware' => 'check_user_status'], function () {
 });
 
 
-
 // ADMIN MIDDLEWARE
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/generate-list', [PDFController::class, 'generatePDF'])->name('generate-list');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard2', [AdminController::class, 'dashboardv2'])->name('dashboard2');
-    Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
-    Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
+
     Route::delete('/delete-account/{id}', [AdminController::class, 'deleteAccount'])->name('delete-account');
     Route::get('/create-meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
-    Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
     Route::delete('/delete/{id}', [FileController::class, 'deleteFile'])->name('file.delete');
     Route::get('/download/{file}', [FileController::class, 'download'])->name('download.file');
     Route::post('/update-access-role/{id}', [AdminController::class, 'updateAccessRole'])->name('update-access-role');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
     Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
-    Route::get('/profile/{id}', [AdminController::class, 'viewUserProfile'])->name('user-profile');
+
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
 
     Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
     Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
 });
 
-
-
+Route::group(['middleware' => 'super_user'], function (){
+    Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
+    Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
+    Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
+    Route::get('/profile/{id}', [AdminController::class, 'viewUserProfile'])->name('user-profile');
+});
 // NEWS & UPDATES ROUTES
 Route::get('/news', [HomeController::class, 'viewNews'])->name('news');
 Route::get('/create-news', [PostingController::class, 'createNews'])->name('create-news');

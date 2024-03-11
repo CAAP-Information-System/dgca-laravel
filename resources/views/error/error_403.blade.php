@@ -9,6 +9,9 @@
         <div class="error-content">
             <header class="error-header">Forbidden Access</header>
             <p class="error-message">Sorry, you're not allowed to get in.</p>
+            <div class="btn-grp">
+                <a href="{{ route('welcome') }}" class="go-home-btn">Go Home</a>
+            </div>
         </div>
     </main>
 </div>

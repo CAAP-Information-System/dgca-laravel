@@ -14,7 +14,7 @@
                 <header class="login-hdr">Sign In Now</header>
                 @csrf
                 @if(session('error'))
-                <div class="alert alert-info">
+                <div class="alert alert-danger">
                     {{ session('error') }}
                 </div>
                 @endif
@@ -28,8 +28,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class='bx bx-envelope'></i></span>
                                 </div>
-                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field @error('email') is-invalid @enderror""
-                                name=" email" value="{{ old('email') }}" autocomplete="email" required>
+                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" required>
                             </div>
                         </div>
 

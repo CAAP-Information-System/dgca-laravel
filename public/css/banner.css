@@ -32,13 +32,13 @@
 }
 
 .banner-title {
-    font-size: 4.5vw;
+    font-size: 4rem;
     width: 400px;
     color: #ffff;
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     text-transform: capitalize;
     font-weight: bold;
-    line-height: 8vh; /* Adjust line height as needed */
+    line-height: 7vh; /* Adjust line height as needed */
     padding: 20px;
 }
 

@@ -174,6 +174,25 @@
     color: #50A9FB;
     transition: .1s ease;
 }
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.marquee {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.marquee-img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px; /* Adjust as needed */
+}
 @media screen and (max-width: 768px) {
     .hotel-img-grp {
         flex-direction: column; /* Align vertically */
