@@ -96,8 +96,7 @@ class RegisterController extends Controller
             'airport_destination' => ['nullable', 'string', 'max:255'],
             'hotel_reco' => ['nullable', 'string', 'max:255'],
             'otherHotel' => ['nullable', 'string'],
-            'neck' => ['nullable', 'integer'],
-            'shoulder' => ['nullable', 'integer'],
+            'attire_size' => ['nullable', 'string'],
             'attire_special_req' => ['required', 'string'],
             'preferred_activity' => ['nullable', 'string', 'max:255'],
             'dietary_restrictions' => ['nullable', 'string', 'max:255'],
@@ -147,8 +146,7 @@ class RegisterController extends Controller
             'privacy' => $data['privacy'] ? 'Approved' : 'Unapproved',
             'profile_image' => $profilefileName, // Save only the file name
             'airport_destination' => $data['airport_destination'],
-            'neck' => $data['neck'],
-            'shoulder' => $data['shoulder'],
+            'attire_size' => $data['attire_size'],
             'preferred_activity' => $data['preferred_activity'],
             'has_spouse' => $data['has_spouse'],
             // Add the new fields below

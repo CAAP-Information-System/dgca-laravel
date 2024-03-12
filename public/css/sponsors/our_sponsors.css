@@ -1,4 +1,25 @@
 
+.sponsor-list-header{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.sponsor-list-container div{
+    margin-top: 3vh;
+}
+.list-of-sponsors-btn{
+
+    padding: 25px;
+    border-radius: 99px;
+    color: #ffff !important;
+    background-color: #50A9FB;
+    text-align: center;
+    text-decoration: none;
+}
+.list-of-sponsors-btn:hover{
+    background-color: #969696;
+}
+
+
 .sponsors {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid with minimum width of 280px */
@@ -6,6 +27,7 @@
     padding: 20px;
     margin-top: 8vh;
 }
+
 
 .card {
     border: 1px solid #50A9FB;
@@ -15,7 +37,9 @@
     width: 300px;
     height: 400px;
 }
-
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .sponsor-name {
     position: absolute;
     bottom: 15%;

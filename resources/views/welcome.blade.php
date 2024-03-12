@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{{ asset('img/logo/caap_logo.png') }}" alt="Image 3" style="width: 20%; height:auto;">
+                    <img src="{{ asset('img/banner/message-banner.png') }}" alt="Welcome Banner" class="banner-img">
                 </div>
             </div>
         </div>
@@ -73,7 +73,9 @@
                         <div class="dropdown-content">
                             <a href="{{ route('message') }}">Welcome Message</a>
                             <a href="{{ route('agenda') }}">Agenda</a>
-                            <a href="#">Programme</a>
+                            <a href="#">Order of Business</a>
+                            <a href="#">Participant List</a>
+                            <a href="#">Conclusions</a>
                             <a href="{{ route('the-gallery') }}">The Gallery</a>
                         </div>
                     </li>
@@ -104,6 +106,7 @@
                             Documents
                         </a>
                         <div class="dropdown-content">
+                            <a href="#">My Documents</a>
                             <a href="{{ route('disc-paper') }}">Discussion Papers</a>
                             <a href="{{ route('info-paper') }}">Information Papers</a>
                             <a href="{{ route('view-submission') }}">Submission Guide</a>

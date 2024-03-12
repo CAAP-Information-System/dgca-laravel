@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('side_meetings', function (Blueprint $table) {
             $table->id();
+            $table->string('approval_status')->default('Approved');
             $table->string('days_drop')->nullable();
             $table->string('meeting_room_drop')->nullable();
             $table->string('time_drop')->nullable();
             $table->string('reserved_by')->nullable();
+            $table->string('country_drop')->nullable();
             $table->timestamps();
         });
     }

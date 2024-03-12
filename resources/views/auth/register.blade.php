@@ -40,9 +40,11 @@
                     <span class="details">Salutations <span class="required-symbol">*</span></span>
                     <select class="form-control" id="salutation" name="salutation">
                         <option value="">-- Select Option --</option>
-                        <option value="Mr">Mr</option>
-                        <option value="Ms">Ms</option>
-                        <option value="Mrs">Mrs</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Atty.">Atty.</option>
+                        <option value="Dr.">Dr.</option>
                     </select>
                 </div>
                 <div class="input__box">
@@ -105,6 +107,22 @@
                     @error('passport_photo')
                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                     @enderror
+                </div>
+
+                <div class="form-group">
+                    <div class="requirements-box">
+                        <header class="requirements-header">Reminders:</header>
+                        <p>On March 6, 2024, the e-Travel Customs System shall be implemented, requiring all passengers and crew members arriving at the Mactan – Cebu International Airport Terminal 2 to complete the online customs baggage and currencies declaration form via the e-Travel Customs System at least <b class="text-primary">72 hours prior to their intended arrival</b> to avoid unnecessary delays in the customs clearance process.</p>
+                        <p><b>See Updated Facebook Post:</b></p>
+                        <a href="https://www.facebook.com/story.php?story_fbid=pfbid0g65uwZ7qV8rS8X5ZnzAG87x3YSnqX87gtSCDnqbo8ooUryqGNN7hPJMq2suvMf1Ul&id=100069548131034&mibextid=WC7FNe&paipv=0&eav=AfY7FN8jTRBr99avENEIALOREZFraIhLrmvTZLTOzXaRlgjH2NaWs3_m6HcIs-5HqZg&_rdr" target="_blank">Bureau of Customs Updates</a>
+                    </div>
+                    <label for="approval_doc">e-Travel Customs System<span class="required-symbol">*</span></label>
+                    <p><i class="text-muted">Please register here not more than 3 days before scheduled flight. This can be filled out separately.</i></p>
+                    <a href="https://etravel.gov.ph/?fbclid=IwAR2vYxlWvZye8afEzOyo2d4uI3yVfjqhwU8oq7s-lxQlH4eWbhDgzQOPkes" target="_blank">
+                        <i class="fa-solid fa-link"></i>
+                        E-Travel Link
+                    </a>
+
                 </div>
 
                 <!-- CONFERENCE DETAILS -->
@@ -212,19 +230,18 @@
                     </div>
                 </div>
                 <div class="input__box-long">
-                    <header class="subheader">Barong-Tagalog Size (Attire)</header>
+                    <span class="details">Barong-Tagalog Size (Attire):<span class="required-symbol">*</span></span>
                     <p><i class="card-subtitle mb-2 text-muted">Sizes are in centimeters (cm)</i></p>
+                    <select class="form-control" id="attire_size" name="attire_size">
+                        <option value="">-- Select Option --</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra Large">Extra Large</option>
+                        <option value="2x Extra Large">2x Extra Large</option>
+                    </select>
                 </div>
 
-                <div class="input__box">
-                    <span class="details">Neck Size <span class="required-symbol">*</span></span>
-                    <input type="number" placeholder="Enter Measurement" name="neck" value="{{ old('neck') }}" required>
-                </div>
-
-                <div class="input__box">
-                    <span class="details">Shoulder Size <span class="required-symbol">*</span></span>
-                    <input type="number" placeholder="Enter Measurement" name="shoulder" value="{{ old('shoulder') }}" required>
-                </div>
                 <div class="input__box-long">
                     <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
                     <p><i class="text-muted">Include additional sizing if needed. Place 'None' if there is no request</i></p>

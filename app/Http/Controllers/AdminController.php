@@ -44,11 +44,9 @@ class AdminController extends Controller
 
     public function file_uploads()
     {
-        $files = File::all();
+        $files = File::paginate(10);
 
-        return view('admin.file_upload', [
-            'files' => $files,
-        ]);
+        return view('admin.file_upload', ['files' => $files,]);
     }
 
     public function reservation_view()

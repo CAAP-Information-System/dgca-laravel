@@ -4,19 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/agenda.css') }}">
 @if(auth()->user()->status == 'Approved')
-<section class="head-banner">
-    <img src="{{ asset('img/conference-room.png') }}" alt="conference-room" class="banner-bg">
-    <main class="banner-content">
-        <div class="banner-text">
-            <header class="banner-title">Agenda</header>
-        </div>
-        <div class="dgca-title">
-            <!-- <header class="welcome-title">Welcome</header> -->
-            <header class="title">59th Conference of Director Generals</header>
-            <header class="title-sub">Philippines 2024</header>
-        </div>
-    </main>
-</section>
+@include('main.banner', ['bannerTitle' => 'Agendas'])
 <div class="container">
     <!-- <header class="agenda-header">Agenda</header> -->
     <div class="card-container">
@@ -35,12 +23,12 @@
         @endforeach
         @else
         <div class="message-content">
-            <img src="{{ asset('img/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
+            <img src="{{ asset('img/error/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
             <header class="message-content-header">
                 Sorry, No files have been uploaded yet.
             </header>
             <p class="message-header-subtitle">
-                Kindly coordinate our conference secretariat for your concerns and inquiries. Thank you!
+                Kindly coordinate with our conference secretariat for your concerns and inquiries. Thank you!
             </p>
         </div>
         @endif
@@ -50,7 +38,7 @@
 </div>
 @else
 <section class="verification-error-message">
-    <img src="{{ asset('img/verify.svg') }}" alt="verify-account" class="verify-svg">
+    <img src="{{ asset('img/error/verify.svg') }}" alt="verify-account" class="verify-svg">
     <header class="verification-header">Unauthorized Access</header>
     <p class="verification-message">We apologize, but your account is currently in <span style="color: #002868; font-weight:bold;">Pending</span> status. Please reach out to our DGCA Secretariat through email address: <a href="#" class="">secretariat-email-here@example.com</a> to coordinate with our website administrators for further assistance.</p>
 

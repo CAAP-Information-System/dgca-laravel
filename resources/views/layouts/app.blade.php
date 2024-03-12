@@ -94,7 +94,8 @@
                                             <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                             <ul class="js-sub-menu sub-menu">
                                                 <li><a href="{{ route('news') }}">News & Updates</a></li>
-                                                <li><a href="{{ route('program-overview') }}">Program Overview</a></li>
+                                                <li><a href="{{ route('program-overview') }}">Programme</a></li>
+                                                <li><a href="#">Accompanying Person's Programme</a></li>
                                                 <li><a href="#">Social/Cultural Function</a></li>
                                             </ul>
                                         </li>
@@ -103,8 +104,11 @@
                                             <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                             <ul class="js-sub-menu sub-menu">
                                                 <li><a href="#">Floor Plan</a></li>
-                                                <li><a href="{{ route('our-sponsors') }}">Our Sponsors</a></li>
+                                                <li><a href="#">Exhibit Registration Form</a></li>
                                                 <li><a href="#">Exhibit Services</a></li>
+                                                <li><a href="#">Sponsorship Agreement Form</a></li>
+                                                <li><a href="{{ route('our-sponsors') }}">Acknowledged Sponsors</a></li>
+
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('registration-page') }}">Registration</a></li>
@@ -116,6 +120,9 @@
                         </nav>
                     </div>
                 </a>
+                @if(auth()->check() && auth()->user()->access_role == "admin")
+                <button id="toggleNavbar">Toggle Navbar</button>
+                @endif
             </div>
             <div class="navbar navbar-expand-lg ">
                 <div class="top-nav">
@@ -157,8 +164,9 @@
         </div>
 
     </div>
+
     @if(auth()->check() && auth()->user()->access_role == "admin")
-    <div class="admin-navigation">
+    <div class="admin-navigation" id="adminNavigation">
         <aside class="main-sidebar " id="navbarSupportedContent">
 
 
@@ -284,7 +292,17 @@
     </div>
 
 </footer>
+<script>
+    // Get references to the navbar and the toggle button
+    const navbar = document.getElementById('adminNavigation');
+    const toggleButton = document.getElementById('toggleNavbar');
 
+    // Add event listener to the toggle button
+    toggleButton.addEventListener('click', function() {
+        // Toggle the visibility of the navbar
+        navbar.classList.toggle('hidden');
+    });
+</script>
 <script src="{{ asset('js/app/nav.js') }}"></script>
 <script src="{{ asset('js/app/dropdown.js') }}"></script>
 <script src="{{ asset('js/app/preloader.js') }}"></script>

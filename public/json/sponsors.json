@@ -1,0 +1,22 @@
+{
+    "sponsors": [
+        {
+            "image": "/img/sponsors/sponsor-sample.png",
+            "name": "Sponsors Sample Name"
+        },
+        {
+            "image": "/img/sponsors/sponsor-sample.png",
+            "name": "Sponsors Sample Name"
+        },
+        {
+            "image": "/img/sponsors/sponsor-sample.png",
+            "name": "Sponsors Sample Name"
+        },
+        {
+            "image": "/img/sponsors/sponsor-sample.png",
+            "name": "Sponsors Sample Name"
+        }
+
+
+    ]
+}

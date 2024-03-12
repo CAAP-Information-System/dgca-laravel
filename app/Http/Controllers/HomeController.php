@@ -94,7 +94,11 @@ class HomeController extends Controller
 
     public function viewOurSponsors()
     {
-        return view('sponsors.our_sponsors');
+        // Read JSON data from the file
+        $sponsorJson = file_get_contents(public_path('json/sponsors.json'));
+
+        // Pass the decoded data to the view
+        return view('sponsors.our_sponsors', ['sponsorJson' => $sponsorJson]);
     }
     public function viewMedicalSupport()
     {
