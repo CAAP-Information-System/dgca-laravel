@@ -288,7 +288,7 @@
             </div>
         </div>
     </section> -->
-    <div class="text-center">
+    <div class="footer text-center">
         <b>www.dgca59.gov.ph &nbsp;&nbsp;| &nbsp;&nbsp; DGCA.PH@gmail.com &nbsp;&nbsp; |</b>
     </div>
 
