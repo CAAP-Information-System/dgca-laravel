@@ -22,12 +22,14 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'check_user_status'], function () {
-    Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+    Route::get('generate-registration', [PDFController::class, 'generatePDF'])->name('generate-registration');
+    Route::get('generate-pendings', [PDFController::class, 'pendingAccountsPDF'])->name('generate-pendings');
 });
 
-// ERROR ROUTES
+// HTTP ROUTES
 Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 Route::get('/403', [HomeController::class, 'error_403'])->name('403');
+Route::get('/upload-sent', [HomeController::class, 'uploadSent'])->name('upload-sent');
 
 // GUEST PAGE ROUTES
 Route::middleware('public')->group(function () {
@@ -45,6 +47,7 @@ Route::middleware('public')->group(function () {
     Route::get('/hotel-recommendations', [HomeController::class, 'viewHotelRecommendations'])->name('hotel-recommendations');
     Route::get('/contact-us', [HomeController::class, 'viewContactUs'])->name('contact-us');
     Route::get('/view-submission', [FileController::class, 'viewSubmissionGuide'])->name('view-submission');
+    Route::get('/my-documents', [HomeController::class, 'viewMyDocuments'])->name('my-documents');
 });
 
 // RESTRICTED ROUTES FOR UNAPPROVED USERS

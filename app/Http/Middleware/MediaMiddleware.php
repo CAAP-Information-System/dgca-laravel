@@ -25,7 +25,7 @@ class MediaMiddleware
                 return $next($request);
             }
             else{
-                return response()->view('error.error_403', [], 403);
+                return response()->view('http-message.error_403', [], 403);
             }
         }
         else{

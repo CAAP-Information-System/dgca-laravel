@@ -120,12 +120,13 @@
                         </nav>
                     </div>
                 </a>
-                @if(auth()->check() && auth()->user()->access_role == "admin")
-                <button id="toggleNavbar">Toggle Navbar</button>
-                @endif
+
             </div>
             <div class="navbar navbar-expand-lg ">
                 <div class="top-nav">
+                    @if(auth()->check() && auth()->user()->access_role == "admin")
+                    <button id="toggleNavbar" class="toggle-nav">Show/Hide Navbar</button>
+                    @endif
                     @guest
                     @if (Route::has('login'))
 

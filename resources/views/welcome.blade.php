@@ -106,7 +106,7 @@
                             Documents
                         </a>
                         <div class="dropdown-content">
-                            <a href="#">My Documents</a>
+                            <!-- <a href="#">My Documents</a> -->
                             <a href="{{ route('disc-paper') }}">Discussion Papers</a>
                             <a href="{{ route('info-paper') }}">Information Papers</a>
                             <a href="{{ route('view-submission') }}">Submission Guide</a>

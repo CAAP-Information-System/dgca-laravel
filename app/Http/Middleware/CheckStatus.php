@@ -23,7 +23,7 @@ class CheckStatus
                 return $next($request);
             } else {
                 // Return a 403 error if the user's status is not "Approved"
-                return response()->view('error.access_denied', [], 403);
+                return response()->view('http-message.access_denied', [], 403);
             }
         } else {
             // Redirect to the login page if the user is not authenticated

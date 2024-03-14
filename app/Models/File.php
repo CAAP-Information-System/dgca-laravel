@@ -23,4 +23,10 @@ class File extends Model
     {
         $this->update(['name' => $newName]);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

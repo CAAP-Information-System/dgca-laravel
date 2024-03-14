@@ -72,7 +72,6 @@ class User extends Authenticatable
 
         // Copyright & Privacy Policy
         'privacy',
-        'profile_image',
     ];
 
     /**
@@ -106,4 +105,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(SideMeeting::class);
     }
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }
+

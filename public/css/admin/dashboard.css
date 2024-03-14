@@ -1,7 +1,11 @@
 .mobile-dashboard{
     display: none;
 }
-
+.toggle-nav{
+    background-color: #50a9fb;
+    color: #ffff;
+    border: transparent;
+}
 .admin-navigation {
     transition: transform 0.3s ease-in-out;
 }
