@@ -48,6 +48,7 @@ Route::middleware('public')->group(function () {
     Route::get('/contact-us', [HomeController::class, 'viewContactUs'])->name('contact-us');
     Route::get('/view-submission', [FileController::class, 'viewSubmissionGuide'])->name('view-submission');
     Route::get('/my-documents', [HomeController::class, 'viewMyDocuments'])->name('my-documents');
+    Route::get('/order-of-business', [HomeController::class, 'viewOrderofBusiness'])->name('order-of-business');
 });
 
 // RESTRICTED ROUTES FOR UNAPPROVED USERS

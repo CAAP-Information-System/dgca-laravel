@@ -32,7 +32,7 @@
                         <form action="{{ route('meeting-room.delete', ['id' => $meeting->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger" type="submit">Delete Meeting</button>
+                            <button class="btn btn-danger" type="submit">Remove Meeting</button>
                         </form>
                     </td>
                 </tr>

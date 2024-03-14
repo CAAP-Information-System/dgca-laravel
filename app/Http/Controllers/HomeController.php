@@ -137,6 +137,10 @@ class HomeController extends Controller
     {
         return view('http-message.error_503');
     }
+    public function viewOrderofBusiness()
+    {
+        return view('http-message.error_503');
+    }
 
     public function viewMyDocuments()
     {

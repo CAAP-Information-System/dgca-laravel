@@ -10,6 +10,7 @@
 <div class="container">
     <main class="my-5">
         <div class="container">
+            @if($newspost->count() > 0)
             <section class="text-center">
                 <header class="news-main-header">Latest Posts</header>
 
@@ -26,14 +27,16 @@
 
                             </div>
                             <div class="read-more-container">
-                                    <a href="{{ route('article', ['id' => $post->id]) }}" class="read-button">Read More</a>
-                                </div>
+                                <a href="{{ route('article', ['id' => $post->id]) }}" class="read-button">Read More</a>
+                            </div>
                         </div>
                     </div>
                     @endforeach
                 </div>
             </section>
-
+            @else
+            @include('http-message.no_content')
+            @endif
 
     </main>
     <script type="text/javascript" src="js/mdb.umd.min.js"></script>

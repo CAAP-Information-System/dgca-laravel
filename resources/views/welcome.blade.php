@@ -73,7 +73,7 @@
                         <div class="dropdown-content">
                             <a href="{{ route('message') }}">Welcome Message</a>
                             <a href="{{ route('agenda') }}">Agenda</a>
-                            <a href="#">Order of Business</a>
+                            <a href="{{ route('order-of-business') }}">Order of Business</a>
                             <a href="#">Participant List</a>
                             <a href="#">Conclusions</a>
                             <a href="{{ route('the-gallery') }}">The Gallery</a>
