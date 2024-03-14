@@ -206,6 +206,13 @@ body {
     height: auto;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Adjust as needed */
+}
 
 @media screen and (max-width: 768px) {
 
@@ -693,6 +700,9 @@ nav .navbar .links li .js-sub-menu{
       }
       .main-nav{
         margin-top: -8rem;
+      }
+      .footer{
+        font-size: 3vw;
       }
 
 }
