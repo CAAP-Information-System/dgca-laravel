@@ -29,6 +29,27 @@ class PDFController extends Controller
         // Stream the generated PDF
         return $pdf->stream();
     }
+    public function pendingAccountsPDF()
+    {
+        // Retrieve users with pending status
+        $users = User::where('status', 'Pending')->get();
+
+        // Count the number of users with pending status
+        $usercount = $users->count();
+
+        // Load PDF view with data
+        $pdf = FacadePdf::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]);
+        $data = [
+            'title' => '59th DGCA Registration Report',
+            'date' => date('m/d/Y'),
+            'users' => $users,
+        ];
+        $pdf->setPaper('A4');
+        $pdf->loadView('PDF.pending-user-list', $data);
+
+        // Stream the generated PDF
+        return $pdf->stream();
+    }
 
     // public function generateProfilePDF($id)
     // {

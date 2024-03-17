@@ -25,7 +25,24 @@
     font-size: 19px;
 
 }
-
+.error-content .btn-grp{
+    margin-top: 3vh;
+}
+.go-home-btn{
+    font-size: 16px;
+    background-color: #50A9FB;
+    text-align: center;
+    display: inline-block;
+    width: 40%;
+    color: #ffff !important;
+    padding: 15px;
+    border-radius: 99px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.go-home-btn:hover{
+    background-color: #969696;
+}
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
     .error-img{
         width: 30vw;

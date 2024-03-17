@@ -1,6 +1,19 @@
 .mobile-dashboard{
     display: none;
 }
+.toggle-nav{
+    background-color: #50a9fb;
+    color: #ffff;
+    border: transparent;
+}
+.admin-navigation {
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-navigation.hidden {
+    display: none;
+    transform: translateY(-100%);
+}
 
 .main-sidebar {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

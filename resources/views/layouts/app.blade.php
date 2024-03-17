@@ -94,7 +94,8 @@
                                             <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                             <ul class="js-sub-menu sub-menu">
                                                 <li><a href="{{ route('news') }}">News & Updates</a></li>
-                                                <li><a href="{{ route('program-overview') }}">Program Overview</a></li>
+                                                <li><a href="{{ route('program-overview') }}">Programme</a></li>
+                                                <li><a href="#">Accompanying Person's Programme</a></li>
                                                 <li><a href="#">Social/Cultural Function</a></li>
                                             </ul>
                                         </li>
@@ -103,8 +104,11 @@
                                             <i class='bx bxs-chevron-down js-arrow arrow '></i>
                                             <ul class="js-sub-menu sub-menu">
                                                 <li><a href="#">Floor Plan</a></li>
-                                                <li><a href="{{ route('our-sponsors') }}">Our Sponsors</a></li>
+                                                <li><a href="#">Exhibit Registration Form</a></li>
                                                 <li><a href="#">Exhibit Services</a></li>
+                                                <li><a href="#">Sponsorship Agreement Form</a></li>
+                                                <li><a href="{{ route('our-sponsors') }}">Acknowledged Sponsors</a></li>
+
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('registration-page') }}">Registration</a></li>
@@ -116,9 +120,13 @@
                         </nav>
                     </div>
                 </a>
+
             </div>
             <div class="navbar navbar-expand-lg ">
                 <div class="top-nav">
+                    @if(auth()->check() && auth()->user()->access_role == "admin")
+                    <button id="toggleNavbar" class="toggle-nav">Show/Hide Navbar</button>
+                    @endif
                     @guest
                     @if (Route::has('login'))
 
@@ -130,11 +138,6 @@
                     @endif
                     @else
                     @if(auth()->check() && auth()->user()->access_role != "admin")
-                    <!-- <li class="nav-item">
-                        <a id="login-register" class="nav-link" href="{{ route('welcome') }}">
-                            Home
-                        </a>
-                    </li> -->
 
                     <li class="nav-item dropdown">
                         <a id="login-register" class="nav-link dropdown-toggle" style="color:#002868; font-size: 16px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -162,8 +165,9 @@
         </div>
 
     </div>
+
     @if(auth()->check() && auth()->user()->access_role == "admin")
-    <div class="admin-navigation">
+    <div class="admin-navigation" id="adminNavigation">
         <aside class="main-sidebar " id="navbarSupportedContent">
 
 
@@ -284,12 +288,22 @@
             </div>
         </div>
     </section> -->
-    <div class="text-center">
+    <div class="footer text-center">
         <b>www.dgca59.gov.ph &nbsp;&nbsp;| &nbsp;&nbsp; DGCA.PH@gmail.com &nbsp;&nbsp; |</b>
     </div>
 
 </footer>
+<script>
+    // Get references to the navbar and the toggle button
+    const navbar = document.getElementById('adminNavigation');
+    const toggleButton = document.getElementById('toggleNavbar');
 
+    // Add event listener to the toggle button
+    toggleButton.addEventListener('click', function() {
+        // Toggle the visibility of the navbar
+        navbar.classList.toggle('hidden');
+    });
+</script>
 <script src="{{ asset('js/app/nav.js') }}"></script>
 <script src="{{ asset('js/app/dropdown.js') }}"></script>
 <script src="{{ asset('js/app/preloader.js') }}"></script>

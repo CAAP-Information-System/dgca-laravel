@@ -59,8 +59,19 @@ class LoginController extends Controller
             return redirect('welcome');  // Redirect to the home page if authenticated
         }
 
-        // If not authenticated, return the login view
-        return view('auth.login')->with('error', 'Sorry, you are not yet registered.');
+        // If there's a session error message, use it
+        $errorMessage = session('error');
+
+        // Check if the error message is related to authentication
+        if ($errorMessage === 'These credentials do not match our records.') {
+            $errorMessage = 'Wrong email or password. Please try again.';
+        } elseif ($errorMessage === 'Sorry, you are not yet registered.') {
+            $errorMessage = 'You are not registered. Please register first.';
+        }
+
+        // Return the login view with the appropriate error message
+        return view('auth.login')->with('error', $errorMessage);
     }
+
 
 }

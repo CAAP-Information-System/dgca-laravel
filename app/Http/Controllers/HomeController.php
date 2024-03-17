@@ -6,9 +6,11 @@ use App\Mail\ApprovalMail;
 use App\Models\Gallery;
 use App\Models\News;
 use App\Models\User;
+use App\Models\File;
 use App\Notifications\ApprovalNotification;
 use App\Notifications\RegistrationApproval;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
@@ -94,7 +96,11 @@ class HomeController extends Controller
 
     public function viewOurSponsors()
     {
-        return view('sponsors.our_sponsors');
+        // Read JSON data from the file
+        $sponsorJson = file_get_contents(public_path('json/sponsors.json'));
+
+        // Pass the decoded data to the view
+        return view('sponsors.our_sponsors', ['sponsorJson' => $sponsorJson]);
     }
     public function viewMedicalSupport()
     {
@@ -125,19 +131,52 @@ class HomeController extends Controller
 
     public function viewProgram()
     {
-        return view('error.error_503');
+        return view('http-message.error_503');
     }
     public function viewTransportSched()
     {
-        return view('error.error_503');
+        return view('http-message.error_503');
     }
+    public function viewOrderofBusiness()
+    {
+        return view('http-message.error_503');
+    }
+
+    public function viewMyDocuments()
+    {
+        // Check if a user is authenticated
+        if (Auth::check()) {
+            // Get the authenticated user using the User model
+            $user = User::find(Auth::id());
+
+            // Check if the user is not null
+            if ($user) {
+                // Retrieve all files uploaded by the authenticated user
+                $files = $user->files()->get();
+
+                // Pass the files data to the view
+                return view('file_manager.my_documents', compact('files'));
+            } else {
+                // Handle the case where the user is not found
+                return redirect()->back()->with('error', 'User not found.');
+            }
+        } else {
+            // Handle the case where no user is authenticated
+            return redirect()->back()->with('error', 'User not authenticated.');
+        }
+    }
+
 
     public function error_503()
     {
-        return view('error.error_503');
+        return view('http-message.error_503');
     }
     public function error_403()
     {
-        return view('error.error_403');
+        return view('http-message.error_403');
+    }
+    public function uploadSent()
+    {
+        return view('http-message.upload-sent');
     }
 }

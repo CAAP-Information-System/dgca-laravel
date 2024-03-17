@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ApproveFile;
 use Illuminate\Http\Request;
 use App\Models\File;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class FileController extends Controller
 {
@@ -39,75 +41,66 @@ class FileController extends Controller
             $user = User::all();
             $owner = auth()->user()->name;
             $files = File::where('owner', $owner)->get();
-            return view('file_manager.register_files', compact('files','user'));
+            return view('file_manager.register_files', compact('files', 'user'));
         } else {
             // Redirect or handle the case when the user is not authenticated
             return redirect()->route('home');
         }
     }
 
-
     public function upload(Request $request)
     {
-        try {
-            // Ensure the user is authenticated before accessing auth()->user()
-            if (auth()->check()) {
-                $owner = auth()->user()->name;
+        // Ensure the user is authenticated before accessing auth()->user()
+        if (auth()->check()) {
+            $owner = auth()->user()->name;
 
-                Log::info('FileManagerController@upload');
+            Log::info('FileManagerController@upload');
 
-                // Verifies and validates input data
-                $request->validate([
-                    'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx,mp4,avi,mov|max:10240',
-                    'file_category' => 'required|string',
-                    'discussion_agenda' => 'nullable|string',
-                    'information_agenda' => 'nullable|string',
-                ], [
-                    'file.required' => 'Please select a file to upload.',
-                    'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',
-                ]);
+            // Verifies and validates input data
+            $request->validate([
+                'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx,mp4,avi,mov|max:10240',
+                'file_category' => 'required|string',
+                'discussion_agenda' => 'nullable|string',
+                'information_agenda' => 'nullable|string',
+            ], [
+                'file.required' => 'Please select a file to upload.',
+                'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',
+            ]);
 
-                if (!$request->hasFile('file')) {
-                    return redirect()->back()->with('error', 'No file provided.');
-                }
-
-                $file = $request->file('file');
-                $fileName = $file->getClientOriginalName();
-
-                // Save file to storage and database
-                $path = $file->storeAs('public/conference', $fileName);
-                $size = $file->getSize();
-                $fileCategories = $request->input('file_category');
-                $discussionAgenda = $request->input('discussion_agenda');
-                $informationAgenda = $request->input('information_agenda');
-                $createdFile = File::create([
-                    'name' => $fileName,
-                    'owner' => $owner,
-                    'upload_date' => now(),
-                    'size' => $size,
-                    'file_category' => $fileCategories,
-                    'discussion_agenda' => $discussionAgenda,
-                    'information_agenda' => $informationAgenda,
-
-                ]);
-                if (!$request->hasFile('file')) {
-                    return redirect()->back()->with('error', 'Please select a file to upload.');
-                }
-                // Log the created file details for debugging
-                Log::info('File created: ' . $createdFile);
-
-                // Include the file name in the success message
-                return redirect()->back()->with('success', 'File "' . $fileName . '" uploaded successfully.');
-            } else {
-                // Redirect or handle the case when the user is not authenticated
-                return redirect()->route('login');
+            if (!$request->hasFile('file')) {
+                return redirect()->back()->with('error', 'No file provided.');
             }
-        } catch (\Exception $e) {
-            // Log the exception for debugging
-            Log::error($e);
-            return redirect()->back()->with('error', 'An error occurred during file upload.');
+
+            $file = $request->file('file');
+            $fileName = $file->getClientOriginalName();
+
+            // Save file to storage and database
+            $path = $file->storeAs('public/conference', $fileName);
+            $size = $file->getSize();
+            $fileCategories = $request->input('file_category');
+            $discussionAgenda = $request->input('discussion_agenda');
+            $informationAgenda = $request->input('information_agenda');
+            $createdFile = File::create([
+                'name' => $fileName,
+                'owner' => $owner,
+                'upload_date' => now(),
+                'size' => $size,
+                'file_category' => $fileCategories,
+                'discussion_agenda' => $discussionAgenda,
+                'information_agenda' => $informationAgenda,
+            ]);
+
+            // Log the created file details for debugging
+            Log::info('File created: ' . $createdFile);
+
+            // Include the file name in the success message
+            return redirect()->route('upload-sent')->with('success', 'File uploaded successfully.');
+        } else {
+            // Redirect or handle the case when the user is not authenticated
+            return redirect()->route('login');
         }
     }
+
 
 
 
@@ -241,19 +234,25 @@ class FileController extends Controller
         ));
     }
 
-    public function editFileName($id){
+    public function editFileName($id)
+    {
         $user = Auth::user();
         $files = File::find($id);
-        return view('file_manager.edit_files', compact('files','user'));
+        return view('file_manager.edit_files', compact('files', 'user'));
     }
     public function updateFileName(Request $request, $id)
     {
         $files = File::find($id);
-        $files->name = $request->input('name');
+        $oldFileName = $files->name;
+        $newFileName = $request->input('name');
+        $files->name = $newFileName;
         $files->doc_status = $request->input('doc_status');
-
         $files->save();
-        return redirect('/admin/files')->with('success', 'Item updated successfully');
+
+        // Rename the file in the file storage
+        Storage::move('public/conference/' . $oldFileName, 'public/conference/' . $newFileName);
+
+        return redirect()->route('viewFiles')->with('success', 'Item updated successfully');
     }
 
     public function viewSubmissionGuide()

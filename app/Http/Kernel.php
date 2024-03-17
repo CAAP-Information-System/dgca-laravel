@@ -91,6 +91,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'isAdmin' => \App\Http\Middleware\AdminMiddleware::class,
         'isMedia' => \App\Http\Middleware\MediaMiddleware::class,
+        'isICAO' => \App\Http\Middleware\ICAOMiddleware::class,
         'statusCheck' => \App\Http\Middleware\StatusMiddleware::class,
     ];
 
@@ -98,5 +99,6 @@ class Kernel extends HttpKernel
         // Other middlewares...
         'check_user_status' => \App\Http\Middleware\CheckStatus::class,
         'checkAdmin' => \App\Http\Middleware\StatusMiddleware::class,
+        'super_user' => \App\Http\Middleware\SecurityMiddleware::class,
     ];
 }

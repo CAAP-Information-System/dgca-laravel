@@ -14,7 +14,7 @@
                 <header class="login-hdr">Sign In Now</header>
                 @csrf
                 @if(session('error'))
-                <div class="alert alert-info">
+                <div class="alert alert-danger">
                     {{ session('error') }}
                 </div>
                 @endif

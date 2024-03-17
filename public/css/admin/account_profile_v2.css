@@ -46,20 +46,21 @@
     color: #3b3b3b;
 }
 .profile-header {
-    font-size: 3rem;
+    font-size: 2.2rem;
+}
+hr{
+    width: 20%;
+    border: #50a9fb 2px solid;
 }
 .main-details-section {
-    padding: 15px;
+    padding: 25px;
     border-radius: 15px;
     display: flex;
     margin: 3vh;
     gap: 4vh;
-    /* background: rgb(37, 136, 227);
-    background: linear-gradient(
-        0deg,
-        rgba(37, 136, 227, 1) 0%,
-        rgba(157, 198, 255, 1) 100%
-    /* ); */
+    border: 2px solid #969696;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
 /* VIEW FILES */
@@ -67,6 +68,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vh;
 }
 .card-link{
     text-decoration: none;
@@ -106,12 +108,28 @@
 .other-details-section {
     display: flex;
     margin: 3vh;
-    gap: 10vh;
+    gap: 5vh;
     justify-content: space-between;
+    margin-bottom: 5vh;
+}
+.preferences-details-section {
+    display: flex;
+    margin: 3vh;
+    gap: 5vh;
+    justify-content: space-between;
+    margin-bottom: 5vh;
 }
 .barong {
+    background-color: #50a9fb;
+    text-align: center;
+    width: 100%;
+    color: #ffff;
+    display: inline-block;
     font-size: 1.5rem;
     font-style: italic;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
 .profile-img {
     width: 300px;

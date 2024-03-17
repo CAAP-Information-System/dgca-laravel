@@ -58,8 +58,7 @@ class User extends Authenticatable
         'airport_destination',
         'hotel_reco',
         'otherHotel',
-        'neck',
-        'shoulder',
+        'attire_size',
         'attire_special_req',
         'preferred_activity',
         'dietary_restrictions',
@@ -73,7 +72,6 @@ class User extends Authenticatable
 
         // Copyright & Privacy Policy
         'privacy',
-        'profile_image',
     ];
 
     /**
@@ -107,4 +105,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(SideMeeting::class);
     }
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }
+

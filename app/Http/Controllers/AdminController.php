@@ -35,20 +35,47 @@ class AdminController extends Controller
         ]);
     }
 
-    public function account_list()
+    public function account_list(Request $request)
     {
-        $user = User::paginate(10);
+        // Query to retrieve unique countries
+        $countries = User::select('country')->distinct()->pluck('country');
+
+
+        $query = User::query();
+
+        // Check if a specific country is requested for sorting
+        if ($request->has('country')) {
+            $country = $request->input('country');
+            $query->where('country', $country);
+        }
+
+        // Check if a specific designation is requested for sorting
+        if ($request->has('designation')) {
+            $designation = $request->input('designation');
+            $query->where('designation', $designation);
+        }
+
+        // Order users by country and then by designation
+        $query->orderBy('country')->orderBy('designation');
+
+        // Paginate the results
+        $users = $query->paginate(10);
+
+        // Count total users
         $usercount = User::count();
-        return view('admin.account_list', ['users' => $user, 'usercount' => $usercount]);
+
+        return view('admin.account_list', [
+            'users' => $users,
+            'usercount' => $usercount,
+            'countries' => $countries,
+        ]);
     }
 
     public function file_uploads()
     {
-        $files = File::all();
+        $files = File::paginate(10);
 
-        return view('admin.file_upload', [
-            'files' => $files,
-        ]);
+        return view('admin.file_upload', ['files' => $files,]);
     }
 
     public function reservation_view()
@@ -111,11 +138,9 @@ class AdminController extends Controller
         // Find the meeting by its ID
         $users = User::findOrFail($id);
 
-        // Delete the meeting
         $users->delete();
 
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Account deleted successfully.');
     }
 }
-

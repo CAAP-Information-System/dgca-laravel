@@ -56,6 +56,8 @@ php artisan serve
 ```
 
 ## Database Model
+![DGCA Database Model](public/img/readme/dgcaDB-model.png)
+
 
 
 ## Change Logs

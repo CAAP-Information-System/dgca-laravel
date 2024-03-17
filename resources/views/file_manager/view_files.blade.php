@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/file_manager/view_files.css') }}">
 <div class="container">
-<header class="page-header">My Documents</header>
+<header class="page-header">Submitted Documents</header>
     <div class="wrapper">
         <table class="table">
             <thead>
@@ -20,7 +20,7 @@
                 @foreach ($files as $file)
                 <tr>
                     <td style="width: 50%;">
-                        <a class="file-name" href="{{ route('file.view', $file->id) }}" download>{{ $file->name }}</a>
+                        <a class="file-name" href="{{ asset('storage/conference/' . $file->name) }}" download>{{ $file->name }}</a>
                     </td>
                     <td>{{ $file->owner ?? 'Unknown' }}</td>
                     <td>{{ $file->upload_date }}</td>
@@ -28,13 +28,6 @@
                         @php
                         echo $file->size ? \App\Http\Controllers\FileController::formatFileSize($file->size) : 'N/A';
                         @endphp
-                    </td>
-                    <td>
-                        <form action="{{ route('file.delete', $file->id) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
                     </td>
                     <td>
                         <a href="{{ route('file.view', $file->id) }}" class="btn btn-primary" target="_blank">View</a>

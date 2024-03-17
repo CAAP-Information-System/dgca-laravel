@@ -12,6 +12,7 @@
                         <div class="message-content">
 
                             <p>
+                            <i class="fa-solid fa-quote-left" style="font-size: 3rem;">&nbsp;</i>
                                 The Philippines is excited to welcome you to our scenic country and share our culture and renowned hospitality. We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable, resilient, and inclusive development of the air transport sector.
                             </p>
                             <p>
@@ -30,7 +31,7 @@
             </div>
         </div>
         <div class="dgca-image-container">
-            <img src="{{ asset('img/dgca-merged.png') }}" alt="merged logos" class="dgca-merged">
+            <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="dgca-merged">
         </div>
     </section>
 

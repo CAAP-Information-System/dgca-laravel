@@ -22,14 +22,28 @@
 .export-btn-container{
     margin: 15px;
     padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
-.export-btn{
-    background-color: #389006;
+.open-reg, .open-pending{
     color: #ffff !important;
     text-decoration: none;
     padding: 25px;
     border-radius: 100px;
     text-align: center;
+}
+.open-reg{
+    background-color: #389006;
+}
+.open-pending{
+    background-color: #50A9FB;
+}
+.open-reg:hover{
+    background-color: #3c741d;
+}
+.open-pending:hover{
+    background-color: #3e7eb9;
 }
 .export-btn:hover{
     text-decoration: none;

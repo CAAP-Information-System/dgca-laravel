@@ -7,19 +7,17 @@
 
 <div class="container">
 
-<!-- Gallery -->
-<div class="row">
-    @foreach($galleryposts as $gallery)
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="{{ asset('storage/gallery/' . $gallery->img_file) }}"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
-  @endforeach
-</div>
-<!-- Gallery -->
+    @if($galleryposts->count() > 0)
+    <div class="row">
+        @foreach($galleryposts as $gallery)
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="{{ asset('storage/gallery/' . $gallery->img_file) }}" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+        </div>
+        @endforeach
+    </div>
+    @else
+    @include('http-message.no_content')
+    @endif
 
 
 </div>

@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{{ asset('img/logo/caap_logo.png') }}" alt="Image 3" style="width: 20%; height:auto;">
+                    <img src="{{ asset('img/banner/message-banner.png') }}" alt="Welcome Banner" class="banner-img">
                 </div>
             </div>
         </div>
@@ -73,7 +73,9 @@
                         <div class="dropdown-content">
                             <a href="{{ route('message') }}">Welcome Message</a>
                             <a href="{{ route('agenda') }}">Agenda</a>
-                            <a href="#">Programme</a>
+                            <a href="{{ route('order-of-business') }}">Order of Business</a>
+                            <a href="#">Participant List</a>
+                            <a href="#">Conclusions</a>
                             <a href="{{ route('the-gallery') }}">The Gallery</a>
                         </div>
                     </li>
@@ -93,9 +95,9 @@
                             <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
                             <a href="{{ route('transport-schedule') }}">Transport Schedule</a>
                             <a href="{{ route('venue') }}">Venue Information</a>
-                            <a href="{{ route('medical-support') }}">Medical Support</a>
                             <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
-                            <a href="{{ route('useful-tips') }}">Tips and Advices</a>
+                            <a href="{{ route('medical-support') }}">Medical Support</a>
+                            <a href="{{ route('useful-tips') }}">Useful Tips</a>
                         </div>
                     </li>
                     <li class="dropdown1">
@@ -104,6 +106,7 @@
                             Documents
                         </a>
                         <div class="dropdown-content">
+                            <!-- <a href="#">My Documents</a> -->
                             <a href="{{ route('disc-paper') }}">Discussion Papers</a>
                             <a href="{{ route('info-paper') }}">Information Papers</a>
                             <a href="{{ route('view-submission') }}">Submission Guide</a>
@@ -111,7 +114,7 @@
                         </div>
                     </li>
                     @if(auth()->check() && auth()->user()->access_role == "media")
-                    <li class="dropdown">
+                    <li class="dropdown1">
                         <a href="#" class="text-danger">
                             <i class="fa-solid fa-hashtag"></i>
                             Media Committee
@@ -120,6 +123,19 @@
                             <a href="{{ route('create-news') }}">Create News</a>
                             <a href="#">Upload Gallery</a>
                             <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
+                        </div>
+                    </li>
+                    @elseif(auth()->check() && auth()->user()->access_role == "icao")
+                    <li class="dropdown1">
+                        <a href="#" class="text-danger">
+                            <i class="fa-solid fa-hashtag"></i>
+                            ICAO
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="{{ route('files') }}">View Files</a>
+                            <a href="{{ route('meeting-reservations') }}">Meeting Reservation</a>
+                            <a href="{{ route('account_list') }}">Accounts Registered</a>
+
                         </div>
                     </li>
                     @endif
@@ -148,8 +164,6 @@
                     <p class="countdown-message">Countdown until the 59th DGCA <br> Conference!</p>
                 </div>
         </div>
-
-
     </section>
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">

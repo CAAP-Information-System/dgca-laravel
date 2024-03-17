@@ -54,6 +54,9 @@
                 </div>
             </div>
         </section>
+        <section class="form-guides-sect">
+            <header class="form-reqs-header">Form Requirements</header>
+        </section>
 </body>
 <script src="{{ asset('js/welcome/scroll.js') }}"></script>
 @endsection

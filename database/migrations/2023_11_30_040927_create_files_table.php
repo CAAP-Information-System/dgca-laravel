@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
+            $table->string('doc_status')->default('Pending');
             $table->string('name');
             $table->string('owner')->nullable();
             $table->date('upload_date');
             $table->integer('size');
             $table->string('file_category');
+            $table->string('discussion_agenda')->nullable();
+            $table->string('information_agenda')->nullable();
             $table->timestamps();
         });
     }

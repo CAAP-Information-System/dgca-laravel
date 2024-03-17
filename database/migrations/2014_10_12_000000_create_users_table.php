@@ -52,8 +52,7 @@ return new class extends Migration
             $table->string('airport_destination');
             $table->string('hotel_reco')->nullable();
             $table->string('otherHotel')->default('None')->nullable();
-            $table->integer('neck')->nullable();
-            $table->integer('shoulder')->nullable();
+            $table->string('attire_size')->nullable();
             $table->string('attire_special_req')->default('None')->nullable();
             $table->string('preferred_activity')->nullable();
             $table->string('dietary_restrictions')->default('None')->nullable();

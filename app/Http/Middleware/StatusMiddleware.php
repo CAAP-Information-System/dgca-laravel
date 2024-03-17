@@ -23,7 +23,7 @@ class StatusMiddleware
                 return $next($request);
             }
             else{
-                return response()->view('error.access_denied', [], 403);
+                return response()->view('http-message.access_denied', [], 403);
             }
         }
         else{

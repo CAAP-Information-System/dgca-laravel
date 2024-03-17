@@ -18,14 +18,11 @@ class AdminMiddleware
     {
         if(Auth::check()){
 
-            // admin == 1
-            // user == 0
-
             if(Auth::user()->access_role == 'admin') {
                 return $next($request);
             }
             else{
-                return response()->view('error.error_403', [], 403);
+                return response()->view('http-message.error_403', [], 403);
             }
         }
         else{

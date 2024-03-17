@@ -112,6 +112,15 @@
     background-color: #969696;
     color: #ffff;
 }
+.form-guides-sect{
+    padding-top: 3vh;
+}
+.form-reqs-header{
+    font-size: 2rem;
+    color: #50A9FB;
+}
+
+
 @media screen and (max-width: 768px) {
 
     .registration-main{
