@@ -28,9 +28,12 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class='bx bx-envelope'></i></span>
                                 </div>
-                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field @error('email') is-invalid @enderror""
-                                name=" email" value="{{ old('email') }}" autocomplete="email" required>
+                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" required>
                             </div>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
+
                         </div>
 
                         <!-- Password input -->
