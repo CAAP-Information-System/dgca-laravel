@@ -52,6 +52,17 @@
                 <img src="{{ asset('img/dusit-thani/dusit7.jpg') }}" alt="Image 1" class="marquee-img">
                 <!-- Add more images as needed -->
             </div>
+            <div class="marquee">
+                <!-- Insert your images here -->
+                <img src="{{ asset('img/dusit-thani/dusit1.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit2.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit3.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit4.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit5.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit6.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit7.jpg') }}" alt="Image 1" class="marquee-img">
+                <!-- Add more images as needed -->
+            </div>
         </div>
         <div class="hotel-btn-grp">
             <a href="https://www.dusit.com/dusitthani-mactancebu/" target="_blank" class="website-btn">Visit Dusit Thani Official Website</a>
