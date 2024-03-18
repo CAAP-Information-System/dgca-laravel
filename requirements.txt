@@ -4,3 +4,4 @@ php artisan key:generate
 php artisan vendor:publish
 
 composer require barryvdh/laravel-dompdf
+composer require spatie/laravel-robots-middleware

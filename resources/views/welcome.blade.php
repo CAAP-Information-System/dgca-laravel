@@ -33,6 +33,7 @@
     </div>
     @endif
     <section class="welcome">
+        <h2 class="text-danger"><b>DEMO VERSION (BETA)</b></h2>
         <div class="carousel-container">
             <input type="radio" name="carousel-radio" id="radio1" class="carousel-radio" checked>
             <label for="radio1" class="carousel-radio-label"></label>

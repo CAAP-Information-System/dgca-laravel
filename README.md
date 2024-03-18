@@ -10,8 +10,6 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
 - Real-time meeting room reservation
 - File documentation and management
 - Streamlined document approval and user experience
-- ICAO standard friendly
-
 
 ## Getting Started
 
