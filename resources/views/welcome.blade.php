@@ -51,7 +51,7 @@
                     </header>
                     <header class="theme">Sustainable, Resilient, & Inclusive</header>
                     <p class="theme-message">
-                        Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity
+                        Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity.
                     </p>
                 </div>
 

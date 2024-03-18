@@ -211,7 +211,9 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 10px 0; /* Adjust as needed */
+    padding: 5px;
+    background-color: #ffff;
+    z-index: 5;
 }
 
 @media screen and (max-width: 768px) {
