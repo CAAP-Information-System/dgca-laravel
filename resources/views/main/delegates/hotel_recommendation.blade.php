@@ -10,6 +10,7 @@
         <header class="reco-title">Hotels/Resorts near Dusit Thani</header>
         <p class="reco-details">Here are the selected hotels with the highest number of reviews and ratings, chosen for their convenience, relaxation, and breathtaking views, specifically tailored for the delegates of the 59th DGCA Conference. Contact details and other information for each selected hotel have been provided. Enjoy your stay!</p>
     </div>
+    
     <main class="hotel-reco">
         <div class="reco-list">
             @foreach(json_decode($hotelsJson)->hotels as $hotel)

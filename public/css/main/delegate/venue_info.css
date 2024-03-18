@@ -41,6 +41,26 @@
     width: 60%;
     text-align: end;
 }
+@media screen and (max-width: 1024px) {
+.hotel-img-grp {
+    flex-direction: column; /* Align vertically */
+    align-items: center; /* Center items horizontally */
+}
+.hotel-img {
+    width: 50vw !important; /* Set the width to 100% to make the images fill the container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+}
+@media screen and (max-width: 500px) {
+    .hotel-img-grp {
+        flex-direction: column; /* Align vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    .hotel-img {
+        width: 100vw !important; /* Set the width to 100% to make the images fill the container */
+        height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    }
+    }
 @media screen and (max-width: 768px) {
     .banner-content {
         margin-top: 0;
@@ -81,15 +101,14 @@
 .hotel-img-grp{
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around
     align-items: center;
     gap: 3vh;
 
 }
 .hotel-img {
-    width: 100%; /* Set the width to 100% to make the images fill the container */
+    width: 35vw; /* Set the width to 100% to make the images fill the container */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
-    max-width: 600px; /* Limit the maximum width to prevent images from becoming too large */
 }
 .hotel-header{
     font-size: 3rem;
