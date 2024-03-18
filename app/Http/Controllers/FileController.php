@@ -75,7 +75,7 @@ class FileController extends Controller
             $fileName = $file->getClientOriginalName();
 
             // Save file to storage and database
-            $path = $file->storeAs('public/conference', $fileName);
+            $path = $file->storeAs('public/conference/papers', $fileName);
             $size = $file->getSize();
             $fileCategories = $request->input('file_category');
             $discussionAgenda = $request->input('discussion_agenda');
@@ -252,7 +252,7 @@ class FileController extends Controller
         // Rename the file in the file storage
         Storage::move('public/conference/' . $oldFileName, 'public/conference/' . $newFileName);
 
-        return redirect()->route('viewFiles')->with('success', 'Item updated successfully');
+        return redirect()->route('files')->with('success', 'Item updated successfully');
     }
 
     public function viewSubmissionGuide()

@@ -77,11 +77,11 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
 
-    Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
-    Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
 });
 
 Route::group(['middleware' => 'super_user'], function (){
+    Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
+    Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
     Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
     Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
     Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');

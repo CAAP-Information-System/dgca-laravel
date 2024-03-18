@@ -68,14 +68,14 @@ class RegisterController extends Controller
             'country' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
             'privacy' => ['required', 'string'],
-            'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:9999'],
             'salutation' => ['required', 'string', 'max:255'],
             'passport_num' => ['required', 'string'],
             'address' => ['required', 'string'],
             'telephone' => ['required', 'string'],
             'mobile' => ['nullable', 'string'],
-            'passport_photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
-            'approval_doc' => ['required', 'file', 'mimes:pdf', 'max:2048'],
+            'passport_photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:9999'],
+            'approval_doc' => ['required', 'file', 'mimes:pdf', 'max:9999'],
 
 
             // Conference Details

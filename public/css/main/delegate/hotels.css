@@ -37,9 +37,8 @@
     color: #50A9FB;
 }
 .hotel-rating{
-    font-size: 1.3rem;
-    font-style: italic;
-    font-weight: bold;
+    font-size: 2rem;
+    color: #FFD54F;
 }
 .hotel-address{
     font-size: 17px;

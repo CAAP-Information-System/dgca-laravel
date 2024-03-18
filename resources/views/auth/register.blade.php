@@ -102,7 +102,7 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="approval_doc">Letter of Credentials (Softcopy) <span class="required-symbol">*</span></label>
+                    <label for="approval_doc">Letter of Credentials <i>(Softcopy/Scanned)</i> <span class="required-symbol">*</span></label>
                     <input id="approval_doc" type="file" class="form-control @error('approval_doc') is-invalid @enderror" name="approval_doc" accept=".pdf" required>
                     @error('passport_photo')
                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
@@ -116,8 +116,8 @@
                         <p><b>See Updated Facebook Post:</b></p>
                         <a href="https://www.facebook.com/story.php?story_fbid=pfbid0g65uwZ7qV8rS8X5ZnzAG87x3YSnqX87gtSCDnqbo8ooUryqGNN7hPJMq2suvMf1Ul&id=100069548131034&mibextid=WC7FNe&paipv=0&eav=AfY7FN8jTRBr99avENEIALOREZFraIhLrmvTZLTOzXaRlgjH2NaWs3_m6HcIs-5HqZg&_rdr" target="_blank">Bureau of Customs Updates</a>
                     </div>
-                    <label for="approval_doc">e-Travel Customs System<span class="required-symbol">*</span></label>
-                    <p><i class="text-muted">Please register here not more than 3 days before scheduled flight. This can be filled out separately.</i></p>
+                    <label for="approval_doc">e-Travel Customs System</label>
+                    <p><i class="text-muted">Please register here not more than <b>3 days</b> before scheduled flight. This can be filled out separately.</i></p>
                     <a href="https://etravel.gov.ph/?fbclid=IwAR2vYxlWvZye8afEzOyo2d4uI3yVfjqhwU8oq7s-lxQlH4eWbhDgzQOPkes" target="_blank">
                         <i class="fa-solid fa-link"></i>
                         E-Travel Link
@@ -219,13 +219,13 @@
                         <option value="Be Resort Mactan">Be Resort Mactan</option>
                         <option value="Shangri-La Mactan">Shangri-La Mactan</option>
                         <option value="Mövenpick Cebu">Mövenpick Cebu</option>
-                        <option value="Others">Others</option>
+                        <option value="Others">OTHERS</option>
                     </select>
                 </div>
                 <!-- Hidden field for "Others" selection -->
                 <div class="input__box-long">
                     <div id="otherHotelField" style="display: none;" class="input__box-long">
-                        <label for="otherHotel">Other Hotel Name:</label>
+                        <label for="otherHotel">Preferred Hotel Name:</label>
                         <input type="text" placeholder="Enter Preferred Hotel" id="otherHotel" name="otherHotel" class="form-control">
                     </div>
                 </div>
@@ -244,8 +244,8 @@
 
                 <div class="input__box-long">
                     <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
-                    <p><i class="text-muted">Include additional sizing if needed. Place 'None' if there is no request</i></p>
-                    <input type="text" placeholder="Enter None if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}" required>
+                    <p><i class="text-muted">Include additional sizing/design if needed. Place <b>'None'</b> if there is no request</i></p>
+                    <input type="text" placeholder="Enter `None` if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}" required>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Activities <span class="required-symbol">*</span></span>
@@ -264,7 +264,7 @@
                         <option value="Vegetarian">Vegetarian</option>
                         <option value="No Pork">No Pork</option>
                         <option value="No Beef">No Beef</option>
-                        <option value="None">None</option>
+                        <option value="None">NONE</option>
                     </select>
                 </div>
                 <div class="input__box-long">
@@ -341,6 +341,7 @@
                     All information provided herein shall be kept private and confidential by the CAAP and shall be used solely for legal purposes as mandated by the <a class="text-primary text-bold dpa-link" href="https://privacy.gov.ph/data-privacy-act/#w10">Data Privacy Act of 2012</a> and other relevant laws. Videos and pictures taken during the event may also be used in CAAP's promotional and publicity materials.
                 </p>
             </div>
+            <b class="text-danger">---IMPORTANT---</b>
             <div class="privacy-policy-check">
                 <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
                 <span class="details"><b class="text-primary">By checking this box, I agree that I have read the privacy policy.</b></span>
