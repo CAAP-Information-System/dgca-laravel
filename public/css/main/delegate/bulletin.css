@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     padding-top: 5vh;
+    padding-bottom: 15vh;
 }
 .backtotop{
     text-align: center;

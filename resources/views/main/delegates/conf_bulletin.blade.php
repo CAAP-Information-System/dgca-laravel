@@ -200,7 +200,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    The ICAO Asia and Pacific Regional Office, along with the Civil Aviation Authority of the Philippines, will serve as the secretariat for the conference. For all inquiries and general correspondence, please direct your communication to <a href="#">secretariat-email@email.com</a>, ensuring to cc <a href="#">apac@icao.int</a>.
+                    The ICAO Asia and Pacific Regional Office, along with the Civil Aviation Authority of the Philippines, will serve as the secretariat for the conference. For all inquiries and general correspondence, please direct your communication to <a href="#">dgca59_secretariat@caap.gov.ph</a>, ensuring to cc <a href="#">apac@icao.int</a>.
                 </div>
             </div>
         </div>

@@ -263,6 +263,16 @@
     padding: 10px;
     border-radius: 10px;
 }
+.barong-label{
+    display: flex;
+    flex-direction: column;
+}
+.measure-guide{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+}
 @media screen and (max-width: 1024px) {
     .container .register-user {
         width: 100%;

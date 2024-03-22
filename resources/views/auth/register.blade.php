@@ -135,7 +135,7 @@
                 </div>
                 <div class="input__box-long">
                     <span class="details">Conference Role <span class="required-symbol">*</span></span>
-                    <select class="form-control" id="conference_role" name="conference_role">
+                    <select class="form-control" id="conference_role" name="conference_role" onchange="showAttireSize()">
                         <option value="">-- Select Option --</option>
                         <option value="Head Delegate">Head Delegate</option>
                         <option value="Delegate">Delegate</option>
@@ -229,23 +229,28 @@
                         <input type="text" placeholder="Enter Preferred Hotel" id="otherHotel" name="otherHotel" class="form-control">
                     </div>
                 </div>
-                <div class="input__box-long">
-                    <span class="details">Barong-Tagalog Size (Attire):<span class="required-symbol">*</span></span>
-                    <p><i class="card-subtitle mb-2 text-muted">Sizes are in centimeters (cm)</i></p>
-                    <select class="form-control" id="attire_size" name="attire_size">
-                        <option value="">-- Select Option --</option>
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                        <option value="Extra Large">Extra Large</option>
-                        <option value="2x Extra Large">2x Extra Large</option>
-                    </select>
-                </div>
+                <div class="input__box-long" id="attireSizeBlock" style="display: contents;">
+                    <div class="input__box-long">
+                        <div class="barong-label">
+                            <span class="details">Barong-Tagalog Size (Attire):<span class="required-symbol">*</span></span>
+                            <img src="{{ asset('img/registration/measure-guide.jpg') }}" alt="barong measurement" class="measure-guide">
+                        </div>
+                        <!-- <p><i class="card-subtitle mb-2 text-muted">Sizes are in centimeters (cm)</i></p> -->
+                        <select class="form-control" id="attire_size" name="attire_size">
+                            <option value="">-- Select Option --</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="Extra Large">Extra Large</option>
+                            <option value="2x Extra Large">2x Extra Large</option>
+                        </select>
+                    </div>
 
-                <div class="input__box-long">
-                    <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
-                    <p><i class="text-muted">Include additional sizing/design if needed. Place <b>'None'</b> if there is no request</i></p>
-                    <input type="text" placeholder="Enter `None` if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}" required>
+                    <div class="input__box-long">
+                        <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
+                        <p><i class="text-muted">Include additional sizing/design if needed. Place <b>'None'</b> if there is no request</i></p>
+                        <input type="text" placeholder="Enter `None` if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}">
+                    </div>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Activities <span class="required-symbol">*</span></span>
@@ -264,6 +269,7 @@
                         <option value="Vegetarian">Vegetarian</option>
                         <option value="No Pork">No Pork</option>
                         <option value="No Beef">No Beef</option>
+                        <option value="No Seafood">No Seafood</option>
                         <option value="None">NONE</option>
                     </select>
                 </div>
@@ -438,5 +444,16 @@
         }
     });
 </script>
+<script>
+    function showAttireSize() {
+        var conferenceRole = document.getElementById('conference_role').value;
+        var attireSizeBlock = document.getElementById('attireSizeBlock');
 
+        if (conferenceRole === 'Head Delegate') {
+            attireSizeBlock.style.display = 'block';
+        } else {
+            attireSizeBlock.style.display = 'none';
+        }
+    }
+</script>
 @endsection

@@ -33,7 +33,7 @@
     </div>
     @endif
     <section class="welcome">
-        <h2 class="text-danger"><b>DEMO VERSION (BETA)</b></h2>
+        <!-- <h2 class="text-danger"><b>DEMO VERSION (BETA)</b></h2> -->
         <div class="carousel-container">
             <input type="radio" name="carousel-radio" id="radio1" class="carousel-radio" checked>
             <label for="radio1" class="carousel-radio-label"></label>
@@ -48,7 +48,7 @@
                         Welcome to the
                         <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch"></span>
                         <br>
-                        <span class="span">DGCA 59 PH</span> Official Page
+                        <span class="span">59th APAC DGCA PH</span>  2024
                     </header>
                     <header class="theme">Sustainable, Resilient, & Inclusive</header>
                     <p class="theme-message">

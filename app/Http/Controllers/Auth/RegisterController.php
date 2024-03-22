@@ -97,7 +97,7 @@ class RegisterController extends Controller
             'hotel_reco' => ['nullable', 'string', 'max:255'],
             'otherHotel' => ['nullable', 'string'],
             'attire_size' => ['nullable', 'string'],
-            'attire_special_req' => ['required', 'string'],
+            'attire_special_req' => ['nullable', 'string'],
             'preferred_activity' => ['nullable', 'string', 'max:255'],
             'dietary_restrictions' => ['nullable', 'string', 'max:255'],
             'dietary_special_req' => ['nullable', 'string'],
