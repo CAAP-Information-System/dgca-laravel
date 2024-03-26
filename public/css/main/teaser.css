@@ -1,0 +1,73 @@
+.teaser-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+.teaser-content{
+    display: flex;
+    gap: 6vw;
+    color: #3b3b3b;
+}
+.teaser-details{
+    width: 450px;
+}
+
+.teaser-details-header{
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 5vh;
+}
+.teaser-details p{
+    padding-top: 4vh;
+}
+.teaser-details-header span{
+    color: #50A9FB;
+    font-size: 1.2em;
+}
+.teaser-link{
+    width: 750px;
+    height: 415px;
+}
+.teaser-btns-ctn{
+    margin-top: 5vh;
+}
+.teaser-btn{
+    padding: 10px;
+    border: 2px solid #50A9FB;
+    background-color: none;
+    text-decoration: none;
+    color: #50A9FB;
+}
+.teaser-btn:hover{
+    background-color: #50A9FB;
+    color: #ffff;
+}
+.fa-chevron-right{
+    margin-left: 10px;
+}
+@media only screen and (max-width: 652px) {
+    .teaser-section{
+        margin-top: 10vh;
+    }
+    .teaser-content{
+        display: block;
+        margin: 0 auto;
+    }
+    .teaser-details-header{
+        text-align: center;
+    }
+    .teaser-details p{
+        padding: 10px;
+        margin-top: 3vh;
+    }
+    .teaser-btns-ctn{
+        display: flex;
+        justify-content: center;
+    }
+    .teaser-link{
+        margin-top: 5vh;
+        width: 450px;
+        height: 215px;
+    }
+}

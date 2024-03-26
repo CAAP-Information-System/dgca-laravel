@@ -3,7 +3,7 @@
 @section('content')
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}"> -->
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev3.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url('css/main/notice_board.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/main/announcements.css') }}">
 
 <main class="content-main">
     @if (auth()->check() && auth()->user()->status === 'Pending')
@@ -34,7 +34,24 @@
     @endif
     <section class="welcome">
         <!-- <h2 class="text-danger"><b>DEMO VERSION (BETA)</b></h2> -->
-        <div class="carousel-container">
+        <div class="welcome-banner">
+            <main class="banner-content">
+                <header class="welcome-header">
+                    Welcome to the
+                    <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch"></span>
+                    <br>
+                    <span class="apac-2024"><span class="span">59th APAC DGCA PH</span> 2024</span>
+                </header>
+                <div class="theme-content">
+                    <span class="input theme"></span>
+                    <p class="theme-message">
+                        Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity.
+                    </p>
+                </div>
+            </main>
+            @include('layouts.conference-navbar')
+        </div>
+        <!-- <div class="carousel-container">
             <input type="radio" name="carousel-radio" id="radio1" class="carousel-radio" checked>
             <label for="radio1" class="carousel-radio-label"></label>
 
@@ -44,127 +61,41 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <header class="welcome-header">
-                        Welcome to the
-                        <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch"></span>
-                        <br>
-                        <span class="span">59th APAC DGCA PH</span>  2024
-                    </header>
-                    <header class="theme">Sustainable, Resilient, & Inclusive</header>
-                    <p class="theme-message">
-                        Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity.
-                    </p>
+
                 </div>
 
                 <div class="carousel-item">
                     <img src="{{ asset('img/banner/message-banner.png') }}" alt="Welcome Banner" class="banner-img">
                 </div>
             </div>
-        </div>
+        </div> -->
+        <!-- Conference Navigation Bar -->
 
 
-        <div class="main-conf-nav">
-            <nav class="conf-nav">
-                <ul>
-                    <li class="dropdown1">
-                        <a>
-                            <i class="fa-solid fa-users"></i>
-                            Conference
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('message') }}">Welcome Message</a>
-                            <a href="{{ route('agenda') }}">Agenda</a>
-                            <a href="{{ route('order-of-business') }}">Order of Business</a>
-                            <a href="#">Participant List</a>
-                            <a href="#">Conclusions</a>
-                            <a href="{{ route('the-gallery') }}">The Gallery</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{{ route('meeting-room') }}">
-                            <i class="fa-solid fa-handshake"></i>
-                            Side Meeting
-                        </a>
-                    </li>
-                    <li class="dropdown1">
-                        <a>
-                            <i class="fa-solid fa-user-tie"></i>
-                            Delegate's Corner
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
-                            <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
-                            <a href="{{ route('transport-schedule') }}">Transport Schedule</a>
-                            <a href="{{ route('venue') }}">Venue Information</a>
-                            <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
-                            <a href="{{ route('medical-support') }}">Medical Support</a>
-                            <a href="{{ route('useful-tips') }}">Useful Tips</a>
-                        </div>
-                    </li>
-                    <li class="dropdown1">
-                        <a>
-                            <i class="fa-solid fa-folder-open"></i>
-                            Documents
-                        </a>
-                        <div class="dropdown-content">
-                            <!-- <a href="#">My Documents</a> -->
-                            <a href="{{ route('disc-paper') }}">Discussion Papers</a>
-                            <a href="{{ route('info-paper') }}">Information Papers</a>
-                            <a href="{{ route('view-submission') }}">Submission Guide</a>
-                            <a href="{{ route('create.file') }}">Submit Document</a>
-                        </div>
-                    </li>
-                    @if(auth()->check() && auth()->user()->access_role == "media")
-                    <li class="dropdown1">
-                        <a href="#" class="text-danger">
-                            <i class="fa-solid fa-hashtag"></i>
-                            Media Committee
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('create-news') }}">Create News</a>
-                            <a href="#">Upload Gallery</a>
-                            <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
-                        </div>
-                    </li>
-                    @elseif(auth()->check() && auth()->user()->access_role == "icao")
-                    <li class="dropdown1">
-                        <a href="#" class="text-danger">
-                            <i class="fa-solid fa-hashtag"></i>
-                            ICAO
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('files') }}">View Files</a>
-                            <a href="{{ route('meeting-reservations') }}">Meeting Reservation</a>
-                            <a href="{{ route('account_list') }}">Accounts Registered</a>
-
-                        </div>
-                    </li>
-                    @endif
-                </ul>
-            </nav>
-
-        </div>
-        <br>
-        <div class="abt-us-ctn">
-            <a href="#about-cebu" class="about-us-btn">Learn More</a>
-        </div>
-        <!-- <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted"> -->
-        <div class="count-section fade-in-section">
-            <main class="countdown-main">
-                <div class="countdown-sect">
-                    <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
-                    <div id="countdown" class="countdown">
-                        <ul>
-                            <li><span id="days"></span>days</li>
-                            <li><span id="hours"></span>Hours</li>
-                            <li><span id="minutes"></span>Minutes</li>
-                            <li><span id="seconds"></span>Seconds</li>
-                        </ul>
-                    </div>
-                    <hr width="10%" style="border: 1px solid #3b3b3b;">
-                    <p class="countdown-message">Countdown until the 59th DGCA <br> Conference!</p>
+        <section class="main-countdown">
+            <main>
+                <div class="abt-us-ctn">
+                    <a href="#about-cebu" class="about-us-btn">Learn More</a>
                 </div>
-        </div>
+                <!-- <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted"> -->
+                <div class="count-section fade-in-section">
+                    <main class="countdown-main">
+                        <div class="countdown-sect">
+                            <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
+                            <div id="countdown" class="countdown">
+                                <ul>
+                                    <li><span id="days"></span>Days</li>
+                                    <li><span id="hours"></span>Hours</li>
+                                    <li><span id="minutes"></span>Minutes</li>
+                                    <li><span id="seconds"></span>Seconds</li>
+                                </ul>
+                            </div>
+                            <!-- <hr width="100%" style="border: 1px solid #3b3b3b;"> -->
+                            <p class="countdown-message">Countdown until the 59th DGCA Conference!</p>
+                        </div>
+                </div>
+            </main>
+        </section>
     </section>
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
@@ -193,12 +124,20 @@
         </div>
     </section>
 
+    <section class="teaser-section">
+        @include('home.teaser')
     </section>
+
+    <section class="highlights-section">
+        @include('home.highlights')
+    </section>
+
     <section class="announcements ">
         <header class="announcement-header">
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
         </header>
+        <hr style="width: 30%; border: 1px solid #001E50;">
         @if(isset($newspost))
         <div class="notice-container">
             <main class="container">
@@ -206,7 +145,7 @@
                 <div class="notice-card">
                     <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" alt="notice image" class="notice-img">
                     <div class="notice-content">
-                        <a href="#" class="notice-title">{{ $post->news_title }}</a>
+                        <a href="{{ route('article', ['id' => $post->id]) }}" class="notice-title">{{ $post->news_title }}</a>
                         <div class="date">{{ $post->date_uploaded }}</div>
                     </div>
 
@@ -214,11 +153,12 @@
                 @endforeach
 
             </main>
-
         </div>
+        @else
+        <header class="coming-soon">Coming Soon!</header>
         @endif
-    </section>
 
+    </section>
 
 
 
@@ -228,6 +168,7 @@
 <script src="{{ asset('js/welcome/countdown.js') }}"></script>
 <script src="{{ asset('js/welcome/carousel.js') }}"></script>
 <script src="{{ asset('js/welcome/scroll.js') }}"></script>
+<script src="{{ asset('js/welcome/typing.js') }}"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -263,6 +204,5 @@
         document.getElementById("myBar").style.width = scrolled + "%";
     }
 </script>
-
 
 @endsection

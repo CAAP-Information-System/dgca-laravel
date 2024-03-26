@@ -15,6 +15,7 @@
             information sheet will help you make the most of your trip.
         </p>
     </div>
+
     <section class="bulletin-content">
         <div class="bulletin-grp">
             <header class="bullet-hdr">
