@@ -46,9 +46,41 @@
 .fa-chevron-right{
     margin-left: 10px;
 }
+.teaser-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px; /* Adjust the gap between elements */
+}
+@media only screen and (max-width: 1300px) {
+    .teaser-details{
+        width: 800px;
+        flex-wrap: wrap;
+        
+    }
+    .teaser-details-header{
+        text-align: center;
+        justify-content: space-around;
+        font-size: 4vw;
+        line-height: 10vh;
+    }
+    .teaser-details p {
+        max-width: 100%; /* Allow text to wrap */
+        font-size: 15px; /* Set font size to 15px */
+        word-wrap: break-word; /* Allow long words to break and wrap */
+    }
+    .teaser-link{
+        margin-top: 5vh;
+        width: 70vw;
+    }
+}
 @media only screen and (max-width: 652px) {
     .teaser-section{
         margin-top: 10vh;
+    }
+    .teaser-details{
+        width: 450px;
     }
     .teaser-content{
         display: block;
@@ -56,6 +88,7 @@
     }
     .teaser-details-header{
         text-align: center;
+        font-size: 8vw;
     }
     .teaser-details p{
         padding: 10px;

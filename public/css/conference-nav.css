@@ -4,8 +4,10 @@
 .main-conf-nav {
     position: absolute;
     bottom: 19vh;
-    top: 74%;
+    top: 75vh;
     left: 50%;
+    width: 60vw;
+    
     transform: translate(-50%, -50%);
 }
 /* .main-conf-nav {
@@ -19,6 +21,7 @@
 .conf-nav ul {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     background-color: #ffff;
     border-radius: 15px;
     padding: 15px;
@@ -33,7 +36,7 @@
 
 .conf-nav li a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.8vw;
     color: #3b3b3b;
     position: relative;
     font-weight: bold;
@@ -149,13 +152,22 @@
 }
 @media only screen and (min-width: 1260px) and (max-width: 1440px) {
     .main-conf-nav {
-        top: 78%;
+        top: 80vh;
+        width: 70vw !important;
+    }
+    .conf-nav li a {
+        font-size: 1.2vw;
     }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1259px) {
     .main-conf-nav {
-        top: 78%;
+        top: 80vh;
+        width: 70vw !important;
     }
+    .conf-nav li a {
+        font-size: 1.2vw;
+    }
+
 }
 @media only screen and (min-width: 900px) and (max-width: 1024px) {
     .main-conf-nav {

@@ -54,9 +54,10 @@
     font-size: 5.5rem;
     line-height: 10vh;
     display: inline-block;
+    line-height: 10vh;
 }
 .banner-content {
-    padding: 6vh;
+    width: 100%;
 }
 .plane-sketch {
     margin-left: 3vh;
@@ -250,6 +251,8 @@
     left: 50%;
 }
 
+
+
 .announcements {
     padding: 4vh 4vh;
     color: #3b3b3b;
@@ -342,26 +345,18 @@
 }
 
 @media only screen and (min-width: 1260px) and (max-width: 1440px) {
-    .welcome {
-        background: none;
-        padding: 5vh;
-        color: #3b3b3b;
-        width: 103%;
-        height: 120vh;
-    }
+    
     .welcome-banner {
         background: url("/img/home/photo-tiles-strip.png");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: calc(100% - -45vw) center; /* Adjust the value as needed */
+        width: 100%;
     }
     .carousel-container {
         width: 90vw;
         margin-top: -4%;
         right: 27%;
-    }
-    .welcome {
-        margin-left: -3%;
     }
     .welcome-header {
         font-size: 5em;
@@ -371,6 +366,9 @@
     }
     .theme-message {
         font-size: 1.2em;
+    }
+    .main-countdown{
+        margin-top: 10rem !important;
     }
     .main-conf-nav {
         width: 55vw;
@@ -392,16 +390,11 @@
         font-size: 2em;
     }
     .city-smoke-bg {
-        margin-top: 8%;
+        margin-top: 15%;
     }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1259px) {
-    .welcome {
-        padding: 5vh;
-        color: #3b3b3b;
-        width: 103%;
-        /* height: 90vh; */
-    }
+    
     .welcome-banner {
         background: url("/img/home/photo-tiles-strip.png");
         background-size: 100% auto;
@@ -411,9 +404,6 @@
     .carousel-container {
         width: 89vw;
         margin-top: -8%;
-    }
-    .welcome {
-        margin-left: -10%;
     }
     .welcome-header {
         font-size: 3.5em;
@@ -464,12 +454,6 @@
     .banner-img {
         width: 300px;
         height: auto;
-    }
-    .welcome {
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
-        height: 130vh;
     }
     .welcome-banner {
         background: url("/img/home/photo-tiles-strip.png");
@@ -533,12 +517,6 @@
 @media only screen and (min-width: 800px) and (max-width: 899px) {
     .content-main {
         margin-left: -10%;
-    }
-    .welcome {
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
-        /* height: 90vh; */
     }
     .welcome-banner {
         background: url("/img/home/photo-tiles-strip.png");
@@ -612,12 +590,6 @@
         width: 200px;
         height: auto;
     }
-    .welcome {
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 103%;
-        /* height: 90vh; */
-    }
     .welcome-banner {
         background: none;
     }
@@ -679,13 +651,6 @@
     .banner-img {
         width: 200px;
         height: auto;
-    }
-    .welcome {
-        background: none;
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 103%;
-        /* height: 90vh; */
     }
     .welcome-banner {
         background: none;
@@ -780,11 +745,6 @@
     .banner-img {
         width: 200px;
         height: auto;
-    }
-    .welcome {
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
     }
     .welcome-banner {
         background: none;
