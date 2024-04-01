@@ -2,7 +2,7 @@
 <div class="teaser-container">
     <main class="teaser-content">
         <div class="teaser-details">
-            <header class="teaser-details-header">DGCA 59 <br><span>Teaser Trailer</span> </header>
+            <header class="teaser-details-header">DGCA 59-APAC PH  <br><span>2024 Trailer</span> </header>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 <br><br>

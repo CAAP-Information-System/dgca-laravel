@@ -49,8 +49,10 @@
                     </p>
                 </div>
             </main>
-            @include('layouts.conference-navbar')
+
         </div>
+        <!-- Conference Navigation Bar -->
+        @include('layouts.conference-navbar')
         <!-- <div class="carousel-container">
             <input type="radio" name="carousel-radio" id="radio1" class="carousel-radio" checked>
             <label for="radio1" class="carousel-radio-label"></label>
@@ -69,7 +71,7 @@
                 </div>
             </div>
         </div> -->
-        <!-- Conference Navigation Bar -->
+
 
 
         <section class="main-countdown">
@@ -99,7 +101,32 @@
     </section>
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
+        <div class="welcome-message-section">
+            <div class="welcome-message-container">
+                <div class="image-container">
+                    <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
+                    <div class="caption">
+                        <p class="name">Captain Manuel Antonio L. Tamayo</p>
+                        <p class="position">Director General of Civil Aviation Authority of the Philippines</p>
+                    </div>
+                </div>
+                <div class="dg-message">
+                    <header class="message-header">
+                        Message from the Director General
+                    </header>
+                    <p>
+                        The Philippines is excited to welcome you to our scenic country and share our culture and renowned hospitality. We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable, resilient, and inclusive development of the air transport sector.
+                    </p>
+                    <p>
+                        Our theme for this year's conference, Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive, is timely and relevant in both global and regional context. The industry is adaptive to change and supports development while mitigating the impacts of climate change. As we move forward to a more sustainable, resilient and inclusive air transport, let us strengthen our collaboration and synergies by promoting and improving our policies and practices through a strong stakeholder engagement. It is an opportune time to engage the industry in creating a more viable circular economy, thereby promoting equal opportunities.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
         <div class="cebu-info">
+
             <div class="cebu-details">
                 <div class="detail-headers">
                     <header class="detail-main-header">Cebu</header>
@@ -122,6 +149,7 @@
             </div>
             <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
         </div>
+
     </section>
 
     <section class="teaser-section">
@@ -148,10 +176,8 @@
                         <a href="{{ route('article', ['id' => $post->id]) }}" class="notice-title">{{ $post->news_title }}</a>
                         <div class="date">{{ $post->date_uploaded }}</div>
                     </div>
-
                 </div>
                 @endforeach
-
             </main>
         </div>
         @else

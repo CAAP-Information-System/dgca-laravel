@@ -3,7 +3,7 @@
 <header class="highlights-header">Our <span>Highlights</span></header>
 <main class="cards-wrapper">
     <div class="card-grid-space">
-        <a class="card" href="{{ route('news') }}" style="--bg-img: url(https://i.pinimg.com/originals/90/73/06/907306ac45c0627c8524e481f701c44b.jpg)">
+        <a class="card" href="{{ route('news') }}" style="--bg-img: url(https://about.fb.com/wp-content/uploads/2023/09/GettyImages-686732223.jpg)">
             <div class="highlight-details">
                 <header class="hl-title">News & Updates</header>
                 <p>Be updated with our latest informations.</p>
