@@ -14,7 +14,7 @@
                     <header class="registration-header">Join and register now!</header>
                     <p class="sub-message">Come and be part of the upcoming at the 59th Conference of Director Generals of Civil Aviation 2024 to be held in Cebu, Philippines from October 14 to 18, 2024.</p>
                     <br />
-                    <a href="{{ route('register') }}" class="register-link">Register Here Now!</a>
+                    <a href="{{ url('register') }}" class="register-link">Register Here Now!</a>
                 </div>
             </main>
 

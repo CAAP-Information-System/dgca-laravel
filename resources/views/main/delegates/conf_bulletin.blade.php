@@ -139,7 +139,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    <li>Conference Website: <a href="#" class="bullet-email">place-dgca-website-here.com</a></li>
+                    <li>Conference Website: <a href="#" class="bullet-email">dgca59.gov.ph</a></li>
                     <li>Conference Secretariat: <a href="#" class="bullet-email">dgca59_secretariat@caap.gov.ph</a></li>
                     <li>Conference Registration Team: <a href="#" class="bullet-email">dgca59_registration@caap.gov.ph</a></li>
                 </div>

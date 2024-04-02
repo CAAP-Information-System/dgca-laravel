@@ -2,11 +2,11 @@
 <div class="teaser-container">
     <main class="teaser-content">
         <div class="teaser-details">
-            <header class="teaser-details-header">DGCA 59-APAC PH  <br><span>2024 Trailer</span> </header>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <header class="teaser-details-header">DGCA 59-APAC PH <br><span>2024 Trailer</span> </header>
+            <p class="teaser-message">
+                As the upcoming DGCA Conference approaches, the Philippines invites you to join us in shaping a sustainable future for aviation! Get ready to be part of this thrilling event, offering a glimpse into what's in store this October 2024. Watch our teaser trailer and join us in our excitement!
                 <br><br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Ensure you register with us before the conference begins. For further information, please refer to our conference bulletin available at the link below:
             </p>
             <div class="teaser-btns-ctn">
                 <a href="{{ route('bulletin') }}" class="teaser-btn">See Our Bulletin <i class="fa-solid fa-chevron-right"></i></a>

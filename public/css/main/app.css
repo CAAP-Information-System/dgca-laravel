@@ -1,249 +1,149 @@
-@import '~@fortawesome/fontawesome-free/css/all.css';
-
-body {
-    background: rgba(255, 255, 255, 0.2) url("/img/bg-home.png");
-    background-size: 140%;
-    background-repeat: repeat-y;
-    background-position: fixed;
-
-}
-.preloader-container {
+.main-navbar {
     position: fixed;
-    top: 0;
-    left: 0;
+    height: 90px;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.loader {
-    border: 4px solid #f3f3f3; /* Light gray border */
-    border-top: 4px solid #3498db; /* Blue border on top */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite; /* Spin animation */
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-.main-content{
-    margin-left: 10vh;
-}
-.caap-video {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* #login-register {
-    color: #3b3b3b;
-    font-size: 16px;
+    z-index: 999;
     padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-left: 5px;
-} */
-.dropdown {
-    position: relative;
-    z-index: 1;
+    margin-bottom: 5vh;
+    background-color: hsl(0, 0%, 100%);
 }
 
-.dropdown-menu {
-    position: absolute;
-    z-index: 2; /* Adjust the value as needed */
-    right: 0;
-}
-
-.logout {
-    text-decoration: none;
-    color: #3b3b3b;
-    padding: 7px;
-    font-size: 15px;
-    display: inline-block;
-    width: 100%;
-}
-
-
-.logout:hover {
-    color: #ffff;
-    text-decoration: none;
-    background-color: #931f1f;
-}
-.top-nav{
+.main-navbar-content {
     display: flex;
-    gap: 15px;
+    align-items: center; /* Center items vertically */
+}
 
+.main-logo {
+    margin-left: 7vh; /* Corrected typo */
 }
-.nav-item{
-    padding: 15px;
+.main-navbar-content .nav-labels{
+    margin-left: 5vh;
+    font-size: 1rem;
 }
-.nav-item {
+.nav-caap-logo {
+    height: auto;
+    width: 80px;
+}
+
+.main-navbar ul {
+    text-align: left; /* Align list items to the left */
     list-style: none;
-}
-.nav-link{
-    z-index: 2;
-}
-.nav-item .nav-link {
-    width: 100%;
-    text-decoration: none;
-    border-radius: 99px;
-    padding: 10px;
-    color: #ffff;
-    background-color: #50A9FB;
+    padding-left: 0; /* Remove default padding */
 }
 
-.nav-link:hover {
-    background-color: #969696;
-    transition: 0.1s ease;
-    color: #ffff;
-}
-.caap-nav{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2vh;
-    align-items: center;
-    text-decoration: none;
+.main-navbar ul li {
+    position: relative;
+    display: inline-block;
+    line-height: 6vh;
+    margin: 0 5px;
 }
 
-.logos-main {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-left: 8vh;
+.main-navbar ul li a {
+    color: #3b3b3b;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove default underline */
 }
 
-/* footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 15px;
-    background-color: #ffff ;
-    z-index: 100;
-} */
-.footer-caap-logo{
-    height: auto;
-    width: 80px;
-}
-.footer-dgca-logo{
-    height: auto;
-    width: 120px;
-}
-.footer-span-header{
-    font-size: 17px;
-    margin-left: 15px;
+.main-navbar ul li:hover .sub-menu {
+    display: block;
 }
 
-.icao-logo{
-    height: auto;
-    width: 200px;
-    padding-left: 25px;
-}
-.nav-bagong-pilipinas-logo {
-    height: auto;
-    width: 100px;
-    padding-left: 25px;
-}
-.user-large{
-    margin-right: 15px;
-}
-.preloader-container {
-    /* change none to flex to return the preloader */
+.sub-menu {
     display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%; /* Position below parent */
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3b3b3b;
-
+    width: 400px;
+    background-color: #fff; /* Background color for submenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    text-align: left;
 }
 
-.preloader {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: fadeOut 1s ease-out; /* Add fade-out animation */
-}
-.sponsors-logo{
-    display: flex;
-    align-items: center;
-    padding: 1.5vh;
-    gap: 3vh;
-}
-.sponsor-logo{
-    width: 80px;
-    height: auto;
+.sub-menu li {
+    display: inline-block;
+    width: 100%; /* Full width */
+    border-bottom: 2px solid transparent;
 }
 
+.sub-menu li a {
+    text-transform: capitalize;
+    color: #3b3b3b;
+}
+.sub-menu li:hover{
+    border-bottom: 2px solid #0082e6;
+}
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
+.checkbtn {
+    font-size: 30px;
+    color: #3b3b3b;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+.nav-labels ul .logout{
+    display: none;
+}
+#check {
+    display: none;
+}
+/* .navbar-right{
+    margin-left: 70vh;
+} */
+@media only screen and (max-width: 858px) {
+    .checkbtn {
+        display: block;
     }
-    to {
-        opacity: 0;
+    #login-register{
+        display: none;
+    }
+    .logout{
+        visibility: visible;
+    }
+    .main-navbar-content{
+        display: flex;
+    }
+    .main-logo {
+        margin-left: 3vw; /* Corrected typo */
+    }
+    .sub-menu {
+        display: none;
+        /* Other styles */
+    }
+    .main-navbar ul {
+        color: #ffff !important;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #969696;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 999;
+    }
+
+    .main-navbar ul li {
+        display: block;
+        margin: 10px 0; /* Adjusted margin for better spacing */
+        line-height: 8vh;
+    }
+
+    .main-navbar ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
     }
 }
-.preloader img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    background-color: #ffff;
-    z-index: 5;
-}
-
-
-
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #50A9FB;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #2263a0;
-  }
-
-
-
-  @media only screen and (min-width: 1025px) and (max-width: 1259px) {
-    .main-content{
-        margin: 0;
-        max-width: 100%;
-    }
-  }

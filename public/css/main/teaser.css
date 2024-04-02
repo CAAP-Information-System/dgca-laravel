@@ -1,50 +1,54 @@
-.teaser-section{
+.teaser-section {
     display: flex;
     justify-content: center;
-    margin-top: 40vh;
+    flex-direction: column;
+    margin-top: 5vh;
 }
-.teaser-content{
+.teaser-content {
     display: flex;
-    gap: 6vw;
     color: #3b3b3b;
+    margin-top: 4vh;
 }
-.teaser-details{
-    width: 450px;
+.teaser-details {
+    width: 500px;
+    margin-right: 4vw;
 }
 
-.teaser-details-header{
+.teaser-details-header {
     font-size: 2.5em;
     font-weight: bold;
     text-transform: capitalize;
     line-height: 5vh;
 }
-.teaser-details p{
-    padding-top: 4vh;
-}
-.teaser-details-header span{
-    color: #50A9FB;
+
+.teaser-details-header span {
+    color: #50a9fb;
     font-weight: 300;
     font-size: 1.2em;
 }
-.teaser-link{
+.teaser-message {
+    padding-top: 4vh;
+    text-align: justify;
+}
+.teaser-link {
     width: 750px;
     height: 415px;
 }
-.teaser-btns-ctn{
+.teaser-btns-ctn {
     margin-top: 5vh;
 }
-.teaser-btn{
+.teaser-btn {
     padding: 10px;
-    border: 2px solid #50A9FB;
+    border: 2px solid #50a9fb;
     background-color: none;
     text-decoration: none;
-    color: #50A9FB;
+    color: #50a9fb;
 }
-.teaser-btn:hover{
-    background-color: #50A9FB;
+.teaser-btn:hover {
+    background-color: #50a9fb;
     color: #ffff;
 }
-.fa-chevron-right{
+.fa-chevron-right {
     margin-left: 10px;
 }
 .teaser-content {
@@ -54,13 +58,13 @@
     align-items: center; /* Center content vertically */
     gap: 20px; /* Adjust the gap between elements */
 }
+
 @media only screen and (max-width: 1300px) {
-    .teaser-details{
+    .teaser-details {
         width: 800px;
         flex-wrap: wrap;
-        
     }
-    .teaser-details-header{
+    .teaser-details-header {
         text-align: center;
         justify-content: space-around;
         font-size: 4vw;
@@ -71,37 +75,64 @@
         font-size: 15px; /* Set font size to 15px */
         word-wrap: break-word; /* Allow long words to break and wrap */
     }
-    .teaser-link{
+    .teaser-link {
         margin-top: 5vh;
         width: 70vw;
     }
 }
-@media only screen and (max-width: 652px) {
-    .teaser-section{
-        margin-top: 10vh;
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+    .teaser-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .teaser-details{
-        width: 450px;
+    .teaser-details-header {
+        font-size: 3rem;
+        line-height: 7vh;
     }
-    .teaser-content{
-        display: block;
-        margin: 0 auto;
+    .teaser-message {
+        font-size: 18px;
     }
-    .teaser-details-header{
-        text-align: center;
-        font-size: 8vw;
-    }
-    .teaser-details p{
-        padding: 10px;
-        margin-top: 3vh;
-    }
-    .teaser-btns-ctn{
+    .teaser-btns-ctn {
         display: flex;
         justify-content: center;
     }
-    .teaser-link{
-        margin-top: 5vh;
-        width: 450px;
-        height: 215px;
+}
+
+@media only screen and (min-width: 653px) and (max-width: 799px) {
+    .teaser-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .teaser-details-header {
+        font-size: 3rem;
+        line-height: 7vh;
+    }
+    .teaser-message {
+        font-size: 18px;
+    }
+    .teaser-btns-ctn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 652px) {
+    .teaser-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .teaser-details-header {
+        font-size: 3rem;
+        line-height: 7vh;
+    }
+    .teaser-message {
+        font-size: 18px;
+    }
+    .teaser-btns-ctn {
+        display: flex;
+        justify-content: center;
     }
 }

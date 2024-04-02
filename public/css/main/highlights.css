@@ -5,8 +5,12 @@
   --transition-time: 0.5s;
 }
 
+.highlights-section{
+    display: block;
+}
+
 .highlights-header{
-    margin-top: 8vh;
+    margin-top: 5vh;
     color: #3b3b3b;
     font-size: 3rem;
     text-transform: capitalize;
@@ -68,7 +72,7 @@ a {
 .card p {
   font-size: 0.75em;
   font-family: 'Open Sans';
-  line-height: 2em;
+  line-height: 1.5em;
 }
 
 .card .tags {
