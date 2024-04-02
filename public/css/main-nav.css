@@ -1,17 +1,22 @@
 .main-navbar {
     height: 100px;
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 999;
     padding: 10px;
     margin-bottom: 5vh;
-
+    background-color: #ffffff38;
+    backdrop-filter: blur(0px); /* Adds a blur effect to the background */
+    transition: backdrop-filter 0.3s ease; /* Smooth transition for the blur effect */
 }
 
 .main-navbar-content {
     display: flex;
+    position: fixed;
     align-items: center;
+    width: 100%;
 }
+
 
 .main-logo {
     margin-left: 7vh;
@@ -42,6 +47,7 @@
 .main-navbar ul li a {
     color: #3b3b3b;
     font-size: 15px;
+    font-weight: 600;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
