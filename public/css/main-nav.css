@@ -52,7 +52,9 @@
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none; /* Remove default underline */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.587); /* Adding shadow effect */
 }
+
 
 .main-navbar ul li:hover .sub-menu {
     display: block;
