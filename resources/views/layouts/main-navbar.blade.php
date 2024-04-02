@@ -114,6 +114,15 @@
             }
         }
     }
+
+    window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.main-navbar');
+    if (window.scrollY > 0) {
+        navbar.style.backdropFilter = 'blur(10px)'; // Apply blur effect when scrolling down
+    } else {
+        navbar.style.backdropFilter = 'none'; // Remove blur effect when scrolling back to top
+    }
+});
 </script>
 <!-- <script>
     window.onscroll = function() {
