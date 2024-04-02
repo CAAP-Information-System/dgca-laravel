@@ -167,6 +167,12 @@ a {
   }
 }
 
+@media only screen and (max-width: 840px) {
+    .cards-wrapper{
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 652px) {
     .cards-wrapper{
         display: block;
@@ -174,9 +180,7 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-  .cards-wrapper {
-    padding: 4rem 2rem;
-  }
+
   .card {
     max-width: calc(100vw - 4rem);
   }
@@ -190,4 +194,6 @@ a {
   .info h1 {
     margin: 0;
   }
+
+
 }
