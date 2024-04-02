@@ -56,7 +56,7 @@
         </section>
         <section class="form-guides-sect">
             <header class="form-reqs-header">Form Requirements</header>
+            <h1>Coming Soon</h1>
         </section>
 </body>
-<script src="{{ asset('js/welcome/scroll.js') }}"></script>
 @endsection

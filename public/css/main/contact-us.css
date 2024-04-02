@@ -55,13 +55,41 @@
 }
 @media screen and (max-width: 768px) {
     .contact-header{
+        line-height: 6vh;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+    .contact-message{
+        text-align: justify;
+    }
+    .dgca-emails{
+        padding-bottom: 6vh;
+    }
+    .grp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .contact-header{
         color: #50A9FB;
         font-size: 7vw;
+    }
+    .dgca-emails-header{
+        text-align: center;
+        line-height: 6vh;
+    }
+    .email-content{
+        text-align: justify;
     }
     .email-label{
         font-size: 3.5vw;
     }
     .email-add{
         font-size: 3vw;
+    }
+    .contact-svg{
+        width: 300px;
+        height: auto;
     }
 }
