@@ -196,7 +196,9 @@ a {
   .cards-wrapper{
     left: 200rem;
 }
-
-
-
 }
+@media screen and (max-width: 385px) {
+    .cards-wrapper{
+      margin-left: -2rem!important;
+  }
+  }
