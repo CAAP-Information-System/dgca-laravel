@@ -1,19 +1,22 @@
 .main-navbar {
     height: 100px;
-    width: 90%;
+    width: 100%;
     position: relative;
     z-index: 999;
     padding: 10px;
     margin-bottom: 5vh;
 
 }
-
+.nav-item{
+    display: none;
+}
 .main-navbar-content {
     display: flex;
     position: fixed;
     align-items: center;
 
-    width: 100%;
+    width: 98%;
+    justify-content: space-between;
 }
 
 .main-logo {
@@ -116,6 +119,12 @@
     }
     .main-navbar-content{
         display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-labels{
+        padding-left: 40%;
     }
     .main-logo {
         margin-left: 3vw; /* Corrected typo */

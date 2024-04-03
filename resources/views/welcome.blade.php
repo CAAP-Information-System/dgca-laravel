@@ -48,7 +48,7 @@
             </main>
             <div class="theme-container">
                 <div class="typing-container">
-                    <span>We are</span>
+                    <span class="text">We are</span>
                     <span id="theme__input" class="theme__input" style="height: 50px;"></span>
                 </div>
 
@@ -217,27 +217,16 @@
     @if(isset($sponsors['sponsors']) && !empty($sponsors['sponsors']))
     <div class="sponsors-container">
         <header class="sponsors__header">Our <span style="color: #50a9fb;">Sponsors</span></header>
-        <div class="marquee">
-            <div class="sponsors-list">
-                @foreach($sponsors['sponsors'] as $sponsor)
-                <div class="sponsor-item">
-                    <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
-                    <p class="sponsor-name">{{ $sponsor['name'] }}</p>
-                </div>
-                @endforeach
-                <!-- Duplicate sponsor items for looping -->
-                @foreach($sponsors['sponsors'] as $sponsor)
-                <div class="sponsor-item">
-                    <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
-                    <p class="sponsor-name">{{ $sponsor['name'] }}</p>
-                </div>
-                @endforeach
+        <div class="sponsors-list">
+            @foreach($sponsors['sponsors'] as $sponsor)
+            <div class="sponsor-item">
+                <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
+                <p class="sponsor-name">{{ $sponsor['name'] }}</p>
             </div>
+            @endforeach
         </div>
     </div>
     @endif
-
-
     @endif
 
 
