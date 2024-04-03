@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AccompanyController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DelegateController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\GalleryPostingController;
 use App\Http\Controllers\HomeController;
@@ -51,6 +53,12 @@ Route::middleware('public')->group(function () {
     Route::get('/order-of-business', [HomeController::class, 'viewOrderofBusiness'])->name('order-of-business');
 });
 
+// FLIGHT INFORMATION REGISTRATION
+Route::get('/delegate-flight-information', [DelegateController::class, 'DelegateFlightForm'])->name('delegate-flight-information');
+Route::post('/upload-flight-information', [DelegateController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+Route::get('/accompany-flight-information', [AccompanyController::class, 'AccompanyFlightForm'])->name('accompany-flight-information');
+Route::post('/upload-flight-information', [AccompanyController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
@@ -76,10 +84,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
 
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
-
 });
 
-Route::group(['middleware' => 'super_user'], function (){
+Route::group(['middleware' => 'super_user'], function () {
     Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
     Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
     Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');

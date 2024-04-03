@@ -29,6 +29,39 @@
                 </div>
             </div>
         </div>
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/flight-plane.svg') }}" alt="venue" class="bullet-img">
+                Flight Information
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    <p>
+                        After completing the online registration process, delegates, along with their accompanying persons and spouses, are required to register their flight information as requested by the logistics team. This step ensures that your arrival time is carefully monitored.
+                    </p>
+                    <p>
+                        The form becomes accessible once the delegate has successfully completed their online registration process.
+                    </p>
+
+                    @if(auth()->check())
+                    <p>
+                        If online registration is complete, you can copy and paste the link for the accompanying person/spouse please follow the flight information form link given below:
+                    </p>
+                    <div class="flight_info_link_container">
+                        <header class="form_link_hdr text-primary">Delegate's Flight Information</header>
+                        <div class="form_link_ctn">
+                            <a href="{{ route('delegate-flight-information') }}" class="form_link_btn"><i class="fa-solid fa-rectangle-list"></i> Delegate's Form</a>
+                        </div>
+
+                        <header class="form_link_hdr text-primary">Accompanying Person/Spouse's Flight Information</header>
+                        <div class="form_link_ctn">
+                            <a href="{{ route('accompany-flight-information') }}" class="form_link_btn"><i class="fa-solid fa-rectangle-list"></i> Accompanying Person/Spouse's Form</a>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+            </div>
+        </div>
         <div class="bulletin-grp ">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/visa.png') }}" alt="passport-visa" class="bullet-img">

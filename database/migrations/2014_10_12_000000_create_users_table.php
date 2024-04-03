@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('passport_num');
             $table->string('designation');
+            $table->string('is_DirectorGeneral')->nullable();
             $table->string('gender');
             $table->string('address');
             $table->string('telephone');
@@ -38,16 +39,6 @@ return new class extends Migration
             $table->string('country');
             $table->string('organization');
 
-            // Flight Details
-            // Arrival
-            $table->string('arrival_flight_num');
-            $table->date('arrival_date');
-            $table->time('arrival_time');
-            // Departure
-            $table->string('departure_flight_num');
-            $table->date('departure_date');
-            $table->time('departure_time');
-
             // Accomodations & Preferences
             $table->string('airport_destination');
             $table->string('hotel_reco')->nullable();
@@ -61,8 +52,6 @@ return new class extends Migration
             // Accompanying Person/Spouse
             $table->string('has_spouse')->nullable();
             $table->string('accomp_name')->nullable();
-            $table->string('accomp_country')->nullable();
-            $table->string('accomp_preferred_activity')->nullable();
 
             // Copyright & Privacy Policy
             $table->string('privacy')->default('Unapproved');

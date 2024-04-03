@@ -118,10 +118,12 @@
                     </div>
                     <label for="approval_doc">e-Travel Customs System</label>
                     <p><i class="text-muted">Please register here not more than <b>3 days</b> before scheduled flight. This can be filled out separately.</i></p>
-                    <a href="https://etravel.gov.ph/?fbclid=IwAR2vYxlWvZye8afEzOyo2d4uI3yVfjqhwU8oq7s-lxQlH4eWbhDgzQOPkes" target="_blank">
-                        <i class="fa-solid fa-link"></i>
-                        E-Travel Link
-                    </a>
+                    <div class="link__container">
+                        <a href="https://etravel.gov.ph/?fbclid=IwAR2vYxlWvZye8afEzOyo2d4uI3yVfjqhwU8oq7s-lxQlH4eWbhDgzQOPkes" target="_blank" class="e-travel-link">
+                            <i class="fa-solid fa-link"></i>
+                            E-Travel Link
+                        </a>
+                    </div>
 
                 </div>
 

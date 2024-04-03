@@ -1,0 +1,68 @@
+.announcements {
+    padding: 4vh 4vh;
+    margin-top: 20%;
+    color: #3b3b3b;
+}
+
+.announcement-header {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.announcement-arrow {
+    width: 40px;
+    height: auto;
+    margin-left: 5vh;
+    transform: rotate(270deg);
+}
+
+.notice-container {
+    padding: 4vh;
+}
+
+.notice-card {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.notice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: #8dc4ff 0px 48px 100px 0px;
+
+}
+
+.notice-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.notice-content {
+    padding: 15px;
+}
+
+.notice-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.notice-title:hover {
+    color: #007bff;
+}
+
+.date {
+    margin-top: 5px;
+    color: #777;
+    font-size: 0.9rem;
+}
+

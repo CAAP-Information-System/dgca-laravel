@@ -44,15 +44,6 @@ class User extends Authenticatable
         'country',
         'organization',
 
-        // Flight Details
-        // Arrival
-        'arrival_flight_num',
-        'arrival_date',
-        'arrival_time',
-        // Departure
-        'departure_flight_num',
-        'departure_date',
-        'departure_time',
 
         // Accommodations & Preferences
         'airport_destination',
@@ -68,7 +59,7 @@ class User extends Authenticatable
         'has_spouse',
         'accomp_name',
         'accomp_country',
-        'accomp_preferred_activity',
+
 
         // Copyright & Privacy Policy
         'privacy',

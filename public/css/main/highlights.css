@@ -29,6 +29,7 @@ a {
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 4rem;
+  padding: 4rem;
   margin: 0 auto;
   width: max-content;
 }
@@ -193,12 +194,6 @@ a {
   .info h1 {
     margin: 0;
   }
-  .cards-wrapper{
-    left: 200rem;
+
+
 }
-}
-@media screen and (max-width: 385px) {
-    .cards-wrapper{
-      margin-left: -2rem!important;
-  }
-  }
