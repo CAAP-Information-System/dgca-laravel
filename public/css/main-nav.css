@@ -102,9 +102,7 @@
 /* .navbar-right{
     margin-left: 70vh;
 } */
-@media only screen and (min-width: 900px) and (max-width: 1024px) {
 
-}
 @media only screen and (max-width: 858px) {
     .checkbtn {
         display: block;

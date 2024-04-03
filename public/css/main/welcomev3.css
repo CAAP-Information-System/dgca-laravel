@@ -993,6 +993,13 @@
 }
 /* PHONE MODE */
 @media only screen and (min-width: 440px) and (max-width: 499px) {
+    .text {
+        font-size: 8vw; /* Adjust font size as needed */
+    }
+    .theme__input {
+        font-size: 8vw; /* Adjust font size as needed */
+        word-wrap: break-word; /* Add word wrapping */
+    }
     .content-main{
         padding-right: 10% !important;
     }
@@ -1038,7 +1045,15 @@
         display: block;
         margin: 0 auto;
     }
-
+    .main-countdown {
+        justify-content: center;
+        background: url("/img/banner/port dgca banner.png");
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
+        position: relative;
+    }
     .about-us-btn {
         border: 2px solid #3b3b3b;
         font-size: 3vw;
@@ -1051,6 +1066,9 @@
     }
     .main-countdown{
         top: 100%;
+    }
+    .count-section{
+        padding-right: 4%;
     }
     .countdown-container{
         padding-left: 30%;
@@ -1138,6 +1156,10 @@
     /* .welcome-banner .span:hover{
         pointer-events: none;
     } */
+    .conf-nav{
+        width: 90vw;
+        margin-left:-10% ;
+    }
     .theme {
         font-size: 2rem;
         text-align: center;
@@ -1171,6 +1193,15 @@
     .main-countdown{
         top: 100%;
     }
+    .main-countdown {
+        justify-content: center;
+        background: url("/img/banner/port dgca banner.png");
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
+        position: relative;
+    }
     .countdown-container{
         padding-left: 30%;
         padding-top: 30%;
@@ -1196,7 +1227,8 @@
         margin-top: -5%;
     }
     .city-smoke-bg {
-        top: 250%;
+        top: 235%;
+        width: 100%;
     }
     .cebu_info_section {
         width: 100%;
@@ -1207,7 +1239,7 @@
         overflow-y: auto;
     }
     .about-cebu{
-        margin-top: 50%;
+        margin-top: 80%;
     }
     .cebu-pinned-img {
         display: none;
