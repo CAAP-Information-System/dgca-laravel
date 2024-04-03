@@ -8,14 +8,14 @@
 
 }
 .nav-item{
-    display: none;
+
 }
 .main-navbar-content {
     display: flex;
     position: fixed;
     align-items: center;
 
-    width: 98%;
+    width: 90%;
     justify-content: space-between;
 }
 
