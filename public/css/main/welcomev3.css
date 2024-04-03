@@ -64,7 +64,6 @@
 .welcome {
     color: #3b3b3b;
     width: 100%;
-    padding-top: 5%;
 
 }
 
@@ -552,7 +551,7 @@
         font-size: 1.1vw;
     }
     .main-countdown {
-        margin-top: -10%;
+        margin: 0;
         display: flex;
         justify-content: center;
         background: url("/img/home/countdown-cover.jpg");
@@ -583,16 +582,10 @@
         margin-top: 10%;
     }
     .about-cebu{
-        margin-top: 5vh;
+        margin-top: 45vh;
     }
     .capt-tamayo-img{
         margin-left: 4vw;
-    }
-    .message-header{
-        text-align: end;
-    }
-    .city-smoke-bg{
-        margin-top: -40%;
     }
 }
 @media only screen and (min-width: 900px) and (max-width: 1024px) {
@@ -853,6 +846,12 @@
     .about-cebu {
         margin: 0;
     }
+    .cebu_map {
+        display: none; /* Hide the image */
+    }
+    .cebu-details{
+        width: 100%;
+    }
     .welcome-message-container{
         display: flex;
         flex-direction: column;
@@ -939,6 +938,9 @@
     .about-cebu {
         margin: 0;
     }
+    .cebu_map {
+        display: none; /* Hide the image */
+    }
     .welcome-message-container{
         display: flex;
         flex-direction: column;
@@ -991,6 +993,13 @@
 }
 /* PHONE MODE */
 @media only screen and (min-width: 440px) and (max-width: 499px) {
+    .text {
+        font-size: 8vw; /* Adjust font size as needed */
+    }
+    .theme__input {
+        font-size: 8vw; /* Adjust font size as needed */
+        word-wrap: break-word; /* Add word wrapping */
+    }
     .content-main{
         padding-right: 10% !important;
     }
@@ -1058,6 +1067,9 @@
     .main-countdown{
         top: 100%;
     }
+    .count-section{
+        padding-right: 4%;
+    }
     .countdown-container{
         padding-left: 30%;
         padding-top: 30%;
@@ -1078,124 +1090,9 @@
     .countdown ul {
         gap: 6vw;
     }
-    .countdown-message {
-        font-size: 3vw;
-        color: #3b3b3b;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
-    }
-    .city-smoke-bg {
-        top: 140%;
-    }
-    .cebu_info_section {
-        width: 100%;
-    }
-    .cebu-details {
-        margin-left: -5%;
-        width: 90%;
-        overflow-y: auto;
-    }
-    .cebu-pinned-img {
-        display: none;
-    }
-    .detail-main-header {
-        font-size: 10vw;
-    }
-    .announcement-header {
-        font-size: 20px;
-    }
-}
 
-@media only screen and (min-width: 300px) and (max-width: 439px) {
-    .content-main {
-        margin-left: 5%;
-    }
-    .welcome {
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
-    }
-
-    .carousel-container {
-        width: 100vw;
-        margin-top: -2%;
-        right: 23%;
-    }
-    .carousel-inner {
-        width: 100vw;
-    }
-    .carousel-item {
-        left: 20%;
-    }
-    .plane-sketch {
-        display: none;
-    }
-    .welcome-header {
-        margin-right: 20%;
-        font-size: 8.7vw;
-        z-index: 2;
-    }
-    .welcome-header .span {
-        font-size: 13vw;
-    }
-    /* .welcome-banner .span:hover{
-        pointer-events: none;
-    } */
-    .theme {
-        font-size: 4vw;
-    }
-    .theme-message {
-        font-size: 2.3vw;
-        width: 65vw;
-    }
-
-    .about-us-btn {
-        border: 2px solid #ffffff;
-    }
-    .abt-us-ctn {
-        position: relative;
-        z-index: 1; /* Adjust the value as needed */
-        top: 10%;
-        bottom: 10%;
-        margin-left: 30%;
-    }
-
-    .about-us-btn {
-        font-size: 3vw;
-        z-index: 2;
-        color: #ffffff;
-    }
-    .about-us-btn:hover {
-        background-color: #3b3b3b;
-        color: #ffff;
-    }
     .main-countdown{
-        top: 100%;
-    }
-    .countdown-container{
-        padding-left: 30%;
-        padding-top: 30%;
-    }
-    .countdown-main{
-        margin-left: 15%;
-        width: 500px;
-        justify-content: space-around;
-    }
-    .countdown ul li span {
-        font-size: 6vw;
-        color: #ffffff;
-    }
-    .countdown ul li {
-        font-size: 3vw;
-        color: #ffffff;
-    }
-    .countdown ul {
-        gap: 2%;
-    }
-    .countdown-message {
-        font-size: 3vw;
-        margin-left: 5%;
-        color: #ffffff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+        margin-top: -5%;
     }
     .city-smoke-bg {
         top: 250%;
@@ -1204,10 +1101,8 @@
         width: 100%;
     }
     .cebu-details {
-        margin-left: 2%;
-        margin-top: 50%;
+        margin-left: -5%;
         width: 90%;
-        height: 600px;
         overflow-y: auto;
     }
     .about-cebu{
@@ -1222,6 +1117,148 @@
     .announcement-header {
         font-size: 20px;
     }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 439px) {
+
+    .text {
+        font-size: 8vw; /* Adjust font size as needed */
+    }
+    .theme__input {
+        font-size: 8vw; /* Adjust font size as needed */
+        word-wrap: break-word; /* Add word wrapping */
+    }
+    .content-main{
+        padding-right: 10% !important;
+    }
+    .welcome-banner {
+        background: none;
+    }
+    .carousel-container {
+        width: 105vw;
+        margin-top: -2%;
+    }
+    .carousel-inner {
+        width: 110vw;
+    }
+    .carousel-item {
+        left: 15%;
+    }
+    .welcome-header {
+        font-size: 4rem;
+        z-index: 2;
+        line-height: 8.5vh;
+        text-align: center;
+    }
+    .welcome-header .plane-sketch {
+        display: none;
+    }
+    /* .welcome-banner .span:hover{
+        pointer-events: none;
+    } */
+    .conf-nav{
+        width: 90vw;
+        margin-left:-10% ;
+    }
+    .theme {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .theme-message {
+        font-size: 15px;
+        width: 100%;
+    }
+    .main-countdown {
+        display: block;
+        margin: 0 auto;
+        margin-top: 35vh;
+    }
+    .abt-us-ctn {
+        display: block;
+        margin: 0 auto;
+    }
+    .section_info_header {
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); /* Adjust shadow offset and blur radius as needed */
+    }
+    .about-us-btn {
+        border: 2px solid #3b3b3b;
+        font-size: 3vw;
+        z-index: 2;
+        color: #3b3b3b;
+    }
+    .about-us-btn:hover {
+        background-color: #3b3b3b;
+        color: #ffff;
+    }
+    .main-countdown{
+        top: 100%;
+    }
+    .main-countdown {
+        justify-content: center;
+        background: url("/img/banner/port dgca banner.png");
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
+        position: relative;
+    }
+    .countdown-container{
+        padding-left: 30%;
+        padding-top: 30%;
+    }
+    .countdown-main{
+        margin-left: 15%;
+        width: 500px;
+        justify-content: space-around;
+    }
+    .countdown ul li span {
+        font-size: 6vw;
+        color: #3b3b3b;
+    }
+    .countdown ul li {
+        font-size: 3vw;
+        color: #3b3b3b;
+    }
+    .countdown ul {
+        gap: 6vw;
+    }
+
+    .main-countdown{
+        margin-top: -5%;
+    }
+    .city-smoke-bg {
+        top: 235%;
+        width: 100%;
+    }
+    .cebu_info_section {
+        width: 100%;
+    }
+    .cebu-details {
+        margin-left: -5%;
+        width: 90%;
+        overflow-y: auto;
+    }
+    .about-cebu{
+        margin-top: 80%;
+    }
+    .cebu-pinned-img {
+        display: none;
+    }
+    .detail-main-header {
+        font-size: 10vw;
+    }
+    .announcement-header {
+        font-size: 20px;
+    }
+    .city-smoke-bg {
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        margin-top: -50%;
+        left: 0;
+        object-fit: cover;
+    }
+
 }
 @media only screen and (max-width: 385px) {
     .content-main {
@@ -1248,7 +1285,12 @@
         font-size: 2vw;
     }
     .city-smoke-bg {
-        top: 88%;
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        margin-top: -50%;
+        left: 0;
+        object-fit: cover;
     }
     .announcement-header {
         font-size: 20px;

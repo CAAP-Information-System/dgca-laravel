@@ -70,6 +70,11 @@
                     <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
                 </div>
                 <div class="input__box-long">
+                    <span class="details">Are the Head<span class="required-symbol">*</span></span>
+                    <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
+                </div>
+
+                <div class="input__box-long">
                     <span class="details">Gender <span class="required-symbol">*</span></span>
                     <select class="form-control" id="gender" name="gender">
                         <option value="-- Select Option --" disabled>-- Select Option -- </option>
@@ -294,22 +299,6 @@
                         <label for="accomp_name">Full Name of Accompanied Person/Spouse:</label>
                         <input type="text" placeholder="Enter Person/Spouse Name" id="accomp_name" name="accomp_name" class="form-control">
                     </div>
-                    <div class="input__box-long">
-                        <label for="accomp_country">Country Accompanied Person/Spouse:</label>
-                        <input type="text" placeholder="Enter Country" id="accomp_country" name="accomp_country" class="form-control">
-                    </div>
-
-                    <div class="input__box-long">
-                        <label for="accomp_preferred_activity">Activities:</label>
-                        <select class="form-control" id="accomp_preferred_activity" name="accomp_preferred_activity">
-                            <option value="">-- Select Option --</option>
-                            <option value="Event 1">Event 1</option>
-                            <option value="Event 2">Event 2</option>
-                            <option value="Event 3">Event 3</option>
-                        </select>
-                    </div>
-
-
                 </div>
                 <br>
                 <!-- PASSWORD CONFIRMATION-->

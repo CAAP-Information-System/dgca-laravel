@@ -30,6 +30,7 @@ class User extends Authenticatable
         'last_name',
         'passport_num',
         'designation',
+        'is_DirectorGeneral',
         'gender',
         'address',
         'telephone',
@@ -44,7 +45,6 @@ class User extends Authenticatable
         'country',
         'organization',
 
-
         // Accommodations & Preferences
         'airport_destination',
         'hotel_reco',
@@ -58,8 +58,6 @@ class User extends Authenticatable
         // Accompanying Person/Spouse
         'has_spouse',
         'accomp_name',
-        'accomp_country',
-
 
         // Copyright & Privacy Policy
         'privacy',
