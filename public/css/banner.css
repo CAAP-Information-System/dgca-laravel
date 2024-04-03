@@ -1,5 +1,5 @@
 .head-banner {
-    padding: 4vh;
+    padding: 12vh;
     position: relative;
     overflow: hidden;
     margin-bottom: 5vh;
@@ -10,9 +10,11 @@
         rgba(0, 51, 138, 0.738532913165266) 0%,
         rgba(44, 107, 210, 0) 51%
     );
+
 }
 
 .head-banner .banner-bg {
+
     position: absolute;
     top: 0;
     left: 0;

@@ -64,7 +64,6 @@
 .welcome {
     color: #3b3b3b;
     width: 100%;
-    padding-top: 5%;
 
 }
 
@@ -847,6 +846,12 @@
     .about-cebu {
         margin: 0;
     }
+    .cebu_map {
+        display: none; /* Hide the image */
+    }
+    .cebu-details{
+        width: 100%;
+    }
     .welcome-message-container{
         display: flex;
         flex-direction: column;
@@ -933,6 +938,9 @@
     .about-cebu {
         margin: 0;
     }
+    .cebu_map {
+        display: none; /* Hide the image */
+    }
     .welcome-message-container{
         display: flex;
         flex-direction: column;
@@ -985,9 +993,8 @@
 }
 /* PHONE MODE */
 @media only screen and (min-width: 440px) and (max-width: 499px) {
-    .banner-img {
-        width: 200px;
-        height: auto;
+    .content-main{
+        padding-right: 10% !important;
     }
     .welcome-banner {
         background: none;
@@ -1042,7 +1049,18 @@
         background-color: #3b3b3b;
         color: #ffff;
     }
-
+    .main-countdown{
+        top: 100%;
+    }
+    .countdown-container{
+        padding-left: 30%;
+        padding-top: 30%;
+    }
+    .countdown-main{
+        padding-left: 10%;
+        width: 500px;
+        justify-content: space-around;
+    }
     .countdown ul li span {
         font-size: 6vw;
         color: #3b3b3b;
@@ -1059,8 +1077,11 @@
         color: #3b3b3b;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
     }
+    .main-countdown{
+        margin-top: -5%;
+    }
     .city-smoke-bg {
-        top: 140%;
+        top: 250%;
     }
     .cebu_info_section {
         width: 100%;
@@ -1069,6 +1090,9 @@
         margin-left: -5%;
         width: 90%;
         overflow-y: auto;
+    }
+    .about-cebu{
+        margin-top: 50%;
     }
     .cebu-pinned-img {
         display: none;
@@ -1083,7 +1107,7 @@
 
 @media only screen and (min-width: 300px) and (max-width: 439px) {
     .content-main {
-        margin-left: 5%;
+        margin-left: 1%;
     }
     .welcome {
         padding: 0vh;
@@ -1152,26 +1176,21 @@
 
     .countdown ul li span {
         font-size: 6vw;
-        color: #ffffff;
     }
     .countdown ul li {
         font-size: 3vw;
-        color: #ffffff;
     }
     .countdown ul {
         gap: 2%;
     }
     .countdown-message {
-        font-size: 3vw;
-        margin-left: 5%;
-        color: #ffffff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+        font-size: 3vw; /* Adjust the values as needed */
     }
     .city-smoke-bg {
         width: 100%;
         height: 150%;
         position: absolute;
-        top: 85%;
+        margin-top: 50%;
         left: 0;
         object-fit: cover;
     }
