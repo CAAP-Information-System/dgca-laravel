@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->string('doc_status')->default('Pending');
+            $table->string('paper_no')->nullable();
             $table->string('name');
             $table->string('owner')->nullable();
             $table->date('upload_date');

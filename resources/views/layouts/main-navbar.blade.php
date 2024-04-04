@@ -14,25 +14,23 @@
                 </label>
                 <ul>
                     <li><a href="{{ route('welcome') }}">Home</a></li>
+                    <li><a href="{{ route('news') }}">News & Updates</a></li>
                     <li>
-                        <a href="#" onclick="toggleDropdown()" class="dropbtn">Event <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
-
+                        <a href="#" onclick="toggleDropdown()" class="dropbtn">Social <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
                         <ul class="js-sub-menu sub-menu" id="subDropdown">
-                            <li><a href="{{ route('news') }}">News & Updates</a></li>
-                            <li><a href="{{ route('program-overview') }}">Programme</a></li>
                             <li><a href="#">Accompanying Person's Programme</a></li>
                             <li><a href="#">Social/Cultural Function</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" class="sub-menu-drop">Exhibit & Sponsors</a>
+                        <a href="#" class="sub-menu-drop">Exhibitors & Sponsors</a>
                         <i class='bx bxs-chevron-down js-arrow arrow '></i>
                         <ul class="js-sub-menu sub-menu">
                             <li><a href="#">Floor Plan</a></li>
-                            <li><a href="#">Exhibit Registration Form</a></li>
-                            <li><a href="#">Exhibit Services</a></li>
+                            <li><a href="#">Exhibitor's Registration Form</a></li>
+                            <li><a href="#">Exhibition Services</a></li>
                             <li><a href="#">Sponsorship Agreement Form</a></li>
-                            <li><a href="{{ route('our-sponsors') }}">Acknowledged Sponsors</a></li>
+                            <li><a href="{{ route('our-sponsors') }}">Exhibitors & Sponsors</a></li>
 
                         </ul>
                     </li>

@@ -273,20 +273,37 @@
     width: 500px;
     height: auto;
 }
-.link__container{
-    margin-top: 1.5vh;
-}
-.e-travel-link{
+.HOD_check{
+    display: flex;
+    align-items: center;
 
-    text-decoration: none;
-    padding: 15px;
-    background-color: #2d4e83;
-    color: #ffff;
-    border-radius: 17px;
 }
-.e-travel-link:hover{
-    color: #ffff;
-    background-color: #4368a3;
+.checkbox-cont{
+    padding: 15px;
+}
+.HOD_check .details{
+    font-weight: bold;
+}
+.hod_checkbox{
+    width: 20px;
+    height: 20px;
+    margin-left: 1.5vh;
+}
+.dietary_label{
+    font-size: 15px;
+}
+.dietary_checkbox{
+    width: 20px;
+    height: 20px;
+    margin-right: 1.3vw;
+}
+.accompaniedFields{
+    width: 100%;
+}
+.accompaniedHeader{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #969696;
 }
 @media screen and (max-width: 1024px) {
     .container .register-user {

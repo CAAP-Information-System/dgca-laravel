@@ -10,9 +10,10 @@
                         <div class="dropdown-content">
                             <a href="{{ route('message') }}">Welcome Message</a>
                             <a href="{{ route('agenda') }}">Agenda</a>
+                            <a href="{{ route('program-overview') }}">Programme</a>
                             <a href="{{ route('order-of-business') }}">Order of Business</a>
                             <a href="#">Participant List</a>
-                            <a href="#">Conclusions</a>
+                            <a href="#">Action Items</a>
                             <a href="{{ route('the-gallery') }}">The Gallery</a>
                         </div>
                     </li>
@@ -40,14 +41,15 @@
                     <li class="dropdown1">
                         <a>
                             <i class="fa-solid fa-folder-open"></i>
-                            <span class="label">Documents</span>
+                            <span class="label">Conference Papers</span>
                         </a>
                         <div class="dropdown-content">
                             <!-- <a href="#">My Documents</a> -->
-                            <a href="{{ route('disc-paper') }}">Discussion Papers</a>
-                            <a href="{{ route('info-paper') }}">Information Papers</a>
-                            <a href="{{ route('view-submission') }}">Submission Guide</a>
-                            <a href="{{ route('create.file') }}">Submit Document</a>
+                            <a href="{{ route('disc-paper') }}">Discussion Papers (DP)</a>
+                            <a href="{{ route('info-paper') }}">Information Papers (IP)</a>
+                            <a href="{{ route('view-submission') }}">Guidance on preparing DP/IP</a>
+                            <a href="#">DP template</a>
+                            <a href="#">IP template</a>
                         </div>
                     </li>
                     @if(auth()->check() && auth()->user()->access_role == "media")
@@ -72,6 +74,7 @@
                             <a href="{{ route('files') }}">View Files</a>
                             <a href="{{ route('meeting-reservations') }}">Meeting Reservation</a>
                             <a href="{{ route('account_list') }}">Accounts Registered</a>
+                            <a href="{{ route('create.file') }}">Register Document</a>
 
                         </div>
                     </li>

@@ -51,57 +51,52 @@ class FileController extends Controller
     public function upload(Request $request)
     {
         // Ensure the user is authenticated before accessing auth()->user()
-        if (auth()->check()) {
-            $owner = auth()->user()->name;
-
-            Log::info('FileManagerController@upload');
-
-            // Verifies and validates input data
-            $request->validate([
-                'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx,mp4,avi,mov|max:10240',
-                'file_category' => 'required|string',
-                'discussion_agenda' => 'nullable|string',
-                'information_agenda' => 'nullable|string',
-            ], [
-                'file.required' => 'Please select a file to upload.',
-                'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',
-            ]);
-
-            if (!$request->hasFile('file')) {
-                return redirect()->back()->with('error', 'No file provided.');
-            }
-
-            $file = $request->file('file');
-            $fileName = $file->getClientOriginalName();
-
-            // Save file to storage and database
-            $path = $file->storeAs('public/conference/papers', $fileName);
-            $size = $file->getSize();
-            $fileCategories = $request->input('file_category');
-            $discussionAgenda = $request->input('discussion_agenda');
-            $informationAgenda = $request->input('information_agenda');
-            $createdFile = File::create([
-                'name' => $fileName,
-                'owner' => $owner,
-                'upload_date' => now(),
-                'size' => $size,
-                'file_category' => $fileCategories,
-                'discussion_agenda' => $discussionAgenda,
-                'information_agenda' => $informationAgenda,
-            ]);
-
-            // Log the created file details for debugging
-            Log::info('File created: ' . $createdFile);
-
-            // Include the file name in the success message
-            return redirect()->route('upload-sent')->with('success', 'File uploaded successfully.');
-        } else {
-            // Redirect or handle the case when the user is not authenticated
-            return redirect()->route('login');
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'Please log in to upload files.');
         }
+
+        // Verifies and validates input data
+        $request->validate([
+            'file' => 'required|mimes:doc,pdf,xls,xlsx,ppt,pptx,mp4,avi,mov|max:10240',
+            'file_category' => 'required|string',
+            'discussion_agenda' => 'nullable|string',
+            'information_agenda' => 'nullable|string',
+            'paper_no' => 'nullable|string|max:255',
+        ], [
+            'file.required' => 'Please select a file to upload.',
+            'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',
+        ]);
+
+        // Check if file exists in the request
+        if (!$request->hasFile('file')) {
+            return redirect()->back()->with('error', 'No file provided.');
+        }
+
+        $owner = auth()->user()->name;
+        $file = $request->file('file');
+        $fileName = $file->getClientOriginalName();
+
+        // Save file to storage and database
+        $path = $file->storeAs('public/conference/papers', $fileName);
+        $size = $file->getSize();
+
+        $createFile = new File();
+        $createFile->fill([
+            'paper_no' => $request->input('paper_no'),
+            'name' => $fileName,
+            'owner' => $owner,
+            'upload_date' => now(),
+            'size' => $size,
+            'file_category' => $request->input('file_category'),
+            'discussion_agenda' => $request->input('discussion_agenda'),
+            'information_agenda' => $request->input('information_agenda'),
+        ]);
+
+        // Save File
+        $createFile->save();
+
+        return redirect()->back()->with('success', 'File uploaded successfully.');
     }
-
-
 
 
     public function viewFiles()

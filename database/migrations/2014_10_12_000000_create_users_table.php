@@ -24,17 +24,16 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('passport_num');
             $table->string('designation');
-            $table->string('is_DirectorGeneral')->nullable();
+            $table->string('is_HOD')->nullable();
             $table->string('gender');
             $table->string('address');
             $table->string('telephone');
             $table->string('mobile');
             $table->string('passport_photo')->nullable();
             $table->string('profile_image')->nullable();
-            $table->string('approval_doc')->nullable();
 
             // Conference Details
-            $table->string('badge_name');
+            $table->string('badge_name')->nullable();
             $table->string('conference_role');
             $table->string('country');
             $table->string('organization');
@@ -45,13 +44,13 @@ return new class extends Migration
             $table->string('otherHotel')->default('None')->nullable();
             $table->string('attire_size')->nullable();
             $table->string('attire_special_req')->default('None')->nullable();
-            $table->string('preferred_activity')->nullable();
-            $table->string('dietary_restrictions')->default('None')->nullable();
+            $table->json('dietary_restrictions')->default('None')->nullable();
             $table->string('dietary_special_req')->default('None')->nullable();
 
             // Accompanying Person/Spouse
             $table->string('has_spouse')->nullable();
-            $table->string('accomp_name')->nullable();
+            $table->string('accomp_fname')->nullable();
+            $table->string('accomp_lname')->nullable();
 
             // Copyright & Privacy Policy
             $table->string('privacy')->default('Unapproved');

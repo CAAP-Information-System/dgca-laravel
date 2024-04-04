@@ -42,12 +42,12 @@
                     </span>
 
                     <br>
-                    <span class="apac-2024"><span class="span">59th APAC DGCA PH</span> 2024</span>
+                    <span class="apac-2024"><span class="span">59th APAC DGCA - PH</span> 2024</span>
                 </header>
-
             </main>
             <div class="theme-container">
                 <div class="typing-container">
+                    <header class="theme_main_text">Shaping the future of air transport:</header>
                     <span>We are</span>
                     <span id="theme__input" class="theme__input" style="height: 50px;"></span>
                 </div>

@@ -3,6 +3,9 @@
     font-weight: bold;
     display: inline-block;
 }
+.register_file_form{
+    margin-bottom: 10vh;
+}
 .card-header{
     background-color: #2658AB;
     color: #ffff;
@@ -22,6 +25,17 @@
     margin-bottom: 10px;
     border-radius: 10px;
 
+}
+.paper_number_field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.paper_number_field input[type="text"]{
+    width: 20%;;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #0A66C2;
 }
 .subm-guide-btn{
     padding: 10px;
@@ -43,6 +57,9 @@
     background-color: #FD6F6F;
     color: #ffff;
 }
+.input-group-btn{
+    margin-top: 4vh;
+}
 /* CSS */
 .button-18 {
   align-items: center;
@@ -54,7 +71,7 @@
   cursor: pointer;
   display: inline-flex;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
   justify-content: center;
   line-height: 20px;
@@ -62,9 +79,7 @@
   min-height: 40px;
   min-width: 0px;
   overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   text-align: center;
   touch-action: manipulation;
   transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;

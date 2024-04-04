@@ -37,7 +37,7 @@ class User extends Authenticatable
         'mobile',
         'profile_image',
         'passport_photo',
-        'approval_doc',
+        'is_HOD',
 
         // Conference Details
         'badge_name',
@@ -57,7 +57,8 @@ class User extends Authenticatable
 
         // Accompanying Person/Spouse
         'has_spouse',
-        'accomp_name',
+        'accomp_fname',
+        'accomp_lname',
 
         // Copyright & Privacy Policy
         'privacy',

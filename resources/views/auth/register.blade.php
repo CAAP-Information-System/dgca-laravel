@@ -28,13 +28,14 @@
             </div>
             <div class="user__details">
 
-                <!-- LOGIN DETAILS -->
+                <!-- Registration Information -->
                 <div class="category__header">
-                    <header class="category-name">Login Details</header>
+                    <header class="category-name">Registration Information</header>
                 </div>
+
                 <div class="input__box-long">
-                    <span class="details">Email Address <span class="required-symbol">*</span></span>
-                    <input type="email" placeholder="e.g: yourname@example.com" name="email" value="{{ old('email') }}" autocomplete="email" required>
+                    <span class="details">Country or International Organization <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: Philippines" name="country" value="{{ old('country') }}" required>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Salutations <span class="required-symbol">*</span></span>
@@ -43,6 +44,7 @@
                         <option value="Mr.">Mr.</option>
                         <option value="Ms.">Ms.</option>
                         <option value="Mrs.">Mrs.</option>
+                        <option value="Capt.">Capt.</option>
                         <option value="Atty.">Atty.</option>
                         <option value="Dr.">Dr.</option>
                     </select>
@@ -56,24 +58,6 @@
                     <span class="details">Last Name <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" required>
                 </div>
-
-                <div class="input__box-long">
-                    <span class="details">Country <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: Philippines" name="country" value="{{ old('country') }}" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Passport Number <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: ABC1234" name="passport_num" value="{{ old('passport_num') }}" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Designation/Position <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Are the Head<span class="required-symbol">*</span></span>
-                    <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
-                </div>
-
                 <div class="input__box-long">
                     <span class="details">Gender <span class="required-symbol">*</span></span>
                     <select class="form-control" id="gender" name="gender">
@@ -83,21 +67,31 @@
                     </select>
                 </div>
                 <div class="input__box-long">
+                    <span class="details">Designation/Position <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
+                </div>
+                <div class="input__box-long">
                     <span class="details">Organization / Agency<span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
                 </div>
                 <div class="input__box-long">
-                    <span class="details">Address<span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: House No., Street Name, City/State, Country, ZIP Code " name="address" value="{{ old('address') }}" required>
+                    <span class="details">Conference Role <span class="required-symbol">*</span></span>
+                    <select class="form-control" id="conference_role" name="conference_role" onchange="showAttireSize()">
+                        <option value="">-- Select Option --</option>
+                        <option value="Head Delegate">Head Delegate</option>
+                        <option value="Delegate">Delegate</option>
+                        <option value="Observer">Observer</option>
+                        <option value="Panelist">Panelist</option>
+                        <option value="Sponsor/Exhibitor">Sponsor/Exhibitor</option>
+                    </select>
                 </div>
-                <div class="input__box">
-                    <span class="details">Telephone Number <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: 1234-5467" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone">
+                <div class="input__box-long">
+                    <span class="details">Badge Name <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: Juan Dela Cruz" name="badge_name" value="{{ old('badge_name') }}" autocomplete="badge_name" required>
                 </div>
-
-                <div class="input__box">
-                    <span class="details">Mobile Number <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: 0123456789" name="mobile" value="{{ old('mobile') }}" autocomplete="mobile" required>
+                <div class="input__box-long">
+                    <span class="details">Passport Number <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: ABC1234" name="passport_num" value="{{ old('passport_num') }}" required>
                 </div>
                 <div class="form-group">
                     <label for="passport_photo">Passport Photo <span class="required-symbol">*</span></label>
@@ -106,13 +100,34 @@
                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                     @enderror
                 </div>
-                <div class="form-group">
-                    <label for="approval_doc">Letter of Credentials <i>(Softcopy/Scanned)</i> <span class="required-symbol">*</span></label>
-                    <input id="approval_doc" type="file" class="form-control @error('approval_doc') is-invalid @enderror" name="approval_doc" accept=".pdf" required>
-                    @error('passport_photo')
-                    <span class="invalid-feedback" role="alert">{{ $message }}</span>
-                    @enderror
+                <div class="input__box-long">
+                    <span class="details">Email Address <span class="required-symbol">*</span></span>
+                    <input type="email" placeholder="e.g: yourname@example.com" name="email" value="{{ old('email') }}" autocomplete="email" required>
                 </div>
+                <div class="input__box-long">
+                    <span class="details">Address<span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: House No., Street Name, City/State, Country, ZIP Code " name="address" value="{{ old('address') }}" required>
+                </div>
+                <div class="input__box">
+                    <span class="details">Telephone Number <i>(Optional)</i></span>
+                    <input type="text" placeholder="e.g: 1234-5467" name="telephone" value="{{ old('telephone') }}" autocomplete="telephone">
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Mobile Number <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: 0123456789" name="mobile" value="{{ old('mobile') }}" autocomplete="mobile" required>
+                </div>
+                <div class="HOD_check">
+                    <div class="checkbox-cont">
+                        <span class="details">Are you the Head of the Delegation? <span class="required-symbol">*</span></span><br>
+                        <input id="hod_yes" type="radio" name="is_HOD" value="Yes" required>
+                        <label for="hod_yes">Yes</label>
+
+                        <input id="hod_no" type="radio" name="is_HOD" value="No" required>
+                        <label for="hod_no">No</label>
+                    </div>
+                </div>
+
 
                 <div class="form-group">
                     <div class="requirements-box">
@@ -132,25 +147,11 @@
 
                 </div>
 
-                <!-- CONFERENCE DETAILS -->
+                <!-- Travel and Accomodation Information -->
                 <div class="category__header">
-                    <header class="category-name">Conference Details</header>
+                    <header class="category-name">Travel and Accomodation Information</header>
                 </div>
-                <div class="input__box-long">
-                    <span class="details">Badge Name <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: Juan Dela Cruz" name="badge_name" value="{{ old('badge_name') }}" autocomplete="badge_name" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Conference Role <span class="required-symbol">*</span></span>
-                    <select class="form-control" id="conference_role" name="conference_role" onchange="showAttireSize()">
-                        <option value="">-- Select Option --</option>
-                        <option value="Head Delegate">Head Delegate</option>
-                        <option value="Delegate">Delegate</option>
-                        <option value="Observer">Observer</option>
-                        <option value="Panelist">Panelist</option>
-                        <option value="Sponsor/Exhibitor">Sponsor/Exhibitor</option>
-                    </select>
-                </div>
+
                 <div class="input__box-long">
                     <span class="details">Aiport Destination <span class="required-symbol">*</span></span>
                     <p><i class="text-muted">This will be used by the logistics committee</i></p>
@@ -162,63 +163,8 @@
                         <option value="Mactan-Cebu International Airport">Mactan-Cebu International Airport</option>
                     </select>
                 </div>
-                <!-- FLIGHT DETAILS -->
-                <div class="category__header">
-                    <header class="category-name">Flight Details</header>
-                </div>
-                <!-- DEPARTURE INFORMATION -->
                 <div class="input__box-long">
-                    <header class="subheader">Departure Information</header>
-                    <p>
-                        <i class="card-subtitle mb-2 text-muted">
-                            Please indicate your flight details which will be used by our assigned committees.
-                        </i>
-                    </p>
-                </div>
-                <div class="input__box">
-                    <span class="details">Departure Flight No. <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="Enter Flight Number" name="departure_flight_num" value="{{ old('departure_flight_num') }}" required>
-                </div>
-
-                <div class="input__box">
-                    <span class="details">Departure Time <span class="required-symbol">*</span></span>
-                    <input type="time" name="departure_time" value="{{ old('departure_time') }}" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Departure Date<span class="required-symbol">*</span></span>
-                    <input type="date" name="departure_date" value="{{ old('departure_date') }}" required>
-                </div>
-
-                <!-- ARRIVAL INFORMATION -->
-                <div class="input__box-long">
-                    <header class="subheader">Arrival Information</header>
-                    <p>
-                        <i class="card-subtitle mb-2 text-muted">
-                            Please indicate your flight details which will be used by our assigned committees.
-                        </i>
-                    </p>
-                </div>
-
-                <div class="input__box">
-                    <span class="details">Arrival Flight No. <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="Enter Flight Number" name="arrival_flight_num" value="{{ old('arrival_flight_num') }}" required>
-                </div>
-
-                <div class="input__box">
-                    <span class="details">Arrival Time <span class="required-symbol">*</span></span>
-                    <input type="time" name="arrival_time" value="{{ old('arrival_time') }}" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Arrival Date<span class="required-symbol">*</span></span>
-                    <input type="date" name="arrival_date" value="{{ old('arrival_date') }}" required>
-                </div>
-
-                <!-- ACCOMODATIONS AND PREFERENCES -->
-                <div class="category__header">
-                    <header class="category-name">Accomodations & Preferences</header>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Hotel Accomodations <span class="required-symbol">*</span></span>
+                    <span class="details">Hotel Accomodations <i>(Optional)</i></span>
                     <p><i class="text-muted">The options shown are recommended hotels nearest to the venue.</i></p>
                     <select class="form-control" id="hotel_reco" name="hotel_reco">
                         <option value="">-- Select Option --</option>
@@ -235,6 +181,11 @@
                         <label for="otherHotel">Preferred Hotel Name:</label>
                         <input type="text" placeholder="Enter Preferred Hotel" id="otherHotel" name="otherHotel" class="form-control">
                     </div>
+                </div>
+
+                <!-- Other Information -->
+                <div class="category__header">
+                    <header class="category-name">Other Information</header>
                 </div>
                 <div class="input__box-long" id="attireSizeBlock" style="display: contents;">
                     <div class="input__box-long">
@@ -268,25 +219,35 @@
                         <option value="Event 3">Event 3</option>
                     </select>
                 </div>
-                <div class="input__box-long">
-                    <span class="details">Dietary Restrictions <span class="required-symbol">*</span></span>
-                    <select class="form-control" id="dietary_restrictions" name="dietary_restrictions" required>
-                        <option value="">-- Select Option --</option>
-                        <option value="Halal">Halal</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="No Pork">No Pork</option>
-                        <option value="No Beef">No Beef</option>
-                        <option value="No Seafood">No Seafood</option>
-                        <option value="None">NONE</option>
-                    </select>
+                <div class="dietary_checkbox_container">
+                    <label class="details">Dietary Restrictions <span class="required-symbol">*</span></label><br>
+                    <p>Please select your preferred restrictions provided below:</p>
+                    <input class="dietary_checkbox" type="checkbox" id="halal" name="dietary_restrictions[]" value="Halal">
+                    <label class="dietary_label" for="halal">Halal</label><br>
+
+                    <input class="dietary_checkbox" type="checkbox" id="vegetarian" name="dietary_restrictions[]" value="Vegetarian">
+                    <label class="dietary_label" for="vegetarian">Vegetarian</label><br>
+
+                    <input class="dietary_checkbox" type="checkbox" id="no_pork" name="dietary_restrictions[]" value="No Pork">
+                    <label class="dietary_label" for="no_pork">No Pork</label><br>
+
+                    <input class="dietary_checkbox" type="checkbox" id="no_beef" name="dietary_restrictions[]" value="No Beef">
+                    <label class="dietary_label" for="no_beef">No Beef</label><br>
+
+                    <input class="dietary_checkbox" type="checkbox" id="no_seafood" name="dietary_restrictions[]" value="No Seafood">
+                    <label class="dietary_label" for="no_seafood">No Seafood</label><br>
+
+                    <input class="dietary_checkbox" type="checkbox" id="none" name="dietary_restrictions[]" value="None">
+                    <label class="dietary_label" for="none">NONE</label><br>
                 </div>
+
                 <div class="input__box-long">
                     <span class="details">Add Special Requirements/Request: <span class="required-symbol">*</span></span>
                     <p><i class="text-muted">Special handling support, if any (health, etc.)</i></p>
                     <input type="text" placeholder="Enter None if none" name="dietary_special_req" value="{{ old('dietary_special_req') }}" required>
                 </div>
                 <div class="input__box-long">
-                    <span class="details">Are you accompanied with a Person/Spouse? <span class="required-symbol">*</span></span>
+                    <span class="details">Do you wish to register any accompanying persons? <span class="required-symbol">*</span></span>
                     <select class="form-control" id="has_spouse" name="has_spouse" required>
                         <option value="">-- Select Option --</option>
                         <option value="Yes">Yes</option>
@@ -294,10 +255,15 @@
                     </select>
                 </div>
 
-                <div id="accompaniedFields" style="display: none;">
-                    <div class="input__box-long">
-                        <label for="accomp_name">Full Name of Accompanied Person/Spouse:</label>
-                        <input type="text" placeholder="Enter Person/Spouse Name" id="accomp_name" name="accomp_name" class="form-control">
+                <div class="accompaniedFields" id="accompaniedFields" style="display: none;">
+                    <header class="accompaniedHeader">Please enter the details of the accompanying persons</header>
+                    <div class="input__box">
+                        <label for="accomp_name">First Name:</label>
+                        <input type="text" placeholder="Enter First Name" id="accomp_name" name="accomp_fname" class="form-control">
+                    </div>
+                    <div class="input__box">
+                        <label for="accomp_name">Last Name:</label>
+                        <input type="text" placeholder="Enter Last Name" id="accomp_name" name="accomp_lname" class="form-control">
                     </div>
                 </div>
                 <br>
@@ -354,13 +320,13 @@
 
             <div class="form-actions">
                 <div class="button">
-                    <button type="submit" class="register">Create an Account</button>
+                    <button type="submit" class="register">Submit registration request</button>
                 </div>
                 <section class="already-registered">
-                    <div class="alt-label">Already have an account?</div>
+                    <div class="alt-label">Already registered?</div>
                     <br>
                     @if (Route::has('login'))
-                    <a class="alt-link" href="{{ route('login') }}">Back to Sign In</a>
+                    <a class="alt-link" href="{{ route('login') }}">Sign in to edit a previous registration</a>
                     @endif
                 </section>
             </div>
