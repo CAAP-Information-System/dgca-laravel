@@ -13,7 +13,6 @@
                 <th>Category</th>
                 <th>Upload Date</th>
                 <th>Size</th>
-                <th>Status</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -28,15 +27,6 @@
                     @php
                     echo $file->size ? \App\Http\Controllers\FileController::formatFileSize($file->size) : 'N/A';
                     @endphp
-                </td>
-                <td>
-                   @if($file->doc_status == 'Pending')
-                   <p style="font-size: 16px;" class="badge badge-warning"> {{ $file->doc_status }}</p>
-                   @elseif($file->doc_status == 'Approved')
-                   <p style="font-size: 16px;" class="badge badge-success"> {{ $file->doc_status }}</p>
-                   @else
-                   <p style="font-size: 16px;" class="badge badge-danger"> Undetermined</p>
-                   @endif
                 </td>
                 <td class="mt-2" colspan="3">
                     <a href="{{ route('editFileName', $file->id) }}" class="btn btn-warning">Edit File</a>

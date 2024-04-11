@@ -97,7 +97,7 @@
         <header class="section-hdr">Submission of Papers and Website Publication</header>
         <div class="section-content">
             <p>
-                States/Administrations and International Organizations are urged to submit their papers at the earliest possible convenience, but not later than <b>(day) (Month) 2024</b>.
+                States/Administrations and International Organizations are urged to submit their papers at the earliest possible convenience, but not later than <b>14 October 2024</b>.
             </p>
             <p>
                 The papers should be sent as <b class="text-primary">e-mail attachment</b> to the ICAO Asia and Pacific Regional Office and copied to the Host State on the following addresses:
@@ -108,8 +108,8 @@
             </ul>
             <ul class="conf-addresses">
                 <li><b>Host State - Civil Aviation Authority of the Philippines</b></li>
-                <li>Conference Secretariat: <a href="#">dgca5_secretariat@caap.gov.ph</a></li>
-                <li>Conference Website: <a href="#">dgca-website</a></li>
+                <li>Conference Secretariat: <a href="#">dgca59_secretariat@caap.gov.ph</a></li>
+                <li>Conference Website: <a href="https://dgca59.caap.gov.ph">https://dgca59.caap.gov.ph</a></li>
             </ul>
             <p>
                 Timely distribution of the papers is particularly important in the case of Discussion Papers so that the matters raised can be given due consideration by the delegates. All papers received by the specified deadline will be posted in pdf format on the website established by the Host State for the purpose of this Conference. Every effort is made by the Host Organizing Committee and the Secretariat to make papers available to participating delegates prior to the Conference.

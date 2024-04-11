@@ -72,7 +72,6 @@
                         </a>
                         <div class="dropdown-content">
                             <a href="{{ route('files') }}">View Files</a>
-                            <a href="{{ route('meeting-reservations') }}">Meeting Reservation</a>
                             <a href="{{ route('account_list') }}">Accounts Registered</a>
                             <a href="{{ route('create.file') }}">Register Document</a>
 

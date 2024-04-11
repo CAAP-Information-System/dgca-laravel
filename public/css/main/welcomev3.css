@@ -107,9 +107,13 @@
     width: 100%;
     font-family: "Batangas";
 }
+.symbol{
+    font-size: 2rem;
+}
 .theme__input {
     font-family: "Batangas";
     color: #2263a0;
+
 }
 .welcome-banner .span:hover {
     font-size: 1.2em;

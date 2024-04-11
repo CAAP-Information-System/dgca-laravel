@@ -1,5 +1,5 @@
 var i = 0;
-var texts = ['Sustainable.', 'Resilient.', 'Inclusive.'];
+var texts = ['Sustainable', 'Resilient', 'Inclusive'];
 var speed = 100;
 var currentTextIndex = 0;
 var isDeleting = false;

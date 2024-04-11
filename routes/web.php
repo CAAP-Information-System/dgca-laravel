@@ -74,7 +74,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/generate-list', [PDFController::class, 'generatePDF'])->name('generate-list');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard2', [AdminController::class, 'dashboardv2'])->name('dashboard2');
-
     Route::delete('/delete-account/{id}', [AdminController::class, 'deleteAccount'])->name('delete-account');
     Route::get('/create-meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
     Route::delete('/delete/{id}', [FileController::class, 'deleteFile'])->name('file.delete');

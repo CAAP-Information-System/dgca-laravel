@@ -3,13 +3,14 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/flight_info/flight_registration.css') }}">
 <div class="container">
-    <div class="header-container">
-        <header class="auth-hdr">Welcome and Mabuhay!</header>
-    </div>
 
     <div class="form-main">
         <form class="register-user" action="{{ route('upload-flight-information') }}" method="POST" enctype="multipart/form-data">
-            <header class="title">Flight Information Registration</header>
+        <header class="title">Accompanying Person / Spouse's Flight Information Form</header>
+            <div class="flight_guide">
+                <p><b>Greetings! </b>
+                    Please complete this form if you have successfully booked your flight for the 59th DGCA APAC Conference in Cebu, Philippines. The information provided will be used by our logistics team.</p>
+            </div>
             @csrf
 
             <div class="user__details">

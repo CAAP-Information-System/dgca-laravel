@@ -3,41 +3,70 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/admin/edit_file.css') }}">
 <div class="container">
-    <header class="page-header">Edit File Name</header>
+    <header class="page-header">Document Overview</header>
     <div class="edit-file-main">
+        <!-- <a href="{{ asset('storage/approval_docs/' . $user->approval_doc) }}" target="_blank" class="card-link">
+            <div class="file-card">
+                <img src="{{ asset('img/icon/pdf-icon.png') }}" alt="pdf-icon" class="file-icon-img">
+                <p class="card-name">Letter of Credentials</p>
+            </div>
+        </a> -->
         <form method="POST" action="{{ route('updateFileName', ['id' => $files->id]) }}" class="edit-form">
             @csrf
-            <div class="mb-3">
-                <label for="" class="edit-label">File Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ $files->name }}">
-            </div>
-            <div class="mb-3">
-                <label for="" class="edit-label">Owner</label>
-                <input type="text" class="form-control" id="owner" name="owner" value="{{ $files->owner }}" readonly>
-            </div>
-            <div class="mb-3">
-                <label for="" class="edit-label">Country Representing</label>
-                <input type="text" class="form-control" id="owner" name="owner" value="{{ $user->country }}" readonly>
-            </div>
-            <div class="mb-3">
-                <label for="" class="edit-label">Document Status</label>
-                <select class="form-select" id="status" name="doc_status">
-                    <option value="Approved" {{ $files->doc_status == 'Approved' ? 'selected' : '' }}>Approved</option>
-                    <option value="Pending" {{ $files->doc_status == 'Pending' ? 'selected' : '' }}>Pending</option>
-                </select>
-            </div>
+            <div class="file_detail_cont">
+                <div class="file_submitter_info">
+                    <div class="mb-3">
+                        <label for="" class="edit-label">Document Title</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $files->name }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="edit-label">Owner</label>
+                        <p class="readable_input">{{ $files->owner }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="edit-label">Organization</label>
+                        <p class="readable_input">{{ $user->organization }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="edit-label">Country Representing</label>
+                        <p class="readable_input">{{ $user->country }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="edit-label">Date Uploaded</label>
+                        <p class="readable_input">{{ $files->upload_date }}</p>
+                    </div>
+                </div>
 
-            <button type="submit" class="button-5">Update Document</button>
+                <div class="file_main_info">
+                    <div class="mb-3">
+                        @if ($files->file_category == 'Discussion')
+                        <label for="" class="edit-label">Paper Number</label>
+                        <input type="text" class="form-control" id="name" name="discussion_agenda" value="{{ $files->paper_no }}">
+                        @endif
+                        @if ($files->file_category == 'Information')
+                        <label for="" class="edit-label">Paper Number</label>
+                        <input type="text" class="form-control" id="name" name="discussion_agenda" value="{{ $files->paper_no }}">
+                        @endif
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="edit-label">Document Category</label>
+                        <input type="text" class="form-control" id="name" name="file_category" value="{{ $files->file_category }}" readonly>
+                    </div>
+                    <div class="mb-3">
+                        @if ($files->file_category == 'Discussion')
+                        <label for="" class="edit-label">Agenda Type</label>
+                        <input type="text" class="form-control" id="name" name="discussion_agenda" value="{{ $files->discussion_agenda }}" readonly>
+                        @elseif ($files->file_category == 'Information')
+                        <label for="" class="edit-label">Agenda Type</label>
+                        <input type="text" class="form-control" id="name" name="information_agenda" value="{{ $files->information_agenda }}" readonly>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 6vh;"></div>
+            <button type="submit" class="update-file-btn">Update Document</button>
         </form>
-        <div class="guide-col">
-            <header class="edit-guide">Guide:</header>
-            <ul class="guide-content">
-                <li>Ensure the file name adheres to the designated conference title format.</li>
-                <li>File Name should be in full uppercase text form.</li>
-                <li>Avoid using the given special characters i.e. (!@#$%^&*:"|<>?_+")</li>
-                <li>Verify the accountability of the individual uploading the document.</li>
-            </ul>
-        </div>
+
     </div>
 </div>
 

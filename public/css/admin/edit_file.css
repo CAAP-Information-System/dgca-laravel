@@ -5,6 +5,17 @@
     display: inline-block;
     padding: 5px 10px;
 }
+.edit-form{
+    width: 100%;
+}
+.file_detail_cont{
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+}
+.file_submitter_info, .file_main_info{
+    width: 100%;
+}
 
 .edit-label{
     font-size: 16px;
@@ -14,11 +25,8 @@
     flex-wrap: wrap;
     gap: 6vh;
 }
-.edit-form{
-    width: 50%;
-}
-.guide-col{
-    width: 45%;
+
+.file_main_info{
     background-color: #ffff;
 }
 .edit-guide{
@@ -31,49 +39,18 @@
     text-align: justify;
     color: #3b3b3b;
 }
-/* CSS */
-.button-5 {
-  align-items: center;
-  background-clip: padding-box;
-  background-color: #fa6400;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  margin-top: 2vh;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: 40%;
-}
 
-.button-5:hover,
-.button-5:focus {
-  background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-}
 
-.button-5:hover {
-  transform: translateY(-1px);
+.update-file-btn{
+    display: block;
+    margin: 0 auto;
+    border-radius: 17px;
+    color: #ffff;
+    border: none;
+    width: 40%;
+    padding: 16px;
+    background-color: #50A9FB;
 }
-
-.button-5:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-  transform: translateY(0);
+.update-file-btn:hover{
+    background-color: #969696;
 }

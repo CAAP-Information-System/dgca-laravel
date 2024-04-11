@@ -1,0 +1,265 @@
+/* all */
+
+:root {
+    --main-blue: #71b7e6;
+    --main-purple: #9b59b6;
+    --main-grey: #ccc;
+    --sub-grey: #d9d9d9;
+}
+
+.required-symbol {
+    color: red; /* Or any color you prefer */
+    margin-left: 5px; /* Adjust as needed */
+}
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flight_guide{
+    margin-top: 3vh;
+    border: 2px #969696 dashed;
+    border-radius: 17px;
+    padding: 15px;
+}
+.flight_guide p{
+    font-size: 15px;
+    color: #969696;
+    text-align: justify;
+}
+.category__header {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.category__header .category-name {
+    font-size: 2rem;
+    color: #2f96d0;
+    text-transform: capitalize;
+}
+.container {
+    color: #3b3b3b;
+}
+.subheader {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-style: italic;
+}
+/* container and .register-user */
+.container .reg-hdr {
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+.container .reg-caap-logo {
+    height: auto;
+    width: 100px;
+}
+.title {
+    color: #2d4e83;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+.form-group {
+    width: 100%;
+}
+.form-check {
+    display: flex;
+    align-items: center;
+}
+.container .title::before {
+    content: "";
+    position: absolute;
+    height: 3.5px;
+    width: 30px;
+    left: 0;
+    bottom: 0;
+}
+.container .form-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3b3b3b;
+}
+
+.container .register-user {
+    width: 60%;
+    border-radius: 20px;
+    padding: 5vh;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .register-user .user__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+/* inside the .register-user user details */
+.register-user .user__details .input__box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.user__details .input__box .details {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.user__details .input__box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--main-grey);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user__details .input__box-long {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.user__details .input__box-long input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--main-grey);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user__details .input__box input:focus,
+.user__details .input__box input:valid {
+    border-color: #2f96d0;
+}
+
+.user__details .input__box-long input:focus,
+.user__details .input__box-long input:valid {
+    border-color: #2f96d0;
+}
+.user__details .input__box .details,
+.user__details .input__box-long .details {
+    font-weight: bold;
+}
+
+.form-actions {
+    display: block;
+    margin: 0 auto;
+}
+/* submit button */
+.register-user .button {
+    width: 100%;
+    height: 50px;
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+}
+
+.register-user .button .register {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 100px;
+    background: #2f96d0;
+}
+
+.register-user .button .register:hover {
+    background: #969696;
+}
+
+.accompaniedFields{
+    width: 100%;
+}
+.accompaniedHeader{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #969696;
+}
+@media screen and (max-width: 1024px) {
+    .container .register-user {
+        width: 100%;
+        background-color: #ffff;
+    }
+    .auth-hdr {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .auth-hdr {
+        font-size: 2rem;
+        padding: 7px;
+    }
+    .container .register-user {
+        width: 100%;
+    }
+    .register-user .user__details .input__box {
+        width: 100%;
+    }
+    .user__details {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .user__details .input__box input {
+        width: 100%;
+    }
+    .user__details .input__box-long input {
+        display: block;
+        margin-bottom: 10px; /* Add some space between the blocks */
+    }
+    .user__details .input__box .details,
+    .user__details .input__box-long .details {
+        font-weight: bold;
+    }
+
+    .register-user .button .register {
+        width: 100%;
+    }
+}
+@media (width <= 320px) {
+    .main-toggle {
+        display: none;
+    }
+    .logos-main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-caap-logo,
+    .nav-bagong-pilipinas-logo,
+    .nav-caap-logo,
+    .nav-bagong-pilipinas-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 2.4rem;
+    }
+    .input-group-text {
+        display: none;
+    }
+    .input-field {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+    .auth-hdr {
+        font-size: 5vw;
+        width: 100%;
+    }
+}
