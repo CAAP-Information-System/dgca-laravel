@@ -208,5 +208,8 @@
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 439px) {
-
+    .main-conf-nav {
+        width: 80% !important;
+        margin-left: 15%;
+    }
 }
