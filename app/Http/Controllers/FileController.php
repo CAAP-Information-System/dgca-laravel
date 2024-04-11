@@ -61,7 +61,7 @@ class FileController extends Controller
             'file_category' => 'required|string',
             'discussion_agenda' => 'nullable|string',
             'information_agenda' => 'nullable|string',
-            'paper_no' => 'nullable|string|max:255',
+            'paper_no' => 'required|string|max:255',
         ], [
             'file.required' => 'Please select a file to upload.',
             'file.mimes' => 'Unsupported file format. Please upload a DOC, PDF, XLS, XLSX, PPT, or PPTX file.',

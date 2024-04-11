@@ -1,12 +1,12 @@
 @extends('layouts.app')
-<title>@yield('title', 'Information Paper-59th DGCA')</title>
+<title>@yield('title', 'Information Paper-CA')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/info_paper.css') }}">
 @include('main.banner', ['bannerTitle' => 'information Papers'])
 <div class="container">
     <main class="container-main">
-        <div class="dl-temp-grp">
+        <!-- <div class="dl-temp-grp">
             <div class="dl-grp">
                 <img src="{{ asset('img/word-template.svg') }}" alt="CAAP Logo" class="temp-svg">
                 <a href="{{ asset('document/dp_template_58dgca.doc') }}" class="dl-text" download="">Download Information Paper Template</a>
@@ -15,7 +15,7 @@
                 <img src="{{ asset('img/zip-file.svg') }}" alt="CAAP Logo" class="temp-svg">
                 <a href="{{ asset('document/all_information_papers.zip') }}" class="dl-text" download="">Download All Templates (ZIP)</a>
             </div>
-        </div>
+        </div> -->
 
         <div class="list-container">
 
@@ -41,14 +41,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda1 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/1/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
 
@@ -68,14 +66,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda2 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/2/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
 
@@ -94,14 +90,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda3 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/3/{{$information->id}}</b></td>
+                        <td><b>/{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
 
@@ -120,14 +114,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda4 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/4/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -146,14 +138,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda5 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/5/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -172,14 +162,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda6 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/6/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -196,14 +184,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda7 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/7/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -222,14 +208,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda8 as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/8/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -248,14 +232,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda9a as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/9A/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -272,14 +254,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda9b as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/9B/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -297,14 +277,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda10a as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/10A/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -323,14 +301,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda10b as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/10B/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -349,14 +325,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($agenda10c as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/10C/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>
@@ -375,14 +349,12 @@
                         <th>Date Uploaded</th>
                     </thead>
                     @foreach($presentation as $information)
-                    @if($information->doc_status == 'Approved')
                     <tbody>
-                        <td><b>59/DP/PV/{{$information->id}}</b></td>
+                        <td><b>{{$information->paper_no}}</b></td>
                         <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
-                    @endif
                     @endforeach
                 </table>
             </ul>

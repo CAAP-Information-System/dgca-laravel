@@ -57,12 +57,15 @@
                         </div>
                     </div>
 
-                    <div class="form-group" id="discussion_agenda_section" style="display: none;">
+                    <div class="form-group" id="paper_no_section" style="display: none;">
                         <div class="paper_number_field">
                             <label for="paper_no">Paper Number:</label>
                             <p class="reminder">Kindly fill in the designated Paper Number for this document.</p>
-                            <input type="text" class="form-input" name="paper_no" autofocus>
+                            <input type="text" class="form-input" name="paper_no">
                         </div>
+                    </div>
+                    <div class="form-group" id="discussion_agenda_section" style="display: none;">
+
                         <label for="discussion_files">Select Discussion Agenda:</label>
                         <p class="reminder">If the file is for the Discussion Category, kindly select the appropriate agenda type:</p>
                         <div class="input-group">
@@ -87,11 +90,6 @@
                     </div>
 
                     <div class="form-group" id="information_agenda_section" style="display: none;">
-                        <div class="paper_number_field">
-                            <label for="paper-number">Paper Number:</label>
-                            <p class="reminder">Kindly fill in the designated Paper Number for this document.</p>
-                            <input type="text" class="form-input" name="paper_no" autofocus>
-                        </div>
                         <label for="information_files">Select Information Agenda:</label>
                         <p class="reminder">If the file is for the Information Category, kindly select the appropriate agenda type:</p>
                         <div class="input-group">
@@ -135,6 +133,7 @@
         var fileCategory = document.getElementById('file_category').value;
         var discussionAgendaSection = document.getElementById('discussion_agenda_section');
         var informationAgendaSection = document.getElementById('information_agenda_section');
+        var papernoSection = document.getElementById('paper_no_section');
 
         if (fileCategory === 'Discussion') {
             discussionAgendaSection.style.display = 'block';
@@ -142,9 +141,12 @@
         } else if (fileCategory === 'Information') {
             discussionAgendaSection.style.display = 'none';
             informationAgendaSection.style.display = 'block';
+        } else if (fileCategory === 'Discussion' && fileCategory === 'Information') {
+            papernoSection.style.display = 'block';
         } else {
             discussionAgendaSection.style.display = 'none';
             informationAgendaSection.style.display = 'none';
+            papernoSection.style.display = 'none';
         }
     }
 </script>

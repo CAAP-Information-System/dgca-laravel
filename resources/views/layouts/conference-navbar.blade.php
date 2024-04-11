@@ -68,7 +68,7 @@
                     <li class="dropdown1">
                         <a href="#" class="text-danger">
                             <i class="fa-solid fa-hashtag"></i>
-                            <span class="label">ICAO</span>
+                            <span class="label">Secretariat</span>
                         </a>
                         <div class="dropdown-content">
                             <a href="{{ route('files') }}">View Files</a>
