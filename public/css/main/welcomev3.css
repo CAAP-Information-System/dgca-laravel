@@ -1163,12 +1163,15 @@
         width: 90vw;
         margin-left:-10% ;
     }
+    .typing-container span{
+        font-size: 38px;
+    }
     .theme {
         font-size: 2rem;
         text-align: center;
     }
     .theme-message {
-        font-size: 15px;
+        font-size: 10px;
         width: 100%;
     }
     .main-countdown {
