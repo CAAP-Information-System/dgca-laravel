@@ -22,7 +22,9 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::fallback(function () {
+    return view('http-message.error_404');
+});
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('generate-registration', [PDFController::class, 'generatePDF'])->name('generate-registration');
     Route::get('generate-pendings', [PDFController::class, 'pendingAccountsPDF'])->name('generate-pendings');
@@ -128,3 +130,4 @@ Route::middleware('auth', 'statusCheck')->group(function () {
 
 
 Route::get('send', [HomeController::class, 'sendNotif'])->name('send');
+// Route::get('array-test', [HomeController::class, 'test'])->name('test');

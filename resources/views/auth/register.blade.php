@@ -259,13 +259,18 @@
                     <header class="accompaniedHeader">Please enter the details of the accompanying persons</header>
                     <div class="input__box">
                         <label for="accomp_name">First Name:</label>
-                        <input type="text" placeholder="Enter First Name" id="accomp_name" name="accomp_fname" class="form-control">
+                        <input type="text" placeholder="Enter First Name" name="accomp_fname[]" class="form-control">
                     </div>
                     <div class="input__box">
                         <label for="accomp_name">Last Name:</label>
-                        <input type="text" placeholder="Enter Last Name" id="accomp_name" name="accomp_lname" class="form-control">
+                        <input type="text" placeholder="Enter Last Name" name="accomp_lname[]" class="form-control">
                     </div>
+
+
                 </div>
+                <button type="button" class="btn btn-primary" id="addAccompaniedPerson" style="display: none;">Add Accompanying Person</button>
+
+
                 <br>
                 <!-- PASSWORD CONFIRMATION-->
                 <div class="category__header">
@@ -341,45 +346,12 @@
 <script src="{{ asset('js/auth/pass-validation.js') }}"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const fileDropArea = document.getElementById("fileDropArea");
-        const fileList = document.getElementById("fileList");
-
-        fileDropArea.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            fileDropArea.classList.add("active");
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("addAccompaniedPerson").addEventListener("click", function() {
+            var accompaniedFields = document.getElementById("accompaniedFields");
+            var clonedFields = accompaniedFields.cloneNode(true);
+            accompaniedFields.parentNode.insertBefore(clonedFields, accompaniedFields.nextSibling);
         });
-
-        fileDropArea.addEventListener("dragleave", () => {
-            fileDropArea.classList.remove("active");
-        });
-
-        fileDropArea.addEventListener("drop", (e) => {
-            e.preventDefault();
-            fileDropArea.classList.remove("active");
-            handleFiles(e.dataTransfer.files);
-        });
-
-        document.getElementById("fileInput").addEventListener("change", (e) => {
-            handleFiles(e.target.files);
-        });
-
-        function handleFiles(files) {
-            for (const file of files) {
-                const listItem = document.createElement("li");
-                listItem.classList.add("file-item");
-                listItem.innerHTML = `
-                <span>${file.name}</span>
-                <button class="delete-btn">Delete</button>
-            `;
-                fileList.appendChild(listItem);
-
-                const deleteButton = listItem.querySelector(".delete-btn");
-                deleteButton.addEventListener("click", () => {
-                    listItem.remove();
-                });
-            }
-        }
     });
 </script>
 <script>
@@ -396,8 +368,11 @@
         var accompaniedFields = document.getElementById('accompaniedFields');
         if (this.value === 'Yes') {
             accompaniedFields.style.display = 'block';
+            addAccompaniedPerson.style.display = 'block';
+
         } else {
             accompaniedFields.style.display = 'none';
+            addAccompaniedPerson.style.display = 'none';
         }
     });
 </script>

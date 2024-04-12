@@ -94,8 +94,10 @@ class RegisterController extends Controller
 
             // Accompanying Person/Spouse
             'has_spouse' => ['nullable', 'string'],
-            'accomp_fname' => ['nullable', 'string'],
-            'accomp_lname' => ['nullable', 'string'],
+            'accomp_fname' => ['nullable', 'array'],
+            'accomp_fname.*' => ['nullable', 'string'],
+            'accomp_lname' => ['nullable', 'array'],
+            'accomp_lname.*' => ['nullable', 'string'],
         ]);
     }
 
@@ -118,6 +120,8 @@ class RegisterController extends Controller
             $passportImagePath = $data['passport_photo']->storeAs('passport_photos', $passportfileName, 'public');
         }
         $dietary_restrictions = json_encode($data['dietary_restrictions']);
+        $accomp_fname = json_encode($data['accomp_fname']);
+        $accomp_lname = json_encode($data['accomp_lname']);
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -145,8 +149,8 @@ class RegisterController extends Controller
             'dietary_restrictions' => $dietary_restrictions,
             'dietary_special_req' => $data['dietary_special_req'],
             'otherHotel' => $data['otherHotel'],
-            'accomp_fname' => $data['accomp_fname'],
-            'accomp_lname' => $data['accomp_lname'],
+            'accomp_fname' => $accomp_fname,
+            'accomp_lname' => $accomp_lname,
             'is_HOD' => $data['is_HOD'],
 
         ]);

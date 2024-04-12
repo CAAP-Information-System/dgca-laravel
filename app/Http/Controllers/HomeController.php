@@ -179,4 +179,11 @@ class HomeController extends Controller
     {
         return view('http-message.upload-sent');
     }
+
+    public function test()
+    {
+        $users = User::all(); // Retrieve all users or apply any necessary conditions
+
+        return view('testing.array_test', ['users' => $users]);
+    }
 }

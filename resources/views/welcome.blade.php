@@ -109,15 +109,24 @@
                         Message from <span>the Director General</span>
                     </header>
                     <p>
-                        <i class="fa-solid fa-quote-left"></i>The Philippines is excited to welcome you to our scenic country and share our culture and renowned hospitality. We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable, resilient, and inclusive development of the air transport sector.
+                        <i class="fa-solid fa-quote-left"></i>The Civil Aviation Authority of the Philippines is excited to welcome you to our scenic country as we proudly host the 59th Conference of the Directors General of Civil Aviation of the Asia and Pacific Regions at the vibrant island of Cebu on October 14-18, 2024.
                     </p>
                     <p>
-                        Our theme for this year's conference, Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive, is timely and relevant in both global and regional context. The industry is adaptive to change and supports development while mitigating the impacts of climate change. As we move forward to a more sustainable, resilient and inclusive air transport, let us strengthen our collaboration and synergies by promoting and improving our policies and practices through a strong stakeholder engagement. It is an opportune time to engage the industry in creating a more viable circular economy, thereby promoting equal opportunities.
+                        We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable future in aviation.
+                    </p>
+                    <p>
+                        Our theme for this year’s conference, <b class="text-primary">Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive</b>, is timely and relevant on both global and regional scales. The industry is adaptive to change and supports development while mitigating the impacts of climate change.
+                    </p>
+                    <p>
+                        Let us strengthen our collaboration and synergies by promoting and improving our policies and practices through strong stakeholder engagement.
+                    </p>
+                    <p>
+                        Our team is pleased to assist you during your stay in the Philippines and we hope you enjoy, and find the conference meaningful.
                     </p>
                     <div class="messenger">
                         <span class="name">Captain Manuel Antonio L. Tamayo</span>
                         <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
-                        <span>DGCA-APAC 59 Chairman</span>
+                        <span>Chairman of DGCA/59 APAC-PH </span>
                     </div>
                 </div>
             </div>

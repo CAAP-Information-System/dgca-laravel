@@ -154,20 +154,25 @@
                     <header class="header-label">Hotel Accommodations</header>
                     <p class="profile-detail">{{ $user->hotel_reco }}</p>
                 </div>
-                <div class="profile-detail-grp">
+                <!-- <div class="profile-detail-grp">
                     <header class="header-label">Activity/s</header>
                     <p class="profile-detail">{{ $user->preferred_activity }}</p>
-                </div>
+                </div> -->
                 <div class="profile-detail-grp">
                     <header class="header-label">Dietary Restrictions</header>
-                    <p class="profile-detail">{{ $user->dietary_restrictions }}</p>
+                    <ul>
+                        @foreach (json_decode($user->dietary_restrictions) as $restriction)
+                        <li class="profile-detail">{{ $restriction }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+
                 <div class="profile-detail-grp">
                     <header class="header-label">Dietary Special Request</header>
                     <p class="profile-detail">{{ $user->dietary_special_req }}</p>
                 </div>
             </div>
-            <div class="profile-right">
+            <!-- <div class="profile-right">
                 <header class="barong">Size Reference</header>
                 <div class="row">
                     <div class="col">
@@ -187,12 +192,12 @@
                     <header class="header-label">Address</header>
                     <p class="profile-detail">{{ $user->address }}</p>
                 </div>
-
+            </div> -->
         </section>
         <header class="profile-header">Spouse/Accompanying Person Details</header>
         <hr>
         @if($user->has_spouse != 'Yes')
-        <h4 class="text-primary"><i>Delegate has no Spouse or Accompanying Person</i></h4>
+        <h4 class="no_accomp_message"><i>Delegate has no Spouse or Accompanying Person</i></h4>
         @else
         <section class="spouse-details-section">
             <div class="profile-detail-grp">
