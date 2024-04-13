@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     padding-top: 5vh;
+    padding-bottom: 15vh;
 }
 .backtotop{
     text-align: center;
@@ -102,6 +103,27 @@
 .highlight{
     color: #002868;
     font-weight: bold;
+}
+.form_link_hdr{
+    font-size: 22px;
+}
+.form_link_ctn {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+.fa-rectangle-list{
+    margin-right: 15px;
+}
+.form_link_btn{
+    background-color: #3b3b3b;
+    text-align: center;
+    border-radius: 20px;
+    color: #ffff !important;
+    text-decoration: none;
+    padding: 15px;
+}
+.form_link_btn:hover{
+    background-color: #50A9FB;
 }
 
 @media screen and (max-width: 768px) {

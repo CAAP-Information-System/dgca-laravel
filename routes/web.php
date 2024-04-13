@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AccompanyController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DelegateController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\GalleryPostingController;
 use App\Http\Controllers\HomeController;
@@ -20,7 +22,9 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::fallback(function () {
+    return view('http-message.error_404');
+});
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('generate-registration', [PDFController::class, 'generatePDF'])->name('generate-registration');
     Route::get('generate-pendings', [PDFController::class, 'pendingAccountsPDF'])->name('generate-pendings');
@@ -51,6 +55,12 @@ Route::middleware('public')->group(function () {
     Route::get('/order-of-business', [HomeController::class, 'viewOrderofBusiness'])->name('order-of-business');
 });
 
+// FLIGHT INFORMATION REGISTRATION
+Route::get('/delegate-flight-information', [DelegateController::class, 'DelegateFlightForm'])->name('delegate-flight-information');
+Route::post('/upload-flight-information', [DelegateController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+Route::get('/accompany-flight-information', [AccompanyController::class, 'AccompanyFlightForm'])->name('accompany-flight-information');
+Route::post('/upload-flight-information', [AccompanyController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
@@ -66,7 +76,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/generate-list', [PDFController::class, 'generatePDF'])->name('generate-list');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard2', [AdminController::class, 'dashboardv2'])->name('dashboard2');
-
     Route::delete('/delete-account/{id}', [AdminController::class, 'deleteAccount'])->name('delete-account');
     Route::get('/create-meeting-room', [SideMeetingController::class, 'reserveMeetingRoom'])->name('reserveMeetingRoom');
     Route::delete('/delete/{id}', [FileController::class, 'deleteFile'])->name('file.delete');
@@ -76,12 +85,11 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
 
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
-
-    Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
-    Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
 });
 
-Route::group(['middleware' => 'super_user'], function (){
+Route::group(['middleware' => 'super_user'], function () {
+    Route::get('/edit-files/{id}', [FileController::class, 'editFileName'])->name('editFileName');
+    Route::post('/update-file/{id}', [FileController::class, 'updateFileName'])->name('updateFileName');
     Route::get('/files', [AdminController::class, 'file_uploads'])->name('files');
     Route::get('/meeting-reservations', [AdminController::class, 'reservation_view'])->name('meeting-reservations');
     Route::get('/account_list', [AdminController::class, 'account_list'])->name('account_list');
@@ -122,3 +130,4 @@ Route::middleware('auth', 'statusCheck')->group(function () {
 
 
 Route::get('send', [HomeController::class, 'sendNotif'])->name('send');
+// Route::get('array-test', [HomeController::class, 'test'])->name('test');

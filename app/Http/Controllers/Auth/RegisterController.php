@@ -68,45 +68,36 @@ class RegisterController extends Controller
             'country' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
             'privacy' => ['required', 'string'],
-            'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:9999'],
             'salutation' => ['required', 'string', 'max:255'],
             'passport_num' => ['required', 'string'],
             'address' => ['required', 'string'],
             'telephone' => ['required', 'string'],
             'mobile' => ['nullable', 'string'],
-            'passport_photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
-            'approval_doc' => ['required', 'file', 'mimes:pdf', 'max:2048'],
-
+            'passport_photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:9999'],
+            'is_HOD' => ['required', 'string', 'in:Yes,No'],
 
             // Conference Details
             'conference_role' => ['required', 'string', 'max:255'],
-            'badge_name' => ['required', 'string'],
-
-            // Flight Details
-            // Arrival
-            'arrival_flight_num' => ['required', 'string'],
-            'arrival_date' => ['required', 'date'],
-            'arrival_time' => ['required', 'date_format:H:i'],
-            // Departure
-            'departure_flight_num' => ['required', 'string'],
-            'departure_date' => ['required', 'date'],
-            'departure_time' => ['required', 'date_format:H:i'],
+            'badge_name' => ['nullable', 'string'],
 
             // Accommodations & Preferences
             'airport_destination' => ['nullable', 'string', 'max:255'],
             'hotel_reco' => ['nullable', 'string', 'max:255'],
             'otherHotel' => ['nullable', 'string'],
             'attire_size' => ['nullable', 'string'],
-            'attire_special_req' => ['required', 'string'],
+            'attire_special_req' => ['nullable', 'string'],
             'preferred_activity' => ['nullable', 'string', 'max:255'],
-            'dietary_restrictions' => ['nullable', 'string', 'max:255'],
+            'dietary_restrictions' => ['nullable', 'array'],
+            'dietary_restrictions.*' => ['string', 'max:255'],
             'dietary_special_req' => ['nullable', 'string'],
 
             // Accompanying Person/Spouse
             'has_spouse' => ['nullable', 'string'],
-            'accomp_name' => ['nullable', 'string'],
-            'accomp_name' => ['nullable', 'string'],
-            'accomp_preferred_activity' => ['nullable', 'string', 'max:255'],
+            'accomp_fname' => ['nullable', 'array'],
+            'accomp_fname.*' => ['nullable', 'string'],
+            'accomp_lname' => ['nullable', 'array'],
+            'accomp_lname.*' => ['nullable', 'string'],
         ]);
     }
 
@@ -128,11 +119,9 @@ class RegisterController extends Controller
             $passportfileName = $fullName . '.jpg';
             $passportImagePath = $data['passport_photo']->storeAs('passport_photos', $passportfileName, 'public');
         }
-        if (isset($data['approval_doc'])) {
-            $fullName = $data['first_name'] . '_' . $data['last_name'];
-            $approval_docName = $fullName . '.pdf';
-            $approvalDocPath = $data['approval_doc']->storeAs('approval_docs', $approval_docName, 'public');
-        }
+        $dietary_restrictions = json_encode($data['dietary_restrictions']);
+        $accomp_fname = json_encode($data['accomp_fname']);
+        $accomp_lname = json_encode($data['accomp_lname']);
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -147,9 +136,7 @@ class RegisterController extends Controller
             'profile_image' => $profilefileName, // Save only the file name
             'airport_destination' => $data['airport_destination'],
             'attire_size' => $data['attire_size'],
-            'preferred_activity' => $data['preferred_activity'],
             'has_spouse' => $data['has_spouse'],
-            // Add the new fields below
             'salutation' => $data['salutation'],
             'passport_num' => $data['passport_num'],
             'address' => $data['address'],
@@ -157,21 +144,14 @@ class RegisterController extends Controller
             'mobile' => $data['mobile'],
             'passport_photo' => $passportfileName, // Save only the file namey
             'badge_name' => $data['badge_name'],
-            'arrival_flight_num' => $data['arrival_flight_num'],
-            'arrival_date' => $data['arrival_date'],
-            'arrival_time' => $data['arrival_time'],
-            'departure_flight_num' => $data['departure_flight_num'],
-            'departure_date' => $data['departure_date'],
-            'departure_time' => $data['departure_time'],
             'hotel_reco' => $data['hotel_reco'],
             'attire_special_req' => $data['attire_special_req'],
-            'dietary_restrictions' => $data['dietary_restrictions'],
+            'dietary_restrictions' => $dietary_restrictions,
             'dietary_special_req' => $data['dietary_special_req'],
             'otherHotel' => $data['otherHotel'],
-            'accomp_name' => $data['accomp_name'],
-            'accomp_country' => $data['accomp_country'],
-            'accomp_preferred_activity' => $data['accomp_preferred_activity'],
-            'approval_doc' => $approval_docName,
+            'accomp_fname' => $accomp_fname,
+            'accomp_lname' => $accomp_lname,
+            'is_HOD' => $data['is_HOD'],
 
         ]);
     }

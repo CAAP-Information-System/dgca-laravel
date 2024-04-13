@@ -16,9 +16,13 @@
                             <p class="count-value">{{ $usercount }}</p>
                         </div>
                     </header>
-                    <div class="export-btn-container">
-                        <a href="{{ route('generate-registration') }}" target="_blank" class="open-reg">Open Registration List</a>
-                        <a href="{{ route('generate-pendings') }}" target="_blank" class="open-pending">Pending Accounts List</a>
+                    <div class="export-container">
+                        <header class="export_header">Select PDF Exports:</header>
+                        <div class="export-btn-container">
+
+                            <a href="{{ route('generate-registration') }}" target="_blank" class="open_pdf" id="reg_list">Open Registration List</a>
+                            <a href="{{ route('generate-pendings') }}" target="_blank" class="open_pdf" id="pending_list">Pending Accounts List</a>
+                        </div>
                     </div>
                     <div class="accounts-table">
                         <!-- Sorting Form -->
@@ -29,7 +33,7 @@
                                 <select name="country" id="country">
                                     <option value="">-- Select Country --</option>
                                     <!-- Add options dynamically based on available countries -->
-                                    @foreach($countries  as $country)
+                                    @foreach($countries as $country)
                                     <option value="{{ $country }}">{{ $country }}</option>
                                     @endforeach
                                 </select>

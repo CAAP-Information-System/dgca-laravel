@@ -24,29 +24,19 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('passport_num');
             $table->string('designation');
+            $table->string('is_HOD')->nullable();
             $table->string('gender');
             $table->string('address');
             $table->string('telephone');
             $table->string('mobile');
             $table->string('passport_photo')->nullable();
             $table->string('profile_image')->nullable();
-            $table->string('approval_doc')->nullable();
 
             // Conference Details
-            $table->string('badge_name');
+            $table->string('badge_name')->nullable();
             $table->string('conference_role');
             $table->string('country');
             $table->string('organization');
-
-            // Flight Details
-            // Arrival
-            $table->string('arrival_flight_num');
-            $table->date('arrival_date');
-            $table->time('arrival_time');
-            // Departure
-            $table->string('departure_flight_num');
-            $table->date('departure_date');
-            $table->time('departure_time');
 
             // Accomodations & Preferences
             $table->string('airport_destination');
@@ -54,15 +44,13 @@ return new class extends Migration
             $table->string('otherHotel')->default('None')->nullable();
             $table->string('attire_size')->nullable();
             $table->string('attire_special_req')->default('None')->nullable();
-            $table->string('preferred_activity')->nullable();
-            $table->string('dietary_restrictions')->default('None')->nullable();
+            $table->json('dietary_restrictions')->default('None')->nullable();
             $table->string('dietary_special_req')->default('None')->nullable();
 
             // Accompanying Person/Spouse
             $table->string('has_spouse')->nullable();
-            $table->string('accomp_name')->nullable();
-            $table->string('accomp_country')->nullable();
-            $table->string('accomp_preferred_activity')->nullable();
+            $table->string('accomp_fname')->nullable();
+            $table->string('accomp_lname')->nullable();
 
             // Copyright & Privacy Policy
             $table->string('privacy')->default('Unapproved');
@@ -73,9 +61,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('users');

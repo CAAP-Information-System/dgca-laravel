@@ -16,195 +16,147 @@
     opacity: 1;
     transform: translateY(0);
 }
-.modal-body .email-link{
+.modal {
+    background-color: rgba(0, 30, 80, 0.5);
+    backdrop-filter: blur(5px);
+}
+.modal-body .email-link {
     font-size: 17px;
     text-decoration: none;
 }
-.modal-body .note{
+.modal-body .note {
     font-weight: bold;
     padding-bottom: 5px;
 }
-.welcome {
-    background: url("/img/home/photo-tiles-strip.png");
-    background-size: 85% auto;
-    background-repeat: no-repeat;
-    background-position: calc(100% - -28vw) center; /* Adjust the value as needed */
+.content-main {
+    margin-bottom: 10vh;
+}
+.header__separator {
+    position: relative;
+    font-size: 4rem;
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 2vh;
+    color: #3b3b3b;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff; /* Add white outline */
+}
+
+.section_info_header {
+    position: relative;
     z-index: 5;
-    padding: 5vh;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2vh;
+    text-transform: uppercase;
+    background: linear-gradient(
+        120deg,
+        rgba(0, 30, 80, 1) 0%,
+        rgba(105, 177, 242, 1) 73%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.welcome {
     color: #3b3b3b;
     width: 100%;
-    height: 100vh;
+
 }
-.carousel-container {
-    width: 90vw;
-    margin-top: -3%;
+
+.welcome-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .welcome-header {
     margin-top: 5vh;
-    font-size: 4vw;
-    line-height: 7vh;
+    font-size: 6rem;
+    line-height: 10vh;
+    display: inline-block;
+    line-height: 10vh;
+    text-align: center; /* Center the text */
+    width: auto;
 }
+
 .plane-sketch {
-    margin-left: 3vh;
-    width: 100px;
+    margin-left: 2vh;
+    width: 120px;
     height: auto;
 }
 .span {
     font-family: "Batangas";
 }
-.theme {
-    margin-top: 2vh;
-    font-size: 4vh;
+.theme-container {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.typing-container {
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
     font-family: "Batangas";
+}
+.symbol{
+    font-size: 2rem;
+}
+.theme__input {
+    font-family: "Batangas";
+    color: #2263a0;
+
+}
+.welcome-banner .span:hover {
+    font-size: 1.2em;
+    transition: font-size 0.3s ease-in-out;
+    color: #50a9fb;
+}
+.theme_main_text{
+    font-size: 2rem;
 }
 .theme-message {
     width: 60%;
+    margin-top: 2vh;
+    text-align: center;
+    padding-bottom: 5vh;
+    font-size: 17px;
 }
-
-/* SUB NAVIGATION */
-.main-conf-nav {
-    display: inline-block;
-
-}
-.conf-nav ul {
-    display: flex;
-    align-items: center;
-    background-color: #ffff;
+.apac-2024 {
     border-radius: 15px;
-    padding: 15px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-.conf-nav li {
-    list-style-type: none;
-    margin: 15px;
-}
-
-.conf-nav li a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #3b3b3b;
     position: relative;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px;
-}
-.conf-nav li a:hover {
-    text-decoration: underline;
-}
-.conf-nav li a .fa-solid {
-    margin-right: 10px;
-    font-size: 1.1rem;
-    color: #001e50;
-}
-/* .conf-nav li a:hover{
-    background-color: #001E50;
-    color: #ffff;
-    border-radius: 15px;
-    transition: .1s ease-in-out;
-
-} */
-
-.dropdown1 {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown1:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 110%;
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-    width: 200px;
-    border-radius: 15px;
-}
-
-.dropdown-content a {
-    color: #3b3b3b;
-    width: 100%;
-    font-weight: 300;
-    text-transform: capitalize;
-}
-
-.dropdown-content a:hover {
-    background-color: #001e50;
-    color: #ffff;
-    transition: 0.1s ease;
-    margin-left: 10px;
-    border-radius: 0 15px 15px 0;
-    z-index: 5;
-}
-
-.dropdown1 {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown1:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    min-width: 160px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.conf-nav .dropdown-content .dropdown-link {
-    position: relative;
-    z-index: 1;
-}
-
-/* Dropdown styles */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown1 .dropdown-content a {
-    color: #3b3b3b;
-    width: 100%;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
-.dropdown-content a:hover {
-    background-color: #001e50;
-    color: #ffff;
-    transition: 0.1s ease;
-    margin-left: 10px;
-    border-radius: 15px 15px 15px 15px;
-    z-index: 5;
+    z-index: 3;
 }
 
 .abt-us-ctn {
-    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 2%;
     margin-bottom: 2%;
 }
 .about-us-btn {
+    text-align: center;
     font-size: 17px;
     color: #3b3b3b;
     border: 2px solid #3b3b3b;
+    padding: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.reg-now-btn {
+    text-align: center;
+    font-size: 17px;
+    color: #2263a0;
+    border: 2px solid #2263a0;
     padding: 10px;
     text-decoration: none;
     letter-spacing: 2px;
@@ -213,37 +165,203 @@
     background-color: #3b3b3b;
     color: #ffff;
 }
-.arrow-dotted {
-    width: 40px;
-    height: auto;
-    margin-left: 5vh;
-    transform: rotate(270deg);
+.reg-now-btn:hover {
+    background-color: #2263a0;
+    color: #ffff;
+}
+.main-countdown {
+    display: flex;
+    justify-content: center;
+    background: url("/img/home/countdown-cover.jpg");
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    position: relative;
 }
 
+.countdown-main {
+    background-color: #ffff;
+    margin-top: 45vh;
+    margin-right: 30vw;
+    border-radius: 20px;
+    padding: 15px;
+    width: 90%;
+    z-index: 10;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.count-section {
+    display: flex;
+    justify-content: center;
+}
+.countdown-sect {
+    color: #3b3b3b;
+}
+
+.countdown-header {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.countdown ul {
+    display: flex;
+    gap: 6vh;
+}
+.countdown ul li {
+    display: inline-block;
+    font-size: 2rem;
+    list-style-type: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.countdown ul li span {
+    width: 100%;
+    display: block;
+    font-size: 3rem;
+    border-radius: 20px;
+    font-weight: 800;
+}
+.countdown-message {
+    font-size: 1.2vw;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.about-cebu {
+    margin-top: 50vh;
+}
 .city-smoke-bg {
-    width: 100%; /* Set width to 100% to fit the screen */
+    width: 100%;
     height: auto;
     position: absolute;
-    top: 80%;
-    left: 0; /* Set left to 0 to align with the left edge of the screen */
+    top: 185%;
+    left: 0;
 }
-.cebu-info {
+.welcome-message-section {
+    position: relative;
+    z-index: 5;
+    background-color: #ffff;
+    display: inline-block;
+    margin-top: 4vh;
+}
+.welcome-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message-header {
+    font-size: 2em;
+    color: #3b3b3b;
+    padding-bottom: 25px;
+    font-weight: bold;
+    line-height: 6vh;
+}
+.message-header span {
+    display: block;
+    color: #50a9fb;
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+.dg-message {
+    width: 90%;
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 17px;
+    text-align: justify;
+    margin-right: 3vw;
+}
+.dg-message .fa-quote-left {
+    font-size: 2rem;
+    color: #969696;
+    margin-right: 15px;
+}
+.messenger {
+    margin-top: 6vh;
+}
+.messenger span {
+    display: block;
+    line-height: 3vh;
+}
+.messenger .name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3b3b3b;
+}
+.messenger .position {
+    font-style: italic;
+}
+.capt-tamayo-img {
+    width: 75%; /* Set image width to cover the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Ensure the caption doesn't overflow */
+}
+.caption {
+    border-top: 4px solid #50a9fb;
+    position: absolute;
+    bottom: -95px; /* Initially hide the caption below the image */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: bottom 0.3s ease; /* Add transition for smooth sliding */
+    line-height: 1.5vh;
+    padding: 10px;
+}
+.caption .name {
+    font-size: 20px;
+}
+.caption .position {
+    font-size: 16px;
+    line-height: 1.5vh;
+}
+.image-container:hover .caption {
+    bottom: 0; /* Slide the caption upwards on hover */
+}
+
+.cebu_info_section {
+    padding: 15px;
+}
+.cebu_map {
+    width: 50%;
+    height: auto;
+}
+.cebu_info_container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Adjusted from center to flex-start */
-    margin-top: 10%;
+}
+.cebu_info_header {
+    display: block;
 }
 
 .cebu-details {
+    position: relative;
+    z-index: 3;
     background-color: rgba(59, 59, 59, 0.7);
+    -webkit-box-shadow: -9px 13px 0px 4px rgba(80, 169, 251, 1);
+    -moz-box-shadow: -9px 13px 0px 4px rgba(80, 169, 251, 1);
+    box-shadow: -9px 13px 0px 4px rgba(80, 169, 251, 1);
     position: relative;
     color: #ffff;
     padding: 25px;
     width: 50%;
+    margin-left: 6%;
     border-radius: 20px;
     max-height: 600px;
     overflow-y: auto;
+    transition: transform 0.3s ease, border 0.3s ease, width 0.3s ease;
 }
+
 /* width */
 .cebu-details::-webkit-scrollbar {
     width: 8px;
@@ -285,653 +403,616 @@
     margin-top: 3%;
     max-height: 700px;
 }
-.cebu-pinned-img {
-    position: absolute;
-    z-index: 2;
-    width: 50%;
-    height: auto;
-    left: 45%; /* Adjust as needed */
-    /* Add other styling properties as needed */
-}
-.announcements {
-    padding: 4vh 4vh;
-    margin-top: 20%;
-    color: #3b3b3b;
-}
-.announcement-header {
-    font-size: 3rem;
-    font-weight: bold;
-}
-.announcement-arrow {
-    width: 40px;
-    height: auto;
-    margin-left: 5vh;
-    transform: rotate(270deg);
-}
-.announcement-content {
-    text-align: justify;
-}
 
-ul li {
-    margin: 10px;
+.sponsor__footer {
+    margin-bottom: 8vh;
 }
-
-.count-section {
-    width: 100%;
-    text-align: left;
-}
-.countdown-sect {
+.sponsors__header {
+    font-size: 4rem;
     color: #3b3b3b;
-}
-.countdown-main {
-    border-radius: 20px;
-}
-.countdown-header {
-    font-size: 30px;
-    font-weight: normal;
-    letter-spacing: 0.125rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.countdown ul {
-    display: flex;
-    gap: 6vh;
-}
-.countdown ul li {
-    display: inline-block;
-    font-size: 1vw;
-    list-style-type: none;
-    text-transform: uppercase;
     text-align: center;
+    margin-bottom: 8vh;
 }
-
-.countdown ul li span {
-    width: 100%;
-    display: block;
-    font-size: 1.5vw !important;
-    border-radius: 20px;
-    font-weight: 800;
-}
-.countdown-message {
-    font-size: 1.2vw;
-    font-style: italic;
-}
-
-.carousel-container {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
+.marquee {
     overflow: hidden;
-    text-align: left;
+    white-space: nowrap;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.sponsors-list {
+    display: flex;
     justify-content: center;
-    right: 30%;
+    align-items: center;
+    gap: 3vw;
+    animation: marquee 20s linear infinite; /* Adjust the duration as needed */
 }
 
-.carousel-inner {
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-.carousel-item {
-    position: relative; /* Position relative for absolute positioning */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-sizing: border-box;
+.sponsor-item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    left: 30%;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
 }
 
-.banner-img {
-    position: absolute; /* Position absolute for overlapping */
-    top: 0;
-    left: 0;
-    width: 50%;
+.sponsor-image {
+    width: 100px;
+    height: 100px;
+}
+
+.sponsor-name {
+    margin-top: 10px; /* Adjust margin as needed */
+}
+.svg_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    margin: 5vh 5vh;
+}
+.dotted-line-img {
+    width: 170px;
     height: auto;
-    object-fit: cover;
 }
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-radio {
-    display: none;
-}
-
-.carousel-radio-label {
-    display: inline-block;
-    width: 10%;
-    height: 10px;
-    background-color: #ddd;
-    cursor: pointer;
-    margin: 0 5px;
-    border-radius: 5px;
-}
-
-.carousel-inner {
-    transition: transform 0.1s ease-in-out; /* Reduced transition duration */
-}
-
-#radio1:checked + .carousel-radio-label {
-    background-color: #565656;
-}
-
-#radio2:checked + .carousel-radio-label {
-    background-color: #565656;
-}
-
-#radio3:checked + .carousel-radio-label {
-    background-color: #565656;
-}
-
-@media only screen and (min-width: 1260px) and (max-width: 1440px) {
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -45vw) center; /* Adjust the value as needed */
-        z-index: 5;
-        padding: 5vh;
-        color: #3b3b3b;
-        width: 103%;
-        height: 120vh;
+@media only screen and (max-width: 600px) {
+    .welcome-header {
+        width: 100%;
     }
+    .typing-container {
+        font-size: 2em;
+    }
+    .theme-message {
+        text-align: justify;
+    }
+}
+@media only screen and (min-width: 1260px) and (max-width: 1450px) {
     .carousel-container {
         width: 90vw;
         margin-top: -4%;
         right: 27%;
     }
-    .welcome {
-        margin-left: -3%;
-    }
     .welcome-header {
-        font-size: 4.1vw;
+        font-size: 5em;
     }
     .theme {
-        font-size: 2.3vw;
+        font-size: 3em;
     }
     .theme-message {
-        font-size: 1.2vw;
+        font-size: 1.2em;
     }
-    .main-conf-nav {
-        width: 55vw;
-    }
-    .main-conf-nav a {
-        font-size: 0.8vw !important;
+    .main-countdown {
+        margin-top: 10rem !important;
     }
     .about-us-btn {
         font-size: 1.1vw;
+    }
+    .countdown-main {
+        background-color: #ffff;
+        margin-top: 45vh;
+        margin-right: 38vw;
+        border-radius: 20px;
+        padding: 15px;
+        width: 45vw;
+        height: 20vh;
+        z-index: 10;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
     .countdown-sect {
         margin-top: -1%;
     }
     .countdown ul li span {
-        font-size: 1.3vw !important;
+        font-size: 1.8vw;
+    }
+    .countdown ul li{
+        font-size: 1.8vw;
     }
     .countdown-message {
-        font-size: 1.2vw;
+        font-size: 1.8vw;
     }
-    .city-smoke-bg{
-        margin-top: 8%;
+    .city-smoke-bg {
+        margin-top: 28%;
     }
 }
+/* @media only screen and (min-height: 600px) and (max-height: 800px) {
+    .city-smoke-bg {
+        margin-top: 0% !important;
+    }
+    .header__separator{
+        margin-top: 10vh !important;
+    }
+} */
 @media only screen and (min-width: 1025px) and (max-width: 1259px) {
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 110% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -55vw) center; /* Adjust the value as needed */
-        z-index: 5;
-        padding: 5vh;
-        color: #3b3b3b;
-        width: 103%;
-        /* height: 90vh; */
-    }
-    .carousel-container {
-        width: 89vw;
-        margin-top: -8%;
-    }
-    .welcome {
-        margin-left: -3%;
-    }
+
     .welcome-header {
-        font-size: 4.3vw;
+        font-size: 5rem;
+        line-height: 6vh;
     }
     .theme {
-        font-size: 2vw;
+        font-size: 3em;
     }
     .theme-message {
-        font-size: 0.9vw;
+        font-size: 1.2em;
     }
     .main-conf-nav {
-        width: 70vw;
-    }
-    .main-conf-nav ul {
-        width: 60vw;
+        width: 70%;
     }
     .main-conf-nav a {
         width: 20%;
-        font-size: 0.85vw !important;
+        font-size: 50px;
     }
 
     .conf-nav i.fa-solid {
-        font-size: 1vw !important; /* Adjust the size according to your preference */
+        font-size: 1vw; /* Adjust the size according to your preference */
         margin-right: 2px; /* Optional: Add some space between the icon and text */
+    }
+    .abt-us-ctn{
+        margin-bottom: 0;
     }
     .about-us-btn {
         font-size: 1.1vw;
     }
+    .main-countdown {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background: url("/img/home/countdown-cover.jpg");
+        background-size: 75% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    .countdown-main{
+        margin-top: 43vh;
+        margin-right: 32vw;
+        width: 40vw;
+    }
     .countdown-sect {
         margin-top: -1%;
     }
+    .countdown ul li {
+        font-size: 1.3vw;
+    }
+
     .countdown ul li span {
-        font-size: 1.3vw !important;
+        font-size: 2vw;
     }
     .countdown-message {
-        font-size: 1.5vw;
+        font-size: 1.4vw;
     }
-    .city-smoke-bg{
-        margin-top: 8%;
+    .city-smoke-bg {
+        margin-top: 10%;
+    }
+    .about-cebu{
+        margin-top: 45vh;
+    }
+    .capt-tamayo-img{
+        margin-left: 4vw;
     }
 }
 @media only screen and (min-width: 900px) and (max-width: 1024px) {
     .content-main {
-        margin-left: 2%;
+        margin-left: -6%;
     }
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 125% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -65vw) center; /* Adjust the value as needed */
-        z-index: 5;
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
-        height: 130vh;
+    .header__separator{
+        font-size: 3rem;
     }
+    .section_info_header{
+        width: 90%;
+        font-size: 25px;
+    }
+    .banner-img {
+        width: 300px;
+        height: auto;
+    }
+
     .carousel-container {
         width: 100%;
         margin-top: -2%;
         right: 30%;
     }
     .plane-sketch {
-        width: 50px; /* Set the desired width */
-        height: 50px; /* Set the desired height */
+        width: 80px; /* Set the desired width */
+        height: auto; /* Set the desired height */
     }
     .welcome-header {
-        font-size: 5vw;
-    }
-    .theme {
-        font-size: 2.8vw;
+        font-size: 4rem;
+        line-height: 5vh;
     }
     .theme-message {
-        font-size: 1.5vw;
-        width: 50vw;
+        font-size: 17px;
+        width: 70%;
     }
-    .main-conf-nav {
-        margin-top: 3%;
-        width: 88vw;
-    }
+
     .conf-nav i.fa-solid {
-        font-size: 1.5vw !important; /* Adjust the size according to your preference */
+        font-size: 1.5vw; /* Adjust the size according to your preference */
         margin-right: 2px; /* Optional: Add some space between the icon and text */
     }
     .main-conf-nav a {
-        font-size: 1.4vw !important;
+        font-size: 20px;
     }
+
     .about-us-btn {
-        font-size: 1.3vw;
+        font-size: 17px;
     }
-    .countdown-sect {
-        margin-top: -1%;
+    .main-countdown {
+        margin-top: -20vh;
+    }
+
+    .countdown-main{
+        margin-top: 43vh;
     }
     .countdown ul li span {
-        font-size: 2.5vw !important;
+        font-size: 20px;
     }
     .countdown ul li {
-        font-size: 1.5vw !important;
+        font-size: 20px;
     }
     .countdown ul {
-        gap: 2%;
+        gap: 4vw;
     }
     .countdown-message {
-        font-size: 1.5vw;
+        font-size: 20px;
     }
-    .city-smoke-bg{
-        top: 110%;
+    .city-smoke-bg {
+        margin-top: -75vh;
+    }
+    .about-cebu {
+        margin: 0;
+    }
+    .welcome-message-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .capt-tamayo-img{
+        width: 400px;
+        height: auto;
+    }
+    .fa-quote-left{
+        font-size: 20px;
+    }
+    .message-header{
+        text-align: center;
+    }
+    .messenger{
+        margin-top: 6vh;
+        text-align: center;
     }
 }
 @media only screen and (min-width: 800px) and (max-width: 899px) {
     .content-main {
-        margin-left: 1%;
+        margin-left: -2%;
     }
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 120% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -50vw) -30px; /* Adjust the value as needed */
-        z-index: 5;
-        padding: 0vh;
-        color: #3b3b3b;
+
+    .banner-content {
         width: 100%;
-        /* height: 90vh; */
-    }
-    .carousel-container {
-        width: 100%;
-        margin-top: -2%;
     }
     .plane-sketch {
-        width: 50px; /* Set the desired width */
-        height: 50px; /* Set the desired height */
+        display: none;
+    }
+    .header__separator{
+        font-size: 4rem;
+    }
+    .section_info_header{
+        width: 100%;
+        font-size: 25px;
+    }
+    .banner-img {
+        width: 300px;
+        height: auto;
+    }
+
+    .plane-sketch {
+        width: 80px; /* Set the desired width */
+        height: auto; /* Set the desired height */
     }
     .welcome-header {
-        font-size: 5vw;
+        font-size: 4rem;
+        line-height: 7vh;
     }
-    .theme {
-        font-size: 2.8vw;
+    .typing-container{
+        font-size: 3rem;
     }
     .theme-message {
-        font-size: 1.5vw;
-        width: 50vw;
+        font-size: 17px;
+        width: 90%;
     }
-    .main-conf-nav {
-        margin-top: 3%;
-        width: 88vw;
-    }
+
     .conf-nav i.fa-solid {
-        font-size: 1.5vw !important; /* Adjust the size according to your preference */
-        margin-right: 2px; /* Optional: Add some space between the icon and text */
+        display: none;
     }
     .main-conf-nav a {
-        font-size: 1.4vw !important;
+        font-size: 20px;
     }
+
     .about-us-btn {
-        font-size: 1.3vw;
+        font-size: 17px;
     }
-    .countdown-sect {
-        margin-top: -1%;
+    .main-countdown {
+        margin-top: -10vh;
+    }
+    .countdown-main{
+        margin-top: 43vh;
     }
     .countdown ul li span {
-        font-size: 2.5vw !important;
+        font-size: 20px;
     }
     .countdown ul li {
-        font-size: 1.5vw !important;
+        font-size: 20px;
     }
     .countdown ul {
-        gap: 2%;
+        gap: 4vw;
     }
     .countdown-message {
-        font-size: 1.5vw;
+        font-size: 20px;
     }
-    .city-smoke-bg{
-        margin-top: 10%;
+    .city-smoke-bg {
+        margin-top: -60vh;
     }
-    .cebu-pinned-img{
-        margin-left: 5%;
+    .about-cebu {
+        margin: 0;
+    }
+    .welcome-message-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .capt-tamayo-img{
+        width: 400px;
+        height: auto;
+    }
+    .fa-quote-left{
+        font-size: 20px;
+    }
+    .message-header{
+        text-align: center;
+    }
+    .messenger{
+        margin-top: 6vh;
+        text-align: center;
     }
 }
 
 @media only screen and (min-width: 653px) and (max-width: 799px) {
     .content-main {
-        margin-left: -2%;
-    }
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 150% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -75vw) center; /* Adjust the value as needed */
-        z-index: 5;
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 103%;
-        /* height: 90vh; */
-    }
-    .welcome {
         margin-left: -3%;
     }
-    .carousel-container {
-        width: 110%;
-        margin-top: -2%;
+    .banner-content {
+        width: 100%;
     }
     .plane-sketch {
-        width: 50px; /* Set the desired width */
-        height: 50px; /* Set the desired height */
-    }
-    .welcome-header {
-        font-size: 5.5vw;
-    }
-    .theme {
-        font-size: 3.5vw;
-    }
-    .theme-message {
-        font-size: 1.8vw;
-        width: 50vw;
-    }
-    .main-conf-nav {
-        margin-top: 3%;
-        width: 88vw;
-    }
-
-    .conf-nav i.fa-solid {
         display: none;
     }
-    .main-conf-nav a {
-        font-size: 1.6vw !important;
+    .header__separator{
+        font-size: 4rem;
     }
-    .about-us-btn {
-        font-size: 1.8vw;
+    .section_info_header{
+        width: 100%;
+        font-size: 25px;
     }
-    .countdown-sect {
-        margin-top: -1%;
-        margin-left: -5%;
-    }
-    .countdown ul li span {
-        font-size: 2.5vw !important;
-    }
-    .countdown ul li {
-        font-size: 1.5vw !important;
-    }
-    .countdown ul {
-        gap: 2%;
-    }
-    .countdown-message {
-        font-size: 2vw;
-        margin-left: 5%;
-    }
-    .cebu-pinned-img {
-        display: none;
-    }
-    .cebu-details {
-        width: 90%;
-    }
-    .city-smoke-bg{
-        margin-top: 5%;
-    }
-}
-@media only screen and (min-width: 500px) and (max-width: 652px) {
-    .content-main {
-        margin-left: -7%;
-    }
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 170% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -95vw) center; /* Adjust the value as needed */
-        z-index: 5;
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 103%;
-        /* height: 90vh; */
-    }
-    .welcome {
-        margin-left: -3%;
-    }
-    .carousel-container {
-        width: 105vw;
-        margin-top: -2%;
-    }
-    .carousel-item {
-        margin-left: -5%;
-    }
-    .carousel-inner {
-        left: 5%;
-    }
-    .plane-sketch {
-        width: 50px; /* Set the desired width */
-        height: 50px; /* Set the desired height */
-    }
-    .welcome-header {
-        font-size: 6vw;
-        z-index: 2;
-    }
-    .theme {
-        font-size: 3.8vw;
-    }
-    .theme-message {
-        font-size: 2vw;
-        width: 50vw;
-    }
-    .conf-nav {
-        height: 50%;
-        margin-left: -35%;
-    }
-    .conf-nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .main-conf-nav {
-        margin-top: 3%;
-        width: 50vw;
-        margin-left: 20%;
-        margin-right: auto;
-    }
-    /* Set a higher z-index value for the dropdown container */
-    .conf-nav {
-        position: relative;
-        z-index: 2;
-    }
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 110%;
-        background-color: #ffffff;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 5;
+    .banner-img {
         width: 300px;
-        border-radius: 15px;
-        left: 70%;
-    }
-    .about-us-btn {
-        border: 2px solid #ffffff;
-    }
-    .abt-us-ctn {
-        position: relative;
-        z-index: 1; /* Adjust the value as needed */
-        top: 10%;
-        margin-left: 30%;
-
-        margin-bottom: 3%;
-    }
-    .conf-nav i.fa-solid {
-        display: none;
-    }
-    .main-conf-nav a {
-        font-size: 2.6vw !important;
-    }
-    .about-us-btn {
-        font-size: 3vw;
-        z-index: 2;
-        color: #ffffff;
-    }
-
-    .count-section {
-        position: relative;
-        z-index: 2; /* Adjust the value as needed */
-    }
-
-    .countdown-sect {
-        margin-top: 20%;
-        margin-left: 5%;
-        position: relative;
-        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
-    }
-
-    .countdown ul li span {
-        font-size: 6vw !important;
-        color: #ffffff;
-    }
-    .countdown ul li {
-        font-size: 3vw !important;
-        color: #ffffff;
-    }
-    .countdown ul {
-        gap: 2%;
-    }
-    .countdown-message {
-        font-size: 3vw;
-        margin-left: 5%;
-        color: #ffffff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
-    }
-
-    .city-smoke-bg {
-        width: 100%;
-        height: 150%;
-        position: absolute;
-        top: 75%;
-        left: 0;
-        object-fit: cover;
-    }
-    .about-cebu {
-        height: 500% !important;
-    }
-    .cebu-info {
-        width: 100%;
-    }
-    .cebu-details {
-        margin-left: 0%;
-        margin-top: 35%;
-        width: 90%;
-    }
-    .cebu-pinned-img {
-        display: none !important;
-    }
-    .detail-main-header {
-        font-size: 10vw;
-    }
-
-    .announcement-header {
-        font-size: 5vw !important;
-    }
-    .announcement-arrow {
-        width: 25px !important; /* Adjust this value to make the image smaller */
-        /* Optionally, you can set the height to maintain the aspect ratio */
         height: auto;
     }
-}
-@media only screen and (min-width: 440px) and (max-width: 499px) {
-    .content-main {
-        margin-left: 3%;
+
+    .plane-sketch {
+        width: 80px; /* Set the desired width */
+        height: auto; /* Set the desired height */
     }
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 240% auto;
-        background-repeat: no-repeat;
-        background-position-x: calc(100% - -150vw) 50px;
-        z-index: 5;
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
-        height: 100vh;
+    .welcome-header {
+        font-size: 4rem;
+        line-height: 7vh;
+    }
+    .typing-container{
+        font-size: 3rem;
+    }
+    .theme-message {
+        font-size: 17px;
+        width: 90%;
     }
 
+    .conf-nav i.fa-solid {
+        display: none;
+    }
+    .main-conf-nav a {
+        font-size: 20px;
+    }
+
+    .about-us-btn {
+        font-size: 17px;
+    }
+    .main-countdown {
+        margin-top: -10vh;
+    }
+    .countdown-main{
+        margin-top: 43vh;
+    }
+    .countdown ul li span {
+        font-size: 15px;
+    }
+    .countdown ul li {
+        font-size: 15px;
+    }
+    .countdown ul {
+        gap: 2vw;
+    }
+    .countdown-message {
+        font-size: 14px;
+    }
+    .city-smoke-bg {
+        margin-top: -35vh;
+    }
+    .about-cebu {
+        margin: 0;
+    }
+    .cebu_map {
+        display: none; /* Hide the image */
+    }
+    .cebu-details{
+        width: 100%;
+    }
+    .welcome-message-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .capt-tamayo-img{
+        width: 400px;
+        height: auto;
+    }
+    .fa-quote-left{
+        font-size: 20px;
+    }
+    .message-header{
+        text-align: center;
+    }
+    .messenger{
+        margin-top: 6vh;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 652px) {
+    .content-main {
+        margin-left: -4%;
+    }
+    .banner-content {
+        width: 100%;
+    }
+    .plane-sketch {
+        display: none;
+    }
+    .header__separator{
+        font-size: 2.6rem;
+    }
+    .section_info_header{
+        width: 100%;
+        font-size: 20px;
+    }
+    .banner-img {
+        width: 300px;
+        height: auto;
+    }
+
+    .plane-sketch {
+        width: 80px; /* Set the desired width */
+        height: auto; /* Set the desired height */
+    }
+    .welcome-header {
+        font-size: 3rem;
+        line-height: 6vh;
+    }
+    .typing-container{
+        font-size: 3rem;
+    }
+    .theme-message {
+        font-size: 17px;
+        width: 90%;
+    }
+
+    .about-us-btn {
+        font-size: 17px;
+    }
+    .main-countdown {
+        margin-top: -10vh;
+    }
+    .countdown-main{
+        margin-top: 43vh;
+    }
+    .countdown ul li span {
+        font-size: 15px;
+    }
+    .countdown ul li {
+        font-size: 15px;
+    }
+    .countdown ul {
+        gap: 2vw;
+    }
+    .countdown-message {
+        font-size: 14px;
+    }
+    .city-smoke-bg {
+        margin-top: -35vh;
+    }
+    .about-cebu {
+        margin: 0;
+    }
+    .cebu_map {
+        display: none; /* Hide the image */
+    }
+    .welcome-message-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .message-header{
+        font-size: 2rem;
+    }
+    .capt-tamayo-img{
+        width: 300px;
+        height: auto;
+    }
+    .caption{
+        font-size: 15px;
+        bottom: -165px;
+    }
+    .caption .name, .caption .position{
+        line-height: 3vh;
+    }
+    .fa-quote-left{
+        font-size: 20px;
+    }
+    .message-header{
+        text-align: center;
+    }
+    .messenger{
+        margin-top: 6vh;
+        text-align: center;
+    }
+    .cebu_info_container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .cebu-details{
+        width: 90%;
+    }
+    .detail-headers{
+        line-height: 4vh;
+    }
+    .detail-main-header{
+        font-size: 3rem;
+    }
+    .detail-subheader{
+        font-size: 15px;
+    }
+    .detail-content{
+        font-size: 15px;
+    }
+}
+/* PHONE MODE */
+@media only screen and (min-width: 440px) and (max-width: 499px) {
+    .text {
+        font-size: 8vw; /* Adjust font size as needed */
+    }
+    .theme__input {
+        font-size: 8vw; /* Adjust font size as needed */
+        word-wrap: break-word; /* Add word wrapping */
+    }
+    .content-main{
+        padding-right: 10% !important;
+    }
+    .welcome-banner {
+        background: none;
+    }
     .carousel-container {
         width: 105vw;
         margin-top: -2%;
@@ -942,315 +1023,261 @@ ul li {
     .carousel-item {
         left: 15%;
     }
-    .plane-sketch {
-        width: 50px; /* Set the desired width */
-        height: 50px; /* Set the desired height */
-    }
     .welcome-header {
-        font-size: 8.7vw;
+        font-size: 4rem;
         z-index: 2;
+        line-height: 8.5vh;
+        text-align: center;
     }
+    .welcome-header .plane-sketch {
+        display: none;
+    }
+    /* .welcome-banner .span:hover{
+        pointer-events: none;
+    } */
     .theme {
-        font-size: 4vw;
+        font-size: 2rem;
+        text-align: center;
     }
     .theme-message {
-        font-size: 2.3vw;
-        width: 65vw;
+        font-size: 15px;
+        width: 100%;
     }
-    .conf-nav {
-        height: 50%;
-        margin-left: -45%;
-        position: relative;
-        z-index: 2;
-    }
-    .conf-nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 2; /* Set a higher z-index value */
-    }
-
-    .dropdown:hover .dropdown-content {
+    .main-countdown {
         display: block;
-    }
-    .main-conf-nav {
-        margin-top: 3%;
-        width: 50vw;
-        margin-left: 18%;
-        margin-right: auto;
-    }
-    .about-us-btn {
-        border: 2px solid #ffffff;
+        margin: 0 auto;
+        margin-top: 35vh;
     }
     .abt-us-ctn {
+        display: block;
+        margin: 0 auto;
+    }
+    .main-countdown {
+        justify-content: center;
+        background: url("/img/banner/port dgca banner.png");
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
         position: relative;
-        z-index: 1; /* Adjust the value as needed */
-        top: 10%;
-        margin-left: 25%;
-    }
-    .conf-nav i.fa-solid {
-        display: none;
-    }
-    .main-conf-nav a {
-        font-size: 2.6vw !important;
     }
     .about-us-btn {
+        border: 2px solid #3b3b3b;
         font-size: 3vw;
         z-index: 2;
-        color: #ffffff;
+        color: #3b3b3b;
     }
-
-    .count-section {
-        position: relative;
-        z-index: 2; /* Adjust the value as needed */
+    .about-us-btn:hover {
+        background-color: #3b3b3b;
+        color: #ffff;
     }
-
-    .countdown-sect {
-        margin-top: 28%;
-        margin-left: -10%;
-        position: relative;
-        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
+    .main-countdown{
+        top: 100%;
     }
-
+    .count-section{
+        padding-right: 4%;
+    }
+    .countdown-container{
+        padding-left: 30%;
+        padding-top: 30%;
+    }
+    .countdown-main{
+        margin-left: 15%;
+        width: 500px;
+        justify-content: space-around;
+    }
     .countdown ul li span {
-        font-size: 6vw !important;
-        color: #ffffff;
+        font-size: 6vw;
+        color: #3b3b3b;
     }
     .countdown ul li {
-        font-size: 3vw !important;
-        color: #ffffff;
+        font-size: 3vw;
+        color: #3b3b3b;
     }
     .countdown ul {
-        gap: 2%;
+        gap: 6vw;
     }
-    .countdown-message {
-        font-size: 3vw;
-        margin-left: 5%;
-        color: #ffffff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+
+    .main-countdown{
+        margin-top: -5%;
     }
     .city-smoke-bg {
-        width: 100%;
-        height: 150%;
-        position: absolute;
-        top: 75%;
-        left: 0;
-        object-fit: cover;
+        top: 250%;
     }
-    .about-cebu {
-        height: 500% !important;
-    }
-    .cebu-info {
+    .cebu_info_section {
         width: 100%;
     }
     .cebu-details {
         margin-left: -5%;
-        margin-top: 50%;
         width: 90%;
-        height: 600px;
         overflow-y: auto;
     }
+    .about-cebu{
+        margin-top: 50%;
+    }
     .cebu-pinned-img {
-        display: none !important;
+        display: none;
     }
     .detail-main-header {
         font-size: 10vw;
     }
-    .announcements {
-        margin-left: -8%;
-    }
     .announcement-header {
-        font-size: 5vw !important;
-    }
-    .announcement-arrow {
-        width: 25px !important; /* Adjust this value to make the image smaller */
-        /* Optionally, you can set the height to maintain the aspect ratio */
-        height: auto;
+        font-size: 20px;
     }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 439px) {
-    .content-main {
-        margin-left: 5%;
-    }
-    .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 210% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -110vw) 50px;
-        z-index: 5;
-        padding: 0vh;
-        color: #3b3b3b;
-        width: 100%;
 
+    .text {
+        font-size: 8vw; /* Adjust font size as needed */
     }
-
+    .theme__input {
+        font-size: 8vw; /* Adjust font size as needed */
+        word-wrap: break-word; /* Add word wrapping */
+    }
+    .content-main{
+        padding-right: 10% !important;
+    }
+    .welcome-banner {
+        background: none;
+    }
     .carousel-container {
-        width: 100vw;
+        width: 105vw;
         margin-top: -2%;
-        right: 23%;
     }
     .carousel-inner {
-        width: 100vw;
+        width: 110vw;
     }
     .carousel-item {
-        left: 20%;
-    }
-    .plane-sketch {
-        display: none;
+        left: 15%;
     }
     .welcome-header {
-        margin-right: 20% !important;
-        font-size: 8.7vw;
+        font-size: 4rem;
         z-index: 2;
+        line-height: 8.5vh;
+        text-align: center;
     }
-    .welcome-header .span {
-        font-size: 13vw;
-    }
-    .theme {
-        font-size: 4vw;
-    }
-    .theme-message {
-        font-size: 2.3vw;
-        width: 65vw;
-    }
-    .conf-nav {
-        height: 50%;
-        margin-left: -35%;
-        position: relative;
-        z-index: 2;
-    }
-    .conf-nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .main-conf-nav {
-        margin-top: 3%;
-        width: 50vw;
-        margin-left: 18%;
-        margin-right: auto;
-    }
-    .main-conf-nav a {
-        font-size: 2.6vw !important;
-    }
-    .about-us-btn {
-        border: 2px solid #ffffff;
-    }
-    .abt-us-ctn {
-        position: relative;
-        z-index: 1; /* Adjust the value as needed */
-        top: 10%;
-        bottom: 10%;
-        margin-left: 30%;
-    }
-    .conf-nav i.fa-solid {
+    .welcome-header .plane-sketch {
         display: none;
     }
-
+    /* .welcome-banner .span:hover{
+        pointer-events: none;
+    } */
+    .conf-nav{
+        width: 90vw;
+        margin-left:-10% ;
+    }
+    .typing-container span{
+        font-size: 38px;
+    }
+    .theme {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .theme-message {
+        font-size: 10px;
+        width: 100%;
+    }
+    .main-countdown {
+        display: block;
+        margin: 0 auto;
+        margin-top: 35vh;
+    }
+    .abt-us-ctn {
+        display: block;
+        margin: 0 auto;
+    }
+    .section_info_header {
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); /* Adjust shadow offset and blur radius as needed */
+    }
     .about-us-btn {
+        border: 2px solid #3b3b3b;
         font-size: 3vw;
         z-index: 2;
-        color: #ffffff;
+        color: #3b3b3b;
     }
-
-    .count-section {
+    .about-us-btn:hover {
+        background-color: #3b3b3b;
+        color: #ffff;
+    }
+    .main-countdown{
+        top: 100%;
+    }
+    .main-countdown {
+        justify-content: center;
+        background: url("/img/banner/port dgca banner.png");
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
         position: relative;
-        z-index: 2; /* Adjust the value as needed */
     }
-
-    .countdown-sect {
-        margin-top: 28%;
-        margin-left: -5%;
-        position: relative;
-        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
+    .countdown-container{
+        padding-left: 30%;
+        padding-top: 30%;
     }
-
+    .countdown-main{
+        margin-left: 15%;
+        width: 500px;
+        justify-content: space-around;
+    }
     .countdown ul li span {
-        font-size: 6vw !important;
-        color: #ffffff;
+        font-size: 6vw;
+        color: #3b3b3b;
     }
     .countdown ul li {
-        font-size: 3vw !important;
-        color: #ffffff;
+        font-size: 3vw;
+        color: #3b3b3b;
     }
     .countdown ul {
-        gap: 2%;
+        gap: 6vw;
     }
-    .countdown-message {
-        font-size: 3vw;
-        margin-left: 5%;
-        color: #ffffff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+
+    .main-countdown{
+        margin-top: -5%;
+    }
+    .city-smoke-bg {
+        top: 235%;
+        width: 100%;
+    }
+    .cebu_info_section {
+        width: 100%;
+    }
+    .cebu-details {
+        margin-left: -5%;
+        width: 90%;
+        overflow-y: auto;
+    }
+    .about-cebu{
+        margin-top: 80%;
+    }
+    .cebu-pinned-img {
+        display: none;
+    }
+    .detail-main-header {
+        font-size: 10vw;
+    }
+    .announcement-header {
+        font-size: 20px;
     }
     .city-smoke-bg {
         width: 100%;
         height: 150%;
         position: absolute;
-        top: 85%;
+        margin-top: -50%;
         left: 0;
         object-fit: cover;
     }
-    .about-cebu {
-        height: 500% !important;
-    }
-    .cebu-info {
-        width: 100%;
-    }
-    .cebu-details {
-        margin-left: 2%;
-        margin-top: 50%;
-        width: 90%;
-        height: 600px;
-        overflow-y: auto;
-    }
-    .cebu-pinned-img {
-        display: none !important;
-    }
-    .detail-main-header {
-        font-size: 10vw;
-    }
-    .announcements {
-        margin-left: -8%;
-    }
-    .announcement-header {
-        font-size: 5vw !important;
-    }
-    .announcement-arrow {
-        width: 25px !important; /* Adjust this value to make the image smaller */
-        /* Optionally, you can set the height to maintain the aspect ratio */
-        height: auto;
-    }
-    .text-center {
-        font-size: 3.2vw;
-    }
+
 }
-@media only screen and (min-width: 300px) and (max-width: 385px) {
+@media only screen and (max-width: 385px) {
     .content-main {
         margin-left: 5%;
     }
     .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 200% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -100vw) 70px;
-        z-index: 5;
         padding: 0vh;
         color: #3b3b3b;
         width: 100%;
-
     }
 
     .carousel-container {
@@ -1265,19 +1292,22 @@ ul li {
         left: 20%;
     }
     .main-conf-nav a {
-        font-size: 2vw !important;
+        font-size: 2vw;
     }
     .city-smoke-bg {
-        top: 88%;
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        margin-top: -50%;
+        left: 0;
+        object-fit: cover;
+    }
+    .announcement-header {
+        font-size: 20px;
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 370px) {
     .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 200% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -100vw) 100px; /* Adjust X and Y values */
-        z-index: 5;
         padding: 0vh;
         color: #3b3b3b;
         width: 100%;
@@ -1286,8 +1316,8 @@ ul li {
         position: relative;
         z-index: 2;
     }
-    .cebu-details{
-        margin-top: 80% !important;
+    .cebu-details {
+        margin-top: 80%;
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 350px) {
@@ -1295,17 +1325,12 @@ ul li {
         margin-left: -10%;
     }
     .welcome {
-        background: url("/img/home/photo-tiles-strip.png");
-        background-size: 300% auto;
-        background-repeat: no-repeat;
-        background-position: calc(100% - -155vw) 3rem; /* Adjust X and Y values */
-        z-index: 5;
         padding: 0vh;
         color: #3b3b3b;
         width: 100%;
     }
-    .count-section{
-        margin-top: 40% !important;
+    .count-section {
+        margin-top: 40%;
     }
     .conf-nav {
         position: relative;

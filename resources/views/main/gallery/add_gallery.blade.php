@@ -34,7 +34,7 @@
                             <div>
                                 <img id="imagePreview" src="#" alt="Image Uploaded" style="display: none; width: 100px; height: auto;">
                             </div>
-                            <input id="img_file" type="file" class="form-control-file form-input @error('img_file') is-invalid @enderror" name="img_file" required onchange="previewImage(event)">
+                            <input id="img_file" type="file" accept="image/jpeg,image/jpg,image/png" class="form-control-file form-input @error('img_file') is-invalid @enderror" name="img_file" required onchange="previewImage(event)">
                             @error('img_file')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

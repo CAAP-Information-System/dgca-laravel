@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>@yield('title', 'Access Denied')</title>
+<title>@yield('title', 'Pending-Access Denied')</title>
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/error/access_denied.css') }}">
 

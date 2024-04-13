@@ -263,6 +263,48 @@
     padding: 10px;
     border-radius: 10px;
 }
+.barong-label{
+    display: flex;
+    flex-direction: column;
+}
+.measure-guide{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+}
+.HOD_check{
+    display: flex;
+    align-items: center;
+
+}
+.checkbox-cont{
+    padding: 15px;
+}
+.HOD_check .details{
+    font-weight: bold;
+}
+.hod_checkbox{
+    width: 20px;
+    height: 20px;
+    margin-left: 1.5vh;
+}
+.dietary_label{
+    font-size: 15px;
+}
+.dietary_checkbox{
+    width: 20px;
+    height: 20px;
+    margin-right: 1.3vw;
+}
+.accompaniedFields{
+    width: 100%;
+}
+.accompaniedHeader{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #969696;
+}
 @media screen and (max-width: 1024px) {
     .container .register-user {
         width: 100%;

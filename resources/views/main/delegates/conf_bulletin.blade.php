@@ -15,6 +15,7 @@
             information sheet will help you make the most of your trip.
         </p>
     </div>
+
     <section class="bulletin-content">
         <div class="bulletin-grp">
             <header class="bullet-hdr">
@@ -25,6 +26,39 @@
                 <div class="bullet-desc">
                     The 59th Directors General Conference on Civil Aviation will be held on <b class="text-primary">14 – 18 October
                         2024</b> at Dusit Thani, Mactan Cebu, Philippines.
+                </div>
+            </div>
+        </div>
+        <div class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/flight-plane.svg') }}" alt="venue" class="bullet-img">
+                Flight Information
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    <p>
+                        After completing the online registration process, delegates, along with their accompanying persons and spouses, are required to register their flight information as requested by the logistics team. This step ensures that your arrival time is carefully monitored.
+                    </p>
+                    <p>
+                        The form becomes accessible once the delegate has successfully completed their online registration process.
+                    </p>
+
+                    @if(auth()->check())
+                    <p>
+                        If online registration is complete, you can copy and paste the link for the accompanying person/spouse please follow the flight information form link given below:
+                    </p>
+                    <div class="flight_info_link_container">
+                        <header class="form_link_hdr text-primary">Delegate's Flight Information</header>
+                        <div class="form_link_ctn">
+                            <a href="{{ route('delegate-flight-information') }}" class="form_link_btn"><i class="fa-solid fa-rectangle-list"></i> Delegate's Form</a>
+                        </div>
+
+                        <header class="form_link_hdr text-primary">Accompanying Person/Spouse's Flight Information</header>
+                        <div class="form_link_ctn">
+                            <a href="{{ route('accompany-flight-information') }}" class="form_link_btn"><i class="fa-solid fa-rectangle-list"></i> Accompanying Person/Spouse's Form</a>
+                        </div>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -138,7 +172,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    <li>Conference Website: <a href="#" class="bullet-email">place-dgca-website-here.com</a></li>
+                    <li>Conference Website: <a href="#" class="bullet-email">dgca59.gov.ph</a></li>
                     <li>Conference Secretariat: <a href="#" class="bullet-email">dgca59_secretariat@caap.gov.ph</a></li>
                     <li>Conference Registration Team: <a href="#" class="bullet-email">dgca59_registration@caap.gov.ph</a></li>
                 </div>
@@ -200,7 +234,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    The ICAO Asia and Pacific Regional Office, along with the Civil Aviation Authority of the Philippines, will serve as the secretariat for the conference. For all inquiries and general correspondence, please direct your communication to <a href="#">secretariat-email@email.com</a>, ensuring to cc <a href="#">apac@icao.int</a>.
+                    The ICAO Asia and Pacific Regional Office, along with the Civil Aviation Authority of the Philippines, will serve as the secretariat for the conference. For all inquiries and general correspondence, please direct your communication to <a href="#">dgca59_secretariat@caap.gov.ph</a>, ensuring to cc <a href="#">apac@icao.int</a>.
                 </div>
             </div>
         </div>

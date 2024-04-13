@@ -1,5 +1,5 @@
 .head-banner {
-    padding: 4vh;
+    padding: 12vh;
     position: relative;
     overflow: hidden;
     margin-bottom: 5vh;
@@ -10,9 +10,11 @@
         rgba(0, 51, 138, 0.738532913165266) 0%,
         rgba(44, 107, 210, 0) 51%
     );
+
 }
 
 .head-banner .banner-bg {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -25,10 +27,10 @@
 
 .banner-content {
     display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    justify-content: center;
     position: relative;
-    z-index: 1; /* Ensure content is above the background */
+    z-index: 1;
 }
 
 .banner-title {
@@ -38,14 +40,13 @@
     text-shadow: 3px 2px 5px rgba(0, 0, 0, 1);
     text-transform: capitalize;
     font-weight: bold;
-    line-height: 8vh; /* Adjust line height as needed */
+    line-height: 8vh;
     padding: 20px;
 }
 
 .dgca-headear-img {
     margin-left: 40%;
-    /* margin-top: 10vh; */
-    width: 50%;
+    width: 60%;
     height: auto;
 }
 
@@ -57,14 +58,9 @@
     }
     .banner-title {
         margin: 0;
-        font-size: 7vw;
-    }
-    .dgca-title {
-        margin: 0;
-        text-align: left;
-        font-size: 2.5rem;
-        line-height: 6vh;
-        margin-top: 3vh;
+        font-size: 50px;
+        line-height: 5.5vh;
+        text-align: center;
     }
     .reg-steps {
         display: flex;
@@ -73,9 +69,9 @@
         align-items: center;
     }
     .dgca-headear-img {
-        margin-left: 40%;
-        /* margin-top: 10vh; */
-        width: 50%;
+        display: block;
+        margin: 0;
+        width: 100%;
         height: auto;
     }
     .backtotop-container{

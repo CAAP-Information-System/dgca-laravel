@@ -1,0 +1,47 @@
+.message_404_cont{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #3b3b3b;
+    padding-bottom: 10vh;
+}
+.error__message__content{
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+.error_404_img{
+    width: 500px;
+    height: auto;
+}
+.error_404_title{
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+.error_404_subheader{
+    text-align: center;
+    color: #969696;
+    font-style: italic;
+    margin-bottom: 3vh;
+    font-size: 1.5em;
+}
+.go_home_404{
+    display: block;
+    margin: auto;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #50A9FB;
+    color: #ffff !important;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+.go_home_404 .fa-house{
+    margin-right: 10px;
+}
+.go_home_404:hover{
+    background-color: #969696;
+}

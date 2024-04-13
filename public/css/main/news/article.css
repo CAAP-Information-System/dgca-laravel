@@ -1,5 +1,6 @@
 .main-content{
     margin: 3vh;
+    padding-bottom: 3vh;
 }
 .news-img{
     display: block;
@@ -36,6 +37,9 @@
     padding: 15px;
     margin-top: 2vh;
 }
+.return-container{
+    padding-top: 5vh;
+}
 .return-btn{
     display: block;
     margin: 0 auto;
@@ -48,6 +52,7 @@
     width: 20%;
     text-align: center;
     transition: .1s ease;
+
 }
 .return-btn:hover{
     background-color: #50A9FB;

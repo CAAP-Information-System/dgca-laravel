@@ -9,6 +9,7 @@ class File extends Model
 {
 
     protected $fillable = [
+        'paper_no',
         'name',
         'owner',
         'upload_date',

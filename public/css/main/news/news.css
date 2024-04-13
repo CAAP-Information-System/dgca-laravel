@@ -9,9 +9,22 @@
     width: 400px;
     height: 500px;
 }
+.news-card-title{
+    font-size: 17px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #3b3b3b;
+    font-weight: 700;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show before ellipsis */
+    -webkit-box-orient: vertical;
+}
 .news-title{
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: none;
     color: #3b3b3b;
     font-weight: 700;
@@ -51,7 +64,7 @@
 .read-button{
     display: block;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     font-size: 16px;
     letter-spacing: 2px;
     background-color: #50A9FB;

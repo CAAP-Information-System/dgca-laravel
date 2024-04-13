@@ -23,7 +23,7 @@
 
                             </div>
                             <div class="card-body">
-                                <a href="{{ route('article', ['id' => $post->id]) }}" class="news-title" style="    text-align: justify;">{{ $post->news_title }}</a>
+                                <a href="{{ route('article', ['id' => $post->id]) }}" class="news-card-title">{{ $post->news_title }}</a>
 
                             </div>
                             <div class="read-more-container">

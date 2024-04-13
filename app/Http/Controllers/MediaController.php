@@ -17,6 +17,9 @@ class MediaController extends Controller
     public function edit(Request $request, $id)
     {
         $newspost = News::find($id);
+        if (!$newspost) {
+            return view('http-message.content_not_found');
+        }
         return view('media-admin.edit-news', compact('newspost'));
     }
 

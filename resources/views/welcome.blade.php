@@ -3,7 +3,7 @@
 @section('content')
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}"> -->
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev3.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url('css/main/notice_board.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/main/announcements.css') }}">
 
 <main class="content-main">
     @if (auth()->check() && auth()->user()->status === 'Pending')
@@ -33,200 +33,231 @@
     </div>
     @endif
     <section class="welcome">
-        <div class="carousel-container">
-            <input type="radio" name="carousel-radio" id="radio1" class="carousel-radio" checked>
-            <label for="radio1" class="carousel-radio-label"></label>
+        <div class="welcome-banner">
+            <main class="banner-content">
+                <header class="welcome-header">
+                    Welcome to the
+                    <span class="plane-animation">
+                        <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch">
+                    </span>
 
-            <input type="radio" name="carousel-radio" id="radio2" class="carousel-radio">
-            <label for="radio2" class="carousel-radio-label"></label>
-
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <header class="welcome-header">
-                        Welcome to the
-                        <span> <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch"></span>
-                        <br>
-                        <span class="span">DGCA 59 PH</span> Official Page
-                    </header>
-                    <header class="theme">Sustainable, Resilient, & Inclusive</header>
-                    <p class="theme-message">
-                        Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity
-                    </p>
+                    <br>
+                    <span class="apac-2024"><span class="span">59th APAC DGCA</span> Conference</span>
+                </header>
+            </main>
+            <div class="theme-container">
+                <div class="typing-container">
+                    <header class="theme_main_text">Shaping the future of air transport:</header>
+                    <span class="symbol">//</span>
+                    <span id="theme__input" class="theme__input" style="height: 50px;"></span>
+                    <span class="symbol">//</span>
                 </div>
 
-                <div class="carousel-item">
-                    <img src="{{ asset('img/banner/message-banner.png') }}" alt="Welcome Banner" class="banner-img">
+                <p class="theme-message">
+                    Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity.
+                </p>
+            </div>
+
+        </div>
+        <!-- Conference Navigation Bar -->
+        @include('layouts.conference-navbar')
+    </section>
+    <div class="abt-us-ctn">
+        <a href="#about-cebu" class="about-us-btn">Learn More <i class="fa-solid fa-caret-right"></i></a>
+    </div>
+    <section class="main-countdown">
+        <main>
+            <div class="countdown-container">
+                <div class="count-section">
+                    <main class="countdown-main">
+                        <div class="countdown-sect">
+                            <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
+                            <p class="countdown-message">Countdown until the 59th DGCA Conference!</p>
+                            <div id="countdown" class="countdown">
+                                <ul>
+                                    <li><span id="days"></span>Days</li>
+                                    <li><span id="hours"></span>Hours</li>
+                                    <li><span id="minutes"></span>Minutes</li>
+                                    <li><span id="seconds"></span>Seconds</li>
+                                </ul>
+                            </div>
+                            <!-- <hr width="100%" style="border: 1px solid #3b3b3b;"> -->
+
+                        </div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="main-conf-nav">
-            <nav class="conf-nav">
-                <ul>
-                    <li class="dropdown1">
-                        <a>
-                            <i class="fa-solid fa-users"></i>
-                            Conference
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('message') }}">Welcome Message</a>
-                            <a href="{{ route('agenda') }}">Agenda</a>
-                            <a href="{{ route('order-of-business') }}">Order of Business</a>
-                            <a href="#">Participant List</a>
-                            <a href="#">Conclusions</a>
-                            <a href="{{ route('the-gallery') }}">The Gallery</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{{ route('meeting-room') }}">
-                            <i class="fa-solid fa-handshake"></i>
-                            Side Meeting
-                        </a>
-                    </li>
-                    <li class="dropdown1">
-                        <a>
-                            <i class="fa-solid fa-user-tie"></i>
-                            Delegate's Corner
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('bulletin') }}">Conference Bulletin</a>
-                            <a href="https://dfa-oca.ph/visa/visa-general-info/" target="_blank">VISA Information</a>
-                            <a href="{{ route('transport-schedule') }}">Transport Schedule</a>
-                            <a href="{{ route('venue') }}">Venue Information</a>
-                            <a href="{{ route('hotel-recommendations') }}">Hotel Recommendations</a>
-                            <a href="{{ route('medical-support') }}">Medical Support</a>
-                            <a href="{{ route('useful-tips') }}">Useful Tips</a>
-                        </div>
-                    </li>
-                    <li class="dropdown1">
-                        <a>
-                            <i class="fa-solid fa-folder-open"></i>
-                            Documents
-                        </a>
-                        <div class="dropdown-content">
-                            <!-- <a href="#">My Documents</a> -->
-                            <a href="{{ route('disc-paper') }}">Discussion Papers</a>
-                            <a href="{{ route('info-paper') }}">Information Papers</a>
-                            <a href="{{ route('view-submission') }}">Submission Guide</a>
-                            <a href="{{ route('create.file') }}">Submit Document</a>
-                        </div>
-                    </li>
-                    @if(auth()->check() && auth()->user()->access_role == "media")
-                    <li class="dropdown1">
-                        <a href="#" class="text-danger">
-                            <i class="fa-solid fa-hashtag"></i>
-                            Media Committee
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('create-news') }}">Create News</a>
-                            <a href="#">Upload Gallery</a>
-                            <a href="{{ route('media-dashboard') }}">Check Dashboard</a>
-                        </div>
-                    </li>
-                    @elseif(auth()->check() && auth()->user()->access_role == "icao")
-                    <li class="dropdown1">
-                        <a href="#" class="text-danger">
-                            <i class="fa-solid fa-hashtag"></i>
-                            ICAO
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="{{ route('files') }}">View Files</a>
-                            <a href="{{ route('meeting-reservations') }}">Meeting Reservation</a>
-                            <a href="{{ route('account_list') }}">Accounts Registered</a>
-
-                        </div>
-                    </li>
-                    @endif
-                </ul>
-            </nav>
-
-        </div>
-        <br>
-        <div class="abt-us-ctn">
-            <a href="#about-cebu" class="about-us-btn">Learn More</a>
-        </div>
-        <!-- <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="pane" class="arrow-dotted"> -->
-        <div class="count-section fade-in-section">
-            <main class="countdown-main">
-                <div class="countdown-sect">
-                    <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
-                    <div id="countdown" class="countdown">
-                        <ul>
-                            <li><span id="days"></span>days</li>
-                            <li><span id="hours"></span>Hours</li>
-                            <li><span id="minutes"></span>Minutes</li>
-                            <li><span id="seconds"></span>Seconds</li>
-                        </ul>
-                    </div>
-                    <hr width="10%" style="border: 1px solid #3b3b3b;">
-                    <p class="countdown-message">Countdown until the 59th DGCA <br> Conference!</p>
-                </div>
-        </div>
+        </main>
     </section>
+
+
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
-        <div class="cebu-info">
-            <div class="cebu-details">
-                <div class="detail-headers">
-                    <header class="detail-main-header">Cebu</header>
-                    <header class="detail-subheader">Venue for DGCA 59</header>
+        <header class="header__separator">What's Featured?</header>
+        <header class="section_info_header">Warm greetings from the Philippine representatives</header>
+        <div class="welcome-message-section">
+            <div class="welcome-message-container">
+                <div class="image-container">
+                    <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
+                    <div class="caption">
+                        <p class="name">Captain Manuel Antonio L. Tamayo</p>
+                        <p class="position">Director General of Civil Aviation Authority of the Philippines</p>
+                    </div>
                 </div>
-                <div class="detail-content">
+                <div class="dg-message">
+                    <header class="message-header">
+                        Message from <span>the Director General</span>
+                    </header>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <i class="fa-solid fa-quote-left"></i>The Civil Aviation Authority of the Philippines is excited to welcome you to our scenic country as we proudly host the 59th Conference of the Directors General of Civil Aviation of the Asia and Pacific Regions at the vibrant island of Cebu on October 14-18, 2024.
                     </p>
                     <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable future in aviation.
                     </p>
                     <p>
-                        Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                        Our theme for this year’s conference, <b class="text-primary">Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive</b>, is timely and relevant on both global and regional scales. The industry is adaptive to change and supports development while mitigating the impacts of climate change.
                     </p>
                     <p>
-                        Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                        Let us strengthen our collaboration and synergies by promoting and improving our policies and practices through strong stakeholder engagement.
                     </p>
+                    <p>
+                        Our team is pleased to assist you during your stay in the Philippines and we hope you enjoy, and find the conference meaningful.
+                    </p>
+                    <div class="messenger">
+                        <span class="name">Captain Manuel Antonio L. Tamayo</span>
+                        <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
+                        <span>Chairman of DGCA/59 APAC-PH </span>
+                    </div>
                 </div>
             </div>
-            <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu-pinned-img">
         </div>
+        <div class="svg_container">
+            <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
+        </div>
+        <section class="cebu_info_section">
+            <header class="section_info_header">DISCOVER MORE ABOUT OUR UPCOMING CONFERENCE VENUE</header>
+            <div class="cebu_info_container">
+
+                <div class="cebu-details">
+                    <div class="detail-headers">
+                        <header class="detail-main-header">Cebu</header>
+                        <header class="detail-subheader">Venue for DGCA 59</header>
+                    </div>
+                    <div class="detail-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <p>
+                            Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                        </p>
+                        <p>
+                            Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu_map">
+            </div>
+        </section>
     </section>
 
+    <div class="svg_container">
+        <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
+    </div>
+
+    <section class="teaser-section">
+        <header class="section_info_header">Experience the excitement that awaits you in Cebu, Philippines</header>
+        @include('home.teaser')
     </section>
-    <section class="announcements ">
+    <div class="svg_container">
+        <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
+    </div>
+    <section class="highlights-section">
+        <header class="section_info_header">Indulge in the conference highlights and explore the exciting activities and features awaiting you</header>
+        @include('home.highlights')
+    </section>
+
+    <div class="svg_container">
+        <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
+    </div>
+
+    <section class="announcements_section">
+
         <header class="announcement-header">
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
         </header>
-        @if(isset($newspost))
-        <div class="notice-container">
-            <main class="container">
-                @foreach($newspost as $post)
-                <div class="notice-card">
-                    <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" alt="notice image" class="notice-img">
-                    <div class="notice-content">
-                        <a href="#" class="notice-title">{{ $post->news_title }}</a>
-                        <div class="date">{{ $post->date_uploaded }}</div>
-                    </div>
+        <div class="announcements_main">
+            <header class="section_info_header" style="width: 70%;">Stay informed and up-to-date with the latest developments at our 59th DGCA Conference</header>
+            @if(isset($newspost))
+            <div class="notice-container">
+                <main class="container">
+                    @foreach($newspost as $post)
+                    <a href="{{ route('article', ['id' => $post->id]) }}" class="notice-card">
+                        <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" alt="notice image" class="notice-img">
+                        <div class="notice-content">
+                            <div class="notice-title">{{ $post->news_title }}</div>
+                            <div class="date">{{ $post->date_uploaded }}</div>
+                            <p class="announcements_read_more">Read More</p>
+                        </div>
+                    </a>
 
-                </div>
-                @endforeach
-
-            </main>
-
+                    @endforeach
+                </main>
+            </div>
         </div>
+        @else
+        <header class="coming-soon">Coming Soon!</header>
         @endif
+
     </section>
 
 
 
-
 </main>
+<footer class="sponsor__footer">
+    @if(!empty($sponsorsJSON))
+    @php
+    $sponsors = json_decode($sponsorsJSON, true);
+    @endphp
+
+    @if(isset($sponsors['sponsors']) && !empty($sponsors['sponsors']))
+    <div class="sponsors-container">
+        <header class="sponsors__header">Our <span style="color: #50a9fb;">Sponsors</span></header>
+        <div class="marquee">
+            <div class="sponsors-list">
+                @foreach($sponsors['sponsors'] as $sponsor)
+                <div class="sponsor-item">
+                    <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
+                    <p class="sponsor-name">{{ $sponsor['name'] }}</p>
+                </div>
+                @endforeach
+                <!-- Duplicate sponsor items for looping -->
+                @foreach($sponsors['sponsors'] as $sponsor)
+                <div class="sponsor-item">
+                    <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
+                    <p class="sponsor-name">{{ $sponsor['name'] }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    @endif
+
+
+    @endif
+
+
+</footer>
 
 <script src="{{ asset('js/welcome/pending-modal.js') }}"></script>
 <script src="{{ asset('js/welcome/countdown.js') }}"></script>
 <script src="{{ asset('js/welcome/carousel.js') }}"></script>
 <script src="{{ asset('js/welcome/scroll.js') }}"></script>
+<script src="{{ asset('js/welcome/typing.js') }}"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -262,6 +293,5 @@
         document.getElementById("myBar").style.width = scrolled + "%";
     }
 </script>
-
 
 @endsection

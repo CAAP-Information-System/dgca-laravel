@@ -1,5 +1,4 @@
-
-.container-main{
+.container-main {
     margin-top: 5vh;
 }
 .discussion-header {
@@ -8,6 +7,12 @@
     color: #002868;
     text-align: center;
     text-shadow: #b4c4db 3px 3px;
+}
+.list-container {
+    color: #3b3b3b;
+}
+.list-container a {
+    text-decoration: none;
 }
 .dl-grp {
     padding: 2vh;
@@ -22,7 +27,7 @@
 .dl-text {
     margin-left: 20px;
     padding: 25px;
-    background-color: #50A9FB;
+    background-color: #50a9fb;
     color: #ffff;
     border-radius: 99px;
     font-size: 15px;

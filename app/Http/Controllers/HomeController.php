@@ -35,11 +35,11 @@ class HomeController extends Controller
         $newspost = News::all();
         // Check if the modal has already been shown in this session
         $modalShown = session('modal_shown', false);
-
+        $sponsorsJSON = file_get_contents(public_path('json/sponsors.json'));
         // Store the flag in the session to ensure it's shown only once per login
         session(['modal_shown' => true]);
 
-        return view('welcome', compact('modalShown', 'newspost'));
+        return view('welcome', compact('modalShown', 'newspost','sponsorsJSON'));
     }
 
 
@@ -178,5 +178,12 @@ class HomeController extends Controller
     public function uploadSent()
     {
         return view('http-message.upload-sent');
+    }
+
+    public function test()
+    {
+        $users = User::all(); // Retrieve all users or apply any necessary conditions
+
+        return view('testing.array_test', ['users' => $users]);
     }
 }

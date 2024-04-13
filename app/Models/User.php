@@ -30,29 +30,20 @@ class User extends Authenticatable
         'last_name',
         'passport_num',
         'designation',
+        'is_DirectorGeneral',
         'gender',
         'address',
         'telephone',
         'mobile',
         'profile_image',
         'passport_photo',
-        'approval_doc',
+        'is_HOD',
 
         // Conference Details
         'badge_name',
         'conference_role',
         'country',
         'organization',
-
-        // Flight Details
-        // Arrival
-        'arrival_flight_num',
-        'arrival_date',
-        'arrival_time',
-        // Departure
-        'departure_flight_num',
-        'departure_date',
-        'departure_time',
 
         // Accommodations & Preferences
         'airport_destination',
@@ -66,9 +57,8 @@ class User extends Authenticatable
 
         // Accompanying Person/Spouse
         'has_spouse',
-        'accomp_name',
-        'accomp_country',
-        'accomp_preferred_activity',
+        'accomp_fname',
+        'accomp_lname',
 
         // Copyright & Privacy Policy
         'privacy',

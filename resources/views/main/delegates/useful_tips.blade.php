@@ -24,7 +24,7 @@
                     nationality. Philippine visa policies can change, it's essential to verify the latest requirements
                     with the Philippine embassy, consulate, or the official Philippine government website before
                     planning your trip. Please find the general guideline for some nationalities based on the
-                    information available via this website: <a href="https://dfa.gov.ph/list-of-countries-for-21-day-visa" target="_blank">https://dfa.gov.ph/list-of-countries-for-21-day-visa</a>
+                    information available via this website: <a href="https://dfa.gov.ph/list-of-countries-for-21-day-visa" target="_blank">https://dfa.gov.ph/list-of-countries-for-21-day-visa.</a>
                 </p>
                 <p>
                     Visa Required for Most Other Nationalities - Citizens of many other countries, not falling
@@ -67,6 +67,7 @@
                 <p>Controlled substances such as cannabis, opium etc. are banned and the penalties for
                     handling these drugs are severe.</p>
             </div>
+            <br><br><br><br><br>
         </div>
     </section>
 

@@ -7,7 +7,7 @@
             <header class="banner-title">{{ $bannerTitle }}</header>
         </div>
         <div class="dgca-title">
-            <img src="{{ asset('img/dgca-header.png') }}" alt="conference-room" class="dgca-headear-img">
+            <img src="{{ asset('img/subpage-banner.svg') }}" alt="conference-room" class="dgca-headear-img">
         </div>
     </main>
 </section>

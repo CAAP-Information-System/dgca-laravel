@@ -12,9 +12,9 @@
                 <img src="{{ asset('img/registration/phone.png') }}" alt="phone" class="phone">
                 <div>
                     <header class="registration-header">Join and register now!</header>
-                    <p class="sub-message">Come and be part of the upcoming at the 59th Conference of Director Generals of Civil Aviation 2024 to be held in Cebu, Philippines from October 14 to 18, 2024.</p>
+                    <p class="sub-message">Come and be part of the upcoming 59th Conference of Directors General of Civil Aviation 2024 to be held in Cebu, Philippines from October 14 to 18, 2024.</p>
                     <br />
-                    <a href="{{ route('register') }}" class="register-link">Register Here Now!</a>
+                    <a href="{{ url('register') }}" class="register-link">Register Here Now!</a>
                 </div>
             </main>
 
@@ -56,7 +56,7 @@
         </section>
         <section class="form-guides-sect">
             <header class="form-reqs-header">Form Requirements</header>
+            <h1>Coming Soon</h1>
         </section>
 </body>
-<script src="{{ asset('js/welcome/scroll.js') }}"></script>
 @endsection

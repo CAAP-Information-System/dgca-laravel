@@ -18,37 +18,46 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
-
-.export-btn-container{
-    margin: 15px;
-    padding: 15px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-.open-reg, .open-pending{
-    color: #ffff !important;
-    text-decoration: none;
-    padding: 25px;
-    border-radius: 100px;
-    text-align: center;
-}
-.open-reg{
-    background-color: #389006;
-}
-.open-pending{
-    background-color: #50A9FB;
-}
-.open-reg:hover{
-    background-color: #3c741d;
-}
-.open-pending:hover{
-    background-color: #3e7eb9;
-}
-.export-btn:hover{
-    text-decoration: none;
-    background-color: #4fb912;
-}
 .accounts-table{
     padding-top: 15px;
 }
+.export-container{
+    margin-top: 3vh;
+    margin-left: 2vw;
+}
+.export_header{
+    font-size: 2em;
+    font-weight: bold;
+    color: #3b3b3b;
+    text-transform: capitalize;
+}
+
+.export-btn-container{
+    margin-top: 2vh;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 6vh;
+}
+.open_pdf{
+    width: 30%;
+    text-align: center;
+    background-color: #ffff;
+    color: #3b3b3b;
+    padding: 16px;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 99px;
+    transition: .1s;
+}
+#reg_list:hover{
+    color: #ffff;
+    background-color: #50A9FB;
+}
+#pending_list:hover{
+    color: #ffff;
+    background-color: #50A9FB;
+}
+
+
+
