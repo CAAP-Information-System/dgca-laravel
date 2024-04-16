@@ -11,21 +11,6 @@
     color: red; /* Or any color you prefer */
     margin-left: 5px; /* Adjust as needed */
 }
-.header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.auth-hdr {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffff;
-    font-weight: bold;
-    border-radius: 100px;
-    background-color: #07275a;
-    width: 70%;
-    margin-bottom: 4vh;
-}
 .category__header {
     width: 100%;
     margin-bottom: 15px;
@@ -244,25 +229,12 @@
     text-decoration: none;
 }
 
-.privacy-policy {
-    text-align: justify;
-}
-.privacy-pol-link {
-    text-decoration: none;
-}
-.privacy-policy-check {
-    display: flex;
-    text-align: center;
-    gap: 15px;
-}
+
 .dpa-link {
     text-decoration: none;
 }
 
-.checkbox {
-    padding: 10px;
-    border-radius: 10px;
-}
+
 .barong-label{
     display: flex;
     flex-direction: column;
@@ -304,6 +276,48 @@
     font-size: 1.2rem;
     font-style: italic;
     color: #969696;
+}
+.link__container{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+.e-travel-link{
+    text-decoration: none;
+    color: #2f96d0;
+    border: 2px solid #2f96d0;
+    background-color: #ffff;
+    padding: 16px;
+    border-radius: 99px;
+    width: 50%;
+    transition: .1s ease;
+}
+.e-travel-link:hover{
+    background-color: #2f96d0;
+    color: #ffff;
+
+}
+.privacy-policy {
+    text-align: justify;
+}
+.privacy-pol-link {
+    text-decoration: none;
+}
+.privacy-policy-check {
+    display: flex;
+    text-align: center;
+    gap: 15px;
+    margin-top: 2vh;
+}
+.agreement_checkbox {
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+}
+.agreement_check{
+    color: #2f96d0;
+    font-size: 16px;
+    text-transform: uppercase;
+
 }
 @media screen and (max-width: 1024px) {
     .container .register-user {

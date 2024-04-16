@@ -93,75 +93,69 @@
 
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
-        <header class="header__separator">What's Featured?</header>
-        <header class="section_info_header">Warm greetings from the Philippine representatives</header>
-        <div class="welcome-message-section">
-            <div class="welcome-message-container">
-                <div class="image-container">
-                    <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
-                    <div class="caption">
-                        <p class="name">Captain Manuel Antonio L. Tamayo</p>
-                        <p class="position">Director General of Civil Aviation Authority of the Philippines</p>
+        <div class="about_cebu_container">
+            <header class="header__separator">What's Featured?</header>
+            <header class="section_info_header">Warm greetings from the Philippine representatives</header>
+            <div class="welcome-message-section">
+                <div class="welcome-message-container">
+                    <div class="image-container">
+                        <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
+                        <div class="caption">
+                            <p class="name">Captain Manuel Antonio L. Tamayo</p>
+                            <p class="position">Director General of Civil Aviation Authority of the Philippines</p>
+                        </div>
                     </div>
-                </div>
-                <div class="dg-message">
-                    <header class="message-header">
-                        Message from <span>the Director General</span>
-                    </header>
-                    <p>
-                        <i class="fa-solid fa-quote-left"></i>The Civil Aviation Authority of the Philippines is excited to welcome you to our scenic country as we proudly host the 59th Conference of the Directors General of Civil Aviation of the Asia and Pacific Regions at the vibrant island of Cebu on October 14-18, 2024.
-                    </p>
-                    <p>
-                        We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable future in aviation.
-                    </p>
-                    <p>
-                        Our theme for this year’s conference, <b class="text-primary">Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive</b>, is timely and relevant on both global and regional scales. The industry is adaptive to change and supports development while mitigating the impacts of climate change.
-                    </p>
-                    <p>
-                        Let us strengthen our collaboration and synergies by promoting and improving our policies and practices through strong stakeholder engagement.
-                    </p>
-                    <p>
-                        Our team is pleased to assist you during your stay in the Philippines and we hope you enjoy, and find the conference meaningful.
-                    </p>
-                    <div class="messenger">
-                        <span class="name">Captain Manuel Antonio L. Tamayo</span>
-                        <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
-                        <span>Chairman of DGCA/59 APAC-PH </span>
+                    <div class="dg-message">
+                        <header class="message-header">
+                            Message from <span>the Director General</span>
+                        </header>
+                        <p>
+                            <i class="fa-solid fa-quote-left"></i>The Civil Aviation Authority of the Philippines is excited to welcome you to our scenic country as we proudly host the 59th Conference of the Directors General of Civil Aviation of the Asia and Pacific Regions at the vibrant island of Cebu on October 14-18, 2024.
+                        </p>
+                        <p>
+                            We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable future in aviation.
+                        </p>
+                        <p>
+                            Our theme for this year’s conference, <b class="text-primary">Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive</b>, is timely and relevant on both global and regional scales. The industry is adaptive to change and supports development while mitigating the impacts of climate change.
+                        </p>
+                        <p>
+                            Let us strengthen our collaboration and synergies by promoting and improving our policies and practices through strong stakeholder engagement.
+                        </p>
+                        <p>
+                            Our team is pleased to assist you during your stay in the Philippines and we hope you enjoy, and find the conference meaningful.
+                        </p>
+                        <div class="messenger">
+                            <span class="name">Captain Manuel Antonio L. Tamayo</span>
+                            <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
+                            <span>Chairman of DGCA/59 APAC-PH </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="svg_container">
-            <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
-        </div>
-        <section class="cebu_info_section">
-            <header class="section_info_header">DISCOVER MORE ABOUT OUR UPCOMING CONFERENCE VENUE</header>
-            <div class="cebu_info_container">
-
-                <div class="cebu-details">
-                    <div class="detail-headers">
-                        <header class="detail-main-header">Cebu</header>
-                        <header class="detail-subheader">Venue for DGCA 59</header>
-                    </div>
-                    <div class="detail-content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                            Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                        </p>
-                        <p>
-                            Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                        </p>
-                    </div>
-                </div>
-
-                <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu_map">
+            <div class="svg_container">
+                <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
             </div>
-        </section>
+            <section class="cebu_info_section">
+                <header class="section_info_header">DISCOVER MORE ABOUT OUR UPCOMING CONFERENCE VENUE</header>
+                <div class="cebu_info_container">
+
+                    <div class="cebu-details">
+                        <div class="detail-headers">
+                            <header class="detail-main-header">Cebu</header>
+                            <header class="detail-subheader">Venue for DGCA 59</header>
+                        </div>
+                        <div class="detail-content">
+                            <p>
+                                <i>(Contents will be automatically updated in the next version.)</i>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu_map">
+                </div>
+            </section>
+        </div>
     </section>
 
     <div class="svg_container">

@@ -95,7 +95,7 @@ class FileController extends Controller
         // Save File
         $createFile->save();
 
-        return redirect()->back()->with('success', 'File uploaded successfully.');
+        return redirect()->route('file-uploaded')->with('success', 'File uploaded successfully.');
     }
 
 

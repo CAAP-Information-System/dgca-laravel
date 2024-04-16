@@ -3,10 +3,7 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/auth/register.css') }}">
 <div class="container">
-    <div class="header-container">
-        <header class="auth-hdr">Welcome and Mabuhay!</header>
-    </div>
-
+    @include('auth.auth_header')
     <div class="form-main">
         <form class="register-user" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
             <header class="title">Registration</header>
@@ -144,7 +141,6 @@
                             E-Travel Link
                         </a>
                     </div>
-
                 </div>
 
                 <!-- Travel and Accomodation Information -->
@@ -187,7 +183,7 @@
                 <div class="category__header">
                     <header class="category-name">Other Information</header>
                 </div>
-                <div class="input__box-long" id="attireSizeBlock" style="display: contents;">
+                <div class="input__box-long" id="attireSizeBlock" style="display: none;">
                     <div class="input__box-long">
                         <div class="barong-label">
                             <span class="details">Barong-Tagalog Size (Attire):<span class="required-symbol">*</span></span>
@@ -311,8 +307,8 @@
             </div>
             <b class="text-danger">---IMPORTANT---</b>
             <div class="privacy-policy-check">
-                <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
-                <span class="details"><b class="text-primary">By checking this box, I agree that I have read the privacy policy.</b></span>
+                <input id="privacy" type="checkbox" name="privacy" class="agreement_checkbox" required>
+                <span class="agreement_check">By checking this box, <b>I agree</b> that I have read the privacy policy.</span>
 
             </div>
             <!-- <div class="file-drop">
@@ -379,13 +375,15 @@
 <script>
     function showAttireSize() {
         var conferenceRole = document.getElementById('conference_role').value;
+        var hodYes = document.getElementById('hod_yes').checked;
         var attireSizeBlock = document.getElementById('attireSizeBlock');
 
-        if (conferenceRole === 'Head Delegate') {
+        if (conferenceRole === 'Head Delegate' || hodYes) {
             attireSizeBlock.style.display = 'block';
         } else {
             attireSizeBlock.style.display = 'none';
         }
     }
 </script>
+
 @endsection

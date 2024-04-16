@@ -34,6 +34,7 @@ Route::group(['middleware' => 'check_user_status'], function () {
 Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 Route::get('/403', [HomeController::class, 'error_403'])->name('403');
 Route::get('/upload-sent', [HomeController::class, 'uploadSent'])->name('upload-sent');
+Route::get('/file-uploaded', [HomeController::class, 'fileUploaded'])->name('file-uploaded');
 
 // GUEST PAGE ROUTES
 Route::middleware('public')->group(function () {

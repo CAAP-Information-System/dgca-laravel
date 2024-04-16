@@ -92,7 +92,7 @@
                     @foreach($agenda3 as $information)
                     <tbody>
                         <td><b>/{{$information->paper_no}}</b></td>
-                        <td><a href="{{ asset('storage/conference/' . $information->name) }}">{{ $information->name }}</a></td>
+                        <td><a href="{{ asset('conference/papers/' . $information->name) }}">{{ $information->name }}</a></td>
                         <td>{{ $information->owner }}</td>
                         <td>{{ $information->upload_date }}</td>
                     </tbody>
