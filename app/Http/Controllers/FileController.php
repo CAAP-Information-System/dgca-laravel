@@ -48,6 +48,7 @@ class FileController extends Controller
         }
     }
 
+    // Stores files on database
     public function upload(Request $request)
     {
         // Ensure the user is authenticated before accessing auth()->user()
