@@ -99,5 +99,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(File::class);
     }
+    public function accessCode()
+    {
+        return $this->hasOne(AccessCode::class);
+    }
 }
-

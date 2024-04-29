@@ -77,7 +77,7 @@ class FileController extends Controller
         $fileName = $file->getClientOriginalName();
 
         // Save file to storage and database
-        $path = $file->storeAs('public/conference/papers', $fileName);
+        $path = $file->storeAs('conference/papers', $fileName, 'public');
         $size = $file->getSize();
 
         $createFile = new File();

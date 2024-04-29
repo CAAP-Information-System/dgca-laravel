@@ -43,7 +43,7 @@
                     @foreach($agenda1 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
 
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
@@ -69,7 +69,7 @@
                     @foreach($agenda2 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -93,7 +93,7 @@
                     @foreach($agenda3 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -117,7 +117,7 @@
                     @foreach($agenda4 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -141,7 +141,7 @@
                     @foreach($agenda5 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -165,7 +165,7 @@
                     @foreach($agenda6 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -187,7 +187,7 @@
                     @foreach($agenda7 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -211,7 +211,7 @@
                     @foreach($agenda8 as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -235,7 +235,7 @@
                     @foreach($agenda9a as $discussion)
                     <tbody>
                         <td><b>/{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -257,7 +257,7 @@
                     @foreach($agenda9b as $discussion)
                     <tbody>
                         <td><b>/{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -280,7 +280,7 @@
                     @foreach($agenda10a as $discussion)
                     <tbody>
                         <td><b>A/{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -304,7 +304,7 @@
                     @foreach($agenda10b as $discussion)
                     <tbody>
                         <td><b>B/{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -328,7 +328,7 @@
                     @foreach($agenda10c as $discussion)
                     <tbody>
                         <td><b>{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>
@@ -352,7 +352,7 @@
                     @foreach($presentation as $discussion)
                     <tbody>
                         <td><b>/{{$discussion->paper_no}}</b></td>
-                        <td><a href="{{ asset('conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
+                        <td><a href="{{ asset('storage/conference/papers/' . $discussion->name) }}">{{ $discussion->name }}</a></td>
                         <td>{{ $discussion->owner }}</td>
                         <td>{{ $discussion->upload_date }}</td>
                     </tbody>

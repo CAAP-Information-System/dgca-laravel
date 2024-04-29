@@ -30,6 +30,10 @@ Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('generate-pendings', [PDFController::class, 'pendingAccountsPDF'])->name('generate-pendings');
 });
 
+Route::post('/verify-access', [AdminController::class, 'verifyAccess'])->name('verify-access');
+Route::view('/access-denied', 'access-denied')->name('access-denied');
+
+
 // HTTP ROUTES
 Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 Route::get('/403', [HomeController::class, 'error_403'])->name('403');
@@ -62,11 +66,15 @@ Route::post('/upload-flight-information', [DelegateController::class, 'uploadFli
 Route::get('/accompany-flight-information', [AccompanyController::class, 'AccompanyFlightForm'])->name('accompany-flight-information');
 Route::post('/upload-flight-information', [AccompanyController::class, 'uploadFlightInformation'])->name('upload-flight-information');
 
+// ACCESS CODE ROUTE
+Route::get('/access-code', [AdminController::class, 'accessView'])->name('access-code');
+Route::post('/verify-access', [AdminController::class, 'verifyAccess'])->name('verify-access');
+
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
-    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
-    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
+    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper')->middleware('access_code');
+    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper')->middleware('access_code');
     Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
     Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
 });

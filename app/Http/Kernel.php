@@ -100,5 +100,6 @@ class Kernel extends HttpKernel
         'check_user_status' => \App\Http\Middleware\CheckStatus::class,
         'checkAdmin' => \App\Http\Middleware\StatusMiddleware::class,
         'super_user' => \App\Http\Middleware\SecurityMiddleware::class,
+        'access_code' => \App\Http\Middleware\AccessCodeMiddleware::class,
     ];
 }

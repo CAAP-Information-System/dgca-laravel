@@ -146,13 +146,22 @@
                         </div>
                         <div class="detail-content">
                             <p>
-                                <i>(Contents will be automatically updated in the next version.)</i>
+                                Cebu is the largest island in the Visayas region, and is particularly rich in Spanish colonial history. The original capital of the Philippines until the 17th century, ‘the Queen of the South’ contains 6 major cities – Cebu, Danao, Lapu-Lapu, Mandaue, Toledo and Talisay.
+                            </p>
+                            <p>
+                                Cebu is a long and narrow island that stretches 196 km from north to south, and 32 km from east to west at its widest point. Located on the eastern central area of the island, Cebu City is its main urban centre. The 2nd largest city in the Philippines is a lively commercial and industrial hub, with modern features like giant shopping complexes as well as a myriad of leisure and entertainment options to keep you busy both day and night.
+                            </p>
+                            <p>
+                                To this day, Cebu Island still remains a prominent and popular part of the archipelago, boasting the most ethnically diverse population. Its inhabitants are an interesting bunch, made up of Malay, Chinese, Filipino and an ever-growing number of westerners. It’s now considered to be the most dynamic island in the Philippines, attracting native and international tourists in droves.
+                            </p>
+                            <p>
+                                The rest of Cebu Island is not as developed. It has rolling hills and rugged mountain ranges traversing the northern and southern lengths of the island, with the highest mountain standing over 1,000 metres tall. The coastal areas have beaches, fishing villages, mangrove forests and rich fishing grounds. The 2 destinations on Cebu Island that’ll capture the interest of adventurous travellers are Moalboal on the east coast and Oslob on the west coast. Located a few hours’ drive south of Metro Cebu, they offer a rustic type of vacation in pristine natural surroundings.
                             </p>
 
                         </div>
                     </div>
 
-                    <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu_map">
+                    <img src="{{ asset('img/cebu_mapped.svg') }}" alt="pinned cebu" class="cebu_map">
                 </div>
             </section>
         </div>
