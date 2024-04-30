@@ -23,6 +23,9 @@ class SideMeetingController extends Controller
             "Meeting Room A",
             "Meeting Room B",
             "Meeting Room C",
+            "Meeting Room D",
+            "Meeting Room E",
+            "Meeting Room F",
         ];
         $time_drop = [
             "08:00-08:30",
@@ -195,6 +198,9 @@ class SideMeetingController extends Controller
             "Meeting Room A",
             "Meeting Room B",
             "Meeting Room C",
+            "Meeting Room D",
+            "Meeting Room E",
+            "Meeting Room F",
         ];
         $time_drop = [
             "08:00-08:30",

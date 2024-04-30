@@ -131,7 +131,7 @@
         </div>
     </section> -->
     <div class="footer text-center">
-        <b>www.dgca59.gov.ph &nbsp;&nbsp;| &nbsp;&nbsp; DGCA.PH@gmail.com &nbsp;&nbsp; |</b>
+        <b>www.dgca59.ph &nbsp;&nbsp;| &nbsp;&nbsp; dgca59_secretariat@caap.gov.ph &nbsp;&nbsp; |</b>
     </div>
 
 </footer>
