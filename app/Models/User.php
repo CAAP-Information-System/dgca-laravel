@@ -31,7 +31,6 @@ class User extends Authenticatable
         'passport_num',
         'designation',
         'is_DirectorGeneral',
-        'gender',
         'address',
         'telephone',
         'mobile',

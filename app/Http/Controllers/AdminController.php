@@ -153,7 +153,7 @@ class AdminController extends Controller
     public function verifyAccess(Request $request)
     {
         $accessCode = $request->input('access_code');
-        $staticAccessCode = env('STATIC_ACCESS_CODE');
+        $staticAccessCode = "DGCA59APACPH";
 
         // Check if the inputted access code matches the STATIC_ACCESS_CODE
         if ($accessCode === $staticAccessCode) {

@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/agenda.css') }}">
 @if(auth()->user()->status == 'Approved')
-@include('main.banner', ['bannerTitle' => 'Agendas'])
+@include('main.banner', ['bannerTitle' => 'Agenda'])
 <div class="container">
     <!-- <header class="agenda-header">Agenda</header> -->
     <div class="card-container">

@@ -2,7 +2,7 @@
 <div class="teaser-container">
     <main class="teaser-content">
         <div class="teaser-details">
-            <header class="teaser-details-header">DGCA 59-APAC PH <br><span>2024 Trailer</span> </header>
+            <header class="teaser-details-header">DGCA 59 <br><span>2024 Trailer</span> </header>
             <p class="teaser-message">
                 As the upcoming DGCA Conference approaches, the Philippines invites you to join us in shaping a sustainable future for aviation! Get ready to be part of this thrilling event, offering a glimpse into what's in store this October 2024. Watch our teaser trailer and join us in our excitement!
                 <br><br>
@@ -12,7 +12,8 @@
                 <a href="{{ route('bulletin') }}" class="teaser-btn">See Our Bulletin <i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </div>
-        <iframe src="https://www.youtube.com/embed/dVCHcU--9aI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="teaser-link"></iframe>
+        <iframe src="https://onedrive.live.com/embed?resid=C872D43F2ABC4BE8%2117369&authkey=!AELIjOo4n7cTj-8" class="teaser-link" frameborder="0" scrolling="no" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+        <!-- <iframe src="https://www.youtube.com/embed/dVCHcU--9aI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="teaser-link"></iframe> -->
 
     </main>
 </div>

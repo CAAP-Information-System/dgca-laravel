@@ -132,6 +132,7 @@
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             navbar.style.position = "fixed";
             navbar.style.top = "0";
+            // navbar.style.textShadow = "1px 1px #3b3b3b";
         } else {
             navbar.style.position = "relative";
         }

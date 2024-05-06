@@ -62,28 +62,6 @@
                 <div class="category__header">
                     <header class="category-name">Flight Details</header>
                 </div>
-                <!-- DEPARTURE INFORMATION -->
-                <div class="input__box-long">
-                    <header class="subheader">Departure Information</header>
-                    <p>
-                        <i class="card-subtitle mb-2 text-muted">
-                            Please indicate your flight details which will be used by our assigned committees.
-                        </i>
-                    </p>
-                </div>
-                <div class="input__box">
-                    <span class="details">Departure Flight No. <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="Enter Flight Number" name="departure_flight_num" value="{{ old('departure_flight_num') }}" required>
-                </div>
-
-                <div class="input__box">
-                    <span class="details">Departure Time <span class="required-symbol">*</span></span>
-                    <input type="time" name="departure_time" value="{{ old('departure_time') }}" required>
-                </div>
-                <div class="input__box-long">
-                    <span class="details">Departure Date<span class="required-symbol">*</span></span>
-                    <input type="date" name="departure_date" value="{{ old('departure_date') }}" required>
-                </div>
 
                 <!-- ARRIVAL INFORMATION -->
                 <div class="input__box-long">
@@ -108,6 +86,29 @@
                     <span class="details">Arrival Date<span class="required-symbol">*</span></span>
                     <input type="date" name="arrival_date" value="{{ old('arrival_date') }}" required>
                 </div>
+                   <!-- DEPARTURE INFORMATION -->
+                   <div class="input__box-long">
+                    <header class="subheader">Departure Information</header>
+                    <p>
+                        <i class="card-subtitle mb-2 text-muted">
+                            Please indicate your flight details which will be used by our assigned committees.
+                        </i>
+                    </p>
+                </div>
+                <div class="input__box">
+                    <span class="details">Departure Flight No. <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="Enter Flight Number" name="departure_flight_num" value="{{ old('departure_flight_num') }}" required>
+                </div>
+
+                <div class="input__box">
+                    <span class="details">Departure Time <span class="required-symbol">*</span></span>
+                    <input type="time" name="departure_time" value="{{ old('departure_time') }}" required>
+                </div>
+                <div class="input__box-long">
+                    <span class="details">Departure Date<span class="required-symbol">*</span></span>
+                    <input type="date" name="departure_date" value="{{ old('departure_date') }}" required>
+                </div>
+
                 <div class="input__box-long">
                     <span class="details">Activities <span class="required-symbol">*</span></span>
                     <select class="form-control" id="preferred_activity" name="preferred_activity" required>

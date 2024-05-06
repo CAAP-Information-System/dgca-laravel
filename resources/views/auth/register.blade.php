@@ -55,14 +55,7 @@
                     <span class="details">Last Name <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" required>
                 </div>
-                <div class="input__box-long">
-                    <span class="details">Gender <span class="required-symbol">*</span></span>
-                    <select class="form-control" id="gender" name="gender">
-                        <option value="-- Select Option --" disabled>-- Select Option -- </option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
+
                 <div class="input__box-long">
                     <span class="details">Designation/Position <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
@@ -79,6 +72,7 @@
                         <option value="Delegate">Delegate</option>
                         <option value="Observer">Observer</option>
                         <option value="Panelist">Panelist</option>
+                        <option value="ICAO">ICAO</option>
                         <option value="Sponsor/Exhibitor">Sponsor/Exhibitor</option>
                     </select>
                 </div>
@@ -111,7 +105,7 @@
                 </div>
 
                 <div class="input__box">
-                    <span class="details">Mobile Number <span class="required-symbol">*</span></span>
+                    <span class="details">Emergency Contact Number <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: 0123456789" name="mobile" value="{{ old('mobile') }}" autocomplete="mobile" required>
                 </div>
                 <div class="HOD_check">

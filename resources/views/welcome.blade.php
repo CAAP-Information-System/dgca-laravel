@@ -127,7 +127,6 @@
                         <div class="messenger">
                             <span class="name">Captain Manuel Antonio L. Tamayo</span>
                             <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
-                            <span>Chairman of DGCA/59 APAC-PH </span>
                         </div>
                     </div>
                 </div>
