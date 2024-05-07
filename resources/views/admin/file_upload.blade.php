@@ -10,6 +10,7 @@
             <tr>
                 <th>Document Name</th>
                 <th>Uploaded by</th>
+                <th>Organization</th>
                 <th>Category</th>
                 <th>Upload Date</th>
                 <th>Size</th>
@@ -21,6 +22,7 @@
             <tr>
                 <td style="font-weight: bold;">{{ $file->name }}</td>
                 <td>{{ $file->owner }}</td>
+                <td>{{ $owner->organization }}</td>
                 <td>{{ $file->file_category }}</td>
                 <td style="width: 10%;">{{ $file->upload_date }}</td>
                 <td style="width: 10%;">
