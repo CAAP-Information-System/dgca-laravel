@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Mail\ApprovalMail;
 use App\Models\AccessCode;
+use App\Models\AccompFlightInformation;
+use App\Models\DelegateFlightInformation;
 use App\Models\File;
 use App\Models\SideMeeting;
 use App\Models\User;
@@ -181,5 +183,13 @@ class AdminController extends Controller
 
         // Redirect to the access denied page if the access code is incorrect
         return redirect()->route('403');
+    }
+    public function viewDelegateFlight(){
+        $delegates = DelegateFlightInformation::paginate(10);
+        return view('admin.flight_information.delegates', compact('delegates'));
+    }
+    public function viewAccompanyingFlight(){
+        $accompanying = AccompFlightInformation::paginate(10);
+        return view('admin.flight_information.accompany', compact('accompanying'));
     }
 }

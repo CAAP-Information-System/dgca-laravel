@@ -102,4 +102,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(AccessCode::class);
     }
+    public function delegateFlight()
+    {
+        return $this->hasOne(DelegateFlightInformation::class);
+    }
 }

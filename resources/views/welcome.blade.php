@@ -4,52 +4,68 @@
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcome.css') }}"> -->
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev3.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/announcements.css') }}">
+<style>
+    .front{
+        z-index: 999999;
+    }
+</style>
+<div class="fixed top-0 left-0 w-full h-2 bg-gray-300 front">
+    <div class="h-full bg-blue-500" id="readingProgress" style="width: 0;"></div>
+</div>
 
 <main class="content-main">
     @if (auth()->check() && auth()->user()->status === 'Pending')
-    <div class="modal" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog" role="document">
+    <div class="modal " tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog animate-fade-up animate-once" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title">Welcome, <span style="font-weight: bold;">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</span></div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <div class="modal-title">Welcome, <span style="font-weight: bold;">{{auth()->user()->salutation}} {{auth()->user()->first_name}} {{auth()->user()->last_name}}</span></div>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <p class="congratulations">We are pleased to inform you that your registration for the 59th DGCA Online Conference has been successfully opened.</p>
                     <div style="margin-top: 35px;"></div>
-                    <span class="note">Reminders:</span>
+                    <span class="note">Additional Reminders:</span>
 
-                    <p>Please note that your current account is under <span style="color: #FD6F6F; font-weight:bold;">PENDING</span> approval by the conference administrators.</p>
-                    <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact the DGCA Secretariat:</p>
-                    <a class="email-link" href="#">dgca59_secretariat@caap.gov.ph</a>
+                    <p>Please note that your current account is under <span class="bg-red-100 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">PENDING</span> approval by the conference administrators.</p>
+                    <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact our DGCA Secretariat:</p>
+                    <br>
+                    <div class="block">
+                        <p>Email Address:</p>
+                        <a class="email-link" href="#">dgca59_secretariat@caap.gov.ph</a>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal" id="closeButton">Close</button>
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-dismiss="modal" id="closeButton">Close <i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
         </div>
     </div>
     @endif
+
     <section class="welcome">
-        <div class="welcome-banner">
+        <div class="welcome-banner animate-fade-up animate-once animate-ease-in">
             <main class="banner-content">
-                <header class="welcome-header">
+                <header class="text-center text-6xl md:text-8xl">
+
                     Welcome to the
-                    <span class="plane-animation">
+                    <!-- <span class="plane-animation">
                         <img src="{{ asset('img/home/plane-sketch.png') }}" alt="plane" class="plane-sketch">
-                    </span>
+                    </span> -->
 
                     <br>
-                    <span class="apac-2024"><span class="span">59th APAC DGCA PH</span> 2024</span>
+                    <span class="apac-2024"><span class="span">59th APAC DGCA</span> Conference</span>
                 </header>
-
             </main>
             <div class="theme-container">
                 <div class="typing-container">
-                    <span>We are</span>
+                    <header class="text-center text-4xl">Shaping the future of air transport:</header>
+                    <span class="symbol">//</span>
                     <span id="theme__input" class="theme__input" style="height: 50px;"></span>
+                    <span class="symbol">//</span>
                 </div>
 
                 <p class="theme-message">
@@ -62,9 +78,9 @@
         @include('layouts.conference-navbar')
     </section>
     <div class="abt-us-ctn">
-        <a href="#about-cebu" class="about-us-btn">Learn More <i class="fa-solid fa-caret-right"></i></a>
+        <a href="#about-cebu" class="about-us-btn scroll-smooth">Learn More <i class="fa-solid fa-caret-right"></i></a>
     </div>
-    <section class="main-countdown">
+    <section class="main-countdown animate-fade-up">
         <main>
             <div class="countdown-container">
                 <div class="count-section">
@@ -92,66 +108,81 @@
 
     <section class="about-cebu" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
-        <header class="header__separator">What's Featured?</header>
-        <header class="section_info_header">Warm greetings from the Philippine representatives</header>
-        <div class="welcome-message-section">
-            <div class="welcome-message-container">
-                <div class="image-container">
-                    <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
-                    <div class="caption">
-                        <p class="name">Captain Manuel Antonio L. Tamayo</p>
-                        <p class="position">Director General of Civil Aviation Authority of the Philippines</p>
+        <div class="about_cebu_container">
+            <header class="header__separator">What's Featured?</header>
+            <header class="section_info_header">Warm greetings from the Philippine representatives</header>
+            <div class="welcome-message-section">
+                <div class="welcome-message-container">
+                    <div class="image-container">
+                        <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
+                        <div class="caption">
+                            <p class="name">Capt. Manuel Antonio L. Tamayo</p>
+                            <br>
+                            <p class="position">Director General of Civil Aviation Authority of the Philippines</p>
+                        </div>
                     </div>
-                </div>
-                <div class="dg-message">
-                    <header class="message-header">
-                        Message from <span>the Director General</span>
-                    </header>
-                    <p>
-                        <i class="fa-solid fa-quote-left"></i>The Philippines is excited to welcome you to our scenic country and share our culture and renowned hospitality. We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable, resilient, and inclusive development of the air transport sector.
-                    </p>
-                    <p>
-                        Our theme for this year's conference, Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive, is timely and relevant in both global and regional context. The industry is adaptive to change and supports development while mitigating the impacts of climate change. As we move forward to a more sustainable, resilient and inclusive air transport, let us strengthen our collaboration and synergies by promoting and improving our policies and practices through a strong stakeholder engagement. It is an opportune time to engage the industry in creating a more viable circular economy, thereby promoting equal opportunities.
-                    </p>
-                    <div class="messenger">
-                        <span class="name">Captain Manuel Antonio L. Tamayo</span>
-                        <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
-                        <span>DGCA-APAC 59 Chairman</span>
+                    <div class="dg-message">
+                        <header class="message-header">
+                            Message from <span>the Director General</span>
+                        </header>
+                        <p>
+                            <i class="fa-solid fa-quote-left"></i>The Civil Aviation Authority of the Philippines is excited to welcome you to our scenic country as we proudly host the 59th Conference of the Directors General of Civil Aviation of the Asia and Pacific Regions at the vibrant island of Cebu on October 14-18, 2024.
+                        </p>
+                        <p>
+                            We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable future in aviation.
+                        </p>
+                        <p>
+                            Our theme for this year’s conference, <b class="text-primary">Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive</b>, is timely and relevant on both global and regional scales. The industry is adaptive to change and supports development while mitigating the impacts of climate change.
+                        </p>
+                        <p>
+                            Let us strengthen our collaboration and synergies by promoting and improving our policies and practices through strong stakeholder engagement.
+                        </p>
+                        <p>
+                            Our team is pleased to assist you during your stay in the Philippines and we hope you enjoy, and find the conference meaningful.
+                        </p>
+                        <div class="messenger">
+                            <span class="name">Captain Manuel Antonio L. Tamayo</span>
+                            <span class="position">Director General of Civil Aviation Authority of the Philippines</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="svg_container">
-            <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
-        </div>
-        <section class="cebu_info_section">
-            <header class="section_info_header">DISCOVER MORE ABOUT OUR UPCOMING CONFERENCE VENUE</header>
-            <div class="cebu_info_container">
-
-                <div class="cebu-details">
-                    <div class="detail-headers">
-                        <header class="detail-main-header">Cebu</header>
-                        <header class="detail-subheader">Venue for DGCA 59</header>
-                    </div>
-                    <div class="detail-content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                            Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                        </p>
-                        <p>
-                            Etiam sit amet nisl purus in mollis. Amet porttitor eget dolor morbi non arcu. Arcu non sodales neque sodales ut etiam sit amet nisl. Congue quisque egestas diam in. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Magna ac placerat vestibulum lectus mauris ultrices eros in.
-                        </p>
-                    </div>
-                </div>
-
-                <img src="{{ asset('img/home/cebu-pinned.png') }}" alt="pinned cebu" class="cebu_map">
+            <div class="svg_container">
+                <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
             </div>
-        </section>
+            <section class="cebu_info_section">
+                <header class="section_info_header">DISCOVER MORE ABOUT OUR UPCOMING CONFERENCE VENUE</header>
+                <div class="cebu_info_container">
+
+                    <div class="cebu-details">
+                        <div class="detail-headers">
+                            <header class="detail-main-header">Cebu</header>
+                            <header class="detail-subheader">Venue for DGCA 59</header>
+                        </div>
+                        <div class="detail-content">
+                            <p>
+                                Cebu is the largest island in the Visayas region, and is particularly rich in Spanish colonial history. The original capital of the Philippines until the 17th century, ‘the Queen of the South’ contains 6 major cities – Cebu, Danao, Lapu-Lapu, Mandaue, Toledo and Talisay.
+                            </p>
+                            <br>
+                            <p>
+                                Cebu is a long and narrow island that stretches 196 km from north to south, and 32 km from east to west at its widest point. Located on the eastern central area of the island, Cebu City is its main urban centre. The 2nd largest city in the Philippines is a lively commercial and industrial hub, with modern features like giant shopping complexes as well as a myriad of leisure and entertainment options to keep you busy both day and night.
+                            </p>
+                            <br>
+                            <p>
+                                To this day, Cebu Island still remains a prominent and popular part of the archipelago, boasting the most ethnically diverse population. Its inhabitants are an interesting bunch, made up of Malay, Chinese, Filipino and an ever-growing number of westerners. It’s now considered to be the most dynamic island in the Philippines, attracting native and international tourists in droves.
+                            </p>
+                            <br>
+                            <p>
+                                The rest of Cebu Island is not as developed. It has rolling hills and rugged mountain ranges traversing the northern and southern lengths of the island, with the highest mountain standing over 1,000 metres tall. The coastal areas have beaches, fishing villages, mangrove forests and rich fishing grounds. The 2 destinations on Cebu Island that’ll capture the interest of adventurous travellers are Moalboal on the east coast and Oslob on the west coast. Located a few hours’ drive south of Metro Cebu, they offer a rustic type of vacation in pristine natural surroundings.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <img src="{{ asset('img/cebu_mapped.svg') }}" alt="pinned cebu" class="cebu_map">
+                </div>
+            </section>
+        </div>
     </section>
 
     <div class="svg_container">
@@ -176,7 +207,7 @@
 
     <section class="announcements_section">
 
-        <header class="announcement-header">
+        <header class="flex justify-center text-5xl font-bold items-center gap-4">
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
         </header>
@@ -187,7 +218,7 @@
                 <main class="container">
                     @foreach($newspost as $post)
                     <a href="{{ route('article', ['id' => $post->id]) }}" class="notice-card">
-                        <img src="{{ asset('storage/news_updates/' . $post->news_image) }}" alt="notice image" class="notice-img">
+                        <img src="{{ asset('storage/news/articles/' . $post->news_image) }}" alt="notice image" class="notice-img">
                         <div class="notice-content">
                             <div class="notice-title">{{ $post->news_title }}</div>
                             <div class="date">{{ $post->date_uploaded }}</div>
@@ -208,6 +239,7 @@
 
 
 </main>
+<!-- @include('home.sponsors') -->
 <footer class="sponsor__footer">
     @if(!empty($sponsorsJSON))
     @php
@@ -232,27 +264,9 @@
                     <p class="sponsor-name">{{ $sponsor['name'] }}</p>
                 </div>
                 @endforeach
-
-                @foreach($sponsors['sponsors'] as $sponsor)
-                <div class="sponsor-item">
-                    <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
-                    <p class="sponsor-name">{{ $sponsor['name'] }}</p>
-                </div>
-                @endforeach
-                <!-- Duplicate sponsor items for looping -->
-                @foreach($sponsors['sponsors'] as $sponsor)
-                <div class="sponsor-item">
-                    <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
-                    <p class="sponsor-name">{{ $sponsor['name'] }}</p>
-                </div>
-                @endforeach
             </div>
-
         </div>
-
-
     </div>
-
     @endif
 
 
@@ -260,6 +274,7 @@
 
 
 </footer>
+
 <script src="{{ asset('js/welcome/pending-modal.js') }}"></script>
 <script src="{{ asset('js/welcome/countdown.js') }}"></script>
 <script src="{{ asset('js/welcome/carousel.js') }}"></script>
@@ -299,6 +314,15 @@
         var scrolled = (winScroll / height) * 100;
         document.getElementById("myBar").style.width = scrolled + "%";
     }
+</script>
+<script>
+    window.addEventListener("scroll", function() {
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var winHeight = window.innerHeight || document.documentElement.clientHeight;
+        var docHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
+        var scrollPercent = (scrollY / (docHeight - winHeight)) * 100;
+        document.querySelector("#readingProgress").style.width = scrollPercent + "%";
+    });
 </script>
 
 @endsection

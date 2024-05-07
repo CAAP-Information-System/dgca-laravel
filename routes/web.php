@@ -62,7 +62,7 @@ Route::middleware('public')->group(function () {
 
 // FLIGHT INFORMATION REGISTRATION
 Route::get('/delegate-flight-information', [DelegateController::class, 'DelegateFlightForm'])->name('delegate-flight-information');
-Route::post('/upload-flight-information', [DelegateController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+Route::post('/upload-delegate-information', [DelegateController::class, 'uploadFlightInformation'])->name('upload-delegate-information');
 Route::get('/accompany-flight-information', [AccompanyController::class, 'AccompanyFlightForm'])->name('accompany-flight-information');
 Route::post('/upload-flight-information', [AccompanyController::class, 'uploadFlightInformation'])->name('upload-flight-information');
 
@@ -92,6 +92,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/update-access-role/{id}', [AdminController::class, 'updateAccessRole'])->name('update-access-role');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
     Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
+    Route::get('/delegate-flight', [AdminController::class, 'viewDelegateFlight'])->name('delegate-flight');
+    Route::get('/accompany-flight', [AdminController::class, 'viewAccompanyingFlight'])->name('accompany-flight');
 
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
 });

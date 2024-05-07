@@ -34,7 +34,7 @@ class PostingController extends Controller
             $news_imageName = $news_image->getClientOriginalName();
 
             // Save news_image to storage and database
-            $path = $news_image->storeAs('public/news_updates', $news_imageName);
+            $path = $news_image->storeAs('news/articles', $news_imageName, 'public');
             $size = $news_image->getSize();
             $newsTitle = $request->input('news_title');
             $newsDesc = $request->input('news_description');

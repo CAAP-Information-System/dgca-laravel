@@ -5,7 +5,7 @@
 <div class="container">
 
     <div class="form-main">
-        <form class="register-user" action="{{ route('upload-flight-information') }}" method="POST" enctype="multipart/form-data">
+        <form class="register-user" action="{{ route('upload-delegate-information') }}" method="POST" enctype="multipart/form-data">
             <header class="title">Delegate's Flight Information Form</header>
             <div class="flight_guide">
                 <p><b>Greetings! </b>

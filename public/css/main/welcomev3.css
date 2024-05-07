@@ -92,7 +92,7 @@
 }
 .welcome-header {
     margin-top: 5vh;
-    font-size: 6rem;
+    font-size: 5.5rem;
     line-height: 10vh;
     display: inline-block;
     line-height: 10vh;
@@ -152,6 +152,47 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+.learn-more {
+    padding: 15px;
+    background-color: white;
+    border-radius: 6px;
+    position: relative;
+    border: 2px solid #3b3b3b;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.learn-more span {
+    color: #3b3b3b;
+    position: relative;
+
+
+    transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.learn-more::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 6px;
+    transform: translate(-100%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: hsl(244, 63%, 69%);
+    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.learn-more:hover {
+    color: white;
+}
+
+.learn-more:hover::before {
+    transform: translate(0, -50%);
+}
+
 .about-us-btn {
     text-align: center;
     font-size: 17px;
@@ -509,7 +550,7 @@
     }
     .welcome-header {
         font-size: 5rem;
-        line-height: 6vh;
+        line-height: 8vh;
     }
     .theme {
         font-size: 3em;
