@@ -31,17 +31,6 @@
 .content-main {
     margin-bottom: 10vh;
 }
-.header__separator {
-    position: relative;
-    font-size: 4rem;
-    text-align: center;
-    z-index: 10;
-    margin-bottom: 2vh;
-    color: #3b3b3b;
-    font-weight: bold;
-    text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff; /* Add white outline */
-}
-
 .section_info_header {
     position: relative;
     z-index: 5;
@@ -61,10 +50,38 @@
     background-clip: text;
     color: transparent;
 }
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sponsors-list {
+    display: flex;
+    animation: marquee 20s linear infinite; /* Adjust duration as needed */
+}
+
+.sponsor-item {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust spacing between sponsor items */
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.header__separator {
+    position: relative;
+    font-size: 4rem;
+    text-align: center;
+    color: #3b3b3b;
+    z-index: 10;
+    margin-bottom: 2vh;
+}
 .welcome {
     color: #3b3b3b;
     width: 100%;
-
 }
 
 .welcome-banner {
@@ -72,7 +89,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .welcome-header {
     margin-top: 5vh;
@@ -107,21 +123,14 @@
     width: 100%;
     font-family: "Batangas";
 }
-.symbol{
-    font-size: 2rem;
-}
 .theme__input {
     font-family: "Batangas";
     color: #2263a0;
-
 }
 .welcome-banner .span:hover {
     font-size: 1.2em;
     transition: font-size 0.3s ease-in-out;
     color: #50a9fb;
-}
-.theme_main_text{
-    font-size: 2rem;
 }
 .theme-message {
     width: 60%;
@@ -239,7 +248,7 @@
     width: 100%;
     height: auto;
     position: absolute;
-    top: 185%;
+    top: 170%;
     left: 0;
 }
 .welcome-message-section {
@@ -260,7 +269,6 @@
     padding-bottom: 25px;
     font-weight: bold;
     line-height: 6vh;
-    text-align: left !important;
 }
 .message-header span {
     display: block;
@@ -282,16 +290,16 @@
     margin-right: 15px;
 }
 .messenger {
-    margin-top: 6vh;
+    margin-top: 3vh;
 }
 .messenger span {
     display: block;
     line-height: 3vh;
 }
 .messenger .name {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
-    color: #3b3b3b;
+    color: #969696;
 }
 .messenger .position {
     font-style: italic;
@@ -349,7 +357,9 @@
     position: relative;
     z-index: 3;
     background-color: rgba(59, 59, 59, 0.7);
-    box-shadow: rgba(59, 59, 59, 0.2) 0px 8px 24px;
+    -webkit-box-shadow: -9px 13px 0px 4px rgba(80, 169, 251, 1);
+    -moz-box-shadow: -9px 13px 0px 4px rgba(80, 169, 251, 1);
+    box-shadow: -9px 13px 0px 4px rgba(80, 169, 251, 1);
     position: relative;
     color: #ffff;
     padding: 25px;
@@ -386,10 +396,6 @@
 .detail-headers {
     line-height: 6.5vh;
     width: 100%;
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(5px);
-    z-index: 5;
 }
 .detail-main-header {
     font-size: 5rem;
@@ -416,24 +422,11 @@
     text-align: center;
     margin-bottom: 8vh;
 }
-.marquee {
-    overflow: hidden;
-    white-space: nowrap;
-}
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 .sponsors-list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3vw;
-    animation: marquee 20s linear infinite; /* Adjust the duration as needed */
 }
 
 .sponsor-item {
@@ -474,7 +467,7 @@
         text-align: justify;
     }
 }
-@media only screen and (min-width: 1260px) and (max-width: 1450px) {
+@media only screen and (min-width: 1260px) and (max-width: 1440px) {
     .carousel-container {
         width: 90vw;
         margin-top: -4%;
@@ -495,43 +488,25 @@
     .about-us-btn {
         font-size: 1.1vw;
     }
-    .countdown-main {
-        background-color: #ffff;
-        margin-top: 45vh;
-        margin-right: 38vw;
-        border-radius: 20px;
-        padding: 15px;
-        width: 45vw;
-        height: 20vh;
-        z-index: 10;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
     .countdown-sect {
         margin-top: -1%;
     }
     .countdown ul li span {
-        font-size: 1.8vw;
-    }
-    .countdown ul li{
-        font-size: 1.8vw;
+        font-size: 1.3em;
     }
     .countdown-message {
-        font-size: 1.8vw;
+        font-size: 2em;
     }
     .city-smoke-bg {
-        margin-top: 28%;
+        margin-top: 15%;
     }
 }
-/* @media only screen and (min-height: 600px) and (max-height: 800px) {
-    .city-smoke-bg {
-        margin-top: 0% !important;
-    }
-    .header__separator{
-        margin-top: 10vh !important;
-    }
-} */
 @media only screen and (min-width: 1025px) and (max-width: 1259px) {
 
+    .carousel-container {
+        width: 89vw;
+        margin-top: -8%;
+    }
     .welcome-header {
         font-size: 5rem;
         line-height: 6vh;
@@ -572,27 +547,26 @@
     }
     .countdown-main{
         margin-top: 43vh;
-        margin-right: 32vw;
-        width: 40vw;
+        margin-right: 25vw;
     }
     .countdown-sect {
         margin-top: -1%;
     }
     .countdown ul li {
-        font-size: 1.3vw;
+        font-size: 18px;
     }
 
     .countdown ul li span {
-        font-size: 2vw;
+        font-size: 22px;
     }
     .countdown-message {
-        font-size: 1.4vw;
+        font-size: 20px;
     }
     .city-smoke-bg {
-        margin-top: 10%;
+        margin-top: -10%;
     }
     .about-cebu{
-        margin-top: 45vh;
+        margin-top: 10vh;
     }
     .capt-tamayo-img{
         margin-left: 4vw;
@@ -644,9 +618,8 @@
         font-size: 17px;
     }
     .main-countdown {
-        margin-top: -20vh;
+        margin-top: -10vh;
     }
-
     .countdown-main{
         margin-top: 43vh;
     }
@@ -663,7 +636,7 @@
         font-size: 20px;
     }
     .city-smoke-bg {
-        margin-top: -75vh;
+        margin-top: -30vh;
     }
     .about-cebu {
         margin: 0;
@@ -757,7 +730,7 @@
         font-size: 20px;
     }
     .city-smoke-bg {
-        margin-top: -60vh;
+        margin-top: -35vh;
     }
     .about-cebu {
         margin: 0;
@@ -856,12 +829,6 @@
     .about-cebu {
         margin: 0;
     }
-    .cebu_map {
-        display: none; /* Hide the image */
-    }
-    .cebu-details{
-        width: 100%;
-    }
     .welcome-message-container{
         display: flex;
         flex-direction: column;
@@ -948,9 +915,6 @@
     .about-cebu {
         margin: 0;
     }
-    .cebu_map {
-        display: none; /* Hide the image */
-    }
     .welcome-message-container{
         display: flex;
         flex-direction: column;
@@ -1003,15 +967,9 @@
 }
 /* PHONE MODE */
 @media only screen and (min-width: 440px) and (max-width: 499px) {
-    .text {
-        font-size: 8vw; /* Adjust font size as needed */
-    }
-    .theme__input {
-        font-size: 8vw; /* Adjust font size as needed */
-        word-wrap: break-word; /* Add word wrapping */
-    }
-    .content-main{
-        padding-right: 10% !important;
+    .banner-img {
+        width: 200px;
+        height: auto;
     }
     .welcome-banner {
         background: none;
@@ -1055,15 +1013,7 @@
         display: block;
         margin: 0 auto;
     }
-    .main-countdown {
-        justify-content: center;
-        background: url("/img/banner/port dgca banner.png");
-        background-size: 90% auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 80vh;
-        position: relative;
-    }
+
     .about-us-btn {
         border: 2px solid #3b3b3b;
         font-size: 3vw;
@@ -1074,21 +1024,7 @@
         background-color: #3b3b3b;
         color: #ffff;
     }
-    .main-countdown{
-        top: 100%;
-    }
-    .count-section{
-        padding-right: 4%;
-    }
-    .countdown-container{
-        padding-left: 30%;
-        padding-top: 30%;
-    }
-    .countdown-main{
-        margin-left: 15%;
-        width: 500px;
-        justify-content: space-around;
-    }
+
     .countdown ul li span {
         font-size: 6vw;
         color: #3b3b3b;
@@ -1100,12 +1036,13 @@
     .countdown ul {
         gap: 6vw;
     }
-
-    .main-countdown{
-        margin-top: -5%;
+    .countdown-message {
+        font-size: 3vw;
+        color: #3b3b3b;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
     }
     .city-smoke-bg {
-        top: 250%;
+        top: 140%;
     }
     .cebu_info_section {
         width: 100%;
@@ -1114,9 +1051,6 @@
         margin-left: -5%;
         width: 90%;
         overflow-y: auto;
-    }
-    .about-cebu{
-        margin-top: 50%;
     }
     .cebu-pinned-img {
         display: none;
@@ -1130,129 +1064,111 @@
 }
 
 @media only screen and (min-width: 300px) and (max-width: 439px) {
-
-    .text {
-        font-size: 8vw; /* Adjust font size as needed */
+    .content-main {
+        margin-left: 5%;
     }
-    .theme__input {
-        font-size: 8vw; /* Adjust font size as needed */
-        word-wrap: break-word; /* Add word wrapping */
-    }
-    .content-main{
-        padding-right: 10% !important;
-    }
-    .welcome-banner {
-        background: none;
-    }
-    .carousel-container {
-        width: 105vw;
-        margin-top: -2%;
-    }
-    .carousel-inner {
-        width: 110vw;
-    }
-    .carousel-item {
-        left: 15%;
-    }
-    .welcome-header {
-        font-size: 4rem;
-        z-index: 2;
-        line-height: 8.5vh;
-        text-align: center;
-    }
-    .welcome-header .plane-sketch {
-        display: none;
-    }
-    /* .welcome-banner .span:hover{
-        pointer-events: none;
-    } */
-    .conf-nav{
-        width: 90vw;
-        margin-left:-10% ;
-    }
-    .typing-container span{
-        font-size: 38px;
-    }
-    .theme {
-        font-size: 2rem;
-        text-align: center;
-    }
-    .theme-message {
-        font-size: 10px;
+    .welcome {
+        padding: 0vh;
+        color: #3b3b3b;
         width: 100%;
     }
-    .main-countdown {
-        display: block;
-        margin: 0 auto;
-        margin-top: 35vh;
+
+    .carousel-container {
+        width: 100vw;
+        margin-top: -2%;
+        right: 23%;
+    }
+    .carousel-inner {
+        width: 100vw;
+    }
+    .carousel-item {
+        left: 20%;
+    }
+    .plane-sketch {
+        display: none;
+    }
+    .welcome-header {
+        margin-right: 20%;
+        font-size: 8.7vw;
+        z-index: 2;
+    }
+    .welcome-header .span {
+        font-size: 13vw;
+    }
+    .theme {
+        font-size: 4vw;
+    }
+    .theme-message {
+        font-size: 2.3vw;
+        width: 65vw;
+    }
+
+    .about-us-btn {
+        border: 2px solid #ffffff;
     }
     .abt-us-ctn {
-        display: block;
-        margin: 0 auto;
+        position: relative;
+        z-index: 1; /* Adjust the value as needed */
+        top: 10%;
+        bottom: 10%;
+        margin-left: 30%;
     }
-    .section_info_header {
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); /* Adjust shadow offset and blur radius as needed */
-    }
+
     .about-us-btn {
-        border: 2px solid #3b3b3b;
         font-size: 3vw;
         z-index: 2;
-        color: #3b3b3b;
+        color: #ffffff;
     }
-    .about-us-btn:hover {
-        background-color: #3b3b3b;
-        color: #ffff;
-    }
-    .main-countdown{
-        top: 100%;
-    }
-    .main-countdown {
-        justify-content: center;
-        background: url("/img/banner/port dgca banner.png");
-        background-size: 90% auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 80vh;
+
+    .count-section {
         position: relative;
+        z-index: 2; /* Adjust the value as needed */
     }
-    .countdown-container{
-        padding-left: 30%;
-        padding-top: 30%;
+
+    .countdown-sect {
+        margin-top: 28%;
+        margin-left: -5%;
+        position: relative;
+        z-index: 3; /* Adjust the value as needed, should be higher than the parent container's z-index */
     }
-    .countdown-main{
-        margin-left: 15%;
-        width: 500px;
-        justify-content: space-around;
-    }
+
     .countdown ul li span {
         font-size: 6vw;
-        color: #3b3b3b;
+        color: #ffffff;
     }
     .countdown ul li {
         font-size: 3vw;
-        color: #3b3b3b;
+        color: #ffffff;
     }
     .countdown ul {
-        gap: 6vw;
+        gap: 2%;
     }
-
-    .main-countdown{
-        margin-top: -5%;
+    .countdown-message {
+        font-size: 3vw;
+        margin-left: 5%;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
     }
     .city-smoke-bg {
-        top: 235%;
         width: 100%;
+        height: 150%;
+        position: absolute;
+        top: 85%;
+        left: 0;
+        object-fit: cover;
+    }
+    .about-cebu {
+        height: 500%;
     }
     .cebu_info_section {
         width: 100%;
     }
     .cebu-details {
-        margin-left: -5%;
+        margin-left: 2%;
+        margin-top: 50%;
         width: 90%;
+        height: 600px;
         overflow-y: auto;
-    }
-    .about-cebu{
-        margin-top: 80%;
     }
     .cebu-pinned-img {
         display: none;
@@ -1263,15 +1179,6 @@
     .announcement-header {
         font-size: 20px;
     }
-    .city-smoke-bg {
-        width: 100%;
-        height: 150%;
-        position: absolute;
-        margin-top: -50%;
-        left: 0;
-        object-fit: cover;
-    }
-
 }
 @media only screen and (max-width: 385px) {
     .content-main {
@@ -1298,12 +1205,7 @@
         font-size: 2vw;
     }
     .city-smoke-bg {
-        width: 100%;
-        height: 150%;
-        position: absolute;
-        margin-top: -50%;
-        left: 0;
-        object-fit: cover;
+        top: 88%;
     }
     .announcement-header {
         font-size: 20px;
