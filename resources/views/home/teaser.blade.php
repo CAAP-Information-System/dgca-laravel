@@ -12,7 +12,7 @@
                 <a href="{{ route('bulletin') }}" class="teaser-btn">See Our Bulletin <i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </div>
-        <iframe src="https://onedrive.live.com/embed?resid=C872D43F2ABC4BE8%2117369&authkey=!AELIjOo4n7cTj-8" class="teaser-link" frameborder="0" scrolling="no" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1Jc_ecFHH4qBllmkz1dP7M1_nBu1i1WCo/preview" class="teaser-link" frameborder="0" scrolling="no" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
         <!-- <iframe src="https://www.youtube.com/embed/dVCHcU--9aI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="teaser-link"></iframe> -->
 
     </main>
