@@ -82,12 +82,12 @@
     </div>
     <section class="main-countdown animate-fade-up">
         <main>
-            <div class="mt-80 md:mt-80 md:mr-96">
-                <div class="">
-                    <main class="bg-white rounded-lg p-6 md:p-10 shadow-md">
-                        <div class="w-min mx-auto flex flex-col items-center">
+            <div class="countdown-container">
+                <div class="count-section">
+                    <main class="countdown-main">
+                        <div class="countdown-sect">
                             <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
-                            <p class="md:text-4xl text-center p-2">Countdown until the 59th DGCA Conference!</p>
+                            <p class="countdown-message">Countdown until the 59th DGCA Conference!</p>
                             <div id="countdown" class="countdown">
                                 <ul>
                                     <li><span id="days"></span>Days</li>
@@ -97,9 +97,8 @@
                                 </ul>
                             </div>
                             <!-- <hr width="100%" style="border: 1px solid #3b3b3b;"> -->
+
                         </div>
-                    </main>
-                    <!-- <img class="hidden md:block" src="{{ asset('img/home/countdown-cover.jpg') }}" alt="countdown banner"> -->
                 </div>
             </div>
 
@@ -107,9 +106,9 @@
     </section>
 
 
-    <section class="" id="about-cebu">
-        <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="-mt-32 md:mt-0">
-        <div class="-mt-32 md:-mt-96">
+    <section class="about-cebu" id="about-cebu">
+        <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="city-smoke-bg">
+        <div class="about_cebu_container">
             <header class="header__separator">What's Featured?</header>
             <header class="section_info_header">Warm greetings from the Philippine representatives</header>
             <div class="welcome-message-section">
@@ -180,7 +179,7 @@
                         </div>
                     </div>
 
-                    <img src="{{ asset('img/cebu_mapped.svg') }}" alt="pinned cebu" class="cebu_map hidden md:block">
+                    <img src="{{ asset('img/cebu_mapped.svg') }}" alt="pinned cebu" class="cebu_map">
                 </div>
             </section>
         </div>
@@ -208,7 +207,7 @@
 
     <section class="announcements_section">
 
-        <header class="flex justify-center text-3xl md:text-5xl font-bold items-center gap-4">
+        <header class="flex justify-center text-5xl font-bold items-center gap-4">
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
         </header>
