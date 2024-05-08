@@ -46,12 +46,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://www.tailwindcss-animated.com/configurator.html?animation=fade-up">
     <!-- ADMIN LTE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/app.css'])
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap');
@@ -69,7 +69,7 @@
     @include('layouts.admin-navbar')
 
 
-    <main class="main-content">
+    <main class="main-content scroll-smooth">
         @yield('content')
     </main>
     </div>
@@ -131,7 +131,7 @@
         </div>
     </section> -->
     <div class="footer text-center">
-        <b>www.dgca59.gov.ph &nbsp;&nbsp;| &nbsp;&nbsp; DGCA.PH@gmail.com &nbsp;&nbsp; |</b>
+        <b>www.dgca59.ph &nbsp;&nbsp;| &nbsp;&nbsp; dgca59_secretariat@caap.gov.ph &nbsp;&nbsp; |</b>
     </div>
 
 </footer>

@@ -39,10 +39,17 @@
                             <div class="item-name">Pending Accounts</div>
                         </a>
                     </li>
+                    <hr>
                     <li class="nav-item">
-                        <a href="https://docs.google.com/spreadsheets/d/1rMUIsiW-9JWs-J1ptwk5qBMMVE0sOQtBEJ5JLg4meug/edit?usp=sharing" class="sidebar-item">
+                        <a href="{{ route('delegate-flight') }}" class="sidebar-item">
                             <i class="fa-solid fa-file-waveform fa-lg"></i>
-                            <div class="item-name">Google Forms</div>
+                            <div class="item-name">Delegate's Flight</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('accompany-flight') }}" class="sidebar-item">
+                            <i class="fa-solid fa-file-waveform fa-lg"></i>
+                            <div class="item-name">Accompanying Person's Flight</div>
                         </a>
                     </li>
                     <li class="nav-item " id="account-name">

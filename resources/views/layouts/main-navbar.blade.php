@@ -3,9 +3,9 @@
 <main class="navbar-container">
     <nav class="main-navbar" id="navbar">
         <main class="main-navbar-content">
-            <div class="main-logo">
+            <div class="flex gap-2 ml-5">
                 <img src="{{ asset('img/home/dgca-logo-outlined.png') }}" alt="DGCA Logo" class="nav-caap-logo">
-                <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo">
+                <img src="{{ asset('img/logo/caap_logo.png') }}" alt="CAAP Logo" class="nav-caap-logo object-contain">
             </div>
             <div class="nav-labels">
                 <input type="checkbox" id="check">
@@ -94,6 +94,7 @@
     </nav>
 </main>
 
+
 <script>
     function toggleDropdown() {
         document.getElementById("myDropdown").classList.toggle("show");
@@ -132,6 +133,7 @@
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             navbar.style.position = "fixed";
             navbar.style.top = "0";
+            // navbar.style.textShadow = "1px 1px #3b3b3b";
         } else {
             navbar.style.position = "relative";
         }

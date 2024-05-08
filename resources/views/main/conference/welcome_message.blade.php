@@ -3,10 +3,10 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/conference/welcome_message.css') }}">
 <main>
+    <header class="message-header">Message from the Director General</header>
     <section class="main-title">
         <div class="message-container">
             <div>
-                <header class="message-header">Message from the Director General</header>
                 <section class="welcome-message">
                     <main class="message-main">
                         <div class="message-content">

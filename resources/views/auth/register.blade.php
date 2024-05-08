@@ -3,10 +3,7 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/auth/register.css') }}">
 <div class="container">
-    <div class="header-container">
-        <header class="auth-hdr">Welcome and Mabuhay!</header>
-    </div>
-
+    @include('auth.auth_header')
     <div class="form-main">
         <form class="register-user" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
             <header class="title">Registration</header>
@@ -58,14 +55,7 @@
                     <span class="details">Last Name <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" required>
                 </div>
-                <div class="input__box-long">
-                    <span class="details">Gender <span class="required-symbol">*</span></span>
-                    <select class="form-control" id="gender" name="gender">
-                        <option value="-- Select Option --" disabled>-- Select Option -- </option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
+
                 <div class="input__box-long">
                     <span class="details">Designation/Position <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Director General" name="designation" value="{{ old('designation') }}" required>
@@ -82,6 +72,7 @@
                         <option value="Delegate">Delegate</option>
                         <option value="Observer">Observer</option>
                         <option value="Panelist">Panelist</option>
+                        <option value="ICAO">ICAO</option>
                         <option value="Sponsor/Exhibitor">Sponsor/Exhibitor</option>
                     </select>
                 </div>
@@ -114,7 +105,7 @@
                 </div>
 
                 <div class="input__box">
-                    <span class="details">Mobile Number <span class="required-symbol">*</span></span>
+                    <span class="details">Emergency Contact Number <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: 0123456789" name="mobile" value="{{ old('mobile') }}" autocomplete="mobile" required>
                 </div>
                 <div class="HOD_check">
@@ -144,7 +135,6 @@
                             E-Travel Link
                         </a>
                     </div>
-
                 </div>
 
                 <!-- Travel and Accomodation Information -->
@@ -187,7 +177,7 @@
                 <div class="category__header">
                     <header class="category-name">Other Information</header>
                 </div>
-                <div class="input__box-long" id="attireSizeBlock" style="display: contents;">
+                <div class="input__box-long" id="attireSizeBlock" style="display: none;">
                     <div class="input__box-long">
                         <div class="barong-label">
                             <span class="details">Barong-Tagalog Size (Attire):<span class="required-symbol">*</span></span>
@@ -311,8 +301,8 @@
             </div>
             <b class="text-danger">---IMPORTANT---</b>
             <div class="privacy-policy-check">
-                <input id="privacy" type="checkbox" name="privacy" class="checkbox" required>
-                <span class="details"><b class="text-primary">By checking this box, I agree that I have read the privacy policy.</b></span>
+                <input id="privacy" type="checkbox" name="privacy" class="agreement_checkbox" required>
+                <span class="agreement_check">By checking this box, <b>I agree</b> that I have read the privacy policy.</span>
 
             </div>
             <!-- <div class="file-drop">
@@ -379,13 +369,15 @@
 <script>
     function showAttireSize() {
         var conferenceRole = document.getElementById('conference_role').value;
+        var hodYes = document.getElementById('hod_yes').checked;
         var attireSizeBlock = document.getElementById('attireSizeBlock');
 
-        if (conferenceRole === 'Head Delegate') {
+        if (conferenceRole === 'Head Delegate' || hodYes) {
             attireSizeBlock.style.display = 'block';
         } else {
             attireSizeBlock.style.display = 'none';
         }
     }
 </script>
+
 @endsection

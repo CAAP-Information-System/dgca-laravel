@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('passport_num');
             $table->string('designation');
             $table->string('is_HOD')->nullable();
-            $table->string('gender');
             $table->string('address');
             $table->string('telephone');
             $table->string('mobile');

@@ -179,6 +179,10 @@ class HomeController extends Controller
     {
         return view('http-message.upload-sent');
     }
+    public function fileUploaded()
+    {
+        return view('http-message.file_uploaded');
+    }
 
     public function test()
     {

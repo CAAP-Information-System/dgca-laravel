@@ -3,9 +3,7 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/auth/login.css') }}">
 <div class="container">
-    <div class="header-container">
-        <header class="auth-hdr">Welcome and Mabuhay!</header>
-    </div>
+    @include('auth.auth_header')
 
     <section class="main">
         <div class="login-main">
@@ -62,9 +60,11 @@
                             @endif
                         </div>
                     </div>
-                    <button type="submit" class="button-19" id="login-button">
-                        Sign In
-                    </button>
+                    <div class="sign_in_container">
+                        <button type="submit" class="sign_in_btn" id="login-button">
+                            Sign In
+                        </button>
+                    </div>
                     <div class="row ">
                         <div style="margin-top: 35px;"></div>
                         <div>

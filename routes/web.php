@@ -30,10 +30,15 @@ Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('generate-pendings', [PDFController::class, 'pendingAccountsPDF'])->name('generate-pendings');
 });
 
+Route::post('/verify-access', [AdminController::class, 'verifyAccess'])->name('verify-access');
+Route::view('/access-denied', 'access-denied')->name('access-denied');
+
+
 // HTTP ROUTES
 Route::get('/error', [HomeController::class, 'error_503'])->name('error');
 Route::get('/403', [HomeController::class, 'error_403'])->name('403');
 Route::get('/upload-sent', [HomeController::class, 'uploadSent'])->name('upload-sent');
+Route::get('/file-uploaded', [HomeController::class, 'fileUploaded'])->name('file-uploaded');
 
 // GUEST PAGE ROUTES
 Route::middleware('public')->group(function () {
@@ -57,15 +62,19 @@ Route::middleware('public')->group(function () {
 
 // FLIGHT INFORMATION REGISTRATION
 Route::get('/delegate-flight-information', [DelegateController::class, 'DelegateFlightForm'])->name('delegate-flight-information');
-Route::post('/upload-flight-information', [DelegateController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+Route::post('/upload-delegate-information', [DelegateController::class, 'uploadFlightInformation'])->name('upload-delegate-information');
 Route::get('/accompany-flight-information', [AccompanyController::class, 'AccompanyFlightForm'])->name('accompany-flight-information');
 Route::post('/upload-flight-information', [AccompanyController::class, 'uploadFlightInformation'])->name('upload-flight-information');
+
+// ACCESS CODE ROUTE
+Route::get('/access-code', [AdminController::class, 'accessView'])->name('access-code');
+Route::post('/verify-access', [AdminController::class, 'verifyAccess'])->name('verify-access');
 
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
-    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
-    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
+    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper')->middleware('access_code');
+    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper')->middleware('access_code');
     Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
     Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
 });
@@ -83,6 +92,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/update-access-role/{id}', [AdminController::class, 'updateAccessRole'])->name('update-access-role');
     Route::post('/update-meeting-room', [SideMeetingController::class, 'createMeetingRoom'])->name('createMeetingRoom');
     Route::get('/pending-accounts', [AdminController::class, 'viewPendingAccounts'])->name('pending-accounts');
+    Route::get('/delegate-flight', [AdminController::class, 'viewDelegateFlight'])->name('delegate-flight');
+    Route::get('/accompany-flight', [AdminController::class, 'viewAccompanyingFlight'])->name('accompany-flight');
 
     Route::post('/profile/approve/{id}', [AdminController::class, 'approveUser'])->name('user.approve');
 });

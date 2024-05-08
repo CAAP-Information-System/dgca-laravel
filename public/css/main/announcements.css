@@ -1,14 +1,8 @@
 .announcements_section {
     padding: 4vh 4vh;
-    margin-top: 7vh;
     color: #3b3b3b;
 }
 
-.announcement-header {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
 
 .announcement-arrow {
     width: 40px;

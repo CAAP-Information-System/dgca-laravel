@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ApprovalMail;
+use App\Models\AccessCode;
+use App\Models\AccompFlightInformation;
+use App\Models\DelegateFlightInformation;
 use App\Models\File;
 use App\Models\SideMeeting;
 use App\Models\User;
@@ -74,8 +77,9 @@ class AdminController extends Controller
     public function file_uploads()
     {
         $files = File::paginate(10);
+        $owner = User::all();
 
-        return view('admin.file_upload', ['files' => $files,]);
+        return view('admin.file_upload', ['files' => $files, 'owner' => $owner]);
     }
 
     public function reservation_view()
@@ -142,5 +146,50 @@ class AdminController extends Controller
 
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Account deleted successfully.');
+    }
+
+    public function accessView()
+    {
+        return view('auth.access_code');
+    }
+
+    public function verifyAccess(Request $request)
+    {
+        $accessCode = $request->input('access_code');
+        $staticAccessCode = "DGCA59APACPH";
+
+        // Check if the inputted access code matches the STATIC_ACCESS_CODE
+        if ($accessCode === $staticAccessCode) {
+            // Get the currently authenticated user
+            $user = Auth::user();
+
+            // Check if the user already has an associated access code
+            if (!$user->accessCode) {
+                // Create a new AccessCode model instance
+                $accessCodeEntry = new AccessCode();
+                $accessCodeEntry->access_code = $accessCode;
+                $accessCodeEntry->isAccessed = 1;
+
+                // Set the user ID for the access code entry
+                $accessCodeEntry->user_id = $user->id;
+
+                // Save the access code entry
+                $accessCodeEntry->save();
+
+                // Redirect to the authenticated page
+                return redirect()->route('disc-paper');
+            }
+        }
+
+        // Redirect to the access denied page if the access code is incorrect
+        return redirect()->route('403');
+    }
+    public function viewDelegateFlight(){
+        $delegates = DelegateFlightInformation::paginate(10);
+        return view('admin.flight_information.delegates', compact('delegates'));
+    }
+    public function viewAccompanyingFlight(){
+        $accompanying = AccompFlightInformation::paginate(10);
+        return view('admin.flight_information.accompany', compact('accompanying'));
     }
 }

@@ -1,0 +1,40 @@
+.access_code_main{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.access_code_form{
+    width: 40%;
+    color: #3b3b3b;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 17px;
+}
+.form_inputs{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+.form_inputs p {
+    color: #969696;
+    font-style: italic;
+    font-size: 16px;
+    width: 100%;
+}
+.access_input{
+    padding: 10px;
+    display: inline-block;
+}
+.submit_code{
+    background-color: #50A9FB;
+    padding: 6px;
+    font-size: 1.1rem;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 99px;
+    color: #ffff !important;
+    width: 100%;
+}

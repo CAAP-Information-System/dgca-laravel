@@ -31,7 +31,6 @@ class User extends Authenticatable
         'passport_num',
         'designation',
         'is_DirectorGeneral',
-        'gender',
         'address',
         'telephone',
         'mobile',
@@ -99,5 +98,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(File::class);
     }
+    public function accessCode()
+    {
+        return $this->hasOne(AccessCode::class);
+    }
+    public function delegateFlight()
+    {
+        return $this->hasOne(DelegateFlightInformation::class);
+    }
 }
-

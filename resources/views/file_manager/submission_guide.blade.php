@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/file_manager/submission_guide.css') }}">
-@include('main.banner', ['bannerTitle' => 'Document Submission Guide'])
+@include('main.banner', ['bannerTitle' => 'Paper Submission Guide'])
 <div class="container">
     <section class="section-grp">
         <header class="section-hdr">Types of Papers</header>

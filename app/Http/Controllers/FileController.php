@@ -48,6 +48,7 @@ class FileController extends Controller
         }
     }
 
+    // Stores files on database
     public function upload(Request $request)
     {
         // Ensure the user is authenticated before accessing auth()->user()
@@ -77,7 +78,7 @@ class FileController extends Controller
         $fileName = $file->getClientOriginalName();
 
         // Save file to storage and database
-        $path = $file->storeAs('public/conference/papers', $fileName);
+        $path = $file->storeAs('conference/papers', $fileName, 'public');
         $size = $file->getSize();
 
         $createFile = new File();
@@ -95,7 +96,7 @@ class FileController extends Controller
         // Save File
         $createFile->save();
 
-        return redirect()->back()->with('success', 'File uploaded successfully.');
+        return redirect()->route('file-uploaded')->with('success', 'File uploaded successfully.');
     }
 
 

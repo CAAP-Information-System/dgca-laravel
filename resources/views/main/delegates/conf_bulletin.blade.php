@@ -131,11 +131,11 @@
         <div class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/participants.png') }}" alt="baggage" class="bullet-img">
-                Participant Registration
+                Participants Registration
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Participants should register online the ICAO events webpage at
+                    Participants should register online the Conference registration webpage at
                     <a href="{{ route('register') }}" target="_blank">59th DGCA Registration</a>.
 
                 </div>
@@ -148,9 +148,7 @@
             </header>
             <div class="bullet-details">
                 <div class="bullet-desc">
-                    Please note that no documentation will be available in hard copy format. Details regarding
-                    the event and upload of presentations after the event will be available on the
-                    <a href="{{ route('view-submission') }}" target="_blank">Submission Guidance Page</a>.
+                    Please note that no documentation will be available in hard copy format.
                 </div>
             </div>
         </div>

@@ -137,9 +137,11 @@
 
         if (fileCategory === 'Discussion') {
             discussionAgendaSection.style.display = 'block';
+            papernoSection.style.display = 'block';
             informationAgendaSection.style.display = 'none';
         } else if (fileCategory === 'Information') {
             discussionAgendaSection.style.display = 'none';
+            papernoSection.style.display = 'block';
             informationAgendaSection.style.display = 'block';
         } else if (fileCategory === 'Discussion' && fileCategory === 'Information') {
             papernoSection.style.display = 'block';
