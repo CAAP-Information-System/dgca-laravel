@@ -22,14 +22,12 @@
         </div>
         @endforeach
         @else
-        <div class="message-content">
-            <img src="{{ asset('img/error/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
-            <header class="message-content-header">
-                Sorry, No files have been uploaded yet.
-            </header>
-            <p class="message-header-subtitle">
-                Kindly coordinate with our conference secretariat for your concerns and inquiries. Thank you!
-            </p>
+        <div class="mb-32 md:flex flex-row-reverse items-center gap-10">
+            <img src="{{ asset('img/error/missing.svg') }}" alt="CAAP Logo" class="w-96 object-contain">
+            <div class="text-center p-4 mt-16">
+                <header class=" text-4xl font-extrabold md:text-6xl">No files yet</header>
+                <p class="text-gray-600 italic mt-2">Kindly coordinate with our conference secretariat for your concerns and inquiries. Thank you!</p>
+            </div>
         </div>
         @endif
 

@@ -4,7 +4,7 @@
         <div class="teaser-details">
             <header class="teaser-details-header">DGCA 59 <br><span>2024 Trailer</span> </header>
             <p class="teaser-message">
-                As the upcoming DGCA Conference approaches, the Philippines invites you to join us in shaping a sustainable future for aviation! Get ready to be part of this thrilling event, offering a glimpse into what's in store this October 2024. Watch our teaser trailer and join us in our excitement!
+                As the upcoming DGCA Conference approaches, the Philippines invites you to join us in shaping a sustainable future for aviation! Get ready to witness the pinnacle of the DGCA's event, offering a glimpse into what's in store this coming October 2024. Watch our teaser trailer and join us in our excitement!
                 <br><br>
                 Ensure you register with us before the conference begins. For further information, please refer to our conference bulletin available at the link below:
             </p>

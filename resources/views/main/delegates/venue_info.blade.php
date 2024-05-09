@@ -44,21 +44,26 @@
             <div class="marquee flex">
                 <!-- Insert your images here -->
                 <img src="{{ asset('img/dusit-thani/dusit1.jpg') }}" alt="Image 1" class="marquee-img">
-                <img src="{{ asset('img/dusit-thani/dusit2.jpg') }}" alt="Image 1" class="marquee-img">
-                <img src="{{ asset('img/dusit-thani/dusit3.jpg') }}" alt="Image 1" class="marquee-img">
-                <img src="{{ asset('img/dusit-thani/dusit4.jpg') }}" alt="Image 1" class="marquee-img">
-                <img src="{{ asset('img/dusit-thani/dusit5.jpg') }}" alt="Image 1" class="marquee-img">
-                <img src="{{ asset('img/dusit-thani/dusit6.jpg') }}" alt="Image 1" class="marquee-img">
-                <img src="{{ asset('img/dusit-thani/dusit7.jpg') }}" alt="Image 1" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit2.jpg') }}" alt="Image 2" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit3.jpg') }}" alt="Image 3" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit4.jpg') }}" alt="Image 4" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit5.jpg') }}" alt="Image 5" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit6.jpg') }}" alt="Image 6" class="marquee-img">
+                <img src="{{ asset('img/dusit-thani/dusit7.jpg') }}" alt="Image 7" class="marquee-img">
                 <!-- Add more images as needed -->
             </div>
 
         </div>
-        <div class="hotel-btn-grp">
-            <a href="https://www.dusit.com/dusitthani-mactancebu/" target="_blank" class="website-btn">Visit Dusit Thani Official Website</a>
+        <div class="p-4  mt-5">
+        <header class="text-lg italic">Visit Dusit Thani's Official Page:</header>
+        <div class="mt-3 flex gap-5 items-center">
+
+            <img src="{{ asset('img/dusit-thani/dusit-thani-logo.png') }}" alt="Dusit Logo" class="w-32 object-contain">
+            <a href="https://www.dusit.com/dusitthani-mactancebu/" target="_blank" class="p-3 text-sm rounded-full bg-sky-400 text-white hover:bg-sky-600">https://www.dusit.com/dusitthani-mactancebu/</a>
+        </div>
         </div>
 
-        <div class="venue-contacts">
+        <div class="venue-contacts mb-16">
             <header class="venue-hdr">
                 <img src="{{ asset('img/icon/venue.png') }}" alt="venue" class="venue-img">
                 Venue Contact and Address

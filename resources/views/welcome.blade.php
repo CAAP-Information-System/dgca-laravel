@@ -77,12 +77,12 @@
         <!-- Conference Navigation Bar -->
         @include('layouts.conference-navbar')
     </section>
-    <div class="abt-us-ctn">
+    <div class="mt-10 flex justify-center mb-24">
         <a href="#about-cebu" class="about-us-btn scroll-smooth">Learn More <i class="fa-solid fa-caret-right"></i></a>
     </div>
     <section class="main-countdown animate-fade-up">
         <main>
-            <div class="mt-80 md:mt-80 md:mr-96">
+            <div class="w-full md:w-auto -mt-72 md:mt-96" style="margin-right: 30vw;">
                 <div class="">
                     <main class="bg-white rounded-lg p-6 md:p-10 shadow-md">
                         <div class="w-min mx-auto flex flex-col items-center">
@@ -108,7 +108,7 @@
 
 
     <section class="" id="about-cebu">
-        <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="-mt-32 md:mt-0">
+        <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="-mt-72 md:mt-0">
         <div class="-mt-32 md:-mt-96">
             <header class="header__separator">What's Featured?</header>
             <header class="section_info_header">Warm greetings from the Philippine representatives</header>
@@ -129,15 +129,19 @@
                         <p>
                             <i class="fa-solid fa-quote-left"></i>The Civil Aviation Authority of the Philippines is excited to welcome you to our scenic country as we proudly host the 59th Conference of the Directors General of Civil Aviation of the Asia and Pacific Regions at the vibrant island of Cebu on October 14-18, 2024.
                         </p>
+                        <br>
                         <p>
                             We believe that hosting the DGCA is a great opportunity to showcase our commitment to aviation safety and security, as well as our pledge to a sustainable future in aviation.
                         </p>
+                        <br>
                         <p>
                             Our theme for this year’s conference, <b class="text-primary">Shaping the Future of Air Transportation: Sustainable, Resilient, and Inclusive</b>, is timely and relevant on both global and regional scales. The industry is adaptive to change and supports development while mitigating the impacts of climate change.
                         </p>
+                        <br>
                         <p>
                             Let us strengthen our collaboration and synergies by promoting and improving our policies and practices through strong stakeholder engagement.
                         </p>
+                        <br>
                         <p>
                             Our team is pleased to assist you during your stay in the Philippines and we hope you enjoy, and find the conference meaningful.
                         </p>
