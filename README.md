@@ -11,15 +11,23 @@ The 59th DGCA Website Projects is a strategic initiative aimed at optimising the
 - File documentation and management
 - Streamlined document submission and user experience
 - Access code authentication tokens
+- RESTful API authentication
+
+# Feature Documentation Links:
+### 🔗 [Access Code](documentation/accesscode.md)
+### 🔗 [Universal Access Roles](documentation/access_rolesd.md)
+### 🔗 [Troubleshooting Guides](documentation/troubleshooting_guides.md)
+
+
 
 ## Getting Started
 
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
 
-- PHP (>=7.x)
-- Composer
-- Node.js and npm (for frontend assets)
+- PHP (>=9.x)
+- Composer (>=2.6.x)
+- Node.js and npm (>=10.x)
 
 
 ### Installations
@@ -57,30 +65,10 @@ npm run dev
 ```
 php artisan serve
 ```
-## Universal Access Roles
-| Role | Description | Access Level |
-|------|-------------|--------------|
-| Admin | Full access to all resources | Read/Write/Delete |
-| Editor | Can edit existing resources | Read/Write |
-| Viewer | Can only view resources | Read |
-## Access Code
-[See Documentation](documentation/accesscode.md)
-This feature can be found once registration and assuming that the account has been verified and approved of its user status, this API request prompt will automatically recognize the user's credentials. 
-##
+
 ## Database Model
 This model contains the table relationships that are used within the project architecture. Each relationship has its foreign keys that associates to their designated values in the database.
 ![DGCA Database Model](public/img/readme/dgcaDB-model.png)
 
 
-## Troubleshooting Guide
-1. **Redirecting to same page in Registration**
-- This issue is usually caused by a misinput of a particular field which leads to incorrect output of the value for the database. Try to double check the fields according to its requested prior to the label above them.
-
-## Existing Bugs
-1. **Unreponsive dimensions**
-- The responsiveness still vary on which device height that you are using and it will define according to the size of it. The current version primarily supports the media queries from wide screen monitor down to tablet screen size. This feature still supports phone sizes especially Iphone versions from lastest Iphone > 14.
-2. **Unclickable menus on top navigation bar**
-- This issue is caused by the current javascript that the website uses and still under refining of its functionality. Few navigations are still accessible but dropdowns are still unconfirmed for usability.
-3. **Email messaging bugs**
-- Though as one-way communication for email notification is working properly such as sending a validation message. There are some types of cases where an email is not available or received by the common end-user.
 
