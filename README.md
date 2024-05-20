@@ -57,12 +57,14 @@ npm run dev
 ```
 php artisan serve
 ```
-
+## Universal Access Roles
+| Role | Description | Access Level |
+|------|-------------|--------------|
+| Admin | Full access to all resources | Read/Write/Delete |
+| Editor | Can edit existing resources | Read/Write |
+| Viewer | Can only view resources | Read |
 ## Access Code
-The access code is used for one-time authentication for the conference paper view used by the delegates. 
-```
-STATIC_ACCESS_CODE=DGCA592024PH
-```
+[See Documentation](documentation/accesscode.md)
 This feature can be found once registration and assuming that the account has been verified and approved of its user status, this API request prompt will automatically recognize the user's credentials. 
 ##
 ## Database Model
@@ -73,7 +75,6 @@ This model contains the table relationships that are used within the project arc
 ## Troubleshooting Guide
 1. **Redirecting to same page in Registration**
 - This issue is usually caused by a misinput of a particular field which leads to incorrect output of the value for the database. Try to double check the fields according to its requested prior to the label above them.
-2. **Inaccessiblity**
 
 ## Existing Bugs
 1. **Unreponsive dimensions**

@@ -72,7 +72,7 @@ class RegisterController extends Controller
             'salutation' => ['required', 'string', 'max:255'],
             'passport_num' => ['required', 'string'],
             'address' => ['required', 'string'],
-            'telephone' => ['required', 'string'],
+            'telephone' => ['nullable', 'string'],
             'mobile' => ['nullable', 'string'],
             'passport_photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:9999'],
             'is_HOD' => ['required', 'string', 'in:Yes,No'],

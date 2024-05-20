@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/app.css'])
 </head>
 <style>

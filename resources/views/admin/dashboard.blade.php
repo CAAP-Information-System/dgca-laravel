@@ -2,160 +2,120 @@
 <title>@yield('title', 'Dashboard-59th DGCA')</title>
 @section('content')
 
-<!--
-TO DO:
-1. Create graphs for meeting reservations
-2. Create graph for pending and verified user requests
--->
-
-<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
-
+<style>
+    .hover-float:hover {
+        transition: .4s ease;
+        transform: translate(-5px, -10px);
+    }
+</style>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
-        <section class="screen-dashboard">
-            <main class="dashboard-main">
-                <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-                    <div id="" class="">
-                        <div class="container-fluid">
-                            <div class="row mb-3">
-                                <div class="col-sm-6">
-                                    <div class="content-header">
-                                        <i class="fa-solid fa-chart-column"></i>&nbsp;&nbsp;Dashboard
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <section class="content">
-                        <div class="container-fluid">
-                            <!-- Small boxes (Stat box) -->
-                            <div class="row">
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="files" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Total Files Uploaded</p>
-                                                <p class="stat-value">{{ $filesCount }}</p>
-                                            </div>
-                                            <div class="icon-img">
-                                                <i class='bx bxs-file'></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="meetings" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Meetings Reservered</p>
-                                                <p class="stat-value">{{$reservationCount}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="icon-img">
-                                            <i class='bx bxs-calendar-event'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="delegates" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Delegates Registered</p>
-                                                <p class="stat-value">{{$userCount}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="icon-img">
-                                            <i class='bx bxs-user-account'></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="pending" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Pending Accounts</p>
-                                                <p class="stat-value">{{$pendingAccount}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="icon-img">
-                                            <i class='bx bxs-time-five'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
+    <section>
+        <main class="">
+            <div class="content-wrapper">
+                <div class="p-3">
+                    <header class="text-xl">Welcome to the DGCA Admin Panel</header>
+                    <header class="pt-4 text-lg bold text-gray-800">Disclaimer:</header>
+                    <p class="italic">This page will be in exclusive use for the Registration Sub-Committee as reference for the conference logistics and data gathering purposes.</p>
                 </div>
-            </main>
-        </section>
-        <section class="mobile-dashboard">
-            <div class="card-container">
-                <a href="{{ route('dashboard') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/dashboard.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">Dashboard</header>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{ route('meeting-reservations') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/schedule.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">Meeting Reservations</header>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{ route('files') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/file.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">File Uploads</header>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{ route('account_list') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/profile.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">Account List</header>
-                        </div>
-                    </div>
-                </a>
 
-                <div class="">
-                    @auth
-                    <div class="logout-content">
-                        <a class="button-5" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Sign Out
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                <section class="pt-2">
+                    <header class="py-3 text-gray-600 text-3xl font-bold">Dashboard</header>
+                    <div class="flex gap-4 justify-center items-center">
+                        <div class="max-w-sm p-6 rounded-2xl  border border-gray-200 shadow transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-sky-600 duration-300 hover:text-white">
+                            <i class="fa-solid fa-file-pdf text-4xl py-2"></i>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight ">Files Uploaded</h5>
+                            <p class="mb-3 font-normal text-lg">{{ $filesCount }}</p>
+                        </div>
+                        <div class="max-w-sm p-6 rounded-2xl  border border-gray-200 shadow transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-sky-600 duration-300 hover:text-white">
+                            <i class="fa-solid fa-users text-4xl py-2"></i>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight ">Meeting Reservations</h5>
+                            <p class="mb-3 font-normal text-lg">{{ $reservationCount }}</p>
+                        </div>
+                        <div class="max-w-sm p-6 rounded-2xl  border border-gray-200 shadow transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-sky-600 duration-300 hover:text-white">
+                            <i class="fa-solid fa-user-tie text-4xl py-2"></i>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight ">Delegates Registered</h5>
+                            <p class="mb-3 font-normal text-lg">{{ $userCount }}</p>
+                        </div>
+                        <div class="max-w-sm p-6 rounded-2xl  border border-gray-200 shadow transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-sky-600 duration-300 hover:text-white">
+                            <i class="fa-regular fa-clock text-4xl py-2"></i>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight ">Pending Accounts</h5>
+                            <p class="mb-3 font-normal text-lg">{{ $pendingAccount }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </section>
+    <!-- <section>
+        <main class="py-4">
+            <div class="content-wrapper">
+                <section class="content">
+                    @if($users->where('status', 'Pending')->count() > 0)
+                    <div class="accounts-table">
+                        <form action="" method="POST">
                             @csrf
+                            <header class="page-header">Pending Accounts</header>
+                            <table class="table align-middle mb-0 bg-white">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Title</th>
+                                        <th>Status</th>
+                                        <th>Position</th>
+                                        <th>Country</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                @foreach($users->where('status', 'Pending') as $user)
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                @if($user->profile_image)
+                                                <img src="{{ asset('storage/profile_images/' . $user->profile_image) }}" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                                                @else
+                                                <img src="{{ asset('img/blank-profile.png') }}" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                                                @endif
+                                                <div class="ms-3">
+                                                    <p class="fw-bold mb-1">{{ $user->name }}</p>
+                                                    <p class="text-muted mb-0">{{ $user->email }}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-normal mb-1">{{ $user->designation }}</p>
+                                            <p class="text-muted mb-0">{{ $user->organization }}</p>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning rounded-pill d-inline">{{ $user->status }}</span>
+                                        </td>
+                                        <td>{{ $user->conference_role }}</td>
+                                        <td>{{ $user->country }}</td>
+                                        <td>
+                                            <a href="{{ route('user-profile', ['id' => $user->id]) }}" class="btn btn-warning">View</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endforeach
+                            </table>
                         </form>
                     </div>
-
-                    @endauth
-                </div>
+                    @else
+                    <div class="message-content">
+                        <img src="{{ asset('img/error/missing.svg') }}" alt="CAAP Logo" class="missing-svg">
+                        <header class="message-content-header">
+                            You're good to go!
+                        </header>
+                        <p class="message-header-subtitle">
+                            Currently, there are no registered accounts pending approval or awaiting processing.
+                        </p>
+                    </div>
+                    @endif
+                </section>
             </div>
-        </section>
-
-    </div>
-
-
-    </div>
-
+        </main>
+    </section> -->
 </body>
 
 @endsection

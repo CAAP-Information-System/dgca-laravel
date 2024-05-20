@@ -342,7 +342,7 @@ class SideMeetingController extends Controller
         $meeting_room->save();
 
 
-        return redirect()->back();
+        return redirect()->route('meeting-published');
     }
 
     // Function to check if the selected time is already reserved
@@ -363,5 +363,9 @@ class SideMeetingController extends Controller
 
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Meeting deleted successfully.');
+    }
+    public function publishedMeeting()
+    {
+        return view('http-message.meeting_published');
     }
 }

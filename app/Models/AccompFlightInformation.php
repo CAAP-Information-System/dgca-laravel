@@ -12,6 +12,7 @@ class AccompFlightInformation extends Model
         'salutation',
         'first_name',
         'last_name',
+        'mobile',
         'country',
         'passport_num',
         'gender',
@@ -23,6 +24,7 @@ class AccompFlightInformation extends Model
         'departure_date',
         'departure_time',
         'preferred_activity',
+        'name_of_delegate',
     ];
     public function user()
     {

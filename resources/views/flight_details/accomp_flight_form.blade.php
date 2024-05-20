@@ -6,7 +6,7 @@
 
     <div class="form-main">
         <form class="register-user" action="{{ route('upload-flight-information') }}" method="POST" enctype="multipart/form-data">
-        <header class="title">Accompanying Person / Spouse's Flight Information Form</header>
+            <header class="title">Accompanying Person / Spouse's Flight Information Form</header>
             <div class="flight_guide">
                 <p><b>Greetings! </b>
                     Please complete this form if you have successfully booked your flight for the 59th DGCA APAC Conference in Cebu, Philippines. The information provided will be used by our logistics team.</p>
@@ -14,6 +14,15 @@
             @csrf
 
             <div class="user__details">
+                <!-- LOGIN DETAILS -->
+                <div class="category__header">
+                    <header class="category-name">Name of Attending Delegate</header>
+                    <p class="p-2 italic text-sm text-gray-600">Please indicate the full name of your attending delegate for this conference.</p>
+                </div>
+                <div class="input__box-long">
+                    <span class="details">Full Name <span class="required-symbol">*</span></span>
+                    <input type="text" name="name_of_delegate" required>
+                </div>
                 <!-- LOGIN DETAILS -->
                 <div class="category__header">
                     <header class="category-name">Full Name</header>
@@ -37,6 +46,10 @@
                 <div class="input__box">
                     <span class="details">Last Name <span class="required-symbol">*</span></span>
                     <input type="text" placeholder="e.g: Dela Cruz" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" required>
+                </div>
+                <div class="input__box-long">
+                    <span class="details">Mobile Number: <span class="required-symbol">*</span></span>
+                    <input type="number" placeholder="e.g: 091234567" name="mobile" value="{{ old('mobile') }}" required>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Passport Number <span class="required-symbol">*</span></span>
@@ -86,8 +99,8 @@
                     <span class="details">Arrival Date<span class="required-symbol">*</span></span>
                     <input type="date" name="arrival_date" value="{{ old('arrival_date') }}" required>
                 </div>
-                   <!-- DEPARTURE INFORMATION -->
-                   <div class="input__box-long">
+                <!-- DEPARTURE INFORMATION -->
+                <div class="input__box-long">
                     <header class="subheader">Departure Information</header>
                     <p>
                         <i class="card-subtitle mb-2 text-muted">

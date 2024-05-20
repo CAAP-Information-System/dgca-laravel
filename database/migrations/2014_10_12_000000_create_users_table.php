@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('designation');
             $table->string('is_HOD')->nullable();
             $table->string('address');
-            $table->string('telephone');
+            $table->string('telephone')->nullable();
             $table->string('mobile');
             $table->string('passport_photo')->nullable();
             $table->string('profile_image')->nullable();

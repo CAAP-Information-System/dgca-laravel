@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/welcomev3.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/announcements.css') }}">
 <style>
-    .front{
+    .front {
         z-index: 999999;
     }
 </style>
@@ -75,6 +75,7 @@
 
         </div>
         <!-- Conference Navigation Bar -->
+
         @include('layouts.conference-navbar')
     </section>
     <div class="mt-10 flex justify-center mb-24">
@@ -109,7 +110,7 @@
 
     <section class="" id="about-cebu">
         <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="-mt-72 md:mt-0">
-        <div class="-mt-32 md:-mt-96">
+        <div id="featured" class="-mt-32 md:-mt-96">
             <header class="header__separator">What's Featured?</header>
             <header class="section_info_header">Warm greetings from the Philippine representatives</header>
             <div class="welcome-message-section">
@@ -244,8 +245,11 @@
 
 
 </main>
-<!-- @include('home.sponsors') -->
-<footer class="sponsor__footer">
+<header class="section_info_header">Our Sponsors</header>
+<footer>
+    @include('home.sponsors')
+</footer>
+<!-- <footer class="sponsor__footer">
     @if(!empty($sponsorsJSON))
     @php
     $sponsors = json_decode($sponsorsJSON, true);
@@ -262,7 +266,6 @@
                     <p class="sponsor-name">{{ $sponsor['name'] }}</p>
                 </div>
                 @endforeach
-                <!-- Duplicate sponsor items for looping -->
                 @foreach($sponsors['sponsors'] as $sponsor)
                 <div class="sponsor-item">
                     <img src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['name'] }}" class="sponsor-image">
@@ -278,7 +281,7 @@
     @endif
 
 
-</footer>
+</footer> -->
 
 <script src="{{ asset('js/welcome/pending-modal.js') }}"></script>
 <script src="{{ asset('js/welcome/countdown.js') }}"></script>
@@ -292,7 +295,7 @@
         aboutUsBtn.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
 
-            const targetSection = document.getElementById('about-cebu');
+            const targetSection = document.getElementById('featured');
             targetSection.scrollIntoView({
                 behavior: 'smooth'
             }); // Smooth scroll to the target section

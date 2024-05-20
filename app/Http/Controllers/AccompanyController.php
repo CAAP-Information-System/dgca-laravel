@@ -18,6 +18,7 @@ class AccompanyController extends Controller
             'salutation' => 'required|string',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
+            'mobile' => 'required|string|max:255',
             'country' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'gender' => 'required|in:Male,Female',
@@ -28,7 +29,8 @@ class AccompanyController extends Controller
             'departure_flight_num' => 'required|string|max:255',
             'departure_date' => 'required|date',
             'departure_time' => 'required|date_format:H:i',
-            'preferred_activity' => 'required|string', // Fix this line, replace > with =>
+            'preferred_activity' => 'required|string',
+            'name_of_delegate' => 'required|string|max:255',
         ]);
 
         $accompany = new AccompFlightInformation();

@@ -8,7 +8,7 @@
 
 <div class="container">
     <main class="main-content">
-        <img src="{{ asset('storage/news_updates/' . $article->news_image) }}" alt="News Image" class="news-img">
+        <img src="{{ asset('storage/news/articles/' . $article->news_image) }}" alt="News Image" class="news-img">
         <div class="img-caption">
             {{ $article->caption }}
         </div>
@@ -17,9 +17,10 @@
             <strong>Date Published:</strong>&nbsp;&nbsp;{{ $article->date_uploaded }}
         </div>
         <p class="article-content">{!!$article->news_description !!}</p>
-        <div class="return-container">
-            <a href="{{ route('news') }}" class="return-btn">Return</a>
+        <div class="pt-5">
+            <a href="{{ route('news') }}" class="p-3 text-lg w-full rounded-full border border-sky-600 bg-transparent md:w-auto hover:bg-sky-600 transition ease-in">Return</a>
         </div>
+
     </main>
 </div>
 

@@ -24,6 +24,7 @@ class AdminController extends Controller
     }
     public function dashboard()
     {
+        $users = User::paginate(10);
         $userCount = User::count();
         $reservationCount = SideMeeting::count();
         $filesCount = File::count();
@@ -35,6 +36,7 @@ class AdminController extends Controller
             'reservationCount' => $reservationCount,
             'pendingAccount' => $pendingAccount,
             'filesCount' => $filesCount,
+            'users'=>$users,
         ]);
     }
 
