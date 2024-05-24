@@ -228,6 +228,7 @@
     background-position: center;
     height: 80vh;
     position: relative;
+    z-index: -5;
 }
 
 .countdown-main {

@@ -8,7 +8,7 @@
     <div class="container">
 
         <section class="registration-content">
-            <main class="registration-main">
+            <main class="registration-main animate-fade-left animate-delay-0 animate-ease-out">
                 <img src="{{ asset('img/registration/phone.png') }}" alt="phone" class="phone">
                 <div>
                     <header class="registration-header">Join and register now!</header>
@@ -19,9 +19,9 @@
             </main>
 
         </section>
-        <section class="registration-steps-sect">
+        <section class="registration-steps-sect" data-aos="fade-up">
             <header class="process-header">Registration Guide</header>
-            <div class="reg-steps-container">
+            <div class="reg-steps-container" data-aos="fade-up">
                 <div class="card">
                     <header class="step-num">Step 1</header>
                     <img src="{{ asset('img/registration/register.png') }}" alt="Card Image" class="step-img">

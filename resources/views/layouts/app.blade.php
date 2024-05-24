@@ -51,6 +51,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 
+    <!-- AOS Script -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- LordIcon Link -->
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/app.css'])
 </head>
@@ -150,6 +154,8 @@
 <script src="{{ asset('js/app/nav.js') }}"></script>
 <script src="{{ asset('js/app/dropdown.js') }}"></script>
 <script src="{{ asset('js/app/preloader.js') }}"></script>
-
+<script>
+  AOS.init();
+</script>
 
 </html>

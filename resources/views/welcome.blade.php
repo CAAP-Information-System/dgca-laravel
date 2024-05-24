@@ -47,7 +47,7 @@
     @endif
 
     <section class="welcome">
-        <div class="welcome-banner animate-fade-up animate-once animate-ease-in">
+        <div class="welcome-banner animate-fade-up animate-delay-0 animate-ease-out">
             <main class="banner-content">
                 <header class="text-center text-6xl md:text-8xl">
 
@@ -76,12 +76,15 @@
         </div>
         <!-- Conference Navigation Bar -->
 
-        @include('layouts.conference-navbar')
+        <div class="animate-fade-up animate-once animate-ease-in z-100">
+            @include('layouts.conference-navbar')
+            <div class="mt-10 flex justify-center mb-24">
+                <a href="#about-cebu" class="about-us-btn scroll-smooth">Learn More <i class="fa-solid fa-caret-right"></i></a>
+            </div>
+        </div>
     </section>
-    <div class="mt-10 flex justify-center mb-24">
-        <a href="#about-cebu" class="about-us-btn scroll-smooth">Learn More <i class="fa-solid fa-caret-right"></i></a>
-    </div>
-    <section class="main-countdown animate-fade-up">
+
+    <section class="main-countdown" data-aos="fade-up">
         <main>
             <div class="w-full md:w-auto -mt-72 md:mt-96" style="margin-right: 30vw;">
                 <div class="">
@@ -107,13 +110,20 @@
         </main>
     </section>
 
+    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
 
     <section class="" id="about-cebu">
-        <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="-mt-72 md:mt-0">
-        <div id="featured" class="-mt-32 md:-mt-96">
-            <header class="header__separator">What's Featured?</header>
-            <header class="section_info_header">Warm greetings from the Philippine representatives</header>
-            <div class="welcome-message-section">
+        <!-- <img src="{{ asset('img/home/city-smoke.png') }}" alt="city in smoke" class="-mt-72 md:mt-0"> -->
+        <div id="featured" class="" data-aos="fade-up">
+            <header class="flex justify-center items-center gap-4 header__separator">
+
+
+                <lord-icon src="https://cdn.lordicon.com/fmjvulyw.json" trigger="loop" delay="1000" state="hover-look-around" style="width:90px;height:90px">
+                </lord-icon>
+                What's Featured?
+            </header>
+            <header class="section_info_header" data-aos="fade-up">Warm greetings from the Philippine representatives</header>
+            <div class="welcome-message-section" data-aos="fade-up">
                 <div class="welcome-message-container">
                     <div class="image-container">
                         <img src="{{ asset('img/welcome-msg/capt-tamayo-bg.png') }}" alt="Captain Tamayo" class="capt-tamayo-img">
@@ -153,10 +163,10 @@
                     </div>
                 </div>
             </div>
-            <div class="svg_container">
+            <div class="svg_container" data-aos="fade-up">
                 <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
             </div>
-            <section class="cebu_info_section">
+            <section class="cebu_info_section" data-aos="fade-up">
                 <header class="section_info_header">DISCOVER MORE ABOUT OUR UPCOMING CONFERENCE VENUE</header>
                 <div class="cebu_info_container">
 
@@ -195,14 +205,14 @@
         <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
     </div>
 
-    <section class="teaser-section">
+    <section class="teaser-section" data-aos="fade-up">
         <header class="section_info_header">Experience the excitement that awaits you in Cebu, Philippines</header>
         @include('home.teaser')
     </section>
     <div class="svg_container">
         <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
     </div>
-    <section class="highlights-section">
+    <section class="highlights-section" data-aos="fade-up">
         <header class="section_info_header">Indulge in the conference highlights and explore the exciting activities and features awaiting you</header>
         @include('home.highlights')
     </section>
@@ -211,7 +221,7 @@
         <img src="{{ asset('img/svg/dotted_line.png') }}" alt="dotted line" class="dotted-line-img">
     </div>
 
-    <section class="announcements_section">
+    <section class="announcements_section" data-aos="fade-up">
 
         <header class="flex justify-center text-3xl md:text-5xl font-bold items-center gap-4">
             Announcements
@@ -237,7 +247,7 @@
             </div>
         </div>
         @else
-        <header class="coming-soon">Coming Soon!</header>
+        <header class="coming-soon" data-aos="fade-up">Coming Soon!</header>
         @endif
 
     </section>
@@ -245,9 +255,10 @@
 
 
 </main>
-<header class="section_info_header">Our Sponsors</header>
-<footer>
-    @include('home.sponsors')
+<header class="section_info_header" data-aos="fade-up">Our Sponsors</header>
+<footer class="my-6">
+    <header class="text-center text-4xl"> No Sponsors Yet</header>
+    <!-- @include('home.sponsors') -->
 </footer>
 <!-- <footer class="sponsor__footer">
     @if(!empty($sponsorsJSON))

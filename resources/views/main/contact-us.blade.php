@@ -7,11 +7,13 @@
 
 <div class="container">
     <main class="contact-us">
+        <div class="animate-fade-left animate-delay-0 animate-ease-out">
         <header class="contact-header">Contact Information</header>
         <p class="contact-message">
             Require some assistance? Don't hesitate to drop us an email for help with any ongoing issues or if you have questions/inquiries about the DGCA Conference. Our administrators are dedicated to providing you with the utmost details possible!
         </p>
-        <div class="dgca-emails">
+        </div>
+        <div class="dgca-emails" data-aos="fade-up">
             <header class="dgca-emails-header">Official DGCA Email Addresses:</header>
             <div class="grp">
                 <div class="email-grp">

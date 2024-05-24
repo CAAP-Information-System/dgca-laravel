@@ -13,4 +13,4 @@ STATIC_ACCESS_CODE=DGCA592024PH
 In this example, `DGCA592024PH` is the access code. This would be provided to a delegate who needs to view the conference papers. Once the delegate uses this code, it becomes invalid and a new code would need to be generated for the next delegate.
 
 ## User Diagram
-![Access Code Diagram](https://drive.google.com/file/d/166JU3SBJ_Z0NlBknEsunP39b05fH_ADA/view?usp=sharing)
+![Access Code Diagram](public/img/readme/access_code.png)

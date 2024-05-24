@@ -7,7 +7,7 @@
 @include('main.banner', ['bannerTitle' => 'Conference Bulletin'])
 
 <div class="container">
-    <div class="bulletin-intro">
+    <div class="bulletin-intro animate-fade-left animate-delay-0 animate-ease-out">
         <p class="welcome2ph">Welcome to the Philippines</p>
         <p class="intro-desc">
             The Philippines is a diverse and vibrant country known for its rich cultural heritage, stunning
@@ -17,7 +17,7 @@
     </div>
 
     <section class="bulletin-content">
-        <div class="bulletin-grp">
+        <div class="bulletin-grp" data-aos="fade-up">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/venue.png') }}" alt="venue" class="bullet-img">
                 Conference Venue
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div class="bulletin-grp" data-aos="fade-up">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/flight-plane.svg') }}" alt="venue" class="bullet-img">
                 Flight Information
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp ">
+        <div class="bulletin-grp " data-aos="fade-up">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/visa.png') }}" alt="passport-visa" class="bullet-img">
                 Passport and Visa Requirements
@@ -85,7 +85,7 @@
             </div>
         </div>
 
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/side-meetings.png') }}" alt="baggage" class="bullet-img">
                 Schedule of Meetings
@@ -117,7 +117,7 @@
             </div>
         </div> -->
 
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/agenda.png') }}" alt="baggage" class="bullet-img">
                 Agenda and Programme
@@ -128,7 +128,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/participants.png') }}" alt="baggage" class="bullet-img">
                 Participants Registration
@@ -141,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/documentation.png') }}" alt="baggage" class="bullet-img">
                 Documentation
@@ -152,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/papers.png') }}" alt="baggage" class="bullet-img">
                 Conference Paper
@@ -163,7 +163,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/email.png') }}" alt="baggage" class="bullet-img">
                 Website and Emails
@@ -176,7 +176,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/hotel.png') }}" alt="baggage" class="bullet-img">
                 Hotel Reservation
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/insurance.png') }}" alt="baggage" class="bullet-img">
                 Insurances
@@ -214,7 +214,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/wifi.png') }}" alt="baggage" class="bullet-img">
                 Wifi and Network
@@ -225,7 +225,7 @@
                 </div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/secretariat.png') }}" alt="baggage" class="bullet-img">
                 Conference Secretariat
@@ -269,7 +269,7 @@
             </div>
         </div> -->
 
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/transportation.png') }}" alt="baggage" class="bullet-img">
                 Transportation
@@ -290,7 +290,7 @@
                 <div class="bullet-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
         </div> -->
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/travel-service.png') }}" alt="baggage" class="bullet-img">
                 Travel Service
@@ -299,7 +299,7 @@
                 <div class="bullet-desc">If you need any assistance with arranging private pre- or post-conference tours and excursions tailored to your preferences, please feel free to inquire at the Concierge Desk of your hotel.</div>
             </div>
         </div>
-        <div class="bulletin-grp">
+        <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
                 <img src="{{ asset('img/icon/other-info.png') }}" alt="baggage" class="bullet-img">
                 Other Information

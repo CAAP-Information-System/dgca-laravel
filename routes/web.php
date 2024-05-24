@@ -68,7 +68,7 @@ Route::post('/upload-flight-information', [AccompanyController::class, 'uploadFl
 
 // ACCESS CODE ROUTE
 Route::get('/access-code', [AdminController::class, 'accessView'])->name('access-code');
-Route::post('/verify-access', [AdminController::class, 'verifyAccess'])->name('verify-access');
+Route::post('/access-code/verifying', [AdminController::class, 'verifyAccess'])->name('verify-access');
 
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {

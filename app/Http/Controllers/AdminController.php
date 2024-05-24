@@ -36,7 +36,7 @@ class AdminController extends Controller
             'reservationCount' => $reservationCount,
             'pendingAccount' => $pendingAccount,
             'filesCount' => $filesCount,
-            'users'=>$users,
+            'users' => $users,
         ]);
     }
 
@@ -160,37 +160,40 @@ class AdminController extends Controller
         $accessCode = $request->input('access_code');
         $staticAccessCode = "DGCA59APACPH";
 
-        // Check if the inputted access code matches the STATIC_ACCESS_CODE
+        // Check if the inputted access code matches the staticAccessCode
         if ($accessCode === $staticAccessCode) {
             // Get the currently authenticated user
             $user = Auth::user();
 
-            // Check if the user already has an associated access code
-            if (!$user->accessCode) {
-                // Create a new AccessCode model instance
-                $accessCodeEntry = new AccessCode();
-                $accessCodeEntry->access_code = $accessCode;
-                $accessCodeEntry->isAccessed = 1;
+            // Create a new AccessCode model instance
+            $accessCodeEntry = new AccessCode();
+            $accessCodeEntry->access_code = $accessCode;
+            $accessCodeEntry->isAccessed = 1;
 
-                // Set the user ID for the access code entry
-                $accessCodeEntry->user_id = $user->id;
+            // Set the user ID for the access code entry
+            $accessCodeEntry->user_id = $user->id;
 
-                // Save the access code entry
-                $accessCodeEntry->save();
+            // Save the access code entry
+            $accessCodeEntry->save();
 
-                // Redirect to the authenticated page
-                return redirect()->route('disc-paper');
-            }
+            // Redirect to the authenticated page
+            return redirect()->route('disc-paper');
+        } else {
+            // Flash an error message to the session
+            session()->flash('status', 'The access code is incorrect.');
+
+            // Redirect to the wrong_access blade if the access code is incorrect
+            return view('http-message.wrong_access');
         }
-
-        // Redirect to the access denied page if the access code is incorrect
-        return redirect()->route('403');
     }
-    public function viewDelegateFlight(){
+
+    public function viewDelegateFlight()
+    {
         $delegates = DelegateFlightInformation::paginate(10);
         return view('admin.flight_information.delegates', compact('delegates'));
     }
-    public function viewAccompanyingFlight(){
+    public function viewAccompanyingFlight()
+    {
         $accompanying = AccompFlightInformation::paginate(10);
         return view('admin.flight_information.accompany', compact('accompanying'));
     }

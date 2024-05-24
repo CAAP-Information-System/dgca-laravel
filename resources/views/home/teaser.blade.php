@@ -12,17 +12,25 @@
                 <a href="{{ route('bulletin') }}" class="teaser-btn">See Our Bulletin <i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </div>
-        <video id="teaserVideo" class="teaser-link" controls>
+
+        <!-- REMOVE COMMENT IF VIDEO IS NOT AVAILABLE -->
+        <div class="flex justify-center items-center flex-col">
+            <lord-icon src="https://cdn.lordicon.com/mpzsxzrz.json" trigger="loop" style="width:250px;height:250px">
+            </lord-icon>
+            <!-- <img src="{{ asset('img/svg/dotted_line.png') }}" alt="under maintanance" class="diotted-line-mg"> -->
+            <header class="text-3xl font-semibold text-center">Teaser video will be available soon!</header>
+        </div>
+        <!-- <video id="teaserVideo" class="teaser-link" controls>
             <source src="https://drive.google.com/uc?export=download&id=1Jc_ecFHH4qBllmkz1dP7M1_nBu1i1WCo" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
+        </video> -->
     </main>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var teaserVideo = document.getElementById('teaserVideo');
 
-        teaserVideo.addEventListener('click', function () {
+        teaserVideo.addEventListener('click', function() {
             teaserVideo.play();
         });
     });
