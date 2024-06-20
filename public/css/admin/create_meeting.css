@@ -2,6 +2,7 @@
 .form-content{
     display: flex;
     justify-content: center;
+    padding-bottom: 10vh;
 
 }
 .create-meeting-form{

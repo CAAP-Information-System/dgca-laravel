@@ -79,8 +79,9 @@
 .form-check-input{
     border: solid 1px #3b3b3b;
 }
-.row{
+.not-registered{
     text-align: center;
+    margin-top: 35px;
 }
 .alt-link{
     font-weight: bold;

@@ -7,3 +7,4 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 composer require barryvdh/laravel-dompdf
 composer require spatie/laravel-robots-middleware
+npm run build

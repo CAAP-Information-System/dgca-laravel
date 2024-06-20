@@ -40,15 +40,17 @@ class LoginController extends Controller
     }
 
 
+    public function username()
+    {
+        return 'username';
+    }
+
     public function authenticated()
     {
         // Will redirect to Dashboard if logged in as admin
-        if(Auth::user()->access_role == 'admin')
-        {
+        if (Auth::user()->access_role == 'admin') {
             return redirect('admin/dashboard');
-        }
-        elseif(Auth::user()->access_role == 'media')
-        {
+        } elseif (Auth::user()->access_role == 'media') {
             return redirect('/');
         }
     }
@@ -72,6 +74,4 @@ class LoginController extends Controller
         // Return the login view with the appropriate error message
         return view('auth.login')->with('error', $errorMessage);
     }
-
-
 }

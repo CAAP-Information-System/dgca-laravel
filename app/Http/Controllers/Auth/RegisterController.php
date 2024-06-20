@@ -53,6 +53,22 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $validCountries = [
+            "AUSTRALIA", "BANGLADESH", "BHUTAN", "BRUNEI DARUSSALAM", "CAMBODIA", "CANADA", "CHINA",
+            "CHINA – HONG KONG SAR", "CHINA – MACAO SAR", "COOK ISLANDS", "DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA",
+            "FIJI", "FRANCE", "FRENCH POLYNESIA", "INDIA", "INDONESIA", "JAPAN", "KIRIBATI",
+            "LAO PEOPLE’S DEMOCRATIC REPUBLIC", "MALAYSIA", "MALDIVES", "MARSHALL ISLANDS",
+            "MICRONESIA (FEDERATED STATES OF)", "MONGOLIA", "NAURU", "NEPAL", "NEW CALEDONIA", "NEW ZEALAND",
+            "NIUE", "PAKISTAN", "PALAU", "PAPUA NEW GUINEA", "PHILIPPINES", "REPUBLIC OF KOREA", "SAMOA",
+            "SINGAPORE", "SOLOMON ISLANDS", "SRI LANKA", "THAILAND", "TIMOR-LESTE", "TONGA", "TUVALU",
+            "UNITED KINGDOM", "UNITED STATES OF AMERICA", "VANUATU", "VIET NAM", "WALLIS AND FUTUNA ISLANDS", "AAPA", "ACI", "CANSO", "EASA", "EUROCONTROL", "IATA", "IBAC", "ICAO – ASIAN GROUP (Montreal Group)",
+            "ICAO – SECRETARIAT", "ICCAIA", "IFALPA", "IFATCA", "IFATSEA", "PASO"
+
+        ];
+        $validOrganizations = [
+            "AAPA", "ACI", "CANSO", "EASA", "EUROCONTROL", "IATA", "IBAC", "ICAO – ASIAN GROUP (Montreal Group)",
+            "ICAO – SECRETARIAT", "ICCAIA", "IFALPA", "IFATCA", "IFATSEA", "PASO"
+        ];
 
 
         return Validator::make($data, [
@@ -61,11 +77,12 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
 
             // Personal Details
+            'username' => ['required', 'string', 'max:255'],
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'organization' => ['required', 'string', 'max:255'],
+            'organization' => ['required', 'string', Rule::in($validCountries)],
             'designation' => ['required', 'string', 'max:255'],
-            'country' => ['required', 'string', 'max:255'],
+            'country' => ['required', 'string', 'max:255', Rule::in($validCountries)],
             // 'gender' => ['required', 'string', Rule::in(['Male', 'Female', 'Rather not say'])],
             'privacy' => ['required', 'string'],
             'profile_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:9999'],
@@ -123,6 +140,7 @@ class RegisterController extends Controller
         $accomp_fname = json_encode($data['accomp_fname']);
         $accomp_lname = json_encode($data['accomp_lname']);
         return User::create([
+            'username' => $data['username'],
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'organization' => $data['organization'],

@@ -31,8 +31,77 @@
                 </div>
 
                 <div class="input__box-long">
+                    <span class="details">Username: <span class="required-symbol">*</span></span>
+                    <input type="text" placeholder="e.g: Juan" name="username" value="{{ old('username') }}" autocomplete="username" required>
+                </div>
+                <div class="input__box-long">
                     <span class="details">Country or International Organization <span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: Philippines" name="country" value="{{ old('country') }}" required>
+                    <select name="country" class="form-control" required>
+                        <option value="">-- Select Organization --</option>
+                        <option value="---- COUNTRIES ----" disabled>---- COUNTRIES ----</option>
+                        <option value="AUSTRALIA">AUSTRALIA</option>
+                        <option value="BANGLADESH">BANGLADESH</option>
+                        <option value="BHUTAN">BHUTAN</option>
+                        <option value="BRUNEI DARUSSALAM">BRUNEI DARUSSALAM</option>
+                        <option value="CAMBODIA">CAMBODIA</option>
+                        <option value="CANADA">CANADA</option>
+                        <option value="CHINA">CHINA</option>
+                        <option value="CHINA – HONG KONG SAR">CHINA – HONG KONG SAR</option>
+                        <option value="CHINA – MACAO SAR">CHINA – MACAO SAR</option>
+                        <option value="COOK ISLANDS">COOK ISLANDS</option>
+                        <option value="DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA">DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA</option>
+                        <option value="FIJI">FIJI</option>
+                        <option value="FRANCE">FRANCE</option>
+                        <option value="FRENCH POLYNESIA">FRENCH POLYNESIA</option>
+                        <option value="INDIA">INDIA</option>
+                        <option value="INDONESIA">INDONESIA</option>
+                        <option value="JAPAN">JAPAN</option>
+                        <option value="KIRIBATI">KIRIBATI</option>
+                        <option value="LAO PEOPLE’S DEMOCRATIC REPUBLIC">LAO PEOPLE’S DEMOCRATIC REPUBLIC</option>
+                        <option value="MALAYSIA">MALAYSIA</option>
+                        <option value="MALDIVES">MALDIVES</option>
+                        <option value="MARSHALL ISLANDS">MARSHALL ISLANDS</option>
+                        <option value="MICRONESIA (FEDERATED STATES OF)">MICRONESIA (FEDERATED STATES OF)</option>
+                        <option value="MONGOLIA">MONGOLIA</option>
+                        <option value="NAURU">NAURU</option>
+                        <option value="NEPAL">NEPAL</option>
+                        <option value="NEW CALEDONIA">NEW CALEDONIA</option>
+                        <option value="NEW ZEALAND">NEW ZEALAND</option>
+                        <option value="NIUE">NIUE</option>
+                        <option value="PAKISTAN">PAKISTAN</option>
+                        <option value="PALAU">PALAU</option>
+                        <option value="PAPUA NEW GUINEA">PAPUA NEW GUINEA</option>
+                        <option value="PHILIPPINES">PHILIPPINES</option>
+                        <option value="REPUBLIC OF KOREA">REPUBLIC OF KOREA</option>
+                        <option value="SAMOA">SAMOA</option>
+                        <option value="SINGAPORE">SINGAPORE</option>
+                        <option value="SOLOMON ISLANDS">SOLOMON ISLANDS</option>
+                        <option value="SRI LANKA">SRI LANKA</option>
+                        <option value="THAILAND">THAILAND</option>
+                        <option value="TIMOR-LESTE">TIMOR-LESTE</option>
+                        <option value="TONGA">TONGA</option>
+                        <option value="TUVALU">TUVALU</option>
+                        <option value="UNITED KINGDOM">UNITED KINGDOM</option>
+                        <option value="UNITED STATES OF AMERICA">UNITED STATES OF AMERICA</option>
+                        <option value="VANUATU">VANUATU</option>
+                        <option value="VIET NAM">VIET NAM</option>
+                        <option value="WALLIS AND FUTUNA ISLANDS">WALLIS AND FUTUNA ISLANDS</option>
+                        <option value="---- ORGANIZATIONS ----" disabled>---- ORGANIZATIONS ----</option>
+                        <option value="AAPA">AAPA</option>
+                        <option value="ACI">ACI</option>
+                        <option value="CANSO">CANSO</option>
+                        <option value="EASA">EASA</option>
+                        <option value="EUROCONTROL">EUROCONTROL</option>
+                        <option value="IATA">IATA</option>
+                        <option value="IBAC">IBAC</option>
+                        <option value="ICAO – ASIAN GROUP (Montreal Group)">ICAO – ASIAN GROUP (Montreal Group)</option>
+                        <option value="ICAO – SECRETARIAT">ICAO – SECRETARIAT</option>
+                        <option value="ICCAIA">ICCAIA</option>
+                        <option value="IFALPA">IFALPA</option>
+                        <option value="IFATCA">IFATCA</option>
+                        <option value="IFATSEA">IFATSEA</option>
+                        <option value="PASO">PASO</option>
+                    </select>
                 </div>
                 <div class="input__box-long">
                     <span class="details">Salutations <span class="required-symbol">*</span></span>
@@ -62,7 +131,25 @@
                 </div>
                 <div class="input__box-long">
                     <span class="details">Organization / Agency<span class="required-symbol">*</span></span>
-                    <input type="text" placeholder="e.g: ABC Organization" name="organization" value="{{ old('organization') }}" required>
+                    <select name="organization" class="form-control" required>
+                        <option value="">-- Select Organization --</option>
+                        <option value="---- ORGANIZATIONS ----" disabled>---- ORGANIZATIONS ----</option>
+                        <option value="AAPA">AAPA</option>
+                        <option value="ACI">ACI</option>
+                        <option value="CANSO">CANSO</option>
+                        <option value="EASA">EASA</option>
+                        <option value="EUROCONTROL">EUROCONTROL</option>
+                        <option value="IATA">IATA</option>
+                        <option value="IBAC">IBAC</option>
+                        <option value="ICAO – ASIAN GROUP (Montreal Group)">ICAO – ASIAN GROUP (Montreal Group)</option>
+                        <option value="ICAO – SECRETARIAT">ICAO – SECRETARIAT</option>
+                        <option value="ICCAIA">ICCAIA</option>
+                        <option value="IFALPA">IFALPA</option>
+                        <option value="IFATCA">IFATCA</option>
+                        <option value="IFATSEA">IFATSEA</option>
+                        <option value="PASO">PASO</option>
+                    </select>
+
                 </div>
                 <div class="input__box-long">
                     <span class="details">Conference Role <span class="required-symbol">*</span></span>

@@ -1,159 +1,40 @@
-@extends('layouts.app')
-<title>@yield('title', 'Dashboard-59th DGCA')</title>
-@section('content')
-
-<!--
-TO DO:
-1. Create graphs for meeting reservations
-2. Create graph for pending and verified user requests
--->
-
-<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="{{ url('css/admin/dashboard.css') }}">
-
-<body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
-        <section class="screen-dashboard">
-            <main class="dashboard-main">
-                <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-                    <div id="" class="">
-                        <div class="container-fluid">
-                            <div class="row mb-3">
-                                <div class="col-sm-6">
-                                    <div class="content-header">
-                                        <i class="fa-solid fa-chart-column"></i>&nbsp;&nbsp;Dashboard
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <section class="content">
-                        <div class="container-fluid">
-                            <!-- Small boxes (Stat box) -->
-                            <div class="row">
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="files" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Total Files Uploaded</p>
-                                                <p class="stat-value">{{ $filesCount }}</p>
-                                            </div>
-                                            <div class="icon-img">
-                                                <i class='bx bxs-file'></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="meetings" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Meetings Reservered</p>
-                                                <p class="stat-value">{{$reservationCount}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="icon-img">
-                                            <i class='bx bxs-calendar-event'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="delegates" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Delegates Registered</p>
-                                                <p class="stat-value">{{$userCount}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="icon-img">
-                                            <i class='bx bxs-user-account'></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <div id="pending" class="stat-card">
-                                        <div class="inner">
-                                            <div class="stat-values">
-                                                <p class="stat-header">Pending Accounts</p>
-                                                <p class="stat-value">{{$pendingAccount}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="icon-img">
-                                            <i class='bx bxs-time-five'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-                </div>
-            </main>
-        </section>
-        <section class="mobile-dashboard">
-            <div class="card-container">
-                <a href="{{ route('dashboard') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/dashboard.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">Dashboard</header>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{ route('meeting-reservations') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/schedule.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">Meeting Reservations</header>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{ route('files') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/file.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">File Uploads</header>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{ route('account_list') }}" class="card">
-                    <div class="card-content">
-                        <div class="header-content">
-                            <img src="{{ asset('img/icon/profile.png') }}" alt="dashboard icon" class="mobile-icons">
-                            <header class="link-title">Account List</header>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="">
-                    @auth
-                    <div class="logout-content">
-                        <a class="button-5" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Sign Out
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
-
-                    @endauth
-                </div>
+<section class="section-grp">
+        <header class="section-hdr">Content of Papers</header>
+        <div class="section-content">
+            <header class="section-subheader">Structure of Paper</header>
+            <div class="section-subheader-content">
+                <ol>
+                    <li>
+                        A summary block of about 8 lines to describe the essence of the paper;
+                    </li>
+                    <li>
+                        Main body
+                    </li>
+                    <li>
+                        Executive Summary <b class="text-danger">(for DPs only)</b> of about one-half (1/2) page length.
+                    </li>
+                </ol>
+                <p class="note-message">
+                    <b>Note:</b> Authors of DPs are strongly encouraged to prepare Executive Summary, which will facilitate adequate coverage of the main issues and proposals raised in the paper in the Conference Report.
+                </p>
             </div>
-        </section>
-
-    </div>
-
-
-    </div>
-
-</body>
-
-@endsection
+            <header class="section-subheader">Main Body of Discussion Paper (DP)</header>
+            <div class="section-subheader-content">
+                <ol>
+                    <li>
+                        A concise introduction;
+                    </li>
+                    <li>
+                        One or more discussion sections on the matter(s) raised; and
+                    </li>
+                    <li>
+                        A section on “Action by the Conference” inviting the Conference to note the contents of the paper and consider appropriate actions.
+                    </li>
+                </ol>
+            </div>
+            <header class="section-subheader">Information Paper (IP) details.</header>
+            <div class="section-subheader-content">
+                <p>It should conclude with <b class="text-primary">Action by the Conference</b> inviting the Conference to note the information contained in the paper.</p>
+            </div>
+        </div>
+    </section>

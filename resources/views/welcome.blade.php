@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-dismiss="modal" id="closeButton">Close <i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="closeButton" data-dismiss="modal" id="closeButton">Close <i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
     <section class="welcome">
         <div class="welcome-banner animate-fade-up animate-delay-0 animate-ease-out">
             <main class="banner-content">
-                <header class="text-center text-6xl md:text-8xl">
+                <header class="welcome-header">
 
                     Welcome to the
                     <!-- <span class="plane-animation">
@@ -78,35 +78,28 @@
 
         <div class="animate-fade-up animate-once animate-ease-in z-100">
             @include('layouts.conference-navbar')
-            <div class="mt-10 flex justify-center mb-24">
+            <!-- <div class="learn-more-ctn">
                 <a href="#about-cebu" class="about-us-btn scroll-smooth">Learn More <i class="fa-solid fa-caret-right"></i></a>
-            </div>
+            </div> -->
         </div>
     </section>
 
-    <section class="main-countdown" data-aos="fade-up">
+    <section class="main-countdown countdown-main" data-aos="fade-up">
         <main>
-            <div class="w-full md:w-auto -mt-72 md:mt-96" style="margin-right: 30vw;">
+            <!-- Countdown container -->
+            <div class="countdown-box">
                 <div class="">
-                    <main class="bg-white rounded-lg p-6 md:p-10 shadow-md">
-                        <div class="w-min mx-auto flex flex-col items-center">
-                            <!-- <header class="countdown-header" id="headline"><span style="font-weight: 400;">Countdown before the</span> 59th DGCA Conference!</header> -->
-                            <p class="md:text-4xl text-center p-2">Countdown until the 59th DGCA Conference!</p>
-                            <div id="countdown" class="countdown">
-                                <ul>
-                                    <li><span id="days"></span>Days</li>
-                                    <li><span id="hours"></span>Hours</li>
-                                    <li><span id="minutes"></span>Minutes</li>
-                                    <li><span id="seconds"></span>Seconds</li>
-                                </ul>
-                            </div>
-                            <!-- <hr width="100%" style="border: 1px solid #3b3b3b;"> -->
-                        </div>
-                    </main>
-                    <!-- <img class="hidden md:block" src="{{ asset('img/home/countdown-cover.jpg') }}" alt="countdown banner"> -->
+                    <p class="countdown-message">Countdown until the 59th DGCA Conference!</p>
+                    <div id="countdown" class="countdown">
+                        <ul>
+                            <li><span id="days"></span>Days</li>
+                            <li><span id="hours"></span>Hours</li>
+                            <li><span id="minutes"></span>Minutes</li>
+                            <li><span id="seconds"></span>Seconds</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </main>
     </section>
 
@@ -123,6 +116,9 @@
                 What's Featured?
             </header>
             <header class="section_info_header" data-aos="fade-up">Warm greetings from the Philippine representatives</header>
+            <!-- <div class="w-1/2 mx-auto">
+                <span class="inline-block bg-blue-500 text-center px-7 py-4 rounded-full text-3xl font-semibold text-white tracking-wider uppercase" data-aos="fade-up">Warm greetings from the Philippine representatives</span>
+            </div> -->
             <div class="welcome-message-section" data-aos="fade-up">
                 <div class="welcome-message-container">
                     <div class="image-container">
@@ -223,10 +219,10 @@
 
     <section class="announcements_section" data-aos="fade-up">
 
-        <header class="flex justify-center text-3xl md:text-5xl font-bold items-center gap-4">
+        <!-- <header class="home-announcements">
             Announcements
             <img src="{{ asset('img/home/dotted-arrow.png') }}" alt="dotted arrow" class="announcement-arrow">
-        </header>
+        </header> -->
         <div class="announcements_main">
             <header class="section_info_header" style="width: 70%;">Stay informed and up-to-date with the latest developments at our 59th DGCA Conference</header>
             @if(isset($newspost))
@@ -247,7 +243,7 @@
             </div>
         </div>
         @else
-        <header class="coming-soon" data-aos="fade-up">Coming Soon!</header>
+        <!-- <header class="coming-soon" data-aos="fade-up">Coming Soon!</header> -->
         @endif
 
     </section>
@@ -255,7 +251,7 @@
 
 
 </main>
-<header class="section_info_header" data-aos="fade-up">Our Sponsors</header>
+<header class="section_info_header">Our Sponsors</header>
 <footer class="my-6">
     <header class="text-center text-4xl"> No Sponsors Yet</header>
     <!-- @include('home.sponsors') -->

@@ -21,14 +21,11 @@
                     <div class="user__details">
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form1Example13">Email Address:</label>
+                            <label class="form-label" for="form1Example13">Username:</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class='bx bx-envelope'></i></span>
-                                </div>
-                                <input id="email" type="email" placeholder="Enter Email Address" class="input-field @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" required>
+                                <input id="username" type="text" placeholder="Enter Username" class="input-field @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autocomplete="username" required>
                             </div>
-                            @error('email')
+                            @error('username')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
 
@@ -38,9 +35,6 @@
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form1Example23">Password:</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class='bx bx-key'></i></span>
-                                </div>
                                 <input id="password" type="password" placeholder="Enter Password" class="input-field" name="password" autocomplete="current-password" required>
                             </div>
 
@@ -65,10 +59,10 @@
                             Sign In
                         </button>
                     </div>
-                    <div class="row ">
-                        <div style="margin-top: 35px;"></div>
+                    <div class="not-registered">
                         <div>
                             <p style="font-style: italic; padding-left: 10px; ">Don't have an account yet?</p>
+                            <br>
                             @if (Route::has('register'))
                             <a class="alt-link" href="{{ route('register') }}">Register and Join</a>
                             @endif

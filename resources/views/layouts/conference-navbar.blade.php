@@ -48,8 +48,8 @@
                             <a href="{{ route('disc-paper') }}">Discussion Papers (DP)</a>
                             <a href="{{ route('info-paper') }}">Information Papers (IP)</a>
                             <a href="{{ route('view-submission') }}">Guidance on preparing DP/IP</a>
-                            <a href="#">DP template</a>
-                            <a href="#">IP template</a>
+                            <a href="{{ asset('document/DGCA-59_Template-DP.doc') }}">DP template</a>
+                            <a href="{{ asset('document/DGCA-59_Template-IP.doc') }}">IP template</a>
                         </div>
                     </li>
                     @if(auth()->check() && auth()->user()->access_role == "media")

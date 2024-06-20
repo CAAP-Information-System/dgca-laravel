@@ -8,6 +8,20 @@
     opacity: 1;
     transform: translateY(0)
 }
+.file-guide-header{
+    font-size: 1.5rem;
+    padding-bottom: 2vh;
+}
+.file-guide-link{
+    padding: 15px;
+    color: #ffff;
+    background-color: #50A9FB;
+    border-radius: 99px;
+}
+.file-guide-link:hover{
+    color: #ffff;
+    background-color: #3b81c2;
+}
 .section-grp{
     padding: 10px;
 }
@@ -21,6 +35,9 @@
     font-size: 16px;
     text-align: justify;
 }
+.section-article{
+    padding: 20px;
+}
 .section-subheader{
     font-size: 1.5rem;
     color: #50A9FB;
@@ -30,6 +47,10 @@
     padding: 15px;
     text-align: justify;
 }
+.section-article ol li{
+    padding: 10px;
+}
+
 .section-subheader-content ol li{
     padding: 10px;
 }
