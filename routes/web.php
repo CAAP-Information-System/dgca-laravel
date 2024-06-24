@@ -19,9 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+// NON REGISTERED
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::fallback(function () {
     return view('http-message.error_404');
 });
@@ -73,8 +75,8 @@ Route::post('/access-code/verifying', [AdminController::class, 'verifyAccess'])-
 // RESTRICTED ROUTES FOR UNAPPROVED USERS
 Route::group(['middleware' => 'check_user_status'], function () {
     Route::get('/agenda', [FileController::class, 'agendaFiles'])->name('agenda');
-    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper')->middleware('access_code');
-    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper')->middleware('access_code');
+    Route::get('/discussion-paper', [FileController::class, 'viewDiscussionPapers'])->name('disc-paper');
+    Route::get('/information-paper', [FileController::class, 'viewInformationPapers'])->name('info-paper');
     Route::get('/meeting-room', [SideMeetingController::class, 'viewMeetingRoom'])->name('meeting-room');
     Route::delete('/meeting-room/{id}',  [SideMeetingController::class, 'deleteMeetingRoom'])->name('meeting-room.delete');
 });

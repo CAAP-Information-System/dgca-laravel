@@ -14,12 +14,12 @@
         </div>
 
         <!-- REMOVE COMMENT IF VIDEO IS NOT AVAILABLE -->
-        <div class="flex justify-center items-center flex-col">
+        <!-- <div class="flex justify-center items-center flex-col">
             <lord-icon src="https://cdn.lordicon.com/mpzsxzrz.json" trigger="loop" style="width:250px;height:250px">
             </lord-icon>
-            <!-- <img src="{{ asset('img/svg/dotted_line.png') }}" alt="under maintanance" class="diotted-line-mg"> -->
             <header class="text-3xl font-semibold text-center">Teaser video will be available soon!</header>
-        </div>
+        </div> -->
+        <iframe  class="teaser-link" src="https://onedrive.live.com/embed?resid=C872D43F2ABC4BE8%2138592&authkey=!AF58Tsv-YiRVKvc" width="320" height="320" frameborder="0" scrolling="no" allowfullscreen></iframe>
         <!-- <video id="teaserVideo" class="teaser-link" controls>
             <source src="https://drive.google.com/uc?export=download&id=1Jc_ecFHH4qBllmkz1dP7M1_nBu1i1WCo" type="video/mp4">
             Your browser does not support the video tag.

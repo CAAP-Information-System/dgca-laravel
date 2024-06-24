@@ -52,6 +52,7 @@
     color: #3b3b3b;
     word-wrap: break-word;
 }
+
 .bullet-desc li{
     list-style-type: none;
     margin: 10px;
@@ -63,6 +64,62 @@
 .bullet-desc .bullet-email{
     text-decoration: none;
     margin-left: 7px;
+}
+.contact-info {
+    margin: 20px;
+}
+.contact-info span {
+    display: inline-block;
+    min-width: 120px;
+    margin-right: 10px;
+}
+.accomodation-header{
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+}
+.contact-info, .rates-table, .inclusions {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.contact-info td, .rates-table th, .rates-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+.contact-info td {
+    text-align: center;
+}
+.rates-table th {
+    background-color: #f2f2f2;
+}
+.hotel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.hotel-table, .hotel-table th, .hotel-table td {
+    border: 1px solid black;
+}
+.hotel-table th, .hotel-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+.star-rating {
+    color: gold;
+}
+.link {
+    color: blue;
+    text-decoration: none;
+}
+.star-rating {
+    font-size: 2rem;
+    color: gold;
+}
+.link {
+    color: blue;
+    text-decoration: none;
 }
 .visa-grp{
     padding-top: 5vh;

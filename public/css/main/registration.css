@@ -8,6 +8,10 @@
     opacity: 1;
     transform: translateY(0)
 }
+.already-registered{
+    font-style: italic;
+    color: #002868;
+}
 .registration-content{
     padding: 25px;
     margin-top: 6vh;

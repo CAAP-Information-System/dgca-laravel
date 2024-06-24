@@ -44,7 +44,6 @@ class HomeController extends Controller
 
 
     // Public routes accessible without authentication
-
     public function viewGallery()
     {
         $galleryposts = Gallery::all();

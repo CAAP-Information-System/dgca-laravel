@@ -9,10 +9,10 @@
                         </a>
                         <div class="dropdown-content">
                             <a href="{{ route('message') }}">Welcome Message</a>
-                            <a href="{{ route('agenda') }}">Agenda</a>
+                            <a href="{{ asset('document/DGCA-59_Provisional-Agenda.pdf') }}" target="_blank">Agenda</a>
                             <a href="{{ route('program-overview') }}">Programme</a>
                             <a href="{{ route('order-of-business') }}">Order of Business</a>
-                            <a href="#">Participant List</a>
+                            <a href="{{ asset('document/DGCA-59_Invitee-List_States-and-IOs_v2.xlsx') }}" target="_blank">Participant List</a>
                             <a href="#">Action Items</a>
                             <a href="{{ route('the-gallery') }}">The Gallery</a>
                         </div>
@@ -47,7 +47,7 @@
                             <!-- <a href="#">My Documents</a> -->
                             <a href="{{ route('disc-paper') }}">Discussion Papers (DP)</a>
                             <a href="{{ route('info-paper') }}">Information Papers (IP)</a>
-                            <a href="{{ route('view-submission') }}">Guidance on preparing DP/IP</a>
+                            <a href="{{ asset('document/DGCA-59_Guidance-on-preparation-of-papers.pdf') }}" target="_blank">Guidance on preparing DP/IP</a>
                             <a href="{{ asset('document/DGCA-59_Template-DP.doc') }}">DP template</a>
                             <a href="{{ asset('document/DGCA-59_Template-IP.doc') }}">IP template</a>
                         </div>

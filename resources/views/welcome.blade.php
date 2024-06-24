@@ -30,7 +30,7 @@
                     <div style="margin-top: 35px;"></div>
                     <span class="note">Additional Reminders:</span>
 
-                    <p>Please note that your current account is under <span class="bg-red-100 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">PENDING</span> approval by the conference administrators.</p>
+                    <p>Please note that your current account is under <span class="badge bg-danger text-white rounded-pill">PENDING</span> approval by the conference administrators.</p>
                     <p>For any inquiries or concerns regarding your registration status, we kindly ask you to contact our DGCA Secretariat:</p>
                     <br>
                     <div class="block">

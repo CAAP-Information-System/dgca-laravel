@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/registration.css') }}">
 @include('main.banner', ['bannerTitle' => 'Registration'])
+
 <body>
     <div class="container">
 
@@ -14,7 +15,11 @@
                     <header class="registration-header">Join and register now!</header>
                     <p class="sub-message">Come and be part of the upcoming 59th Conference of Directors General of Civil Aviation 2024 to be held in Cebu, Philippines from October 14 to 18, 2024.</p>
                     <br />
+                    @if (Auth::check())
+                    <p class="already-registered">You're already registered.</p>
+                    @else
                     <a href="{{ url('register') }}" class="register-link">Register Here Now!</a>
+                    @endif
                 </div>
             </main>
 
