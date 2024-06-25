@@ -1,17 +1,49 @@
 {
     "hotels": [
         {
-            "image": "/img/hotel/chataeu-by-the-sea.jpg",
-            "name": "Chateau By The Sea",
-            "address": "Barangay Buot, Punta Engaño, Lapu-Lapu City, 6015 Cebu",
-            "link": "https://chateaubythesea.com.ph/weddings.html",
-            "rating": "★★★★☆",
-            "email": "chateaubythesea.mactan@gmail.com",
-            "mobile": "(0917) 306 2900",
-            "distance-airport": "9.7km",
-            "distance-venue": "2.7km - 8 minutes by car"
+            "image": "/img/hotel/shangrila-mactan.jpg",
+            "name": "Shangri-La Mactan, Cebu",
+            "address": "Punta Engaño Rd, Lapu-Lapu City, Cebu, 6015 Cebu",
+            "link": "https://www.shangri-la.com/en/cebu/mactanresort/",
+            "rating": "★★★★★",
+            "email": "Mactan@shangri-la.com",
+            "mobile": "(63 32) 231 0288",
+            "distance-airport": "9km ",
+            "distance-venue": "3.9km - 11 minutes by car"
         },
-
+        {
+            "image": "/img/hotel/savoy.jpg",
+            "name": "Savoy Hotel Mactan",
+            "address": "The Mactan Newtown, Newtown Boulevard, Lapu-Lapu City, Cebu",
+            "link": "https://savoyhotelmactan.com.ph/",
+            "rating": "★★★★☆",
+            "email": "reserve@savoymactan.com",
+            "mobile": "+63 32 494 4000",
+            "distance-airport": "8.6km - 20 minutes",
+            "distance-venue": "5.5km - 16 minutes by car"
+        },
+        {
+            "image": "/img/hotel/belmont.jpg",
+            "name": "Belmont Hotel Mactan",
+            "address": "The Mactan Newtown, Newtown Boulevard, Lapu-Lapu City, Cebu",
+            "link": "https://belmontmactan.com.ph/ ",
+            "rating": "★★★★☆",
+            "email": "info@belmontmactan.com.ph",
+            "mobile": "+63 32 520 4100",
+            "distance-airport": "8.7 km - 2 minutes by car",
+            "distance-venue": "5.6km - 16 minutes by car"
+        },
+        {
+            "image": "/img/hotel/tambuli.jpg",
+            "name": "Tambuli Seaside Resort and Spa",
+            "address": "Buyong Rd, Maribago, Lapu-Lapu City, Cebu",
+            "link": "https://tambuliseasideresortandspa.com/ ",
+            "rating": "★★★★☆",
+            "email": "info@tambuliseasideresortandspa.com",
+            "mobile": "+63 32 236 08888",
+            "distance-airport": "11.9 km - 29 minutes by car",
+            "distance-venue": "9.1km - 25 minutes by car"
+        },
         {
             "image": "/img/hotel/be-resort.jpg",
             "name": "Be Resort Mactan",
@@ -24,17 +56,6 @@
             "distance-venue": "2.8km - 8 minutes by car"
         },
 
-        {
-            "image": "/img/hotel/shangrila-mactan.jpg",
-            "name": "Shangri-La Mactan, Cebu",
-            "address": "Punta Engaño Rd, Lapu-Lapu City, Cebu, 6015 Cebu",
-            "link": "https://www.shangri-la.com/en/cebu/mactanresort/",
-            "rating": "★★★★★",
-            "email": "Mactan@shangri-la.com",
-            "mobile": "(63 32) 231 0288",
-            "distance-airport": "8.9km",
-            "distance-venue": "3.9km - 11 minutes by car"
-        },
 
         {
             "image": "/img/hotel/movenpick.jpg",

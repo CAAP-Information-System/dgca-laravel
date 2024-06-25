@@ -19,11 +19,8 @@
             </lord-icon>
             <header class="text-3xl font-semibold text-center">Teaser video will be available soon!</header>
         </div> -->
-        <iframe  class="teaser-link" src="https://onedrive.live.com/embed?resid=C872D43F2ABC4BE8%2138592&authkey=!AF58Tsv-YiRVKvc" width="320" height="320" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        <!-- <video id="teaserVideo" class="teaser-link" controls>
-            <source src="https://drive.google.com/uc?export=download&id=1Jc_ecFHH4qBllmkz1dP7M1_nBu1i1WCo" type="video/mp4">
-            Your browser does not support the video tag.
-        </video> -->
+        <!-- <iframe  class="teaser-link" src="https://onedrive.live.com/embed?resid=C872D43F2ABC4BE8%2138592&authkey=!AF58Tsv-YiRVKvc" width="320" height="320" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+            <iframe class="teaser-link" src="https://www.youtube.com/embed/rys_LvlFw4A?autoplay=1&mute=1" title="DGCA 59 2024 Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </main>
 </div>
 <script>

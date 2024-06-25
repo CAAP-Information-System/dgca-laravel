@@ -20,14 +20,15 @@ class SideMeetingController extends Controller
             "Day 5",
         ];
         $meeting_room_drop = [
-            "Meeting Room A",
-            "Meeting Room B",
-            "Meeting Room C",
-            "Meeting Room D",
-            "Meeting Room E",
-            "Meeting Room F",
+            "Meeting Room 1 Jasmin",
+            "Meeting Room 2 Lotus",
+            "Meeting Room 3 Sampaguita",
+            "Meeting Room 4 Benjarong Bangkok",
+            "Meeting Room 5 Benjarong Phuket",
+            "Meeting Room 6 Club Lounge Boardroom",
         ];
         $time_drop = [
+            "---- Select TIME SLOT ----",
             "08:00-08:30",
             "08:30-09:00",
             "09:00-09:30",
@@ -50,133 +51,41 @@ class SideMeetingController extends Controller
             "17:30-18:00",
         ];
         $reserved_by = [
-            "Afghanistan",
-            "Australia",
-            "Bangladesh",
-            "Bhutan",
-            "Brunei Darussalam",
-            "Cambodia",
-            "China",
-            "Hong Kong",
-            "Macao",
-            "Cook Islands",
-            "Republic of Korea",
-            "Fiji",
-            "India",
-            "Indonesia",
-            "Japan",
-            "Kiribati",
-            "Lao People's Democratic Republic",
-            "Malaysia",
-            "Maldives",
-            "Marshall Islands",
-            "Micronesia (Federal States of)",
-            "Mongolia",
-            "Myanmar",
-            "Nauru",
-            "Nepal",
-            "New Zealand",
-            "Pakistan",
-            "Palau",
-            "Papua New Guinea",
-            "Philippines",
-            "Republic of Korea",
-            "Samoa",
-            "Singapore",
-            "Solomon Islands",
-            "Sri Lanka",
-            "Thailand",
-            "Timor Leste",
-            "Tonga",
-            "Tuvalu",
-            "Vanuatu",
-            "Viet Nam",
+            "Australia", "Bangladesh", "Bhutan", "Brunei Darussalam", "Cambodia", "Canada", "China",
+            "China – Hong Kong SAR", "China – Macao SAR", "Cook Islands", "Democratic People’s Republic Of Korea",
+            "Fiji", "France", "French Polynesia", "India", "Indonesia", "Japan", "Kiribati",
+            "Lao People’s Democratic Republic", "Malaysia", "Maldives", "Marshall Islands",
+            "Micronesia (Federated States Of)", "Mongolia", "Nauru", "Nepal", "New Caledonia", "New Zealand",
+            "Niue", "Pakistan", "Palau", "Papua New Guinea", "Philippines", "Republic Of Korea", "Samoa",
+            "Singapore", "Solomon Islands", "Sri Lanka", "Thailand", "Timor-Leste", "Tonga", "Tuvalu",
+            "United Kingdom", "United States Of America", "Vanuatu", "Viet Nam", "Wallis And Futuna Islands", "AAPA", "ACI", "CANSO", "EASA", "EUROCONTROL", "IATA", "IBAC", "ICAO – ASIAN GROUP (Montreal Group)",
+            "ICAO – SECRETARIAT", "ICCAIA", "IFALPA", "IFATCA", "IFATSEA", "PASO"
         ];
         $country_drop = [
-            "Afghanistan",
-            "Australia",
-            "Bangladesh",
-            "Bhutan",
-            "Brunei Darussalam",
-            "Cambodia",
-            "China",
-            "Hong Kong",
-            "Macao",
-            "Cook Islands",
-            "Democratic People's Republic of Korea",
-            "Fiji",
-            "India",
-            "Indonesia",
-            "Japan",
-            "Kiribati",
-            "Lao People's Democratic Republic",
-            "Malaysia",
-            "Maldives",
-            "Marshall Islands",
-            "Micronesia (Federal States of)",
-            "Mongolia",
-            "Myanmar",
-            "Nauru",
-            "Nepal",
-            "New Zealand",
-            "Pakistan",
-            "Palau",
-            "Papua New Guinea",
-            "Philippines",
-            "Republic of Korea",
-            "Samoa",
-            "Singapore",
-            "Solomon Islands",
-            "Sri Lanka",
-            "Thailand",
-            "Timor Leste",
-            "Tonga",
-            "Tuvalu",
-            "Vanuatu",
-            "Viet Nam",
+            "Australia", "Bangladesh", "Bhutan", "Brunei Darussalam", "Cambodia", "Canada", "China",
+            "China – Hong Kong SAR", "China – Macao SAR", "Cook Islands", "Democratic People’s Republic Of Korea",
+            "Fiji", "France", "French Polynesia", "India", "Indonesia", "Japan", "Kiribati",
+            "Lao People’s Democratic Republic", "Malaysia", "Maldives", "Marshall Islands",
+            "Micronesia (Federated States Of)", "Mongolia", "Nauru", "Nepal", "New Caledonia", "New Zealand",
+            "Niue", "Pakistan", "Palau", "Papua New Guinea", "Philippines", "Republic Of Korea", "Samoa",
+            "Singapore", "Solomon Islands", "Sri Lanka", "Thailand", "Timor-Leste", "Tonga", "Tuvalu",
+            "United Kingdom", "United States Of America", "Vanuatu", "Viet Nam", "Wallis And Futuna Islands",
+
+            "AAPA", "ACI", "CANSO", "EASA", "EUROCONTROL", "IATA", "IBAC", "ICAO – ASIAN GROUP (Montreal Group)",
+            "ICAO – SECRETARIAT", "ICCAIA", "IFALPA", "IFATCA", "IFATSEA", "PASO"
         ];
         $country_drop = [
-            "Afghanistan",
-            "Australia",
-            "Bangladesh",
-            "Bhutan",
-            "Brunei Darussalam",
-            "Cambodia",
-            "China",
-            "Hong Kong",
-            "Macao",
-            "Cook Islands",
-            "Republic of Korea",
-            "Fiji",
-            "India",
-            "Indonesia",
-            "Japan",
-            "Kiribati",
-            "Lao People's Democratic Republic",
-            "Malaysia",
-            "Maldives",
-            "Marshall Islands",
-            "Micronesia (Federal States of)",
-            "Mongolia",
-            "Myanmar",
-            "Nauru",
-            "Nepal",
-            "New Zealand",
-            "Pakistan",
-            "Palau",
-            "Papua New Guinea",
-            "Philippines",
-            "Republic of Korea",
-            "Samoa",
-            "Singapore",
-            "Solomon Islands",
-            "Sri Lanka",
-            "Thailand",
-            "Timor Leste",
-            "Tonga",
-            "Tuvalu",
-            "Vanuatu",
-            "Viet Nam",
+            "Australia", "Bangladesh", "Bhutan", "Brunei Darussalam", "Cambodia", "Canada", "China",
+            "China – Hong Kong SAR", "China – Macao SAR", "Cook Islands", "Democratic People’s Republic Of Korea",
+            "Fiji", "France", "French Polynesia", "India", "Indonesia", "Japan", "Kiribati",
+            "Lao People’s Democratic Republic", "Malaysia", "Maldives", "Marshall Islands",
+            "Micronesia (Federated States Of)", "Mongolia", "Nauru", "Nepal", "New Caledonia", "New Zealand",
+            "Niue", "Pakistan", "Palau", "Papua New Guinea", "Philippines", "Republic Of Korea", "Samoa",
+            "Singapore", "Solomon Islands", "Sri Lanka", "Thailand", "Timor-Leste", "Tonga", "Tuvalu",
+            "United Kingdom", "United States Of America", "Vanuatu", "Viet Nam", "Wallis And Futuna Islands",
+
+            "AAPA", "ACI", "CANSO", "EASA", "EUROCONTROL", "IATA", "IBAC", "ICAO – ASIAN GROUP (Montreal Group)",
+            "ICAO – SECRETARIAT", "ICCAIA", "IFALPA", "IFATCA", "IFATSEA", "PASO"
         ];
 
         $meeting_rooms = SideMeeting::all();
@@ -195,14 +104,15 @@ class SideMeetingController extends Controller
             "Day 5",
         ];
         $meeting_room_drop = [
-            "Meeting Room A",
-            "Meeting Room B",
-            "Meeting Room C",
-            "Meeting Room D",
-            "Meeting Room E",
-            "Meeting Room F",
+            "Meeting Room 1 - Jasmin",
+            "Meeting Room 2 - Lotus",
+            "Meeting Room 3 - Sampaguita",
+            "Meeting Room 4 - Benjarong Bangkok",
+            "Meeting Room 5 - Benjarong Phuket",
+            "Meeting Room 6 - Club Lounge Boardroom",
         ];
         $time_drop = [
+            "---- Select TIME SLOT ----",
             "08:00-08:30",
             "08:30-09:00",
             "09:00-09:30",
@@ -226,53 +136,14 @@ class SideMeetingController extends Controller
         ];
         $reserved_by = [
             "---- COUNTRIES ----",
-            "AUSTRALIA",
-            "BANGLADESH",
-            "BHUTAN",
-            "BRUNEI DARUSSALAM",
-            "CAMBODIA",
-            "CANADA",
-            "CHINA",
-            "CHINA – HONG KONG SAR",
-            "CHINA – MACAO SAR",
-            "COOK ISLANDS",
-            "DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA",
-            "FIJI",
-            "FRANCE",
-            "FRENCH POLYNESIA",
-            "INDIA",
-            "INDONESIA",
-            "JAPAN",
-            "KIRIBATI",
-            "LAO PEOPLE’S DEMOCRATIC REPUBLIC",
-            "MALAYSIA",
-            "MALDIVES",
-            "MARSHALL ISLANDS",
-            "MICRONESIA (FEDERATED STATES OF)",
-            "MONGOLIA",
-            "NAURU",
-            "NEPAL",
-            "NEW CALEDONIA",
-            "NEW ZEALAND",
-            "NIUE",
-            "PAKISTAN",
-            "PALAU",
-            "PAPUA NEW GUINEA",
-            "PHILIPPINES",
-            "REPUBLIC OF KOREA",
-            "SAMOA",
-            "SINGAPORE",
-            "SOLOMON ISLANDS",
-            "SRI LANKA",
-            "THAILAND",
-            "TIMOR-LESTE",
-            "TONGA",
-            "TUVALU",
-            "UNITED KINGDOM",
-            "UNITED STATES OF AMERICA",
-            "VANUATU",
-            "VIET NAM",
-            "WALLIS AND FUTUNA ISLANDS",
+            "Australia", "Bangladesh", "Bhutan", "Brunei Darussalam", "Cambodia", "Canada", "China",
+            "China – Hong Kong SAR", "China – Macao SAR", "Cook Islands", "Democratic People’s Republic Of Korea",
+            "Fiji", "France", "French Polynesia", "India", "Indonesia", "Japan", "Kiribati",
+            "Lao People’s Democratic Republic", "Malaysia", "Maldives", "Marshall Islands",
+            "Micronesia (Federated States Of)", "Mongolia", "Nauru", "Nepal", "New Caledonia", "New Zealand",
+            "Niue", "Pakistan", "Palau", "Papua New Guinea", "Philippines", "Republic Of Korea", "Samoa",
+            "Singapore", "Solomon Islands", "Sri Lanka", "Thailand", "Timor-Leste", "Tonga", "Tuvalu",
+            "United Kingdom", "United States Of America", "Vanuatu", "Viet Nam", "Wallis And Futuna Islands",
             "---- ORGANIZATIONS ----",
             "AAPA",
             "ACI",
@@ -291,53 +162,14 @@ class SideMeetingController extends Controller
         ];
         $country_drop = [
             "---- COUNTRIES ----",
-            "AUSTRALIA",
-            "BANGLADESH",
-            "BHUTAN",
-            "BRUNEI DARUSSALAM",
-            "CAMBODIA",
-            "CANADA",
-            "CHINA",
-            "CHINA – HONG KONG SAR",
-            "CHINA – MACAO SAR",
-            "COOK ISLANDS",
-            "DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA",
-            "FIJI",
-            "FRANCE",
-            "FRENCH POLYNESIA",
-            "INDIA",
-            "INDONESIA",
-            "JAPAN",
-            "KIRIBATI",
-            "LAO PEOPLE’S DEMOCRATIC REPUBLIC",
-            "MALAYSIA",
-            "MALDIVES",
-            "MARSHALL ISLANDS",
-            "MICRONESIA (FEDERATED STATES OF)",
-            "MONGOLIA",
-            "NAURU",
-            "NEPAL",
-            "NEW CALEDONIA",
-            "NEW ZEALAND",
-            "NIUE",
-            "PAKISTAN",
-            "PALAU",
-            "PAPUA NEW GUINEA",
-            "PHILIPPINES",
-            "REPUBLIC OF KOREA",
-            "SAMOA",
-            "SINGAPORE",
-            "SOLOMON ISLANDS",
-            "SRI LANKA",
-            "THAILAND",
-            "TIMOR-LESTE",
-            "TONGA",
-            "TUVALU",
-            "UNITED KINGDOM",
-            "UNITED STATES OF AMERICA",
-            "VANUATU",
-            "VIET NAM",
-            "WALLIS AND FUTUNA ISLANDS",
+            "Australia", "Bangladesh", "Bhutan", "Brunei Darussalam", "Cambodia", "Canada", "China",
+            "China – Hong Kong SAR", "China – Macao SAR", "Cook Islands", "Democratic People’s Republic Of Korea",
+            "Fiji", "France", "French Polynesia", "India", "Indonesia", "Japan", "Kiribati",
+            "Lao People’s Democratic Republic", "Malaysia", "Maldives", "Marshall Islands",
+            "Micronesia (Federated States Of)", "Mongolia", "Nauru", "Nepal", "New Caledonia", "New Zealand",
+            "Niue", "Pakistan", "Palau", "Papua New Guinea", "Philippines", "Republic Of Korea", "Samoa",
+            "Singapore", "Solomon Islands", "Sri Lanka", "Thailand", "Timor-Leste", "Tonga", "Tuvalu",
+            "United Kingdom", "United States Of America", "Vanuatu", "Viet Nam", "Wallis And Futuna Islands",
             "---- ORGANIZATIONS ----",
             "AAPA",
             "ACI",
@@ -364,39 +196,37 @@ class SideMeetingController extends Controller
 
     public function createMeetingRoom(Request $request)
     {
-
         $validateMeeting = $request->validate([
             'days_drop' => 'required|string',
-            'meeting_room_drop' => 'required|string',
+            'meeting_room_drop' => 'required|string', // This is used as the room ID
             'time_drop' => 'required|string',
             'country_drop' => 'required|string',
             'reserved_by' => 'required|string',
             'approval_status' => 'required|string',
         ]);
 
-
         $selectedDay = $request->input('days_drop');
+        $selectedRoomId = $request->input('meeting_room_drop'); // Use this as the room ID
         $selectedTime = $request->input('time_drop');
 
-        if ($this->isTimeAlreadyReserved($selectedDay, $selectedTime)) {
-            // The time is already reserved, return an error response
-            return redirect()->back()->with('error', 'The selected time is already reserved on ' . $selectedDay . '. Please choose another time.');
+        if ($this->isTimeAlreadyReserved($selectedDay, $selectedTime, $selectedRoomId)) {
+            // The time is already reserved for this room, return an error response
+            return redirect()->back()->with('error', 'The selected time is already reserved for this room on ' . $selectedDay . '. Please choose another time or room.');
         }
         $meeting_room = new SideMeeting($validateMeeting);
         $meeting_room->save();
 
-
         return redirect()->route('meeting-published');
     }
 
-    // Function to check if the selected time is already reserved
-    private function isTimeAlreadyReserved($selectedDay, $selectedTime)
+    // Adjusted function to check if the selected time is already reserved for a specific room
+    private function isTimeAlreadyReserved($selectedDay, $selectedTime, $selectedRoomId)
     {
-        // You need to replace this with your actual logic to check if the time is reserved
-        // Example: Assuming there's a Reservation model with reserved times
-        return SideMeeting::where('days_drop', $selectedDay)->where('time_drop', $selectedTime)->exists();
+        return SideMeeting::where('days_drop', $selectedDay)
+            ->where('time_drop', $selectedTime)
+            ->where('meeting_room_drop', $selectedRoomId) // Check against the specific room ID
+            ->exists();
     }
-
     public function deleteMeetingRoom(Request $request, $id)
     {
         // Find the meeting by its ID

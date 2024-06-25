@@ -182,7 +182,22 @@
 .form_link_btn:hover{
     background-color: #50A9FB;
 }
-
+.plug-types {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.plug-type {
+    text-align: center;
+}
+.plug-type img {
+    width: 150px;
+    height: auto;
+}
+.plug-type p{
+    margin-top: 2vh;
+}
 @media screen and (max-width: 768px) {
     .bulletin-content{
         margin: 0;

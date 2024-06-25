@@ -92,7 +92,7 @@
 
         <div data-aos="fade-up" class="bulletin-grp">
             <header class="bullet-hdr">
-                <img src="{{ asset('img/icon/side-meetings.png') }}" alt="baggage" class="bullet-img">
+                <img src="{{ asset('img/icon/side-meetings.png') }}" alt="schedule of meetings" class="bullet-img">
                 Schedule of Meetings
             </header>
             <div class="bullet-details">
@@ -104,9 +104,28 @@
                     <p>
                         The <b class="text-primary">conference</b> is scheduled to commence on Monday, 14 October 2024 at 09:00 hrs.
                     </p>
+                    <br>
                     <p>
                         The <b class="text-primary">Gala Dinner</b> is scheduled for the evening of Tuesday, 15 October 2024 at
                         (__________),(further details will be provided)
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up" class="bulletin-grp">
+            <header class="bullet-hdr">
+                <img src="{{ asset('img/icon/register-bullet.png') }}" alt="register" class="bullet-img">
+                Registration Procedure Guidelines
+            </header>
+            <div class="bullet-details">
+                <div class="bullet-desc">
+                    <p>
+                        Delegates are advised to undergo an initial registration through this website: <a href="https://dgca59.ph/register">https://dgca59.ph/register</a> prior participating in the conference.
+                    </p>
+                    <br>
+                    <p>
+                        Once complete with the online registration, the website administrator will verify the account and shall provide notification via email for the successful online registration.
                     </p>
 
                 </div>
@@ -629,7 +648,27 @@
                     </p>
                     <br>
                     <p>
-                        Electric Plug and Socket: Electric voltage is 220V, 60 cycles, AC in the Philippines. We suggest you bring a universal travel adapter plug to charge your laptop and mobile electronic devices.
+                        <b class="text-primary">Electric Plug and Socket: </b> Electric voltage is 220V, 60 cycles, AC in the Philippines. We suggest you bring a universal travel adapter plug to charge your laptop and mobile electronic devices.
+                    </p>
+                    <p>
+                    <div class="plug-types">
+                        <div class="plug-type">
+                            <img src="{{ asset('img/plug-types/type-a.png') }}" alt="Type A">
+                            <p>Type A</p>
+                        </div>
+                        <div class="plug-type">
+                            <img src="{{ asset('img/plug-types/type-a.png') }}" alt="Type B">
+                            <p>Type B</p>
+                        </div>
+                        <div class="plug-type">
+                            <img src="{{ asset('img/plug-types/type-a.png') }}" alt="Type C">
+                            <p>Type C</p>
+                        </div>
+                        <div class="plug-type">
+                            <img src="{{ asset('img/plug-types/universal-adapter.jpg') }}" alt="Universal Adapter Plug">
+                            <p>Universal Travel Adapter Plug</p>
+                        </div>
+                    </div>
                     </p>
                 </div>
             </div>
