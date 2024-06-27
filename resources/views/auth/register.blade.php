@@ -312,29 +312,7 @@
                 <div class="category__header">
                     <header class="category-name">Other Information</header>
                 </div>
-                <div class="input__box-long" id="attireSizeBlock" style="display: none;">
-                    <div class="input__box-long">
-                        <div class="barong-label">
-                            <span class="details">Barong-Tagalog Size (Attire):<span class="required-symbol">*</span></span>
-                            <img src="{{ asset('img/registration/measure-guide.jpg') }}" alt="barong measurement" class="measure-guide">
-                        </div>
-                        <!-- <p><i class="card-subtitle mb-2 text-muted">Sizes are in centimeters (cm)</i></p> -->
-                        <select class="form-control" id="attire_size" name="attire_size">
-                            <option value="">-- Select Option --</option>
-                            <option value="Small">Small</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Large">Large</option>
-                            <option value="Extra Large">Extra Large</option>
-                            <option value="2x Extra Large">2x Extra Large</option>
-                        </select>
-                    </div>
 
-                    <div class="input__box-long">
-                        <span class="details">Add Special Requirements/Request:<span class="required-symbol">*</span></span>
-                        <p><i class="text-muted">Include additional sizing/design if needed. Place <b>'None'</b> if there is no request</i></p>
-                        <input type="text" placeholder="Enter `None` if not needed" name="attire_special_req" value="{{ old('attire_special_req') }}">
-                    </div>
-                </div>
                 <div class="input__box-long">
                     <span class="details">Activities <span class="required-symbol">*</span></span>
                     <select class="form-control" id="preferred_activity" name="preferred_activity" required>

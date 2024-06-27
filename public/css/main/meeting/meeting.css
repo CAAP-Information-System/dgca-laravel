@@ -1,4 +1,3 @@
-
 .meeting-header {
     font-size: 3rem;
     font-weight: bold;
@@ -7,7 +6,7 @@
     text-shadow: #b4c4db 3px 3px;
     margin-bottom: 20px;
 }
-.day-header{
+.day-header {
     font-size: 25px;
     font-weight: bold;
     color: #3b3b3b;
@@ -27,7 +26,6 @@
     padding: 0;
     margin: 0;
     display: flex;
-
 }
 
 .day-selector li {
@@ -63,25 +61,25 @@
 .day-selector button.active:hover {
     background-color: #2962c3;
 }
-.meeting-guidelines{
+.meeting-guidelines {
     margin-bottom: 3vh;
 }
-.guidelines{
+.guidelines {
     padding: 20px;
     background-color: #ffff;
     border: solid 1px #969696;
     border-radius: 15px;
 }
-.guide-header{
+.guide-header {
     font-size: 2rem;
-    color: #50A9FB;
+    color: #50a9fb;
 }
-.guidelines ul li{
+.guidelines ul li {
     padding-top: 15px;
     color: #3b3b3b;
     font-size: 17px;
 }
-.row{
+.row {
     color: #3b3b3b;
 }
 .schedule-table table thead tr {
@@ -131,9 +129,9 @@
     transition: all 0.3s linear 0s;
     min-width: 300px;
     color: #3b3b3b;
-    background-color: #50A9FB;
+    background-color: #50a9fb;
 }
-.decision-pending{
+.decision-pending {
     background-color: transparent;
 }
 
@@ -158,14 +156,13 @@
     margin-bottom: 5px;
 }
 
-
 .schedule-table table tbody td .hover p {
     font-size: 16px;
     margin-bottom: 5px;
     color: #ffffff;
     line-height: normal;
 }
-.schedule-table table tbody td .hover  {
+.schedule-table table tbody td .hover {
     color: #ffffff;
     font-size: 18px;
 }
@@ -202,12 +199,83 @@
     transform: translate(-50%, -50%) scale(1);
     visibility: visible;
     opacity: 1;
-
 }
 .schedule-table table tbody td.day:hover {
     background: #86d4f5;
     color: #fff;
     border: 1px solid #86d4f5;
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Adjusted for better vertical alignment */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Smaller width */
+    max-width: 600px; /* Max width for larger screens */
+}
+.modal-content .modal-header{
+    display: block;
+    padding-bottom: 10px;
+}
+.room-details{
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    font-size: 20px;
+}
+.modal-content .room-name{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 7px;
+    color:#50a9fb;
+    font-weight: bold;
+}
+.modal-content p{
+    padding: 5px;
+
+}
+.modal-content .room-location{
+    color: #E73132;
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+}
+
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%; /* Slightly larger on small screens */
+        margin: 20% auto; /* More vertical space on small screens */
+    }
 }
 @media screen and (max-width: 1199px) {
     .schedule-table {
@@ -277,18 +345,21 @@
         min-width: 135px;
     }
 }
-@media (width <= 320px){
-    .container{
+@media (width <= 320px) {
+    .container {
         width: 550px;
     }
-    .guide-header{
+    .guide-header {
         font-size: 2.2rem;
         line-height: 5vh;
         text-align: center;
     }
     .day-selector {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust the minmax values as needed */
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(120px, 1fr)
+        ); /* Adjust the minmax values as needed */
         gap: 10px; /* Adjust the gap between items */
         justify-content: center; /* Center the grid items */
     }
@@ -321,10 +392,13 @@
         background-color: #2980b9;
     }
 }
-@media (width <= 818px){
+@media (width <= 818px) {
     .day-selector {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust the minmax values as needed */
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(120px, 1fr)
+        ); /* Adjust the minmax values as needed */
         gap: 10px; /* Adjust the gap between items */
         justify-content: center; /* Center the grid items */
     }

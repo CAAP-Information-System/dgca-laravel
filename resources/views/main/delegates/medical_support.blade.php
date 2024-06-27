@@ -22,7 +22,7 @@
         <div class="medical-content">
             The DGCA Medical Team may also be contacted directly, please follow the provided contacts below:
             <ul>
-                <li>Mobile Number: <a href="#">Coming Soon</a></li>
+                <li>Mobile Number: <a href="#">(+63) 922 399 0264</a></li>
                 <li>Email Address: <a href="#">dgca59_registration.com</a></li>
             </ul>
 

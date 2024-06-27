@@ -49,6 +49,8 @@ class SideMeetingController extends Controller
             "16:30-17:00",
             "17:00-17:30",
             "17:30-18:00",
+            "18:00-18:30",
+            "18:30-19:00",
         ];
         $reserved_by = [
             "Australia", "Bangladesh", "Bhutan", "Brunei Darussalam", "Cambodia", "Canada", "China",
@@ -133,6 +135,8 @@ class SideMeetingController extends Controller
             "16:30-17:00",
             "17:00-17:30",
             "17:30-18:00",
+            "18:00-18:30",
+            "18:30-19:00",
         ];
         $reserved_by = [
             "---- COUNTRIES ----",

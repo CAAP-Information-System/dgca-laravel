@@ -62,17 +62,15 @@
             </main>
             <div class="theme-container">
                 <div class="typing-container">
-                    <header class="text-center text-4xl">Shaping the future of air transport:</header>
+                    <header class="text-center text-4xl">Shaping the Future of Air Transport:</header>
                     <span class="symbol">//</span>
                     <span id="theme__input" class="theme__input" style="height: 50px;"></span>
                     <span class="symbol">//</span>
                 </div>
-
                 <p class="theme-message">
                     Fostering sustainable practices, cultivating resilience, and championing inclusivity to create a future that thrives for all individuals and communities, ensuring equitable opportunities and shared prosperity.
                 </p>
             </div>
-
         </div>
         <!-- Conference Navigation Bar -->
 
@@ -83,24 +81,29 @@
             </div> -->
         </div>
     </section>
+    <section  data-aos="fade-up">
+        <section class="home-banner-section">
+            <img src="{{ asset('img/home-banner.jpg') }}" alt="home banner" class="home-banner">
+        </section>
+        <section class="main-countdown countdown-main">
 
-    <section class="main-countdown countdown-main" data-aos="fade-up">
-        <main>
-            <!-- Countdown container -->
-            <div class="countdown-box">
-                <div class="">
-                    <p class="countdown-message">Countdown until the 59th DGCA Conference!</p>
-                    <div id="countdown" class="countdown">
-                        <ul>
-                            <li><span id="days"></span>Days</li>
-                            <li><span id="hours"></span>Hours</li>
-                            <li><span id="minutes"></span>Minutes</li>
-                            <li><span id="seconds"></span>Seconds</li>
-                        </ul>
+            <main>
+                <!-- Countdown container -->
+                <div class="countdown-box">
+                    <div class="">
+                        <p class="countdown-message">Countdown until the 59th DGCA Conference!</p>
+                        <div id="countdown" class="countdown">
+                            <ul>
+                                <li><span id="days"></span>Days</li>
+                                <li><span id="hours"></span>Hours</li>
+                                <li><span id="minutes"></span>Minutes</li>
+                                <li><span id="seconds"></span>Seconds</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </section>
     </section>
 
     <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Registration')
+@section('title','Registration Details')
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/registration.css') }}">
@@ -59,9 +59,10 @@
                 </div>
             </div>
         </section>
-        <section class="form-guides-sect">
+        <br style="padding-bottom: 4vh;">
+        <!-- <section class="form-guides-sect">
             <header class="form-reqs-header">Form Requirements</header>
             <h1>Coming Soon</h1>
-        </section>
+        </section> -->
 </body>
 @endsection

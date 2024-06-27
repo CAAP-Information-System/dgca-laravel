@@ -14,17 +14,18 @@
 }
 .form-header{
     border-radius: 10px 10px 0 0;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: bold;
     background-color: #0056b3;
     color: #ffff;
-    padding: 10px;
+    padding: 17px;
+    text-align: center;
     margin-bottom: 5px;
 }
 .reminder-grp{
     color: #969696;
-    padding: 15px;
-    margin: 15px;
+    padding: 25px;
+    margin: 20px;
     border: 2px dashed #9696;
     font-style: italic;
 }
@@ -34,6 +35,7 @@
 }
 .reminder-content{
     font-size: 16px;
+    color: #E73132 !important;
 }
 .field-grp{
     padding: 25px;

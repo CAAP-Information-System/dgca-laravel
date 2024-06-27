@@ -12,9 +12,9 @@
         <form class="create-meeting-form" method="post" action="{{ route('createMeetingRoom') }}">
             <header class="form-header">Create New Meeting</header>
             <div class="reminder-grp">
-                <header class="reminder-header">Reminders:</header>
+                <header class="reminder-header">Notice to the User:</header>
                 <p class="reminder-content">
-                    This feature can only be accessed by administrators and registration committee.
+                    This function is exclusively for use by the DGCA/59 Web Administrator. For any issues encountered, please contact the conference secretariat.
                 </p>
             </div>
             @csrf

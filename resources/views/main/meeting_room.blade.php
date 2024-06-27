@@ -4,8 +4,26 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/banner.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/main/meeting/meeting.css') }}">
 @include('main.banner', ['bannerTitle' => 'Side Meetings'])
-@include('components.side_meeting_modal')
+
 <div class="">
+    <!-- Modal Structure -->
+    <div id="roomDetailsModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <header class="modal-header">
+                <h2 class="room-name" id="roomName"></h2>
+                <p class="room-location" id="roomLocation"></p>
+            </header>
+            <hr>
+            <div class="room-details">
+                <p class="total-pax" id="roomPax"></p>
+                <p class="room-dimension" id="roomDimension"></p>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- <header class="meeting-header">Side Meeting</header> -->
 
     <section class=" container meeting-guidelines">
@@ -42,12 +60,12 @@
                         <thead>
                             <tr>
                                 <th>Time</th>
-                                <th onclick="showRoomDetails('Meeting Room 1 - Jasmin', 10, '10x15 sqm')">Meeting Room 1 - Jasmin</th>
-                                <th>Meeting Room 2 Lotus</th>
-                                <th>Meeting Room 3 Sampaguita</th>
-                                <th>Meeting Room 4 Benjarong Bangkok</th>
-                                <th>Meeting Room 5 Benjarong Phuket</th>
-                                <th class="last">Meeting Room 6 Club Lounge Boardroom</th>
+                                <th onclick="showRoomDetails('Meeting Room 1 - Jasmin', '0', '91.91 sqm', 'Located across the Conference Room')">Meeting Room 1 - Jasmin</th>
+                                <th onclick="showRoomDetails('Meeting Room 2 - Lotus', '0', '84.82 sqm', 'Located across the Conference Room')">Meeting Room 2 Lotus</th>
+                                <th onclick="showRoomDetails('Meeting Room 3 - Sampaguita', '0', '91.37 sqm', 'Located across the Conference Room')">Meeting Room 3 Sampaguita</th>
+                                <th onclick="showRoomDetails('Meeting Room 4 - Benjarong Bangkok', '0', '26.25 sqm', 'Located at the 2nd floor')">Meeting Room 4 Benjarong Bangkok</th>
+                                <th onclick="showRoomDetails('Meeting Room 5 - Benjarong Phuket', '0', '19 sqm', 'Located at the 2nd floor')">Meeting Room 5 Benjarong Phuket</th>
+                                <th onclick="showRoomDetails('Meeting Room 6 - Club Lounge Boardroom', '0', '52.60 sqm', 'Located at Building 2')" class="last">Meeting Room 6 Club Lounge Boardroom</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,6 +75,7 @@
                             "10:30-11:00", "11:00-11:30", "11:30-12:00", "12:00-12:30", "12:30-13:00",
                             "13:00-13:30", "13:30-14:00", "14:00-14:30", "14:30-15:00", "15:00-15:30",
                             "15:30-16:00", "16:00-16:30", "16:30-17:00", "17:00-17:30", "17:30-18:00",
+                            "18:00-18:30", "18:30-19:00",
                             ];
                             @endphp
                             @foreach($time_slots as $time_slot)
@@ -177,12 +196,12 @@
                         <thead>
                             <tr>
                                 <th>Time</th>
-                                <th>Meeting Room 1 - Jasmin</th>
-                                <th>Meeting Room 2 Lotus</th>
-                                <th>Meeting Room 3 Sampaguita</th>
-                                <th>Meeting Room 4 Benjarong Bangkok</th>
-                                <th>Meeting Room 5 Benjarong Phuket</th>
-                                <th class="last">Meeting Room 6 Club Lounge Boardroom</th>
+                                <th onclick="showRoomDetails('Meeting Room 1 - Jasmin', '0', '91.91 sqm', 'Located across the Conference Room')">Meeting Room 1 - Jasmin</th>
+                                <th onclick="showRoomDetails('Meeting Room 2 - Lotus', '0', '84.82 sqm', 'Located across the Conference Room')">Meeting Room 2 Lotus</th>
+                                <th onclick="showRoomDetails('Meeting Room 3 - Sampaguita', '0', '91.37 sqm', 'Located across the Conference Room')">Meeting Room 3 Sampaguita</th>
+                                <th onclick="showRoomDetails('Meeting Room 4 - Benjarong Bangkok', '0', '26.25 sqm', 'Located at the 2nd floor')">Meeting Room 4 Benjarong Bangkok</th>
+                                <th onclick="showRoomDetails('Meeting Room 5 - Benjarong Phuket', '0', '19 sqm', 'Located at the 2nd floor')">Meeting Room 5 Benjarong Phuket</th>
+                                <th onclick="showRoomDetails('Meeting Room 6 - Club Lounge Boardroom', '0', '52.60 sqm', 'Located at Building 2')" class="last">Meeting Room 6 Club Lounge Boardroom</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -326,12 +345,12 @@
                         <thead>
                             <tr>
                                 <th>Time</th>
-                                <th>Meeting Room 1 - Jasmin</th>
-                                <th>Meeting Room 2 Lotus</th>
-                                <th>Meeting Room 3 Sampaguita</th>
-                                <th>Meeting Room 4 Benjarong Bangkok</th>
-                                <th>Meeting Room 5 Benjarong Phuket</th>
-                                <th class="last">Meeting Room 6 Club Lounge Boardroom</th>
+                                <th onclick="showRoomDetails('Meeting Room 1 - Jasmin', '0', '91.91 sqm', 'Located across the Conference Room')">Meeting Room 1 - Jasmin</th>
+                                <th onclick="showRoomDetails('Meeting Room 2 - Lotus', '0', '84.82 sqm', 'Located across the Conference Room')">Meeting Room 2 Lotus</th>
+                                <th onclick="showRoomDetails('Meeting Room 3 - Sampaguita', '0', '91.37 sqm', 'Located across the Conference Room')">Meeting Room 3 Sampaguita</th>
+                                <th onclick="showRoomDetails('Meeting Room 4 - Benjarong Bangkok', '0', '26.25 sqm', 'Located at the 2nd floor')">Meeting Room 4 Benjarong Bangkok</th>
+                                <th onclick="showRoomDetails('Meeting Room 5 - Benjarong Phuket', '0', '19 sqm', 'Located at the 2nd floor')">Meeting Room 5 Benjarong Phuket</th>
+                                <th onclick="showRoomDetails('Meeting Room 6 - Club Lounge Boardroom', '0', '52.60 sqm', 'Located at Building 2')" class="last">Meeting Room 6 Club Lounge Boardroom</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -474,12 +493,12 @@
                         <thead>
                             <tr>
                                 <th>Time</th>
-                                <th>Meeting Room 1 - Jasmin</th>
-                                <th>Meeting Room 2 Lotus</th>
-                                <th>Meeting Room 3 Sampaguita</th>
-                                <th>Meeting Room 4 Benjarong Bangkok</th>
-                                <th>Meeting Room 5 Benjarong Phuket</th>
-                                <th class="last">Meeting Room 6 Club Lounge Boardroom</th>
+                                <th onclick="showRoomDetails('Meeting Room 1 - Jasmin', '0', '91.91 sqm', 'Located across the Conference Room')">Meeting Room 1 - Jasmin</th>
+                                <th onclick="showRoomDetails('Meeting Room 2 - Lotus', '0', '84.82 sqm', 'Located across the Conference Room')">Meeting Room 2 Lotus</th>
+                                <th onclick="showRoomDetails('Meeting Room 3 - Sampaguita', '0', '91.37 sqm', 'Located across the Conference Room')">Meeting Room 3 Sampaguita</th>
+                                <th onclick="showRoomDetails('Meeting Room 4 - Benjarong Bangkok', '0', '26.25 sqm', 'Located at the 2nd floor')">Meeting Room 4 Benjarong Bangkok</th>
+                                <th onclick="showRoomDetails('Meeting Room 5 - Benjarong Phuket', '0', '19 sqm', 'Located at the 2nd floor')">Meeting Room 5 Benjarong Phuket</th>
+                                <th onclick="showRoomDetails('Meeting Room 6 - Club Lounge Boardroom', '0', '52.60 sqm', 'Located at Building 2')" class="last">Meeting Room 6 Club Lounge Boardroom</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -623,12 +642,12 @@
                         <thead>
                             <tr>
                                 <th>Time</th>
-                                <th>Meeting Room 1 - Jasmin</th>
-                                <th>Meeting Room 2 Lotus</th>
-                                <th>Meeting Room 3 Sampaguita</th>
-                                <th>Meeting Room 4 Benjarong Bangkok</th>
-                                <th>Meeting Room 5 Benjarong Phuket</th>
-                                <th class="last">Meeting Room 6 Club Lounge Boardroom</th>
+                                <th onclick="showRoomDetails('Meeting Room 1 - Jasmin', '0', '91.91 sqm', 'Located across the Conference Room')">Meeting Room 1 - Jasmin</th>
+                                <th onclick="showRoomDetails('Meeting Room 2 - Lotus', '0', '84.82 sqm', 'Located across the Conference Room')">Meeting Room 2 Lotus</th>
+                                <th onclick="showRoomDetails('Meeting Room 3 - Sampaguita', '0', '91.37 sqm', 'Located across the Conference Room')">Meeting Room 3 Sampaguita</th>
+                                <th onclick="showRoomDetails('Meeting Room 4 - Benjarong Bangkok', '0', '26.25 sqm', 'Located at the 2nd floor')">Meeting Room 4 Benjarong Bangkok</th>
+                                <th onclick="showRoomDetails('Meeting Room 5 - Benjarong Phuket', '0', '19 sqm', 'Located at the 2nd floor')">Meeting Room 5 Benjarong Phuket</th>
+                                <th onclick="showRoomDetails('Meeting Room 6 - Club Lounge Boardroom', '0', '52.60 sqm', 'Located at Building 2')" class="last">Meeting Room 6 Club Lounge Boardroom</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -808,19 +827,17 @@
     }
 </script>
 <script>
-    function showRoomDetails(roomName, pax, dimension) {
-    // Update modal content
-    document.getElementById('roomName').innerText = roomName;
-    document.getElementById('roomPax').innerText = "Number of Pax: " + pax;
-    document.getElementById('roomDimension').innerText = "Dimensions: " + dimension;
+    function showRoomDetails(roomName, pax, dimension, location) {
+        document.getElementById('roomName').innerText = roomName;
+        document.getElementById('roomPax').innerHTML = 'Total Pax: <strong>' + pax + '</strong>';
+        document.getElementById('roomDimension').innerHTML = 'Area: <strong>' + dimension + '</strong>';
+        document.getElementById('roomLocation').innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + location;
+        document.getElementById('roomDetailsModal').style.display = 'block';
+    }
 
-    // Show the modal
-    document.getElementById('roomDetailsModal').style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('roomDetailsModal').style.display = 'none';
-}
+    function closeModal() {
+        document.getElementById('roomDetailsModal').style.display = 'none';
+    }
 </script>
 
 @endsection
